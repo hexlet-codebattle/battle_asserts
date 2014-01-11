@@ -1,0 +1,21 @@
+---
+name: broken_include
+level: elementary
+tags: [enumerable, set]
+description: Method .include? in Array (Enumerable) not work
+  Check presence of element in array
+
+checks:
+  ruby:
+    asserts:
+      - include?([1, 2, 3, 4, 5, 6, 7], 5)
+
+    assert_equals:
+      - call: include?([1, 2, 3, 4, 5, 6, 7], 10)
+        expected: false
+
+      - call: [1, 2, 3, 4, 5, 6, 7].include?(5)
+        expected: false
+
+      - call: [1, 2, 3, 4, 5, 6, 7].include?(10)
+        expected: false

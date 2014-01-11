@@ -8,7 +8,7 @@ description: If a number is divisible by 3, return "Fizz".
 
 checks:
   ruby:
-    assert_equal:
+    assert_equals:
       - call: fizzbuzz(3)
         expected: Fizz
 
