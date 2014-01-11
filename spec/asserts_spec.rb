@@ -7,7 +7,7 @@ describe "Asserts" do
   end
 
   asserts_dir = Dir.pwd + "/asserts"
-  asserts_files = Dir.entries(asserts_dir)[2..-1]
+  asserts_files = Dir.entries(asserts_dir) - ['.', '..']
 
   asserts_files.each do |file|
     describe "battle #{file}" do
