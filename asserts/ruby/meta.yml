@@ -5,3 +5,9 @@ fizzbuzz:
   description: If a number is divisible by 3, return "Fizz".
     If a number is divisible by 5, return "Buzz".
     If a number is divisible by 3 and 5, return "FizzBuzz"
+
+broken_include:
+  level: elementary
+  tags: [enumerable, set]
+  description: Method .include? in Array (Enumerable) not work
+    Check presence of element in array
