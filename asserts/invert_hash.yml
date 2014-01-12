@@ -7,8 +7,8 @@ description: Rewrite source hash to new representation
 checks:
   ruby:
     assert_equals:
-      - call: invert_hash({:a=>"Sh8gim", :b=>78, :c=>10, :d=>"gAqtSP", :e=>"mFYJ6X", :f=>66})
-        expected: {10=>:c, 66=>:f, 78=>:b, "gAqtSP"=>:d, "mFYJ6X"=>:e, "Sh8gim"=>:a}
+      - call: 'invert_hash({:a=>"Sh8gim", :b=>78, :c=>10, :d=>"gAqtSP", :e=>"mFYJ6X", :f=>66})'
+        expected: '{10=>:c, 66=>:f, 78=>:b, "gAqtSP"=>:d, "mFYJ6X"=>:e, "Sh8gim"=>:a}'
 
-      - call: invert_hash({:a=>"jXXuj1", :b=>55, :c=>0, :d=>0, :e=>"quP2Cb", :f=>0})
-        expected: {0=>[:c, :d, :f], 55=>:b, "jXXuj1"=>:a, "quP2Cb"=>:e}
+      - call: 'invert_hash({:a=>"jXXuj1", :b=>55, :c=>0, :d=>0, :e=>"quP2Cb", :f=>0})'
+        expected: '{0=>[:c, :d, :f], 55=>:b, "jXXuj1"=>:a, "quP2Cb"=>:e}'

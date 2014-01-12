@@ -1,0 +1,44 @@
+GIT
+  remote: git://github.com/av-ast/wrong.git
+  revision: d0ddaa5f57eab94b558f7bb6032875ea0927c4b5
+  specs:
+    wrong (0.7.0)
+      diff-lcs (~> 1.2.0)
+      predicated (~> 0.2.6)
+      ruby2ruby (>= 2.0.1)
+      ruby_parser (>= 3.0.1)
+      sexp_processor (>= 4.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    ansi (1.4.3)
+    builder (3.2.2)
+    diff-lcs (1.2.5)
+    hashie (2.0.5)
+    minitest (5.0.8)
+    minitest-reporters (1.0.0)
+      ansi
+      builder
+      minitest (>= 5.0)
+      powerbar
+    powerbar (1.0.11)
+      ansi (~> 1.4.0)
+      hashie (>= 1.1.0)
+    predicated (0.2.6)
+    rake (10.1.1)
+    ruby2ruby (2.0.7)
+      ruby_parser (~> 3.1)
+      sexp_processor (~> 4.0)
+    ruby_parser (3.2.2)
+      sexp_processor (~> 4.1)
+    sexp_processor (4.4.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest
+  minitest-reporters
+  rake
+  wrong!
