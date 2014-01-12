@@ -9,14 +9,14 @@ description: If a number is divisible by 3, return "Fizz".
 checks:
   ruby:
     assert_equals:
-      - call: fizzbuzz(3)
-        expected: Fizz
+      - call: 'fizzbuzz(3)'
+        expected: 'Fizz'
 
-      - call: fizzbuzz(50)
-        expected: Buzz
+      - call: 'fizzbuzz(50)'
+        expected: 'Buzz'
 
-      - call: fizzbuzz(50)
-        expected: FizzBuzz
+      - call: 'fizzbuzz(50)'
+        expected: 'FizzBuzz'
 
-      - call: fizzbuzz(5175)
-        expected: FizzBuzz
+      - call: 'fizzbuzz(5175)'
+        expected: 'FizzBuzz'
