@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/kaize/battle_asserts.png?branch=checker)](https://travis-ci.org/kaize/battle_asserts)
+[![Build Status](https://travis-ci.org/kaize/battle_asserts.png?branch=master)](https://travis-ci.org/kaize/battle_asserts)
 
 ## Contributing
 
