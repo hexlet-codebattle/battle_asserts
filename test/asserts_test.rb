@@ -1,7 +1,6 @@
 require 'test_helper'
 
-class Asserts < Minitest::Test
-
+class Asserts < TestCase
   def load_battle(file)
     begin
       YAML.load_file(@asserts_dir + "/" + file)
@@ -19,7 +18,7 @@ class Asserts < Minitest::Test
     @asserts_files.each do |file|
       @battle = load_battle(file)
 
-      assert_equal false, @battle.has_key?(:invalid)
+      assert { !@battle.has_key?(:invalid) }
     end
   end
 
@@ -29,10 +28,10 @@ class Asserts < Minitest::Test
     @asserts_files.each do |file|
       @battle = load_battle(file)
 
-      skip ("Incorrect file with assertions") if @battle["name"] == nil
+      skip ("Incorrect file with assertions") if @battle.has_key?(:invalid)
 
       @battle.keys.each do |key|
-        assert @allowed_keys.include?(key)
+        assert { @allowed_keys.include?(key) }
       end
     end
   end
@@ -42,9 +41,10 @@ class Asserts < Minitest::Test
     @asserts_files.each do |file|
       @battle = load_battle(file)
 
-      skip ("Incorrect file with assertions") if @battle["name"] == nil
+      skip ("Incorrect file with assertions") if @battle.has_key?(:invalid)
 
-      assert_equal false, @battles.include?(@battle["name"])
+      assert { !@battles.include?(@battle["name"]) }
+
       @battles << @battle["name"]
     end
   end
