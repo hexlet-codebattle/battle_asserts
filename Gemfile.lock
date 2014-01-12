@@ -12,19 +12,8 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    ansi (1.4.3)
-    builder (3.2.2)
     diff-lcs (1.2.5)
-    hashie (2.0.5)
     minitest (5.0.8)
-    minitest-reporters (1.0.0)
-      ansi
-      builder
-      minitest (>= 5.0)
-      powerbar
-    powerbar (1.0.11)
-      ansi (~> 1.4.0)
-      hashie (>= 1.1.0)
     predicated (0.2.6)
     rake (10.1.1)
     ruby2ruby (2.0.7)
@@ -39,6 +28,5 @@ PLATFORMS
 
 DEPENDENCIES
   minitest
-  minitest-reporters
   rake
   wrong!

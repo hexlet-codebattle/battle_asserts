@@ -1,5 +1,4 @@
 ---
-name: invert_hash
 level: elementary
 tags: [enumerable, hash]
 description: Rewrite source hash to new representation

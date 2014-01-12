@@ -1,5 +1,4 @@
 ---
-name: fizzbuzz
 level: elementary
 tags: [arithmetic, strings]
 description: If a number is divisible by 3, return "Fizz".

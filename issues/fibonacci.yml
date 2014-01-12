@@ -1,0 +1,25 @@
+---
+level: easy
+tags: []
+description: "Write a method that handles Fibonacci sequences.
+  Have it return the nth item in the Fibonacci sequence.
+  Hint: The first item in the sequence is 0."
+
+checks:
+  ruby:
+    assert_equals:
+      - call: 'fibo_finder(0)'
+        expected: 0
+
+      - call: 'fibo_finder(1)'
+        expected: 1
+
+      - call: 'fibo_finder(4)'
+        expected: 3
+
+      - call: 'fibo_finder(7)'
+        expected: 13
+
+      - call: 'fibo_finder(10)'
+        expected: 55
+

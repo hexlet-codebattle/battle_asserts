@@ -1,5 +1,4 @@
 ---
-name: broken_include
 level: elementary
 tags: [enumerable, set]
 description: Method .include? in Array (Enumerable) not work
