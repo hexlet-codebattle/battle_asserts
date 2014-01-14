@@ -1,0 +1,13 @@
+---
+level: medium
+tags: [string]
+
+checks:
+  ruby:
+
+    asserts:
+      - assert_equal shell_words_split('here are "two words"'), ["here", "are", "two words"]
+      - assert_equal shell_words_split(%q{  foo bar "foo bar"\ baz 'foo bar'  }), ["foo", "bar", "foo bar baz", "foo bar"]
+      - assert_equal shell_words_split(%q{  A B C "D E F" "G","H I"  }), ["A", "B", "C", "D E F", "G,H I"]
+      - assert_equal shell_words_split('grep Jan\ 15 file\ name\ with\ spaces'), ["grep", "Jan 15", "file name with spaces"]
+

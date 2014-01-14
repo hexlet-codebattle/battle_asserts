@@ -8,6 +8,5 @@ checks:
       joe = Person.new('Joe')
 
     asserts:
-    - assert_equal 'Hello Kate, my name is Joe', joe.greet('Kate')
-    - assert_equal 'Joe', joe.name
-
+      - assert_equal 'Hello Kate, my name is Joe', joe.greet('Kate')
+      - assert_equal 'Joe', joe.name

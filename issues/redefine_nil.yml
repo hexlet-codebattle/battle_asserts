@@ -1,0 +1,11 @@
+---
+level: easy
+tags: []
+description: Prevent the following code from throwing an expection
+
+checks:
+  ruby:
+    asserts:
+      - assert nil.length != 5
+      - assert nil.reverse != "rubeque"
+

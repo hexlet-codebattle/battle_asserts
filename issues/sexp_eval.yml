@@ -1,0 +1,18 @@
+---
+level: medium
+tags: []
+description: Take these S-expressions and evaluate them as if they were Ruby code.
+
+checks:
+  ruby:
+    setup:
+      sexp1 = [:flatten, [1, 2, [:to_a, (4..6)], [:-, 8, 4]]]
+      sexp2 = [:==, [:*, 2, 3], [:remainder, 13, 7]]
+      sexp3 = [(-> x, y {Math.sqrt(x**2 + y**2)}), [:-, 9, 3, 3], [:+, 1, 1, 1, 1]]
+
+    asserts:
+      - assert_equal [1, 2, 4, 5, 6, 4], sexp_eval(sexp1)
+      - assert_equal true, sexp_eval(sexp2)
+      - assert_equal 5.0, sexp_eval(sexp3)
+
+

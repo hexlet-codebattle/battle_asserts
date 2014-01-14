@@ -15,6 +15,7 @@ class Asserts < TestCase
     allowed_levels = ["elementary", "easy", "medium", "hard"]
 
     @iterator.each do |issue|
+      puts "issue: #{issue["name"]}"
       required_keys.each do |key|
         assert { issue.has_key? key }
       end
@@ -28,6 +29,8 @@ class Asserts < TestCase
           assert { params.has_key? key }
         end
         assert { (params.keys - allowed_lang_keys).empty? }
+
+        assert { params["asserts"].is_a? Array }
       end
     end
   end

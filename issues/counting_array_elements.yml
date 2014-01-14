@@ -1,0 +1,11 @@
+---
+level: easy
+tags: []
+
+checks:
+  ruby:
+    setup:
+      test = ['cat', 'dog', 'fish', 'fish']
+
+    asserts:
+      - assert_equal ({ 'cat' => 1, 'dog' => 1, 'fish' => 2 }), count(test)
