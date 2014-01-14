@@ -7,19 +7,9 @@ description: "Write a method that handles Fibonacci sequences.
 
 checks:
   ruby:
-    assert_equals:
-      - call: 'fibo_finder(0)'
-        expected: 0
-
-      - call: 'fibo_finder(1)'
-        expected: 1
-
-      - call: 'fibo_finder(4)'
-        expected: 3
-
-      - call: 'fibo_finder(7)'
-        expected: 13
-
-      - call: 'fibo_finder(10)'
-        expected: 55
-
+    asserts:
+      - assert_equal 0, fibo_finder(0)
+      - assert_equal 1, fibo_finder(1)
+      - assert_equal 3, fibo_finder(4)
+      - assert_equal 13, fibo_finder(7)
+      - assert_equal 55, fibo_finder(10)

@@ -1,21 +1,15 @@
 ---
 level: elementary
 tags: [arithmetic, strings]
-description: If a number is divisible by 3, return "Fizz".
+description: |
+  If a number is divisible by 3, return "Fizz".
   If a number is divisible by 5, return "Buzz".
   If a number is divisible by 3 and 5, return "FizzBuzz"
 
 checks:
   ruby:
-    assert_equals:
-      - call: 'fizzbuzz(3)'
-        expected: 'Fizz'
-
-      - call: 'fizzbuzz(50)'
-        expected: 'Buzz'
-
-      - call: 'fizzbuzz(50)'
-        expected: 'FizzBuzz'
-
-      - call: 'fizzbuzz(5175)'
-        expected: 'FizzBuzz'
+    asserts:
+      - assert_equal "Fizz", fizzbuzz(3)
+      - assert_equal "Buzz", fizzbuzz(50)
+      - assert_equal 'FizzBuzz', fizzbuzz(50)
+      - assert_equal 'FizzBuzz', fizzbuzz(5175)

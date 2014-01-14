@@ -1,0 +1,10 @@
+---
+level: elementary
+tags: []
+checks:
+  ruby:
+    asserts:
+      - assert_equal "Value is 00005", solution(5)
+      - assert_equal "Value is 00123", solution(123)
+      - assert_equal "Value is 12345", solution(12345)
+

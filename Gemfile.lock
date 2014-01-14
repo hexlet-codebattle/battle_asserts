@@ -9,6 +9,11 @@ GIT
       ruby_parser (>= 3.0.1)
       sexp_processor (>= 4.0)
 
+PATH
+  remote: .
+  specs:
+    battle_asserts (0.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -27,6 +32,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  battle_asserts!
   minitest
   rake
   wrong!
