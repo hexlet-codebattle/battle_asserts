@@ -1,0 +1,14 @@
+---
+level: elementary
+tags: [array]
+
+checks:
+  ruby:
+    setup: >
+      list = ['a', 'b', 'c']
+
+    asserts:
+      - assert_equal 'b', fetch(list, 1, 'd')
+      - assert_equal 'd', fetch(list, 5, 'd')
+      - assert_equal 'c', fetch(list, -1, 'd')
+      - assert_equal 'd', fetch(list, -5, 'd')

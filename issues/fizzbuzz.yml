@@ -1,6 +1,6 @@
 ---
 level: elementary
-tags: [arithmetic, strings]
+tags: [arithmetic, string]
 description: |
   If a number is divisible by 3, return "Fizz".
   If a number is divisible by 5, return "Buzz".
