@@ -14,9 +14,9 @@ module BattleAsserts
         full_path = File.join(@dir, file_name)
         next if File.directory?(full_path)
         issue = YAML.load_file(full_path)
-        issue["name"] = file_name.split(".").first
+        name = file_name.split(".").first
 
-        yield issue
+        yield name, issue
       end
     end
   end

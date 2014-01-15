@@ -14,12 +14,12 @@ class Asserts < TestCase
 
     allowed_levels = ["elementary", "easy", "medium", "hard"]
 
-    @iterator.each do |issue|
-      puts "issue: #{issue["name"]}"
+    @iterator.each do |name, issue|
+      puts "issue: #{name}"
       required_keys.each do |key|
         assert { issue.has_key? key }
       end
-      assert { (issue.keys - allowed_keys - ["name"]).empty? }
+      assert { (issue.keys - allowed_keys).empty? }
 
       assert { allowed_levels.include? issue["level"] }
 
