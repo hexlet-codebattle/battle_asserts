@@ -2,7 +2,6 @@ require "rubygems"
 require 'bundler/setup'
 Bundler.require
 
-require 'yaml'
 require 'wrong/adapters/minitest'
 
 PROJECT_ROOT = File.join(Dir.pwd)
