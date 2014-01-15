@@ -4,7 +4,7 @@ tags: [hash, string]
 
 checks:
   ruby:
-    setup:
+    setup: |
       url_params = {
         'first_param'  => 123,
         'second_param' => 456,

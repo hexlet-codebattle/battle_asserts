@@ -1,8 +1,8 @@
 ---
 level: elementary
 tags: [enumerable, set]
-description: Method .include? in Array (Enumerable) not work
-  Check presence of element in array
+description: |
+  Method .include? in Array (Enumerable) not work. Check presence of element in array.
 
 checks:
   ruby:

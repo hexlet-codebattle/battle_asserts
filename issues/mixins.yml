@@ -4,7 +4,7 @@ tags: [mixin]
 
 checks:
   ruby:
-    setup:
+    setup: |
       guy, girl, dog = Man.new, Woman.new, Dog.new
       guy.set_name("John")
       girl.set_name("Jessika")

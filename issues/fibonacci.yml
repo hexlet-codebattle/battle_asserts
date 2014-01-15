@@ -1,7 +1,8 @@
 ---
 level: easy
 tags: []
-description: "Write a method that handles Fibonacci sequences.
+description: |
+  "Write a method that handles Fibonacci sequences.
   Have it return the nth item in the Fibonacci sequence.
   Hint: The first item in the sequence is 0."
 

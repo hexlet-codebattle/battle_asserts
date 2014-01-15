@@ -4,7 +4,7 @@ tags: [array]
 
 checks:
   ruby:
-    setup: >
+    setup: |
       list = ['a', 'b', 'c']
 
     asserts:

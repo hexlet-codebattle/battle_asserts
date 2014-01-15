@@ -14,9 +14,9 @@ checks:
       mathematicians = HashWithIndifferentAccess["Yutaka", "Taniyama", :Alonzo, "Church"]
 
     asserts:
-      - assert_equal composers["Janacek"], "Leos Janacek"
-      - assert_equal composers[:Sweelinck], "Jan Pieterszoon Sweelinck"
-      - assert_equal mathematicians[:Yutaka], "Taniyama"
-      - assert_equal (mathematicians["Alonzo"] == mathematicians[:Alonzo]), true
+      - assert_equal "Leos Janacek", composers["Janacek"]
+      - assert_equal "Jan Pieterszoon Sweelinck", composers[:Sweelinck]
+      - assert_equal "Taniyama", mathematicians[:Yutaka]
+      - assert_equal mathematicians["Alonzo"], mathematicians[:Alonzo]
 
 
