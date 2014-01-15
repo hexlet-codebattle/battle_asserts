@@ -9,6 +9,11 @@ module BattleAsserts
       @dir = dir
     end
 
+    def get(name)
+      filepath= File.join(@dir, "#{name}.yml")
+      YAML.load_file(filepath)
+    end
+
     def each
       Dir.foreach(@dir) do |file_name|
         full_path = File.join(@dir, file_name)
