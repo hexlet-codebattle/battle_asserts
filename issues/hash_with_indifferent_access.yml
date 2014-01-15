@@ -6,7 +6,7 @@ description:
 
 checks:
   ruby:
-    setup:
+    setup: >
       composers = HashWithIndifferentAccess.new
       composers[:Janacek] = "Leos Janacek"
       composers["Sweelinck"] = "Jan Pieterszoon Sweelinck"

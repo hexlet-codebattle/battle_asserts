@@ -4,5 +4,7 @@ tags: [string, numbers]
 description: this is description
 checks:
   ruby:
+    setup: >
+      composers = HashWithIndifferentAccess.new
     asserts:
       - assert valid_credit_card?("4408041234567893")
