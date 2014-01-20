@@ -8,15 +8,15 @@ description: |
 checks:
   ruby:
     asserts:
-      - assert_equal phone_number?("5555555555"), true
-      - assert_equal phone_number?("555555555"), false # missing a digit
-      - assert_equal phone_number?("555-5555"), true
-      - assert_equal phone_number?("(555) 555-5555"), true
-      - assert_equal phone_number?("(555) 555-555"), false
-      - assert_equal phone_number?("555-555-5555"), true
-      - assert_equal phone_number?("555a-555-5555"), false # extraneous digit
-      - assert_equal phone_number?("555*555-5555"), false # extraneous digit
-      - assert_equal phone_number?("55a-555-5555"), false # extraneous digit
+      - assert phone_number?("5555555555")
+      - assert !phone_number?("555555555")
+      - assert phone_number?("555-5555")
+      - assert phone_number?("(555) 555-5555")
+      - assert !phone_number?("(555) 555-555")
+      - assert phone_number?("555-555-5555")
+      - assert !phone_number?("555a-555-5555")
+      - assert !phone_number?("555*555-5555")
+      - assert !phone_number?("55a-555-5555")
 
 
 

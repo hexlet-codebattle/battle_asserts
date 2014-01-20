@@ -5,9 +5,7 @@ tags: []
 checks:
   ruby:
     asserts:
-      - assert_equal true, twenty_one?(3, 4, 5, 6, 3)
-      - assert_equal false, twenty_one?(3, 11, 10)
-      - assert_equal true, twenty_one?(10, 11)
-      - assert_equal false, twenty_one?(10, 10)
-
-
+      - assert twenty_one?(3, 4, 5, 6, 3)
+      - assert !twenty_one?(3, 11, 10)
+      - assert twenty_one?(10, 11)
+      - assert !twenty_one?(10, 10)
