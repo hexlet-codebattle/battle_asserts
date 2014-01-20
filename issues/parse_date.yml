@@ -7,7 +7,7 @@ description: |
 checks:
   ruby:
     asserts:
-      - assert_equal pretty_date("11-30-1835"), "Nov 30, 1835"
-      - assert_equal pretty_date("July 20, 1933"), "Jul 20, 1933"
-      - assert_equal pretty_date("1922-11-11"), "Nov 11, 1922"
-      - assert_equal pretty_date("9/20/1978"), "Sep 20, 1978"
+      - assert_equal "Nov 30, 1835", pretty_date("11-30-1835")
+      - assert_equal "Jul 20, 1933", pretty_date("July 20, 1933")
+      - assert_equal "Nov 11, 1922", pretty_date("1922-11-11")
+      - assert_equal "Sep 20, 1978", pretty_date("9/20/1978")
