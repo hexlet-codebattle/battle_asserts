@@ -9,5 +9,5 @@ checks:
   ruby:
     asserts:
       - assert_equal ["This", "sample", "string"], more_than_medium("This is a sample string")
-      - assert_equal ["another, sample"], more_than_medium("Some another sample")
+      - assert_equal ["another", "sample"], more_than_medium("Some another sample")
       - assert_equal [], more_than_medium("Do, do, do, do... do it!")
