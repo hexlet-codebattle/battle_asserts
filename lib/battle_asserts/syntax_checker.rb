@@ -6,5 +6,8 @@ module BattleAsserts
       yield f.read
       f.close
     end
+
+    def self.javascript(expression, &block)
+    end
   end
 end

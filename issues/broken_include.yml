@@ -1,14 +1,21 @@
 ---
 level: elementary
-tags: [enumerable, set]
+tags: [array, set]
 description: |
-  Method .include? in Array (Enumerable) not work. Check presence of element in array.
+  Check presence of element in array.
 
 checks:
   ruby:
     setup: >
       set = [1, 2, 3, 4, 5, 6, 7]
-
     asserts:
       - assert include?(set, 5)
       - assert !include?(set, 10)
+
+  javascript:
+    setup: >
+      var set = [1, 2, 3, 4, 5, 6, 7];
+    asserts:
+      - assert(contains(set, 5))
+      - assert(!contains(set, 10))
+

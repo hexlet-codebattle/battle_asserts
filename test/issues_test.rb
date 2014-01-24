@@ -40,6 +40,7 @@ class Asserts < TestCase
     @iterator.each do |name, issue|
       puts "issue: #{name}"
       issue["checks"].each do |lang, code|
+        next if lang != "ruby"
         all_code = "#{code["setup"]}\n\n#{code["asserts"].join("\n")}"
         m.send(lang, all_code) do |out|
           assert_equal "Syntax OK\n", out, "issue: #{name}"
