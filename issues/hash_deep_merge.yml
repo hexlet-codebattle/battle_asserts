@@ -2,7 +2,7 @@
 level: easy
 tags: [hash]
 description:
-  Returns a new hash with self and other_hash merged recursively.
+  Returns a new hash with **self** and **other_hash** merged recursively.
 
 checks:
   ruby:
