@@ -7,12 +7,15 @@ class Asserts < TestCase
   end
 
   def test_allowed_keys
-    allowed_keys = ["level", "tags", "description", "checks"]
+    allowed_keys = ["level", "tags", "description", "checks", "author"]
     required_keys = ["level", "checks"]
     allowed_lang_keys = ["setup", "asserts"]
     required_lang_keys = ["asserts"]
 
     allowed_levels = ["elementary", "easy", "medium", "hard"]
+
+    allowed_author_keys = ["github_nickname", "web_page"]
+    required_author_keys = ["github_nickname"]
 
     @iterator.each do |name, issue|
       puts "issue: #{name}"
@@ -31,6 +34,14 @@ class Asserts < TestCase
         assert { (params.keys - allowed_lang_keys).empty? }
 
         assert { params["asserts"].is_a? Array }
+      end
+
+      author_info = issue["author"]
+      if author_info
+        assert { (author_info.keys - allowed_author_keys).empty? }
+        required_author_keys.each do |key|
+          assert { author_info.has_key?(key) }
+        end
       end
     end
   end
