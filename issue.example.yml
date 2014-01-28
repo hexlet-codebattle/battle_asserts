@@ -2,8 +2,12 @@
 level: (elementary|easy|medium|hard)
 tags: [string, numbers]
 description: this is description
+author:
+  github_nickname: your_name
+  web_page: "http://your.site"
 checks:
   ruby:
+    description: this is ruby description
     setup: |
       composers = HashWithIndifferentAccess.new
     asserts:
