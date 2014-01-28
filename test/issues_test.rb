@@ -9,7 +9,7 @@ class Asserts < TestCase
   def test_allowed_keys
     allowed_keys = ["level", "tags", "description", "checks", "author"]
     required_keys = ["level", "checks"]
-    allowed_lang_keys = ["setup", "asserts"]
+    allowed_lang_keys = ["description", "setup", "asserts"]
     required_lang_keys = ["asserts"]
 
     allowed_levels = ["elementary", "easy", "medium", "hard"]
