@@ -6,7 +6,7 @@
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
-5. Run tests (`rake test`). You can use optional ISSUE=<issue_name>.
+5. Run tests (`rake test`). You can use optional ISSUE=issue_name for speed up runs.
 6. Create new Pull Request
 
 
