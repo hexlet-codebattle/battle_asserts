@@ -18,6 +18,8 @@ class Asserts < TestCase
     required_author_keys = ["github_nickname"]
 
     @iterator.each do |name, issue|
+      next if ENV["ISSUE"] && ENV["ISSUE"] != name
+
       puts "issue: #{name}"
       required_keys.each do |key|
         assert { issue.has_key? key }
@@ -49,6 +51,8 @@ class Asserts < TestCase
   def test_syntax
     m = BattleAsserts::SyntaxChecker
     @iterator.each do |name, issue|
+      next if ENV["ISSUE"] && ENV["ISSUE"] != name
+
       puts "issue: #{name}"
       issue["checks"].each do |lang, code|
         next if lang != "ruby"
