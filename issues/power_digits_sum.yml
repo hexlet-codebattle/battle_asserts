@@ -1,5 +1,5 @@
 ---
-level: easy
+level: elementary
 tags: [arithmetic]
 description: |
   Create a method to calculate sum of digits for 2**n
