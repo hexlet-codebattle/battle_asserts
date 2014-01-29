@@ -1,0 +1,13 @@
+---
+level: easy
+tags: [arithmetic]
+description: |
+  Create a method to calculate sum of digits for 2**n
+  For example, 2**15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+
+checks:
+  ruby:
+    asserts:
+      - assert_equal 13, power_digits_sum(8)
+      - assert_equal 26, power_digits_sum(15)
+
