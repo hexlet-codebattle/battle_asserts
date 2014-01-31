@@ -55,10 +55,19 @@ class Asserts < TestCase
 
       puts "issue: #{name}"
       issue["checks"].each do |lang, code|
-        next if lang != "ruby"
-        all_code = "#{code["setup"]}\n\n#{code["asserts"].join("\n")}"
+        all_code = "#{code["setup"]}\n#{code["asserts"].join("\n")}"
+        code_output = all_code.split("\n").each_with_index.map do |element, index|
+          "#{index + 1} #{element}"
+        end.join("\n")
+        code_output = "\n\n#{code_output}\n\n"
+
         m.send(lang, all_code) do |out|
-          assert_equal "Syntax OK\n", out, "issue: #{name}"
+          case lang
+          when "ruby"
+            assert_equal "Syntax OK\n", out, code_output
+          when "javascript"
+            assert_equal "", out, code_output
+          end
         end
       end
     end

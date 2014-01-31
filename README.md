@@ -1,5 +1,9 @@
 [![Build Status](https://travis-ci.org/kaize/battle_asserts.png?branch=master)](https://travis-ci.org/kaize/battle_asserts)
 
+## Setup for development
+* bundle install
+* npm install -g esprima
+
 ## Contributing
 
 1. Fork it
