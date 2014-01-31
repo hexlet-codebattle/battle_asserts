@@ -12,8 +12,8 @@ checks:
   javascript:
     asserts:
       - |
-        assert_equal("j", keyForMinValue({k: 2, h: 3, j: 1}))
+        assertEqual("j", keyForMinValue({k: 2, h: 3, j: 1}))
       - |
-        assert_equal("z", keyForMinValue({o: 0, z: -2, j: 1}))
-      - assert_equal(null, keyForMinValub({}))
+        assertEqual("z", keyForMinValue({o: 0, z: -2, j: 1}))
+      - assertEqual(null, keyForMinValub({}))
 

@@ -16,4 +16,4 @@ checks:
 
     asserts:
       - |
-        assert_equal({cat: 1, dog: 1, fish: 2}, count(test))
+        assertEqual({cat: 1, dog: 1, fish: 2}, count(test))

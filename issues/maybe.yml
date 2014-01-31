@@ -52,7 +52,7 @@ checks:
         })();
       };
     asserts:
-      - assert_equal("State unknown", maybe(person1))
-      - assert_equal("State unknown", maybe(person2))
-      - assert_equal("State unknown", maybe(person3))
-      - assert_equal("california", maybe(person4))
+      - assertEqual("State unknown", maybe(person1))
+      - assertEqual("State unknown", maybe(person2))
+      - assertEqual("State unknown", maybe(person3))
+      - assertEqual("california", maybe(person4))

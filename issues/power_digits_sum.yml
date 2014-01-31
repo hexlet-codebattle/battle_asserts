@@ -13,6 +13,6 @@ checks:
 
   javascript:
     asserts:
-      - assert_equal(13, powerDigitsSum(8))
-      - assert_equal(26, powerDigitsSum(15))
+      - assertEqual(13, powerDigitsSum(8))
+      - assertEqual(26, powerDigitsSum(15))
 

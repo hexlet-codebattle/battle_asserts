@@ -29,4 +29,4 @@ checks:
       var expected = "http://www.foobar.com?first_param=123&second_param=456&third_param=678"
 
     asserts:
-      - assert_equal(expected, join_params(url, urlParams))
+      - assertEqual(expected, join_params(url, urlParams))

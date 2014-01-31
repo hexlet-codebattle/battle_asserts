@@ -17,8 +17,8 @@ checks:
 
   javascript:
     asserts:
-      - assert_equal(0, fiboFinder(0))
-      - assert_equal(1, fiboFinder(1))
-      - assert_equal(3, fiboFinder(4))
-      - assert_equal(13, fiboFinder(7))
-      - assert_equal(55, fiboFinder(10))
+      - assertEqual(0, fiboFinder(0))
+      - assertEqual(1, fiboFinder(1))
+      - assertEqual(3, fiboFinder(4))
+      - assertEqual(13, fiboFinder(7))
+      - assertEqual(55, fiboFinder(10))

@@ -10,7 +10,7 @@ checks:
   javascript:
     asserts:
       - |
-        assert_equal({draft: 0, completed: 0}, generate(["draft", "completed"], 0))
+        assertEqual({draft: 0, completed: 0}, generate(["draft", "completed"], 0))
       - |
-        assert_equal({one: 4, two: 4}, generate(["one", "two"], 4))
+        assertEqual({one: 4, two: 4}, generate(["one", "two"], 4))
 

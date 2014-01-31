@@ -15,4 +15,4 @@ checks:
       str = "olleH ,ereht dna woh era ?uoy"
 
     asserts:
-    - assert_equal(str, reverseEachWord("Hello there, and how are you?"))
+    - assertEqual(str, reverseEachWord("Hello there, and how are you?"))

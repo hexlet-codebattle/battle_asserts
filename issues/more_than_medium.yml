@@ -14,6 +14,6 @@ checks:
 
   javascript:
     asserts:
-      - assert_equal(["This", "sample", "string"], moreThanMedium("This is a sample string"))
-      - assert_equal(["another", "sample"], moreThanMedium("Some another sample"))
-      - assert_equal([], moreThanMedium("Do, do, do, do... do it!"))
+      - assertEqual(["This", "sample", "string"], moreThanMedium("This is a sample string"))
+      - assertEqual(["another", "sample"], moreThanMedium("Some another sample"))
+      - assertEqual([], moreThanMedium("Do, do, do, do... do it!"))

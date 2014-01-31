@@ -15,9 +15,9 @@ checks:
 
   javascript:
     asserts:
-      - assert_equal("yzzy", longestPalindrome("xyzzy"))
-      - assert_equal("dhfdkjfffhhfffjkdfhd", longestPalindrome("afbbbfjdjklgdfdhfdkjfffhhfffjkdfhdhkyejejfjkd"))
-      - assert_equal("racecar", longestPalindrome("bartarcarracecarbartar"))
-      - assert_equal("46264", longestPalindrome("3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982"))
+      - assertEqual("yzzy", longestPalindrome("xyzzy"))
+      - assertEqual("dhfdkjfffhhfffjkdfhd", longestPalindrome("afbbbfjdjklgdfdhfdkjfffhhfffjkdfhdhkyejejfjkd"))
+      - assertEqual("racecar", longestPalindrome("bartarcarracecarbartar"))
+      - assertEqual("46264", longestPalindrome("3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982"))
 
 

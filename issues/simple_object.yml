@@ -16,5 +16,5 @@ checks:
       joe = new Person('Joe')
 
     asserts:
-      - assert_equal('Hello Kate, my name is Joe', joe.greet('Kate'))
-      - assert_equal('Joe', joe.name())
+      - assertEqual('Hello Kate, my name is Joe', joe.greet('Kate'))
+      - assertEqual('Joe', joe.name())

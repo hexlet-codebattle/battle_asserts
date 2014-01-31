@@ -13,7 +13,7 @@ checks:
 
   javascript:
     asserts:
-      - assert_equal([2, 3, 7], primeFactorization(42))
-      - assert_equal([2, 2, 11], primeFactorization(44))
-      - assert_equal([3, 5, 5], primeFactorization(75))
-      - assert_equal([2, 2, 2, 2, 2, 2, 3, 643], primeFactorization(123456))
+      - assertEqual([2, 3, 7], primeFactorization(42))
+      - assertEqual([2, 2, 11], primeFactorization(44))
+      - assertEqual([3, 5, 5], primeFactorization(75))
+      - assertEqual([2, 2, 2, 2, 2, 2, 3, 643], primeFactorization(123456))
