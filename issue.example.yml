@@ -1,14 +1,16 @@
 ---
-level: (elementary|easy|medium|hard)
+level: easy # (elementary|easy|medium|hard)
 tags: [string, numbers]
 description: this is description
 author:
   github_nickname: your_name
   web_page: "http://your.site"
-checks:
+checks: # (ruby|javascript|you lang)
   ruby:
     description: this is ruby description
     setup: |
       composers = HashWithIndifferentAccess.new
-    asserts:
+    asserts: # (assert|assert_equal|assert_raises)
       - assert valid_credit_card?("4408041234567893")
+      - assert_equal 5, solution(10)
+      - assert_raises(NoMethodError) { subject.foo }
