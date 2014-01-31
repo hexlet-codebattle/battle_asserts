@@ -18,6 +18,14 @@ checks:
       - assert !phone_number?("555*555-5555")
       - assert !phone_number?("55a-555-5555")
 
-
-
-
+  javascript:
+    asserts:
+      - assert(isPhoneNumber("5555555555"))
+      - assert(!isPhoneNumber("555555555"))
+      - assert(isPhoneNumber("555-5555"))
+      - assert(isPhoneNumber("(555) 555-5555"))
+      - assert(!isPhoneNumber("(555) 555-555"))
+      - assert(isPhoneNumber("555-555-5555"))
+      - assert(!isPhoneNumber("555a-555-5555"))
+      - assert(!isPhoneNumber("555*555-5555"))
+      - assert(!isPhoneNumber("55a-555-5555"))

@@ -14,7 +14,7 @@ checks:
       - assert_equal 'd', fetch(list, -5, 'd')
   javascript:
     setup: |
-      list = ['a', 'b', 'c'];
+      list = ['a', 'b', 'c']
 
     asserts:
       - assert_equal('b', fetch(list, 1, 'd'))

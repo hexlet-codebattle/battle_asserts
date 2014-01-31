@@ -67,6 +67,8 @@ class Asserts < TestCase
             assert_equal "Syntax OK\n", out, code_output
           when "javascript"
             assert_equal "", out, code_output
+          else
+            puts "we have not support '#{lang}' syntax check"
           end
         end
       end
