@@ -22,3 +22,8 @@ checks:
     asserts:
       - assert_equal 7, longest_recurring_cycle(10)
       - assert_equal 13, longest_recurring_cycle(16)
+
+  javascript:
+    asserts:
+      - assert_equal(7, longestRecurringCycle(10))
+      - assert_equal(13, longestRecurringCycle(16))

@@ -15,4 +15,9 @@ checks:
       - assert happy_number?(986543210)
       - assert !happy_number?(2)
       - assert !happy_number?(189)
-
+  javascript:
+    asserts:
+      - assert(isHappyNumber(7))
+      - assert(isHappyNumber(986543210))
+      - assert(!isHappyNumber(2))
+      - assert(!isHappyNumber(189))

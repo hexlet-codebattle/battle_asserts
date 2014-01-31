@@ -13,4 +13,11 @@ checks:
       - assert_equal "racecar", longest_palindrome("bartarcarracecarbartar")
       - assert_equal "46264", longest_palindrome("3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982")
 
+  javascript:
+    asserts:
+      - assert_equal("yzzy", longestPalindrome("xyzzy"))
+      - assert_equal("dhfdkjfffhhfffjkdfhd", longestPalindrome("afbbbfjdjklgdfdhfdkjfffhhfffjkdfhdhkyejejfjkd"))
+      - assert_equal("racecar", longestPalindrome("bartarcarracecarbartar"))
+      - assert_equal("46264", longestPalindrome("3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982"))
+
 

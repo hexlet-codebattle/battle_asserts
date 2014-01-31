@@ -11,3 +11,12 @@ checks:
         assert_equal [:a, :d], keys_of(1, {a: 1, b: 2, c: 3, d: 1})
       - |
         assert_equal [:a, :b, :d], keys_of([1, 2], {a: 1, b: 2, c: 3, d: 1})
+
+  javascript:
+    asserts:
+      - |
+        assert_equal(["a"], keyOf(1, {a: 1, b: 2, c: 3}))
+      - |
+        assert_equal(["a", "d"], keyOf(1, {a: 1, b: 2, c: 3, d: 1}))
+      - |
+        assert_equal(["a", "b", "d"], keyOf([1, 2], {a: 1, b: 2, c: 3, d: 1}))

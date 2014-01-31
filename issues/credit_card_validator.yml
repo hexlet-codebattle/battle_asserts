@@ -16,6 +16,10 @@ checks:
       - assert !valid_credit_card?("440804l234567893")
       - assert valid_credit_card?("38520000023237")
       - assert valid_credit_card?("4222222222222")
-
-
-
+  javascript:
+    asserts:
+      - assert(!isValidCreditCard("1234567890123456"))
+      - assert(isValidCreditCard("4408041234567893"))
+      - assert(!isValidCreditCard("440804l234567893"))
+      - assert(isValidCreditCard("38520000023237"))
+      - assert(isValidCreditCard("4222222222222"))

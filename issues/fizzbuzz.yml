@@ -13,3 +13,9 @@ checks:
       - assert_equal "Buzz", fizzbuzz(50)
       - assert_equal 'FizzBuzz', fizzbuzz(150)
       - assert_equal 'FizzBuzz', fizzbuzz(5175)
+  javascript:
+    asserts:
+      - assert_equal("Fizz", fizzbuzz(3))
+      - assert_equal("Buzz", fizzbuzz(50))
+      - assert_equal('FizzBuzz', fizzbuzz(150))
+      - assert_equal('FizzBuzz', fizzbuzz(5175))

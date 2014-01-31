@@ -9,3 +9,11 @@ checks:
       - assert_equal "z", key_for_min_value({"o" => 0, "z" => -2, "j" => 1})
       - assert_equal nil, key_for_min_value({})
 
+  javascript:
+    asserts:
+      - |
+        assert_equal("j", keyForMinValue({k: 2, h: 3, j: 1}))
+      - |
+        assert_equal("z", keyForMinValue({o: 0, z: -2, j: 1}))
+      - assert_equal(null, keyForMinValub({}))
+

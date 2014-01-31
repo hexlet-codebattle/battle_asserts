@@ -11,3 +11,9 @@ checks:
       - assert_equal [3, 5, 5], prime_factorization(75)
       - assert_equal [2, 2, 2, 2, 2, 2, 3, 643], prime_factorization(123456)
 
+  javascript:
+    asserts:
+      - assert_equal([2, 3, 7], primeFactorization(42))
+      - assert_equal([2, 2, 11], primeFactorization(44))
+      - assert_equal([3, 5, 5], primeFactorization(75))
+      - assert_equal([2, 2, 2, 2, 2, 2, 3, 643], primeFactorization(123456))

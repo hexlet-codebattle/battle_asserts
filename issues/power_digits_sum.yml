@@ -11,3 +11,8 @@ checks:
       - assert_equal 13, power_digits_sum(8)
       - assert_equal 26, power_digits_sum(15)
 
+  javascript:
+    asserts:
+      - assert_equal(13, powerDigitsSum(8))
+      - assert_equal(26, powerDigitsSum(15))
+
