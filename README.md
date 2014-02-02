@@ -4,6 +4,13 @@
 
 * https://github.com/blakeembrey/code-problems
 
+### Ruby
+
+* https://github.com/Abica/ruby-99-problems
+* https://github.com/hcf/99-problems-in-Ruby
+* https://github.com/kevinrutherford/rrwb-code
+* 
+
 ### javascript
 
 * https://github.com/lisafrench/JavaScriptExercises
