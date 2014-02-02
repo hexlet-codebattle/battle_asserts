@@ -1,0 +1,31 @@
+---
+level: medium
+tags: [hash]
+author:
+  github_nickname: intridea
+  web_page: http://intridea.com
+description: |
+  Dash is an extended Hash that has a discrete set of defined properties and only those properties may be set on the hash.
+  Additionally, you can set defaults for each property. You can also flag a property as required.
+  Required properties will raise an exception if unset.
+
+checks:
+  ruby:
+    setup: |
+      class Person < Dash
+        property :name, :required => true
+        property :email
+        property :occupation, :default => 'Rubyist'
+      end
+
+      p = Person.new(:name => "Bob")
+      p.email = 'abc@def.com'
+
+    asserts:
+      - assert_raise(ArgumentError) { Person.new }
+      - assert_equal "Bob", p.name
+      - assert_equal "abc@def.com", p.email
+      - assert_raise(ArgumentError) { p.name = nil }
+      - assert_equal "Rubyist", p.occupation
+      - assert_equal "Rubyist", p[:occupation]
+      - assert_raise(NoMethodError) { p[:awesome] }
