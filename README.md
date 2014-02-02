@@ -4,6 +4,17 @@
 
 * https://github.com/blakeembrey/code-problems
 
+### PHP
+* https://github.com/Kami/practical-php-testing-exercise-solutions
+* 
+
+### Python
+* https://github.com/zhiwehu/Python-programming-exercises
+* https://github.com/Aristide1o/python_kata
+
+### Go
+
+### Erlang
 ### Ruby
 
 * https://github.com/Abica/ruby-99-problems
