@@ -2,11 +2,14 @@
 
 ## Issue sources
 
+* https://github.com/blakeembrey/code-problems
+
 ### javascript
 
 * https://github.com/lisafrench/JavaScriptExercises
 * https://github.com/beastaugh/js-programming-exercises
 * https://github.com/timestep/javascript-exercises
+* https://github.com/wvmitchell/javascript
 
 ## Setup for development
 * bundle install
