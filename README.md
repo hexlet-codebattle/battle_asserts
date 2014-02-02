@@ -1,5 +1,13 @@
 [![Build Status](https://travis-ci.org/kaize/battle_asserts.png?branch=master)](https://travis-ci.org/kaize/battle_asserts)
 
+## Issue sources
+
+### javascript
+
+* https://github.com/lisafrench/JavaScriptExercises
+* https://github.com/beastaugh/js-programming-exercises
+* https://github.com/timestep/javascript-exercises
+
 ## Setup for development
 * bundle install
 * npm install -g esprima
