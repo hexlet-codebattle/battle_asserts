@@ -1,0 +1,16 @@
+---
+level: easy
+tags: [array, arithmetic]
+description: |
+  Write a function that accepts an array of random integers and an integer n.
+  Determine the number of times where two integers in the array have the difference of n.
+
+checks:
+  ruby:
+    asserts:
+      - assert_equal 3, integer_difference(4, [1, 1, 5, 6, 9, 16, 27])
+      - assert_equal 4, integer_difference(2, [1, 1, 3, 3])
+  javascript:
+    asserts:
+      - assertEqual(3, integerDifference(4, [1, 1, 5, 6, 9, 16, 27]))
+      - assertEqual(4, integerDifference(2, [1, 1, 3, 3]))

@@ -1,0 +1,21 @@
+---
+level: elementary
+tags: [array, string]
+description: |
+  Given a text file and a word, find the positions that the word occurs in the file.
+  We’ll be asked to find the positions of many words in the same file.
+
+checks:
+  ruby:
+    asserts:
+      - assert_equal [0], word_positions('test', 'test')
+      - assert_equal [0, 4, 9], word_positions('test test test', 'test')
+      - assert_equal [11], word_positions('find a word in some sentence', 'in')
+
+checks:
+  javascript:
+    asserts:
+      - assertEqual([0], wordPositions('test')('test'))
+      - assertEqual([0, 4, 9], wordPositions('test test test')('test'))
+      - assertEqual([11], wordPositions('find a word in some sentence')('in'))
+
