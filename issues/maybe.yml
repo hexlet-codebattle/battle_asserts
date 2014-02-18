@@ -43,7 +43,7 @@ checks:
       var person4 = {address: {state: "california"}}
 
       var maybe = function(person) {
-        Maybe(person).bind(function(p) {
+        return Maybe(person).bind(function(p) {
           return p["address"];
         }).bind(function(a) {
           return a["state"];
