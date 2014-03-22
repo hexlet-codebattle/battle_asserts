@@ -15,5 +15,5 @@ checks:
         assertEqual("j", keyForMinValue({k: 2, h: 3, j: 1}))
       - |
         assertEqual("z", keyForMinValue({o: 0, z: -2, j: 1}))
-      - assertEqual(null, keyForMinValub({}))
+      - assertEqual(null, keyForMinValue({}))
 
