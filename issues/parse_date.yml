@@ -17,4 +17,4 @@ checks:
       - assertEqual("Nov 30, 1835", prettyDate("11-30-1835"))
       - assertEqual("Jul 20, 1933", prettyDate("July 20, 1933"))
       - assertEqual("Nov 11, 1922", prettyDate("1922-11-11"))
-      - assertEqual("Sep 20, 1978", prettyDdate("9/20/1978"))
+      - assertEqual("Sep 20, 1978", prettyDate("9/20/1978"))
