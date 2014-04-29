@@ -11,6 +11,30 @@ checks: # (ruby|javascript|you lang)
     setup: |
       composers = HashWithIndifferentAccess.new
     asserts: # (assert|assert_equal|assert_raises)
-      - assert valid_credit_card?("4408041234567893")
-      - assert_equal 5, solution(10)
-      - assert_raises(NoMethodError) { subject.foo }
+      - assert_equal 0, fibo_finder(0)
+      - assert_equal 1, fibo_finder(1)
+      - assert_equal 3, fibo_finder(4)
+      - assert_equal 13, fibo_finder(7)
+      - assert_equal 55, fibo_finder(10)
+
+  clojure:
+    description: this is ruby description
+    implementation: |
+      (defn fibonacci
+        [x]
+        (if (= x 0)
+          0
+          (if (= x 1)
+            1
+            (+ (fibonacci (dec x)) (fibonacci (- x 2))))))
+    asserts:
+      - (testing "fibonacci 0"
+          (assert (= 0 (fibonacci 0)))
+      - (testing "fibonacci 1"
+          (assert (= 1 (fibonacci 1)))
+      - (testing "fibonacci 1"
+          (assert (= 3 (fibonacci 4)))
+      - (testing "fibonacci 1"
+          (assert (= 13 (fibonacci 7)))
+      - (testing "fibonacci 1"
+          (assert (= 55 (fib 10)))
