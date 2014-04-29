@@ -19,14 +19,6 @@ checks: # (ruby|javascript|you lang)
 
 multicode_checks:
   langs: [ruby, javascript]
-  implementation: |
-    (defn fibo-finder
-      [x]
-      (if (= x 0)
-        0
-        (if (= x 1)
-          1
-          (+ (fibo-finder (dec x)) (fibo-finder (- x 2))))))
   asserts:
     - (assert (= 0 (fibo-finder 0))
     - (assert (= 1 (fibo-finder 1)))
