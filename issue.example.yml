@@ -9,7 +9,7 @@ checks: # (ruby|javascript|you lang)
   ruby:
     description: this is ruby description
     setup: |
-      composers = HashWithIndifferentAccess.new
+      arr = []
     asserts: # (assert|assert_equal|assert_raises)
       - assert_equal 0, fibo_finder(0)
       - assert_equal 1, fibo_finder(1)
@@ -17,24 +17,19 @@ checks: # (ruby|javascript|you lang)
       - assert_equal 13, fibo_finder(7)
       - assert_equal 55, fibo_finder(10)
 
-  clojure:
-    description: this is ruby description
-    implementation: |
-      (defn fibonacci
-        [x]
-        (if (= x 0)
-          0
-          (if (= x 1)
-            1
-            (+ (fibonacci (dec x)) (fibonacci (- x 2))))))
-    asserts:
-      - (testing "fibonacci 0"
-          (assert (= 0 (fibonacci 0)))
-      - (testing "fibonacci 1"
-          (assert (= 1 (fibonacci 1)))
-      - (testing "fibonacci 1"
-          (assert (= 3 (fibonacci 4)))
-      - (testing "fibonacci 1"
-          (assert (= 13 (fibonacci 7)))
-      - (testing "fibonacci 1"
-          (assert (= 55 (fib 10)))
+multicode_checks:
+  langs: [ruby, javascript]
+  implementation: |
+    (defn fibo-finder
+      [x]
+      (if (= x 0)
+        0
+        (if (= x 1)
+          1
+          (+ (fibo-finder (dec x)) (fibo-finder (- x 2))))))
+  asserts:
+    - (assert (= 0 (fibo-finder 0))
+    - (assert (= 1 (fibo-finder 1)))
+    - (assert (= 3 (fibonacci 4)))
+    - (assert (= 13 (fibonacci 7)))
+    - (assert (= 55 (fib 10)))
