@@ -15,9 +15,6 @@ checks:
       - assert_equal true, guy.human?
       - assert_equal "Pit", dog.name
 
-      - assert_equal "Gav", call(dog)
-      - assert_equal "Hi", call(guy)
-
       - assert_equal Object, Man.superclass
       - assert_equal Object, Woman.superclass
       - assert_equal Object, Dog.superclass
