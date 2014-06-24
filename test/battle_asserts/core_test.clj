@@ -1,7 +1,12 @@
 (ns battle-asserts.core-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.core :refer :all]))
+            [battle-asserts.core :refer :all]
+            [multicode.core :as mc]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 0))))
+(deftest test-multicode
+  (is (= 
+        "assert(=(1, fibo(a)))\nassert(=(2, fibo(b)))"
+        (mc/prettify-code 
+          :ruby 
+          ['(assert (= 1 (fibo a)))
+           '(assert (= 2 (fibo b)))])))) 

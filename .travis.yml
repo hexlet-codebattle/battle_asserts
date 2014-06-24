@@ -1,5 +1,8 @@
-language: ruby
-rvm:
-  - 2.1.0
-before_script: npm install -g esprima
-script: "bundle exec rake test"
+language: clojure
+lein: lein2
+script: lein2 install
+script: lein2 test
+before_script: 
+- rm checkouts/multicode
+- mkdir -p checkouts/multicode
+- git clone https://github.com/mokevnin/multicode.git checkouts/multicode
