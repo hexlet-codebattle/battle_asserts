@@ -1,0 +1,6 @@
+(loadfile reader.clj)
+(loadfile "reader.clj")
+(load-file "reader.clj")
+exit
+(load-file "reader.clj")
+exit

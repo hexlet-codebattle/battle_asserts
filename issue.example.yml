@@ -9,8 +9,19 @@ checks: # (ruby|javascript|you lang)
   ruby:
     description: this is ruby description
     setup: |
-      composers = HashWithIndifferentAccess.new
+      arr = []
     asserts: # (assert|assert_equal|assert_raises)
-      - assert valid_credit_card?("4408041234567893")
-      - assert_equal 5, solution(10)
-      - assert_raises(NoMethodError) { subject.foo }
+      - assert_equal 0, fibo_finder(0)
+      - assert_equal 1, fibo_finder(1)
+      - assert_equal 3, fibo_finder(4)
+      - assert_equal 13, fibo_finder(7)
+      - assert_equal 55, fibo_finder(10)
+
+multicode_checks:
+  langs: [ruby, javascript]
+  asserts:
+    - (assert (= 0 (fibo-finder 0))
+    - (assert (= 1 (fibo-finder 1)))
+    - (assert (= 3 (fibonacci 4)))
+    - (assert (= 13 (fibonacci 7)))
+    - (assert (= 55 (fib 10)))
