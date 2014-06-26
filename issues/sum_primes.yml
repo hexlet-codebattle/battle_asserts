@@ -6,10 +6,10 @@ description: "Write some code to sum the first 1000 primes without using Ruby's 
 checks:
   ruby:
     asserts:
-      - assert_equal 3682913, sum_primes(1000)
-      - assert_equal 111587, sum_primes(200)
+      - assert_equal 76127, sum_primes(1000)
+      - assert_equal 4227, sum_primes(200)
 
   javascript:
     asserts:
-      - assertEqual(3682913, sumPrimes(1000))
-      - assertEqual(111587, sumPrimes(200))
+      - assertEqual(76127, sumPrimes(1000))
+      - assertEqual(4227, sumPrimes(200))
