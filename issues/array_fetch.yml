@@ -10,7 +10,7 @@ checks:
     asserts:
       - assert_equal 'b', fetch(list, 1, 'd')
       - assert_equal 'd', fetch(list, 5, 'd')
-      - assert_equal 'c', fetch(list, -1, 'd')
+      - assert_equal 'c', fetch(list, -1, 'a')
       - assert_equal 'd', fetch(list, -5, 'd')
   javascript:
     setup: |
@@ -19,5 +19,5 @@ checks:
     asserts:
       - assertEqual('b', fetch(list, 1, 'd'))
       - assertEqual('d', fetch(list, 5, 'd'))
-      - assertEqual('c', fetch(list, -1, 'd'))
+      - assertEqual('c', fetch(list, -1, 'a'))
       - assertEqual('d', fetch(list, -5, 'd'))
