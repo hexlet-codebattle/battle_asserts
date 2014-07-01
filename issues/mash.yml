@@ -21,7 +21,7 @@ checks:
       - assert_equal nil, mash.post
       - assert_equal "My Mash", mash.name
       - assert mash.name?
-      - assert_equal "Michael Bleigh", mash2.author
+      - assert_equal "Michael Bleigh", mash2.author.name
       - assert mash.author.is_a?(Mash)
 
 
