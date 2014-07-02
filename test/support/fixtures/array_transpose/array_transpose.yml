@@ -1,0 +1,4 @@
+---
+level: medium
+tags: []
+description: "Re-implement Ruby's Array#transpose."
