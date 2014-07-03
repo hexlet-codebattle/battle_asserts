@@ -1,0 +1,15 @@
+tags: [array]
+level: elementary
+checks:
+  ruby: ['arr = ["a", "b", "c"]', 'assert(=("b", fetch(arr, 1, "d")))', 'assert(=("d",
+      fetch(arr, 5, "d")))', 'assert(=("c", fetch(arr, -1, "d")))', 'assert(=("d",
+      fetch(arr, -5, "d")))']
+  javascript: ['var arr = ["a", "b", "c"];', 'assert(=("b", fetch(arr, 1, "d")));',
+    'assert(=("d", fetch(arr, 5, "d")));', 'assert(=("c", fetch(arr, -1, "d")));',
+    'assert(=("d", fetch(arr, -5, "d")));']
+  python: ['arr = ["a", "b", "c"]', 'assert(=("b", fetch(arr, 1, "d")))', 'assert(=("d",
+      fetch(arr, 5, "d")))', 'assert(=("c", fetch(arr, -1, "d")))', 'assert(=("d",
+      fetch(arr, -5, "d")))']
+  php: ['$arr = array("a", "b", "c");', 'assert(=("b", fetch(arr, 1, "d")));', 'assert(=("d",
+      fetch(arr, 5, "d")));', 'assert(=("c", fetch(arr, -1, "d")));', 'assert(=("d",
+      fetch(arr, -5, "d")));']
