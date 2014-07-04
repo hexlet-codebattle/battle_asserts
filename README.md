@@ -1,12 +1,7 @@
 [![Build Status](https://travis-ci.org/kaize/battle_asserts.png?branch=master)](https://travis-ci.org/kaize/battle_asserts)
 
-## Issue sources
-
-* https://github.com/blakeembrey/code-problems
-
 ### PHP
 * https://github.com/Kami/practical-php-testing-exercise-solutions
-* 
 
 ### Python
 * https://github.com/zhiwehu/Python-programming-exercises
@@ -50,62 +45,55 @@
 
 ## Add new source
 
-* Create yaml file with the name of your issue. Look at example.
-~~~Yaml
+#### Create yaml file with the name of your issue. Look at example.
+
 	---
-level: easy # (elementary|easy|medium|hard)
-tags: [string, numbers]
-description: this is description
-author:
-  github_nickname: your_name
-  web_page: "http://your.site"
-checks: # (ruby|javascript|you lang)
-  ruby:
-    description: this is ruby description
-    setup: |
-      arr = []
-multicode_checks:
-  langs: [javascript]#[ruby, javascript, python, php]
-~~~
+	level: easy # (elementary|easy|medium|hard)
+	tags: [string, numbers]
+	description: this is description
+	author:
+	  github_nickname: your_name
+	  web_page: "http://your.site"
+	checks: # (ruby|javascript|you lang)
+	  ruby:
+	    description: this is ruby description
+	    setup: |
+	      arr = []
+	multicode_checks:
+	  langs: [javascript]#[ruby, javascript, python, php]
 
 If you need special things in your task, such as some Ruby objects, write asserts in "cheks:" section. If your task multiplatform write assers in "multicode_checks:" section.
 
-* Create .clj file in test/battle_solutions folder such as - array_fetch_test.cl.
+#### Create .clj file in test/battle_solutions folder such as - array_fetch_test.cl.
 
-* Write test by define function (deftest test-asserts ())
-Look at example.
-~~~Clojure
-(deftest test-asserts
-  (let [arr [\a \b \c]]
-    (assert-equal \b (fetch arr 1 \d))
-    (assert-equal \d (fetch arr 5 \d))
-    (assert-equal \c (fetch arr -1 \d))
-    (assert-equal \d (fetch arr -5 \d))))
-~~~
+#### Write test by define function (deftest test-asserts ()) Look at example.
 
-* Write namespace with your issue name
-Example
-~~~Clojure
-(ns battle-solutions.array-fetch-test
-  (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal assert]]))
-~~~
+    (deftest test-asserts
+  		(let [arr [\a \b \c]]
+    	(assert-equal \b (fetch arr 1 \d))
+    	(assert-equal \d (fetch arr 5 \d))
+    	(assert-equal \c (fetch arr -1 \d))
+    	(assert-equal \d (fetch arr -5 \d))))
 
-* Write function to resolve your tests
-Example
-~~~Clojure
-(defn fetch
-  [s index default]
-  (let [positive-index (if (> index 0) index (+ (count s) index))]
-    (nth s positive-index default)))
-~~~
+#### Write namespace with your issue name.
 
-* Run tests (`lein test`).
 
-* If you want to run test for only one issue - use lein test + namespace
-~~~Clojure
-lein test battle-solutions.array-fetch-test
-~~~
+	(ns battle-solutions.array-fetch-test
+	  (:require [clojure.test :refer :all]
+	            [battle-asserts.test-helper :refer [assert-equal assert]]))
+
+#### Write function to resolve your tests
+
+	(defn fetch
+	  [s index default]
+	  (let [positive-index (if (> index 0) index (+ (count s) index))]
+	    (nth s positive-index default)))
+
+#### Run tests (`lein test`).
+
+#### If you want to run test for only one issue - use lein test + namespace
+
+	lein test battle-solutions.array-fetch-test
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kaize/battle_asserts/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
