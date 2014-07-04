@@ -1,0 +1,8 @@
+level: medium
+tags: []
+description: Write some code to sum the first 1000 primes without using Ruby's Prime class.
+checks:
+  ruby:
+    asserts: ['assert_equal 76127, sum_primes(1000)', 'assert_equal 4227, sum_primes(200)']
+  javascript:
+    asserts: ['assertEqual(76127, sumPrimes(1000))', 'assertEqual(4227, sumPrimes(200))']

@@ -14,4 +14,5 @@
                                      'pst)]
                  (alter-var-root orig (constantly (deref new))))]
   :source-paths ["src"]
-  :eval-in :nrepl)
+  :eval-in :nrepl
+  :main battle-asserts.core)

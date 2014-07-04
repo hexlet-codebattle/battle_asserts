@@ -1,0 +1,14 @@
+level: easy
+tags: [hash]
+description: Implement a hash class which does not distinguish between symbols and strings for its keys.
+checks:
+  ruby:
+    setup: |
+      composers = HashWithIndifferentAccess.new
+      composers[:Janacek] = "Leos Janacek"
+      composers["Sweelinck"] = "Jan Pieterszoon Sweelinck"
+
+      mathematicians = HashWithIndifferentAccess["Yutaka", "Taniyama", :Alonzo, "Church"]
+    asserts: ['assert_equal "Leos Janacek", composers["Janacek"]', 'assert_equal "Jan
+        Pieterszoon Sweelinck", composers[:Sweelinck]', 'assert_equal "Taniyama",
+        mathematicians[:Yutaka]', 'assert_equal mathematicians["Alonzo"], mathematicians[:Alonzo]']

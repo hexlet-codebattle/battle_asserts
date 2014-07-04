@@ -1,0 +1,16 @@
+level: easy
+tags: [arithmetic, string]
+description: |
+  Write a function that will return the words,
+  which are longer than the average length of all the words.
+checks:
+  ruby:
+    asserts: ['assert_equal ["This", "sample", "string"], more_than_medium("This is
+        a sample string")', 'assert_equal ["another", "sample"], more_than_medium("Some
+        another sample")', 'assert_equal [], more_than_medium("Do, do, do, do... do
+        it!")']
+  javascript:
+    asserts: ['assertEqual(["This", "sample", "string"], moreThanMedium("This is a
+        sample string"))', 'assertEqual(["another", "sample"], moreThanMedium("Some
+        another sample"))', 'assertEqual([], moreThanMedium("Do, do, do, do... do
+        it!"))']

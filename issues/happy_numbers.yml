@@ -1,0 +1,15 @@
+level: medium
+tags: []
+description: |
+  Happy numbers are positive integers that follow a particular formula:
+  take each individual digit, square it, and then sum the squares to get a new number.
+  Repeat with the new number and eventually, you might get to a number whose squared sum is 1.
+  This is a happy number. An unhappy number (or sad number) is one that loops endlessly.
+  Write a function that determines if a number is happy or not.
+checks:
+  ruby:
+    asserts: ['assert happy_number?(7)', 'assert happy_number?(986543210)', 'assert
+        !happy_number?(2)', 'assert !happy_number?(189)']
+  javascript:
+    asserts: [assert(isHappyNumber(7)), assert(isHappyNumber(986543210)), assert(!isHappyNumber(2)),
+      assert(!isHappyNumber(189))]
