@@ -1,15 +1,27 @@
+level: elementary
+tags: [arithmetic, string]
 description: |
   If a number is divisible by 3, return "Fizz".
   If a number is divisible by 5, return "Buzz".
   If a number is divisible by 3 and 5, return "FizzBuzz"
-tags: [arithmetic, string]
-level: elementary
 checks:
-  ruby: ['assert(=("Fizz", fizzbuzz(3)))', 'assert(=("Buzz", fizzbuzz(50)))', 'assert(=("FizzBuzz",
-      fizzbuzz(150)))', 'assert(=("FizzBuzz", fizzbuzz(5175)))']
-  javascript: ['assert(=("Fizz", fizzbuzz(3)));', 'assert(=("Buzz", fizzbuzz(50)));',
-    'assert(=("FizzBuzz", fizzbuzz(150)));', 'assert(=("FizzBuzz", fizzbuzz(5175)));']
-  php: ['assert(=("Fizz", fizzbuzz(3)));', 'assert(=("Buzz", fizzbuzz(50)));', 'assert(=("FizzBuzz",
-      fizzbuzz(150)));', 'assert(=("FizzBuzz", fizzbuzz(5175)));']
-  python: ['assert(=("Fizz", fizzbuzz(3)))', 'assert(=("Buzz", fizzbuzz(50)))', 'assert(=("FizzBuzz",
-      fizzbuzz(150)))', 'assert(=("FizzBuzz", fizzbuzz(5175)))']
+  ruby: |-
+    assert_equal('Fizz', fizzbuzz(3))
+    assert_equal('Buzz', fizzbuzz(50))
+    assert_equal('FizzBuzz', fizzbuzz(150))
+    assert_equal('FizzBuzz', fizzbuzz(5175))
+  javascript: |-
+    assertEqual('Fizz', fizzbuzz(3));
+    assertEqual('Buzz', fizzbuzz(50));
+    assertEqual('FizzBuzz', fizzbuzz(150));
+    assertEqual('FizzBuzz', fizzbuzz(5175));
+  php: |-
+    assertEqual('Fizz', fizzbuzz(3));
+    assertEqual('Buzz', fizzbuzz(50));
+    assertEqual('FizzBuzz', fizzbuzz(150));
+    assertEqual('FizzBuzz', fizzbuzz(5175));
+  python: |-
+    assertEqual('Fizz', fizzbuzz(3))
+    assertEqual('Buzz', fizzbuzz(50))
+    assertEqual('FizzBuzz', fizzbuzz(150))
+    assertEqual('FizzBuzz', fizzbuzz(5175))

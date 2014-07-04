@@ -1,0 +1,11 @@
+level: elementary
+tags: [string]
+checks:
+  ruby:
+    setup: |
+      str = "olleH ,ereht dna woh era ?uoy"
+    asserts: ['assert_equal str, reverse_each_word("Hello there, and how are you?")']
+  javascript:
+    setup: |
+      str = "olleH ,ereht dna woh era ?uoy"
+    asserts: ['assertEqual(str, reverseEachWord("Hello there, and how are you?"))']

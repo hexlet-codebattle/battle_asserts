@@ -1,0 +1,9 @@
+level: elementary
+tags: [arithmetic]
+description: Write a function that will return whether the argument is prime number
+checks:
+  ruby:
+    asserts: ['assert !is_prime?(1)', 'assert is_prime?(2)', 'assert is_prime?(3)',
+      'assert !is_prime?(10)']
+  javascript:
+    asserts: [assert(!isPrime(1)), assert(isPrime(2)), assert(isPrime(3)), assert(!isPrime(10))]

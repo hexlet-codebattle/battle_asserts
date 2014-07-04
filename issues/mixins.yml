@@ -1,0 +1,12 @@
+level: elementary
+tags: [mixin]
+checks:
+  ruby:
+    setup: |
+      guy, girl, dog = Man.new, Woman.new, Dog.new
+      guy.set_name("John")
+      girl.set_name("Jessika")
+      dog.set_name("Pit")
+    asserts: ['assert_equal "John", guy.name', 'assert_equal true, guy.human?', 'assert_equal
+        "Pit", dog.name', 'assert_equal Object, Man.superclass', 'assert_equal Object,
+        Woman.superclass', 'assert_equal Object, Dog.superclass']
