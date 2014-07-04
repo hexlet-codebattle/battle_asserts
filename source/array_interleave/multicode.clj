@@ -1,10 +1,10 @@
-(ns array-interleave.multicode) 
+(ns array-interleave.multicode)
 
 (defn interleave
   [arr & args]
-  (if (= args nil) 
+  (if (nil? args)
     arr
-    (sort 
+    (sort
       #(compare (read-string (str %1)) (read-string (str %2)))
       (vec (flatten (concat arr (vec args)))))))
 
