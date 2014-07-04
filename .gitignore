@@ -3,5 +3,8 @@
 .DS_Store
 .lein-repl-history
 lib/.DS_Store
-target/*
+target
+*.swp
+*.swo
+
 
