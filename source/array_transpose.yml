@@ -1,7 +1,7 @@
 ---
 level: medium
-tags: []
-description: "Re-implement Ruby's Array#transpose."
+tags: [array]
+description: ""
 
 multicode_checks:
   langs: [ruby, javascript, python, php]

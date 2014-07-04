@@ -3,11 +3,19 @@ tags: [array, set]
 description: |
   Check presence of element in array.
 checks:
-  ruby:
-    setup: |
-      set = [1, 2, 3, 4, 5, 6, 7]
-    asserts: ['assert include?(set, 5)', 'assert !include?(set, 10)']
-  javascript:
-    setup: |
-      var set = [1, 2, 3, 4, 5, 6, 7];
-    asserts: ['assert(contains(set, 5))', 'assert(!contains(set, 10))']
+  ruby: |-
+    s = [1, 2, 4, 5, 6, 7]
+    assert(include?(s, 5))
+    assert(!include?(s, 10))
+  javascript: |-
+    var s = [1, 2, 4, 5, 6, 7];
+    assert(include?(s, 5));
+    assert(!include?(s, 10));
+  python: |-
+    s = [1, 2, 4, 5, 6, 7]
+    assert(include?(s, 5))
+    assert(!include?(s, 10))
+  php: |-
+    $s = array(1, 2, 4, 5, 6, 7);
+    assert(include?(s, 5));
+    assert(!include?(s, 10));

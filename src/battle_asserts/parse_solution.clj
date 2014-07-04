@@ -1,7 +1,7 @@
 (ns battle-asserts.parse-solution)
 
 (defn- get-solution-code
-  [path] 
+  [path]
   (read-string (str \((slurp path)\))))
 
 (defn- get-function-check
@@ -9,7 +9,7 @@
   (first (filter #(= 'test-asserts (nth % 1)) solution-code)))
 
 (defn- get-asserts
-  [solution-code] 
+  [solution-code]
   (let [function-check (get-function-check solution-code)]
     (into [] (drop 2 function-check))))
 

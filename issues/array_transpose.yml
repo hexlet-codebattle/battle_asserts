@@ -1,6 +1,6 @@
 level: medium
-tags: []
-description: Re-implement Ruby's Array#transpose.
+tags: [array]
+description: ''
 checks:
   ruby: |-
     assert_equal([[1, :a], [2, :b], [3, :c]], transpose([[1, 2, 3], [:a, :b, :c]]))

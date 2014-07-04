@@ -3,7 +3,7 @@
             [battle-asserts.core :refer :all]
             [battle-asserts.parse-solution :refer :all]
             [multicode.core :as mc]
-            [battle-asserts.checker :refer :all]))
+            [battle-asserts.checker :refer [valid?]]))
 
 (deftest test-get-let-array-fetch
   (is (=
@@ -18,7 +18,7 @@
           (get-asserts-from-file "test/fixtures/array_fetch")))))
 
 (deftest test-checker
-  (is (check-file "test/fixtures/array_transpose.yml")))
+  (is (valid? "test/fixtures/array_transpose.yml")))
 
 (deftest test-array-fetch-checker
-  (is (check-file "test/fixtures/array_fetch.yml")))
+  (is (valid? "test/fixtures/array_fetch.yml")))

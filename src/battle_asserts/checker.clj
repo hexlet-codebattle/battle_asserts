@@ -17,10 +17,6 @@
 (def required_author_keys #{})
 
 
-(defn- read-file
-	[file-name] 
-	(slurp file-name))
-
 (defn- parse-file
   [file-input]
   (yaml/parse-string file-input))
@@ -35,8 +31,8 @@
 
 (defn- check-lang-dupl-count
   [p-hash]
-  (letfn [(check-lang [acc c] 
-            (+ acc (if (nil? (get (get-cheks p-hash) (keyword c))) 0 1)))] 
+  (letfn [(check-lang [acc c]
+            (+ acc (if (nil? (get (get-cheks p-hash) (keyword c))) 0 1)))]
     (reduce check-lang 0 (get-multi-checks p-hash))))
 
 (defn- check-lang-dupl
@@ -47,7 +43,7 @@
   [p-hash]
   (sets/superset? allowed_keys (set (keys p-hash))))
 
-(defn- check-require-keys 
+(defn- check-require-keys
   [p-hash]
   (sets/superset? (set (keys p-hash)) required_keys))
 
@@ -97,8 +93,6 @@
       (check-require-lang-and-multi parsed-yaml)
       (check-lang-dupl parsed-yaml)))
 
-(defn check-file 
-  "path to file"
-  [path-file]
-  (all-checkers (parse-file (read-file path-file))))
-
+(defn valid?
+  [file]
+  (all-checkers (parse-file (slurp file))))
