@@ -13,5 +13,5 @@
                      new (ns-resolve (doto 'clj-stacktrace.repl require)
                                      'pst)]
                  (alter-var-root orig (constantly (deref new))))]
-  :source-paths ["src" "source"] 
+  :source-paths ["src"]
   :eval-in :nrepl)

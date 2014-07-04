@@ -1,8 +1,8 @@
-(ns array-fetch.multicode) 
+(ns fixtures.array_fetch)
 
 (defn get-value-by-index
   [arr index default-value]
-  (if (and (>= index 0) (< index (count arr))) 
+  (if (and (>= index 0) (< index (count arr)))
      (arr index)
      default-value))
 
@@ -17,4 +17,4 @@
     (assert (= \b (fetch arr 1 \d)))
     (assert (= \d (fetch arr 5 \d)))
     (assert (= \c (fetch arr -1 \d)))
-    (assert (= \d (fetch arr -5 \d))))) 
+    (assert (= \d (fetch arr -5 \d)))))

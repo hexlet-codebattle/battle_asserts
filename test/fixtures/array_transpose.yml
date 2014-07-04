@@ -2,3 +2,6 @@
 level: medium
 tags: []
 description: "Re-implement Ruby's Array#transpose."
+
+multicode_checks:
+  langs: [ruby, javascript, python, php]

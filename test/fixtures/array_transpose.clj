@@ -1,4 +1,4 @@
-(ns array-transpose.multicode) 
+(ns fixtures.array-transpose)
 
 (defn transpose
   [vectors]
