@@ -54,13 +54,15 @@
 	author:
 	  github_nickname: your_name
 	  web_page: "http://your.site"
-	checks: # (ruby|javascript|you lang)
+	checks:
 	  ruby:
-	    description: this is ruby description
-	    setup: |
-	      arr = []
+      	assert_equal 0, fibo_finder(0)
+      	assert_equal 1, fibo_finder(1)
+     	assert_equal 3, fibo_finder(4)
+      	assert_equal 13, fibo_finder(7)
+      	assert_equal 55, fibo_finder(10)
 	multicode_checks:
-	  langs: [javascript]#[ruby, javascript, python, php]
+	  langs: [javascript] #[ruby, javascript, python, php]
 
 If you need special things in your task, such as some Ruby objects, write asserts in "cheks:" section. If your task multiplatform write assers in "multicode_checks:" section.
 
