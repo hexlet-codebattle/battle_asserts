@@ -64,21 +64,8 @@ checks: # (ruby|javascript|you lang)
     description: this is ruby description
     setup: |
       arr = []
-    asserts: # (assert|assert_equal|assert_raises)
-      - assert_equal 0, fibo_finder(0)
-      - assert_equal 1, fibo_finder(1)
-      - assert_equal 3, fibo_finder(4)
-      - assert_equal 13, fibo_finder(7)
-      - assert_equal 55, fibo_finder(10)
-
 multicode_checks:
   langs: [javascript]#[ruby, javascript, python, php]
-  asserts:
-    - (assert (= 0 (fibo-finder 0))
-    - (assert (= 1 (fibo-finder 1)))
-    - (assert (= 3 (fibonacci 4)))
-    - (assert (= 13 (fibonacci 7)))
-    - (assert (= 55 (fib 10)))
 ~~~
 
 If you need special things in your task, such as some Ruby objects, write asserts in "cheks:" section. If your task multiplatform write assers in "multicode_checks:" section.
@@ -101,7 +88,7 @@ Example
 ~~~Clojure
 (ns battle-solutions.array-fetch-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer [assert-equal assert]]))
 ~~~
 
 * Write function to resolve your tests
@@ -114,6 +101,11 @@ Example
 ~~~
 
 * Run tests (`lein test`).
+
+* If you want to run test for only one issue - use lein test + namespace
+~~~Clojure
+lein test battle-solutions.array-fetch-test
+~~~
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kaize/battle_asserts/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
