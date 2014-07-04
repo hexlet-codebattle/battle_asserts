@@ -1,0 +1,13 @@
+level: elementary
+tags: [object]
+checks:
+  ruby:
+    setup: |
+      joe = Person.new('Joe')
+    asserts: ['assert_equal ''Hello Kate, my name is Joe'', joe.greet(''Kate'')',
+      'assert_equal ''Joe'', joe.name']
+  javascript:
+    setup: |
+      joe = new Person('Joe')
+    asserts: ['assertEqual(''Hello Kate, my name is Joe'', joe.greet(''Kate''))',
+      'assertEqual(''Joe'', joe.name())']

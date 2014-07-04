@@ -1,0 +1,10 @@
+level: elementary
+tags: [array, string]
+description: |
+  Given a text file and a word, find the positions that the word occurs in the file.
+  We’ll be asked to find the positions of many words in the same file.
+checks:
+  javascript:
+    asserts: ['assertEqual([0], wordPositions(''test'')(''test''))', 'assertEqual([0,
+        4, 9], wordPositions(''test test test'')(''test''))', 'assertEqual([11], wordPositions(''find
+        a word in some sentence'')(''in''))']

@@ -1,0 +1,22 @@
+level: medium
+tags: [hash]
+author: {github_nickname: intridea, web_page: 'http://intridea.com'}
+description: ''
+checks:
+  ruby:
+    setup: |
+      c1 = Clash.new
+      c.where(:abc => 'def').order(:created_at)
+
+      c2 = Clash.new
+      c.where!.abc('def').ghi(123)._end!.order(:created_at)
+
+      c3 = Clash.new
+      c.where(:abc => 'def').where(:hgi => 123)
+    asserts:
+    - |
+      assert_equal({where: {abc: 'def'}, order: :created_at}, c1.to_hash)
+    - |
+      assert_equal({where: {abc: 'def', ghi: 123}, order: :created_at}, c2.to_hash)
+    - |
+      assert_equal({where: {abc: 'def', hgi: 123}}, c3.to_hash)
