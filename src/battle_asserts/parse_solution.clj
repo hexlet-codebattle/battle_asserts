@@ -6,12 +6,12 @@
 
 (defn- get-function-check
   [solution-code]
-  (first (filter #(= 'check (nth % 1)) solution-code)))
+  (first (filter #(= 'test-asserts (nth % 1)) solution-code)))
 
 (defn- get-asserts
   [solution-code] 
   (let [function-check (get-function-check solution-code)]
-    (into [] (drop 3 function-check))))
+    (into [] (drop 2 function-check))))
 
 (defn get-asserts-from-file
   [path]

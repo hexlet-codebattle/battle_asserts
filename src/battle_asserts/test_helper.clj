@@ -5,3 +5,6 @@
   [expected actual]
   (is (= expected actual)))
 
+(defn assert
+  [actual]
+  (is actual))
