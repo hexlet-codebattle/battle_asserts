@@ -1,11 +1,10 @@
 (ns fizzbuzz.multicode)
 
-(defn fizzbuzz 
+(defn fizzbuzz
   [number]
-  (cond 
-    (and (= (mod number 5) 0) (= (mod number 3) 0)) "FizzBuzz"
-    (= (mod number 5) 0) "Buzz"
-    (= (mod number 3) 0) "Fizz"))
+  (str
+    (when (= (mod number 3) 0) "Fizz")
+    (when (= (mod number 5) 0) "Buzz")))
 
 (defn check []
   (assert (= "Fizz" (fizzbuzz 3)))
