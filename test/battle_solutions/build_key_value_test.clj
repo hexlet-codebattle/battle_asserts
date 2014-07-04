@@ -1,4 +1,6 @@
-(ns build-key-value.multicode)
+(ns battle-solutions.build-key-value-test
+  (:require [clojure.test :refer :all]
+            [battle-asserts.test-helper :refer [assert-equal]]))
 
 (defn b-key-val [hash]
   (letfn
@@ -12,7 +14,7 @@
     (reduce func {} (into [] hash))))
 
 ; FIXME split to many asserts
-(defn check []
+(deftest test-asserts
   (let [d {"a" {"b" 3 "c" 2 "d" [1 2]} "x" ["1" "2" "3"] }
         expected {"a[b]" 3 "a[c]" 2 "a[d][0]" 1 "a[d][1]" 2 "x[0]" "1" "x[1]" "2" "x[2]" "3"}]
-    (assert (= expected (b-key-val d)))))
+    (assert-equal expected (b-key-val d))))
