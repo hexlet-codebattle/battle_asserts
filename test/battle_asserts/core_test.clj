@@ -8,14 +8,14 @@
 (deftest test-get-let-array-fetch
   (is (=
         ['(let [arr [\a \b \c]] (assert-equal \b (fetch arr 1 \d)) (assert-equal \d (fetch arr 5 \d)) (assert-equal \c (fetch arr -1 \d)) (assert-equal \d (fetch arr -5 \d)))]
-        (get-asserts-from-file "test/fixtures/array_fetch.clj"))))
+        (get-asserts-from-file "test/fixtures/array_fetch.txt"))))
 
 (deftest test-multicode-with-let-arrary-fetch
   (is (=
         "arr = ['a', 'b', 'c']\nassert_equal('b', fetch(arr, 1, 'd'))\nassert_equal('d', fetch(arr, 5, 'd'))\nassert_equal('c', fetch(arr, -1, 'd'))\nassert_equal('d', fetch(arr, -5, 'd'))"
         (mc/prettify-code
           :ruby
-          (get-asserts-from-file "test/fixtures/array_fetch.clj")))))
+          (get-asserts-from-file "test/fixtures/array_fetch.txt")))))
 
 (deftest test-checker
   (is (check-file "test/fixtures/array_transpose.yml")))
