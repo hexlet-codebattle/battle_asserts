@@ -50,8 +50,7 @@
 
 ## Add new source
 
-1. Create your folder in /source with the name of your issue
-2. Create yaml file with the same name as folder. Look at example.
+* Create yaml file with the name of your issue. Look at example.
 ~~~Yaml
 	---
 level: easy # (elementary|easy|medium|hard)
@@ -82,36 +81,39 @@ multicode_checks:
     - (assert (= 55 (fib 10)))
 ~~~
 
-If you need special things in your task, such as some Ruby objects, write asserts in "cheks:" section.
-If your task multiplatform write assers in "multicode_checks:" section.
-3. Create multicode.clj file in your folder.
-4. Write test by define function (def check []())
+If you need special things in your task, such as some Ruby objects, write asserts in "cheks:" section. If your task multiplatform write assers in "multicode_checks:" section.
+
+* Create .clj file in test/battle_solutions folder such as - array_fetch_test.cl.
+
+* Write test by define function (deftest test-asserts ())
 Look at example.
 ~~~Clojure
-	(defn check []
-  		(let [arr [\a \b \c]]
-    		(assert (= \b (fetch arr 1 \d)))
-    		(assert (= \d (fetch arr 5 \d)))
-    		(assert (= \c (fetch arr -1 \d)))
-    		(assert (= \d (fetch arr -5 \d)))))
+(deftest test-asserts
+  (let [arr [\a \b \c]]
+    (assert-equal \b (fetch arr 1 \d))
+    (assert-equal \d (fetch arr 5 \d))
+    (assert-equal \c (fetch arr -1 \d))
+    (assert-equal \d (fetch arr -5 \d))))
 ~~~
 
-5. Write namespace with your issue name dot multicode
+* Write namespace with your issue name
 Example
 ~~~Clojure
-	(ns array-fetch.multicode)
+(ns battle-solutions.array-fetch-test
+  (:require [clojure.test :refer :all]
+            [battle-asserts.test-helper :refer [assert-equal]]))
 ~~~
 
-6. Write function to resolve your tests
+* Write function to resolve your tests
 Example
 ~~~Clojure
-	(defn fetch
-  		[s index default]
-  		(let [positive-index (if (> index 0) index (+ (count s) index))]
-    	(nth s positive-index default)))
+(defn fetch
+  [s index default]
+  (let [positive-index (if (> index 0) index (+ (count s) index))]
+    (nth s positive-index default)))
 ~~~
 
-7. Run tests (`lein test`).
+* Run tests (`lein test`).
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kaize/battle_asserts/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
