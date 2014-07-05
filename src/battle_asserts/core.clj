@@ -1,6 +1,5 @@
 (ns battle-asserts.core
   (:require [battle-asserts.checker :as checker]
-            [clojure.java.io :as io]
             [clj-yaml.core :as yaml]
             [me.raynes.fs :as fs]
             [battle-asserts.reader :as reader]))
@@ -10,7 +9,7 @@
         test-file (str "test/battle_solutions" "/" (fs/name file) "_test.clj")
         test-code (when (fs/readable? test-file) (read-string (str "(" (slurp test-file) ")")))]
 
-    (checker/check data test-code)
+    (checker/validate data)
     (let [result (reader/transform data test-code)
           yaml (yaml/generate-string result)
           result-file (str "issues" "/" (fs/base-name file))]
