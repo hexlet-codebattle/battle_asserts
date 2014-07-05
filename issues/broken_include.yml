@@ -1,9 +1,9 @@
-level: elementary
-tags: [array, set]
-description: |
-  Check presence of element in array.
 checks:
-  ruby: |-
+  php: |-
+    $s = array(1, 2, 4, 5, 6, 7);
+    assert(include?(s, 5));
+    assert(!include?(s, 10));
+  python: |-
     s = [1, 2, 4, 5, 6, 7]
     assert(include?(s, 5))
     assert(!include?(s, 10))
@@ -11,11 +11,11 @@ checks:
     var s = [1, 2, 4, 5, 6, 7];
     assert(include?(s, 5));
     assert(!include?(s, 10));
-  python: |-
+  ruby: |-
     s = [1, 2, 4, 5, 6, 7]
     assert(include?(s, 5))
     assert(!include?(s, 10))
-  php: |-
-    $s = array(1, 2, 4, 5, 6, 7);
-    assert(include?(s, 5));
-    assert(!include?(s, 10));
+level: elementary
+tags: [array, set]
+description: |
+  Check presence of element in array.

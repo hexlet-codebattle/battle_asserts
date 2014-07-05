@@ -1,6 +1,4 @@
 (ns battle-asserts.checker
-  (:require [clojure.java.io :as io])
-  (:require [clj-yaml.core :as yaml])
   (:require [clojure.string :as string])
   (:require [clojure.set :as sets]))
 
@@ -16,28 +14,6 @@
 (def allowed_author_keys #{:github_nickname, :web_page})
 (def required_author_keys #{})
 
-
-(defn- parse-file
-  [file-input]
-  (yaml/parse-string file-input))
-
-(defn- get-cheks
-   [p-hash]
-   (get p-hash :checks))
-
-(defn- get-multi-checks
-  [p-hash]
-  (get (get p-hash :multicode_checks) :langs))
-
-(defn- check-lang-dupl-count
-  [p-hash]
-  (letfn [(check-lang [acc c]
-            (+ acc (if (nil? (get (get-cheks p-hash) (keyword c))) 0 1)))]
-    (reduce check-lang 0 (get-multi-checks p-hash))))
-
-(defn- check-lang-dupl
-  [p-hash]
-  (if (== (check-lang-dupl-count p-hash) 0) true false))
 
 (defn- check-allow-keys
   [p-hash]
@@ -59,7 +35,7 @@
 
 (defn- check-require-authors
   [p-hash]
-  (not (nil? (get (get p-hash :author) :github_nickname))))
+  (not (nil? (get-in p-hash [:author :github_nickname]))))
 
 
 (defn- check-lang
@@ -68,7 +44,7 @@
 
 (defn- check-allow-langs
   [p-hash]
-  (if (or (check-lang p-hash :checks) (check-lang p-hash :multicode_checks)) true false))
+  (or (check-lang p-hash :checks) (check-lang p-hash :multicode_checks)))
 
 
 (defn- check-require-lang
@@ -81,18 +57,14 @@
 
 (defn- check-require-lang-and-multi
   [p-hash]
-  (if (or (check-require-lang p-hash) (check-require-multi p-hash)) true false))
+  (or (check-require-lang p-hash) (check-require-multi p-hash)))
 
-(defn all-checkers
-  [parsed-yaml]
-    (and (check-allow-keys parsed-yaml)
-      (check-require-keys parsed-yaml)
-      (check-allow-levels parsed-yaml)
-      (check-allow-authors parsed-yaml)
-      (check-allow-langs parsed-yaml)
-      (check-require-lang-and-multi parsed-yaml)
-      (check-lang-dupl parsed-yaml)))
-
-(defn valid?
-  [file]
-  (all-checkers (parse-file (slurp file))))
+(defn check
+  [data test-code]
+  (let [checkers [check-allow-keys
+                  check-require-keys
+                  check-allow-levels
+                  check-allow-authors
+                  check-allow-langs
+                  check-require-lang-and-multi]]
+    (map #(% test-code) checkers)))
