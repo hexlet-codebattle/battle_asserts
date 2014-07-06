@@ -4,8 +4,7 @@
 
 (defn validate
   [data]
-  (let [actual-keys (set (keys data))
-        actual-check-keys (-> (:checks data) keys set)]
+  (let [actual-keys (set (keys data))]
 
     (assert (s/subset? actual-keys
                           #{:level
