@@ -2,7 +2,7 @@
   (:require [clojure.test :refer :all]
             [battle-asserts.core :refer :all]
             [multicode.core :as mc]
-            [battle-asserts.checker :refer [valid?]]))
+            [battle-asserts.checker :refer [validate]]))
 
 ; (deftest test-get-let-array-fetch
 ;   (is (=
