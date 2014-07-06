@@ -2,15 +2,5 @@
 level: elementary
 tags: [hash]
 
-checks:
-  ruby:
-    asserts:
-      - assert_equal({:draft => 0, :completed => 0}, generate([:draft, :completed], 0))
-      - assert_equal({:one => 4, :two => 4}, generate([:one, :two], 4))
-  javascript:
-    asserts:
-      - |
-        assertEqual({draft: 0, completed: 0}, generate(["draft", "completed"], 0))
-      - |
-        assertEqual({one: 4, two: 4}, generate(["one", "two"], 4))
-
+multicode_checks:
+  langs: [ruby, python, javascript, php]
