@@ -6,8 +6,8 @@ checks:
     assertEqual({draft: 0, completed: 0}, generate(['draft', 'completed'], 0));
     assertEqual({one: 4, two: 4}, generate(['one', 'two'], 4));
   python: |-
-    assertEqual({'draft': 0, 'completed': 0}, generate(['draft', 'completed'], 0))
-    assertEqual({'one': 4, 'two': 4}, generate(['one', 'two'], 4))
+    assert_equal({'draft': 0, 'completed': 0}, generate(['draft', 'completed'], 0))
+    assert_equal({'one': 4, 'two': 4}, generate(['one', 'two'], 4))
   ruby: |-
     assert_equal({:draft => 0, :completed => 0}, generate([:draft, :completed], 0))
     assert_equal({:one => 4, :two => 4}, generate([:one, :two], 4))

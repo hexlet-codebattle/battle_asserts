@@ -2,7 +2,7 @@ checks:
   python: |-
     d = {'a': {'b': 3, 'c': 2, 'd': [1, 2]}, 'x': ['1', '2', '3']}
     expected = {'a[b]': 3, 'a[c]': 2, 'a[d][0]': 1, 'a[d][1]': 2, 'x[0]': '1', 'x[1]': '2', 'x[2]': '3'}
-    assertEqual(expected, bKeyVal(d))
+    assert_equal(expected, b_key_val(d))
   php: |-
     $d = array('a' => array('b' => 3, 'c' => 2, 'd' => array(1, 2)), 'x' => array('1', '2', '3'));
     $expected = array('a[b]' => 3, 'a[c]' => 2, 'a[d][0]' => 1, 'a[d][1]' => 2, 'x[0]' => '1', 'x[1]' => '2', 'x[2]' => '3');

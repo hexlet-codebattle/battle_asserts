@@ -6,11 +6,11 @@ checks:
     assert(validCreditCard?('38520000023237'));
     assert(validCreditCard?('4222222222222'));
   python: |-
-    assert(!validCreditCard?('1234567890123456'))
-    assert(validCreditCard?('4408041234567893'))
-    assert(!validCreditCard?('4408042234567893'))
-    assert(validCreditCard?('38520000023237'))
-    assert(validCreditCard?('4222222222222'))
+    assert(!valid_credit_card?('1234567890123456'))
+    assert(valid_credit_card?('4408041234567893'))
+    assert(!valid_credit_card?('4408042234567893'))
+    assert(valid_credit_card?('38520000023237'))
+    assert(valid_credit_card?('4222222222222'))
   javascript: |-
     assert(!validCreditCard?('1234567890123456'));
     assert(validCreditCard?('4408041234567893'));
