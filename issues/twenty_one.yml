@@ -1,9 +1,23 @@
+checks:
+  python: |-
+    assert(twenty_one?((quote (3 4 5 6 3))))
+    assert(twenty_one?((quote (11 10))))
+    assert(!twenty_one?((quote (3 11 10))))
+    assert(!twenty_one?((quote (10 10))))
+  php: |-
+    assert(twentyOne?((quote (3 4 5 6 3))));
+    assert(twentyOne?((quote (11 10))));
+    assert(!twentyOne?((quote (3 11 10))));
+    assert(!twentyOne?((quote (10 10))));
+  javascript: |-
+    assert(twentyOne?((quote (3 4 5 6 3))));
+    assert(twentyOne?((quote (11 10))));
+    assert(!twentyOne?((quote (3 11 10))));
+    assert(!twentyOne?((quote (10 10))));
+  ruby: |-
+    assert(twenty_one?((quote (3 4 5 6 3))))
+    assert(twenty_one?((quote (11 10))))
+    assert(!twenty_one?((quote (3 11 10))))
+    assert(!twenty_one?((quote (10 10))))
 level: elementary
 tags: []
-checks:
-  ruby:
-    asserts: ['assert twenty_one?(3, 4, 5, 6, 3)', 'assert !twenty_one?(3, 11, 10)',
-      'assert twenty_one?(10, 11)', 'assert !twenty_one?(10, 10)']
-  javascript:
-    asserts: ['assert(isTwentyOne(3, 4, 5, 6, 3))', 'assert(!isTwentyOne(3, 11, 10))',
-      'assert(isTwentyOne(10, 11))', 'assert(!isTwentyOne(10, 10))']
