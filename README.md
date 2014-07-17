@@ -39,13 +39,13 @@
 3. Make changes
 4. Run tests (`lein test`).
 5. Commit your changes (`git commit -am 'Added some feature'`)
-6. Push to the branch (`git push origin my-new-feature`) 
+6. Push to the branch (`git push origin my-new-feature`)
 7. Create new Pull Request
 8. Check if Request passed Travis-Ci
 
-## Add new source
+## How to add a new source
 
-#### Create yaml file with the name of your issue. Look at example.
+#### Create yaml file with the name of your issue. Look at the example.
 
 	---
 	level: easy # (elementary|easy|medium|hard)
@@ -64,11 +64,11 @@
 	multicode_checks:
 	  langs: [javascript] #[ruby, javascript, python, php]
 
-If you need special things in your task, such as some Ruby objects, write asserts in "cheks:" section. If your task multiplatform write assers in "multicode_checks:" section.
+If you need special things in your task, such as some Ruby objects, write asserts in "checks:" section. If your task is multiplatform write asserts in "multicode_checks:" section.
 
-#### Create .clj file in test/battle_solutions folder such as - array_fetch_test.cl.
+#### Create a .clj file in the test/battle_solutions folder, e.g. array_fetch_test.clj.
 
-#### Write test by define function (deftest test-asserts ()) Look at example.
+#### Write a test by defining a function (deftest test-asserts ()) Look at the example.
 
     (deftest test-asserts
   		(let [arr [\a \b \c]]
@@ -77,14 +77,13 @@ If you need special things in your task, such as some Ruby objects, write assert
     	(assert-equal \c (fetch arr -1 \d))
     	(assert-equal \d (fetch arr -5 \d))))
 
-#### Write namespace with your issue name.
-
+#### Write a namespace with your issue name.
 
 	(ns battle-solutions.array-fetch-test
 	  (:require [clojure.test :refer :all]
 	            [battle-asserts.test-helper :refer [assert-equal assert]]))
 
-#### Write function to resolve your tests
+#### Write a function to resolve your tests.
 
 	(defn fetch
 	  [s index default]
@@ -99,5 +98,4 @@ If you need special things in your task, such as some Ruby objects, write assert
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kaize/battle_asserts/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
 
