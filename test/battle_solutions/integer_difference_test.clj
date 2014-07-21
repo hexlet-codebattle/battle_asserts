@@ -7,11 +7,10 @@
   (reduce +
           (pmap (fn[number]
                   (/
-                   (count
-                      (filter
-                       #(= differ (Math/abs (- % number)))
-                       nums))
-                   2))
+                    (count (filter
+                             #(= differ (Math/abs (- % number)))
+                             nums))
+                    2))
                 nums)))
 
 
