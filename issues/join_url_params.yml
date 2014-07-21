@@ -1,21 +1,23 @@
+checks:
+  python: |-
+    url = 'http://www.foobar.com?first_param=123&second_param=456&third_param=678'
+    assert_equal(url, join_url_params('http://www.foobar.com', {'first_param': 123, 'second_param': 456, 'third_param': 678}))
+    url = 'http://www.example.com/search?q=findme&useragent=chrome'
+    assert_equal(url, join_url_params('http://www.example.com/search', {'q': 'findme', 'useragent': 'chrome'}))
+  php: |-
+    $url = 'http://www.foobar.com?first_param=123&second_param=456&third_param=678';
+    assertEqual(url, joinUrlParams('http://www.foobar.com', array('first_param' => 123, 'second_param' => 456, 'third_param' => 678)));
+    $url = 'http://www.example.com/search?q=findme&useragent=chrome';
+    assertEqual(url, joinUrlParams('http://www.example.com/search', array('q' => 'findme', 'useragent' => 'chrome')));
+  javascript: |-
+    var url = 'http://www.foobar.com?first_param=123&second_param=456&third_param=678';
+    assertEqual(url, joinUrlParams('http://www.foobar.com', {first_param: 123, second_param: 456, third_param: 678}));
+    var url = 'http://www.example.com/search?q=findme&useragent=chrome';
+    assertEqual(url, joinUrlParams('http://www.example.com/search', {q: 'findme', useragent: 'chrome'}));
+  ruby: |-
+    url = 'http://www.foobar.com?first_param=123&second_param=456&third_param=678'
+    assert_equal(url, join_url_params('http://www.foobar.com', {:first_param => 123, :second_param => 456, :third_param => 678}))
+    url = 'http://www.example.com/search?q=findme&useragent=chrome'
+    assert_equal(url, join_url_params('http://www.example.com/search', {:q => 'findme', :useragent => 'chrome'}))
 level: easy
 tags: [hash, string]
-checks:
-  ruby:
-    setup: |
-      url_params = {first_param: 123, second_param: 456, third_param: 678}
-
-      url = "http://www.foobar.com"
-      expected = "http://www.foobar.com?first_param=123&second_param=456&third_param=678"
-    asserts: ['assert_equal expected, join_params(url, url_params)']
-  javascript:
-    setup: |
-      var urlParams = {
-        first_param: 123,
-        second_param: 456,
-        third_param: 678
-      }
-
-      var url = "http://www.foobar.com"
-      var expected = "http://www.foobar.com?first_param=123&second_param=456&third_param=678"
-    asserts: ['assertEqual(expected, join_params(url, urlParams))']
