@@ -1,14 +1,21 @@
+checks:
+  php: |-
+    assertEqual('j', keyForMinValue(array('k' => 2, 'h' => 3, 'j' => 1)));
+    assertEqual('z', keyForMinValue(array('o' => 0, 'z' => -2, 'j' => 1)));
+    assertEqual(nil, keyForMinValue(array()));
+  python: |-
+    assert_equal('j', key_for_min_value({'k': 2, 'h': 3, 'j': 1}))
+    assert_equal('z', key_for_min_value({'o': 0, 'z': -2, 'j': 1}))
+    assert_equal(None, key_for_min_value({}))
+  javascript: |-
+    assertEqual('j', keyForMinValue({k: 2, h: 3, j: 1}));
+    assertEqual('z', keyForMinValue({o: 0, z: -2, j: 1}));
+    assertEqual(null, keyForMinValue({}));
+  ruby: |-
+    assert_equal('j', key_for_min_value({'k' => 2, 'h' => 3, 'j' => 1}))
+    assert_equal('z', key_for_min_value({'o' => 0, 'z' => -2, 'j' => 1}))
+    assert_equal(nil, key_for_min_value({}))
 level: elementary
 tags: [hash]
-checks:
-  ruby:
-    asserts: ['assert_equal "j", key_for_min_value({"k" => 2, "h" => 3, "j" => 1})',
-      'assert_equal "z", key_for_min_value({"o" => 0, "z" => -2, "j" => 1})', 'assert_equal
-        nil, key_for_min_value({})']
-  javascript:
-    asserts:
-    - |
-      assertEqual("j", keyForMinValue({k: 2, h: 3, j: 1}))
-    - |
-      assertEqual("z", keyForMinValue({o: 0, z: -2, j: 1}))
-    - assertEqual(null, keyForMinValue({}))
+description: |
+  Write a method that accepts a hash map and returns the key of element with the minimum value.
