@@ -1,0 +1,11 @@
+---
+level: medium
+tags: [seqs]
+
+description: Write a function which can rotate a sequence in either direction.
+
+multicode_checks:
+  langs: [javascript, ruby, javascript, python, php]
+
+
+
