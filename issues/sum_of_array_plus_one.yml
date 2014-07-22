@@ -1,9 +1,18 @@
+checks:
+  python: |-
+    assert_equal(14, plus_one_sum([1, 2, 3, 4]))
+    assert_equal(16, plus_one_sum([12, -3, 0, 3]))
+  php: |-
+    assertEqual(14, plusOneSum(array(1, 2, 3, 4)));
+    assertEqual(16, plusOneSum(array(12, -3, 0, 3)));
+  javascript: |-
+    assertEqual(14, plusOneSum([1, 2, 3, 4]));
+    assertEqual(16, plusOneSum([12, -3, 0, 3]));
+  ruby: |-
+    assert_equal(14, plus_one_sum([1, 2, 3, 4]))
+    assert_equal(16, plus_one_sum([12, -3, 0, 3]))
 level: elementary
 tags: [array, arithmetic]
 description: |
   Write a function that takes an array of integers
   and returns the sum of the integers after adding 1 to each.
-checks:
-  javascript:
-    asserts: ['assertEqual(14, plusOneSum([1, 2, 3, 4]))', 'assertEqual(16, plusOneSum([12,
-        -3, 0, 3]))']
