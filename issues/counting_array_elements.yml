@@ -1,13 +1,23 @@
+checks:
+  python: |-
+    arr = ['cat', 'dog', 'fish', 'fish']
+    assert_equal({'cat': 1, 'dog': 1, 'fish': 2}, count(arr))
+    arr = ['Spam', 'egg', 'Spam', 'Spam', 'bacon', 'Spam']
+    assert_equal({'bacon': 1, 'egg': 1, 'Spam': 4}, count(arr))
+  php: |-
+    $arr = array('cat', 'dog', 'fish', 'fish');
+    assertEqual(array('cat' => 1, 'dog' => 1, 'fish' => 2), count(arr));
+    $arr = array('Spam', 'egg', 'Spam', 'Spam', 'bacon', 'Spam');
+    assertEqual(array('bacon' => 1, 'egg' => 1, 'Spam' => 4), count(arr));
+  javascript: |-
+    var arr = ['cat', 'dog', 'fish', 'fish'];
+    assertEqual({cat: 1, dog: 1, fish: 2}, count(arr));
+    var arr = ['Spam', 'egg', 'Spam', 'Spam', 'bacon', 'Spam'];
+    assertEqual({bacon: 1, egg: 1, Spam: 4}, count(arr));
+  ruby: |-
+    arr = [:cat, :dog, :fish, :fish]
+    assert_equal({:cat => 1, :dog => 1, :fish => 2}, count(arr))
+    arr = [:Spam, :egg, :Spam, :Spam, :bacon, :Spam]
+    assert_equal({:bacon => 1, :egg => 1, :Spam => 4}, count(arr))
 level: easy
 tags: []
-checks:
-  ruby:
-    setup: |
-      test = ['cat', 'dog', 'fish', 'fish']
-    asserts: ['assert_equal({''cat'' => 1, ''dog'' => 1, ''fish'' => 2}, count(test))']
-  javascript:
-    setup: |
-      test = ['cat', 'dog', 'fish', 'fish']
-    asserts:
-    - |
-      assertEqual({cat: 1, dog: 1, fish: 2}, count(test))
