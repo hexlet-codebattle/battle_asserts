@@ -10,13 +10,13 @@ checks:
     assert_equal(nightmare, b_key_val({'a': {'b': 3, 'c': 2, 'd': [1, 2]}, 'x': ['1', '2', '3']}))
   php: |-
     $easy = array('a[b]' => 3);
-    assertEqual(easy, bKeyVal(array('a' => array('b' => 3))));
+    assertEqual($easy, bKeyVal(array('a' => array('b' => 3))));
     $medium = array('x[0]' => '1', 'x[1]' => '2', 'x[2]' => '3');
-    assertEqual(medium, bKeyVal(array('x' => array('1', '2', '3'))));
+    assertEqual($medium, bKeyVal(array('x' => array('1', '2', '3'))));
     $hard = array('a[d][0]' => 1, 'a[d][1]' => 2);
-    assertEqual(hard, bKeyVal(array('a' => array('d' => array(1, 2)))));
+    assertEqual($hard, bKeyVal(array('a' => array('d' => array(1, 2)))));
     $nightmare = array('a[b]' => 3, 'a[c]' => 2, 'a[d][0]' => 1, 'a[d][1]' => 2, 'x[0]' => '1', 'x[1]' => '2', 'x[2]' => '3');
-    assertEqual(nightmare, bKeyVal(array('a' => array('b' => 3, 'c' => 2, 'd' => array(1, 2)), 'x' => array('1', '2', '3'))));
+    assertEqual($nightmare, bKeyVal(array('a' => array('b' => 3, 'c' => 2, 'd' => array(1, 2)), 'x' => array('1', '2', '3'))));
   javascript: |-
     var easy = {a[b]: 3};
     assertEqual(easy, bKeyVal({a: {b: 3}}));
