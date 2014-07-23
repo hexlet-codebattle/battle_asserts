@@ -1,0 +1,7 @@
+---
+level: hard
+tags: [math]
+description: "Write a function to parse a Roman-numeral string and return the number it represents."
+
+multicode_checks:
+  langs: [ruby, javascript, php, python]
