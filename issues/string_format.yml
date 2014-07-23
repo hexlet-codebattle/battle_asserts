@@ -1,9 +1,19 @@
+checks:
+  php: |-
+    assertEqual('Value is 00005', stringFormat(5));
+    assertEqual('Value is 00123', stringFormat(123));
+    assertEqual('Value is 12345', stringFormat(12345));
+  python: |-
+    assert_equal('Value is 00005', string_format(5))
+    assert_equal('Value is 00123', string_format(123))
+    assert_equal('Value is 12345', string_format(12345))
+  ruby: |-
+    assert_equal('Value is 00005', string_format(5))
+    assert_equal('Value is 00123', string_format(123))
+    assert_equal('Value is 12345', string_format(12345))
+  javascript: |-
+    assertEqual('Value is 00005', stringFormat(5));
+    assertEqual('Value is 00123', stringFormat(123));
+    assertEqual('Value is 12345', stringFormat(12345));
 level: elementary
 tags: [string]
-checks:
-  ruby:
-    asserts: ['assert_equal "Value is 00005", solution(5)', 'assert_equal "Value is
-        00123", solution(123)', 'assert_equal "Value is 12345", solution(12345)']
-  javascript:
-    asserts: ['assertEqual("Value is 00005", solution(5))', 'assertEqual("Value is
-        00123", solution(123))', 'assertEqual("Value is 12345", solution(12345))']
