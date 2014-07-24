@@ -1,0 +1,22 @@
+checks:
+  python: |-
+    assert_equal(0, the_big_divide(3, 17, 11))
+    assert_equal(23, the_big_divide(10, 3, 5))
+    assert_equal(233168, the_big_divide(1000, 3, 5))
+  php: |-
+    assertEqual(0, theBigDivide(3, 17, 11));
+    assertEqual(23, theBigDivide(10, 3, 5));
+    assertEqual(233168, theBigDivide(1000, 3, 5));
+  javascript: |-
+    assertEqual(0, theBigDivide(3, 17, 11));
+    assertEqual(23, theBigDivide(10, 3, 5));
+    assertEqual(233168, theBigDivide(1000, 3, 5));
+  ruby: |-
+    assert_equal(0, the_big_divide(3, 17, 11))
+    assert_equal(23, the_big_divide(10, 3, 5))
+    assert_equal(233168, the_big_divide(1000, 3, 5))
+level: medium
+tags: [math]
+description: |
+  Write a function which calculates the sum of all natural numbers under n (first argument)
+  which are evenly divisible by at least one of a and b (second and third argument)
