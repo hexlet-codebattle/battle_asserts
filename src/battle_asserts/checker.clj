@@ -4,22 +4,18 @@
 
 (defn validate
   [data]
-  (let [actual-keys (set (keys data))]
+  (let [levels #{"elementary" "easy" "medium" "hard"}
+        multicode-checks (:multicode_checks data)
+        actual-keys (set (keys data))
+        valid-keys #{:level
+                     :tags
+                     :description
+                     :checks
+                     :author
+                     :multicode_checks}]
 
-    (assert (s/subset? actual-keys
-                          #{:level
-                            :tags
-                            :description
-                            :checks
-                            :author
-                            :multicode_checks})
-            data)
+    (assert (s/subset? actual-keys valid-keys) data)
+    (assert (contains? levels (:level data)) data)
 
-    (assert (contains? #{"elementary" "easy" "medium" "hard"}
-                       (:level data))
-            data)
-
-    (when (:multicode_checks data)
-      (assert (= (-> (:multicode_checks data) keys set)
-                 #{:langs})
-              data))))
+    (when multicode-checks
+      (assert (= (-> multicode-checks keys set) #{:langs}) data))))
