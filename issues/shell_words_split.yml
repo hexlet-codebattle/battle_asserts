@@ -1,10 +1,43 @@
+checks:
+  python: |-
+    input = 'here are 'two words''
+    output = ['here', 'are', 'two words']
+    assert_equal(output, shell_words_split(input))
+    input = 'foo bar 'foo bar'\ baz 'foo bar''
+    output = ['foo', 'bar', 'foo bar baz', 'foo bar']
+    assert_equal(output, shell_words_split(input))
+    input = 'grep Jan\ 15 file\ name\ with\ spaces'
+    output = ['grep', 'Jan 15', 'file name with spaces']
+    assert_equal(output, shell_words_split(input))
+  php: |-
+    $input = 'here are 'two words'';
+    $output = array('here', 'are', 'two words');
+    assertEqual($output, shellWordsSplit($input));
+    $input = 'foo bar 'foo bar'\ baz 'foo bar'';
+    $output = array('foo', 'bar', 'foo bar baz', 'foo bar');
+    assertEqual($output, shellWordsSplit($input));
+    $input = 'grep Jan\ 15 file\ name\ with\ spaces';
+    $output = array('grep', 'Jan 15', 'file name with spaces');
+    assertEqual($output, shellWordsSplit($input));
+  javascript: |-
+    var input = 'here are 'two words'';
+    var output = ['here', 'are', 'two words'];
+    assertEqual(output, shellWordsSplit(input));
+    var input = 'foo bar 'foo bar'\ baz 'foo bar'';
+    var output = ['foo', 'bar', 'foo bar baz', 'foo bar'];
+    assertEqual(output, shellWordsSplit(input));
+    var input = 'grep Jan\ 15 file\ name\ with\ spaces';
+    var output = ['grep', 'Jan 15', 'file name with spaces'];
+    assertEqual(output, shellWordsSplit(input));
+  ruby: |-
+    input = 'here are 'two words''
+    output = ['here', 'are', 'two words']
+    assert_equal(output, shell_words_split(input))
+    input = 'foo bar 'foo bar'\ baz 'foo bar''
+    output = ['foo', 'bar', 'foo bar baz', 'foo bar']
+    assert_equal(output, shell_words_split(input))
+    input = 'grep Jan\ 15 file\ name\ with\ spaces'
+    output = ['grep', 'Jan 15', 'file name with spaces']
+    assert_equal(output, shell_words_split(input))
 level: medium
 tags: [string]
-checks:
-  ruby:
-    asserts: ['assert_equal([''here'', ''are'', ''two words''], shell_words_split(''here
-        are "two words"''))', 'assert_equal([''foo'', ''bar'', ''foo bar baz'', ''foo
-        bar''], shell_words_split(%q{foo bar ''foo bar''\ baz ''foo bar''}))', 'assert_equal([''A'',
-        ''B'', ''C'', ''D E F'', ''G,H I''], shell_words_split(%q{A B C ''D E F''
-        ''G'',''H I''}))', 'assert_equal([''grep'', ''Jan 15'', ''file name with spaces''],
-        shell_words_split(''grep Jan\ 15 file\ name\ with\ spaces''))']
