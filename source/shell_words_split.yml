@@ -2,10 +2,5 @@
 level: medium
 tags: [string]
 
-checks:
-  ruby:
-    asserts:
-      - assert_equal(['here', 'are', 'two words'], shell_words_split('here are "two words"'))
-      - assert_equal(['foo', 'bar', 'foo bar baz', 'foo bar'], shell_words_split(%q{foo bar 'foo bar'\ baz 'foo bar'}))
-      - assert_equal(['A', 'B', 'C', 'D E F', 'G,H I'], shell_words_split(%q{A B C 'D E F' 'G','H I'}))
-      - assert_equal(['grep', 'Jan 15', 'file name with spaces'], shell_words_split('grep Jan\ 15 file\ name\ with\ spaces'))
+multicode_checks:
+  langs: [ruby, javascript, php, python]
