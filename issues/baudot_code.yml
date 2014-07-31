@@ -1,0 +1,84 @@
+checks:
+  python: |-
+    input = 'oo.ooo.o.o.o.o.o.oo.ooooo.oooo..o......o.oo..oo.....ooooo.o.o.o..'
+    output = '640K ENOUGH'
+    assert_equal(output, baudot_code(input))
+    input = 'oo.ooo.oooooooo.oooooo..o..o..ooooooo.oooooo...o..o.oooo.oo.o.oo.o.oo.ooooooo..oo.o.oo........o..o.o'
+    output = '1KB = 1000BYTES'
+    assert_equal(output, baudot_code(input))
+    input = 'oo.ooo.oooooooo.oooo..oo.oo..o..o..oo.oooooo.ooooo..o..oo.ooo.oooo.oo.o..oo.o.o.ooooooo..oo.o.oo........o..o.o'
+    output = '1KIB = 1024BYTES'
+    assert_equal(output, baudot_code(input))
+  php: |-
+    $input = 'oo.ooo.o.o.o.o.o.oo.ooooo.oooo..o......o.oo..oo.....ooooo.o.o.o..';
+    $output = '640K ENOUGH';
+    assertEqual($output, baudotCode($input));
+    $input = 'oo.ooo.oooooooo.oooooo..o..o..ooooooo.oooooo...o..o.oooo.oo.o.oo.o.oo.ooooooo..oo.o.oo........o..o.o';
+    $output = '1KB = 1000BYTES';
+    assertEqual($output, baudotCode($input));
+    $input = 'oo.ooo.oooooooo.oooo..oo.oo..o..o..oo.oooooo.ooooo..o..oo.ooo.oooo.oo.o..oo.o.o.ooooooo..oo.o.oo........o..o.o';
+    $output = '1KIB = 1024BYTES';
+    assertEqual($output, baudotCode($input));
+  javascript: |-
+    var input = 'oo.ooo.o.o.o.o.o.oo.ooooo.oooo..o......o.oo..oo.....ooooo.o.o.o..';
+    var output = '640K ENOUGH';
+    assertEqual(output, baudotCode(input));
+    var input = 'oo.ooo.oooooooo.oooooo..o..o..ooooooo.oooooo...o..o.oooo.oo.o.oo.o.oo.ooooooo..oo.o.oo........o..o.o';
+    var output = '1KB = 1000BYTES';
+    assertEqual(output, baudotCode(input));
+    var input = 'oo.ooo.oooooooo.oooo..oo.oo..o..o..oo.oooooo.ooooo..o..oo.ooo.oooo.oo.o..oo.o.o.ooooooo..oo.o.oo........o..o.o';
+    var output = '1KIB = 1024BYTES';
+    assertEqual(output, baudotCode(input));
+  ruby: |-
+    input = 'oo.ooo.o.o.o.o.o.oo.ooooo.oooo..o......o.oo..oo.....ooooo.o.o.o..'
+    output = '640K ENOUGH'
+    assert_equal(output, baudot_code(input))
+    input = 'oo.ooo.oooooooo.oooooo..o..o..ooooooo.oooooo...o..o.oooo.oo.o.oo.o.oo.ooooooo..oo.o.oo........o..o.o'
+    output = '1KB = 1000BYTES'
+    assert_equal(output, baudot_code(input))
+    input = 'oo.ooo.oooooooo.oooo..oo.oo..o..o..oo.oooooo.ooooo..o..oo.ooo.oooo.oo.o..oo.o.o.ooooooo..oo.o.oo........o..o.o'
+    output = '1KIB = 1024BYTES'
+    assert_equal(output, baudot_code(input))
+level: easy
+tags: []
+description: |
+  The Baudot code or International Teleprinter Code was invented by Emile Baudot in 1870.
+  It was used for teleprinter messages instead of the morse code.
+  Baudot uses five bits per character, thus allowing up to 32 distinct characters.
+  As a technique used to extend this limitation, the code uses up-shift and down-shift modes as is used on a typewriter.
+  In the Baudot code, each five bits transmitted must be interpreted according to whether they are up-shifted (figures) or down-shifted (letters).
+  For example, the bit pattern 11111 represents up-shift and the bit pattern 11011 represents down-shift characters.
+  All characters transmitted after the sequence 11111 but before the shifted sequence 11011 are treated as up-shift characters.
+  All characters transmitted after the sequence 11011 are treated as down-shift characters until the pattern 11111 is recognized.
+
+  Code   Letter  Figure
+  .o.o.  R       4
+  .o.oo  J       Not allocated
+  .ooo.  C       :
+  oo.o.  G       Not allocated
+  .o..o  D       Not allocated
+  .oooo  K       (
+  .oo..  N       ,
+  ...oo  A       -
+  .....  BLANK
+  oo.oo  Figures(F) SHift
+  ..oo.  I       8
+  oo...  O       9
+  oooo.  V       =
+  o..o.  L       )
+  .oo.o  F       Not allocated
+  ....o  E       3
+  ..ooo  U       7
+  oo..o  B       ?
+  ..o..  SPACE
+  ooooo  Letters(L) shift
+  ooo..  M       :
+  o..oo  W       2
+  o.oo.  P       0
+  ..o.o  S       ,
+  ooo.o  X       /
+  o...o  Z       +
+  o.ooo  Q       1
+  o.o..  H       Not allocated
+  o.o.o  Y       6
+  o....  T       5
