@@ -2,9 +2,7 @@ level: elementary
 tags: [enumerable, hash]
 description: Rewrite source hash to new representation
 checks:
-  ruby:
-    asserts: ['assert_equal({10=>:c, 66=>:f, 78=>:b, "gAqtSP"=>:d}, invert_hash({:b=>78,
-        :c=>10, :d=>"gAqtSP", :f=>66}))', 'assert_equal({0=>[:c, :d], 55=>:b, "jXXuj1"=>:a},
-        invert_hash({:a=>"jXXuj1", :b=>55, :c=>0, :d=>0}))', 'assert_equal({0=>[:c,
-        :d, :e], 55=>:b, "jXXuj1"=>:a}, invert_hash({:a=>"jXXuj1", :b=>55, :c=>0,
-        :d=>0, :e=>0}))']
+  ruby: |-
+       assert_equal({10=>:c, 66=>:f, 78=>:b, "gAqtSP"=>:d}, invert_hash({:b=>78, :c=>10, :d=>"gAqtSP", :f=>66}))
+       assert_equal({0=>[:c, :d], 55=>:b, "jXXuj1"=>:a}, invert_hash({:a=>"jXXuj1", :b=>55, :c=>0, :d=>0}))
+       assert_equal({0=>[:c, :d, :e], 55=>:b, "jXXuj1"=>:a}, invert_hash({:a=>"jXXuj1", :b=>55, :c=>0, :d=>0, :e=>0}))
