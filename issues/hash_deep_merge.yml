@@ -3,21 +3,13 @@ tags: [hash]
 description: Returns a new hash with **self** and **other_hash** merged recursively.
 author: {github_nickname: zzet, web_page: 'http://zzet.org'}
 checks:
-  ruby:
-    setup: |
+  ruby: |-
       h1 = { x: { y: [4, 5, 6] }, z: [7, 8, 9] }
       h2 = { x: { y: [7, 8, 9] }, z: 'xyz' }
-    asserts:
-    - |
       assert_equal({x: {y: [7, 8, 9]}, z: "xyz"}, h1.deep_merge(h2))
-    - |
       assert_equal({x: {y: [4, 5, 6]}, z: [7, 8, 9]}, h2.deep_merge(h1))
-  javascript:
-    setup: |
+  javascript: |-
       var h1 = { x: { y: [4, 5, 6] }, z: [7, 8, 9] }
       var h2 = { x: { y: [7, 8, 9] }, z: 'xyz' }
-    asserts:
-    - |
       assertEqual({x: {y: [7, 8, 9]}, z: "xyz"}, deepMerge(h1, h2))
-    - |
       assertEqual({x: {y: [4, 5, 6]}, z: [7, 8, 9]}, deepMerge(h2, h1))

@@ -1,20 +1,6 @@
 level: elementary
 tags: [monads]
-checks:
-  ruby:
-    description: |
-      When you want to call a method on an object only if it is not nil,
-      the simplest way to achieve it is with conditional statements, adding unnecessary clutter.
-      The alternative is to use try. try is like Object#send except that it returns nil if sent to nil.
-    asserts:
-    - assert_equal nil, nil.try(:hello)
-    - assert_equal 5, 'hello'.try(:length)
-    - assert 3.try(:is_a?, Numeric)
-    - assert_equal nil,  nil.try {|obj| obj.pifpaf}
-    - |
-      assert_equal "superclass: Object",  String.try {|obj| "superclass: #{obj.superclass}"}
-  javascript:
-    description: |
+description: |
       var person = {
           "name":"Homer Simpson",
           "address": {
@@ -32,7 +18,8 @@ checks:
               console.log("State unknown");
           }
       }
-    setup: |
+checks:
+  javascript: |-
       var person1 = null;
       var person2 = {address: "street"};
       var person3 = {address: {state: "State unknown"}}
@@ -47,6 +34,8 @@ checks:
           return s;
         })();
       };
-    asserts: ['assertEqual("State unknown", maybe(person1))', 'assertEqual("State
-        unknown", maybe(person2))', 'assertEqual("State unknown", maybe(person3))',
-      'assertEqual("california", maybe(person4))']
+
+      assertEqual("State unknown", maybe(person1))
+      assertEqual("State unknown", maybe(person2))
+      assertEqual("State unknown", maybe(person3))
+      assertEqual("california", maybe(person4))

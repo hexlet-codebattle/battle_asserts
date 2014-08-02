@@ -2,11 +2,13 @@ level: medium
 tags: [arithmetic, math]
 description: Any number can be written as a product of prime numbers. For example, 42 would be "2 * 3 * 7" while 44 would be "2 * 2 * 11". Write a number to return an array of prime factors in ascending order for a given number.
 checks:
-  ruby:
-    asserts: ['assert_equal [2, 3, 7], prime_factorization(42)', 'assert_equal [2,
-        2, 11], prime_factorization(44)', 'assert_equal [3, 5, 5], prime_factorization(75)',
-      'assert_equal [2, 2, 2, 2, 2, 2, 3, 643], prime_factorization(123456)']
-  javascript:
-    asserts: ['assertEqual([2, 3, 7], primeFactorization(42))', 'assertEqual([2, 2,
-        11], primeFactorization(44))', 'assertEqual([3, 5, 5], primeFactorization(75))',
-      'assertEqual([2, 2, 2, 2, 2, 2, 3, 643], primeFactorization(123456))']
+  ruby: |-
+    assert_equal [2, 3, 7], prime_factorization(42)
+    assert_equal [2, 2, 11], prime_factorization(44)
+    assert_equal [3, 5, 5], prime_factorization(75)
+    assert_equal [2, 2, 2, 2, 2, 2, 3, 643], prime_factorization(123456)
+  javascript: |-
+    assertEqual([2, 3, 7], primeFactorization(42))
+    assertEqual([2, 2, 11], primeFactorization(44))
+    assertEqual([3, 5, 5], primeFactorization(75))'
+    assertEqual([2, 2, 2, 2, 2, 2, 3, 643], primeFactorization(123456))

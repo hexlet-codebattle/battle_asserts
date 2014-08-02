@@ -6,8 +6,7 @@ description: |
   Additionally, you can set defaults for each property. You can also flag a property as required.
   Required properties will raise an exception if unset.
 checks:
-  ruby:
-    setup: |
+  ruby: |-
       class Person < Dash
         property :name, :required => true
         property :email
@@ -16,7 +15,10 @@ checks:
 
       p = Person.new(:name => "Bob")
       p.email = 'abc@def.com'
-    asserts: ['assert_raise(ArgumentError) { Person.new }', 'assert_equal "Bob", p.name',
-      'assert_equal "abc@def.com", p.email', 'assert_raise(ArgumentError) { p.name
-        = nil }', 'assert_equal "Rubyist", p.occupation', 'assert_equal "Rubyist",
-        p[:occupation]', 'assert_raise(NoMethodError) { p[:awesome] }']
+      assert_raise(ArgumentError) { Person.new }
+      assert_equal "Bob", p.name
+      assert_equal "abc@def.com", p.email
+      assert_raise(ArgumentError) { p.name = nil }
+      assert_equal "Rubyist", p.occupation
+      assert_equal "Rubyist", p[:occupation]
+      assert_raise(NoMethodError) { p[:awesome] }
