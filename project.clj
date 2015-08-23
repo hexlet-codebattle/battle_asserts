@@ -9,6 +9,7 @@
                  [org.clojure/tools.namespace "0.2.4"]
                  [me.raynes/fs "1.4.4"]
                  [circleci/clj-yaml "0.5.2"]
+                 [multicode "0.1.0-SNAPSHOT"]
                  [clj-stacktrace "0.2.7"]]
   :injections [(let [orig (ns-resolve (doto 'clojure.stacktrace require)
                                       'print-cause-trace)
