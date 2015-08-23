@@ -1,26 +1,26 @@
-checks:
-  python: |-
-    assert_equal(1, euler_totient_function(1))
-    assert_equal(4, euler_totient_function(10))
-    assert_equal(16, euler_totient_function(40))
-    assert_equal(60, euler_totient_function(99))
-  php: |-
-    assertEqual(1, eulerTotientFunction(1));
-    assertEqual(4, eulerTotientFunction(10));
-    assertEqual(16, eulerTotientFunction(40));
-    assertEqual(60, eulerTotientFunction(99));
-  javascript: |-
-    assertEqual(1, eulerTotientFunction(1));
-    assertEqual(4, eulerTotientFunction(10));
-    assertEqual(16, eulerTotientFunction(40));
-    assertEqual(60, eulerTotientFunction(99));
-  ruby: |-
-    assert_equal(1, euler_totient_function(1))
-    assert_equal(4, euler_totient_function(10))
-    assert_equal(16, euler_totient_function(40))
-    assert_equal(60, euler_totient_function(99))
 level: medium
 tags: []
 description: |
   Two numbers are coprime if their greatest common divisor equals 1.
   Euler's totient function f(x) is defined as the number of positive integers less than x which are coprime to x.
+checks:
+  ruby: |-
+    assert_equal(1, euler_totient_function(1))
+    assert_equal(4, euler_totient_function(10))
+    assert_equal(16, euler_totient_function(40))
+    assert_equal(60, euler_totient_function(99))
+  javascript: |-
+    assertEqual(1, eulerTotientFunction(1));
+    assertEqual(4, eulerTotientFunction(10));
+    assertEqual(16, eulerTotientFunction(40));
+    assertEqual(60, eulerTotientFunction(99));
+  php: |-
+    assertEqual(1, eulerTotientFunction(1));
+    assertEqual(4, eulerTotientFunction(10));
+    assertEqual(16, eulerTotientFunction(40));
+    assertEqual(60, eulerTotientFunction(99));
+  python: |-
+    assert_equal(1, euler_totient_function(1))
+    assert_equal(4, euler_totient_function(10))
+    assert_equal(16, euler_totient_function(40))
+    assert_equal(60, euler_totient_function(99))

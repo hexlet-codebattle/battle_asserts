@@ -1,44 +1,3 @@
-checks:
-  python: |-
-    input = 'oo.ooo.o.o.o.o.o.oo.ooooo.oooo..o......o.oo..oo.....ooooo.o.o.o..'
-    output = '640K ENOUGH'
-    assert_equal(output, baudot_code(input))
-    input = 'oo.ooo.oooooooo.oooooo..o..o..ooooooo.oooooo...o..o.oooo.oo.o.oo.o.oo.ooooooo..oo.o.oo........o..o.o'
-    output = '1KB = 1000BYTES'
-    assert_equal(output, baudot_code(input))
-    input = 'oo.ooo.oooooooo.oooo..oo.oo..o..o..oo.oooooo.ooooo..o..oo.ooo.oooo.oo.o..oo.o.o.ooooooo..oo.o.oo........o..o.o'
-    output = '1KIB = 1024BYTES'
-    assert_equal(output, baudot_code(input))
-  php: |-
-    $input = 'oo.ooo.o.o.o.o.o.oo.ooooo.oooo..o......o.oo..oo.....ooooo.o.o.o..';
-    $output = '640K ENOUGH';
-    assertEqual($output, baudotCode($input));
-    $input = 'oo.ooo.oooooooo.oooooo..o..o..ooooooo.oooooo...o..o.oooo.oo.o.oo.o.oo.ooooooo..oo.o.oo........o..o.o';
-    $output = '1KB = 1000BYTES';
-    assertEqual($output, baudotCode($input));
-    $input = 'oo.ooo.oooooooo.oooo..oo.oo..o..o..oo.oooooo.ooooo..o..oo.ooo.oooo.oo.o..oo.o.o.ooooooo..oo.o.oo........o..o.o';
-    $output = '1KIB = 1024BYTES';
-    assertEqual($output, baudotCode($input));
-  javascript: |-
-    var input = 'oo.ooo.o.o.o.o.o.oo.ooooo.oooo..o......o.oo..oo.....ooooo.o.o.o..';
-    var output = '640K ENOUGH';
-    assertEqual(output, baudotCode(input));
-    var input = 'oo.ooo.oooooooo.oooooo..o..o..ooooooo.oooooo...o..o.oooo.oo.o.oo.o.oo.ooooooo..oo.o.oo........o..o.o';
-    var output = '1KB = 1000BYTES';
-    assertEqual(output, baudotCode(input));
-    var input = 'oo.ooo.oooooooo.oooo..oo.oo..o..o..oo.oooooo.ooooo..o..oo.ooo.oooo.oo.o..oo.o.o.ooooooo..oo.o.oo........o..o.o';
-    var output = '1KIB = 1024BYTES';
-    assertEqual(output, baudotCode(input));
-  ruby: |-
-    input = 'oo.ooo.o.o.o.o.o.oo.ooooo.oooo..o......o.oo..oo.....ooooo.o.o.o..'
-    output = '640K ENOUGH'
-    assert_equal(output, baudot_code(input))
-    input = 'oo.ooo.oooooooo.oooooo..o..o..ooooooo.oooooo...o..o.oooo.oo.o.oo.o.oo.ooooooo..oo.o.oo........o..o.o'
-    output = '1KB = 1000BYTES'
-    assert_equal(output, baudot_code(input))
-    input = 'oo.ooo.oooooooo.oooo..oo.oo..o..o..oo.oooooo.ooooo..o..oo.ooo.oooo.oo.o..oo.o.o.ooooooo..oo.o.oo........o..o.o'
-    output = '1KIB = 1024BYTES'
-    assert_equal(output, baudot_code(input))
 level: easy
 tags: []
 description: |
@@ -82,3 +41,44 @@ description: |
   o.o..  H       Not allocated
   o.o.o  Y       6
   o....  T       5
+checks:
+  ruby: |-
+    input = 'oo.ooo.o.o.o.o.o.oo.ooooo.oooo..o......o.oo..oo.....ooooo.o.o.o..'
+    output = '640K ENOUGH'
+    assert_equal(output, baudot_code(input))
+    input = 'oo.ooo.oooooooo.oooooo..o..o..ooooooo.oooooo...o..o.oooo.oo.o.oo.o.oo.ooooooo..oo.o.oo........o..o.o'
+    output = '1KB = 1000BYTES'
+    assert_equal(output, baudot_code(input))
+    input = 'oo.ooo.oooooooo.oooo..oo.oo..o..o..oo.oooooo.ooooo..o..oo.ooo.oooo.oo.o..oo.o.o.ooooooo..oo.o.oo........o..o.o'
+    output = '1KIB = 1024BYTES'
+    assert_equal(output, baudot_code(input))
+  javascript: |-
+    var input = 'oo.ooo.o.o.o.o.o.oo.ooooo.oooo..o......o.oo..oo.....ooooo.o.o.o..';
+    var output = '640K ENOUGH';
+    assertEqual(output, baudotCode(input));
+    var input = 'oo.ooo.oooooooo.oooooo..o..o..ooooooo.oooooo...o..o.oooo.oo.o.oo.o.oo.ooooooo..oo.o.oo........o..o.o';
+    var output = '1KB = 1000BYTES';
+    assertEqual(output, baudotCode(input));
+    var input = 'oo.ooo.oooooooo.oooo..oo.oo..o..o..oo.oooooo.ooooo..o..oo.ooo.oooo.oo.o..oo.o.o.ooooooo..oo.o.oo........o..o.o';
+    var output = '1KIB = 1024BYTES';
+    assertEqual(output, baudotCode(input));
+  php: |-
+    $input = 'oo.ooo.o.o.o.o.o.oo.ooooo.oooo..o......o.oo..oo.....ooooo.o.o.o..';
+    $output = '640K ENOUGH';
+    assertEqual($output, baudotCode($input));
+    $input = 'oo.ooo.oooooooo.oooooo..o..o..ooooooo.oooooo...o..o.oooo.oo.o.oo.o.oo.ooooooo..oo.o.oo........o..o.o';
+    $output = '1KB = 1000BYTES';
+    assertEqual($output, baudotCode($input));
+    $input = 'oo.ooo.oooooooo.oooo..oo.oo..o..o..oo.oooooo.ooooo..o..oo.ooo.oooo.oo.o..oo.o.o.ooooooo..oo.o.oo........o..o.o';
+    $output = '1KIB = 1024BYTES';
+    assertEqual($output, baudotCode($input));
+  python: |-
+    input = 'oo.ooo.o.o.o.o.o.oo.ooooo.oooo..o......o.oo..oo.....ooooo.o.o.o..'
+    output = '640K ENOUGH'
+    assert_equal(output, baudot_code(input))
+    input = 'oo.ooo.oooooooo.oooooo..o..o..ooooooo.oooooo...o..o.oooo.oo.o.oo.o.oo.ooooooo..oo.o.oo........o..o.o'
+    output = '1KB = 1000BYTES'
+    assert_equal(output, baudot_code(input))
+    input = 'oo.ooo.oooooooo.oooo..oo.oo..o..o..oo.oooooo.ooooo..o..oo.ooo.oooo.oo.o..oo.o.o.ooooooo..oo.o.oo........o..o.o'
+    output = '1KIB = 1024BYTES'
+    assert_equal(output, baudot_code(input))

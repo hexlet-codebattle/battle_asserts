@@ -1,23 +1,23 @@
+level: elementary
+tags: []
 checks:
-  python: |-
-    assert(twenty_one?([3, 4, 5, 6, 3]))
-    assert(twenty_one?([11, 10]))
-    assert(!twenty_one?([3, 11, 10]))
-    assert(!twenty_one?([10, 10]))
-  php: |-
-    assert(twentyOne?(array(3, 4, 5, 6, 3)));
-    assert(twentyOne?(array(11, 10)));
-    assert(!twentyOne?(array(3, 11, 10)));
-    assert(!twentyOne?(array(10, 10)));
-  javascript: |-
-    assert(twentyOne?([3, 4, 5, 6, 3]));
-    assert(twentyOne?([11, 10]));
-    assert(!twentyOne?([3, 11, 10]));
-    assert(!twentyOne?([10, 10]));
   ruby: |-
     assert(twenty_one?([3, 4, 5, 6, 3]))
     assert(twenty_one?([11, 10]))
     assert(!twenty_one?([3, 11, 10]))
     assert(!twenty_one?([10, 10]))
-level: elementary
-tags: []
+  javascript: |-
+    assert(twentyOne?([3, 4, 5, 6, 3]));
+    assert(twentyOne?([11, 10]));
+    assert(!twentyOne?([3, 11, 10]));
+    assert(!twentyOne?([10, 10]));
+  php: |-
+    assert(twentyOne?(array(3, 4, 5, 6, 3)));
+    assert(twentyOne?(array(11, 10)));
+    assert(!twentyOne?(array(3, 11, 10)));
+    assert(!twentyOne?(array(10, 10)));
+  python: |-
+    assert(twenty_one?([3, 4, 5, 6, 3]))
+    assert(twenty_one?([11, 10]))
+    assert(!twenty_one?([3, 11, 10]))
+    assert(!twenty_one?([10, 10]))

@@ -1,12 +1,11 @@
+level: medium
+tags: []
+description: |
+  Write a function which finds all the anagrams in a vector of words.
+  Your function should return sorted vector of vectors, where each sub-vec is a group of words which are anagrams of each other.
+  Words without any anagrams should not be included in the result.
 checks:
-  php: |-
-    $input = array('meat', 'mat', 'team', 'mate', 'eat');
-    $output = array(array('mate', 'meat', 'team'));
-    assertEqual($output, anagramFinder($input));
-    $input = array('veer', 'lake', 'item', 'kale', 'mite', 'ever');
-    $output = array(array('ever', 'veer'), array('item', 'mite'), array('kale', 'lake'));
-    assertEqual($output, anagramFinder($input));
-  python: |-
+  ruby: |-
     input = ['meat', 'mat', 'team', 'mate', 'eat']
     output = [['mate', 'meat', 'team']]
     assert_equal(output, anagram_finder(input))
@@ -20,16 +19,17 @@ checks:
     var input = ['veer', 'lake', 'item', 'kale', 'mite', 'ever'];
     var output = [['ever', 'veer'], ['item', 'mite'], ['kale', 'lake']];
     assertEqual(output, anagramFinder(input));
-  ruby: |-
+  python: |-
     input = ['meat', 'mat', 'team', 'mate', 'eat']
     output = [['mate', 'meat', 'team']]
     assert_equal(output, anagram_finder(input))
     input = ['veer', 'lake', 'item', 'kale', 'mite', 'ever']
     output = [['ever', 'veer'], ['item', 'mite'], ['kale', 'lake']]
     assert_equal(output, anagram_finder(input))
-level: medium
-tags: []
-description: |
-  Write a function which finds all the anagrams in a vector of words.
-  Your function should return sorted vector of vectors, where each sub-vec is a group of words which are anagrams of each other.
-  Words without any anagrams should not be included in the result.
+  php: |-
+    $input = array('meat', 'mat', 'team', 'mate', 'eat');
+    $output = array(array('mate', 'meat', 'team'));
+    assertEqual($output, anagramFinder($input));
+    $input = array('veer', 'lake', 'item', 'kale', 'mite', 'ever');
+    $output = array(array('ever', 'veer'), array('item', 'mite'), array('kale', 'lake'));
+    assertEqual($output, anagramFinder($input));

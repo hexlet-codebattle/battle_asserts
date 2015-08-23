@@ -1,43 +1,12 @@
+level: easy
+tags: []
+description: |
+  Conway's "Look and Say" sequence is a sequence of numbers in which each term "reads aloud" the digits of the previous term.
+  1 is read off as "one 1".
+  11 is read off as "two 1's".
+  21 is read off as "one 2, then one 1".
+  1211 is read off as "one 1, then one 2, then two 1's".
 checks:
-  python: |-
-    input = 'two 1's'
-    output = 11
-    assert_equal(output, count_and_say(input))
-    input = 'one 2, then one 1'
-    output = 21
-    assert_equal(output, count_and_say(input))
-    input = 'one 1, then one 2, then two 1's'
-    output = 1211
-    assert_equal(output, count_and_say(input))
-    input = 'three 1, then two 2, then one 1'
-    output = 111221
-    assert_equal(output, count_and_say(input))
-  php: |-
-    $input = 'two 1's';
-    $output = 11;
-    assertEqual($output, countAndSay($input));
-    $input = 'one 2, then one 1';
-    $output = 21;
-    assertEqual($output, countAndSay($input));
-    $input = 'one 1, then one 2, then two 1's';
-    $output = 1211;
-    assertEqual($output, countAndSay($input));
-    $input = 'three 1, then two 2, then one 1';
-    $output = 111221;
-    assertEqual($output, countAndSay($input));
-  javascript: |-
-    var input = 'two 1's';
-    var output = 11;
-    assertEqual(output, countAndSay(input));
-    var input = 'one 2, then one 1';
-    var output = 21;
-    assertEqual(output, countAndSay(input));
-    var input = 'one 1, then one 2, then two 1's';
-    var output = 1211;
-    assertEqual(output, countAndSay(input));
-    var input = 'three 1, then two 2, then one 1';
-    var output = 111221;
-    assertEqual(output, countAndSay(input));
   ruby: |-
     input = 'two 1's'
     output = 11
@@ -51,11 +20,42 @@ checks:
     input = 'three 1, then two 2, then one 1'
     output = 111221
     assert_equal(output, count_and_say(input))
-level: easy
-tags: []
-description: |
-  Conway's "Look and Say" sequence is a sequence of numbers in which each term "reads aloud" the digits of the previous term.
-  1 is read off as "one 1".
-  11 is read off as "two 1's".
-  21 is read off as "one 2, then one 1".
-  1211 is read off as "one 1, then one 2, then two 1's".
+  javascript: |-
+    var input = 'two 1's';
+    var output = 11;
+    assertEqual(output, countAndSay(input));
+    var input = 'one 2, then one 1';
+    var output = 21;
+    assertEqual(output, countAndSay(input));
+    var input = 'one 1, then one 2, then two 1's';
+    var output = 1211;
+    assertEqual(output, countAndSay(input));
+    var input = 'three 1, then two 2, then one 1';
+    var output = 111221;
+    assertEqual(output, countAndSay(input));
+  php: |-
+    $input = 'two 1's';
+    $output = 11;
+    assertEqual($output, countAndSay($input));
+    $input = 'one 2, then one 1';
+    $output = 21;
+    assertEqual($output, countAndSay($input));
+    $input = 'one 1, then one 2, then two 1's';
+    $output = 1211;
+    assertEqual($output, countAndSay($input));
+    $input = 'three 1, then two 2, then one 1';
+    $output = 111221;
+    assertEqual($output, countAndSay($input));
+  python: |-
+    input = 'two 1's'
+    output = 11
+    assert_equal(output, count_and_say(input))
+    input = 'one 2, then one 1'
+    output = 21
+    assert_equal(output, count_and_say(input))
+    input = 'one 1, then one 2, then two 1's'
+    output = 1211
+    assert_equal(output, count_and_say(input))
+    input = 'three 1, then two 2, then one 1'
+    output = 111221
+    assert_equal(output, count_and_say(input))

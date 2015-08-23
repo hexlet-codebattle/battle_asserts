@@ -1,25 +1,7 @@
+level: hard
+tags: []
+description: Calculate the Levenshtein distance.
 checks:
-  python: |-
-    assert_equal(3, levenshtein_distance('kitten', 'sitting'))
-    assert_equal(1, levenshtein_distance('clojure', 'closure'))
-    assert_equal(2, levenshtein_distance('xyx', 'xyyyx'))
-    assert_equal(6, levenshtein_distance('', '123456'))
-    assert_equal(0, levenshtein_distance([], []))
-    assert_equal(2, levenshtein_distance([1, 2, 3, 4], [0, 2, 3, 4, 5]))
-  php: |-
-    assertEqual(3, levenshteinDistance('kitten', 'sitting'));
-    assertEqual(1, levenshteinDistance('clojure', 'closure'));
-    assertEqual(2, levenshteinDistance('xyx', 'xyyyx'));
-    assertEqual(6, levenshteinDistance('', '123456'));
-    assertEqual(0, levenshteinDistance(array(), array()));
-    assertEqual(2, levenshteinDistance(array(1, 2, 3, 4), array(0, 2, 3, 4, 5)));
-  javascript: |-
-    assertEqual(3, levenshteinDistance('kitten', 'sitting'));
-    assertEqual(1, levenshteinDistance('clojure', 'closure'));
-    assertEqual(2, levenshteinDistance('xyx', 'xyyyx'));
-    assertEqual(6, levenshteinDistance('', '123456'));
-    assertEqual(0, levenshteinDistance([], []));
-    assertEqual(2, levenshteinDistance([1, 2, 3, 4], [0, 2, 3, 4, 5]));
   ruby: |-
     assert_equal(3, levenshtein_distance('kitten', 'sitting'))
     assert_equal(1, levenshtein_distance('clojure', 'closure'))
@@ -27,6 +9,24 @@ checks:
     assert_equal(6, levenshtein_distance('', '123456'))
     assert_equal(0, levenshtein_distance([], []))
     assert_equal(2, levenshtein_distance([1, 2, 3, 4], [0, 2, 3, 4, 5]))
-level: hard
-tags: []
-description: Calculate the Levenshtein distance.
+  javascript: |-
+    assertEqual(3, levenshteinDistance('kitten', 'sitting'));
+    assertEqual(1, levenshteinDistance('clojure', 'closure'));
+    assertEqual(2, levenshteinDistance('xyx', 'xyyyx'));
+    assertEqual(6, levenshteinDistance('', '123456'));
+    assertEqual(0, levenshteinDistance([], []));
+    assertEqual(2, levenshteinDistance([1, 2, 3, 4], [0, 2, 3, 4, 5]));
+  php: |-
+    assertEqual(3, levenshteinDistance('kitten', 'sitting'));
+    assertEqual(1, levenshteinDistance('clojure', 'closure'));
+    assertEqual(2, levenshteinDistance('xyx', 'xyyyx'));
+    assertEqual(6, levenshteinDistance('', '123456'));
+    assertEqual(0, levenshteinDistance(array(), array()));
+    assertEqual(2, levenshteinDistance(array(1, 2, 3, 4), array(0, 2, 3, 4, 5)));
+  python: |-
+    assert_equal(3, levenshtein_distance('kitten', 'sitting'))
+    assert_equal(1, levenshtein_distance('clojure', 'closure'))
+    assert_equal(2, levenshtein_distance('xyx', 'xyyyx'))
+    assert_equal(6, levenshtein_distance('', '123456'))
+    assert_equal(0, levenshtein_distance([], []))
+    assert_equal(2, levenshtein_distance([1, 2, 3, 4], [0, 2, 3, 4, 5]))

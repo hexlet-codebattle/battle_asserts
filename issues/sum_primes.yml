@@ -1,16 +1,16 @@
-checks:
-  python: |-
-    assert_equal(76127, sum_primes(1000))
-    assert_equal(4227, sum_primes(200))
-  php: |-
-    assertEqual(76127, sumPrimes(1000));
-    assertEqual(4227, sumPrimes(200));
-  javascript: |-
-    assertEqual(76127, sumPrimes(1000));
-    assertEqual(4227, sumPrimes(200));
-  ruby: |-
-    assert_equal(76127, sum_primes(1000))
-    assert_equal(4227, sum_primes(200))
 level: medium
 tags: []
 description: Write some code to sum all primes from 2 up to a given number.
+checks:
+  ruby: |-
+    assert_equal(76127, sum_primes(1000))
+    assert_equal(4227, sum_primes(200))
+  javascript: |-
+    assertEqual(76127, sumPrimes(1000));
+    assertEqual(4227, sumPrimes(200));
+  php: |-
+    assertEqual(76127, sumPrimes(1000));
+    assertEqual(4227, sumPrimes(200));
+  python: |-
+    assert_equal(76127, sum_primes(1000))
+    assert_equal(4227, sum_primes(200))

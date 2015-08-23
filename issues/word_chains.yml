@@ -1,43 +1,9 @@
+level: hard
+tags: []
+description: |
+  Write a function which takes a sequence of words, and returns true if they can be arranged into one continous word chain, and false if they cannot.
+  cat -> cot -> coat -> oat -> hat -> hot -> hog -> dog
 checks:
-  python: |-
-    input = ['hat', 'coat', 'dog', 'cat', 'oat', 'cot', 'hot', 'hog']
-    assert_equal(True, word_chains(input))
-    input = ['cot', 'hot', 'bat', 'fat']
-    assert_equal(False, word_chains(input))
-    input = ['to', 'top', 'stop', 'tops', 'toss']
-    assert_equal(False, word_chains(input))
-    input = ['spout', 'do', 'pot', 'pout', 'spot', 'dot']
-    assert_equal(True, word_chains(input))
-    input = ['share', 'hares', 'shares', 'hare', 'are']
-    assert_equal(True, word_chains(input))
-    input = ['share', 'hares', 'hare', 'are']
-    assert_equal(False, word_chains(input))
-  php: |-
-    $input = array('hat', 'coat', 'dog', 'cat', 'oat', 'cot', 'hot', 'hog');
-    assertEqual(true, wordChains($input));
-    $input = array('cot', 'hot', 'bat', 'fat');
-    assertEqual(false, wordChains($input));
-    $input = array('to', 'top', 'stop', 'tops', 'toss');
-    assertEqual(false, wordChains($input));
-    $input = array('spout', 'do', 'pot', 'pout', 'spot', 'dot');
-    assertEqual(true, wordChains($input));
-    $input = array('share', 'hares', 'shares', 'hare', 'are');
-    assertEqual(true, wordChains($input));
-    $input = array('share', 'hares', 'hare', 'are');
-    assertEqual(false, wordChains($input));
-  javascript: |-
-    var input = ['hat', 'coat', 'dog', 'cat', 'oat', 'cot', 'hot', 'hog'];
-    assertEqual(true, wordChains(input));
-    var input = ['cot', 'hot', 'bat', 'fat'];
-    assertEqual(false, wordChains(input));
-    var input = ['to', 'top', 'stop', 'tops', 'toss'];
-    assertEqual(false, wordChains(input));
-    var input = ['spout', 'do', 'pot', 'pout', 'spot', 'dot'];
-    assertEqual(true, wordChains(input));
-    var input = ['share', 'hares', 'shares', 'hare', 'are'];
-    assertEqual(true, wordChains(input));
-    var input = ['share', 'hares', 'hare', 'are'];
-    assertEqual(false, wordChains(input));
   ruby: |-
     input = ['hat', 'coat', 'dog', 'cat', 'oat', 'cot', 'hot', 'hog']
     assert_equal(true, word_chains(input))
@@ -51,8 +17,42 @@ checks:
     assert_equal(true, word_chains(input))
     input = ['share', 'hares', 'hare', 'are']
     assert_equal(false, word_chains(input))
-level: hard
-tags: []
-description: |
-  Write a function which takes a sequence of words, and returns true if they can be arranged into one continous word chain, and false if they cannot.
-  cat -> cot -> coat -> oat -> hat -> hot -> hog -> dog
+  javascript: |-
+    var input = ['hat', 'coat', 'dog', 'cat', 'oat', 'cot', 'hot', 'hog'];
+    assertEqual(true, wordChains(input));
+    var input = ['cot', 'hot', 'bat', 'fat'];
+    assertEqual(false, wordChains(input));
+    var input = ['to', 'top', 'stop', 'tops', 'toss'];
+    assertEqual(false, wordChains(input));
+    var input = ['spout', 'do', 'pot', 'pout', 'spot', 'dot'];
+    assertEqual(true, wordChains(input));
+    var input = ['share', 'hares', 'shares', 'hare', 'are'];
+    assertEqual(true, wordChains(input));
+    var input = ['share', 'hares', 'hare', 'are'];
+    assertEqual(false, wordChains(input));
+  php: |-
+    $input = array('hat', 'coat', 'dog', 'cat', 'oat', 'cot', 'hot', 'hog');
+    assertEqual(true, wordChains($input));
+    $input = array('cot', 'hot', 'bat', 'fat');
+    assertEqual(false, wordChains($input));
+    $input = array('to', 'top', 'stop', 'tops', 'toss');
+    assertEqual(false, wordChains($input));
+    $input = array('spout', 'do', 'pot', 'pout', 'spot', 'dot');
+    assertEqual(true, wordChains($input));
+    $input = array('share', 'hares', 'shares', 'hare', 'are');
+    assertEqual(true, wordChains($input));
+    $input = array('share', 'hares', 'hare', 'are');
+    assertEqual(false, wordChains($input));
+  python: |-
+    input = ['hat', 'coat', 'dog', 'cat', 'oat', 'cot', 'hot', 'hog']
+    assert_equal(True, word_chains(input))
+    input = ['cot', 'hot', 'bat', 'fat']
+    assert_equal(False, word_chains(input))
+    input = ['to', 'top', 'stop', 'tops', 'toss']
+    assert_equal(False, word_chains(input))
+    input = ['spout', 'do', 'pot', 'pout', 'spot', 'dot']
+    assert_equal(True, word_chains(input))
+    input = ['share', 'hares', 'shares', 'hare', 'are']
+    assert_equal(True, word_chains(input))
+    input = ['share', 'hares', 'hare', 'are']
+    assert_equal(False, word_chains(input))

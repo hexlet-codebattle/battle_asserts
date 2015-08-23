@@ -1,23 +1,23 @@
-checks:
-  python: |-
-    arr = ['cat', 'dog', 'fish', 'fish']
-    assert_equal({'cat': 1, 'dog': 1, 'fish': 2}, count(arr))
-    arr = ['Spam', 'egg', 'Spam', 'Spam', 'bacon', 'Spam']
-    assert_equal({'bacon': 1, 'egg': 1, 'Spam': 4}, count(arr))
-  php: |-
-    $arr = array('cat', 'dog', 'fish', 'fish');
-    assertEqual(array('cat' => 1, 'dog' => 1, 'fish' => 2), count($arr));
-    $arr = array('Spam', 'egg', 'Spam', 'Spam', 'bacon', 'Spam');
-    assertEqual(array('bacon' => 1, 'egg' => 1, 'Spam' => 4), count($arr));
-  javascript: |-
-    var arr = ['cat', 'dog', 'fish', 'fish'];
-    assertEqual({cat: 1, dog: 1, fish: 2}, count(arr));
-    var arr = ['Spam', 'egg', 'Spam', 'Spam', 'bacon', 'Spam'];
-    assertEqual({bacon: 1, egg: 1, Spam: 4}, count(arr));
-  ruby: |-
-    arr = [:cat, :dog, :fish, :fish]
-    assert_equal({:cat => 1, :dog => 1, :fish => 2}, count(arr))
-    arr = [:Spam, :egg, :Spam, :Spam, :bacon, :Spam]
-    assert_equal({:bacon => 1, :egg => 1, :Spam => 4}, count(arr))
 level: easy
 tags: []
+checks:
+  ruby: |-
+    arr = [:cat, :dog, :fish, :fish]
+    assert_equal({:fish => 2, :dog => 1, :cat => 1}, count(arr))
+    arr = [:Spam, :egg, :Spam, :Spam, :bacon, :Spam]
+    assert_equal({:Spam => 4, :egg => 1, :bacon => 1}, count(arr))
+  javascript: |-
+    var arr = ['cat', 'dog', 'fish', 'fish'];
+    assertEqual({fish: 2, dog: 1, cat: 1}, count(arr));
+    var arr = ['Spam', 'egg', 'Spam', 'Spam', 'bacon', 'Spam'];
+    assertEqual({Spam: 4, egg: 1, bacon: 1}, count(arr));
+  php: |-
+    $arr = array('cat', 'dog', 'fish', 'fish');
+    assertEqual(array('fish' => 2, 'dog' => 1, 'cat' => 1), count($arr));
+    $arr = array('Spam', 'egg', 'Spam', 'Spam', 'bacon', 'Spam');
+    assertEqual(array('Spam' => 4, 'egg' => 1, 'bacon' => 1), count($arr));
+  python: |-
+    arr = ['cat', 'dog', 'fish', 'fish']
+    assert_equal({'fish': 2, 'dog': 1, 'cat': 1}, count(arr))
+    arr = ['Spam', 'egg', 'Spam', 'Spam', 'bacon', 'Spam']
+    assert_equal({'Spam': 4, 'egg': 1, 'bacon': 1}, count(arr))

@@ -1,39 +1,39 @@
+level: medium
+tags: [array, hash]
 checks:
-  python: |-
-    easy = {'a[b]': 3}
-    assert_equal(easy, b_key_val({'a': {'b': 3}}))
-    medium = {'x[0]': '1', 'x[1]': '2', 'x[2]': '3'}
-    assert_equal(medium, b_key_val({'x': ['1', '2', '3']}))
-    hard = {'a[d][0]': 1, 'a[d][1]': 2}
-    assert_equal(hard, b_key_val({'a': {'d': [1, 2]}}))
-    nightmare = {'a[b]': 3, 'a[c]': 2, 'a[d][0]': 1, 'a[d][1]': 2, 'x[0]': '1', 'x[1]': '2', 'x[2]': '3'}
-    assert_equal(nightmare, b_key_val({'a': {'b': 3, 'c': 2, 'd': [1, 2]}, 'x': ['1', '2', '3']}))
-  php: |-
-    $easy = array('a[b]' => 3);
-    assertEqual($easy, bKeyVal(array('a' => array('b' => 3))));
-    $medium = array('x[0]' => '1', 'x[1]' => '2', 'x[2]' => '3');
-    assertEqual($medium, bKeyVal(array('x' => array('1', '2', '3'))));
-    $hard = array('a[d][0]' => 1, 'a[d][1]' => 2);
-    assertEqual($hard, bKeyVal(array('a' => array('d' => array(1, 2)))));
-    $nightmare = array('a[b]' => 3, 'a[c]' => 2, 'a[d][0]' => 1, 'a[d][1]' => 2, 'x[0]' => '1', 'x[1]' => '2', 'x[2]' => '3');
-    assertEqual($nightmare, bKeyVal(array('a' => array('b' => 3, 'c' => 2, 'd' => array(1, 2)), 'x' => array('1', '2', '3'))));
-  javascript: |-
-    var easy = {a[b]: 3};
-    assertEqual(easy, bKeyVal({a: {b: 3}}));
-    var medium = {x[0]: '1', x[1]: '2', x[2]: '3'};
-    assertEqual(medium, bKeyVal({x: ['1', '2', '3']}));
-    var hard = {a[d][0]: 1, a[d][1]: 2};
-    assertEqual(hard, bKeyVal({a: {d: [1, 2]}}));
-    var nightmare = {a[b]: 3, a[c]: 2, a[d][0]: 1, a[d][1]: 2, x[0]: '1', x[1]: '2', x[2]: '3'};
-    assertEqual(nightmare, bKeyVal({a: {b: 3, c: 2, d: [1, 2]}, x: ['1', '2', '3']}));
   ruby: |-
     easy = {'a[b]' => 3}
     assert_equal(easy, b_key_val({'a' => {'b' => 3}}))
-    medium = {'x[0]' => '1', 'x[1]' => '2', 'x[2]' => '3'}
+    medium = {'x[2]' => '3', 'x[1]' => '2', 'x[0]' => '1'}
     assert_equal(medium, b_key_val({'x' => ['1', '2', '3']}))
-    hard = {'a[d][0]' => 1, 'a[d][1]' => 2}
+    hard = {'a[d][1]' => 2, 'a[d][0]' => 1}
     assert_equal(hard, b_key_val({'a' => {'d' => [1, 2]}}))
-    nightmare = {'a[b]' => 3, 'a[c]' => 2, 'a[d][0]' => 1, 'a[d][1]' => 2, 'x[0]' => '1', 'x[1]' => '2', 'x[2]' => '3'}
-    assert_equal(nightmare, b_key_val({'a' => {'b' => 3, 'c' => 2, 'd' => [1, 2]}, 'x' => ['1', '2', '3']}))
-level: medium
-tags: [array, hash]
+    nightmare = {'x[2]' => '3', 'x[1]' => '2', 'x[0]' => '1', 'a[d][1]' => 2, 'a[d][0]' => 1, 'a[c]' => 2, 'a[b]' => 3}
+    assert_equal(nightmare, b_key_val({'x' => ['1', '2', '3'], 'a' => {'d' => [1, 2], 'c' => 2, 'b' => 3}}))
+  javascript: |-
+    var easy = {a[b]: 3};
+    assertEqual(easy, bKeyVal({a: {b: 3}}));
+    var medium = {x[2]: '3', x[1]: '2', x[0]: '1'};
+    assertEqual(medium, bKeyVal({x: ['1', '2', '3']}));
+    var hard = {a[d][1]: 2, a[d][0]: 1};
+    assertEqual(hard, bKeyVal({a: {d: [1, 2]}}));
+    var nightmare = {x[2]: '3', x[1]: '2', x[0]: '1', a[d][1]: 2, a[d][0]: 1, a[c]: 2, a[b]: 3};
+    assertEqual(nightmare, bKeyVal({x: ['1', '2', '3'], a: {d: [1, 2], c: 2, b: 3}}));
+  php: |-
+    $easy = array('a[b]' => 3);
+    assertEqual($easy, bKeyVal(array('a' => array('b' => 3))));
+    $medium = array('x[2]' => '3', 'x[1]' => '2', 'x[0]' => '1');
+    assertEqual($medium, bKeyVal(array('x' => array('1', '2', '3'))));
+    $hard = array('a[d][1]' => 2, 'a[d][0]' => 1);
+    assertEqual($hard, bKeyVal(array('a' => array('d' => array(1, 2)))));
+    $nightmare = array('x[2]' => '3', 'x[1]' => '2', 'x[0]' => '1', 'a[d][1]' => 2, 'a[d][0]' => 1, 'a[c]' => 2, 'a[b]' => 3);
+    assertEqual($nightmare, bKeyVal(array('x' => array('1', '2', '3'), 'a' => array('d' => array(1, 2), 'c' => 2, 'b' => 3))));
+  python: |-
+    easy = {'a[b]': 3}
+    assert_equal(easy, b_key_val({'a': {'b': 3}}))
+    medium = {'x[2]': '3', 'x[1]': '2', 'x[0]': '1'}
+    assert_equal(medium, b_key_val({'x': ['1', '2', '3']}))
+    hard = {'a[d][1]': 2, 'a[d][0]': 1}
+    assert_equal(hard, b_key_val({'a': {'d': [1, 2]}}))
+    nightmare = {'x[2]': '3', 'x[1]': '2', 'x[0]': '1', 'a[d][1]': 2, 'a[d][0]': 1, 'a[c]': 2, 'a[b]': 3}
+    assert_equal(nightmare, b_key_val({'x': ['1', '2', '3'], 'a': {'d': [1, 2], 'c': 2, 'b': 3}}))
