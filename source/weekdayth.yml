@@ -1,8 +1,0 @@
----
-level: easy
-tags: [reflection]
-description: | 
-  Write a generator of "weekdayth?" methods which checks date to be the current weekday.
-
-multicode_checks:
-  langs: [ruby, javascript, python]
