@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/hexlet/battle_asserts.png?branch=master)](https://travis-ci.org/hexlet/battle_asserts)
+[![Build Status](https://travis-ci.org/Hexlet/battle_asserts.png?branch=master)](https://travis-ci.org/hexlet/battle_asserts)
 
 ### PHP
 * https://github.com/Kami/practical-php-testing-exercise-solutions
