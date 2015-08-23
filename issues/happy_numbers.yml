@@ -7,12 +7,7 @@ description: |
   This is a happy number. An unhappy number (or sad number) is one that loops endlessly.
   Write a function that determines if a number is happy or not.
 checks:
-  ruby: |-
-    assert(happy_number?(7))
-    assert(happy_number?(986543210))
-    assert(!happy_number?(2))
-    assert(!happy_number?(189))
-  javascript: |-
+  php: |-
     assert(happyNumber?(7));
     assert(happyNumber?(986543210));
     assert(!happyNumber?(2));
@@ -22,8 +17,13 @@ checks:
     assert(happy_number?(986543210))
     assert(!happy_number?(2))
     assert(!happy_number?(189))
-  php: |-
+  javascript: |-
     assert(happyNumber?(7));
     assert(happyNumber?(986543210));
     assert(!happyNumber?(2));
     assert(!happyNumber?(189));
+  ruby: |-
+    assert(happy_number?(7))
+    assert(happy_number?(986543210))
+    assert(!happy_number?(2))
+    assert(!happy_number?(189))

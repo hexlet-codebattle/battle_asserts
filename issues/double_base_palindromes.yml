@@ -4,12 +4,7 @@ description: |
   The decimal number, 585 = 10010010012 (binary), is palindromic in both bases.
   Find n-th palindromic number.
 checks:
-  ruby: |-
-    assert_equal(1, double_base_palindromes(1))
-    assert_equal(5, double_base_palindromes(3))
-    assert_equal(99, double_base_palindromes(7))
-    assert_equal(1758571, double_base_palindromes(20))
-  javascript: |-
+  php: |-
     assertEqual(1, doubleBasePalindromes(1));
     assertEqual(5, doubleBasePalindromes(3));
     assertEqual(99, doubleBasePalindromes(7));
@@ -19,8 +14,13 @@ checks:
     assert_equal(5, double_base_palindromes(3))
     assert_equal(99, double_base_palindromes(7))
     assert_equal(1758571, double_base_palindromes(20))
-  php: |-
+  javascript: |-
     assertEqual(1, doubleBasePalindromes(1));
     assertEqual(5, doubleBasePalindromes(3));
     assertEqual(99, doubleBasePalindromes(7));
     assertEqual(1758571, doubleBasePalindromes(20));
+  ruby: |-
+    assert_equal(1, double_base_palindromes(1))
+    assert_equal(5, double_base_palindromes(3))
+    assert_equal(99, double_base_palindromes(7))
+    assert_equal(1758571, double_base_palindromes(20))

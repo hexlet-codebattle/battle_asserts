@@ -1,15 +1,15 @@
 level: elementary
 tags: [hash]
 checks:
-  ruby: |-
-    assert_equal({:completed => 0, :draft => 0}, generate([:draft, :completed], 0))
-    assert_equal({:two => 4, :one => 4}, generate([:one, :two], 4))
-  python: |-
-    assert_equal({'completed': 0, 'draft': 0}, generate(['draft', 'completed'], 0))
-    assert_equal({'two': 4, 'one': 4}, generate(['one', 'two'], 4))
-  javascript: |-
-    assertEqual({completed: 0, draft: 0}, generate(['draft', 'completed'], 0));
-    assertEqual({two: 4, one: 4}, generate(['one', 'two'], 4));
   php: |-
-    assertEqual(array('completed' => 0, 'draft' => 0), generate(array('draft', 'completed'), 0));
-    assertEqual(array('two' => 4, 'one' => 4), generate(array('one', 'two'), 4));
+    assertEqual(array('draft' => 0, 'completed' => 0), generate(array('draft', 'completed'), 0));
+    assertEqual(array('one' => 4, 'two' => 4), generate(array('one', 'two'), 4));
+  javascript: |-
+    assertEqual({draft: 0, completed: 0}, generate(['draft', 'completed'], 0));
+    assertEqual({one: 4, two: 4}, generate(['one', 'two'], 4));
+  python: |-
+    assert_equal({'draft': 0, 'completed': 0}, generate(['draft', 'completed'], 0))
+    assert_equal({'one': 4, 'two': 4}, generate(['one', 'two'], 4))
+  ruby: |-
+    assert_equal({:draft => 0, :completed => 0}, generate([:draft, :completed], 0))
+    assert_equal({:one => 4, :two => 4}, generate([:one, :two], 4))

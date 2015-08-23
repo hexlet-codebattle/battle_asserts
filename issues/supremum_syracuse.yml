@@ -2,19 +2,19 @@ level: medium
 tags: []
 description: Find the largest element in the Syracuse sequence.
 checks:
-  ruby: |-
+  python: |-
     assert_equal(16, supremum_syracuse(6))
     assert_equal(52, supremum_syracuse(11))
     assert_equal(9232, supremum_syracuse(27))
-  javascript: |-
-    assertEqual(16, supremumSyracuse(6));
-    assertEqual(52, supremumSyracuse(11));
-    assertEqual(9232, supremumSyracuse(27));
   php: |-
     assertEqual(16, supremumSyracuse(6));
     assertEqual(52, supremumSyracuse(11));
     assertEqual(9232, supremumSyracuse(27));
-  python: |-
+  javascript: |-
+    assertEqual(16, supremumSyracuse(6));
+    assertEqual(52, supremumSyracuse(11));
+    assertEqual(9232, supremumSyracuse(27));
+  ruby: |-
     assert_equal(16, supremum_syracuse(6))
     assert_equal(52, supremum_syracuse(11))
     assert_equal(9232, supremum_syracuse(27))

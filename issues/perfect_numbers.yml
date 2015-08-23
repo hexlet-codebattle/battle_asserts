@@ -2,27 +2,27 @@ level: medium
 tags: [math]
 description: A number is "perfect" if the sum of its divisors equal the number itself.
 checks:
-  ruby: |-
-    assert_equal(true, perfect?(6))
-    assert_equal(false, perfect?(7))
-    assert_equal(true, perfect?(496))
-    assert_equal(false, perfect?(500))
-    assert_equal(true, perfect?(8128))
-  javascript: |-
-    assertEqual(true, perfect?(6));
-    assertEqual(false, perfect?(7));
-    assertEqual(true, perfect?(496));
-    assertEqual(false, perfect?(500));
-    assertEqual(true, perfect?(8128));
-  php: |-
-    assertEqual(true, perfect?(6));
-    assertEqual(false, perfect?(7));
-    assertEqual(true, perfect?(496));
-    assertEqual(false, perfect?(500));
-    assertEqual(true, perfect?(8128));
   python: |-
     assert_equal(True, perfect?(6))
     assert_equal(False, perfect?(7))
     assert_equal(True, perfect?(496))
     assert_equal(False, perfect?(500))
     assert_equal(True, perfect?(8128))
+  php: |-
+    assertEqual(true, perfect?(6));
+    assertEqual(false, perfect?(7));
+    assertEqual(true, perfect?(496));
+    assertEqual(false, perfect?(500));
+    assertEqual(true, perfect?(8128));
+  javascript: |-
+    assertEqual(true, perfect?(6));
+    assertEqual(false, perfect?(7));
+    assertEqual(true, perfect?(496));
+    assertEqual(false, perfect?(500));
+    assertEqual(true, perfect?(8128));
+  ruby: |-
+    assert_equal(true, perfect?(6))
+    assert_equal(false, perfect?(7))
+    assert_equal(true, perfect?(496))
+    assert_equal(false, perfect?(500))
+    assert_equal(true, perfect?(8128))

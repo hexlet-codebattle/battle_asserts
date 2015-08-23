@@ -1,7 +1,13 @@
 level: elementary
 tags: [array]
 checks:
-  ruby: |-
+  php: |-
+    $arr = array('a', 'b', 'c');
+    assertEqual('b', fetch($arr, 1, 'd'));
+    assertEqual('d', fetch($arr, 5, 'd'));
+    assertEqual('c', fetch($arr, -1, 'd'));
+    assertEqual('d', fetch($arr, -5, 'd'));
+  python: |-
     arr = ['a', 'b', 'c']
     assert_equal('b', fetch(arr, 1, 'd'))
     assert_equal('d', fetch(arr, 5, 'd'))
@@ -13,15 +19,9 @@ checks:
     assertEqual('d', fetch(arr, 5, 'd'));
     assertEqual('c', fetch(arr, -1, 'd'));
     assertEqual('d', fetch(arr, -5, 'd'));
-  python: |-
+  ruby: |-
     arr = ['a', 'b', 'c']
     assert_equal('b', fetch(arr, 1, 'd'))
     assert_equal('d', fetch(arr, 5, 'd'))
     assert_equal('c', fetch(arr, -1, 'd'))
     assert_equal('d', fetch(arr, -5, 'd'))
-  php: |-
-    $arr = array('a', 'b', 'c');
-    assertEqual('b', fetch($arr, 1, 'd'));
-    assertEqual('d', fetch($arr, 5, 'd'));
-    assertEqual('c', fetch($arr, -1, 'd'));
-    assertEqual('d', fetch($arr, -5, 'd'));

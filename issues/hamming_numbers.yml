@@ -5,12 +5,7 @@ description: |
   consists of all numbers of the form 2^i·3^j·5^k where i, j and k are non-negative integers.
   Generate n-th number.
 checks:
-  ruby: |-
-    assert_equal(5, hamming_numbers(5))
-    assert_equal(36, hamming_numbers(20))
-    assert_equal(937500, hamming_numbers(500))
-    assert_equal(51200000, hamming_numbers(1000))
-  javascript: |-
+  php: |-
     assertEqual(5, hammingNumbers(5));
     assertEqual(36, hammingNumbers(20));
     assertEqual(937500, hammingNumbers(500));
@@ -20,8 +15,13 @@ checks:
     assert_equal(36, hamming_numbers(20))
     assert_equal(937500, hamming_numbers(500))
     assert_equal(51200000, hamming_numbers(1000))
-  php: |-
+  javascript: |-
     assertEqual(5, hammingNumbers(5));
     assertEqual(36, hammingNumbers(20));
     assertEqual(937500, hammingNumbers(500));
     assertEqual(51200000, hammingNumbers(1000));
+  ruby: |-
+    assert_equal(5, hamming_numbers(5))
+    assert_equal(36, hamming_numbers(20))
+    assert_equal(937500, hamming_numbers(500))
+    assert_equal(51200000, hamming_numbers(1000))

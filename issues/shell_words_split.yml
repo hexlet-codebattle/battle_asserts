@@ -1,7 +1,7 @@
 level: medium
 tags: [string]
 checks:
-  ruby: |-
+  python: |-
     input = 'here are 'two words''
     output = ['here', 'are', 'two words']
     assert_equal(output, shell_words_split(input))
@@ -11,16 +11,6 @@ checks:
     input = 'grep Jan\ 15 file\ name\ with\ spaces'
     output = ['grep', 'Jan 15', 'file name with spaces']
     assert_equal(output, shell_words_split(input))
-  javascript: |-
-    var input = 'here are 'two words'';
-    var output = ['here', 'are', 'two words'];
-    assertEqual(output, shellWordsSplit(input));
-    var input = 'foo bar 'foo bar'\ baz 'foo bar'';
-    var output = ['foo', 'bar', 'foo bar baz', 'foo bar'];
-    assertEqual(output, shellWordsSplit(input));
-    var input = 'grep Jan\ 15 file\ name\ with\ spaces';
-    var output = ['grep', 'Jan 15', 'file name with spaces'];
-    assertEqual(output, shellWordsSplit(input));
   php: |-
     $input = 'here are 'two words'';
     $output = array('here', 'are', 'two words');
@@ -31,7 +21,17 @@ checks:
     $input = 'grep Jan\ 15 file\ name\ with\ spaces';
     $output = array('grep', 'Jan 15', 'file name with spaces');
     assertEqual($output, shellWordsSplit($input));
-  python: |-
+  javascript: |-
+    var input = 'here are 'two words'';
+    var output = ['here', 'are', 'two words'];
+    assertEqual(output, shellWordsSplit(input));
+    var input = 'foo bar 'foo bar'\ baz 'foo bar'';
+    var output = ['foo', 'bar', 'foo bar baz', 'foo bar'];
+    assertEqual(output, shellWordsSplit(input));
+    var input = 'grep Jan\ 15 file\ name\ with\ spaces';
+    var output = ['grep', 'Jan 15', 'file name with spaces'];
+    assertEqual(output, shellWordsSplit(input));
+  ruby: |-
     input = 'here are 'two words''
     output = ['here', 'are', 'two words']
     assert_equal(output, shell_words_split(input))

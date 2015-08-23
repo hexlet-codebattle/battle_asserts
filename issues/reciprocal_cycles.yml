@@ -16,15 +16,15 @@ description: |
   It can be seen that 1/7 has a 6-digit recurring cycle.
   Find the value of d < 100 for which 1/d contains the longest recurring cycle in its decimal fraction part.
 checks:
-  ruby: |-
-    assert_equal(7, longest_recurring_cycle(10))
-    assert_equal(81, longest_recurring_cycle(100))
-  javascript: |-
+  php: |-
     assertEqual(7, longestRecurringCycle(10));
     assertEqual(81, longestRecurringCycle(100));
   python: |-
     assert_equal(7, longest_recurring_cycle(10))
     assert_equal(81, longest_recurring_cycle(100))
-  php: |-
+  javascript: |-
     assertEqual(7, longestRecurringCycle(10));
     assertEqual(81, longestRecurringCycle(100));
+  ruby: |-
+    assert_equal(7, longest_recurring_cycle(10))
+    assert_equal(81, longest_recurring_cycle(100))

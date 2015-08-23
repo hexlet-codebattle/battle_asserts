@@ -9,7 +9,7 @@ description: |
    0 100 10000 100 1 1 1
    ¯|___|¯¯¯¯¯|___|¯|_|¯
 checks:
-  ruby: |-
+  python: |-
     input = '¯|___|¯¯¯¯¯|___|¯|_|¯'
     output = '010010000100111'
     assert_equal(output, nrzi_encoding(input))
@@ -19,16 +19,6 @@ checks:
     input = '_|¯¯¯|_|¯¯¯¯|_|¯¯'
     output = '010011000110'
     assert_equal(output, nrzi_encoding(input))
-  javascript: |-
-    var input = '¯|___|¯¯¯¯¯|___|¯|_|¯';
-    var output = '010010000100111';
-    assertEqual(output, nrziEncoding(input));
-    var input = '¯|__|¯|___|¯¯';
-    var output = '010110010';
-    assertEqual(output, nrziEncoding(input));
-    var input = '_|¯¯¯|_|¯¯¯¯|_|¯¯';
-    var output = '010011000110';
-    assertEqual(output, nrziEncoding(input));
   php: |-
     $input = '¯|___|¯¯¯¯¯|___|¯|_|¯';
     $output = '010010000100111';
@@ -39,7 +29,17 @@ checks:
     $input = '_|¯¯¯|_|¯¯¯¯|_|¯¯';
     $output = '010011000110';
     assertEqual($output, nrziEncoding($input));
-  python: |-
+  javascript: |-
+    var input = '¯|___|¯¯¯¯¯|___|¯|_|¯';
+    var output = '010010000100111';
+    assertEqual(output, nrziEncoding(input));
+    var input = '¯|__|¯|___|¯¯';
+    var output = '010110010';
+    assertEqual(output, nrziEncoding(input));
+    var input = '_|¯¯¯|_|¯¯¯¯|_|¯¯';
+    var output = '010011000110';
+    assertEqual(output, nrziEncoding(input));
+  ruby: |-
     input = '¯|___|¯¯¯¯¯|___|¯|_|¯'
     output = '010010000100111'
     assert_equal(output, nrzi_encoding(input))
