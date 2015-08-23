@@ -8,7 +8,7 @@
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/tools.namespace "0.2.11"]
                  [me.raynes/fs "1.4.6"]
-                 [circleci/clj-yaml "0.5.4"]
+                 [circleci/clj-yaml "0.5.2"]
                  [multicode "0.1.0-SNAPSHOT"]]
   :source-paths ["src"]
   :eval-in :nrepl
