@@ -30,7 +30,7 @@
 
 ## Setup for development
 
-* install leiningen
+* Install [leiningen](http://leiningen.org)
 
 ## Contributing
 
@@ -45,57 +45,66 @@
 
 ## How to add a new source
 
-#### Create yaml file with the name of your issue. Look at the example.
+1. **Create yaml file with the name of your issue. Look at the example**
+    ```yml
+    level: easy # (elementary|easy|medium|hard)
+    tags: [string, numbers]
+    description: this is description
+    author:
+      github_nickname: your_name
+      web_page: "http://your.site"
+    checks:
+      ruby:
+        assert_equal 0, fibo_finder(0)
+        assert_equal 1, fibo_finder(1)
+        assert_equal 3, fibo_finder(4)
+        assert_equal 13, fibo_finder(7)
+        assert_equal 55, fibo_finder(10)
+    multicode_checks:
+      langs: [javascript] #[ruby, javascript, python, php]
+    ```
+  If you need special things in your task, such as some Ruby objects, write asserts in "checks:" section. If your task is multiplatform write asserts in "multicode_checks:" section.
 
-	---
-	level: easy # (elementary|easy|medium|hard)
-	tags: [string, numbers]
-	description: this is description
-	author:
-	  github_nickname: your_name
-	  web_page: "http://your.site"
-	checks:
-	  ruby:
-      	assert_equal 0, fibo_finder(0)
-      	assert_equal 1, fibo_finder(1)
-     	assert_equal 3, fibo_finder(4)
-      	assert_equal 13, fibo_finder(7)
-      	assert_equal 55, fibo_finder(10)
-	multicode_checks:
-	  langs: [javascript] #[ruby, javascript, python, php]
+2. **Create a .clj file in the test/battle_solutions folder, e.g. array_fetch_test.clj**
 
-If you need special things in your task, such as some Ruby objects, write asserts in "checks:" section. If your task is multiplatform write asserts in "multicode_checks:" section.
+3. **Write a test by defining a function (deftest test-asserts ()) Look at the example**
+  ```clojure
+  (deftest test-asserts
+    (let [arr [\a \b \c]]
+    (assert-equal \b (fetch arr 1 \d))
+    (assert-equal \d (fetch arr 5 \d))
+    (assert-equal \c (fetch arr -1 \d))
+    (assert-equal \d (fetch arr -5 \d))))
+  ```
 
-#### Create a .clj file in the test/battle_solutions folder, e.g. array_fetch_test.clj.
+4. **Write a namespace with your issue name**
+  ```clojure
+  (ns battle-solutions.array-fetch-test
+    (:require [clojure.test :refer :all]
+              [battle-asserts.test-helper :refer [assert-equal assert]]))
+  ```
 
-#### Write a test by defining a function (deftest test-asserts ()) Look at the example.
+5. **Write a function to resolve your tests**
+  ```clojure
+  (defn fetch
+    [s index default]
+    (let [positive-index (if (> index 0) index (+ (count s) index))]
+      (nth s positive-index default)))
+  ```
 
-    (deftest test-asserts
-  		(let [arr [\a \b \c]]
-    	(assert-equal \b (fetch arr 1 \d))
-    	(assert-equal \d (fetch arr 5 \d))
-    	(assert-equal \c (fetch arr -1 \d))
-    	(assert-equal \d (fetch arr -5 \d))))
+6. **Run tests**
+  ```
+  lein test
+  ```
+  If you want to run test for only one issue - use lein test + namespace
+  ```
+  lein test battle-solutions.array-fetch-test
+  ```
 
-#### Write a namespace with your issue name.
-
-	(ns battle-solutions.array-fetch-test
-	  (:require [clojure.test :refer :all]
-	            [battle-asserts.test-helper :refer [assert-equal assert]]))
-
-#### Write a function to resolve your tests.
-
-	(defn fetch
-	  [s index default]
-	  (let [positive-index (if (> index 0) index (+ (count s) index))]
-	    (nth s positive-index default)))
-
-#### Run tests (`lein test`).
-
-#### If you want to run test for only one issue - use lein test + namespace
-
-	lein test battle-solutions.array-fetch-test
+7. **Run code format**
+  ```
+  make format
+  ```
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kaize/battle_asserts/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
