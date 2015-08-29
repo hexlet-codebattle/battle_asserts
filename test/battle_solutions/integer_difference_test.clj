@@ -5,14 +5,13 @@
 (defn integer-difference
   [differ, nums]
   (reduce +
-          (pmap (fn[number]
+          (pmap (fn [number]
                   (/
-                    (count (filter
-                             #(= differ (Math/abs (- % number)))
-                             nums))
-                    2))
+                   (count (filter
+                           #(= differ (Math/abs (- % number)))
+                           nums))
+                   2))
                 nums)))
-
 
 (deftest test-asserts
   (assert-equal 3 (integer-difference 4 [1 1 5 6 9 16 27]))

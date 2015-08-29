@@ -4,11 +4,11 @@
 
 (defn longest-recurring-cycle [x]
   (letfn [(decimal-seq [len]
-                       (->> (str (with-precision 100 (/ 1M len)))
-                            (partition 1) ;; or partition
-                            (#(nthnext % 2))
-                            (map #(apply str %))
-                            (map #(Integer/valueOf %))))
+            (->> (str (with-precision 100 (/ 1M len)))
+                 (partition 1) ;; or partition
+                 (#(nthnext % 2))
+                 (map #(apply str %))
+                 (map #(Integer/valueOf %))))
           (period-length [coll]
                          (loop [m {}
                                 i 0
@@ -25,6 +25,6 @@
                            (vec (take x (iterate inc 1)))))]
       (+ 1 (.indexOf sq (apply max sq))))))
 
-  (deftest test-asserts
-    (assert-equal 7 (longest-recurring-cycle 10))
-    (assert-equal 81 (longest-recurring-cycle 100)))
+(deftest test-asserts
+  (assert-equal 7 (longest-recurring-cycle 10))
+  (assert-equal 81 (longest-recurring-cycle 100)))

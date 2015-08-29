@@ -14,7 +14,6 @@
      (filter #(> (count %) average)
              words))))
 
-
 (deftest test-asserts
   (assert-equal ["This" "sample" "string"] (more-than-medium "This is a sample string"))
   (assert-equal ["another" "sample"] (more-than-medium "Some another sample"))

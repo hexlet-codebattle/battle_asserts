@@ -6,5 +6,5 @@
   (reduce + (map #(Character/digit % 10) (str (apply * (repeat n 2))))))
 
 (deftest test-asserts
-    (assert-equal 13 (power-digits-sum 8))
-    (assert-equal 26 (power-digits-sum 15)))
+  (assert-equal 13 (power-digits-sum 8))
+  (assert-equal 26 (power-digits-sum 15)))

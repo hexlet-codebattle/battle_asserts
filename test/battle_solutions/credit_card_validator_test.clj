@@ -13,13 +13,13 @@
   [arr]
   (let [length (count arr)]
     (map-indexed
-      (fn [index digit]
-        (if (or
-              (and (even? index) (even? length))
-              (and (odd? index) (odd? length)))
-          (get-digit digit)
-          digit))
-      arr)))
+     (fn [index digit]
+       (if (or
+            (and (even? index) (even? length))
+            (and (odd? index) (odd? length)))
+         (get-digit digit)
+         digit))
+     arr)))
 
 (defn valid-credit-card?
   [number]

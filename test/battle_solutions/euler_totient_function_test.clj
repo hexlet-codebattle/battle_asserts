@@ -12,8 +12,6 @@
       (* num (reduce * (map #(- 1 (/ 1 %))
                             prime-factors))))))
 
-
-
 (deftest test-asserts
   (assert-equal 1 (euler-totient-function 1))
   (assert-equal 4 (euler-totient-function 10))

@@ -7,7 +7,7 @@
   (letfn [(interpreter
             [num]
             (apply str "1" (repeat (- num 1)
-                                  "0")))]
+                                   "0")))]
     (-> coded-seq
         (clojure.string/split #"\|")
         (->> (map #(interpreter (count %)))

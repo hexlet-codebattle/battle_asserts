@@ -4,8 +4,8 @@
 
 (defn check-phone-number-format
   [candidate]
-    (not (nil? (re-matches #"^((8|0|((\+|00)\d{1,2}))[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{6,12}$"
-                           candidate))))
+  (not (nil? (re-matches #"^((8|0|((\+|00)\d{1,2}))[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{6,12}$"
+                         candidate))))
 
 (deftest test-asserts
   (let [input "5555555555"]

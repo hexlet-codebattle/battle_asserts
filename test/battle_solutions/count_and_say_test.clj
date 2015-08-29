@@ -16,7 +16,7 @@
          (clojure.string/replace #"'s" "")
          (clojure.string/split   #", then ")
          (->> (map #(clojure.string/split % #" "))
-              (reduce #(str %1 (repeater %2))"")
+              (reduce #(str %1 (repeater %2)) "")
               (Integer/parseInt)))))
 
 (deftest test-asserts

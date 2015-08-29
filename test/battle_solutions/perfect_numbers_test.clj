@@ -10,8 +10,6 @@
                     (range 1 (inc (/ num 2)))))]
     (= num (reduce + (divisors num)))))
 
-
-
 (deftest test-asserts
   (assert-equal true (perfect? 6))
   (assert-equal false (perfect? 7))

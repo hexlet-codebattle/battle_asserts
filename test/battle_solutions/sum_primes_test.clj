@@ -7,7 +7,6 @@
   (reduce + (take-while (partial > num)
                         (iterate #(.nextProbablePrime (biginteger %)) 2))))
 
-
 (deftest test-asserts
   (assert-equal 76127 (sum-primes 1000))
   (assert-equal 4227 (sum-primes 200)))

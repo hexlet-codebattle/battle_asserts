@@ -7,8 +7,8 @@
     0 0
     1 1
     (+
-      (fibo-finder (- number 1))
-      (fibo-finder (- number 2)))))
+     (fibo-finder (- number 1))
+     (fibo-finder (- number 2)))))
 
 (deftest test-asserts
   (assert-equal 0 (fibo-finder 0))

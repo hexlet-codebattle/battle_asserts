@@ -5,8 +5,8 @@
 (defn fizzbuzz
   [number]
   (str
-    (when (= (mod number 3) 0) "Fizz")
-    (when (= (mod number 5) 0) "Buzz")))
+   (when (= (mod number 3) 0) "Fizz")
+   (when (= (mod number 5) 0) "Buzz")))
 
 (deftest test-asserts
   (assert-equal "Fizz" (fizzbuzz 3))

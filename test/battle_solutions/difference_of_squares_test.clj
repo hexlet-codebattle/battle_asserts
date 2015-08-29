@@ -5,12 +5,12 @@
 (defn square-of-sums
   [value]
   (let [sum (reduce + (range (inc value)))]
-        (* sum sum)))
+    (* sum sum)))
 
 (defn sum-of-squares
   [value]
   (let [squares (map #(* % %) (range 1 (inc value)))]
-        (reduce + squares)))
+    (reduce + squares)))
 
 (defn difference
   [value]

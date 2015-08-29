@@ -7,9 +7,6 @@
   (vec (map #(clojure.string/replace % #"(\\)|(\')" "")
             (clojure.string/split string #"(?<!\\)\s+(?!\w+\')"))))
 
-
-
-
 (deftest test-asserts
   (let [input "here are 'two words'"
         output ["here" "are" "two words"]]

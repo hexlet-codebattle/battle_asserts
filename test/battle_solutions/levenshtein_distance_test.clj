@@ -8,10 +8,10 @@
     (empty? seq1) (count seq2)
     (empty? seq2) (count seq1)
     :else (min
-            (+ (if (= (first seq1) (first seq2)) 0 1)
-               (#'levenshtein-distance (rest seq1) (rest seq2)))
-            (inc (#'levenshtein-distance (rest seq1) seq2))
-            (inc (#'levenshtein-distance seq1 (rest seq2))))))
+           (+ (if (= (first seq1) (first seq2)) 0 1)
+              (#'levenshtein-distance (rest seq1) (rest seq2)))
+           (inc (#'levenshtein-distance (rest seq1) seq2))
+           (inc (#'levenshtein-distance seq1 (rest seq2))))))
 
 (deftest test-asserts
   (assert-equal 3 (levenshtein-distance "kitten" "sitting"))

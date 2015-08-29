@@ -5,8 +5,8 @@
 (defn word-positions
   [string word]
   (letfn [(step [x]
-              (when (. x find)
-                (cons (. x start) (lazy-seq (step x)))))]
+            (when (. x find)
+              (cons (. x start) (lazy-seq (step x)))))]
     (let [m (re-matcher (re-pattern (str "\\b" word "\\b")) 
                         string)]
       (vec (map #(if (> % 0) (- % 1) %)  

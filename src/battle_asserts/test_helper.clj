@@ -1,5 +1,5 @@
 (ns battle-asserts.test-helper
- (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer [is]]))
 
 (defn assert-equal
   [expected actual]

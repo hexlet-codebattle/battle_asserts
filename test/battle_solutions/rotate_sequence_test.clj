@@ -2,7 +2,6 @@
   (:require [clojure.test :refer :all]
             [battle-asserts.test-helper :refer [assert-equal]]))
 
-
 (defn rotate-sequence
   [shift seq]
   (let [one-lap-shift (rem shift
@@ -12,9 +11,8 @@
                  (- (count seq)
                     (Math/abs one-lap-shift)))]
     (vec (concat
-           (subvec (vec seq) border)
-           (subvec (vec seq) 0 border)))))
-
+          (subvec (vec seq) border)
+          (subvec (vec seq) 0 border)))))
 
 (deftest test-asserts
   (assert-equal [3 4 5 1 2] (rotate-sequence 2 [1 2 3 4 5]))

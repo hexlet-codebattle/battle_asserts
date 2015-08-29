@@ -41,11 +41,11 @@
                 (= "ooooo" word) (reset! state 1)
                 (= "oo.oo" word) (reset! state 2)))
             (decryptor
-              [word]
-              (change-state word)
-              (cond
-                (= @state 1) (first (dict word))
-                (= @state 2) (second (dict word))))]
+             [word]
+             (change-state word)
+             (cond
+               (= @state 1) (first (dict word))
+               (= @state 2) (second (dict word))))]
       (->> code
            (partition-all 5)
            (map #(apply str %))

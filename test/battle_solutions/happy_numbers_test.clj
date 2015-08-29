@@ -8,11 +8,11 @@
       (= n 1)  true
       (seen n) false
       :else
-        (recur (->> (str n)
-                    (map #(Character/digit % 10))
-                    (map #(* % %))
-                    (reduce +))
-               (conj seen n)))))
+      (recur (->> (str n)
+                  (map #(Character/digit % 10))
+                  (map #(* % %))
+                  (reduce +))
+             (conj seen n)))))
 
 (deftest test-asserts
   (assert (happy-number? 7))

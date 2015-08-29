@@ -8,7 +8,7 @@
             (= (seq (str n))
                (reverse (str n))))
           (binary-palindromic? [n]
-            (palindromic? (Integer/toBinaryString n)))]
+                               (palindromic? (Integer/toBinaryString n)))]
     (->> (range 1 10000000)
          (lazy-seq)
          (filter #(and (palindromic? %)
