@@ -1,0 +1,8 @@
+---
+level: easy
+tags: [stack]
+description: |
+  Checking the parentheses in the expression.
+
+multicode_checks:
+  langs: [ruby, javascript, python, php]
