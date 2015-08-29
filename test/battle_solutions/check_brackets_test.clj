@@ -1,5 +1,6 @@
 (ns battle-solutions.check-brackets-test
   (:require [clojure.test :refer :all]
+            [battle-asserts.test-helper :refer [assert]]
             [clojure.string :refer [blank?]]
             [clojure.set :refer [union]]))
 
