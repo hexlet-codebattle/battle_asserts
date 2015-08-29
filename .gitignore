@@ -8,3 +8,4 @@ target
 *.swo
 .nrepl-port
 issues/*.*
+!issues/.gitkeep
