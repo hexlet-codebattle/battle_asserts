@@ -1,0 +1,27 @@
+level: elementary
+tags: [arithmetic]
+description: |
+  The input contains the maximal number of dots on one end of a domino bone.
+  Output the number of dots on the domino set.
+  Sample 2 -> 12
+checks:
+  ruby: |-
+    assert_equal(0, domino(0))
+    assert_equal(3, domino(1))
+    assert_equal(12, domino(2))
+    assert_equal(30, domino(3))
+  javascript: |-
+    assertEqual(0, domino(0));
+    assertEqual(3, domino(1));
+    assertEqual(12, domino(2));
+    assertEqual(30, domino(3));
+  php: |-
+    assertEqual(0, domino(0));
+    assertEqual(3, domino(1));
+    assertEqual(12, domino(2));
+    assertEqual(30, domino(3));
+  python: |-
+    assert_equal(0, domino(0))
+    assert_equal(3, domino(1))
+    assert_equal(12, domino(2))
+    assert_equal(30, domino(3))
