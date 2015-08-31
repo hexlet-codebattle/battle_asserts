@@ -1,0 +1,9 @@
+---
+level: easy
+tags: [clock, geometry]
+description: |
+  Clock angle problem.
+  What is the angle between the hour and minute hand at a given time.
+
+multicode_checks:
+  langs: [ruby, javascript, python, php]
