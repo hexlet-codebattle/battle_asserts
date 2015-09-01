@@ -1,0 +1,8 @@
+---
+level: easy
+tags: [palindrome, anagram]
+description: |
+  Check if a string is an anagram of the palindrome.
+
+multicode_checks:
+  langs: [ruby, javascript, python, php]
