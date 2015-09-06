@@ -18,6 +18,6 @@
   [data test-code]
   (let [langs (map keyword (get-in data [:multicode_checks :langs]))
         issue (dissoc data :multicode_checks)]
-    (if (not (empty? langs))
+    (if (seq langs)
       (merge issue {:checks (generate-asserts langs test-code)})
       issue)))
