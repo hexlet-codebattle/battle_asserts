@@ -1,0 +1,10 @@
+---
+level: easy
+tags: [list]
+author:
+  github_nickname: justcxx
+
+description: Drop every N'th element from a list.
+
+multicode_checks:
+  langs: [ruby, javascript, python, php]
