@@ -3,13 +3,12 @@
             [battle-asserts.test-helper :refer [assert-equal]]))
 
 (defn compress [seq]
-  (cond
-    (nil? seq) nil
-    (nil? (second seq)) seq
-    (= (first seq)
-       (first (rest seq))) (compress (rest seq))
-    :else (cons (first seq)
-                (compress (rest seq)))))
+  (->> seq
+       (reduce #(cond
+                  (= %2 (first %1)) %1
+                  :else (conj %1 %2))
+               nil)
+       (reverse)))
 
 (deftest test-asserts
   (assert-equal [] (compress []))
