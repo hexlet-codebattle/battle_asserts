@@ -1,3 +1,6 @@
+issues:
+	docker run -v $(CURDIR):/battle_asserts clojure /bin/bash -c 'cd /battle_asserts && lein run'
+
 generate: format
 	lein run
 
@@ -18,4 +21,4 @@ check-namespaces:
 test:
 	lein trampoline test
 
-.PHONY: test
+.PHONY: test issues
