@@ -1,5 +1,5 @@
 ---
-level: easy
+level: elementary
 tags: [strings]
 description: |
   Write a program that, given a DNA strand, returns its RNA complement (per RNA transcription).

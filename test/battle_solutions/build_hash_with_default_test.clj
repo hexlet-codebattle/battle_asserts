@@ -1,6 +1,6 @@
 (ns battle-solutions.build_hash_with_default_test
   (:require [clojure.test :refer [deftest]]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn generate
   [v default]

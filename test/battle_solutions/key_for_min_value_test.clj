@@ -1,6 +1,6 @@
 (ns battle-solutions.key-for-min-value-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn key-for-min-value
   [hsh]

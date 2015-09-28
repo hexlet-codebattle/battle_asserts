@@ -1,6 +1,6 @@
 (ns battle-solutions.array-interleave-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn interleave
   [arr & args]

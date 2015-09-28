@@ -1,6 +1,6 @@
 (ns battle-solutions.fibonacci-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn fibo-finder [number]
   (condp = number

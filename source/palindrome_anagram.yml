@@ -1,5 +1,5 @@
 ---
-level: easy
+level: medium
 tags: [palindrome, anagram]
 description: |
   Check if a string is an anagram of the palindrome.

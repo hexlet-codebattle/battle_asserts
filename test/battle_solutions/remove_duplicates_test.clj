@@ -1,12 +1,11 @@
 (ns battle-solutions.remove-duplicates-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn compress [seq]
   (->> seq
-       (reduce #(cond
-                  (= %2 (first %1)) %1
-                  :else (conj %1 %2))
+       (reduce #(cond (= %2 (first %1)) %1
+                      :else (conj %1 %2))
                nil)
        (reverse)))
 

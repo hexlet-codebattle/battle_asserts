@@ -1,7 +1,7 @@
 ---
-level: medium
+level: easy
 tags: [array]
-description: ""
+description: FIXME
 
 multicode_checks:
   langs: [ruby, javascript, python, php]

@@ -1,8 +1,8 @@
 (ns battle-solutions.perfect-numbers-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
-(defn perfect?
+(defn is-perfect
   [num]
   (letfn [(divisors
             [num]
@@ -11,8 +11,8 @@
     (= num (reduce + (divisors num)))))
 
 (deftest test-asserts
-  (assert-equal true (perfect? 6))
-  (assert-equal false (perfect? 7))
-  (assert-equal true (perfect? 496))
-  (assert-equal false (perfect? 500))
-  (assert-equal true (perfect? 8128)))
+  (assert-true (is-perfect 6))
+  (assert-true (not (is-perfect 7)))
+  (assert-true (is-perfect 496))
+  (assert-true (not (is-perfect 500)))
+  (assert-true (is-perfect 8128)))

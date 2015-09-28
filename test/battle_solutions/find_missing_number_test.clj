@@ -1,13 +1,13 @@
 (ns battle-solutions.find-missing-number-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn find-missing-number
   [coll]
   (let [n (inc (count coll))
         sum-seq (* (/ (inc n)
                       2)
-                       n)]
+                   n)]
     (->> coll
          (reduce +)
          (- sum-seq)

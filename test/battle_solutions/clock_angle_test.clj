@@ -1,14 +1,13 @@
 (ns battle-solutions.clock-angle-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn clock-angle [h m]
-  (letfn
-   [(hours-angle [h m]
-      (+ (* h 30)
-         (* m 0.5)))
-    (minutes-angle [m]
-                   (* m 6))]
+  (letfn [(hours-angle [h m]
+            (+ (* h 30)
+               (* m 0.5)))
+          (minutes-angle [m]
+            (* m 6))]
     (Math/abs (- (hours-angle h m)
                  (minutes-angle m)))))
 

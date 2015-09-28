@@ -1,6 +1,6 @@
 (ns battle-solutions.happy-numbers-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn happy-number? [n]
   (loop [n n, seen #{}]
@@ -15,7 +15,7 @@
              (conj seen n)))))
 
 (deftest test-asserts
-  (assert (happy-number? 7))
-  (assert (happy-number? 986543210))
-  (assert (not (happy-number? 2)))
-  (assert (not (happy-number? 189))))
+  (assert-true (happy-number? 7))
+  (assert-true (happy-number? 986543210))
+  (assert-true (not (happy-number? 2)))
+  (assert-true (not (happy-number? 189))))

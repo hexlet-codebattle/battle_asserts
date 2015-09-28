@@ -1,6 +1,6 @@
 (ns battle-solutions.levenshtein-distance-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn levenshtein-distance
   [seq1 seq2]

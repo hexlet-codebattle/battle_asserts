@@ -1,10 +1,10 @@
 (ns battle-solutions.check-brackets-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert]]
+            [battle-asserts.test-helper :refer :all]
             [clojure.string :refer [blank?]]
             [clojure.set :refer [union]]))
 
-(defn correct-brackets? [s]
+(defn is-correct-brackets [s]
   (let [brackets {\( \) \[ \] \{ \} \< \>}
         opening (set (keys brackets))
         closing (set (vals brackets))]
@@ -19,10 +19,10 @@
          empty?)))
 
 (deftest test-asserts
-  (assert (correct-brackets? " "))
-  (assert (correct-brackets? "()[]{}<>"))
-  (assert (correct-brackets? "<(){[]}>"))
-  (assert (not (correct-brackets? "())")))
-  (assert (not (correct-brackets? "()(")))
-  (assert (not (correct-brackets? "({)}")))
-  (assert (not (correct-brackets? "{)][(}"))))
+  (assert-true (is-correct-brackets " "))
+  (assert-true (is-correct-brackets "()[]{}<>"))
+  (assert-true (is-correct-brackets "<(){[]}>"))
+  (assert-true (not (is-correct-brackets "())")))
+  (assert-true (not (is-correct-brackets "()(")))
+  (assert-true (not (is-correct-brackets "({)}")))
+  (assert-true (not (is-correct-brackets "{)][(}"))))

@@ -1,5 +1,5 @@
 ---
-level: medium
+level: easy
 tags: [math]
 description: |
   Write a function which calculates the sum of all natural numbers under n (first argument)

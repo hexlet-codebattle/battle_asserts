@@ -1,6 +1,6 @@
 (ns battle-solutions.credit-card-validator-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn- get-digit
   [digit]
@@ -28,8 +28,8 @@
     (zero? (mod sum 10))))
 
 (deftest test-asserts
-  (assert (not (valid-credit-card? "1234567890123456")))
-  (assert (valid-credit-card? "4408041234567893"))
-  (assert (not (valid-credit-card? "4408042234567893")))
-  (assert (valid-credit-card? "38520000023237"))
-  (assert (valid-credit-card? "4222222222222")))
+  (assert-true (not (valid-credit-card? "1234567890123456")))
+  (assert-true (valid-credit-card? "4408041234567893"))
+  (assert-true (not (valid-credit-card? "4408042234567893")))
+  (assert-true (valid-credit-card? "38520000023237"))
+  (assert-true (valid-credit-card? "4222222222222")))

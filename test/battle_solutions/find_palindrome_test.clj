@@ -1,6 +1,6 @@
 (ns battle-solutions.find-palindrome-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn find-palindrome [st]
   (->> st
@@ -22,5 +22,5 @@
         st "bartarcarracecarbartar"]
     (assert-equal pal (find-palindrome st)))
   (let [pal "46264"
-        st "3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982"]
+        st "3.1415926535897932384626433832795028841971"]
     (assert-equal pal (find-palindrome st))))

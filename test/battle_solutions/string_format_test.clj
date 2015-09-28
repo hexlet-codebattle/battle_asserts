@@ -1,6 +1,6 @@
 (ns battle-solutions.string-format-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn string-format
   [num]

@@ -1,5 +1,5 @@
 ---
-level: easy
+level: hard
 tags: []
 description: |
   Conway's "Look and Say" sequence is a sequence of numbers in which each term "reads aloud" the digits of the previous term.

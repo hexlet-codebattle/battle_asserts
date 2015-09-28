@@ -2,7 +2,7 @@
   (:require [clojure.test :refer :all]
             [battle-asserts.test-helper :refer :all]))
 
-(defn is-palindrome-anagram? [s]
+(defn is-palindrome-anagram [s]
   (->> s
        (frequencies)
        (vals)
@@ -15,13 +15,13 @@
        (>= 1)))
 
 (deftest test-asserts
-  (assert (is-palindrome-anagram? ""))
-  (assert (is-palindrome-anagram? "a"))
-  (assert (is-palindrome-anagram? "aa"))
-  (assert (is-palindrome-anagram? "aab"))
-  (assert (is-palindrome-anagram? "aabb"))
-  (assert (is-palindrome-anagram? "aabbc"))
-  (assert (is-palindrome-anagram? "abcabc"))
-  (assert (not (is-palindrome-anagram? "ab")))
-  (assert (not (is-palindrome-anagram? "aabbcd")))
-  (assert (not (is-palindrome-anagram? "aaabbb"))))
+  (assert-true (is-palindrome-anagram ""))
+  (assert-true (is-palindrome-anagram "a"))
+  (assert-true (is-palindrome-anagram "aa"))
+  (assert-true (is-palindrome-anagram "aab"))
+  (assert-true (is-palindrome-anagram "aabb"))
+  (assert-true (is-palindrome-anagram "aabbc"))
+  (assert-true (is-palindrome-anagram "abcabc"))
+  (assert-true (not (is-palindrome-anagram "ab")))
+  (assert-true (not (is-palindrome-anagram "aabbcd")))
+  (assert-true (not (is-palindrome-anagram "aaabbb"))))

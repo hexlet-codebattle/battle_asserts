@@ -1,10 +1,10 @@
 (ns battle-solutions.check-parentheses-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert]]
+            [battle-asserts.test-helper :refer :all]
             [clojure.string :refer [blank?]]
             [clojure.set :refer [union]]))
 
-(defn correct-parentheses? [s]
+(defn is-correct-parentheses [s]
   (let [opening (set "(")
         closing (set ")")]
     (->> s
@@ -17,12 +17,13 @@
          (= 0))))
 
 (deftest test-asserts
-  (assert (correct-parentheses? " "))
-  (assert (correct-parentheses? "()"))
-  (assert (correct-parentheses? "()()"))
-  (assert (correct-parentheses? "(())"))
-  (assert (not (correct-parentheses? ")")))
-  (assert (not (correct-parentheses? "(")))
-  (assert (not (correct-parentheses? ")(")))
-  (assert (not (correct-parentheses? "())")))
-  (assert (not (correct-parentheses? "(()"))))
+  (assert-true (is-correct-parentheses ""))
+  (assert-true (is-correct-parentheses " "))
+  (assert-true (is-correct-parentheses "()"))
+  (assert-true (is-correct-parentheses " ( )(  )"))
+  (assert-true (is-correct-parentheses "(() )"))
+  (assert-true (not (is-correct-parentheses ") ")))
+  (assert-true (not (is-correct-parentheses "(")))
+  (assert-true (not (is-correct-parentheses ") (")))
+  (assert-true (not (is-correct-parentheses "( )  )")))
+  (assert-true (not (is-correct-parentheses "(( )"))))

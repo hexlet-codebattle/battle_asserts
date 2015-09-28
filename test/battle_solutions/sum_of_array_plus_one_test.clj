@@ -1,6 +1,6 @@
 (ns battle-solutions.sum-of-array-plus-one-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn plus-one-sum [arr]
   (reduce #(+ %1 (+ %2 1)) 0 arr))

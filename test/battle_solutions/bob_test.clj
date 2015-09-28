@@ -1,6 +1,6 @@
 (ns battle-solutions.bob-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]
+            [battle-asserts.test-helper :refer :all]
             [clojure.string :as string]))
 
 (defn bob-answer

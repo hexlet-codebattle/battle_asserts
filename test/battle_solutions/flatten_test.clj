@@ -1,6 +1,6 @@
 (ns battle-solutions.flatten-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (deftest test-asserts
   (assert-equal [1 2 {:a "b"}] (flatten [1 [2 [{:a "b"}]]]))

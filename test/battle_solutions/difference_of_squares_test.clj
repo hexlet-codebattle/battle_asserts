@@ -1,6 +1,6 @@
 (ns battle-solutions.difference-of-squares-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn square-of-sums
   [value]

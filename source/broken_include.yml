@@ -1,8 +1,0 @@
----
-level: elementary
-tags: [array, set]
-description: |
-  Check presence of element in array.
-
-multicode_checks:
-  langs: [ruby, javascript, python, php]

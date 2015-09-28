@@ -1,5 +1,5 @@
 ---
-level: medium
+level: hard
 tags: []
 description: |
   Two numbers are coprime if their greatest common divisor equals 1.

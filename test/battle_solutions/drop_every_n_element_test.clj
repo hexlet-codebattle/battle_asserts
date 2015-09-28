@@ -1,9 +1,11 @@
 (ns battle-solutions.drop-every-n-element-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn drop-every [n coll]
-  (keep-indexed #(if-not (= (mod (inc %1) n) 0) %2) coll))
+  (keep-indexed #(if-not (= (mod (inc %1) n)
+                            0) %2)
+                coll))
 
 (deftest test-asserts
   (assert-equal '(a b d e g h k) (drop-every 3 '(a b c d e f g h i k)))

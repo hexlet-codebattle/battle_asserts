@@ -1,6 +1,6 @@
 (ns battle-solutions.counting-array-elements-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn count [arr]
   (reduce #(update-in %1 [%2] (fnil inc 0)) {} arr))

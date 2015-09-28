@@ -1,15 +1,15 @@
 (ns battle-solutions.word-positions-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn word-positions
   [string word]
   (letfn [(step [x]
             (when (. x find)
               (cons (. x start) (lazy-seq (step x)))))]
-    (let [m (re-matcher (re-pattern (str "\\b" word "\\b")) 
+    (let [m (re-matcher (re-pattern (str "\\b" word "\\b"))
                         string)]
-      (vec (map #(if (> % 0) (- % 1) %)  
+      (vec (map #(if (> % 0) (- % 1) %)
                 (step m))))))
 
 (deftest test-asserts

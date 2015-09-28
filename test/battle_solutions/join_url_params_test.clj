@@ -1,6 +1,6 @@
 (ns battle-solutions.join-url-params-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer [assert-equal]]))
+            [battle-asserts.test-helper :refer :all]))
 
 (defn join-url-params [url params]
   (let [ordered-params (into (sorted-map) params)]
