@@ -2,7 +2,7 @@
 level: medium
 tags: []
 description: |
-  The decimal number, 585 = 10010010012 (binary), is palindromic in both bases.
+  The decimal number, 585 = 1001001001 (binary), is palindromic in both bases.
   Find n-th palindromic number.
 
 multicode_checks:
