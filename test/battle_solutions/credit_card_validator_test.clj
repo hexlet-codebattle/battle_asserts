@@ -21,15 +21,15 @@
          digit))
      arr)))
 
-(defn valid-credit-card?
+(defn is-valid-credit-card
   [number]
   (let [arr-number-card (map #(read-string (str %)) number)
         sum (reduce + (change-digits arr-number-card))]
     (zero? (mod sum 10))))
 
 (deftest test-asserts
-  (assert-true (not (valid-credit-card? "1234567890123456")))
-  (assert-true (valid-credit-card? "4408041234567893"))
-  (assert-true (not (valid-credit-card? "4408042234567893")))
-  (assert-true (valid-credit-card? "38520000023237"))
-  (assert-true (valid-credit-card? "4222222222222")))
+  (assert-true (not (is-valid-credit-card "1234567890123456")))
+  (assert-true (is-valid-credit-card "4408041234567893"))
+  (assert-true (not (is-valid-credit-card "4408042234567893")))
+  (assert-true (is-valid-credit-card "38520000023237"))
+  (assert-true (is-valid-credit-card "4222222222222")))
