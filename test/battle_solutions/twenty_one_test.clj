@@ -6,7 +6,7 @@
   (= (reduce + n) 21))
 
 (deftest test-asserts
-  (assert (is-twenty-one '(3 4 5 6 3)))
-  (assert (is-twenty-one '(11 10)))
-  (assert (not (is-twenty-one '(3 11 10))))
-  (assert (not (is-twenty-one '(10 10)))))
+  (assert-true (is-twenty-one '(3 4 5 6 3)))
+  (assert-true (is-twenty-one '(11 10)))
+  (assert-true (not (is-twenty-one '(3 11 10))))
+  (assert-true (not (is-twenty-one '(10 10)))))
