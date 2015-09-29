@@ -16,7 +16,7 @@
   (assert-equal "Whoa, chill out!" (bob-answer "1, 2, 3 GO!"))
   (assert-equal "Whoa, chill out!" (bob-answer "ZOMBIES ARE COMING!!11!!1!"))
   (assert-equal "Whoa, chill out!" (bob-answer "WHAT THE HELL WERE YOU THINKING?"))
-  (assert-equal "Whatever." (bob-answer "It's OK."))
+  (assert-equal "Whatever." (bob-answer "It is OK."))
   (assert-equal "Whatever." (bob-answer "Ending with ? means a question."))
   (assert-equal "Fine. Be that way!" (bob-answer ""))
   (assert-equal "Fine. Be that way!" (bob-answer "    "))

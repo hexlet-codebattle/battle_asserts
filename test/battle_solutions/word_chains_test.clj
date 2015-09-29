@@ -23,14 +23,14 @@
 
 (deftest test-asserts
   (let [input ["hat" "coat" "dog" "cat" "oat" "cot" "hot" "hog"]]
-    (assert-equal true (word-chains input)))
+    (assert-true (word-chains input)))
   (let [input ["cot" "hot" "bat" "fat"]]
-    (assert-equal false (word-chains input)))
+    (assert-true (not (word-chains input))))
   (let [input ["to" "top" "stop" "tops" "toss"]]
-    (assert-equal false (word-chains input)))
+    (assert-true (not (word-chains input))))
   (let [input ["spout" "do" "pot" "pout" "spot" "dot"]]
-    (assert-equal true (word-chains input)))
+    (assert-true (word-chains input)))
   (let [input ["share" "hares" "shares" "hare" "are"]]
-    (assert-equal true (word-chains input)))
+    (assert-true (word-chains input)))
   (let [input ["share" "hares" "hare" "are"]]
-    (assert-equal false (word-chains input))))
+    (assert-true (not (word-chains input)))))
