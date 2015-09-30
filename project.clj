@@ -11,7 +11,7 @@
                  [org.clojure/tools.namespace "0.2.11"]
                  [me.raynes/fs "1.4.6"]
                  [circleci/clj-yaml "0.5.3"]
-                 [multicode "0.1.0-SNAPSHOT"]]
+                 [multicode "0.1.1-SNAPSHOT"]]
   :source-paths ["src"]
   :eval-in :nrepl
   :main battle-asserts.core)
