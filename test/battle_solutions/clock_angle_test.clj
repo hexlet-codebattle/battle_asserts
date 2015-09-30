@@ -7,7 +7,7 @@
             (+ (* h 30)
                (* m 0.5)))
           (minutes-angle [m]
-            (* m 6))]
+                         (* m 6))]
     (Math/abs (- (hours-angle h m)
                  (minutes-angle m)))))
 

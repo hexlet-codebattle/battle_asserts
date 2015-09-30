@@ -8,10 +8,10 @@
       (condp = (type v)
         clojure.lang.PersistentArrayMap (merge acc
                                                (build-key-val (map #(assoc % 0 (format "%s[%s]" k (% 0)))
-                                                               v)))
+                                                                   v)))
         clojure.lang.PersistentVector (merge acc
                                              (build-key-val (map-indexed #(vector (format "%s[%d]" k %1) %2)
-                                                                     v)))
+                                                                         v)))
         (assoc acc k v)))]
     (reduce func {} (into [] hash))))
 

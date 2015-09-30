@@ -4,10 +4,10 @@
 
 (defn pt [n]
   (vec (nth
-         (iterate #(concat [1]
-                           (map + % (rest %)) [1])
-                  [1])
-         n)))
+        (iterate #(concat [1]
+                          (map + % (rest %)) [1])
+                 [1])
+        n)))
 
 (deftest test-asserts
   (assert-equal [1] (pt 0))
