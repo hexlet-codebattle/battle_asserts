@@ -1,0 +1,8 @@
+---
+level: elementary
+tags: [string]
+description: |
+  Write function Squish, which replace any sequences of spaces to single space.
+
+multicode_checks:
+  langs: [ruby, javascript, php, python]
