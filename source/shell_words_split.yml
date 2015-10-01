@@ -1,6 +1,0 @@
----
-level: medium
-tags: [string]
-
-multicode_checks:
-  langs: [ruby, javascript, php, python]
