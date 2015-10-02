@@ -1,5 +1,8 @@
-issues:
+issues: clean
 	docker run -v $(CURDIR):/battle_asserts clojure /bin/bash -c 'cd /battle_asserts && lein run'
+
+clean:
+	rm -rf issues/*
 
 generate: format
 	lein run
