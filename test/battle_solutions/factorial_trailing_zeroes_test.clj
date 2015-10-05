@@ -16,4 +16,6 @@
   (assert-equal 0 (trailing-zeroes 0))
   (assert-equal 1 (trailing-zeroes 5))
   (assert-equal 1 (trailing-zeroes 7))
-  (assert-equal 4 (trailing-zeroes 23)))
+  (assert-equal 4 (trailing-zeroes 23))
+  (assert-equal 6 (trailing-zeroes 28))
+  (assert-equal 22 (trailing-zeroes 99)))
