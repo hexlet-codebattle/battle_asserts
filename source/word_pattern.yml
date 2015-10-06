@@ -1,0 +1,13 @@
+---
+level: easy
+tags: [hash_table]
+description: |
+  Given a pattern and a string str, find if str follows the same pattern.
+  Examples
+    pattern = "abba", str = "dog cat cat dog" should return true.
+    pattern = "abba", str = "dog cat cat fish" should return false.
+    pattern = "aaaa", str = "dog cat cat dog" should return false.
+    pattern = "abba", str = "dog dog dog dog" should return false
+
+multicode_checks:
+  langs: [ruby, javascript, php, python]
