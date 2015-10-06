@@ -14,5 +14,5 @@
 
 (deftest test-asserts
   (assert-equal [0] (word-positions "test" "test"))
-  (assert-equal [0 4 9] (word-positions "test test test" "test"))
-  (assert-equal [11] (word-positions "find a word in some sentence" "in")))
+  (assert-equal [0 5 10] (word-positions "test test test" "test"))
+  (assert-equal [12] (word-positions "find a word in some sentence" "in")))
