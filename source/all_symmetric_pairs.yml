@@ -1,5 +1,5 @@
 ---
-level: easy
+level: hard
 tags: [hash_table]
 description: |
   Given an array of pairs, find all symmetric pairs in it
