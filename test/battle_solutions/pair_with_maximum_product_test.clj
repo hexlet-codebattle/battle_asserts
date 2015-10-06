@@ -6,7 +6,9 @@
   (apply * array))
 
 (defn pair-with-max-product [array]
-  (let [sort-array (sort array) two-max (take-last 2 sort-array) two-min (take 2 sort-array)]
+  (let [sort-array (sort array)
+        two-max (take-last 2 sort-array)
+        two-min (take 2 sort-array)]
     (if (>
          (product two-min)
          (product two-max))
