@@ -1,0 +1,9 @@
+---
+level: easy
+tags: []
+description: |
+  Given an unsorted array with repetitions, the task is to group multiple occurrence of individual elements.
+  The grouping should happen in a way that the order of first occurrences of all elements is maintained.
+
+multicode_checks:
+  langs: [ruby, javascript, php, python]
