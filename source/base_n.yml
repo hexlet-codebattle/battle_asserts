@@ -1,0 +1,8 @@
+---
+level: elementary
+tags: [numbers, regexp]
+description: |
+  Check number can be n-nary number (means number in base-n for n < 10)
+
+multicode_checks:
+  langs: [ruby, javascript, php, python]
