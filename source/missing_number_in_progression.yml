@@ -1,0 +1,9 @@
+---
+level: easy
+tags: [arithmetic, array]
+description: |
+  Given an array that represents elements of arithmetic progression in order.
+  One element is missing in the progression, find the missing number.
+
+multicode_checks:
+  langs: [ruby, javascript, php, python]
