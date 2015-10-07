@@ -1,5 +1,5 @@
 ---
-level: elementary
+level: easy
 tags: [string, regexp]
 description: |
   Write function that returns array of all subtexts from text between given patterns.
