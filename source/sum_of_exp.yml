@@ -1,0 +1,8 @@
+---
+level: easy
+tags: [decimal]
+description: |
+  Write function which counts x+xx+xxx... (x times)
+
+multicode_checks:
+  langs: [ruby, javascript, php, python]
