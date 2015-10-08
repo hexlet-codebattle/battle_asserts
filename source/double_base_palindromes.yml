@@ -6,4 +6,4 @@ description: |
   Find n-th palindromic number.
 
 multicode_checks:
-  langs: [ruby, javascript, python, php]
+  langs: [ruby, javascript, python, php, groovy]

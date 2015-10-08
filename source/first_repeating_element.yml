@@ -6,4 +6,4 @@ description: |
   We need to find the element that occurs more than once and whose index of first occurrence is smallest.
 
 multicode_checks:
-  langs: [ruby, python, javascript, php]
+  langs: [ruby, python, javascript, php, groovy]

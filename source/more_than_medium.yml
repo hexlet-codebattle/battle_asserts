@@ -6,4 +6,4 @@ description: |
   which are longer than the average length of all the words.
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

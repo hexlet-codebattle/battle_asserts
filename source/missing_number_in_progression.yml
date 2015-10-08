@@ -6,4 +6,4 @@ description: |
   One element is missing in the progression, find the missing number.
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

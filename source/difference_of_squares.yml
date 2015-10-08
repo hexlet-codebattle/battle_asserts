@@ -11,4 +11,4 @@ description: |
   natural numbers and the square of the sum is 3025 - 385 = 2640."
 
 multicode_checks:
-  langs: [ruby, javascript, python, php]
+  langs: [ruby, javascript, python, php, groovy]

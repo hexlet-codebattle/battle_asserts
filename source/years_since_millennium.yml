@@ -4,4 +4,4 @@ tags: []
 description: |
   "Count how many years have passed since nearest millenium."
 multicode_checks:
-  langs: [ruby, javascript, python, php]
+  langs: [ruby, javascript, python, php, groovy]

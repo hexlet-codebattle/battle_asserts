@@ -6,4 +6,4 @@ description: |
   It may be assumed that the given arrays have no duplicates.
 
 multicode_checks:
-  langs: [ruby, javascript, python, php]
+  langs: [ruby, javascript, python, php, groovy]

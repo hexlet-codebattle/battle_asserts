@@ -6,4 +6,4 @@ description: |
   Have it return the nth item in the Fibonacci sequence.
   Hint: The first item in the sequence is 0."
 multicode_checks:
-  langs: [ruby, javascript, python, php]
+  langs: [ruby, javascript, python, php, groovy]

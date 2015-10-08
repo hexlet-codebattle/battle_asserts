@@ -9,4 +9,4 @@ description: |
   1211 is read off as "one 1, then one 2, then two 1's".
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

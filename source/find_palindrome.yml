@@ -6,4 +6,4 @@ description: |
   Write a method to return the longest palindrome in a given string.
 
 multicode_checks:
-  langs: [ruby, python, javascript, php]
+  langs: [ruby, python, javascript, php, groovy]

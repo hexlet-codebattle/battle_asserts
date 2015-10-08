@@ -9,4 +9,4 @@ description: |
   3. If that total is a multiple of 10, the number is valid.
 
 multicode_checks:
-  langs: [ruby, javascript, python, php]
+  langs: [ruby, javascript, python, php, groovy]

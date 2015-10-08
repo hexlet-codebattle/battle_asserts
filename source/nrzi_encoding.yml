@@ -11,4 +11,4 @@ description: |
    ¯|___|¯¯¯¯¯|___|¯|_|¯
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

@@ -5,4 +5,4 @@ description: |
   Write a method that accepts a hash map and returns the key of element with the minimum value.
 
 multicode_checks:
-  langs: [ruby, javascript, python, php]
+  langs: [ruby, javascript, python, php, groovy]

@@ -13,4 +13,4 @@ description: |
       28 -> AB
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

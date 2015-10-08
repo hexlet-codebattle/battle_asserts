@@ -6,4 +6,4 @@ description: |
   which are evenly divisible by at least one of a and b (second and third argument)
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

@@ -5,4 +5,4 @@ description: |
   Given an array with both +ive and -ive integers, return a pair with highest product.
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

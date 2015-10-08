@@ -4,4 +4,4 @@ tags: []
 description: Find the largest element in the Syracuse sequence.
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

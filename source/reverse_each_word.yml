@@ -3,4 +3,4 @@ level: elementary
 tags: [string]
 
 multicode_checks:
-  langs: [ruby, python, javascript, php]
+  langs: [ruby, python, javascript, php, groovy]
