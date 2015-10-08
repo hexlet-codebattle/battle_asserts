@@ -7,4 +7,4 @@ description: |
   He says 'Fine. Be that way!' if you address him without actually saying anything.
   He answers 'Whatever.' to anything else."
 multicode_checks:
-  langs: [ruby, javascript, python, php]
+  langs: [ruby, javascript, python, php, groovy]

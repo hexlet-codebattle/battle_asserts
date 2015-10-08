@@ -5,4 +5,4 @@ description: |
   Find how many pairs X, Y there are in the array, such that abs(X-Y) is equal to the first argument.
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

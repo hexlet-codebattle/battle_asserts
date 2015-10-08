@@ -6,4 +6,4 @@ description: |
   Brackets can be round: "()", the square: "[]", the curly "{}" and angle: "<>".
 
 multicode_checks:
-  langs: [ruby, javascript, python, php]
+  langs: [ruby, javascript, python, php, groovy]

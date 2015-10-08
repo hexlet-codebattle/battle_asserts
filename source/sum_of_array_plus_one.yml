@@ -6,4 +6,4 @@ description: |
   and returns the sum of the integers after adding 1 to each.
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

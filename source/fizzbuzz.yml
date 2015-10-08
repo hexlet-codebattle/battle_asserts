@@ -7,4 +7,4 @@ description: |
   If a number is divisible by 3 and 5, return "FizzBuzz"
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

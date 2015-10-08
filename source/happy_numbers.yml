@@ -9,4 +9,4 @@ description: |
   Write a function that determines if a number is happy or not.
 
 multicode_checks:
-  langs: [ruby, javascript, python, php]
+  langs: [ruby, javascript, python, php, groovy]

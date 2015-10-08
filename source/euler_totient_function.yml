@@ -6,4 +6,4 @@ description: |
   Euler's totient function f(x) is defined as the number of positive integers less than x which are coprime to x.
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

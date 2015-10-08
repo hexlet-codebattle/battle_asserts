@@ -6,4 +6,4 @@ description: |
   The grouping should happen in a way that the order of first occurrences of all elements is maintained.
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

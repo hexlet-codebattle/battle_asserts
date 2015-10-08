@@ -6,4 +6,4 @@ description: |
   See if you can do it with a regular expression.
 
 multicode_checks:
-  langs: [javascript, ruby, javascript, python, php]
+  langs: [javascript, ruby, javascript, python, php, groovy]

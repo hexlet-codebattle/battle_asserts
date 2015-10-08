@@ -7,4 +7,4 @@ author:
 description: Drop every N'th element from a list.
 
 multicode_checks:
-  langs: [ruby, javascript, python, php]
+  langs: [ruby, javascript, python, php, groovy]

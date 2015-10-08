@@ -6,4 +6,4 @@ description: |
   What is the angle between the hour and minute hand at a given time.
 
 multicode_checks:
-  langs: [ruby, javascript, python, php]
+  langs: [ruby, javascript, python, php, groovy]

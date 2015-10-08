@@ -11,4 +11,4 @@ description: |
   convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

@@ -18,4 +18,4 @@ description: |
   Find the value of d < 100 for which 1/d contains the longest recurring cycle in its decimal fraction part.
 
 multicode_checks:
-  langs: [ruby, javascript, python, php]
+  langs: [ruby, javascript, python, php, groovy]

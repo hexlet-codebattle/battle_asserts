@@ -10,4 +10,4 @@ description: |
     pattern = "abba", str = "dog dog dog dog" should return false
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

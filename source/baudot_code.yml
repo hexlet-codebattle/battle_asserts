@@ -44,4 +44,4 @@ description: |
   o....  T       5
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]

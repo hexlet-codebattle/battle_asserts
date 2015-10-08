@@ -6,4 +6,4 @@ description: |
   We’ll be asked to find the positions of many words in the same file.
 
 multicode_checks:
-  langs: [ruby, python, javascript, php]
+  langs: [ruby, python, javascript, php, groovy]

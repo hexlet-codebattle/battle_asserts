@@ -4,4 +4,4 @@ tags: []
 description: Calculate the Levenshtein distance.
 
 multicode_checks:
-  langs: [ruby, javascript, php, python]
+  langs: [ruby, javascript, php, python, groovy]
