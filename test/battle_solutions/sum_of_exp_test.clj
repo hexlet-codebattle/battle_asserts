@@ -4,8 +4,7 @@
 
 (defn sum-of-exp
   [number]
-  (reduce + (take number (iterate #(+ (* 10 %) number) number)))
-  )
+  (reduce + (take number (iterate #(+ (* 10 %) number) number))))
 
 (deftest test-asserts
   (assert-equal 369 (sum-of-exp 3))
