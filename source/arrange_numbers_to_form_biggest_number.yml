@@ -1,0 +1,8 @@
+---
+level: easy
+tags: [array]
+description: |
+  iven an array of numbers, arrange them in a way that yields the largest value.
+
+multicode_checks:
+  langs: [ruby, javascript, python, php, groovy]
