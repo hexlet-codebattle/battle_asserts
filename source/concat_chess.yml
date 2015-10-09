@@ -1,0 +1,8 @@
+---
+level: easy
+tags: [string]
+description: |
+  Write function that concatenate 2 strings by characters, one by one.
+
+multicode_checks:
+  langs: [ruby, javascript, php, python, groovy]
