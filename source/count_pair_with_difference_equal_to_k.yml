@@ -1,5 +1,5 @@
 ---
-level: easy
+level: medium
 tags: [array]
 description: |
   Given an integer array and a positive integer k, count all distinct pairs with difference equal to k.
