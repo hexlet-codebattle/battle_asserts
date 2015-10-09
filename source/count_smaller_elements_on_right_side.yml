@@ -1,0 +1,8 @@
+---
+level: easy
+tags: []
+description: |
+  Write a function to count number of smaller elements on right of each element in an array.
+
+multicode_checks:
+  langs: [ruby, javascript, php, python, groovy]
