@@ -1,0 +1,8 @@
+---
+level: easy
+tags: [numeric, string]
+description: |
+  Write function that getting 2 strings with time, such as "hh:mm:ss", and returns count of seconds between them.
+
+multicode_checks:
+  langs: [ruby, javascript, php, python, groovy]
