@@ -4,10 +4,9 @@
 
 (defn complete-string [s]
   (= (-> s
-      seq
-      sort
-      clojure.string/join
-      )
+         seq
+         sort
+         clojure.string/join)
      "abcdefghijklmnopqrstuvwxyz"))
 
 (deftest test-asserts
