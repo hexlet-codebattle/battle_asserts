@@ -1,0 +1,9 @@
+---
+level: elementary
+tags: [string]
+description: |
+  Provide the word in the form of an acronym composed of the first letter, the number of letters in the word minus 2 and the last letter of the word.
+  Example: Internationalization => I18n
+
+multicode_checks:
+  langs: [ruby, javascript, python, php, groovy]
