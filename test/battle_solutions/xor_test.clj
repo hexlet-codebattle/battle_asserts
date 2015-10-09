@@ -5,16 +5,16 @@
 (defn new-xor
   [str1 str2]
   (clojure.string/join (map char
-       (map bit-xor
-   (doall
-    (map int
-         (seq str1)))
-   (doall
-    (map int
-         (seq str2)))))))
+                            (map bit-xor
+                                 (doall
+                                  (map int
+                                       (seq str1)))
+                                 (doall
+                                  (map int
+                                       (seq str2)))))))
 
 (deftest test-asserts
   (let [str1 "string1"
-        str2 "string2" ]
+        str2 "string2"]
     (assert-equal str2 (new-xor (new-xor str1 str2) str1))
     (assert-equal "5*" (new-xor "xor" "ME"))))

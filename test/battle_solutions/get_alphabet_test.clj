@@ -12,13 +12,13 @@
 (deftest test-asserts
   (let [input "asfsfdss"
         output "adfs"]
-  (assert-equal output (get-alphabet input)))
+    (assert-equal output (get-alphabet input)))
   (let [input "acgtgcgagtg"
         output "acgt"]
-  (assert-equal output (get-alphabet input)))
+    (assert-equal output (get-alphabet input)))
   (let [input "4123214"
         output "1234"]
-  (assert-equal output (get-alphabet input)))
+    (assert-equal output (get-alphabet input)))
   (let [input "+++[><<]<-."
         output "+-.<>[]"]
-  (assert-equal output (get-alphabet input))))
+    (assert-equal output (get-alphabet input))))
