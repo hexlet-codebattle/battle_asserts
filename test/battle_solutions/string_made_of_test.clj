@@ -8,8 +8,7 @@
          str
          seq
          (map #(m (keyword (str %))))
-         (reduce +)
-    )))
+         (reduce +))))
 
 (deftest test-asserts
   (assert-equal 18 (string-made-of 12134))
