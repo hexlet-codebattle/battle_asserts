@@ -8,10 +8,13 @@
             [lein-cljfmt "0.3.0"]
             [jonase/eastwood "0.2.1"]]
   :dependencies [[org.clojure/clojure "1.7.0"]
+                 [jonase/eastwood "0.2.1" :exclusions  [org.clojure/clojure]]
                  [org.clojure/tools.namespace "0.2.11"]
-                 [me.raynes/fs "1.4.6"]
+                 [org.clojure/data.json "0.2.6"]
+                 [org.clojure/test.check "0.8.2"]
+                 [helpshift/faker "0.2.0"]
                  [circleci/clj-yaml "0.5.3"]
                  [multicode "0.1.1-SNAPSHOT"]]
   :source-paths ["src"]
-  :eval-in :nrepl
+  ; :eval-in :nrepl
   :main battle-asserts.core)
