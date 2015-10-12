@@ -23,7 +23,7 @@
   ;   (if (seq langs)
   ;     (merge issue {:checks (generate-asserts langs test-code)})
   ;     issue))
-  )
+  ; )
 
 (defn generate-asserts
   [data test-code]

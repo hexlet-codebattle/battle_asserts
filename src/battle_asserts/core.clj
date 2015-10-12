@@ -32,9 +32,7 @@
           asserts (generate-asserts generator solution)]
       (with-open [w (io/writer filename)]
         (doall (map #(.write w (str (json/write-str %) "\n"))
-             asserts)))
-      )
-    ))
+                    asserts))))))
 
 (defn -main [& args]
   (let [namespaces (nsf/find-namespaces-in-dir (clojure.java.io/as-file "src/battle_asserts/issues"))]
