@@ -1,6 +1,0 @@
----
-level: medium
-tags: [array, hash]
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]
