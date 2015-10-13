@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.anagram-finder-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.issues.anagram-finder :as issue] ))
+            [battle-asserts.issues.anagram-finder :as issue]))
 
 (deftest test-solution
   (let [input ["meat" "mat" "team" "mate" "eat"]
