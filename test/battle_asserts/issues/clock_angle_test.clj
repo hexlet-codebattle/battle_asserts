@@ -4,7 +4,7 @@
             [clojure.test.check.clojure-test :as ct :include-macros true]
             [battle-asserts.issues.clock-angle :as issue]))
 
-(deftest test-asserts
+(deftest test-solution
   (is (= 0.0 (issue/solution 0 0)))
   (is (= 7.5 (issue/solution 3 15)))
   (is (= 82.5 (issue/solution 0 15)))

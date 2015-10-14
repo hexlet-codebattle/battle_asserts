@@ -4,7 +4,7 @@
             [clojure.test.check.clojure-test :as ct :include-macros true]
             [battle-asserts.issues.domino :as issue]))
 
-(deftest test-asserts
+(deftest test-solution
   (is (= 0  (issue/solution 0)))
   (is (= 3  (issue/solution 1)))
   (is (= 12 (issue/solution 2)))

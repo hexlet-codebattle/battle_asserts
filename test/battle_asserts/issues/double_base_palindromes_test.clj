@@ -4,7 +4,7 @@
             [clojure.test.check.clojure-test :as ct :include-macros true]
             [battle-asserts.issues.double-base-palindromes :as issue]))
 
-(deftest test-asserts
+(deftest test-solution
   (is (= 1 (issue/solution 1)))
   (is (= 5 (issue/solution 3)))
   (is (= 99 (issue/solution 7)))

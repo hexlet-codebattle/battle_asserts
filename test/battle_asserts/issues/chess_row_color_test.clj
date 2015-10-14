@@ -4,7 +4,7 @@
             [clojure.test.check.clojure-test :as ct :include-macros true]
             [battle-asserts.issues.chess-row-color :as issue]))
 
-(deftest test-asserts
+(deftest test-solution
   (is (issue/solution "A" 1))
   (is (issue/solution "H" 8))
   (is (issue/solution "D" 4))

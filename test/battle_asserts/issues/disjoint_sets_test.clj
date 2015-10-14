@@ -4,7 +4,7 @@
             [clojure.test.check.clojure-test :as ct :include-macros true]
             [battle-asserts.issues.disjoint-sets :as issue]))
 
-(deftest test-asserts
+(deftest test-solution
   (is (issue/solution [12 34 11 9 3] [7 2 1 5]))
   (is (not (issue/solution [12 34 11 9 3] [2 1 3 5])))
   (is (issue/solution [15 16 7 2 1] [14 20 8 6 0]))
