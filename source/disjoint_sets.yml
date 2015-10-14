@@ -1,9 +1,0 @@
----
-level: easy
-tags: [numbers]
-description: |
-  Given two sets represented by two arrays, how to check if the given two sets are disjoint or not?
-  It may be assumed that the given arrays have no duplicates.
-
-multicode_checks:
-  langs: [ruby, javascript, python, php, groovy]
