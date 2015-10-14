@@ -4,7 +4,7 @@
             [clojure.test.check.clojure-test :as ct :include-macros true]
             [battle-asserts.issues.counting-array-elements :as issue]))
 
-(deftest test-asserts
+(deftest test-solution
   (let [arr [:cat, :dog, :fish, :fish]]
     (is (= {:cat 1, :dog 1, :fish 2} (issue/solution arr))))
   (let [arr [:Spam, :egg, :Spam, :Spam, :bacon, :Spam]]

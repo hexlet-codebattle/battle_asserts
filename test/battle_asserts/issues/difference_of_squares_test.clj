@@ -4,7 +4,7 @@
             [clojure.test.check.clojure-test :as ct :include-macros true]
             [battle-asserts.issues.difference-of-squares :as issue]))
 
-(deftest test-asserts
+(deftest test-solution
   (is (= 170 (issue/solution 5)))
   (is (= 25164150 (issue/solution 100)))
   (is (= 100100 (issue/solution 25)))

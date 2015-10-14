@@ -4,7 +4,7 @@
             [clojure.test.check.clojure-test :as ct :include-macros true]
             [battle-asserts.issues.concat-chess :as issue]))
 
-(deftest test-asserts
+(deftest test-solution
   (let [str1 "abcd"
         str2 "wxyz"
         output "awbxcydz"]

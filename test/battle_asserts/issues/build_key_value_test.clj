@@ -4,7 +4,7 @@
             [clojure.test.check.clojure-test :as ct :include-macros true]
             [battle-asserts.issues.build-key-value :as issue]))
 
-(deftest test-asserts
+(deftest test-solution
   (let [easy {"a[b]" 3}]
     (is (= easy (issue/solution {"a" {"b" 3}}))))
   (let [medium {"x[0]" "1" "x[1]" "2" "x[2]" "3"}]

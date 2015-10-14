@@ -4,7 +4,7 @@
             [clojure.test.check.clojure-test :as ct :include-macros true]
             [battle-asserts.issues.check-parentheses :as issue]))
 
-(deftest test-asserts
+(deftest test-solution
   (is (issue/solution ""))
   (is (issue/solution " "))
   (is (issue/solution "()"))

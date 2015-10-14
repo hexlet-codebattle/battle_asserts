@@ -4,7 +4,7 @@
             [clojure.test.check.clojure-test :as ct :include-macros true]
             [battle-asserts.issues.count-smaller-elements-on-right-side :as issue]))
 
-(deftest test-asserts
+(deftest test-solution
   (is (= [6 1 1 1 0 1 0] (issue/solution [12 1 2 3 0 11 4])))
   (is (= [4 3 2 1 0] (issue/solution [5 4 3 2 1])))
   (is (= [0 0 0 0 0] (issue/solution [1 2 3 4 5])))
