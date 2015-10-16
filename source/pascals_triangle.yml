@@ -1,7 +1,0 @@
----
-level: medium
-tags: [arithmetic, math]
-description: "Write a method that will return the nth row of Pascal's Triangle."
-
-multicode_checks:
-  langs: [ruby, javascript, python, php, groovy]
