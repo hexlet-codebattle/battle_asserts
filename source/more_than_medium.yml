@@ -1,9 +1,0 @@
----
-level: easy
-tags: [arithmetic, string]
-description: |
-  Write a function that will return the words,
-  which are longer than the average length of all the words.
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]
