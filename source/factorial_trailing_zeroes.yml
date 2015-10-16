@@ -1,8 +1,0 @@
----
-level: easy
-tags: []
-description: |
-  Write function, which return the number of trailing zeroes in n!.
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]
