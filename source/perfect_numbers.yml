@@ -1,7 +1,0 @@
----
-level: medium
-tags: [math]
-description: A number is "perfect" if the sum of its divisors equal the number itself.
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]
