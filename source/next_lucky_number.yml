@@ -1,9 +1,0 @@
----
-level: medium
-tags: [arithmetic, array]
-description: |
-  Lucky numbers are defined as the numbers consisting only of digits 3 and 5.
-  So, given a number N, you have to return the least lucky number strictly greater than N.
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]
