@@ -1,8 +1,0 @@
----
-level: elementary
-tags: [string]
-description: |
-  Write function that returns alphabet of current string as array of characters.
-
-multicode_checks:
-  langs: [ruby, javascript, php, python]
