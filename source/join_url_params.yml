@@ -1,6 +1,0 @@
----
-level: easy
-tags: [hash, string]
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]
