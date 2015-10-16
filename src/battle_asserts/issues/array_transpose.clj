@@ -12,9 +12,8 @@
                  3) write the columns of the original matrix as rows of the new one.")
 
 (defn arguments-generator []
-  (gen/tuple (gen/such-that #(apply = (map count %))
-                            (gen/vector (gen/vector gen/int 2 3) 2 5)
-                            50)))
+  (gen/tuple (gen/bind (gen/choose 2 5)
+                       #(gen/vector (gen/vector gen/int %)))))
 
 (defn solution [vectors]
   (if (not-empty vectors)
