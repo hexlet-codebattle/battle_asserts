@@ -20,6 +20,12 @@
   ; (1 .. 27) ~ (A .. AA),  (27 .. 703) ~ (AA .. AAA), (703 .. 30000) ~ (AAA .. ARIV)
   (gen/tuple (gen/one-of [(gen/choose 1 27) (gen/choose 27 703) (gen/choose 703 30000)])))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [num]
   (if (zero? num)
     ""

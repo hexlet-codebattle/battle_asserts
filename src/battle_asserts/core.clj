@@ -17,18 +17,30 @@
 (defn generate-issues
   [issue-ns-name]
   (require [issue-ns-name])
-  (let [issue-name (last (s/split (str issue-ns-name) #"\."))]
-
+  ; (print issue-ns-name)
+  (let [issue-name (last (s/split (str issue-ns-name) #"\."))
+        generator ((ns-resolve issue-ns-name 'arguments-generator))
+        solution (ns-resolve issue-ns-name 'solution)
+        sample (first @(ns-resolve issue-ns-name 'test-data))]
+    ; (print sample)
     (let [filename (str "issues/" issue-name ".yml")
+          arguments (s/join ", " (:arguments sample))
+          expected (:expected sample)
+          description @(ns-resolve issue-ns-name 'description)
           metadata {:level @(ns-resolve issue-ns-name 'level)
-                    :description (str @(ns-resolve issue-ns-name 'description))}
-          yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})
-          result-file filename]
-      (spit result-file yaml))
+                    :description (str description
+                                      "\n\n"
+                                      "Example for 'expected == solution(arguments)'"
+                                      "\n"
+                                      "arguments " arguments
+                                      "\n"
+                                      "expected " expected
+                                      )}
+          yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})]
+      ; (print yaml)
+      (spit filename yaml))
 
     (let [filename (str "issues/" issue-name ".jsons")
-          generator ((ns-resolve issue-ns-name 'arguments-generator))
-          solution (ns-resolve issue-ns-name 'solution)
           asserts (generate-asserts generator solution)]
       (with-open [w (io/writer filename)]
         (doall (map #(.write w (str (json/write-str %) "\n"))

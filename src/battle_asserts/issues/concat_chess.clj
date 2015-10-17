@@ -11,6 +11,12 @@
     (gen/tuple (gen/elements words)
                (gen/elements words))))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [str1 str2]
   (let [s1 (seq str1)
         s2 (seq str2)

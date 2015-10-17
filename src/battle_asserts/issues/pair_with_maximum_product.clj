@@ -9,6 +9,12 @@
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int 2 25)))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn product [array]
   (apply * array))
 

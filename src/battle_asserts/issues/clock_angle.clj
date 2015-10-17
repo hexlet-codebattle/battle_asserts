@@ -10,6 +10,12 @@
 (defn arguments-generator []
   (gen/tuple (gen/choose 0 11) (gen/choose 0 59)))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [h m]
   (letfn [(hours-angle [h m]
             (+ (* h 30)

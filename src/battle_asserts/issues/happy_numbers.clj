@@ -15,6 +15,12 @@
     (gen/tuple (gen/one-of [(gen/choose 0 1000)
                             (gen/elements happy-numbers)]))))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [n]
   (loop [n n, seen #{}]
     (cond

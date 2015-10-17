@@ -12,6 +12,12 @@
               (apply str (repeatedly 4 #(rand-nth brackets))))]
       (gen/tuple (gen/elements (repeatedly 20 permutation))))))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [s]
   (let [opening (set "(")
         closing (set ")")]

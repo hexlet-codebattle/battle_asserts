@@ -15,6 +15,12 @@
     (gen/one-of [(gen/tuple gen/pos-int (gen/vector gen/int))
                  (atleast-one-pair)])))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [differ, nums]
   (->>
    nums

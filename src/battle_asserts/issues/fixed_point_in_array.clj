@@ -16,6 +16,12 @@
     (gen/tuple (gen/one-of [(gen/vector gen/int)
                             (gen/bind (gen/vector gen/int) inject-fixed-point)]))))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [array]
   (or
    (->>

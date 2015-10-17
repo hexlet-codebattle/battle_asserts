@@ -11,6 +11,12 @@
     (gen/tuple (gen/one-of [(gen/choose 0 30000)
                             (gen/elements power-of-two)]))))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [n]
   (and (not (zero? n))
        (zero? (bit-and n (dec n)))))

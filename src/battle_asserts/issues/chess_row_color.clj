@@ -9,6 +9,12 @@
 (defn arguments-generator []
   (gen/tuple (gen/elements ["A" "B" "C" "D" "E" "F" "G" "H"]) (gen/elements (range 1 9))))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [letter num]
   (let [letter-nums (zipmap ["A" "B" "C" "D" "E" "F" "G" "H"]
                             (range 1 9))]

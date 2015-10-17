@@ -10,6 +10,12 @@
 (defn arguments-generator []
   (gen/tuple gen/pos-int))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [num]
   (let [prime-factors (filter #(= 0 (rem num %))
                               (take-while (partial > (/ (+ 1 num) 2))

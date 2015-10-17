@@ -10,6 +10,12 @@
 (defn arguments-generator []
   (gen/tuple (gen/choose 0 30)))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [n]
   (reduce + (map #(Character/digit % 10)
                  (str (apply * (repeat n 2))))))

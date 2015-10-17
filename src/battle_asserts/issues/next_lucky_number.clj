@@ -10,6 +10,12 @@
 (defn arguments-generator []
   (gen/tuple (gen/choose 0 100)))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn prev-digits [prev-digits owerflow]
   (if (zero? owerflow)
     prev-digits

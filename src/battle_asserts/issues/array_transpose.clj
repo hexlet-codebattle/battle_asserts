@@ -15,6 +15,12 @@
   (gen/tuple (gen/bind (gen/choose 2 5)
                        #(gen/vector (gen/vector gen/int %)))))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [vectors]
   (if (not-empty vectors)
     (apply mapv vector vectors)

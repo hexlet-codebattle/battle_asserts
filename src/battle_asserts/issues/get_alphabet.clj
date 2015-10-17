@@ -10,6 +10,12 @@
   (let [sentences (repeatedly 50 faker/sentence)]
     (gen/tuple (gen/elements sentences))))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [string]
   (-> string
       seq

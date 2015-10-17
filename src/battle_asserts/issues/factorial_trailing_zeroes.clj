@@ -9,6 +9,12 @@
 (defn arguments-generator []
   (gen/tuple (gen/choose 0 90)))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn factorial [n]
   (apply *' (range 1 (+ n 1))))
 

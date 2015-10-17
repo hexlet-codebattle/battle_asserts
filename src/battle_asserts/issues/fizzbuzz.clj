@@ -15,6 +15,12 @@
     (gen/tuple (gen/one-of [gen/int
                             (gen/elements divisible)]))))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [number]
   (str
    (when (= (mod number 3) 0) "Fizz")

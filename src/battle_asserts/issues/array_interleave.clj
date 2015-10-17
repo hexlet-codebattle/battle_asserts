@@ -12,6 +12,12 @@
 (defn arguments-generator []
   (gen/tuple (gen/list gen/int) (gen/list gen/int)))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [array-first array-second]
   (->>
    array-first

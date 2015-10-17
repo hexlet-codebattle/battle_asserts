@@ -20,6 +20,12 @@
               (apply str (repeatedly length #(rand-nth letters))))]
       (gen/tuple (gen/bind (gen/choose 1 4) #(gen/return (permutation %)))))))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn pow [base exp]
   (apply * (repeat exp base)))
 

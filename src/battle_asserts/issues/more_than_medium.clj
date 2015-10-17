@@ -11,6 +11,12 @@
   (let [sentences (repeatedly 30 #(faker/sentence {:words-range [1 10]}))]
     (gen/tuple (gen/elements sentences))))
 
+(def test-data
+   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
+     :expected [["mate" "meat" "team"]]}
+    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+
 (defn solution [string]
   (let [words (re-seq #"\w+" string)
         average (/ (reduce + (map #(count %)
