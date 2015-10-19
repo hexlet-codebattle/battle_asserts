@@ -11,10 +11,14 @@
   (gen/tuple gen/pos-int))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected 1
+    :arguments [1]}
+   {:expected 4
+    :arguments [10]}
+   {:expected 16
+    :arguments [40]}
+   {:expected 60
+    :arguments [99]}])
 
 (defn solution [num]
   (let [prime-factors (filter #(= 0 (rem num %))

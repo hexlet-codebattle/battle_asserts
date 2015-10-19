@@ -12,10 +12,14 @@
   (gen/tuple (gen/vector gen/int)))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected [5 25 25 -1]
+    :arguments [[4 5 2 25]]}
+   {:expected [-1 12 12 -1]
+    :arguments [[13 7 6 12]]}
+   {:expected [6 8 12 5 5 12 -1 9 -1]
+    :arguments [[3 6 8 2 1 5 12 4 9]]}
+   {:expected [4 2 4 -1]
+    :arguments [[3 1 2 4]]}])
 
 (defn max-than [value in]
   (first (filter #(< value %) in)))

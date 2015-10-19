@@ -20,10 +20,14 @@
                                       (gen/one-of [gen/boolean gen/int]))])))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected {"a[b]" 3}
+    :arguments [{"a" {"b" 3}}]}
+   {:expected {"x[0]" "1" "x[1]" "2" "x[2]" "3"}
+    :arguments [{"x" ["1" "2" "3"]}]}
+   {:expected {"a[d][0]" 1 "a[d][1]" 2}
+    :arguments [{"a" {"d" [1 2]}}]}
+   {:expected {"a[b]" 3 "a[c]" 2 "a[d][0]" 1 "a[d][1]" 2 "x[0]" "1" "x[1]" "2" "x[2]" "3"}
+    :arguments [{"a" {"b" 3 "c" 2 "d" [1 2]} "x" ["1" "2" "3"]}]}])
 
 (defn solution [hash]
   (letfn

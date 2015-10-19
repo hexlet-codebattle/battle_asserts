@@ -12,10 +12,12 @@
     (gen/tuple (gen/elements sentences))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected ["This" "sample" "string"]
+    :arguments ["This is a sample string"]}
+   {:expected ["another" "sample"]
+    :arguments ["Some another sample"]}
+   {:expected []
+    :arguments ["Do, do, do, do... do it!"]}])
 
 (defn solution [string]
   (let [words (re-seq #"\w+" string)

@@ -9,7 +9,7 @@
 
 (defn arguments-generator []
   (letfn [(repeat-rand [value]
-            (repeat (first (gen/sample (gen/choose 1 5)))
+            (repeat (inc (rand-int 5))
                     value))
           (add-repetition [coll]
                           (reduce #(concat %1 (repeat-rand %2)) [] coll))]
@@ -17,13 +17,14 @@
                          #(gen/shuffle (add-repetition %))))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected [5 5 3 3 3 1]
+    :arguments [[5 3 5 1 3 3]]}
+   {:expected [4 4 4 6 6 9 9 2 3 10]
+    :arguments [[4 6 9 2 3 4 9 6 10 4]]}
+   {:expected [10 10 10 5 3 3 4 1]
+    :arguments [[10 5 3 10 10 4 1 3]]}])
 
 (defn solution [array]
-  (->>
-   array
-   (reduce #(assoc %1 %2 (inc (get %1 %2 0))) {})
-   (reduce #(concat %1 (repeat (last %2) (first %2))) [])))
+  (let [element-occurrence (reduce #(assoc %1 %2 (inc (get %1 %2 0))) {} array)]
+    (reduce #(concat %1 (repeat (get element-occurrence %2) %2)) [] array)))
+

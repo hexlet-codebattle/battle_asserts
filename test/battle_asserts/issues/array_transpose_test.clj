@@ -2,9 +2,13 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.array-transpose :as issue]))
 
-(deftest test-solution
-  (is (= [[1 :a] [2 :b] [3 :c]] (issue/solution [[1 2 3] [:a :b :c]])))
-  (is (= [[1 3 5] [2 4 6]] (issue/solution [[1 2] [3 4] [5 6]])))
-  (is (= [] (issue/solution []))))
+(ct/defspec test-solution
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (= (count (apply issue/solution v))
+                   (count (ffirst v)))))
+
+(h/generate-tests issue/test-data issue/solution)

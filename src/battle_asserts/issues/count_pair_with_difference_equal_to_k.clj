@@ -10,10 +10,14 @@
   (gen/tuple (gen/vector gen/int) gen/pos-int))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected 2
+    :arguments [[1 5 3 4 2] 3]}
+   {:expected 5
+    :arguments [[8 12 16 4 0 20] 4]}
+   {:expected 7
+    :arguments [[1 4 3 0 2 5 7 8 9 6] 3]}
+   {:expected 3
+    :arguments [[1 2 3 4 4 2 2 1] 0]}])
 
 (defn make-pair [value array]
   (into []

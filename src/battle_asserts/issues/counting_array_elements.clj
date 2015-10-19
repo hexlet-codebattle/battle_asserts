@@ -11,10 +11,10 @@
     (gen/tuple (gen/vector (gen/elements words)))))
 
 (def test-data
-   [{:argumetns [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected {:cat 1, :dog 1, :fish 2}
+    :arguments [[:cat, :dog, :fish, :fish]]}
+   {:expected {:bacon 1, :egg 1, :Spam 4}
+    :arguments [[:Spam, :egg, :Spam, :Spam, :bacon, :Spam]]}])
 
 (defn solution [arr]
   (reduce #(update-in %1 [%2] (fnil inc 0)) {} arr))

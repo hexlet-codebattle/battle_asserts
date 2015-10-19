@@ -12,10 +12,14 @@
                (gen/elements words))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected "awbxcydz"
+    :arguments ["abcd" "wxyz"]}
+   {:expected "axbyczd"
+    :arguments ["abcd" "xyz"]}
+   {:expected "wdoorudbleword"
+    :arguments ["word" "doubleword"]}
+   {:expected "abcdefgh"
+    :arguments ["aceg" "bdfh"]}])
 
 (defn solution [str1 str2]
   (let [s1 (seq str1)

@@ -13,10 +13,14 @@
 ; (gen/sample (arguments-generator) 1)
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected [1 2 {:a "b"}]
+    :arguments [[1 [2 [{:a "b"}]]]]}
+   {:expected [1 2 3 4 5 6 7 8]
+    :arguments [[1 [2 3 [4 5 [6 7]]] 8]]}
+   {:expected []
+    :arguments [[]]}
+   {:expected [1 2 3 4]
+    :arguments [[[1 2] [3 4]]]}])
 
 (defn solution
   [x]

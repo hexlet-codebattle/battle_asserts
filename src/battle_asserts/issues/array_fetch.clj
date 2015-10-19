@@ -13,10 +13,10 @@
              gen/int))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected \b :arguments [[\a \b \c] 1 \d]}
+   {:expected \d :arguments [[\a \b \c] 5 \d]}
+   {:expected \c :arguments [[\a \b \c] -1 \d]}
+   {:expected \d :arguments [[\a \b \c] -5 \d]}])
 
 ; (gen/sample (arguments-generator) 5)
 

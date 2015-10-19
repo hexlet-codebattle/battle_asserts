@@ -10,10 +10,14 @@
   (gen/tuple (gen/not-empty (gen/vector (gen/choose 0 547) 2 8))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:arguments [[1 2 3 4 5 6]]
+    :expected 654321}
+   {:arguments [[54 546 548 60]]
+    :expected 605485465}
+   {:arguments [[1 34 3 98 9 76 45 4]]
+    :expected 998764543431}
+   {:arguments [[43 44 12 324 90 9 88 89]]
+    :expected 9908988444332412}])
 
 (defn my-comparator [val1 val2]
   (compare (Integer. (str val2 val1))

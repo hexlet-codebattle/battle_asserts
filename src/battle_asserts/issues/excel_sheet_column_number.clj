@@ -21,10 +21,16 @@
       (gen/tuple (gen/bind (gen/choose 1 4) #(gen/return (permutation %)))))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected 1
+    :arguments ["A"]}
+   {:expected 26
+    :arguments ["Z"]}
+   {:expected 666
+    :arguments ["YP"]}
+   {:expected 2458
+    :arguments ["CPN"]}
+   {:expected 24568
+    :arguments ["AJHX"]}])
 
 (defn pow [base exp]
   (apply * (repeat exp base)))

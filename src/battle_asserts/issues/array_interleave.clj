@@ -13,10 +13,16 @@
   (gen/tuple (gen/list gen/int) (gen/list gen/int)))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected [1 2 3 4 5 6]
+    :arguments [[1 3 5] [2 4 6]]}
+   {:expected [1 2 3 4 5]
+    :arguments [[1 3 5] [2 4]]}
+   {:expected [1 "2" 3 "4" 5]
+    :arguments [[1 3 5] ["2" "4"]]}
+   {:expected [2 4 6]
+    :arguments [[] [2 4 6]]}
+   {:expected [1 3 5]
+    :arguments [[1 3 5]]}])
 
 (defn solution [array-first array-second]
   (->>
@@ -25,4 +31,3 @@
    flatten
    (filter #(not (nil? %)))
    (take (* 2 (min (count array-first) (count array-second))))))
-

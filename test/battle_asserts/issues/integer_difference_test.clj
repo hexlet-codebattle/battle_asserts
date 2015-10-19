@@ -2,8 +2,12 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.integer-difference :as issue]))
 
-(deftest test-solution
-  (is (= 3 (issue/solution 4 [1 1 5 6 9 16 27])))
-  (is (= 4 (issue/solution 2 [1 1 3 3]))))
+(ct/defspec test-solution
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (instance? Number (apply issue/solution v))))
+
+(h/generate-tests issue/test-data issue/solution)

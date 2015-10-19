@@ -16,10 +16,14 @@
                             (gen/elements divisible)]))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected "Fizz"
+    :arguments [3]}
+   {:expected "Buzz"
+    :arguments [50]}
+   {:expected "FizzBuzz"
+    :arguments [150]}
+   {:expected "FizzBuzz"
+    :arguments [5175]}])
 
 (defn solution [number]
   (str

@@ -2,11 +2,12 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.clock-angle :as issue]))
 
-(deftest test-solution
-  (is (= 0.0 (issue/solution 0 0)))
-  (is (= 7.5 (issue/solution 3 15)))
-  (is (= 82.5 (issue/solution 0 15)))
-  (is (= 275.0 (issue/solution 0 50)))
-  (is (= 157.5 (issue/solution 3 45))))
+(ct/defspec test-solution
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (instance? Double (apply issue/solution v))))
+
+(h/generate-tests issue/test-data issue/solution)

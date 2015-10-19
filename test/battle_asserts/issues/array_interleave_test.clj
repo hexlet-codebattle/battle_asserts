@@ -2,6 +2,7 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.array-interleave :as issue]))
 
 (ct/defspec test-solution
@@ -9,3 +10,5 @@
   (prop/for-all [v (issue/arguments-generator)]
                 (= (apply issue/solution v)
                    (apply interleave v))))
+
+(h/generate-tests issue/test-data issue/solution)

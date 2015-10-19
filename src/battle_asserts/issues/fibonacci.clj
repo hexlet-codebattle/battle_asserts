@@ -12,10 +12,16 @@
   (gen/tuple (gen/choose 0 20)))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected 0
+    :arguments [0]}
+   {:expected 1
+    :arguments [1]}
+   {:expected 3
+    :arguments [4]}
+   {:expected 13
+    :arguments [7]}
+   {:expected 55
+    :arguments [10]}])
 
 (defn solution [number]
   (condp = number

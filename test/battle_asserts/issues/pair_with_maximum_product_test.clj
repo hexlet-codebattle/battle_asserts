@@ -2,9 +2,13 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.pair-with-maximum-product :as issue]))
 
-(deftest test-solution
-  (is (= [6 7] (issue/solution [1 4 3 6 7 0])))
-  (is (= [-5 -4] (issue/solution [-1 -3 -4 2 0 -5])))
-  (is (= [3 4] (issue/solution [-1 -2 -4 -3 0 4 3 2 1]))))
+(ct/defspec test-solution
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (= (count (apply issue/solution v))
+                   2)))
+
+(h/generate-tests issue/test-data issue/solution)

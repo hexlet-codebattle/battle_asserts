@@ -2,10 +2,12 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.difference-of-squares :as issue]))
 
-(deftest test-solution
-  (is (= 170 (issue/solution 5)))
-  (is (= 25164150 (issue/solution 100)))
-  (is (= 100100 (issue/solution 25)))
-  (is (= 0 (issue/solution 1))))
+(ct/defspec test-solution
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (instance? Long (apply issue/solution v))))
+
+(h/generate-tests issue/test-data issue/solution)

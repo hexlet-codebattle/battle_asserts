@@ -2,9 +2,14 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.build-hash-with-default :as issue]))
 
-(deftest test-solution
-  (is (= {:draft 0 :completed 0} (issue/solution [:draft :completed] 0)))
-  (is (= {:one 4 :two 4} (issue/solution [:one :two] 4)))
-  (is (= {:one 3 :two 3 :three 3} (issue/solution [:one :two :three] 3))))
+(ct/defspec test-solution
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (let [default-value (second v)]
+                  (every? #(= % default-value)
+                          (vals (apply issue/solution v))))))
+
+(h/generate-tests issue/test-data issue/solution)
