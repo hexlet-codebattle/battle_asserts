@@ -3,7 +3,7 @@
 
 (def level :medium)
 
-(def description "ha ha")
+(def description "#FIXME")
 
 (defn arguments-generator
   []

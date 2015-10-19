@@ -5,14 +5,7 @@
 (def level :easy)
 
 (def description "Given a positive integer, return its corresponding column title as appear in an Excel sheet.
-                 For example:\n
-                 1 -> A\n
-                 2 -> B\n
-                 3 -> C\n
-                 ...\n
-                 26 -> Z\n
-                 27 -> AA\n
-                 28 -> AB")
+                 For example: 1 -> A, 2 -> B, 3 -> C, ..., 26 -> Z, 27 -> AA, 28 -> AB")
 
 (defn arguments-generator []
   ;NOTE используем (gen/one-of [(gen/choose ...) ...] для более равномерного распределения значений

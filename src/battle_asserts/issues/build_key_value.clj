@@ -4,10 +4,7 @@
 
 (def level :medium)
 
-(def description "Write function, which flatten given hash.
-                 Example:
-                 Input: { \"x\" => [1, 2, 3]}
-                 Output: {\"x[0]\" => l, \"x[1]\" => 2,  \"x[2]\" => 3}")
+(def description "Write function, which flatten given hash.")
 
 (defn arguments-generator []
   (let [word-generator (gen/elements (faker/words {:lang :en :n 30}))]
@@ -20,10 +17,11 @@
                                       (gen/one-of [gen/boolean gen/int]))])))))
 
 (def test-data
-  [{:expected {"a[b]" 3}
-    :arguments [{"a" {"b" 3}}]}
+  [
    {:expected {"x[0]" "1" "x[1]" "2" "x[2]" "3"}
     :arguments [{"x" ["1" "2" "3"]}]}
+   {:expected {"a[b]" 3}
+    :arguments [{"a" {"b" 3}}]}
    {:expected {"a[d][0]" 1 "a[d][1]" 2}
     :arguments [{"a" {"d" [1 2]}}]}
    {:expected {"a[b]" 3 "a[c]" 2 "a[d][0]" 1 "a[d][1]" 2 "x[0]" "1" "x[1]" "2" "x[2]" "3"}

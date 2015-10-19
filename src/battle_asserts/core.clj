@@ -30,11 +30,7 @@
           metadata {:level @(ns-resolve issue-ns-name 'level)
                     :description (str description
                                       "\n\n"
-                                      "Example for 'expected == solution(arguments)'"
-                                      "\n"
-                                      "arguments " arguments
-                                      "\n"
-                                      "expected " expected)}
+                                      "Example: `" expected " == solution(" arguments ")`")}
           yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})]
       ; (print yaml)
       (spit filename yaml))

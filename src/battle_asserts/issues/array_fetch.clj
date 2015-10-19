@@ -4,7 +4,7 @@
 
 (def level :elementary)
 
-(def description "ehu nana")
+(def description "#FIXME")
 
 (defn arguments-generator
   []
