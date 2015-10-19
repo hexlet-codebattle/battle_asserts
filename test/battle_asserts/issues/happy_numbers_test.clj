@@ -2,10 +2,12 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.happy-numbers :as issue]))
 
-(deftest test-solution
-  (is (issue/solution 7))
-  (is (issue/solution 986543210))
-  (is (not (issue/solution 2)))
-  (is (not (issue/solution 189))))
+(ct/defspec test-solution
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (instance? Boolean (apply issue/solution v))))
+
+(h/generate-tests issue/test-data issue/solution)

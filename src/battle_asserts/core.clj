@@ -34,8 +34,7 @@
                                       "\n"
                                       "arguments " arguments
                                       "\n"
-                                      "expected " expected
-                                      )}
+                                      "expected " expected)}
           yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})]
       ; (print yaml)
       (spit filename yaml))

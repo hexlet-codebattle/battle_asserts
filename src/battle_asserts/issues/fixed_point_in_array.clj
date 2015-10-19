@@ -17,10 +17,14 @@
                             (gen/bind (gen/vector gen/int) inject-fixed-point)]))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected 3
+    :arguments [[-10, -5, 0, 3, 7]]}
+   {:expected 0
+    :arguments [[0, 2, 5, 8, 17]]}
+   {:expected -1
+    :arguments [[-10, -5, 3, 4, 7, 9]]}
+   {:expected 3
+    :arguments [[-3 -2 -1 3 4 7 8]]}])
 
 (defn solution [array]
   (or

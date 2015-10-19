@@ -10,10 +10,12 @@
   (gen/tuple (gen/vector gen/int 2 25)))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected [6 7]
+    :arguments [[1 4 3 6 7 0]]}
+   {:expected [-5 -4]
+    :arguments [[-1 -3 -4 2 0 -5]]}
+   {:expected [3 4]
+    :arguments [[-1 -2 -4 -3 0 4 3 2 1]]}])
 
 (defn product [array]
   (apply * array))

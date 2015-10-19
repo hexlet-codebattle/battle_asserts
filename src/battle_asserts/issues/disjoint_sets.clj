@@ -12,10 +12,14 @@
   (gen/tuple (gen/vector gen/int) (gen/vector gen/int)))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected true
+    :arguments [[12 34 11 9 3] [7 2 1 5]]}
+   {:expected false
+    :arguments [[12 34 11 9 3] [2 1 3 5]]}
+   {:expected true
+    :arguments [[15 16 7 2 1] [14 20 8 6 0]]}
+   {:expected false
+    :arguments [[1 2 4 5 8 9] [2 1 3 5 9]]}])
 
 (defn solution [first-set second-set]
   (empty? (s/intersection (set first-set)

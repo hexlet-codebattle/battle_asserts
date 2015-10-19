@@ -2,10 +2,12 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.largest-pair-sum-in-array :as issue]))
 
-(deftest test-solution
-  (is (= 11 (issue/solution [1 2 3 4 5 6])))
-  (is (= 74 (issue/solution [12 34 10 6 40])))
-  (is (= 80 (issue/solution [12 40 10 6 40])))
-  (is (= 52 (issue/solution [12 -34 10 6 40]))))
+(ct/defspec test-solution
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (instance? Long (apply issue/solution v))))
+
+(h/generate-tests issue/test-data issue/solution)

@@ -16,10 +16,12 @@
                        #(gen/vector (gen/vector gen/int %)))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected [[1 :a] [2 :b] [3 :c]]
+    :arguments [[[1 2 3] [:a :b :c]]]}
+   {:expected [[1 3 5] [2 4 6]]
+    :arguments [[[1 2] [3 4] [5 6]]]}
+   {:expected []
+    :arguments [[]]}])
 
 (defn solution [vectors]
   (if (not-empty vectors)

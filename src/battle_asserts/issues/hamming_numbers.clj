@@ -9,13 +9,17 @@
                  Generate n-th number.")
 
 (defn arguments-generator []
-  (gen/tuple gen/pos-int))
+  (gen/tuple (gen/choose 1 1000)))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected 5
+    :arguments [5]}
+   {:expected 36
+    :arguments [20]}
+   {:expected 937500
+    :arguments [500]}
+   {:expected 51200000
+    :arguments [1000]}])
 
 (defn solution [num]
   (letfn [(hammings [initial-set]

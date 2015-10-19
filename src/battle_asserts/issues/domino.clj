@@ -12,10 +12,14 @@
   (gen/tuple gen/pos-int))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected 0
+    :arguments [0]}
+   {:expected 3
+    :arguments [1]}
+   {:expected 12
+    :arguments [2]}
+   {:expected 30
+    :arguments [3]}])
 
 (defn solution [x]
   (letfn [(rat [x]
@@ -24,3 +28,4 @@
     (->> (range (+ x 1))
          (map #(rat %))
          (reduce +))))
+

@@ -13,10 +13,14 @@
   (gen/tuple (gen/vector gen/int)))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected [17 5 2]
+    :arguments [[16 17 4 3 5 2]]}
+   {:expected [67 45 35 8]
+    :arguments [[4 3 7 12 6 67 5 45 34 35 2 8]]}
+   {:expected [12 8 7 6]
+    :arguments [[12 10 12 8 7 6]]}
+   {:expected [5 4]
+    :arguments [[1 2 3 4 5 4]]}])
 
 (defn first-is-biggest [[head & tail]]
   (every? #(> head %) tail))

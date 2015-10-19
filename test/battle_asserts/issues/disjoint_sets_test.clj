@@ -2,10 +2,12 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.disjoint-sets :as issue]))
 
-(deftest test-solution
-  (is (issue/solution [12 34 11 9 3] [7 2 1 5]))
-  (is (not (issue/solution [12 34 11 9 3] [2 1 3 5])))
-  (is (issue/solution [15 16 7 2 1] [14 20 8 6 0]))
-  (is (not (issue/solution [1 2 4 5 8 9] [2 1 3 5 9]))))
+(ct/defspec test-solution
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (instance? Boolean (apply issue/solution v))))
+
+(h/generate-tests issue/test-data issue/solution)

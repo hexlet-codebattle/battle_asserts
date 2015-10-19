@@ -2,10 +2,12 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.euler-totient-function :as issue]))
 
-(deftest test-solution
-  (is (= 1 (issue/solution 1)))
-  (is (= 4 (issue/solution 10)))
-  (is (= 16 (issue/solution 40)))
-  (is (= 60 (issue/solution 99))))
+(ct/defspec test-solution
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (instance? Number (apply issue/solution v))))
+
+(h/generate-tests issue/test-data issue/solution)

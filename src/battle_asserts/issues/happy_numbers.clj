@@ -16,10 +16,14 @@
                             (gen/elements happy-numbers)]))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected true
+    :arguments [7]}
+   {:expected true
+    :arguments [986543210]}
+   {:expected false
+    :arguments [2]}
+   {:expected false
+    :arguments [189]}])
 
 (defn solution [n]
   (loop [n n, seen #{}]

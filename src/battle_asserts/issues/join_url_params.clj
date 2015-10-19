@@ -18,10 +18,15 @@
                                                    gen/int])))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected "http://www.foobar.com?first_param=123&second_param=456&third_param=678"
+    :arguments ["http://www.foobar.com"
+                {:first_param 123
+                 :second_param 456
+                 :third_param 678}]}
+   {:expected "http://www.example.com/search?q=findme&useragent=chrome"
+    :arguments ["http://www.example.com/search"
+                {:q "findme"
+                 :useragent "chrome"}]}])
 
 (defn solution [url params]
   (let [ordered-params (into (sorted-map) params)]

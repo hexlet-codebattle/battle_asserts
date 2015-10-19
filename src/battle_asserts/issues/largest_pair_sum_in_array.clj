@@ -11,10 +11,14 @@
   (gen/tuple (gen/vector gen/int)))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected 11
+    :arguments [[1 2 3 4 5 6]]}
+   {:expected 74
+    :arguments [[12 34 10 6 40]]}
+   {:expected 80
+    :arguments [[12 40 10 6 40]]}
+   {:expected 52
+    :arguments [[12 -34 10 6 40]]}])
 
 (defn solution [array]
   (apply + (take-last 2 (sort array))))

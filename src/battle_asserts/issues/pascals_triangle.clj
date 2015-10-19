@@ -10,10 +10,16 @@
   (gen/tuple gen/pos-int))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected [1]
+    :arguments [0]}
+   {:expected [1 1]
+    :arguments [1]}
+   {:expected [1 2 1]
+    :arguments [2]}
+   {:expected [1 3 3 1]
+    :arguments [3]}
+   {:expected [1 4 6 4 1]
+    :arguments [4]}])
 
 (defn solution [n]
   (vec (nth
@@ -21,3 +27,4 @@
                           (map + % (rest %)) [1])
                  [1])
         n)))
+

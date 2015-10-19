@@ -12,10 +12,22 @@
                             (gen/elements power-of-two)]))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected true
+    :arguments [16]}
+   {:expected false
+    :arguments [20]}
+   {:expected true
+    :arguments [1]}
+   {:expected false
+    :arguments [258]}
+   {:expected true
+    :arguments [512]}
+   {:expected false
+    :arguments [513]}
+   {:expected true
+    :arguments [1024]}
+   {:expected false
+    :arguments [0]}])
 
 (defn solution [n]
   (and (not (zero? n))

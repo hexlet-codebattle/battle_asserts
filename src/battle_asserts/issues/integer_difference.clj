@@ -11,15 +11,15 @@
             (gen/bind (gen/vector gen/int 2 8)
                       #(gen/tuple (gen/return (Math/abs (- (first %)
                                                            (last %))))
-                                  (gen/return %))))]
+                                  (gen/shuffle %))))]
     (gen/one-of [(gen/tuple gen/pos-int (gen/vector gen/int))
                  (atleast-one-pair)])))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected 3
+    :arguments [4 [1 1 5 6 9 16 27]]}
+   {:expected 4
+    :arguments [2 [1 1 3 3]]}])
 
 (defn solution [differ, nums]
   (->>

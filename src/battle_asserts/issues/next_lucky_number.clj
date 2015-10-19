@@ -11,10 +11,18 @@
   (gen/tuple (gen/choose 0 100)))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected 5
+    :arguments [4]}
+   {:expected 53
+    :arguments [48]}
+   {:expected 333
+    :arguments [130]}
+   {:expected 333
+    :arguments [98]}
+   {:expected 3333
+    :arguments [949]}
+   {:expected 353
+    :arguments [339]}])
 
 (defn prev-digits [prev-digits owerflow]
   (if (zero? owerflow)

@@ -11,12 +11,17 @@
              (gen/vector gen/int)))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected ["a" "b" "d" "e" "g" "h" "k"]
+    :arguments [3 ["a" "b" "c" "d" "e" "f" "g" "h" "i" "k"]]}
+   {:expected [0 2 4 6 8]
+    :arguments [2 [0 1 2 3 4 5 6 7 8 9]]}
+   {:expected [0 1 2 3]
+    :arguments [5 [0 1 2 3]]}
+   {:expected []
+    :arguments [1 [0 1 2 3 4 5 6 7]]}])
 
 (defn solution [n coll]
   (keep-indexed #(if-not (= (mod (inc %1) n)
                             0) %2)
                 coll))
+

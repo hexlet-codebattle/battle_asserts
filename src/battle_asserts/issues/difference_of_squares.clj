@@ -16,10 +16,10 @@
   (gen/tuple (gen/choose 1 120)))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected 170 :arguments [5]}
+   {:expected 25164150 :arguments [100]}
+   {:expected 100100 :arguments [25]}
+   {:expected 0 :arguments [1]}])
 
 (defn square-of-sums [value]
   (let [sum (reduce + (range (inc value)))]

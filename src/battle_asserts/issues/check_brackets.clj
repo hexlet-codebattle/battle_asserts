@@ -14,10 +14,18 @@
       (gen/tuple (gen/elements (repeatedly 50 permutation))))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected true
+    :arguments ["()[]{}<>"]}
+   {:expected true
+    :arguments ["<(){[]}>"]}
+   {:expected false
+    :arguments ["())"]}
+   {:expected false
+    :arguments ["()("]}
+   {:expected false
+    :arguments ["({)}"]}
+   {:expected false
+    :arguments ["{)][(}"]}])
 
 (defn solution [s]
   (let [brackets {\( \) \[ \] \{ \} \< \>}

@@ -11,10 +11,11 @@
     (gen/tuple (gen/vector word-generator) gen/int)))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected {:draft 0 :completed 0}
+    :arguments [[:draft :completed] 0]}
+   {:expected {:one 4 :two 4}
+    :arguments [[:one :two] 4]}])
 
 (defn solution [v default]
   (reduce #(assoc %1 %2 default) {} v))
+

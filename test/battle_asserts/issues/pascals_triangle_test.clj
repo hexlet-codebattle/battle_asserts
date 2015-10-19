@@ -2,11 +2,12 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.pascals-triangle :as issue]))
 
-(deftest test-solution
-  (is (= [1] (issue/solution 0)))
-  (is (= [1 1] (issue/solution 1)))
-  (is (= [1 2 1] (issue/solution 2)))
-  (is (= [1 3 3 1] (issue/solution 3)))
-  (is (= [1 4 6 4 1] (issue/solution 4))))
+(ct/defspec test-solution
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (instance? clojure.lang.PersistentVector (apply issue/solution v))))
+
+(h/generate-tests issue/test-data issue/solution)

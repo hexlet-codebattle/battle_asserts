@@ -16,10 +16,14 @@
                             (gen/vector gen/int)]))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected 5
+    :arguments [[10 5 3 4 3 5 6]]}
+   {:expected 6
+    :arguments [[6 10 5 4 9 120 4 6 10]]}
+   {:expected 7
+    :arguments [[6 10 7 4 9 120 4 7]]}
+   {:expected 8
+    :arguments [[8 8 7 4 9 120 4 7]]}])
 
 (defn solution [array]
   (->>

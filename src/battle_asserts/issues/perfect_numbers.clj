@@ -12,10 +12,16 @@
                             (gen/elements perfect-numbers)]))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected true
+    :arguments [6]}
+   {:expected false
+    :arguments [7]}
+   {:expected true
+    :arguments [496]}
+   {:expected false
+    :arguments [500]}
+   {:expected true
+    :arguments [8128]}])
 
 (defn solution [num]
   (letfn [(divisors [num]
@@ -24,3 +30,4 @@
     (if (<= num 1)
       false
       (= num (reduce + (divisors num))))))
+

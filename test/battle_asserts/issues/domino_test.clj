@@ -2,10 +2,12 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.domino :as issue]))
 
-(deftest test-solution
-  (is (= 0  (issue/solution 0)))
-  (is (= 3  (issue/solution 1)))
-  (is (= 12 (issue/solution 2)))
-  (is (= 30 (issue/solution 3))))
+(ct/defspec test-solution
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (instance? Long (apply issue/solution v))))
+
+(h/generate-tests issue/test-data issue/solution)

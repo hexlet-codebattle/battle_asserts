@@ -11,10 +11,11 @@
   (gen/tuple (gen/choose 0 11) (gen/choose 0 59)))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected 0.0 :arguments [0 0]}
+   {:expected 7.5 :arguments [3 15]}
+   {:expected 82.5 :arguments [0 15]}
+   {:expected 275.0 :arguments [0 50]}
+   {:expected 157.5 :arguments [3 45]}])
 
 (defn solution [h m]
   (letfn [(hours-angle [h m]

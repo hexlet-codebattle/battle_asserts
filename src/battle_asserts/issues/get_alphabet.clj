@@ -11,10 +11,14 @@
     (gen/tuple (gen/elements sentences))))
 
 (def test-data
-   [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-     :expected [["mate" "meat" "team"]]}
-    {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-     :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:expected "adfs"
+    :arguments ["asfsfdss"]}
+   {:expected "acgt"
+    :arguments ["acgtgcgagtg"]}
+   {:expected "1234"
+    :arguments ["4123214"]}
+   {:expected "+-.<>[]"
+    :arguments ["+++[><<]<-."]}])
 
 (defn solution [string]
   (-> string
