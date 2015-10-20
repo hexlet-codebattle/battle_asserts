@@ -4,7 +4,7 @@
 
 (def level :medium)
 
-(def description "Write function, which flatten given hash.")
+(def description "Write a function which flattens given hash.")
 
 (defn arguments-generator []
   (let [word-generator (gen/elements (faker/words {:lang :en :n 30}))]
