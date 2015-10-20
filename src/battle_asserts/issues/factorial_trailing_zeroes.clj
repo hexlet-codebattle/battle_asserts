@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Write function, which return the number of trailing zeroes in n!.")
+(def description "Write a function which returns the number of trailing zeroes in n!")
 
 (defn arguments-generator []
   (gen/tuple (gen/choose 0 90)))
