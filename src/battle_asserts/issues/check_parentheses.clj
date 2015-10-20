@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Checking the parentheses in the expression.")
+(def description "Check if the parentheses in the expression are all balanced, so that all open paranthesis is closed properly.")
 
 (defn arguments-generator []
   (let [brackets [\( \)]]
