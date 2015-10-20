@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Given an array with both +ive and -ive integers, return a pair with highest product.")
+(def description "Given an array with both positive and negative integers, return a pair with highest product.")
 
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int 2 25)))
