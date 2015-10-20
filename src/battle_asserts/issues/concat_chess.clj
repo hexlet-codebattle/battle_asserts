@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Write function that concatenate 2 strings by characters, one by one.")
+(def description "Write a function that concatenates 2 strings by characters, one by one. For example, abcd + wxyz -> awbxcydz.")
 
 (defn arguments-generator []
   (let [words (faker/words {:lang :en :n 20})]
