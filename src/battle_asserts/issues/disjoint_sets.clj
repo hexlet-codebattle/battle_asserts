@@ -5,8 +5,7 @@
 
 (def level :easy)
 
-(def description "Given two sets represented by two arrays, how to check if the given two sets are disjoint or not?
-                 It may be assumed that the given arrays have no duplicates.")
+(def description "Given two sets represented by two arrays, check if the given two sets are disjoint or not. Given arrays have no duplicates.")
 
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int) (gen/vector gen/int)))
