@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Write a function which interleaves an array with another array.")
+(def description "Write a function which interleaves an array with another array. For example, [1 3 5] [2 4 6] -> [1 2 3 4 5 6].")
 
 (defn arguments-generator []
   (gen/tuple (gen/list gen/int) (gen/list gen/int)))
