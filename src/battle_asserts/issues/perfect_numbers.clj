@@ -4,7 +4,7 @@
 
 (def level :medium)
 
-(def description "A number is \"perfect\" if the sum of its divisors equal the number itself.")
+(def description "Write a function that determines if a given number is \"perfect\". A number is \"perfect\" if the sum of its divisors equal the number itself.")
 
 (defn arguments-generator []
   (let [perfect-numbers [6 28 496 8128]]
