@@ -26,5 +26,8 @@
 
 (defn solution [array]
   (let [element-occurrence (reduce #(assoc %1 %2 (inc (get %1 %2 0))) {} array)]
-    (reduce #(concat %1 (repeat (get element-occurrence %2) %2)) [] array)))
+    (->>
+     array
+     distinct
+     (reduce #(concat %1 (repeat (get element-occurrence %2) %2)) []))))
 
