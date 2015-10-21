@@ -4,11 +4,9 @@
 
 (def level :elementary)
 
-(def description "#FIXME
-                 Написать функцию, которая принимает на вход массив, индекс элемента, значение по умолчанию
-                 и возвращяет элемент по индексу из массива если элемента с таким индексом не существует
-                 в массиве необходимо вернуть значение по умолчанию.
-                 Индекс элемента может быть отрицательным. Отрицательный индекс обозначает элементы с конца массива.")
+(def description "Write a function which takes an array, an index, and a default value as input and returns 
+                 the element by that index; if no element exists with given index then return the default value. 
+                 Index can be a negative integer, which means going over the array backwards from the end.")
 
 (defn arguments-generator
   []
