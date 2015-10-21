@@ -3,10 +3,8 @@
 
 (def level :medium)
 
-(def description "#FIXME Необходимо написать функцию,
-                 которая принимает на вход массив, который может иметь вложенные массивы, и
-                 возвращяет одномерный плоский массив со всеми элементами входного массива с
-                 сохранением порядка")
+(def description "Write a function which takes an array, possibly with more arrays inside, and returns a 1-dimensional
+                  flat array with all the values in the initial order.")
 
 (defn arguments-generator
   []
