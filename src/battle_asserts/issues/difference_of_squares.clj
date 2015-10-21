@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Find the difference between the square of the sums and the sum of the squares of the first N natural numbers.
+(def description "Find the difference between the square of the sum and the sum of the squares of the first N natural numbers.
                  The square of the sum of the first ten natural numbers is,
                  (1 + 2 + ... + 10)**2 = 55**2 = 3025
                  The sum of the squares of the first ten natural numbers is,
