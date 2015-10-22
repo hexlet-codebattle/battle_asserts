@@ -1,5 +1,5 @@
-generate-from-docker:
-	docker run -v $(CURDIR):/battle_asserts clojure /bin/bash -c 'cd /battle_asserts && generate'
+generate-from-docker: clean
+	docker run -v $(CURDIR):/battle_asserts clojure /bin/bash -c 'cd /battle_asserts && lein run'
 
 generate: clean
 	lein run
