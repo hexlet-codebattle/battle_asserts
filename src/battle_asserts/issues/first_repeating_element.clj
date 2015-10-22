@@ -26,8 +26,8 @@
     :arguments [[8 8 7 4 9 120 4 7]]}])
 
 (defn solution [array]
-  (->>
-   array
-   (reduce #(assoc %1 %2 (inc (get %1 %2 0))) {})
-   (filter #(> (second %) 1))
-   ffirst))
+  (let [occurrence (reduce #(assoc %1 %2 (inc (get %1 %2 0))) {} array)]
+    (->>
+     array
+     (filter #(> (get occurrence %) 1))
+     first)))
