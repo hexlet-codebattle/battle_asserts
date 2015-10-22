@@ -10,8 +10,8 @@
   (gen/tuple (gen/choose 0 11) (gen/choose 0 59)))
 
 (def test-data
-  [{:expected 0.0 :arguments [0 0]}
-   {:expected 7.5 :arguments [3 15]}
+  [{:expected 7.5 :arguments [3 15]}
+   {:expected 0.0 :arguments [0 0]}
    {:expected 82.5 :arguments [0 15]}
    {:expected 275.0 :arguments [0 50]}
    {:expected 157.5 :arguments [3 45]}])
