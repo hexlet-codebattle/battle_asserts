@@ -1,8 +1,0 @@
----
-level: elementary
-tags: [string]
-description: |
-  Write bitwise XOR function for 2 strings.
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]

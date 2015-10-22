@@ -9,7 +9,11 @@
   []
   (gen/tuple (gen/resize 10000 gen/pos-int)))
 
-; (gen/sample (arguments-generator) 1)
+(def test-data
+  [{:expected 15
+    :arguments [2015]}
+   {:expected 205
+    :arguments [10205]}])
 
 (defn solution
   [x]

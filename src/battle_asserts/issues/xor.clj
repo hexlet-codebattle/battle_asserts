@@ -3,19 +3,24 @@
 
 (def level :easy)
 
-(def description "Write bitwise XOR function for 2 strings.")
+(def description "#FIXME Напишите функцию, принимающую на вход 2 строки и
+                 возвращяющую строку полученную путем применения XOR к входным строка")
 
 (defn arguments-generator
   []
   (gen/tuple gen/string-ascii
              gen/string-ascii))
 
-; (gen/sample (arguments-generator) 1)
+(def test-data
+  [{:expected "5*"
+    :arguments ["xor" "ME"]}
+   {:expected "AAAA"
+    :arguments ["jjjj" "++++"]}])
 
 (defn solution
   [str1 str2]
   (clojure.string/join (map char
-                            (map bit-and
+                            (map bit-xor
                                  (doall
                                   (map int
                                        (seq str1)))

@@ -2,10 +2,13 @@
   (:require [clojure.test :refer :all]
             [clojure.test.check.properties :as prop :include-macros true]
             [clojure.test.check.clojure-test :as ct :include-macros true]
+            [test-helper :as h]
             [battle-asserts.issues.xor :as issue]))
 
+(ct/defspec test-solution
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (instance? String (apply issue/solution v))))
+
 (deftest test-solution
-  (let [str1 "string1"
-        str2 "string2"]
-    (= str2 (issue/solution (issue/solution str1 str2) str1))
-    (= "5*" (issue/solution "xor" "ME"))))
+  (h/generate-tests issue/test-data issue/solution))
