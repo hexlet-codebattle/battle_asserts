@@ -17,8 +17,7 @@
                                       (gen/one-of [gen/boolean gen/int]))])))))
 
 (def test-data
-  [
-   {:expected {"x[0]" "1" "x[1]" "2" "x[2]" "3"}
+  [{:expected {"x[0]" "1" "x[1]" "2" "x[2]" "3"}
     :arguments [{"x" ["1" "2" "3"]}]}
    {:expected {"a[b]" 3}
     :arguments [{"a" {"b" 3}}]}

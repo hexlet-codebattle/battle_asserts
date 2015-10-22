@@ -13,4 +13,5 @@
                     (zero? (last result))
                     true))))
 
-(h/generate-tests issue/test-data issue/solution)
+(deftest test-solution
+  (h/generate-tests issue/test-data issue/solution))

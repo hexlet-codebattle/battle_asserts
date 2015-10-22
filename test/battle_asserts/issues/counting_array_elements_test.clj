@@ -11,4 +11,5 @@
                 (= (set (keys (apply issue/solution v)))
                    (set (first v)))))
 
-(h/generate-tests issue/test-data issue/solution)
+(deftest test-solution
+  (h/generate-tests issue/test-data issue/solution))

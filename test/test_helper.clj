@@ -3,5 +3,5 @@
 
 (defn generate-tests
   [data solution]
-  (doseq [{output :output arguments :arguments} data]
-    (is (= output (apply solution arguments)))))
+  (doseq [{expected :expected arguments :arguments} data]
+    (is (= expected (apply solution arguments)))))
