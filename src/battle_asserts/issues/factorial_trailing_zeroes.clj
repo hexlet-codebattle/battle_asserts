@@ -10,7 +10,9 @@
   (gen/tuple (gen/choose 0 90)))
 
 (def test-data
-  [{:expected 0
+  [{:expected 6
+    :arguments [28]}
+   {:expected 0
     :arguments [0]}
    {:expected 1
     :arguments [5]}
@@ -18,8 +20,6 @@
     :arguments [7]}
    {:expected 4
     :arguments [23]}
-   {:expected 6
-    :arguments [28]}
    {:expected 22
     :arguments [99]}])
 
