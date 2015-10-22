@@ -10,8 +10,7 @@
   (gen/tuple gen/pos-int))
 
 (def test-data
-  [
-   {:expected [1 3 3 1]
+  [{:expected [1 3 3 1]
     :arguments [3]}
    {:expected [1]
     :arguments [0]}

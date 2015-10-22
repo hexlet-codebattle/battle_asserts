@@ -12,4 +12,5 @@
                 (= (count (s/split (apply issue/solution v) #"[\?|\&]"))
                    (inc (count (second v))))))
 
-(h/generate-tests issue/test-data issue/solution)
+(deftest test-solution
+  (h/generate-tests issue/test-data issue/solution))

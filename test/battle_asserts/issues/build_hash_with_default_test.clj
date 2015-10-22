@@ -12,4 +12,5 @@
                   (every? #(= % default-value)
                           (vals (apply issue/solution v))))))
 
-(h/generate-tests issue/test-data issue/solution)
+(deftest test-solution
+  (h/generate-tests issue/test-data issue/solution))

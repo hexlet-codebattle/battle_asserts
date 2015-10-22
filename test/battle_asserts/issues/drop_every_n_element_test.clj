@@ -14,4 +14,5 @@
                      (- coll-size
                         (quot  coll-size drop-step))))))
 
-(h/generate-tests issue/test-data issue/solution)
+(deftest test-solution
+  (h/generate-tests issue/test-data issue/solution))

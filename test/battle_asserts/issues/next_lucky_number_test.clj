@@ -11,4 +11,5 @@
   (prop/for-all [v (issue/arguments-generator)]
                 (empty? (s/replace (apply issue/solution v) #"[5|3]" ""))))
 
-(h/generate-tests issue/test-data issue/solution)
+(deftest test-solution
+  (h/generate-tests issue/test-data issue/solution))

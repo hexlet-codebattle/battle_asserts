@@ -10,4 +10,5 @@
   (prop/for-all [v (issue/arguments-generator)]
                 (instance? clojure.lang.IPersistentMap (apply issue/solution v))))
 
-(h/generate-tests issue/test-data issue/solution)
+(deftest test-solution
+  (h/generate-tests issue/test-data issue/solution))

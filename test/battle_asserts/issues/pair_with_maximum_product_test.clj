@@ -11,4 +11,5 @@
                 (= (count (apply issue/solution v))
                    2)))
 
-(h/generate-tests issue/test-data issue/solution)
+(deftest test-solution
+  (h/generate-tests issue/test-data issue/solution))

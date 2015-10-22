@@ -12,4 +12,5 @@
                 (>= (apply issue/solution v)
                     (BigInteger. (s/join (first v))))))
 
-(h/generate-tests issue/test-data issue/solution)
+(deftest test-solution
+  (h/generate-tests issue/test-data issue/solution))

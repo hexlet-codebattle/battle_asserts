@@ -13,7 +13,7 @@
   [{:arguments [[1 2 3 4 5 6]]
     :expected 654321}
    {:arguments [[54 546 548 60]]
-    :expected 605485465}
+    :expected 6054854654}
    {:arguments [[1 34 3 98 9 76 45 4]]
     :expected 998764543431}
    {:arguments [[43 44 12 324 90 9 88 89]]

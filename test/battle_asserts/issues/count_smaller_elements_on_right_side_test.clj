@@ -13,4 +13,5 @@
                   (or (= last-element 0)
                       (= last-element nil)))))
 
-(h/generate-tests issue/test-data issue/solution)
+(deftest test-solution
+  (h/generate-tests issue/test-data issue/solution))
