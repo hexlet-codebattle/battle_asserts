@@ -3,7 +3,5 @@
 
 (defn generate-tests
   [data solution]
-  (deftest test-solution
-    (print data)
-    (map #(is (= (:output %) (apply solution (:agruments %))))
-         data)))
+  (doseq [{output :output arguments :arguments} data]
+    (is (= output (apply solution arguments)))))
