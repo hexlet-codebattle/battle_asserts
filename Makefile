@@ -1,11 +1,11 @@
-issues: clean
-	docker run -v $(CURDIR):/battle_asserts clojure /bin/bash -c 'cd /battle_asserts && lein run'
+generate-from-docker:
+	docker run -v $(CURDIR):/battle_asserts clojure /bin/bash -c 'cd /battle_asserts && generate'
+
+generate: clean
+	lein run
 
 clean:
 	rm -rf issues/*
-
-generate: format
-	lein run
 
 format:
 	lein cljfmt fix
