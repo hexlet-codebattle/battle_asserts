@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Given an array of numbers, arrange them in a way that yields the largest value.")
+(def description "Given an array of numbers, arrange them in a way that produces the largest value. For example, [1 9 75] -> 9751")
 
 (defn arguments-generator []
   (gen/tuple (gen/not-empty (gen/vector (gen/choose 0 547) 2 8))))
