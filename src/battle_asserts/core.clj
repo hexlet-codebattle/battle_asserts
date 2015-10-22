@@ -18,7 +18,9 @@
   [issue-ns-name]
   (require [issue-ns-name])
   ; (print issue-ns-name)
-  (let [issue-name (last (s/split (str issue-ns-name) #"\."))
+  (let [issue-name (s/replace (last (s/split (str issue-ns-name) #"\."))
+                              #"-"
+                              "_")
         generator ((ns-resolve issue-ns-name 'arguments-generator))
         solution (ns-resolve issue-ns-name 'solution)
         sample (first @(ns-resolve issue-ns-name 'test-data))]
