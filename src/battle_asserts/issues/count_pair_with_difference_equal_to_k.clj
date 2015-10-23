@@ -20,9 +20,8 @@
     :arguments [[1 2 3 4 4 2 2 1] 0]}])
 
 (defn make-pair [value array]
-  (into []
-        (zipmap array
-                (repeat (count array) value))))
+  (vec (zipmap array
+               (repeat (count array) value))))
 
 (defn solution [arr k]
   (->>

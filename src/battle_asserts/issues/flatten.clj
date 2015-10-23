@@ -25,5 +25,5 @@
 
 (defn solution
   [x]
-  (filter (complement sequential?)
+  (remove sequential?
           (rest (tree-seq sequential? seq x))))

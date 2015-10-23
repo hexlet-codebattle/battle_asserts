@@ -22,5 +22,5 @@
 
 (defn solution [array]
   (concat
-   (filter #(not (zero? %)) array)
+   (remove zero? array)
    (filter zero? array)))

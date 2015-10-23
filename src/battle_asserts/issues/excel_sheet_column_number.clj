@@ -1,5 +1,6 @@
 (ns battle-asserts.issues.excel-sheet-column-number
   (:require [clojure.test.check.generators :as gen]
+            [clojure.string :as s]
             [faker.generate :as faker]))
 
 (def level :easy)
@@ -10,7 +11,7 @@
 (defn arguments-generator []
   (let [letters (map #(char (+ % (int \A))) (range 0 26))]
     (letfn [(permutation [length]
-              (apply str (repeatedly length #(rand-nth letters))))]
+              (s/join (repeatedly length #(rand-nth letters))))]
       (gen/tuple (gen/bind (gen/choose 1 4) #(gen/return (permutation %)))))))
 
 (def test-data

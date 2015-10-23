@@ -21,7 +21,6 @@
     :arguments [1 [0 1 2 3 4 5 6 7]]}])
 
 (defn solution [n coll]
-  (keep-indexed #(if-not (= (mod (inc %1) n)
-                            0) %2)
+  (keep-indexed #(if-not (zero? (mod (inc %1) n)) %2)
                 coll))
 

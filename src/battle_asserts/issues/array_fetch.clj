@@ -4,8 +4,8 @@
 
 (def level :elementary)
 
-(def description "Write a function which takes an array, an index, and a default value as input and returns 
-                 the element by that index; if no element exists with given index then return the default value. 
+(def description "Write a function which takes an array, an index, and a default value as input and returns
+                 the element by that index; if no element exists with given index then return the default value.
                  Index can be a negative integer, which means going over the array backwards from the end.")
 
 (defn arguments-generator
@@ -24,5 +24,5 @@
 
 (defn solution
   [s index default]
-  (let [positive-index (if (> index 0) index (+ (count s) index))]
+  (let [positive-index (if (pos? index) index (+ (count s) index))]
     (nth s positive-index default)))

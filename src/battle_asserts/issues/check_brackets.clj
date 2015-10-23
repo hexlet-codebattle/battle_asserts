@@ -1,5 +1,6 @@
 (ns battle-asserts.issues.check-brackets
   (:require [clojure.test.check.generators :as gen]
+            [clojure.string :as s]
             [faker.generate :as faker]))
 
 (def level :medium)
@@ -10,7 +11,7 @@
 (defn arguments-generator []
   (let [brackets [\( \) \[ \] \{ \} \< \>]]
     (letfn [(permutation []
-              (apply str (repeatedly 4 #(rand-nth brackets))))]
+              (s/join (repeatedly 4 #(rand-nth brackets))))]
       (gen/tuple (gen/elements (repeatedly 50 permutation))))))
 
 (def test-data

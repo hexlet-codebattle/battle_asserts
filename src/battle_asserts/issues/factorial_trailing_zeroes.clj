@@ -24,7 +24,7 @@
     :arguments [99]}])
 
 (defn factorial [n]
-  (apply *' (range 1 (+ n 1))))
+  (apply *' (range 1 (inc n))))
 
 (defn solution [n]
   (->>

@@ -9,7 +9,7 @@
   20
   (prop/for-all [v (issue/arguments-generator)]
                 (let [result (apply issue/solution v)]
-                  (if (not (empty? result))
+                  (if (seq result)
                     (= (last result)
                        -1)
                     true))))

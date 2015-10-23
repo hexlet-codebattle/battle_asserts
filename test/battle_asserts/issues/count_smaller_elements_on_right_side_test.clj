@@ -10,8 +10,8 @@
   (prop/for-all [v (issue/arguments-generator)]
                 (let [result (apply issue/solution v)
                       last-element (last result)]
-                  (or (= last-element 0)
-                      (= last-element nil)))))
+                  (or (zero? last-element)
+                      (nil? last-element)))))
 
 (deftest test-solution
   (h/generate-tests issue/test-data issue/solution))
