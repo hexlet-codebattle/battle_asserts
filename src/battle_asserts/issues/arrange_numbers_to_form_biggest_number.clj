@@ -4,7 +4,10 @@
 
 (def level :easy)
 
-(def description "Given an array of numbers, arrange them in a way that produces the largest value. For example, [1 9 75] -> 9751")
+(def description "Construct the largest possible number by arranging the integers from the array.
+                 Since the resulting number can be very large and out of int range, you have to represent it as string.
+                 For example, from [3, 24, 4] we can produce 6 different numbers: 3244, 3424, 2434, 2443, 4324, 4243
+                 and the biggest from them is 4324")
 
 (defn arguments-generator []
   (gen/tuple (gen/not-empty (gen/vector (gen/choose 0 547) 2 5))))
