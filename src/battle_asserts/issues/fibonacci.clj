@@ -12,14 +12,14 @@
   (gen/tuple (gen/choose 0 20)))
 
 (def test-data
-  [{:expected 0
+  [{:expected 13
+    :arguments [7]}
+   {:expected 0
     :arguments [0]}
    {:expected 1
     :arguments [1]}
    {:expected 3
     :arguments [4]}
-   {:expected 13
-    :arguments [7]}
    {:expected 55
     :arguments [10]}])
 
