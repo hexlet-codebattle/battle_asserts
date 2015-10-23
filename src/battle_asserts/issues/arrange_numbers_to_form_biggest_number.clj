@@ -7,15 +7,17 @@
 (def description "Given an array of numbers, arrange them in a way that produces the largest value. For example, [1 9 75] -> 9751")
 
 (defn arguments-generator []
-  (gen/tuple (gen/not-empty (gen/vector (gen/choose 0 547) 2 8))))
+  (gen/tuple (gen/not-empty (gen/vector (gen/choose 0 547) 2 5))))
 
 (def test-data
-  [{:arguments [[1 2 3 4 5 6]]
+  [{:arguments [[1 34 3 98 9 76 45 4]]
+    :expected 998764543431}
+   {:arguments [[1 2 3 4 5 6]]
     :expected 654321}
+   {:arguments [[481 428 385 202 2 197 106 10]]
+    :expected 481428385220219710610}
    {:arguments [[54 546 548 60]]
     :expected 6054854654}
-   {:arguments [[1 34 3 98 9 76 45 4]]
-    :expected 998764543431}
    {:arguments [[43 44 12 324 90 9 88 89]]
     :expected 9908988444332412}])
 
