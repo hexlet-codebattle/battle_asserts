@@ -37,4 +37,4 @@
                                              (solution (map-indexed #(vector (format "%s[%d]" k %1) %2)
                                                                     v)))
         (assoc acc k v)))]
-    (reduce func {} (into [] hash))))
+    (reduce func {} (vec hash))))

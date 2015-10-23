@@ -28,5 +28,5 @@
     0 0
     1 1
     (+
-     (solution (- number 1))
+     (solution (dec number))
      (solution (- number 2)))))

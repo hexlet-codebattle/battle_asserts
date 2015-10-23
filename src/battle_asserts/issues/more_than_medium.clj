@@ -20,7 +20,7 @@
 
 (defn solution [string]
   (let [words (re-seq #"\w+" string)
-        average (/ (reduce + (map #(count %)
+        average (/ (reduce + (map count
                                   words))
                    (count words))]
 

@@ -23,9 +23,9 @@
 
 (defn solution [x]
   (letfn [(rat [x]
-            (+ (reduce + (range (+ x 1)))
-               (* x (+ x 1))))]
-    (->> (range (+ x 1))
-         (map #(rat %))
+            (+ (reduce + (range (inc x)))
+               (* x (inc x))))]
+    (->> (range (inc x))
+         (map rat)
          (reduce +))))
 

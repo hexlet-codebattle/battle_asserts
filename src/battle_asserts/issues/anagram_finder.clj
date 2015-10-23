@@ -1,5 +1,6 @@
 (ns battle-asserts.issues.anagram-finder
   (:require [clojure.test.check.generators :as gen]
+            [clojure.string :as s]
             [faker.generate :as faker]))
 
 (def level :medium)
@@ -12,9 +13,9 @@
 (defn arguments-generator
   []
   (let [words1 (faker/words {:lang :en :n 8})
-        words2 (map #(apply str (shuffle (seq %)))
+        words2 (map #(s/join (shuffle (seq %)))
                     words1)
-        words3 (map #(apply str (shuffle (seq %)))
+        words3 (map #(s/join (shuffle (seq %)))
                     words1)
         words (vec (concat words1 words2 words3))]
     (gen/tuple (apply gen/tuple (repeatedly 6 #(gen/elements words))))))
@@ -35,7 +36,7 @@
 
           (anagram?
            [word candidate]
-           (= 0 (compare (prepare word) (prepare candidate))))
+           (zero? (compare (prepare word) (prepare candidate))))
 
           (anagrams-for
            [word anagrams]

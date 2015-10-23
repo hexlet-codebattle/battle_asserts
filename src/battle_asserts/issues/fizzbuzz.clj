@@ -27,5 +27,5 @@
 
 (defn solution [number]
   (str
-   (when (= (mod number 3) 0) "Fizz")
-   (when (= (mod number 5) 0) "Buzz")))
+   (when (zero? (mod number 3)) "Fizz")
+   (when (zero? (mod number 5)) "Buzz")))

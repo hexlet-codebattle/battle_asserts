@@ -25,7 +25,7 @@
 
 (defn solution [num]
   (letfn [(divisors [num]
-            (filter #(= (rem num %) 0)
+            (filter #(zero? (rem num %))
                     (range 1 (inc (/ num 2)))))]
     (if (<= num 1)
       false

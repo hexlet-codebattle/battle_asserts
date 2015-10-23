@@ -1,5 +1,6 @@
 (ns battle-asserts.issues.next-lucky-number
   (:require [clojure.test.check.generators :as gen]
+            [clojure.string :as s]
             [faker.generate :as faker]))
 
 (def level :medium)
@@ -33,13 +34,13 @@
 
 (defn solution [number]
   (Integer.
-   (apply str
-          (loop [n (inc number), owerflow 0, res '()]
-            (let [integer (quot n 10)
-                  remnant (+ owerflow (rem n 10))
-                  cur-digit (if (<= 4 remnant 5) 5 3)
-                  cur-overflow (if (> remnant 5) 1 0)
-                  must-overwrite-prev (or (not (zero? owerflow)) (> cur-digit remnant))]
-              (if (and (zero? integer) (zero? cur-overflow))
-                (conj (prev-digits res must-overwrite-prev) cur-digit)
-                (recur integer cur-overflow (conj (prev-digits res must-overwrite-prev) cur-digit))))))))
+   (s/join
+    (loop [n (inc number), owerflow 0, res '()]
+      (let [integer (quot n 10)
+            remnant (+ owerflow (rem n 10))
+            cur-digit (if (<= 4 remnant 5) 5 3)
+            cur-overflow (if (> remnant 5) 1 0)
+            must-overwrite-prev (or (not (zero? owerflow)) (> cur-digit remnant))]
+        (if (and (zero? integer) (zero? cur-overflow))
+          (conj (prev-digits res must-overwrite-prev) cur-digit)
+          (recur integer cur-overflow (conj (prev-digits res must-overwrite-prev) cur-digit))))))))

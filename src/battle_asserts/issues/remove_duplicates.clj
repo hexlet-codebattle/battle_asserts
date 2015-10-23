@@ -30,7 +30,7 @@
 (defn solution [coll]
   (letfn [(contain? [coll value]
             (some #(= % value) coll))]
-    (reduce #(if (not (contain? %1 %2))
+    (reduce #(if-not (contain? %1 %2)
                (conj %1 %2)
                %1)
             []
