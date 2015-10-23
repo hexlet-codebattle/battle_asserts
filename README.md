@@ -18,53 +18,87 @@
 
 ## How to add a new source
 
-1. **Create yaml file with the name of your issue. Look at the example**
-    ```yml
-    # source/array_fetch.yml
-    level: easy # (elementary|easy|medium|hard)
-    tags: [string, numbers]
-    author:
-      github_nickname: your_name
-      web_page: "http://your.site"
-    description: |
-      This is description.
-      The description can be multiline.
-    multicode_checks:
-      langs: [javascript, php] #[ruby, javascript, python, php]
-    ```
-    Example: [array_fetch.yml](source/array_fetch.yml)
+1. **Создайте .clj файл с именем вашей задачи в папке src/battle_asserts/issues.**
 
-2. **Create a .clj file in the test/battle_solutions folder, e.g. array_fetch_test.clj**
+   - **Опишите пространство имен соответсвующие вашей задаче. Смотри пример**
+     ```clojure
+     (ns battle-asserts.issues.array-transpose
+       (:require [clojure.test.check.generators :as gen]
+                 [faker.generate :as faker]))
+       ```
 
-  - **Write a test by defining a function (deftest test-asserts ()) Look at the example**
+   - **Укажите уровень сложности вашей задачи :elementary, :easy, :medium, :hard. Смотри пример**
+     ```clojure
+     (def level :easy)
+     ```
+
+    - **Добавьте подробное описание соответствующе вашей задаче. Смотри пример**
+      ```clojure
+      (def description "Implement the matrix transposition function.
+                       Matrices are presented as arrays of arrays, where internal arrays are rows of the matrix.
+                       Transposition consists of three steps:
+                       1) reflect the array over its main diagonal (which runs from top-left to bottom-right);
+                       2) write the rows of the original matrix as columns of the new one;
+                       3) write the columns of the original matrix as rows of the new one.")
+       ```
+
+    - **Напишите функцию описывающую генератор входных данных для вашей задачи. Смотри пример**
+      ```clojure
+      (defn arguments-generator []
+        (gen/tuple (gen/bind (gen/choose 2 5)
+                             #(gen/vector (gen/vector gen/int %)))))
+     ```
+
+    - **Опишите входные данные и ожидаемы результат работы решения вашей задачи. Смотри пример**
+      ```clojure
+      (def test-data
+        [{:expected [[1 :a] [2 :b] [3 :c]]
+          :arguments [[[1 2 3] [:a :b :c]]]}
+         {:expected [[1 3 5] [2 4 6]]
+          :arguments [[[1 2] [3 4] [5 6]]]}
+         {:expected []
+          :arguments [[]]}])
+       ```
+
+    - **Напишите функцию решающую вашу задачу. Смотри пример**
+      ```clojure
+      (defn solution [vectors]
+        (if (not-empty vectors)
+            (apply mapv vector vectors)
+            []))
+      ```
+    Example: [array_transpose.clj](src/battle_asserts/issues/array_transpose.clj)
+
+2. **Создайте файл .clj в папке test/battle_asserts/issues с именем, например, array_fetch_test.clj**
+
+  - **Напишите тест объявив функцию (deftest test-solution ()). Смотри пример**
     ```clojure
-    ; test/battle_solutions/array_fetch_test.clj
-    (deftest test-asserts
-      (let [arr [\a \b \c]]
-      (assert-equal \b (fetch arr 1 \d))
-      (assert-equal \d (fetch arr 5 \d))
-      (assert-equal \c (fetch arr -1 \d))
-      (assert-equal \d (fetch arr -5 \d))))
+    ; test/battle_asserts/issues/array_transpose_test.clj
+    (deftest test-solution
+      (h/generate-tests issue/test-data issue/solution))
     ```
 
-  - **Write a namespace with your issue name**
+  - **Напишите код тестирующий свойства результата вашего решения. Смотри пример**
     ```clojure
-    ; test/battle_solutions/array_fetch_test.clj
-    (ns battle-solutions.array-fetch-test
+    (ct/defspec test-solution
+      20
+      (prop/for-all [v (issue/arguments-generator)]
+                    (= (count (apply issue/solution v))
+                       (count (ffirst v)))))
+    ```
+
+  - **Опишите простратство имен соответсвующие вашему тесту. Смотри пример**
+    ```clojure
+    ; test/battle_asserts/issues/array_transpose_test.clj
+    (ns battle-asserts.issues.array-transpose-test
       (:require [clojure.test :refer :all]
-                [battle-asserts.test-helper :refer [assert-equal assert]]))
+                [clojure.test.check.properties :as prop :include-macros true]
+                [clojure.test.check.clojure-test :as ct :include-macros true]
+                [test-helper :as h]
+                [battle-asserts.issues.array-transpose :as issue]))
     ```
 
-  - **Write a function to resolve your tests**
-    ```clojure
-    ; test/battle_solutions/array_fetch_test.clj
-    (defn fetch
-      [s index default]
-      (let [positive-index (if (> index 0) index (+ (count s) index))]
-        (nth s positive-index default)))
-    ```
-
-  Example: [array_fetch_test.clj](test/battle_solutions/array_fetch_test.clj)
+  Example: [array_transpose_test.clj](test/battle_asserts/issues/array_transpose_test.clj)
 
 3. **Run tests**
   ```
@@ -72,7 +106,7 @@
   ```
   If you want to run test for only one issue - use lein test + namespace
   ```
-  lein test battle-solutions.array-fetch-test
+  lein test battle-solutions.issues.array-transpose-test
   ```
 
 4. **Run code format**
