@@ -8,13 +8,15 @@
 (def description "Check if the parentheses in the expression are all balanced, so that all open parentheses are closed properly.")
 
 (defn arguments-generator []
-  (let [brackets [\( \)]]
+  (let [brackets [\( \) \space]]
     (letfn [(permutation []
-              (s/join (repeatedly 4 #(rand-nth brackets))))]
-      (gen/tuple (gen/elements (repeatedly 20 permutation))))))
+              (s/join (repeatedly (rand-int 10) #(rand-nth brackets))))]
+      (gen/tuple (gen/elements (repeatedly 50 permutation))))))
 
 (def test-data
-  [{:expected true
+  [{:expected false
+    :arguments ["( )  )"]}
+   {:expected true
     :arguments ["()"]}
    {:expected true
     :arguments [" ( )(  )"]}
@@ -26,8 +28,6 @@
     :arguments ["("]}
    {:expected false
     :arguments [") ("]}
-   {:expected false
-    :arguments ["( )  )"]}
    {:expected false
     :arguments ["(( )"]}])
 
