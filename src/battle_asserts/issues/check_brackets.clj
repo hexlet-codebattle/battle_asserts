@@ -9,13 +9,15 @@
                  Brackets can be round: \"()\", the square: \"[]\", the curly \"{}\" and angle: \"<>\".")
 
 (defn arguments-generator []
-  (let [brackets [\( \) \[ \] \{ \} \< \>]]
+  (let [brackets [\( \) \[ \] \{ \} \< \> \space]]
     (letfn [(permutation []
-              (s/join (repeatedly 4 #(rand-nth brackets))))]
+              (s/join (repeatedly (rand-int 10) #(rand-nth brackets))))]
       (gen/tuple (gen/elements (repeatedly 50 permutation))))))
 
 (def test-data
-  [{:expected true
+  [{:expected false
+    :arguments ["( {)  } "]}
+   {:expected true
     :arguments ["()[]{}<>"]}
    {:expected true
     :arguments ["<(){[]}>"]}
@@ -23,8 +25,6 @@
     :arguments ["())"]}
    {:expected false
     :arguments ["()("]}
-   {:expected false
-    :arguments ["({)}"]}
    {:expected false
     :arguments ["{)][(}"]}])
 
