@@ -4,7 +4,11 @@
 
 (def level :easy)
 
-(def description "Write a function which interleaves an array with another array.")
+(def description "Write a function which constructs a new array by interleaving two input arrays. 
+                  Interleaving is achieved by taking values from each array consecutively: 
+                  1st value from the 1st array, then 1st value from the 2nd array, then 2nd value from the 
+                  1st array, then 2nd value from the 2nd array, etc. Arrays can be of different lengths, 
+                  so if one arrays ends before the other, just continue adding elements from the remaining array.")
 
 (defn arguments-generator []
   (gen/tuple (gen/list gen/int) (gen/list gen/int)))
