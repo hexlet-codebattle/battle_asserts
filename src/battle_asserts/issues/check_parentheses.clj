@@ -5,7 +5,7 @@
 
 (def level :easy)
 
-(def description "Check if the parentheses in the expression are all balanced, so that all open paranthesis are closed properly.")
+(def description "Check if the parentheses in the expression are all balanced, so that all open parentheses are closed properly.")
 
 (defn arguments-generator []
   (let [brackets [\( \)]]
