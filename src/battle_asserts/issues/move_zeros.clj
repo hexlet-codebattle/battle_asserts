@@ -4,8 +4,8 @@
 
 (def level :easy)
 
-(def description "Write a function to move all 0's to the end of it while maintaining
-                 the relative order of the non-zero elements")
+(def description "Write a function that moves all 0's to the end the array while maintaining
+                 the relative order of the non-zero elements.")
 
 (defn arguments-generator []
   (gen/tuple (gen/one-of [(gen/vector gen/int)
