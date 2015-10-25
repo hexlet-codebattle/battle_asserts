@@ -4,7 +4,8 @@
 
 (def level :easy)
 
-(def description "Write a function that returns the words which are longer than the average length of all the words.")
+(def description "Write a function that takes an array of words as input and 
+                  returns the words which are longer than the average length of all the words.")
 
 (defn arguments-generator []
   (let [sentences (repeatedly 30 #(faker/sentence {:words-range [1 10]}))]
