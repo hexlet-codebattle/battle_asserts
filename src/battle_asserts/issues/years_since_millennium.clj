@@ -3,7 +3,8 @@
 
 (def level :elementary)
 
-(def description "Count how many years have passed since latest millennium. For example, 2015 -> 15")
+(def description "Count how many years have passed since latest millennium. 
+                  For example, for 2015 it is 15 years since the latest millennium, which was year 2000.")
 
 (defn arguments-generator
   []
