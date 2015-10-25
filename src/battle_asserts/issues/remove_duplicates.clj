@@ -4,7 +4,8 @@
 
 (def level :elementary)
 
-(def description "If a list contains repeated elements they should be replaced with a single copy of the element.
+(def description "Write a function which eliminates duplicate values in a list. 
+                  Repeated elements should be replaced with a single element.
                  The order of the elements should not be changed.")
 
 (defn arguments-generator []
