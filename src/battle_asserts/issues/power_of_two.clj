@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Given an integer, write a function to determine if it is a power of two.")
+(def description "Write a function which determines if given integer is a power of two.")
 
 (defn arguments-generator []
   (let [power-of-two [1 2 8 32 256 1024 4096 16348]]
