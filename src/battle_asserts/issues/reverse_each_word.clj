@@ -4,8 +4,8 @@
 
 (def level :elementary)
 
-(def description "#FIXME написать функию, принимающую строку
-                 и возвращающую входную строку с развернутыми словами")
+(def description "Write a function which takes a string as input and reverses each word, but keeps the word order the same.
+                  Words are separated by whitespaces.")
 
 (defn arguments-generator []
 
