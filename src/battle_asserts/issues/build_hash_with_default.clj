@@ -4,7 +4,7 @@
 
 (def level :elementary)
 
-(def description "Write a function which initializes hash map with given array of keys and a default value.")
+(def description "Return a new hash map with elements of the given array as keys, and the given default value as values for those keys.")
 
 (defn arguments-generator []
   (let [word-generator (gen/elements (faker/words {:lang :en :n 30}))]
@@ -18,4 +18,3 @@
 
 (defn solution [v default]
   (reduce #(assoc %1 %2 default) {} v))
-

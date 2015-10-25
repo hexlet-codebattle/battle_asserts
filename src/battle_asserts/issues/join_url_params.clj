@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Write a function which returns a query string (URL) generated from the given address and a hash map of parameters.")
+(def description "Return a query string (URL) generated from the given address and a hash map of parameters.")
 
 (defn arguments-generator []
   (letfn [(address []

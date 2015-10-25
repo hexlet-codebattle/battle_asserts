@@ -5,8 +5,8 @@
 
 (def level :easy)
 
-(def description "Given an array that represents elements of arithmetic progression in order.
-                 One element is missing in the progression, find the missing number.")
+(def description "Given an array that represents elements of an arithmetic progression in order.
+                 One element is missing in the progression. Return the missing number.")
 
 (defn arguments-generator []
   (letfn [(progression [first-element step size]

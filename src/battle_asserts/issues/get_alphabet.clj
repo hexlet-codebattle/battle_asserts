@@ -4,7 +4,7 @@
 
 (def level :elementary)
 
-(def description "Write a function that returns an alphabet of a given string; the given string is represented as an array of characters.")
+(def description "Return an alphabet of a given string; the given string is represented as an array of characters. An alphabet of a strin is the set of all distinct characters used in that string.")
 
 (defn arguments-generator []
   (let [sentences (repeatedly 50 faker/sentence)]

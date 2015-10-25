@@ -5,8 +5,8 @@
 (def level :easy)
 
 (def description "Given an array of n distinct integers sorted in ascending order,
-                 write a function that returns a Fixed Point in the array,
-                 if there is a Fixed Point present in array; else returns -1.
+                 return a Fixed Point in the array,
+                 if there is a Fixed Point present in array; else return -1.
                  Fixed Point in an array is an index i such that arr[i] is equal to i.")
 
 (defn arguments-generator []

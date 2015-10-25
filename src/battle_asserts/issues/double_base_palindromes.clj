@@ -4,7 +4,7 @@
 
 (def level :medium)
 
-(def description "The decimal number, 585 = 1001001001 (binary), is palindromic in both bases.
+(def description "The decimal number 585 is 1001001001 in binary. It is palindromic in both bases.
                  Find n-th palindromic number.")
 
 (defn arguments-generator []
@@ -32,4 +32,3 @@
                        (binary-palindromic? %)))
          (take num)
          (last))))
-

@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Write a function which returns a hash map that shows how many times each element occurs in the given array.")
+(def description "Return a hash map that shows how many times each element occurs in the given array.")
 
 (defn arguments-generator []
   (let [words (faker/words {:lang :en :n 15})]

@@ -6,7 +6,7 @@
 (def level :medium)
 
 (def description
-  "Write a function which finds all the anagrams in a vector of words.
+  "Find all the anagrams in a vector of words.
   Your function should return sorted vector of vectors, where each sub-vec is a group of words which are anagrams of each other.
   Words without any anagrams should not be included in the result.")
 

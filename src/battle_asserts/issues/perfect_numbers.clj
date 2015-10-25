@@ -4,7 +4,7 @@
 
 (def level :medium)
 
-(def description "Write a function which determines if a given number is \"perfect\". 
+(def description "Determine if a given number is \"perfect\". 
                   A number is \"perfect\" if the sum of its divisors is equal to the number itself.")
 
 (defn arguments-generator []
@@ -31,4 +31,3 @@
     (if (<= num 1)
       false
       (= num (reduce + (divisors num))))))
-

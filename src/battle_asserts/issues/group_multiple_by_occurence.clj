@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Given an unsorted array with repetitions, the task is to group multiple occurrence of individual elements.
+(def description "Given an unsorted array with repetitions, group multiple occurrence of individual elements.
                  The grouping should happen in a way that the order of first occurrences of all elements is maintained.")
 
 (defn arguments-generator []
@@ -30,4 +30,3 @@
      array
      distinct
      (reduce #(concat %1 (repeat (get element-occurrence %2) %2)) []))))
-

@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Write a function that, for each element X of the array, counts how many elements to the right of X are smaller than X. The last value is always zero since there are no elements to the right of the last element.")
+(def description "For each element X of the given array, count how many elements to the right of X are smaller than X. The last value is always zero since there are no elements to the right of the last element.")
 
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int)))

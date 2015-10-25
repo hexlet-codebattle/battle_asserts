@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Write a function that moves all 0's to the end the array while maintaining
+(def description "Moves all 0's to the end the array while maintaining
                  the relative order of the non-zero elements.")
 
 (defn arguments-generator []

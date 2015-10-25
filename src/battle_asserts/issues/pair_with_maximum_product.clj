@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Write a function which, given an array with both positive and negative integers, returns a pair with the largest product.")
+(def description "Given an array with both positive and negative integers, return a pair with the largest product.")
 
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int 2 25)))

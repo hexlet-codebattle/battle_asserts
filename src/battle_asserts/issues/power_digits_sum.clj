@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Write a function which calculates the sum of digits of 2**n
+(def description "Calculate the sum of digits of 2**n
                  For example, 2**15 = 32768, and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.")
 
 (defn arguments-generator []

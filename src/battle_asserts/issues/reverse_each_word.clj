@@ -4,7 +4,7 @@
 
 (def level :elementary)
 
-(def description "Write a function which takes a string as input and reverses each word, but keeps the word order the same.
+(def description "Given a string as input, reverse each word, but keep the word order the same.
                   Words are separated by whitespaces.")
 
 (defn arguments-generator []

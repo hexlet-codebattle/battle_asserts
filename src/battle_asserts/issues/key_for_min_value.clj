@@ -4,7 +4,7 @@
 
 (def level :elementary)
 
-(def description "Write a method that accepts a hash map and returns the key of element with the minimum value.")
+(def description "Given a hash map, return the key of the element with the smallest value.")
 
 (defn arguments-generator []
   (letfn [(gen-word []

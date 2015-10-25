@@ -4,8 +4,7 @@
 
 (def level :easy)
 
-(def description "Write a method that handles Fibonacci sequences.
-                 Have it return the nth item in the Fibonacci sequence.
+(def description "Return the nth item in the Fibonacci sequence.
                  Hint: The first item in the sequence is 0.")
 
 (defn arguments-generator []

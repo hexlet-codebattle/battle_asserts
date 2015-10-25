@@ -5,12 +5,12 @@
 
 (def level :elementary)
 
-(def description "Write a program that, given a DNA strand, returns its RNA complement (per RNA transcription).
+(def description "Given a DNA strand, return its RNA complement.
                  Both DNA and RNA strands are a sequence of nucleotides.
-                 The four nucleotides found in DNA are adenine (A), cytosine (C), guanine (G) and thymidine (T).
-                 The four nucleotides found in RNA are adenine (A), cytosine (C), guanine (G) and uracil (U).
-                 Given a DNA strand, its transcribed RNA strand is formed by replacing each nucleotide with its complement:
-                 G -> C, C -> G, T -> A, A -> U")
+                 DNA's nucleotides are adenine (A), cytosine (C), guanine (G) and thymidine (T).
+                 RNA's nucleotides are adenine (A), cytosine (C), guanine (G) and uracil (U).
+                 The transcribed RNA strand of a DNA strand is formed by replacing each nucleotide with its complement:
+                 G -> C, C -> G, T -> A, A -> U.")
 
 (defn arguments-generator []
   (letfn [(dna-strand []

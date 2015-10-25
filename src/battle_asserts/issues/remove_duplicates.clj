@@ -4,9 +4,9 @@
 
 (def level :elementary)
 
-(def description "Write a function which eliminates duplicate values in a list. 
+(def description "Eliminate repeating values in a list.
                   Repeated elements should be replaced with a single element.
-                 The order of the elements should not be changed.")
+                  The order of the elements should not be changed.")
 
 (defn arguments-generator []
   (letfn [(add-duplicates [coll]

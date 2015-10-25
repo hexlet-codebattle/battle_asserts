@@ -6,7 +6,7 @@
 (def level :medium)
 
 (def description "Check the balance of the brackets in the expression.
-                 Brackets can be round: \"()\", the square: \"[]\", the curly \"{}\" and angle: \"<>\".")
+                 Brackets can be round: \"()\", square: \"[]\", curly \"{}\" and angle: \"<>\".")
 
 (defn arguments-generator []
   (let [brackets [\( \) \[ \] \{ \} \< \> \space]]
