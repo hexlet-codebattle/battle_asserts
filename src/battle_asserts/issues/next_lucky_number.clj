@@ -6,7 +6,7 @@
 (def level :medium)
 
 (def description "Lucky numbers are defined as the numbers consisting only of digits 3 and 5.
-                 So, given a number N, you have to return the least lucky number strictly greater than N.")
+                 Write a function which, given a number N, returns the smallest lucky number strictly greater than N.")
 
 (defn arguments-generator []
   (gen/tuple (gen/choose 0 100)))
