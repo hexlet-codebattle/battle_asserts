@@ -5,7 +5,7 @@
             [test-helper :as h]
             [battle-asserts.issues.domino :as issue]))
 
-(ct/defspec test-solution
+(ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
                 (instance? Long (apply issue/solution v))))

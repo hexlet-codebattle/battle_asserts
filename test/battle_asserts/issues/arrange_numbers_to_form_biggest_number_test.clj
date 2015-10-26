@@ -6,7 +6,7 @@
             [clojure.string :as s]
             [battle-asserts.issues.arrange-numbers-to-form-biggest-number :as issue]))
 
-(ct/defspec test-solution
+(ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
                 (>= (apply issue/solution v)

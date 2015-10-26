@@ -5,7 +5,7 @@
             [test-helper :as h]
             [battle-asserts.issues.leaders-in-an-array :as issue]))
 
-(ct/defspec test-solution
+(ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
                 (= (last (apply issue/solution v))

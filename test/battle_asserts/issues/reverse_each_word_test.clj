@@ -4,7 +4,7 @@
             [clojure.test.check.clojure-test :as ct :include-macros true]
             [test-helper :as h] [battle-asserts.issues.reverse-each-word :as issue]))
 
-(ct/defspec test-solution
+(ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
                 (= (issue/solution (apply issue/solution v))
