@@ -5,10 +5,9 @@
 
 (def level :easy)
 
-(def description "In the sequence of integers from 1 to N in a random order,
-                 but one of the numbers is missing (the others are found exactly once).
-                 N is not known beforehand.
-                 Determine the missing number in a single pass.")
+(def description "Given a sequence of integers from 1 to N in a random order.
+                 One of the numbers is missing (the others are found exactly once).
+                 N is not known beforehand. Determine the missing number.")
 
 (defn arguments-generator []
   (gen/tuple (gen/bind (gen/choose 1 8)
