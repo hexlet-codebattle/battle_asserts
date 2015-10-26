@@ -16,24 +16,22 @@
 7. Create new Pull Request
 8. Check if Request passed Travis-Ci
 
-## How to add a new source
+## How to add a new problem
 
-Необходимо написать описание задания, реализацию и тест к ней по нижеследующей инструкции.
+You have to write a description of the problem and the implementation.
 
-Примеры заданий лежат в `src/battle_asserts/issues`. Тесты для них в папке `test/battle_asserts/issues`.
+Examples are in `src/battle_asserts/issues`. Corresponding tests are in `test/battle_asserts/issues`.
 
-Файл задания включает в себя:
+A problem file includes:
 
-* `level` уровень задания, возможные варианты `elementary`, `easy`, `medium`, `hard`.
-* `description` подробное описание задания без примеров.
-* `test-data` данные в определенном формате которые будут использоваться при тестировании решения.
-    Важно то что первым элементом в списке должен быть пример максимально полно раскрывающий задание,
-    так как эти данные будут использоваться в качестве примера на сайте.
-* `arguments-generator` генератор аргументов функции `solution`,
-    эти данные используются при проверке пользовательского решения.
-* `solution` решение задачи
+* `level` — difficulty of the problem; possible values are `elementary`, `easy`, `medium`, `hard`.
+* `description` — detailed description of the problem.
+* `test-data` — data in a specified format which will be used to test solutions. The first element in this list will be displayed as an example to players, so this example should be a good one, it should clarify and illustrate the problem as much as possible.
+* `arguments-generator` — arguments generator for the `solution` function;
+    generated arguments will be used to test players' solutions.
+* `solution` — implementation of a solution for the problem.
 
-Файл теста содержит вызов генератора тестов (одинаковый для всех тестов).
+Test file includes a call to test generator (the same for all tests).
 
 ## Related links
 
