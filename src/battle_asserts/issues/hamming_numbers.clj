@@ -12,10 +12,10 @@
   (gen/tuple (gen/choose 1 1000)))
 
 (def test-data
-  [{:expected 5
-    :arguments [5]}
-   {:expected 36
+  [{:expected 36
     :arguments [20]}
+   {:expected 5
+    :arguments [5]}
    {:expected 937500
     :arguments [500]}
    {:expected 51200000
