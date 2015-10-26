@@ -4,10 +4,8 @@
 
 (def level :medium)
 
-(def description "Напишите функцию, принимающую на вход сдвиг и масив.
-                 Резултатом работы функции должен быть массив полученный из
-                 исходного путем циключеского сдвига. Сдвиг может
-                 происходить в обе стороны в зависимости от занака входного значения")
+(def description "Given an array and a number, generate an array with values shifted left or right by given number. 
+                  The number could be positive or negative; positive number shifts the array forward, negative shifts it backwards.")
 
 (defn arguments-generator []
   (gen/tuple gen/int (gen/not-empty (gen/vector gen/int) )))
