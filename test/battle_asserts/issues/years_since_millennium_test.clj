@@ -6,7 +6,7 @@
             [battle-asserts.issues.years-since-millennium :as issue]
             [clojure.test.check.generators :as gen]))
 
-(ct/defspec test-solution
+(ct/defspec spec-solution
   20
   (prop/for-all [v (gen/tuple (gen/resize 10000 gen/pos-int))]
                 (= (apply issue/solution v)

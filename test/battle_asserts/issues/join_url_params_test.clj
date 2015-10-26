@@ -6,7 +6,7 @@
             [clojure.string :as s]
             [battle-asserts.issues.join-url-params :as issue]))
 
-(ct/defspec test-solution
+(ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
                 (= (count (s/split (apply issue/solution v) #"[\?|\&]"))

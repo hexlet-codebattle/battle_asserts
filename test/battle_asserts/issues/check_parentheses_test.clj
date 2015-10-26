@@ -5,7 +5,7 @@
             [test-helper :as h]
             [battle-asserts.issues.check-parentheses :as issue]))
 
-(ct/defspec test-solution
+(ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
                 (instance? Boolean (apply issue/solution v))))

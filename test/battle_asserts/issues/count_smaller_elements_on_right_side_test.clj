@@ -5,13 +5,13 @@
             [test-helper :as h]
             [battle-asserts.issues.count-smaller-elements-on-right-side :as issue]))
 
-(ct/defspec test-solution
+(ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
                 (let [result (apply issue/solution v)
                       last-element (last result)]
-                  (or (zero? last-element)
-                      (nil? last-element)))))
+                  (or (nil? last-element)
+                      (zero? last-element)))))
 
 (deftest test-solution
   (h/generate-tests issue/test-data issue/solution))
