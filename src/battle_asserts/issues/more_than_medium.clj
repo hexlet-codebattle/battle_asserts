@@ -4,8 +4,9 @@
 
 (def level :easy)
 
-(def description "Given an array of words,
-                  return the words which are longer than the average length of all the words.")
+(def description "Given a sentence (as string),
+                  return an array of words which are longer than the average length of all the words.
+                  Words a separated by a whitespace. If there is a trailing period (dot), it should be omittied.")
 
 (defn arguments-generator []
   (let [sentences (repeatedly 30 #(faker/sentence {:words-range [1 10]}))]
