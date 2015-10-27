@@ -26,8 +26,8 @@
         sample (first @(ns-resolve issue-ns-name 'test-data))]
     ; (print sample)
     (let [filename (str "issues/" issue-name ".yml")
-          arguments (s/join ", " (:arguments sample))
-          expected (:expected sample)
+          arguments (s/join ", " (map json/write-str (:arguments sample)))
+          expected (json/write-str (:expected sample))
           description @(ns-resolve issue-ns-name 'description)
           metadata {:level @(ns-resolve issue-ns-name 'level)
                     :description (str description

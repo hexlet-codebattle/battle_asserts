@@ -15,10 +15,10 @@
              gen/int))
 
 (def test-data
-  [{:expected \b :arguments [[\a \b \c] 1 \d]}
-   {:expected \d :arguments [[\a \b \c] 5 \d]}
-   {:expected \c :arguments [[\a \b \c] -1 \d]}
-   {:expected \d :arguments [[\a \b \c] -5 \d]}
+  [{:expected "b" :arguments [["a" "b" "c"] 1 "d"]}
+   {:expected "d" :arguments [["a" "b" "c"] 5 "d"]}
+   {:expected "c" :arguments [["a" "b" "c"] -1 "d"]}
+   {:expected "d" :arguments [["a" "b" "c"] -5 "d"]}
    {:expected 1 :arguments [[1 -5 4 2] 0 0]}
    {:expected 0 :arguments [[8 0 6 7] -3 -8]}])
 
