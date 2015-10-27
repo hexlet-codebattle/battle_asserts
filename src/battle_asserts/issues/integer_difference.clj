@@ -19,17 +19,24 @@
   [{:expected 3
     :arguments [4 [1 1 5 6 9 16 27]]}
    {:expected 4
-    :arguments [2 [1 1 3 3]]}])
+    :arguments [2 [1 1 3 3]]}
+   {:expected 3
+    :arguments [12 [6 6 2 -11 9 -3 9 12 0 -11 7]]}
+   {:expected 3
+    :arguments  [7 [1 5 -2 2 -5 7 -2]]}
+   {:expected 2
+    :arguments [1 [-1 1 0]]}
+   {:expected 4
+    :arguments [3 [-2 0 -2 3 3 1]]}])
 
-(defn solution [differ, nums]
+(defn solution [differ nums]
   (->>
    nums
    (reduce-kv #(let [next-elements (drop (inc %2) nums)]
-                 (concat %1 (pmap vector
-                                  next-elements
-                                  (repeat (count next-elements) %3))))
+                 (concat %1 (map vector
+                                 (cycle [%3])
+                                 next-elements)))
               [])
-   (pmap #(- (first %)
-             (second %)))
+   (map #(Math/abs (apply - %)))
    (filter #(= differ %))
    count))
