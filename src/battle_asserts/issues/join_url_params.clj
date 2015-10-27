@@ -26,11 +26,15 @@
    {:expected "http://www.example.com/search?q=findme&useragent=chrome"
     :arguments ["http://www.example.com/search"
                 {:q "findme"
-                 :useragent "chrome"}]}])
+                 :useragent "chrome"}]}
+   {:expected "http://authority.com?smile=weight&surprise=connection&steam=metal"
+    :arguments ["http://authority.com"
+                {:smile "weight"
+                 :surprise "connection"
+                 :steam "metal"}]}])
 
 (defn solution [url params]
-  (let [ordered-params (into (sorted-map) params)]
-    (str url "?"
-         (clojure.string/join "&"
-                              (map #(str % "=" (ordered-params (keyword %)))
-                                   (map name (keys ordered-params)))))))
+  (str url "?"
+       (clojure.string/join "&"
+                            (map #(str % "=" (params (keyword %)))
+                                 (map name (keys params))))))
