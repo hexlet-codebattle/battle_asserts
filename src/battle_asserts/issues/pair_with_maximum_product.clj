@@ -4,7 +4,9 @@
 
 (def level :easy)
 
-(def description "Given an array with both positive and negative integers, return a pair with the largest product.")
+(def description "Given an array with both positive and negative integers, 
+                  return a pair of integers that, when multiplied, would produce the largest possible number. 
+                  An element can only be used once, in other words, you cannot use a single number multiplied by itself.")
 
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int 2 25)))
