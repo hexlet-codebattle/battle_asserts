@@ -12,7 +12,9 @@
     (gen/tuple (gen/map (gen-word) gen/int))))
 
 (def test-data
-  [{:expected "j"
+  [{:expected "detail"
+    :arguments [{"father" 2 "detail" -7 "education" 7 "morning" 3 "damage" -7 "powder" 5}]}
+   {:expected "j"
     :arguments [{"k" 2 "h" 3 "j" 1}]}
    {:expected "z"
     :arguments [{"o" 0 "z" -2 "j" 1}]}
@@ -20,4 +22,10 @@
     :arguments [{}]}])
 
 (defn solution [hsh]
-  (ffirst (sort-by last hsh)))
+  (when (seq hsh)
+    (->>
+     hsh
+     vec
+     reverse
+     (apply min-key second)
+     first)))
