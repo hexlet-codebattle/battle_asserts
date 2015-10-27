@@ -21,12 +21,10 @@
     :arguments [[1 2 2 2 3 4 4 5]]}
    {:expected [1 2 3]
     :arguments [[1 2 3 2 3]]}
-   {:expected [\a \b \c]
-    :arguments ["aabcc"]}
+   {:expected ["a" "b" "c"]
+    :arguments [["a" "a" "b" "c" "c"]]}
    {:expected [1 "foo" 2]
-    :arguments [[1 "foo" 2]]}
-   {:expected '(a b c d e)
-    :arguments ['(a a a a b c c a a d e e e e)]}])
+    :arguments [[1 "foo" 2]]}])
 
 (defn solution [coll]
   (letfn [(contain? [coll value]
