@@ -9,7 +9,7 @@
   20
   (prop/for-all [v (issue/arguments-generator)]
                 (=  (sort (apply issue/solution v))
-                   (sort (second v)))))
+                    (sort (second v)))))
 
 (deftest test-solution
   (h/generate-tests issue/test-data issue/solution))

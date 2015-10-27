@@ -8,7 +8,7 @@
                   The number could be positive or negative; positive number shifts the array forward, negative shifts it backwards.")
 
 (defn arguments-generator []
-  (gen/tuple gen/int (gen/not-empty (gen/vector gen/int) )))
+  (gen/tuple gen/int (gen/not-empty (gen/vector gen/int))))
 
 (def test-data
   [{:expected [4 5 1 2 3]
@@ -22,7 +22,6 @@
    {:expected  '(:c :a :b)
     :arguments [-4 '(:a :b :c)]}])
 
-
 (defn solution [shift seq]
   (let [one-lap-shift (rem shift
                            (count seq))
@@ -31,5 +30,5 @@
                  (- (count seq)
                     (Math/abs one-lap-shift)))]
     (vec (concat
-           (subvec (vec seq) border)
-           (subvec (vec seq) 0 border)))))
+          (subvec (vec seq) border)
+          (subvec (vec seq) 0 border)))))
