@@ -26,5 +26,5 @@
 
 (defn solution
   [s index default]
-  (let [positive-index (if (neg? index) (+ (count s) index) index )]
+  (let [positive-index (if (neg? index) (+ (count s) index) index)]
     (nth s positive-index default)))
