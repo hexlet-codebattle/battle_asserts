@@ -8,7 +8,7 @@
                   Interleaving is achieved by taking values from each array consecutively:
                   1st value from the 1st array, then 1st value from the 2nd array, then 2nd value from the
                   1st array, then 2nd value from the 2nd array, etc. Arrays can be of different lengths,
-                  so if one arrays ends before the other, just continue adding elements from the remaining array.")
+                  so if one arrays ends before the other, stop adding new values and return.")
 
 (defn arguments-generator []
   (gen/tuple (gen/list gen/int) (gen/list gen/int)))
