@@ -9,7 +9,7 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (>= (apply issue/solution v)
+                (>= (BigInteger. (apply issue/solution v))
                     (BigInteger. (s/join (first v))))))
 
 (deftest test-solution
