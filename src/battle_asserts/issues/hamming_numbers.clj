@@ -9,7 +9,7 @@
                  Generate n-th number.")
 
 (defn arguments-generator []
-  (gen/tuple (gen/choose 1 1000)))
+  (gen/tuple (gen/choose 1 500)))
 
 (def test-data
   [{:expected 36
