@@ -21,7 +21,7 @@
                                       (recur n
                                              (format (rand-nth right-combination)
                                                      result)))))]
-      (gen/tuple (gen/one-of [(gen/elements (repeatedly 50 permutation))
+      (gen/tuple (gen/one-of [(gen/elements (repeatedly 30 permutation))
                               (gen/elements (repeatedly 50 shuffled-balanced-permutation))
                               (gen/elements (repeatedly 50 balanced-permutation))])))))
 
