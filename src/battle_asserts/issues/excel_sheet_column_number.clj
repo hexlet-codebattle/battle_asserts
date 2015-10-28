@@ -15,12 +15,12 @@
       (gen/tuple (gen/bind (gen/choose 1 4) #(gen/return (permutation %)))))))
 
 (def test-data
-  [{:expected 1
-    :arguments ["A"]}
+  [{:expected 666
+    :arguments ["YP"]}
    {:expected 26
     :arguments ["Z"]}
-   {:expected 666
-    :arguments ["YP"]}
+   {:expected 1
+    :arguments ["A"]}
    {:expected 2458
     :arguments ["CPN"]}
    {:expected 24568

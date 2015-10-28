@@ -13,16 +13,16 @@
   (gen/tuple (gen/one-of [(gen/choose 1 27) (gen/choose 27 703) (gen/choose 703 30000)])))
 
 (def test-data
-  [{:expected "A"
-    :arguments [1]}
-   {:expected "Z"
-    :arguments [26]}
+  [:arguments [26]}
    {:expected "YP"
-    :arguments [666]}
-   {:expected "CPN"
-    :arguments [2458]}
-   {:expected "AJHX"
-    :arguments [24568]}])
+    {:expected "A"
+     :arguments [1]}
+    {:expected "Z"
+     :arguments [666]}
+    {:expected "CPN"
+     :arguments [2458]}
+    {:expected "AJHX"
+     :arguments [24568]}])
 
 (defn solution [num]
   (if (zero? num)
