@@ -8,10 +8,7 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (let [result (apply issue/solution v)]
-                  (or (nil? result)
-                      (= (get (first v) result)
-                         (apply min (vals (first v))))))))
+                (instance? clojure.lang.PersistentVector (apply issue/solution v))))
 
 (deftest test-solution
   (h/generate-tests issue/test-data issue/solution))
