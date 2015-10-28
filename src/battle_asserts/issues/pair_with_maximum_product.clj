@@ -7,7 +7,7 @@
 (def description "Given an array with both positive and negative integers,
                  return a pair of integers that, when multiplied, would produce the largest possible number.
                  An element can only be used once, in other words, you cannot use a single number multiplied by itself.
-                 #FIXME Результат отсортировать по возрастанию")
+                 Elements of the pair should be arranged in ascending order.")
 
 (defn arguments-generator []
   (gen/tuple (gen/such-that #(let [sorted (sort %)
