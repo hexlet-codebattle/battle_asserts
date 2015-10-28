@@ -10,23 +10,28 @@
                  and the largest of them is 4324.")
 
 (defn arguments-generator []
-  (gen/tuple (gen/not-empty (gen/vector (gen/choose 0 547) 2 5))))
+  (gen/tuple (gen/not-empty (gen/vector (gen/one-of
+                                          [(gen/choose 0 9)
+                                           (gen/choose 100 500)
+                                           (gen/choose 10 99)])
+                                        1
+                                        5))))
 
 (def test-data
   [{:arguments [[1 34 3 98 9 76 45 4]]
-    :expected 998764543431}
+    :expected "998764543431"}
    {:arguments [[1 2 3 4 5 6]]
-    :expected 654321}
+    :expected "654321"}
    {:arguments [[481 428 385 202 2 197 106 10]]
-    :expected 481428385220219710610}
+    :expected "481428385220219710610"}
    {:arguments [[54 546 548 60]]
-    :expected 6054854654}
+    :expected "6054854654"}
    {:arguments [[43 44 12 324 90 9 88 89]]
-    :expected 9908988444332412}])
+    :expected "9908988444332412"}])
 
 (defn my-comparator [val1 val2]
   (compare (Integer. (str val2 val1))
            (Integer. (str val1 val2))))
 
 (defn solution [array]
-  (BigInteger. (clojure.string/join (sort my-comparator array))))
+  (clojure.string/join (sort my-comparator array)))
