@@ -7,7 +7,7 @@
 
 (def description
   "Find all the anagrams in a vector of words.
-  Your function should return sorted vector of vectors, where each sub-vec is a group of words which are anagrams of each other.
+  Your function should return vector of vectors, where each sub-vec is a group of words which are anagrams of each other.
   Words without any anagrams should not be included in the result.")
 
 (defn arguments-generator
@@ -23,10 +23,10 @@
 ; (gen/sample (arguments-generator) 5)
 
 (def test-data
-  [{:arguments [["meat" "mat" "team" "mate" "eat"]]
-    :expected [["mate" "meat" "team"]]}
-   {:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-    :expected [["ever" "veer"] ["item" "mite"] ["kale" "lake"]]}])
+  [{:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
+    :expected [["veer" "ever"] ["lake" "kale"] ["item" "mite"]]}
+   {:arguments [["meat" "mat" "team" "mate" "eat"]]
+    :expected [["meat" "team" "mate"]]}])
 
 (defn solution
   [words]
@@ -44,8 +44,8 @@
                  unconfirmed (filter #(not (anagram? word %)) anagrams)]
              (if (empty? confirmed)
                []
-               (cons (vec (sort confirmed))
+               (cons (vec confirmed)
                      (anagrams-for (first unconfirmed) unconfirmed)))))]
 
-    (vec (sort (filter #(< 1 (count %))
-                       (anagrams-for (first words) words))))))
+    (vec (filter #(< 1 (count %))
+                 (anagrams-for (first words) words)))))
