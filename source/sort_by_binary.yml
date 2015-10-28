@@ -1,8 +1,0 @@
----
-level: easy
-tags: [numeric, sort]
-description: |
-  Sort array of integer numbers by count of 1's in it's binary representation.
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]
