@@ -1,7 +1,0 @@
----
-level: medium
-tags: []
-description: Find the largest element in the Syracuse sequence.
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]
