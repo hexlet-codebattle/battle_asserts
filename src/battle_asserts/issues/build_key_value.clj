@@ -4,7 +4,8 @@
 
 (def level :medium)
 
-(def description "Flatten the given hash.")
+(def description "Flatten the given hash. 
+  This is how HTTP libraries pack data when POST requests are made using x-www-form-urlencoded.")
 
 (defn arguments-generator []
   (let [word-generator (gen/elements (faker/words {:lang :en :n 30}))]
