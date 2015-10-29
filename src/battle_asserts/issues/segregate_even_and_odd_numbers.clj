@@ -4,9 +4,8 @@
 
 (def level :easy)
 
-(def description "Напишите функцию, принимающую на вход массив.
-                 Результатом выполнения функции является массив в котором все четные элементы
-                 из входного массива находятся в начале а нечетные в конце")
+(def description "Given an array of numbers, return an array in which all the even numbers come first, 
+                  and all the odd numbers come second.")
 
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int)))
