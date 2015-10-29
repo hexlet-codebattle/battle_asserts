@@ -1,8 +1,0 @@
----
-level: elementary
-tags: [strings]
-description: |
-  Write function  Underscore, which makes an underscored, lowercase form from the expression in the string
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]
