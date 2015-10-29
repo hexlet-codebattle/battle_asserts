@@ -13,7 +13,7 @@
                                      gen/boolean
                                      word-generator
                                      (gen/recursive-gen
-                                      #(gen/one-of [(gen/vector %) (gen/map word-generator %)])
+                                      #(gen/one-of [(gen/vector % 1 4) (gen/map word-generator %)])
                                       (gen/one-of [gen/boolean gen/int]))])))))
 
 (def test-data
@@ -29,12 +29,12 @@
 (defn solution [hash]
   (letfn
    [(func [acc [k v]]
-      (condp = (type v)
-        clojure.lang.PersistentArrayMap (merge acc
-                                               (solution (map #(assoc % 0 (format "%s[%s]" k (% 0)))
-                                                              v)))
-        clojure.lang.PersistentVector (merge acc
-                                             (solution (map-indexed #(vector (format "%s[%d]" k %1) %2)
-                                                                    v)))
-        (assoc acc k v)))]
+      (cond
+        (map? v) (merge acc
+                        (solution (map #(assoc % 0 (format "%s[%s]" k (% 0)))
+                                       v)))
+        (vector? v) (merge acc
+                           (solution (map-indexed #(vector (format "%s[%d]" k %1) %2)
+                                                  v)))
+        :else (assoc acc k v)))]
     (reduce func {} (vec hash))))
