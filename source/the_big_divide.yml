@@ -1,9 +1,0 @@
----
-level: easy
-tags: [math]
-description: |
-  Write a function which calculates the sum of all natural numbers under n (first argument)
-  which are evenly divisible by at least one of a and b (second and third argument)
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]
