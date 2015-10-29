@@ -4,8 +4,8 @@
 
 (def level :elementary)
 
-(def description "#FIXME Написать функцию, принимающую на вход число и возвращающую строку
-                 вида \"Values is \" плюс число дополненное до 5 символов нулями слева")
+(def description "Given a number as input, return a string \"Value is X\", 
+                  where X is the given number with zeros added to the beginning so that there are 5 digits in total.")
 
 (defn arguments-generator []
   (gen/tuple (gen/one-of [(gen/choose 0 9)
