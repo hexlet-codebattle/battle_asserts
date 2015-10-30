@@ -4,7 +4,10 @@
 
 (def level :easy)
 
-(def description "Given an array of integers, sort the array according to frequency of elements.")
+(def description "Given an array of integers, sort the array according to frequency of elements. 
+                  Most frequent numbers come first.
+                  If several groups of the same size exist, 
+                  they should appear in the order of corresponding numbers in the input array.")
 
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int 4 20)))
