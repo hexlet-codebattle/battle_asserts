@@ -1,7 +1,0 @@
----
-level: medium
-tags: []
-description: "Write some code to sum all primes from 2 up to a given number."
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]
