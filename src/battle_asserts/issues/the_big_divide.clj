@@ -4,8 +4,8 @@
 
 (def level :easy)
 
-(def description "Write a function which calculates the sum of all natural numbers under n (first argument)
-                 which are evenly divisible by at least one of a and b (second and third argument)")
+(def description "Calculate the sum of all natural numbers under n (first argument)
+                 which are divisible with no remainder by at least one of a and b (second and third argument)")
 
 (defn arguments-generator []
   (gen/tuple (gen/choose 1 2000) (gen/choose 1 100) (gen/choose 1 100)))

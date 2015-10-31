@@ -18,20 +18,18 @@
 
 ## How to add a new problem
 
-You have to write a description of the problem and the implementation.
-
-Examples are in `src/battle_asserts/issues`. Corresponding tests are in `test/battle_asserts/issues`.
+You have to write the description of the problem and the correct implementation. See examples in `src/battle_asserts/issues`. Corresponding tests are in `test/battle_asserts/issues`.
 
 A problem file includes:
 
 * `level` — difficulty of the problem; possible values are `elementary`, `easy`, `medium`, `hard`.
 * `description` — detailed description of the problem.
-* `test-data` — data in a specified format which will be used to test solutions. The first element in this list will be displayed as an example to players, so this example should be a good one, it should clarify and illustrate the problem as much as possible.
+* `test-data` — data in a specified format which will be used to test solutions. The first element in this list will be displayed as an example to players, so it should clarify and illustrate the problem as much as possible. Do not choose a trivial case for this example.
 * `arguments-generator` — arguments generator for the `solution` function;
     generated arguments will be used to test players' solutions.
-* `solution` — implementation of a solution for the problem.
+* `solution` — implemented correct solution.
 
-Test file includes a call to test generator (the same for all tests).
+Test file includes a call to a test generator (the same for all tests).
 
 ## Related links
 

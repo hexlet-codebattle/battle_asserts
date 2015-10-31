@@ -4,8 +4,7 @@
 
 (def level :elementary)
 
-(def description "#FIXME Напишите функцию принимающую на вход массив и
-                 проверяющую равна ли сумма чисел в массиве 21")
+(def description "Given an array, determine if the sum of all its elements is equal to 21.")
 
 (defn arguments-generator []
   (letfn [(seq-with-sum [value]

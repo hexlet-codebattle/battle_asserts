@@ -4,8 +4,7 @@
 
 (def level :elementary)
 
-(def description "Write a function that takes an array of integers
-                 and returns the sum of the integers after adding 1 to each.")
+(def description "Given an array of integers, return the sum of integers after adding 1 to each one.")
 
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int)))

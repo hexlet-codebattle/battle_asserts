@@ -5,7 +5,7 @@
 
 (def level :elementary)
 
-(def description "Write function, which makes an underscored, lowercase form from the expression in the string")
+(def description "Given a string with words separated in different ways, return an underscored, lowercase form.")
 
 (defn arguments-generator []
   (letfn [(camel-case []
