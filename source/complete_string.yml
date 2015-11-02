@@ -1,8 +1,0 @@
----
-level: elementary
-tags: [string]
-description: |
-  A string is said to be complete if it contains all the characters from a to z. Given a string, check if it complete or not.
-
-multicode_checks:
-  langs: [ruby, javascript, php, python]
