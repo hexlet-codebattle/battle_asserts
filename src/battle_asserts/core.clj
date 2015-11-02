@@ -26,8 +26,9 @@
         sample (first @(ns-resolve issue-ns-name 'test-data))]
     ; (print sample)
     (let [filename (str "issues/" issue-name ".yml")
-          arguments (s/join ", " (map json/write-str (:arguments sample)))
-          expected (json/write-str (:expected sample))
+          json-options [:escape-unicode false :escape-slash false]
+          arguments (s/join ", " (map #(apply json/write-str % json-options) (:arguments sample)))
+          expected (apply json/write-str (:expected sample) json-options)
           description @(ns-resolve issue-ns-name 'description)
           metadata {:level @(ns-resolve issue-ns-name 'level)
                     :description (str description
@@ -38,9 +39,10 @@
       (spit filename yaml))
 
     (let [filename (str "issues/" issue-name ".jsons")
+          json-options [:escape-unicode false :escape-slash false]
           asserts (generate-asserts generator solution)]
       (with-open [w (io/writer filename)]
-        (doall (map #(.write w (str (json/write-str %) "\n"))
+        (doall (map #(.write w (str (apply json/write-str % json-options) "\n"))
                     asserts))))))
 
 (defn -main [& args]
