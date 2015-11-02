@@ -5,7 +5,7 @@
 
 (def level :elementary)
 
-(def description "Write function, which replace any sequences of spaces to single space.")
+(def description "Given a string, replace any sequences of spaces with a single space.")
 
 (defn arguments-generator []
   (letfn [(sentence-with-spaces []

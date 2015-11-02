@@ -5,9 +5,7 @@
 
 (def level :easy)
 
-(def description "Напишите функцию, которая принимает на вход число
-                 и возвращяет в качестве результата строку со входным числом
-                 разбитым запятыми по разрядам")
+(def description "Given a number as input, return a string with that number formatted with commas to separate each three digits from the right to make it look like a standard North American number.")
 
 (defn arguments-generator []
   (gen/tuple (gen/choose 1 2000000)))

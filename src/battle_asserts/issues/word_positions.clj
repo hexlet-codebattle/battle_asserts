@@ -4,7 +4,7 @@
 
 (def level :elementary)
 
-(def description "Given a text file and a word, find the positions that the word occurs in the file.
+(def description "Given a text file and a word, find all the positions in which the word occurs in the file.
                  We’ll be asked to find the positions of many words in the same file.")
 
 (defn arguments-generator []

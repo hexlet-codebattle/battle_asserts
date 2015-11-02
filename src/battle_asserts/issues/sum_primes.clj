@@ -4,7 +4,7 @@
 
 (def level :medium)
 
-(def description "Write some code to sum all primes from 2 up to a given number.")
+(def description "Return the sum of all prime numbers from 2 up to a given number.")
 
 (defn arguments-generator []
   (gen/tuple (gen/choose 10 1000)))

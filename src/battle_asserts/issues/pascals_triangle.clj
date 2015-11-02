@@ -4,7 +4,7 @@
 
 (def level :medium)
 
-(def description "Return the nth row of Pascal's Triangle.")
+(def description "Return the N'th row of Pascal's Triangle.")
 
 (defn arguments-generator []
   (gen/tuple gen/pos-int))
