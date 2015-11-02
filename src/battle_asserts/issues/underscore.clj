@@ -9,8 +9,10 @@
 
 (defn arguments-generator []
   (letfn [(camel-case []
-            (s/join (rand-nth ["-" "::" ""])
-                    (map #((rand-nth [s/capitalize s/upper-case]) %) (faker/words {:lang :en :n 2}))))]
+            (let [words (faker/words {:lang :en :n (inc (rand-int 6))})
+                  separators (repeatedly (count words) #(rand-nth ["::" ""]))
+                  words-with-separators (drop-last (interleave words separators))]
+              (s/join (map s/capitalize words-with-separators))))]
     (gen/tuple (gen/elements (repeatedly 50 camel-case)))))
 
 (def test-data
