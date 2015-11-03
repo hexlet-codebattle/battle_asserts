@@ -4,7 +4,9 @@
 
 (def level :easy)
 
-(def description "Return a query string (URL) generated from the given address and a hash map of parameters.")
+(def description "Return a query string (URL) generated from the given address and a hash map of parameters.
+                 #FIXME В результирующей строке параметры должны следовать в алфавитном порядке.
+                 ")
 
 (defn arguments-generator []
   (letfn [(address []
@@ -27,7 +29,7 @@
     :arguments ["http://www.example.com/search"
                 {:q "findme"
                  :useragent "chrome"}]}
-   {:expected "http://authority.com?smile=weight&surprise=connection&steam=metal"
+   {:expected "http://authority.com?smile=weight&steam=metal&surprise=connection"
     :arguments ["http://authority.com"
                 {:smile "weight"
                  :surprise "connection"
@@ -36,5 +38,5 @@
 (defn solution [url params]
   (str url "?"
        (clojure.string/join "&"
-                            (map #(str % "=" (params (keyword %)))
-                                 (map name (keys params))))))
+                            (map #(str (name %) "=" (params %))
+                                 (sort (keys params))))))
