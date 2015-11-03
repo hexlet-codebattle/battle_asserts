@@ -5,8 +5,7 @@
 (def level :easy)
 
 (def description "Return a query string (URL) generated from the given address and a hash map of parameters.
-                 #FIXME В результирующей строке параметры должны следовать в алфавитном порядке.
-                 ")
+                  The parameters in your result string should be arranged in alphabetical order.")
 
 (defn arguments-generator []
   (letfn [(address []
