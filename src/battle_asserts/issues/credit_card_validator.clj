@@ -58,6 +58,4 @@
 (defn solution [number]
   (let [arr-number-card (map #(read-string (str %)) number)
         sum (reduce + (change-digits arr-number-card))]
-    (println number)
-    (println sum)
     (zero? (mod sum 10))))
