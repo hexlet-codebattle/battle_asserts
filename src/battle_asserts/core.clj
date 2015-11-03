@@ -39,10 +39,9 @@
       (spit filename yaml))
 
     (let [filename (str "issues/" issue-name ".jsons")
-          json-options [:escape-unicode false :escape-slash false]
           asserts (generate-asserts generator solution)]
       (with-open [w (io/writer filename)]
-        (doall (map #(.write w (str (apply json/write-str % json-options) "\n"))
+        (doall (map #(.write w (str (json/write-str %) "\n"))
                     asserts))))))
 
 (defn -main [& args]
