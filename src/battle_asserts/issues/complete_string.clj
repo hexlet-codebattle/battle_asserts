@@ -16,17 +16,15 @@
                               (shuffle (alphabet))
                               (take (inc (rand-int 20)))
                               s/join))
-          (incomplete-string-full-length []
-                                         (->>
-                                          (seq (incomplete-string))
-                                          cycle
-                                          (take 26)
-                                          s/join))
-          (complete-string []
-                           (s/join (shuffle (alphabet))))]
+          (generate-string-from [alphabet]
+                                (->>
+                                 alphabet
+                                 cycle
+                                 (take (+ 26 (rand-int 5)))
+                                 s/join))]
     (gen/tuple (gen/one-of [(gen/elements (repeatedly 50 incomplete-string))
-                            (gen/elements (repeatedly 50 incomplete-string-full-length))
-                            (gen/elements (repeatedly 50 complete-string))]))))
+                            (gen/elements (repeatedly 50 #(generate-string-from (seq (incomplete-string)))))
+                            (gen/elements (repeatedly 50 #(generate-string-from (alphabet))))]))))
 
 (def test-data
   [{:expected false :arguments ["wyyga"]}
@@ -37,6 +35,7 @@
 (defn solution [s]
   (= (-> s
          seq
+         distinct
          sort
          s/join)
      "abcdefghijklmnopqrstuvwxyz"))
