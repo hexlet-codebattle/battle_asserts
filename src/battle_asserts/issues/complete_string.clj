@@ -6,7 +6,7 @@
 (def level :elementary)
 
 (def description "A string is said to be complete if it contains all the characters from a to z.
-                 Given a string, check if it complete or not.")
+                 Given a string, check if it's complete or not.")
 
 (defn arguments-generator []
   (letfn [(alphabet []
