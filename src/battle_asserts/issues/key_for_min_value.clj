@@ -5,7 +5,7 @@
 (def level :elementary)
 
 (def description "Given a hash map, return the keys of the elements with the smallest value.
-                 #FIXME Результат должен быть отсортирован в алфавитном порядке")
+                  The result should be sorted alphabetically.")
 
 (defn arguments-generator []
   (letfn [(gen-word []
