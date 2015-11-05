@@ -7,12 +7,12 @@
 
 (def description "Credit card numbers can be validated with a process called the Luhn algorithm.
                  Simply stated, the Luhn algorithm works like this:
-                 #FIXME
-                 1. Каждое число с четным индексом, если кол-во цифр в номере четное, если же
-                    кол-во цифр нечетное, тогда каждое число с нечетным индексом, заменяется на 2\\*x - 9 если
-                    2\\*x > 9, инача на \\*2x.
-                 2. Затем все числа складываются
-                 3. Если полученная сумма кратна 10 то номер карты верный.")
+                 1. If the length of the card number is even, pick all the digits with an even index. 
+                 If the length of the card number is odd, pick all the digits with an odd index.
+                 2. Transform each digit like so: if 2\\*x > 9, then replace x with 2\\*x - 9; 
+                 othwerise, replace x with \\*2x
+                 3. Add up all the numbers.
+                 4. If the result is divisable by 10 (withour remainder) then the card number was valid.")
 
 (defn- get-digit
   [digit]
