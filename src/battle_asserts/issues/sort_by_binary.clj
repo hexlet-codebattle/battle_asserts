@@ -4,9 +4,9 @@
 
 (def level :easy)
 
-(def description "Sort array of integer numbers by count of 1's in it's binary representation.
-                 #FIXME Если два числа имеют одинаковое кол-во едениц в двоичном представлении то
-                 они сортируются согласно их появлению в исходном массиве")
+(def description "Sort an array of integers by the number of 1's is in it's binary representation (ascending order).
+                  If two integers have the same number of 1's in their binary representation,
+                  their relative order should be the same as in the original array.")
 
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int 2 20)))
