@@ -11,7 +11,7 @@
                  Unicode whitespace.")
 
 (defn separators []
-  (apply str (repeat (rand-int 10) (rand-nth ["\t" "\n" " "]))))
+  (string/join (repeat (rand-int 10) (rand-nth ["\t" "\n" " "]))))
 
 (defn arguments-generator []
   (gen/tuple
