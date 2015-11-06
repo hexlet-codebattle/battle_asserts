@@ -23,11 +23,17 @@
    {:expected 7
     :arguments [[6 10 7 4 9 120 4 7]]}
    {:expected 8
-    :arguments [[8 8 7 4 9 120 4 7]]}])
+    :arguments [[8 8 7 4 9 120 4 7]]}
+   {:expected -11
+    :arguments [[-9 -11 -13 1 13 13 -2 -6 7 -11 -11 -2 7]]}
+   {:expected -9
+    :arguments [[3,-9,-4,11,15,-14,-1,11,1,-7,7,8,-9,-9,8,12]]}])
 
 (defn solution [array]
-  (let [occurrence (reduce #(assoc %1 %2 (inc (get %1 %2 0))) {} array)]
-    (->>
-     array
-     (filter #(> (get occurrence %) 1))
-     first)))
+  (->>
+   array
+   frequencies
+   (filter #(> (val %) 1))
+   keys
+   (sort-by #(.indexOf array %))
+   first))
