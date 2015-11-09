@@ -11,29 +11,25 @@
                  Unicode whitespace.")
 
 (defn separators []
-  (string/join (repeat (rand-int 10) (rand-nth ["\t" "\n" " "]))))
+  (repeatedly (rand-int 10)
+              #(rand-nth ["\t" "\n" " "])))
 
 (defn arguments-generator []
   (gen/tuple
-    (gen/elements
-      (repeatedly
-        20
-        #(string/join
-          (separators)
-          (conj
-            (into
-              [(separators)]
-              (string/split
-                (faker/sentence {:words-range [1,5] :lang :ru})
-                #"\s"))
-            " "))))))
+   (gen/elements
+    (repeatedly 20 #(string/join (interleave (separators)
+                                             (string/split (faker/sentence {:lang :en :words-range [1,5]}) #"\s")
+                                             (separators)))))))
 
 (def test-data
   [{:expected "Multi-line string is so cool"
     :arguments ["  Multi-line \n       string    \t   is   \n   so cool   \n"]}])
 
-(defn squeeze_spaces [str]
-  (string/replace str #"\s+" " "))
+(defn squeeze-spaces [sentence]
+  (string/replace sentence #"\s+" " "))
 
-(defn solution [str]
- (-> str string/triml string/trimr squeeze_spaces))
+(defn solution [sentence]
+  (-> sentence
+      string/triml
+      string/trimr
+      squeeze-spaces))
