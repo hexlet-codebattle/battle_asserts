@@ -25,7 +25,7 @@
          summand2 (map str (reverse strign2))
          overflow 0
          result ""]
-    (if (and (empty? summand1) (empty? summand2))
+    (if (and (empty? summand1) (empty? summand2) (zero? overflow))
       result
       (let [number1 (read-string (or (first summand1) "0"))
             number2 (read-string (or (first summand2) "0"))
