@@ -5,8 +5,7 @@
 
 (def level :medium)
 
-(def description "#FIXME Напишите функцию принимающую на вход целое число x и возвращающую
-                 сумму x + xx + xxx + ... (x раз) в виде строки")
+(def description "Given an integer x, return the sum x + xx + xxx (x times) as a string. For example, for 2: 2 + 22 = 24.")
 
 (defn arguments-generator []
   (gen/tuple (gen/choose 1 25)))
