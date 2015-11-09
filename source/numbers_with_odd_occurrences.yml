@@ -1,8 +1,0 @@
----
-level: easy
-tags: [array]
-description: |
-  Find the N numbers which have odd occurrences in array.
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]
