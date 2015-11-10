@@ -1,29 +1,39 @@
 (ns battle-asserts.issues.squish
-  (:require [clojure.test.check.generators :as gen]
-            [clojure.string :as s]
+  (:require [clojure.string :as string]
+            [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
 (def level :elementary)
 
-(def description "Given a string, replace any sequences of spaces with a single space.")
+(def description "Returns the string, first removing all whitespace on both ends
+                 of the string, and then changing remaining consecutive whitespace
+                 groups into one space each. Note that it handles both ASCII and
+                 Unicode whitespace.")
+
+(defn- random-separator []
+  (rand-nth ["\t" "\n" " "]))
+
+(defn- random-separators [n]
+  (string/join (repeatedly n random-separator)))
+
+(defn- prepared-string []
+  (->>
+    (faker/words {:lang :en :n 10})
+    (map #(str (random-separators 5) % (random-separators 5)))
+    (string/join)))
 
 (defn arguments-generator []
-  (letfn [(sentence-with-spaces []
-            (s/replace (faker/sentence  {:words-range  [1,10]})
-                       #" "
-                       (s/join (repeat (inc (rand-int 7))  " "))))]
-    (gen/tuple (gen/elements (repeatedly 50 sentence-with-spaces)))))
+  (gen/tuple (gen/elements (repeatedly 20 prepared-string))))
 
 (def test-data
-  [{:expected "This string has too much spaces"
-    :arguments ["This    string  has   too    much spaces"]}])
+  [{:expected "Multi-line string is so cool"
+    :arguments ["  Multi-line \n       string    \t   is   \n   so cool   \n"]}])
 
-(defn solution [str1]
-  (clojure.string/join
-   (reverse (reduce
-             #(if (and (= (first %1) \space)
-                       (= %2 \space))
-                %1
-                (conj %1 %2))
-             '()
-             (seq str1)))))
+(defn squeeze-spaces [sentence]
+  (string/replace sentence #"\s+" " "))
+
+(defn solution [sentence]
+  (-> sentence
+      string/triml
+      string/trimr
+      squeeze-spaces))
