@@ -5,8 +5,8 @@
 (def level :medium)
 
 (def description "Determine if a given number is \"perfect\".
-                 #FIXME Совершенное число - натуральное число, равное сумме всех своих собственных делителей (т.е всех положительных
-                 делителей отличных от самого числа)")
+                  Perfect number is a positive integer that is equal to the sum of 
+                  its proper positive divisors (the sum of its positive divisors excluding the number itself).")
 
 (defn arguments-generator []
   (let [perfect-numbers [6 28 496 8128]]
