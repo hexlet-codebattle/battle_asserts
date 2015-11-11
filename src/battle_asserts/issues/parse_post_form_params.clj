@@ -5,7 +5,7 @@
 
 (def level :medium)
 
-(def description "#FIXME Напишите функцию разбирающую строку запроса переданную в функцию")
+(def description "Parse a given request string.")
 
 (defn to-query [value]
   (letfn [(to-string [name value]
