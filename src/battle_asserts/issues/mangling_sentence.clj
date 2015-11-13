@@ -5,7 +5,7 @@
 
 (def level :easy)
 
-(def description "#FIXME Напишите функцию сортирующую буквы в каждом слове предложения.")
+(def description "Given a sentence, sort characters in each word alphabetically.")
 
 (defn- input-sentence []
   (let [sentence (faker/sentence {:lang :en :words-range [1 10]})
