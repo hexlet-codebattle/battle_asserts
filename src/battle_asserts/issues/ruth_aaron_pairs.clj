@@ -5,10 +5,10 @@
 
 (def level :easy)
 
-(def description "#FIXME Написать функцию проверяющую является ли пара чисел парой Рута-Ааорона.
-                 Пара Рута-Ааорона состоит из двух последовательных чисел (например 714 715), суммы
-                 простоых множителей которых равны. При нахождении суммы простых множителей
-                 необходимо учитывать повторения множителей")
+(def description "Check if a given pair of numbers is a Ruth–Aaron pair. 
+                  A Ruth–Aaron pair consists of two consecutive integers (e.g. 714 and 715) for 
+                  which the sums of the prime factors of each integer are equal. 
+                  When calculating the sum, take into account the repeating factors.")
 
 (def ruth-aaron-pairs [[5 6] [8 9] [15 16] [77 78] [125 126] [714 715] [948 949] [1330 1331] [1520 1521]
                        [1862 1863] [2491 2492] [3248 3249] [4185 4186] [4191 4192] [5405 5406] [5560 5561]
