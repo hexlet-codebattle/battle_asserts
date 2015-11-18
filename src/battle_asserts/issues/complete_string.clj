@@ -11,31 +11,35 @@
 (defn arguments-generator []
   (letfn [(alphabet []
             (map char (range (int \a) (inc (int \z)))))
+          (sed-of-numbers-and-letters []
+            (concat (alphabet) (range 0 10)))
           (incomplete-string []
-                             (->>
-                              (shuffle (alphabet))
-                              (take (inc (rand-int 20)))
-                              s/join))
+            (->>
+              (shuffle (alphabet))
+              (take (inc (rand-int 20)))
+              s/join))
           (generate-string-from [alphabet]
-                                (->>
-                                 alphabet
-                                 cycle
-                                 (take (+ 26 (rand-int 5)))
-                                 s/join))]
+            (->>
+              alphabet
+              shuffle
+              cycle
+              (take (+ 26 (rand-int 5)))
+              s/join))]
     (gen/tuple (gen/one-of [(gen/elements (repeatedly 50 incomplete-string))
-                            (gen/elements (repeatedly 50 #(generate-string-from (seq (incomplete-string)))))
+                            (gen/elements (repeatedly 50 #(generate-string-from (sed-of-numbers-and-letters))))
                             (gen/elements (repeatedly 50 #(generate-string-from (alphabet))))]))))
 
 (def test-data
   [{:expected false :arguments ["wyyga"]}
    {:expected true :arguments ["qwertyuioplkjhgfdsazxcvbnm"]}
    {:expected false :arguments ["ejuxggfsts"]}
-   {:expected true :arguments ["qpwoeirutyalskdjfhgmznxbcv"]}])
+   {:expected true :arguments ["qpwoeirutyalskdjfhgmznxbcv"]}
+   {:expected false :arguments ["0123456789abcdefghijklmnop"]}])
 
 (defn solution [s]
-  (= (-> s
-         seq
-         distinct
-         sort
-         s/join)
+  (= (->> s
+          (re-seq #"[a-z]")
+          distinct
+          sort
+          s/join)
      "abcdefghijklmnopqrstuvwxyz"))
