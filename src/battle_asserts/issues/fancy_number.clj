@@ -6,7 +6,10 @@
 (def level :easy)
 
 (def description "Given a number, find whether it is fancy or not.
-                 A fancy number is one which when rotated 180 degrees is the same.")
+                 A fancy number is one which when rotated 180 degrees is the same.
+                 #FIXME число может состоять только из 6, 9, 8, 1, 0
+                 При повороте 6 превращяется в 9, 9 превращяются в 6,
+                 8, 1, 0 превращяются в самих себя")
 
 (def mapping {\0 \0 \1 \1 \6 \9 \8 \8 \9 \6})
 
