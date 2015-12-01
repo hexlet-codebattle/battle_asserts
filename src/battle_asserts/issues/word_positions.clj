@@ -1,5 +1,6 @@
 (ns battle-asserts.issues.word-positions
   (:require [clojure.test.check.generators :as gen]
+            [clojure.string :as s]
             [faker.generate :as faker]))
 
 (def level :elementary)
@@ -9,9 +10,15 @@
 
 (defn arguments-generator []
   (letfn [(input []
-            (let [sentence (faker/sentence {:words-range [1, 10]})
-                  words (re-seq #"\w+" sentence)]
-              [sentence, (rand-nth words)]))]
+            (let [words (faker/words {:lang :en :n 10})
+                  word (rand-nth words)]
+              (->> (cycle [word])
+                   (take (rand-int 4))
+                   (concat words)
+                   shuffle
+                   (s/join " ")
+                   (vector word)
+                   reverse)))]
     (gen/elements (repeatedly 50 input))))
 
 (def test-data
