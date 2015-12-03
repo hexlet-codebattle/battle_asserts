@@ -8,7 +8,7 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (instance? Boolean (apply issue/solution v))))
+                (string? (apply issue/solution v))))
 
 (deftest test-solution
   (h/generate-tests issue/test-data issue/solution))
