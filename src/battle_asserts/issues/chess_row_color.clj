@@ -10,26 +10,28 @@
   (gen/tuple (gen/elements ["A" "B" "C" "D" "E" "F" "G" "H"]) (gen/elements (range 1 9))))
 
 (def test-data
-  [{:expected true
+  [{:expected "black"
     :arguments ["A" 1]}
-   {:expected true
+   {:expected "black"
     :arguments ["H" 8]}
-   {:expected true
+   {:expected "black"
     :arguments ["D" 4]}
-   {:expected true
+   {:expected "black"
     :arguments ["G" 7]}
-   {:expected false
+   {:expected "white"
     :arguments ["A" 8]}
-   {:expected false
+   {:expected "white"
     :arguments ["H" 1]}
-   {:expected false
+   {:expected "white"
     :arguments ["E" 8]}
-   {:expected false
+   {:expected "white"
     :arguments ["E" 4]}])
 
 (defn solution [letter num]
   (let [letter-nums (zipmap ["A" "B" "C" "D" "E" "F" "G" "H"]
                             (range 1 9))]
-    (even? (+ num
-              (letter-nums letter)))))
+    (if (even? (+ num
+                  (letter-nums letter)))
+      "black"
+      "white")))
 
