@@ -8,8 +8,8 @@
 (def description "Check if the parentheses in the expression are all balanced, so that all open parentheses are closed properly.")
 
 (defn arguments-generator []
-  (let [brackets [\( \) \space]
-        right-combination ["()%s" "(%s)" "() %s" "( %s )"]]
+  (let [brackets [\( \) \space \\]
+        right-combination ["()%s" "(%s)" "() %s" "( %s )" "\\%s"]]
     (letfn [(permutation []
               (s/join (repeatedly (rand-int 10) #(rand-nth brackets))))
             (shuffled-balanced-permutation []
