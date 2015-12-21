@@ -5,9 +5,9 @@
 
 (def level :easy)
 
-(def description "Write a function that given two lists determines if the first list is
-                 contained within the second list, if the second list is contained within
-                 the first list, if both lists are contained within each other or if none
+(def description "Given two lists, determine whether the first list is
+                 contained within the second list, whether the second list is contained within
+                 the first list, whether both lists are contained within each other or whether none
                  of these are true.
                  A = [3, 4], B = [1, 2, 3, 4, 5], A is sublist of B
                  A = [1, 2, 3], B = [1, 2, 3], A is equal B
@@ -41,4 +41,3 @@
     (some #{a} (partition (count a) 1 b)) "A is sublist of B"
     (some #{b} (partition (count b) 1 a)) "A is superlist of B"
     :else "A is unequal B"))
-

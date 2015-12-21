@@ -4,7 +4,7 @@
 
 (def level :elementary)
 
-(def description "Check 3 integers is a Pythagorian Triplet.
+(def description "Check if 3 given integers form a Pythagorian Triplet.
                  Pythagorian Triplet is a triplet of numbers,
                  such that x^2 + y^2 = z^2")
 

@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "The input contains the maximal number of dots on one end of a domino bone.
+(def description "The input contains the maximum number of dots on one end of a domino bone.
                  Output the number of dots on the domino set.
                  Sample 2 -> 12")
 
@@ -28,4 +28,3 @@
     (->> (range (inc x))
          (map rat)
          (reduce +))))
-

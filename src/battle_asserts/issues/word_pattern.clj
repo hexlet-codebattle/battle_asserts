@@ -7,7 +7,7 @@
 (def level :easy)
 
 (def description "Given a pattern and a string str, find if str follows the same pattern.
-                 Examples
+                 For example,
                  pattern = \" abba \", str = \" dog cat cat dog \" should return true.")
 
 (defn arguments-generator []

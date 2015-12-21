@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Concatenate 2 strings by characters, one by one. In other words, take the 1st char from the first string, then 1st char from the second string, then 2nd char from the first string, then 2nd char from the second string, and so on. If on string ends before the other, just continue with the remaining characters.")
+(def description "Concatenate 2 strings by characters, one by one. In other words, take the 1st char from the first string, then 1st char from the second string, then 2nd char from the first string, then 2nd char from the second string, and so on. If one string ends before the other, just continue with the remaining characters.")
 
 (defn arguments-generator []
   (let [words (faker/words {:lang :en :n 20})]

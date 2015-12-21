@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def description "Calculate the angle between an hour and a minute hand at a given time.")
+(def description "Calculate the angle between the hour and the minute hand of a clock at a given time.")
 
 (defn arguments-generator []
   (gen/tuple (gen/choose 0 11) (gen/choose 0 59)))

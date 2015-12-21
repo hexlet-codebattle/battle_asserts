@@ -5,7 +5,7 @@
 
 (def level :medium)
 
-(def description "Check if a string is an anagram of the palindrome.")
+(def description "Check if any anagram of a given string is a palindrome.")
 
 (defn arguments-generator []
   (letfn [(alphabet []

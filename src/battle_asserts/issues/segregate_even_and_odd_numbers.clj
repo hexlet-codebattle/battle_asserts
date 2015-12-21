@@ -4,8 +4,7 @@
 
 (def level :easy)
 
-(def description "Given an array of numbers, return an array in which all the even numbers come first, 
-                  and all the odd numbers come second.")
+(def description "Given an array of numbers, return an array in which all the even numbers come first, and all the odd numbers come second.")
 
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int)))

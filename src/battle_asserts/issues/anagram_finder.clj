@@ -7,7 +7,7 @@
 
 (def description
   "Find all the anagrams in a vector of words.
-  Your function should return vector of vectors, where each sub-vec is a group of words which are anagrams of each other.
+  Your function should return a vector of vectors, where each sub-vector is a group of words which are anagrams of each other.
   Words without any anagrams should not be included in the result.")
 
 (defn arguments-generator

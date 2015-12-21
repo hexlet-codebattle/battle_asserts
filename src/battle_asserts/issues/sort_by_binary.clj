@@ -4,8 +4,7 @@
 
 (def level :easy)
 
-(def description "Sort an array of integers by the number of 1's is in it's binary representation (ascending order).
-                  If two integers have the same number of 1's in their binary representation,
+(def description "Sort an array of integers by the number of 1's in its binary representation (in ascending order). If two integers have the same number of 1's in their binary representation,
                   their relative order should be the same as in the original array.")
 
 (defn arguments-generator []

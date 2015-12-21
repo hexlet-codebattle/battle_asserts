@@ -5,7 +5,7 @@
 
 (def level :hard)
 
-(def description "Write a function to parse a Roman-numeral string and return the number it represents.")
+(def description "Parse a Roman-numeral string and return the number it represents.")
 
 (defn arguments-generator []
   (letfn [(to-roman [number]

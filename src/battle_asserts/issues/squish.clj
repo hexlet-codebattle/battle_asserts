@@ -5,10 +5,7 @@
 
 (def level :elementary)
 
-(def description "Returns the string, first removing all whitespace on both ends
-                 of the string, and then changing remaining consecutive whitespace
-                 groups into one space each. Note that it handles both ASCII and
-                 Unicode whitespace.")
+(def description "Given a string. Remove all the whitespaces from both ends of the string. Then collapse groups of whitespaces inside the string into single whitespace each. Handles both ASCII and Unicode whitespaces.")
 
 (defn- random-separator []
   (rand-nth ["\t" "\n" " "]))
