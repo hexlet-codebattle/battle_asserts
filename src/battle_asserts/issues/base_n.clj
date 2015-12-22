@@ -5,7 +5,7 @@
 
 (def level :easy)
 
-(def description "Check number can be n-nary number (means number in base-n for n < 10) ")
+(def description "Check whether the number can be a n-nary number (in other words, whether the number is in base-n for n < 10). ")
 
 (defn arguments-generator []
   (letfn [(number-with-base [base]

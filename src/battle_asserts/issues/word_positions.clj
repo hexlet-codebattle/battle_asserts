@@ -5,8 +5,7 @@
 
 (def level :elementary)
 
-(def description "Given a text file and a word, find all the positions in which the word occurs in the file.
-                 We’ll be asked to find the positions of many words in the same file.")
+(def description "Given a sentence and a word, find all the positions in which the word occurs in the sentence. Return an array of such positions.")
 
 (defn arguments-generator []
   (letfn [(input []
