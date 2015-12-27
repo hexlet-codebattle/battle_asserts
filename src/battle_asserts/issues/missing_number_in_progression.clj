@@ -21,7 +21,7 @@
                                inc))]
     (gen/tuple (gen/bind (gen/tuple (gen/choose -20 20)
                                     (gen/such-that #(not (zero? %)) gen/int)
-                                    (gen/choose 3 10))
+                                    (gen/choose 5 10))
                          #(->
                            (apply progression %)
                            (utility/drop-nth (random-not-extreme (last %)))
