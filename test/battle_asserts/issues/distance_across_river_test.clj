@@ -8,7 +8,8 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (instance? Double (apply issue/solution v))))
+                (let [r (apply issue/solution v)]
+                  (= (double (int r)) r))))
 
 (deftest test-solution
   (h/generate-tests issue/test-data issue/solution))
