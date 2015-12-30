@@ -11,7 +11,7 @@
                  [jonase/eastwood "0.2.1" :exclusions  [org.clojure/clojure]]
                  [org.clojure/tools.namespace "0.2.11"]
                  [org.clojure/data.json "0.2.6"]
-                 [org.clojure/test.check "0.8.2"]
+                 [org.clojure/test.check "0.9.0"]
                  [helpshift/faker "0.2.0"]
                  [circleci/clj-yaml "0.5.3"]
                  ]
