@@ -9,15 +9,20 @@
                  consume the trains' speeds and the starting distance between the trains.")
 
 (defn arguments-generator []
-  (gen/tuple (gen/such-that pos? gen/nat)
-             (gen/such-that pos? gen/nat)
-             gen/pos-int))
+  (gen/fmap #(conj (pop %)
+                   (* (apply + (pop %))
+                      (peek %)))
+            (gen/tuple gen/s-pos-int
+                       gen/s-pos-int
+                       gen/s-pos-int)))
 
 (def test-data
-  [{:expected 1 :arguments [50 50 100]}
-   {:expected 4/3 :arguments [25 50 100]}])
+  [{:expected 1.0 :arguments [50 50 100]}
+   {:expected 2.0 :arguments [30 40 140]}
+   {:expected 3.0 :arguments [70 50 360]}])
 
 (defn solution
   [v-train1 v-train2 distance]
-  (/ distance (+ v-train1
-                 v-train2)))
+  (double (/ distance
+             (+ v-train1
+                v-train2))))
