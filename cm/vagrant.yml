@@ -1,0 +1,35 @@
+- hosts: all
+
+  tasks:
+  - name: Add Java apt repository
+    apt_repository: repo=ppa:webupd8team/java
+    become: yes
+
+  - name: Install license acceptor
+    apt: name={item}
+    with_items:
+      - software-properties-common
+      - debconf-utils
+    become: yes
+
+  - name: Accept Oracle license
+    debconf:
+      name: oracle-java8-installer
+      question: shared/accepted-oracle-license-v1-1
+      value: 'true'
+      vtype: select
+    become: yes
+
+  - name: Install Java
+    apt: name=oracle-java8-installer
+    become: yes
+
+  - name: Download Leiningen
+    get_url:
+      url: https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+      dest: /bin/lein
+    become: yes
+
+  - name: Make Leiningen executable
+    file: path=/bin/lein mode=a+x
+    become: yes

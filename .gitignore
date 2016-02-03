@@ -9,3 +9,4 @@ target
 .nrepl-port
 issues/*.*
 !issues/.gitkeep
+.vagrant/
