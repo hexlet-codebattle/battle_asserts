@@ -11,9 +11,9 @@
 
 (defn arguments-generator []
   (gen/tuple (gen/not-empty (gen/vector (gen/one-of
-                                          [(gen/choose 0 9)
-                                           (gen/choose 100 500)
-                                           (gen/choose 10 99)])
+                                         [(gen/choose 0 9)
+                                          (gen/choose 100 500)
+                                          (gen/choose 10 99)])
                                         1
                                         5))))
 
