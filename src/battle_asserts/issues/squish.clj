@@ -15,9 +15,9 @@
 
 (defn- prepared-string []
   (->>
-    (faker/words {:lang :en :n 10})
-    (map #(str (random-separators 5) % (random-separators 5)))
-    (string/join)))
+   (faker/words {:lang :en :n 10})
+   (map #(str (random-separators 5) % (random-separators 5)))
+   (string/join)))
 
 (defn arguments-generator []
   (gen/tuple (gen/elements (repeatedly 20 prepared-string))))
