@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Hexlet/battle_asserts.png?branch=master)](https://travis-ci.org/hexlet/battle_asserts)
+[![Build Status](https://travis-ci.org/hexlet-codebattle/battle_asserts.svg?branch=master)](https://travis-ci.org/hexlet-codebattle/battle_asserts)
 [![Hexlet chat](http://slack-ru.hexlet.io/badge.svg)](http://slack-ru.hexlet.io)
 
 ## Setup for development
@@ -10,7 +10,7 @@
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Make changes
-4. Run tests (`lein test`).
+4. Run tests (`make test`).
 5. Commit your changes (`git commit -am 'Added some feature'`)
 6. Push to the branch (`git push origin my-new-feature`)
 7. Create new Pull Request
