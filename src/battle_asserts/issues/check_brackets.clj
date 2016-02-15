@@ -42,14 +42,13 @@
 
 (defn solution [s]
   (let [brackets {\( \) \[ \] \{ \} \< \>}
-        opening (set (keys brackets))
-        closing (set (vals brackets))]
-    (->> s
-         (reduce #(cond
-                    (opening %2) (conj %1 %2)
-                    (closing %2) (cond
-                                   (= (brackets (last %1)) %2) (pop %1)
-                                   :else (reduced (conj %1 %2)))
-                    :else %1)
-                 [])
-         empty?)))
+        opening? (set (keys brackets))
+        closing? (set (vals brackets))
+        f (fn [stack sym]
+            (cond
+              (opening? sym) (conj stack sym)
+              (closing? sym) (if (= (brackets (last stack)) sym)
+                               (pop stack)
+                               (reduced (conj stack sym)))
+              :else stack))]
+    (->> s str (reduce f []) empty?)))
