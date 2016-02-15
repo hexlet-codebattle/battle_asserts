@@ -6,20 +6,15 @@
 (def description "Compute the distance a boat travels across a river, given the width of the river, the boat's speed perpendicular to the river, and the river's speed.")
 
 (defn pairs-gen
-  [base-pair]
-  (gen/fmap (fn [x] (map (fn [y] (* y x))
-                         base-pair))
-            (gen/such-that pos? gen/pos-int)))
+  [[x y]]
+  (gen/fmap #(vector (* x %) (* y %))
+            gen/s-pos-int))
 
 (defn arguments-generator []
-  (gen/fmap (fn [x]
-              (let [pair (first x)
-                    factor (second x)]
-                (vector (first pair)
-                        (* (first pair) factor)
-                        (* (second pair) factor))))
+  (gen/fmap (fn [[[x y] factor]]
+              [x (* x factor) (* y factor)])
             (gen/tuple (pairs-gen [9 12])
-                       (gen/such-that pos? gen/pos-int))))
+                       gen/s-pos-int)))
 
 (def test-data
   [{:expected 5.0 :arguments [3 6 8]}
@@ -30,5 +25,4 @@
   [width v-boat v-river]
   (let [offset (/ (* width v-river)
                   v-boat)]
-    (Math/sqrt (+ (Math/pow width 2)
-                  (Math/pow offset 2)))))
+    (Math/hypot width offset)))
