@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.next-lucky-number-test
   (:require [clojure.test :refer :all]
-            [clojure.test.check.properties :as prop :include-macros true]
-            [clojure.test.check.clojure-test :as ct :include-macros true]
+            [clojure.test.check.properties :as prop]
+            [clojure.test.check.clojure-test :as ct]
             [test-helper :as h]
             [clojure.string :as s]
             [battle-asserts.issues.next-lucky-number :as issue]))

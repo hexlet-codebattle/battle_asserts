@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.sum-of-array-plus-one-test
   (:require [clojure.test :refer :all]
-            [clojure.test.check.properties :as prop :include-macros true]
-            [clojure.test.check.clojure-test :as ct :include-macros true]
+            [clojure.test.check.properties :as prop]
+            [clojure.test.check.clojure-test :as ct]
             [test-helper :as h]
             [battle-asserts.issues.sum-of-array-plus-one :as issue]))
 
