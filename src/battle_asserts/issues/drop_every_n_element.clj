@@ -7,7 +7,7 @@
 (def description "Drop every N'th element from a list.")
 
 (defn arguments-generator []
-  (gen/tuple (gen/such-that #(not (zero? %)) gen/pos-int)
+  (gen/tuple gen/s-pos-int
              (gen/vector gen/int)))
 
 (def test-data
@@ -23,4 +23,3 @@
 (defn solution [n coll]
   (keep-indexed #(if-not (zero? (mod (inc %1) n)) %2)
                 coll))
-
