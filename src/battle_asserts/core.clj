@@ -1,11 +1,9 @@
 (ns battle-asserts.core
-  (:require [battle-asserts.checker :as checker]
-            [clojure.string :as s]
-            [clj-yaml.core :as yaml]
-            [clojure.pprint :as pp]
-            [clojure.test.check.generators :as gen]
-            [clojure.java.io :as io]
+  (:require [clj-yaml.core :as yaml]
             [clojure.data.json :as json]
+            [clojure.java.io :as io]
+            [clojure.string :as s]
+            [clojure.test.check.generators :as gen]
             [clojure.tools.namespace.find :as nsf]))
 
 (defn- generate-asserts
@@ -17,14 +15,12 @@
 (defn generate-issues
   [issue-ns-name]
   (require [issue-ns-name])
-  ; (print issue-ns-name)
   (let [issue-name (s/replace (last (s/split (str issue-ns-name) #"\."))
                               #"-"
                               "_")
         generator ((ns-resolve issue-ns-name 'arguments-generator))
         solution (ns-resolve issue-ns-name 'solution)
         sample (first @(ns-resolve issue-ns-name 'test-data))]
-    ; (print sample)
     (let [filename (str "issues/" issue-name ".yml")
           json-options [:escape-unicode false :escape-slash false]
           arguments (s/join ", " (map #(apply json/write-str % json-options) (:arguments sample)))
@@ -35,7 +31,6 @@
                                       "\n\n"
                                       "Example: `" expected " == solution(" arguments ")`")}
           yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})]
-      ; (print yaml)
       (spit filename yaml))
 
     (let [filename (str "issues/" issue-name ".jsons")
