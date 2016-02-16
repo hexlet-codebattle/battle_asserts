@@ -29,11 +29,14 @@
    {:expected "1211" :arguments ["one 1, then one 2, then two 1's"]}])
 
 (defn solution [phrase]
-  (letfn [(repeater [[amount value]]
-            (let [dict {"one" 1, "two" 2, "three" 3}]
-              (s/join (repeat (dict amount) value))))]
-    (->  phrase
-         (s/replace #"'s" "")
-         (s/split  #", then ")
-         (->> (map #(clojure.string/split % #" "))
-              (reduce #(str %1 (repeater %2)) "")))))
+  (let [numbers {"one" 1, "two" 2, "three" 3}
+        repeater (fn [[amount value]]
+                   (s/join (repeat (numbers amount) value)))
+        strip #(s/replace % #"'s" "")
+        split #(s/split % #", then ")
+        group #(s/split % #" ")]
+    (->>  phrase
+          strip
+          split
+          (map (comp repeater group))
+          s/join)))
