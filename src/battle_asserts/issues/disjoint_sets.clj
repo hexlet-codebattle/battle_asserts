@@ -1,7 +1,6 @@
 (ns battle-asserts.issues.disjoint-sets
-  (:require [clojure.test.check.generators :as gen]
-            [faker.generate :as faker]
-            [clojure.set :as s]))
+  (:require [clojure.set :as s]
+            [clojure.test.check.generators :as gen]))
 
 (def level :easy)
 

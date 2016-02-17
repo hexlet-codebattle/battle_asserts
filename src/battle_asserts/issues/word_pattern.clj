@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.word-pattern
-  (:require [clojure.test.check.generators :as gen]
+  (:require [battle-asserts.utility :as utility]
             [clojure.string :as s]
-            [battle-asserts.utility :as utility]
+            [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
 (def level :easy)

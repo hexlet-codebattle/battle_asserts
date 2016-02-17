@@ -1,6 +1,5 @@
 (ns battle-asserts.issues.sort-by-binary
-  (:require [clojure.test.check.generators :as gen]
-            [faker.generate :as faker]))
+  (:require [clojure.test.check.generators :as gen]))
 
 (def level :easy)
 

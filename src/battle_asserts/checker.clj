@@ -1,5 +1,4 @@
 (ns battle-asserts.checker
-  (:require [clojure.string :as string])
   (:require [clojure.set :as s]))
 
 (defn validate

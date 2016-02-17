@@ -1,6 +1,5 @@
 (ns battle-asserts.issues.difference-of-squares
-  (:require [clojure.test.check.generators :as gen]
-            [faker.generate :as faker]))
+  (:require [clojure.test.check.generators :as gen]))
 
 (def level :easy)
 

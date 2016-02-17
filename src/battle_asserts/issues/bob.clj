@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.bob
-  (:require [clojure.test.check.generators :as gen]
-            [clojure.string :as s]
+  (:require [clojure.string :as s]
+            [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
 (def level :elementary)

@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.parse-post-form-params
-  (:require [clojure.test.check.generators :as gen]
-            [clojure.string :as s]
+  (:require [clojure.string :as s]
+            [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
 (def level :medium)

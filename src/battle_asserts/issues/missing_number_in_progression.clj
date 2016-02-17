@@ -1,7 +1,6 @@
 (ns battle-asserts.issues.missing-number-in-progression
-  (:require [clojure.test.check.generators :as gen]
-            [faker.generate :as faker]
-            [battle-asserts.utility :as utility]))
+  (:require [battle-asserts.utility :as utility]
+            [clojure.test.check.generators :as gen]))
 
 (def level :easy)
 

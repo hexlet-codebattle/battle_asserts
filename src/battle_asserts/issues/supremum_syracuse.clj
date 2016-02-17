@@ -1,6 +1,5 @@
 (ns battle-asserts.issues.supremum-syracuse
-  (:require [clojure.test.check.generators :as gen]
-            [faker.generate :as faker]))
+  (:require [clojure.test.check.generators :as gen]))
 
 (def level :medium)
 
