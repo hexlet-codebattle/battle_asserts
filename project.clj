@@ -6,14 +6,14 @@
   :min-lein-version "2.5.1"
   :plugins [[lein-kibit "0.1.2"]
             [lein-cljfmt "0.3.0"]
-            [jonase/eastwood "0.2.1"]]
+            [jonase/eastwood "0.2.3"]]
   :dependencies [[org.clojure/clojure "1.7.0"]
-                 [jonase/eastwood "0.2.1" :exclusions  [org.clojure/clojure]]
+                 [jonase/eastwood "0.2.3" :exclusions  [org.clojure/clojure]]
                  [org.clojure/tools.namespace "0.2.11"]
                  [org.clojure/data.json "0.2.6"]
                  [org.clojure/test.check "0.9.0"]
                  [helpshift/faker "0.2.0"]
-                 [circleci/clj-yaml "0.5.3"]
+                 [circleci/clj-yaml "0.5.5"]
                  ]
   :source-paths ["src"]
   ; :eval-in :nrepl
