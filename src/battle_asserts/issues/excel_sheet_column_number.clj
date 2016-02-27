@@ -1,7 +1,6 @@
 (ns battle-asserts.issues.excel-sheet-column-number
-  (:require [clojure.test.check.generators :as gen]
-            [clojure.string :as s]
-            [faker.generate :as faker]))
+  (:require [clojure.string :as s]
+            [clojure.test.check.generators :as gen]))
 
 (def level :easy)
 

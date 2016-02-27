@@ -1,7 +1,5 @@
 (ns battle-asserts.issues.sublist
-  (:require [clojure.test.check.generators :as gen]
-            [clojure.string :as s]
-            [faker.generate :as faker]))
+  (:require [clojure.test.check.generators :as gen]))
 
 (def level :easy)
 

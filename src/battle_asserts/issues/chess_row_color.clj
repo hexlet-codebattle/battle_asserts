@@ -1,6 +1,5 @@
 (ns battle-asserts.issues.chess-row-color
-  (:require [clojure.test.check.generators :as gen]
-            [faker.generate :as faker]))
+  (:require [clojure.test.check.generators :as gen]))
 
 (def level :easy)
 

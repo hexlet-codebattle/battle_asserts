@@ -1,6 +1,5 @@
 (ns battle-asserts.issues.euler-totient-function
-  (:require [clojure.test.check.generators :as gen]
-            [faker.generate :as faker]))
+  (:require [clojure.test.check.generators :as gen]))
 
 (def level :hard)
 
