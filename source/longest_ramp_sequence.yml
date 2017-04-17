@@ -1,0 +1,9 @@
+---
+level: hard
+tags: [numbers]
+description: Find longest ramp secuence in vector. Ramp sequence is a sequence of numbers which apply such condition a1 < a2 > a3 < … > an-1 < an or a1 > a2 < a3 > … < an-1 > an
+author:
+  github_nickname: alexander37137
+
+multicode_checks:
+  langs: [ruby, javascript, python, php]
