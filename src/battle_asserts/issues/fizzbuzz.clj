@@ -5,7 +5,8 @@
 
 (def description "If a number is divisible by 3, return \"Fizz\".
                  If a number is divisible by 5, return \"Buzz\".
-                 If a number is divisible by 3 and 5, return \"FizzBuzz\"")
+                 If a number is divisible by 3 and 5, return \"FizzBuzz\".
+                 Otherwise, return an empty string.")
 
 (defn arguments-generator []
   (let [divisible (take 20 (filter #(or (zero? (mod % 3))
