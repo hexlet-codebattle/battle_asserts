@@ -31,12 +31,14 @@
     :arguments ["foo" "bar"]}
    {:expected true
     :arguments ["paper" "title"]}
-   {:expected true
+   {:expected false
     :arguments ["ca" "ab"]}
    {:expected true
     :arguments ["aa" "bb"]}
    {:expected true
-    :arguments ["aedor" "eiruw"]}])
+    :arguments ["aedor" "eiruw"]}
+   {:expected false
+    :arguments ["abba" "abab"]}])
 
 (defn process [string]
   (let [alphabet (distinct string)]
