@@ -26,7 +26,13 @@
    {:arguments [[54 546 548 60]]
     :expected "6054854654"}
    {:arguments [[43 44 12 324 90 9 88 89]]
-    :expected "9908988444332412"}])
+    :expected "9908988444332412"}
+   {:arguments [[1]]
+    :expected "1"}
+   {:arguments [[1 1]]
+    :expected "11"}
+   {:arguments [[1 2 223]]
+    :expected "22321"}])
 
 (defn my-comparator [val1 val2]
   (compare (Integer. (str val2 val1))
