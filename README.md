@@ -8,13 +8,14 @@
 ## Contributing
 
 1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Make changes
-4. Run tests (`make test`).
-5. Commit your changes (`git commit -am 'Added some feature'`)
-6. Push to the branch (`git push origin my-new-feature`)
-7. Create new Pull Request
-8. Check if Request passed Travis-Ci
+2. Clone repo (`https://github.com/{your-nickname}/battle_asserts.git`)
+3. Create your feature branch (`git checkout -b my-new-feature`)
+4. Make changes
+5. Run tests (`make test`).
+6. Commit your changes (`git commit -am 'Added some feature'`)
+7. Push to the branch (`git push origin my-new-feature`)
+8. Create new Pull Request
+9. Check if Request passed Travis-Ci
 
 ## How to add a new problem
 
@@ -37,5 +38,3 @@ Test file includes a call to a test generator (the same for all tests).
 
 * http://leiningen.org/#install
 * https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kaize/battle_asserts/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
