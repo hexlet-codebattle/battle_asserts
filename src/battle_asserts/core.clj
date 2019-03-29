@@ -20,13 +20,15 @@
                               "_")
         generator ((ns-resolve issue-ns-name 'arguments-generator))
         solution (ns-resolve issue-ns-name 'solution)
+        signature (ns-resolve issue-ns-name 'signature)
+        description @(ns-resolve issue-ns-name 'description)
         sample (first @(ns-resolve issue-ns-name 'test-data))]
     (let [filename (str "issues/" issue-name ".yml")
           json-options [:escape-unicode false :escape-slash false]
           arguments (s/join ", " (map #(apply json/write-str % json-options) (:arguments sample)))
           expected (apply json/write-str (:expected sample) json-options)
-          description @(ns-resolve issue-ns-name 'description)
           metadata {:level @(ns-resolve issue-ns-name 'level)
+                    :signature (if signature (signature) {})
                     :description (str description
                                       "\n\n"
                                       "Example: `" expected " == solution(" arguments ")`")}

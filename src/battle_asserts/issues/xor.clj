@@ -21,8 +21,8 @@
   (clojure.string/join (map char
                             (map bit-xor
                                  (doall
-                                  (map int
-                                       (seq str1)))
+                                   (map int
+                                        (seq str1)))
                                  (doall
-                                  (map int
-                                       (seq str2)))))))
+                                   (map int
+                                        (seq str2)))))))
