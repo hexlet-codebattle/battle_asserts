@@ -13,7 +13,7 @@
 (defn signature []
   {
    :input [{ :argument-name "words" :type { :name "array" :nested "string" } }]
-   :output { :type { :name "array" :nested "string" }}})
+   :output { :type { :name "array" :nested { :name "array" :nested "string" } }}})
 
 (defn arguments-generator
   []

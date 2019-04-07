@@ -10,13 +10,21 @@
                  2) write the rows of the original matrix as columns of the new one;
                  3) write the columns of the original matrix as rows of the new one.")
 
+(defn signature []
+  {
+   :input [
+           { :argument-name "arr1" :type { :name "array" :nested "integer" } }
+           { :argument-name "arr2" :type { :name "array" :nested "integer" } }
+           ]
+   :output { :type { :name "array" :nested { :name "array" :nested "integer" } }}})
+
 (defn arguments-generator []
   (gen/tuple (gen/bind (gen/choose 2 5)
                        #(gen/vector (gen/vector gen/int %)))))
 
 (def test-data
-  [{:expected [[1 :a] [2 :b] [3 :c]]
-    :arguments [[[1 2 3] [:a :b :c]]]}
+  [{:expected [[1 10] [2 20] [3 30]]
+    :arguments [[[1 2 3] [10 20 30]]]}
    {:expected [[1 3 5] [2 4 6]]
     :arguments [[[1 2] [3 4] [5 6]]]}
    {:expected []

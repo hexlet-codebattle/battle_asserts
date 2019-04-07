@@ -7,6 +7,13 @@
 (def description "Check the balance of the brackets in the expression.
                  Brackets can be round: \"()\", square: \"[]\", curly \"{}\" and angle: \"<>\".")
 
+(defn signature []
+  {
+   :input [
+           { :argument-name "brackets" :type {:name "string" } }
+           ]
+   :output { :type { :name "boolean" }}})
+
 (defn arguments-generator []
   (let [symbols [\( \) \[ \] \{ \} \< \> \space]
         brackets [[\( \)] [\[ \]] [\{ \}] [\< \>]]

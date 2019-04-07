@@ -9,9 +9,9 @@
 
 (defn signature []
   {
-   :input [{ :argument-name "words" :type { :name "array" :nested "int" } }
-            { :argument-name "index" :type { :name "int" } }
-            { :argument-name "default" :type { :name "int" } }
+   :input [{ :argument-name "words" :type { :name "array" :nested "integer" } }
+            { :argument-name "index" :type { :name "integer" } }
+            { :argument-name "num" :type { :name "integer" } }
            ]
    :output { :type { :name "array" :nested "string" }}})
 

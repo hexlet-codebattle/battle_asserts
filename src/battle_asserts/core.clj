@@ -20,6 +20,7 @@
                               "_")
         generator ((ns-resolve issue-ns-name 'arguments-generator))
         solution (ns-resolve issue-ns-name 'solution)
+        disabled (ns-resolve issue-ns-name 'disabled)
         signature (ns-resolve issue-ns-name 'signature)
         description @(ns-resolve issue-ns-name 'description)
         sample (first @(ns-resolve issue-ns-name 'test-data))]
@@ -28,6 +29,7 @@
           arguments (s/join ", " (map #(apply json/write-str % json-options) (:arguments sample)))
           expected (apply json/write-str (:expected sample) json-options)
           metadata {:level @(ns-resolve issue-ns-name 'level)
+                    :disabled (if disabled (disabled) false)
                     :signature (if signature (signature) {})
                     :description (str description
                                       "\n\n"
