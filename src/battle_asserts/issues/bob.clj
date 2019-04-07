@@ -10,6 +10,13 @@
                  He says 'Fine. Be that way!' if you address him without actually saying anything.
                  He answers 'Whatever.' to anything else.  ")
 
+(defn signature []
+  {
+   :input [
+           { :argument-name "sentence" :type {:name "string" } }
+           ]
+   :output { :type { :name "string" }}})
+
 (defn arguments-generator []
   (letfn [(question []
             (gen/elements (map #(str % "?") (faker/words {:lang :en :n 50}))))

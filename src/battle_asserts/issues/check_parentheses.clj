@@ -6,6 +6,13 @@
 
 (def description "Check if the parentheses in the expression are all balanced, so that all open parentheses are closed properly.")
 
+(defn signature []
+  {
+   :input [
+           { :argument-name "brackets" :type {:name "string" } }
+           ]
+   :output { :type { :name "boolean" }}})
+
 (defn arguments-generator []
   (let [brackets [\( \) \space \\]
         right-combination ["()%s" "(%s)" "() %s" "( %s )" "\\%s"]]

@@ -6,6 +6,13 @@
 
 (def description "Return a new hash map with elements of the given array as keys, and the given default value as values for those keys.")
 
+(defn signature []
+  {
+   :input [{ :argument-name "words" :type { :name "array" :nested "string" } }
+            { :argument-name "num" :type { :name "integer" } }
+           ]
+   :output { :type { :name "hash" :nested "integer" }}})
+
 (defn arguments-generator []
   (let [word-generator (gen/elements (faker/words {:lang :en :n 30}))]
     (gen/tuple (gen/vector word-generator) gen/int)))

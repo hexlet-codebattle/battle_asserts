@@ -10,6 +10,11 @@
   Your function should return a vector of vectors, where each sub-vector is a group of words which are anagrams of each other.
   Words without any anagrams should not be included in the result.")
 
+(defn signature []
+  {
+   :input [{ :argument-name "words" :type { :name "array" :nested "string" } }]
+   :output { :type { :name "array" :nested { :name "array" :nested "string" } }}})
+
 (defn arguments-generator
   []
   (let [words1 (faker/words {:lang :en :n 8})
