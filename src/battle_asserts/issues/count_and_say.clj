@@ -10,6 +10,10 @@
                  21 is read off as \"one 2, then one 1\".
                  1211 is read off as \"one 1, then one 2, then two 1's\".")
 
+(defn signature []
+  {:input [{:argument-name "str" :type {:name "string"}}]
+   :output {:type {:name "string"}}})
+
 (defn arguments-generator []
   (letfn [(input []
             (let [combinations ["one %d" "two %d's" "three %d"]]

@@ -8,12 +8,10 @@
                  Index can be a negative integer, which means going over the array backwards from the end.")
 
 (defn signature []
-  {
-   :input [{ :argument-name "words" :type { :name "array" :nested "integer" } }
-            { :argument-name "index" :type { :name "integer" } }
-            { :argument-name "num" :type { :name "integer" } }
-           ]
-   :output { :type { :name "array" :nested "string" }}})
+  {:input [{:argument-name "words" :type {:name "array" :nested "integer"}}
+           {:argument-name "index" :type {:name "integer"}}
+           {:argument-name "num" :type {:name "integer"}}]
+   :output {:type {:name "array" :nested "string"}}})
 
 (defn arguments-generator
   []

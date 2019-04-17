@@ -10,13 +10,9 @@
                   so if one arrays ends before the other, stop adding new values and return.")
 
 (defn signature []
-  {
-   :input [
-           { :argument-name "arr1" :type { :name "array" :nested "integer" } }
-           { :argument-name "arr2" :type { :name "array" :nested "integer" } }
-           ]
-   :output { :type { :name "array" :nested "integer" }}})
-
+  {:input [{:argument-name "arr1" :type {:name "array" :nested "integer"}}
+           {:argument-name "arr2" :type {:name "array" :nested "integer"}}]
+   :output {:type {:name "array" :nested "integer"}}})
 
 (defn arguments-generator []
   (gen/tuple (gen/list gen/int) (gen/list gen/int)))

@@ -11,9 +11,8 @@
   Words without any anagrams should not be included in the result.")
 
 (defn signature []
-  {
-   :input [{ :argument-name "words" :type { :name "array" :nested "string" } }]
-   :output { :type { :name "array" :nested { :name "array" :nested "string" } }}})
+  {:input [{:argument-name "words" :type {:name "array" :nested "string"}}]
+   :output {:type {:name "array" :nested {:name "array" :nested "string"}}}})
 
 (defn arguments-generator
   []
@@ -40,17 +39,17 @@
             (vec (sort (char-array word))))
 
           (anagram?
-           [word candidate]
-           (zero? (compare (prepare word) (prepare candidate))))
+            [word candidate]
+            (zero? (compare (prepare word) (prepare candidate))))
 
           (anagrams-for
-           [word anagrams]
-           (let [confirmed (filter #(anagram? word %) anagrams)
-                 unconfirmed (filter #(not (anagram? word %)) anagrams)]
-             (if (empty? confirmed)
-               []
-               (cons (vec confirmed)
-                     (anagrams-for (first unconfirmed) unconfirmed)))))]
+            [word anagrams]
+            (let [confirmed (filter #(anagram? word %) anagrams)
+                  unconfirmed (filter #(not (anagram? word %)) anagrams)]
+              (if (empty? confirmed)
+                []
+                (cons (vec confirmed)
+                      (anagrams-for (first unconfirmed) unconfirmed)))))]
 
     (vec (filter #(< 1 (count %))
                  (anagrams-for (first words) words)))))

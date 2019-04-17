@@ -5,6 +5,11 @@
 
 (def description "Given an integer array and a positive integer k, count all distinct pairs with difference equal to k.")
 
+(defn signature []
+  {:input [{:argument-name "pairs" :type {:name "array" :nested "integer"}}
+           {:argument-name "k" :type {:name "integer"}}]
+   :output {:type {:name "integer"}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int) gen/pos-int))
 

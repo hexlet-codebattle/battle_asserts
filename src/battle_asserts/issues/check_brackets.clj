@@ -8,11 +8,8 @@
                  Brackets can be round: \"()\", square: \"[]\", curly \"{}\" and angle: \"<>\".")
 
 (defn signature []
-  {
-   :input [
-           { :argument-name "brackets" :type {:name "string" } }
-           ]
-   :output { :type { :name "boolean" }}})
+  {:input [{:argument-name "brackets" :type {:name "string"}}]
+   :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
   (let [symbols [\( \) \[ \] \{ \} \< \> \space]
@@ -21,13 +18,13 @@
     (letfn [(permutation []
               (s/join (repeatedly (rand-int 10) #(rand-nth symbols))))
             (shuffled-balanced-permutation []
-                                           (s/join (shuffle (seq (balanced-permutation)))))
+              (s/join (shuffle (seq (balanced-permutation)))))
             (balanced-permutation []
-                                  (loop [n (inc (rand-int 10)) result ""]
-                                    (if (>= (count result) n)
-                                      result
-                                      (recur n
-                                             (apply format (rand-nth right-combination) result (rand-nth brackets))))))]
+              (loop [n (inc (rand-int 10)) result ""]
+                (if (>= (count result) n)
+                  result
+                  (recur n
+                         (apply format (rand-nth right-combination) result (rand-nth brackets))))))]
       (gen/tuple (gen/one-of [(gen/elements (repeatedly 50 permutation))
                               (gen/elements (repeatedly 50 shuffled-balanced-permutation))
                               (gen/elements (repeatedly 50 balanced-permutation))])))))

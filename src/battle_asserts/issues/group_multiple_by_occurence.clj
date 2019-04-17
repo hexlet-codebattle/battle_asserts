@@ -11,7 +11,7 @@
             (repeat (inc (rand-int 5))
                     value))
           (add-repetition [coll]
-                          (reduce #(concat %1 (repeat-rand %2)) [] coll))]
+            (reduce #(concat %1 (repeat-rand %2)) [] coll))]
     (gen/tuple (gen/bind (gen/vector gen/int)
                          #(gen/shuffle (add-repetition %))))))
 

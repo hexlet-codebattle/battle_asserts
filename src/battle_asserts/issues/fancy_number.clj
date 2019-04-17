@@ -23,17 +23,17 @@
                (concat half)
                s/join)))
           (almost-fancy-number []
-                               (let [fancy-number (vec (fancy-number))
-                                     length (count fancy-number)
-                                     half-length (quot length 2)
-                                     not-fancy-numerals [\2 \3 \4 \5 \7]]
-                                 (s/join (apply conj (subvec fancy-number 0 half-length)
-                                                (rand-nth not-fancy-numerals)
-                                                (subvec fancy-number (- length half-length))))))
+            (let [fancy-number (vec (fancy-number))
+                  length (count fancy-number)
+                  half-length (quot length 2)
+                  not-fancy-numerals [\2 \3 \4 \5 \7]]
+              (s/join (apply conj (subvec fancy-number 0 half-length)
+                             (rand-nth not-fancy-numerals)
+                             (subvec fancy-number (- length half-length))))))
           (number []
-                  (let [length (+ 2 (rand-int 7))
-                        numbers (flatten (vec mapping))]
-                    (s/join (repeatedly length #(rand-nth numbers)))))]
+            (let [length (+ 2 (rand-int 7))
+                  numbers (flatten (vec mapping))]
+              (s/join (repeatedly length #(rand-nth numbers)))))]
     (gen/tuple (gen/one-of [(gen/elements (repeatedly 50 fancy-number))
                             (gen/elements (repeatedly 50 almost-fancy-number))
                             (gen/elements (repeatedly 50 number))]))))

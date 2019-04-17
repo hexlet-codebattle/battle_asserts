@@ -5,6 +5,11 @@
 
 (def description "Calculate the angle between the hour and the minute hand of a clock at a given time.")
 
+(defn signature []
+  {:input [{:argument-name "hour" :type {:name "integer"}}
+           {:argument-name "minute" :type {:name "integer"}}]
+   :output {:type {:name "float"}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/choose 0 11) (gen/choose 0 59)))
 
@@ -20,6 +25,6 @@
             (+ (* h 30)
                (* m 0.5)))
           (minutes-angle [m]
-                         (* m 6))]
+            (* m 6))]
     (Math/abs (- (hours-angle h m)
                  (minutes-angle m)))))

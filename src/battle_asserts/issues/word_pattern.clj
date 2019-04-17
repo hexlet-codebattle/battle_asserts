@@ -15,12 +15,12 @@
             (let [alphabet [\a \b \c \d \e \f \g]]
               (s/join (repeatedly (inc (rand-int 10)) #(rand-nth alphabet)))))
           (string []
-                  (s/join " " (faker/words {:lang :en :n (inc (rand-int 10))})))
+            (s/join " " (faker/words {:lang :en :n (inc (rand-int 10))})))
           (string-by-pattern [pattern]
-                             (let [sym-in-pattern (distinct (seq pattern))
-                                   words (utility/unique-words (count sym-in-pattern))
-                                   associations (zipmap sym-in-pattern words)]
-                               (s/join " " (map associations (seq pattern)))))]
+            (let [sym-in-pattern (distinct (seq pattern))
+                  words (utility/unique-words (count sym-in-pattern))
+                  associations (zipmap sym-in-pattern words)]
+              (s/join " " (map associations (seq pattern)))))]
     (gen/one-of [(gen/tuple (gen/elements (repeatedly 30 pattern))
                             (gen/elements (repeatedly 30 string)))
                  (gen/bind (gen/elements (repeatedly 30 pattern))

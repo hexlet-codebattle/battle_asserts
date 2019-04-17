@@ -5,6 +5,11 @@
 
 (def description "Identify the color of a square of the chessboard. Square A1 is black.")
 
+(defn signature []
+  {:input [{:argument-name "row" :type {:name "string"}}
+           {:argument-name "column" :type {:name "integer"}}]
+   :output {:type {:name "string"}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/elements ["A" "B" "C" "D" "E" "F" "G" "H"]) (gen/elements (range 1 9))))
 

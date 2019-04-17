@@ -7,11 +7,8 @@
 (def description "Check if the parentheses in the expression are all balanced, so that all open parentheses are closed properly.")
 
 (defn signature []
-  {
-   :input [
-           { :argument-name "brackets" :type {:name "string" } }
-           ]
-   :output { :type { :name "boolean" }}})
+  {:input [{:argument-name "brackets" :type {:name "string"}}]
+   :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
   (let [brackets [\( \) \space \\]
@@ -19,14 +16,14 @@
     (letfn [(permutation []
               (s/join (repeatedly (rand-int 10) #(rand-nth brackets))))
             (shuffled-balanced-permutation []
-                                           (s/join (shuffle (seq (balanced-permutation)))))
+              (s/join (shuffle (seq (balanced-permutation)))))
             (balanced-permutation []
-                                  (loop [n (inc (rand-int 10)) result ""]
-                                    (if (>= (count result) n)
-                                      result
-                                      (recur n
-                                             (format (rand-nth right-combination)
-                                                     result)))))]
+              (loop [n (inc (rand-int 10)) result ""]
+                (if (>= (count result) n)
+                  result
+                  (recur n
+                         (format (rand-nth right-combination)
+                                 result)))))]
       (gen/tuple (gen/one-of [(gen/elements (repeatedly 30 permutation))
                               (gen/elements (repeatedly 50 shuffled-balanced-permutation))
                               (gen/elements (repeatedly 50 balanced-permutation))])))))

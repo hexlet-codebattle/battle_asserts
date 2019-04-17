@@ -13,6 +13,10 @@
                  3. If the total modulo 10 is equal to 0 (if the total ends in zero) then the number is valid
                  according to the Luhn formula; else it is not valid.")
 
+(defn signature []
+  {:input [{:argument-name "arr" :type {:name "string"}}]
+   :output {:type {:name "boolean"}}})
+
 (defn arguments-generator []
   (letfn [(valid-credit-card-number []
             (let [length (+ 12 (rand-int 5))
@@ -23,7 +27,7 @@
                   check-digit (if (zero? modulo) 0 (- 10 modulo))]
               (s/join (conj digits check-digit))))
           (random-credit-card-number []
-                                     (s/join (repeatedly (+ 12 (rand-int 5)) #(rand-int 10))))]
+            (s/join (repeatedly (+ 12 (rand-int 5)) #(rand-int 10))))]
     (gen/tuple (gen/one-of [(gen/elements (repeatedly 50 random-credit-card-number))
                             (gen/elements (repeatedly 50 valid-credit-card-number))]))))
 

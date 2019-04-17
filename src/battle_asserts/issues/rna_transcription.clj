@@ -16,8 +16,8 @@
             (s/join (repeatedly (inc (rand-int 10))
                                 #(rand-nth [\G \C \T \A]))))
           (dna-strands []
-                       (repeatedly (inc (rand-int 40))
-                                   dna-strand))]
+            (repeatedly (inc (rand-int 40))
+                        dna-strand))]
     (gen/tuple (gen/elements (dna-strands)))))
 
 (def test-data
