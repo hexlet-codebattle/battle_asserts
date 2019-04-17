@@ -9,9 +9,8 @@
                  and the largest of them is 4324.")
 
 (defn signature []
-  {
-   :input [{ :argument-name "numbers" :type { :name "array" :nested "integer" } }]
-   :output { :type { :name "string" }}})
+  {:input [{:argument-name "numbers" :type {:name "array" :nested "integer"}}]
+   :output {:type {:name "string"}}})
 
 (defn arguments-generator []
   (gen/tuple (gen/not-empty (gen/vector (gen/one-of

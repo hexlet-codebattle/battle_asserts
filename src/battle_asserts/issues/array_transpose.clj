@@ -4,19 +4,16 @@
 (def level :easy)
 
 (def description "Implement the matrix transposition function.
-                 Matrices are presented as arrays of arrays, where internal arrays are rows of the matrix.
-                 There are different ways to transpose a matrix:
-                 1) reflect the array over its main diagonal (which runs from top-left to bottom-right);
-                 2) write the rows of the original matrix as columns of the new one;
+                  Matrices are presented as arrays of arrays, where internal arrays are rows of the matrix.
+                  There are different ways to transpose a matrix:
+                  1) reflect the array over its main diagonal (which runs from top-left to bottom-right);
+                  2) write the rows of the original matrix as columns of the new one;
                  3) write the columns of the original matrix as rows of the new one.")
 
 (defn signature []
-  {
-   :input [
-           { :argument-name "arr1" :type { :name "array" :nested "integer" } }
-           { :argument-name "arr2" :type { :name "array" :nested "integer" } }
-           ]
-   :output { :type { :name "array" :nested { :name "array" :nested "integer" } }}})
+  {:input [{:argument-name "arr1" :type {:name "array" :nested "integer"}}
+           {:argument-name "arr2" :type {:name "array" :nested "integer"}}]
+   :output {:type {:name "array" :nested {:name "array" :nested "integer"}}}})
 
 (defn arguments-generator []
   (gen/tuple (gen/bind (gen/choose 2 5)

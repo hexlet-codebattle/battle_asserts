@@ -17,14 +17,14 @@
                (concat array)
                shuffle)))
           (vector-without-odd-occurences []
-                                         (let [size (+ 5 (rand-int 10))
-                                               array (repeatedly size #(rand-int 10))]
-                                           (->>
-                                            (frequencies array)
-                                            (filter #(odd? (val %)))
-                                            keys
-                                            (concat array)
-                                            shuffle)))]
+            (let [size (+ 5 (rand-int 10))
+                  array (repeatedly size #(rand-int 10))]
+              (->>
+               (frequencies array)
+               (filter #(odd? (val %)))
+               keys
+               (concat array)
+               shuffle)))]
     (gen/tuple (gen/one-of [(gen/elements (repeatedly 50 vector-with-odd-occurences))
                             (gen/elements (repeatedly 50 vector-without-odd-occurences))]))))
 

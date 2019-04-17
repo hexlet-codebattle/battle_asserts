@@ -10,19 +10,19 @@
   (letfn [(rand-char []
             (char (rand-nth (range (int \a) (inc (int \z))))))
           (input []
-                 (let [word (faker/word {:lang :en})
-                       word-count (count word)
-                       possible-distance (rand-int word-count)
-                       changes [#(let [insert-index (rand-int (count %))]
-                                   (str (subs % 0 insert-index) (rand-char) (subs % insert-index)))
-                                #(let [remove-index (rand-int (count %))]
-                                   (str (subs % 0 remove-index) (subs % (inc remove-index))))
-                                #(let [change-index (rand-int (count %))]
-                                   (str (subs % 0 change-index) (rand-char) (subs % (inc change-index))))]]
-                   (loop [index possible-distance result word]
-                     (if (zero? index)
-                       [word result]
-                       (recur (dec index) ((rand-nth changes) result))))))]
+            (let [word (faker/word {:lang :en})
+                  word-count (count word)
+                  possible-distance (rand-int word-count)
+                  changes [#(let [insert-index (rand-int (count %))]
+                              (str (subs % 0 insert-index) (rand-char) (subs % insert-index)))
+                           #(let [remove-index (rand-int (count %))]
+                              (str (subs % 0 remove-index) (subs % (inc remove-index))))
+                           #(let [change-index (rand-int (count %))]
+                              (str (subs % 0 change-index) (rand-char) (subs % (inc change-index))))]]
+              (loop [index possible-distance result word]
+                (if (zero? index)
+                  [word result]
+                  (recur (dec index) ((rand-nth changes) result))))))]
     (gen/elements (repeatedly 50 input))))
 
 (def test-data

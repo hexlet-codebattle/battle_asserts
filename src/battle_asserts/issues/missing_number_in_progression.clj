@@ -13,11 +13,11 @@
                                   (* step size))]
               (range first-element last-element step)))
           (random-not-extreme [size]
-                              (->
-                               size
-                               (- 2)
-                               rand-int
-                               inc))]
+            (->
+             size
+             (- 2)
+             rand-int
+             inc))]
     (gen/tuple (gen/bind (gen/tuple (gen/choose -20 20)
                                     gen/s-pos-int
                                     (gen/choose 5 10))

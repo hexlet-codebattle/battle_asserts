@@ -10,11 +10,9 @@
   This is how HTTP libraries pack data when POST requests are made using x-www-form-urlencoded.")
 
 (defn signature []
-  {
-   :input [{ :argument-name "words" :type { :name "array" :nested "string" } }
-            { :argument-name "num" :type { :name "integer" } }
-           ]
-   :output { :type { :name "hash" :nested "integer" }}})
+  {:input [{:argument-name "words" :type {:name "array" :nested "string"}}
+           {:argument-name "num" :type {:name "integer"}}]
+   :output {:type {:name "hash" :nested "integer"}}})
 
 (defn arguments-generator []
   (let [word-generator (gen/elements (faker/words {:lang :en :n 30}))]

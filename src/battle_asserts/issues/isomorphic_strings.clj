@@ -16,11 +16,11 @@
                   min-length (apply min (map count strings))]
               (map #(subs % 0 min-length) strings)))
           (two-isomorphic-string []
-                                 (let [first-string (faker/word {:lang :en})
-                                       alphabet (map char (range (int \a) (inc (int \z))))
-                                       mapping (zipmap (distinct first-string) (shuffle alphabet))
-                                       second-string (s/join (map mapping first-string))]
-                                   [first-string second-string]))]
+            (let [first-string (faker/word {:lang :en})
+                  alphabet (map char (range (int \a) (inc (int \z))))
+                  mapping (zipmap (distinct first-string) (shuffle alphabet))
+                  second-string (s/join (map mapping first-string))]
+              [first-string second-string]))]
     (gen/one-of [(gen/elements (repeatedly 30 two-string))
                  (gen/elements (repeatedly 30 two-isomorphic-string))])))
 

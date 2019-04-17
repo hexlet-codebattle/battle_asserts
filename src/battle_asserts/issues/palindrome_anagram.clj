@@ -10,23 +10,23 @@
   (letfn [(alphabet []
             (map char (range (int \a) (inc (int \z)))))
           (shuffled-palindrome []
-                               (let [length (+ 2 (rand-int 6))
-                                     first-half (repeatedly (quot (inc length) 2) #(rand-nth (alphabet)))
-                                     second-half (subvec (vec (reverse first-half)) (rem length 2))]
-                                 (s/join (shuffle (concat first-half second-half)))))
+            (let [length (+ 2 (rand-int 6))
+                  first-half (repeatedly (quot (inc length) 2) #(rand-nth (alphabet)))
+                  second-half (subvec (vec (reverse first-half)) (rem length 2))]
+              (s/join (shuffle (concat first-half second-half)))))
           (almost-palindrome []
-                             (let [palindrome (seq (shuffled-palindrome))]
-                               (->>
-                                (frequencies palindrome)
-                                (filter #(even? (val %)))
-                                keys
-                                (take 2)
-                                (concat palindrome)
-                                shuffle
-                                s/join)))
+            (let [palindrome (seq (shuffled-palindrome))]
+              (->>
+               (frequencies palindrome)
+               (filter #(even? (val %)))
+               keys
+               (take 2)
+               (concat palindrome)
+               shuffle
+               s/join)))
           (string []
-                  (let [length (rand-int 8)]
-                    (s/join (repeatedly length #(rand-nth (alphabet))))))]
+            (let [length (rand-int 8)]
+              (s/join (repeatedly length #(rand-nth (alphabet))))))]
     (gen/tuple (gen/one-of [(gen/elements (repeatedly 50 shuffled-palindrome))
                             (gen/elements (repeatedly 50 almost-palindrome))
                             (gen/elements (repeatedly 50 string))]))))

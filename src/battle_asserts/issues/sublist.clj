@@ -16,9 +16,9 @@
   (letfn [(superlist [a]
             (rand-nth (partition (rand-int (count a)) 1 a)))
           (sublist [a]
-                   (concat (repeatedly (rand-int 4) #(rand-int 10))
-                           a
-                           (repeatedly (rand-int 4) #(rand-int 10))))]
+            (concat (repeatedly (rand-int 4) #(rand-int 10))
+                    a
+                    (repeatedly (rand-int 4) #(rand-int 10))))]
     (gen/bind (gen/vector gen/int 4 8)
               #(gen/tuple (gen/return %) (gen/one-of [(gen/return (superlist %))
                                                       (gen/return (sublist %))

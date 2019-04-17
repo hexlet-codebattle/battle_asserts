@@ -11,9 +11,9 @@
   (letfn [(address []
             (str "http://" (faker/word {:lang :en}) ".com"))
           (gen-word []
-                    (gen/elements (faker/words {:lang :en :n 50})))
+            (gen/elements (faker/words {:lang :en :n 50})))
           (gen-keyword []
-                       (gen/elements (map keyword (faker/words {:lang :en :n 50}))))]
+            (gen/elements (map keyword (faker/words {:lang :en :n 50}))))]
     (gen/tuple (gen/return (address))
                (gen/map (gen-keyword) (gen/one-of [(gen-word)
                                                    gen/int])))))

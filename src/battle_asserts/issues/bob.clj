@@ -11,28 +11,25 @@
                  He answers 'Whatever.' to anything else.  ")
 
 (defn signature []
-  {
-   :input [
-           { :argument-name "sentence" :type {:name "string" } }
-           ]
-   :output { :type { :name "string" }}})
+  {:input [{:argument-name "sentence" :type {:name "string"}}]
+   :output {:type {:name "string"}}})
 
 (defn arguments-generator []
   (letfn [(question []
             (gen/elements (map #(str % "?") (faker/words {:lang :en :n 50}))))
           (yell []
-                (gen/elements (map s/upper-case (faker/words {:lang :en :n 50}))))
+            (gen/elements (map s/upper-case (faker/words {:lang :en :n 50}))))
           (silence []
-                   (gen/elements (repeatedly 50 #(s/join (repeat (rand-int 5) " ")))))
+            (gen/elements (repeatedly 50 #(s/join (repeat (rand-int 5) " ")))))
           (whatever []
-                    (gen/elements (faker/words {:lang :en :n 50})))
+            (gen/elements (faker/words {:lang :en :n 50})))
           (random-sentence []
-                           (let [expressions [#(format "1, 2, 3 %s!" (s/upper-case %))
-                                              #(str (s/upper-case %) "!!1!!1!")
-                                              #(str (s/upper-case %) "?")
-                                              #(str % " ? " %)
-                                              #(str "It is " (s/upper-case %))]]
-                             (gen/elements (map #((rand-nth expressions) %) (faker/words {:lang :en :n 50})))))]
+            (let [expressions [#(format "1, 2, 3 %s!" (s/upper-case %))
+                               #(str (s/upper-case %) "!!1!!1!")
+                               #(str (s/upper-case %) "?")
+                               #(str % " ? " %)
+                               #(str "It is " (s/upper-case %))]]
+              (gen/elements (map #((rand-nth expressions) %) (faker/words {:lang :en :n 50})))))]
     (gen/tuple (gen/one-of [(question)
                             (yell)
                             (silence)

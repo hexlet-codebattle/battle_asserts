@@ -13,8 +13,7 @@
                  [org.clojure/data.json "0.2.6"]
                  [org.clojure/test.check "0.9.0"]
                  [helpshift/faker "0.2.0"]
-                 [circleci/clj-yaml "0.6.0"]
-                 ]
+                 [circleci/clj-yaml "0.6.0"]]
   :source-paths ["src"]
   ; :eval-in :nrepl
   :main battle-asserts.core)
