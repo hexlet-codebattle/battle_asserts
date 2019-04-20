@@ -7,6 +7,10 @@
 
 (def description "Given a string with words separated in different ways, return an underscored, lowercase form.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "string"}}]
+   :output {:type {:name "string"}}})
+
 (defn arguments-generator []
   (letfn [(camel-case []
             (let [words (faker/words {:lang :en :n (inc (rand-int 6))})

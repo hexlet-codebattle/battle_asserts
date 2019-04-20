@@ -8,6 +8,10 @@
                  If a number is divisible by 3 and 5, return \"FizzBuzz\".
                  Otherwise, return an empty string.")
 
+(defn signature []
+  {:input  [{:argument-name "n" :type {:name "integer"}}]
+   :output {:type {:name "string"}}})
+
 (defn arguments-generator []
   (let [divisible (take 20 (filter #(or (zero? (mod % 3))
                                         (zero? (mod % 5)))

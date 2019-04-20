@@ -6,6 +6,10 @@
 
 (def description "Parse a Roman-numeral string and return the number it represents.")
 
+(defn signature []
+  {:input  [{:argument-name "num" :type {:name "string"}}]
+   :output {:type {:name "integer"}}})
+
 (defn arguments-generator []
   (letfn [(to-roman [number]
             (pprint/cl-format nil "~@R" number))]

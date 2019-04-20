@@ -6,6 +6,10 @@
 (def description "Given an unsorted array with repetitions, group multiple occurrence of individual elements.
                  The grouping should happen in a way that the order of first occurrences of all elements is maintained.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "integer"}}]
+   :output {:type {:name "array" :nested {:name "integer"}}}})
+
 (defn arguments-generator []
   (letfn [(repeat-rand [value]
             (repeat (inc (rand-int 5))

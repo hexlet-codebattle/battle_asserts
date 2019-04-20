@@ -8,6 +8,10 @@
                  if there is a Fixed Point present in array; else return -1.
                  Fixed Point in an array is an index i such that arr[i] is equal to i.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+   :output {:type {:name "integer"}}})
+
 (defn arguments-generator []
   (letfn [(inject-fixed-point [coll]
             (gen/bind (gen/tuple (gen/return coll) (gen/choose 0 (count coll)))

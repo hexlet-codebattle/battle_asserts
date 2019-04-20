@@ -8,6 +8,10 @@
                  And the rightmost element is always a leader. For example in the array [16 17 4 3 5 2],
                  leaders are 17, 5 and 2.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+   :output {:type {:name "array" :nested {:name "integer"}}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int)))
 

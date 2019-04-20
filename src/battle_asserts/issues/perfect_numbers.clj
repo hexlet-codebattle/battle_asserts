@@ -7,6 +7,10 @@
                   Perfect number is a positive integer that is equal to the sum of 
                   its proper positive divisors (the sum of its positive divisors excluding the number itself).")
 
+(defn signature []
+  {:input  [{:argument-name "num" :type {:name "integer"}}]
+   :output {:type {:name "boolean"}}})
+
 (defn arguments-generator []
   (let [perfect-numbers [6 28 496 8128]]
     (gen/tuple (gen/one-of [(gen/choose 0 1000)

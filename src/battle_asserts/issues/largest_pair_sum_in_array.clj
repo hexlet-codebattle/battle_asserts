@@ -6,6 +6,10 @@
 (def description "Given an array of integers, find the largest pair sum in it. For example,
                  the largest pair sum in [12, 34, 10, 6, 40] is 74.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+   :output {:type {:name "integer"}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int)))
 

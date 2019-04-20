@@ -7,6 +7,10 @@
                  The Next greater Element for an element x is the first greater element on the right side of x in array.
                  Elements for which no greater element exist, consider next greater element as -1.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+   :output {:type {:name "array" :nested {:name "integer"}}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int)))
 

@@ -6,6 +6,10 @@
 (def description "The decimal number 585 is 1001001001 in binary. It is palindromic in both bases.
                  Find n-th palindromic number.")
 
+(defn signature []
+  {:input  [{:argument-name "num" :type {:name "integer"}}]
+   :output {:type {:name "integer"}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/choose 1 20)))
 

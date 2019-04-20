@@ -6,6 +6,10 @@
 
 (def description "Given a number as input, return a string with that number formatted with commas to separate each three digits from the right to make it look like a standard North American number.")
 
+(defn signature []
+  {:input  [{:argument-name "num" :type {:name "integer"}}]
+   :output {:type {:name "string"}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/choose 1 2000000)))
 

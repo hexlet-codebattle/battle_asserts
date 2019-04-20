@@ -7,6 +7,10 @@
                  consists of all numbers of the form 2^i·3^j·5^k where i, j and k are non-negative integers.
                  Generate n-th number.")
 
+(defn signature []
+  {:input  [{:argument-name "n" :type {:name "integer"}}]
+   :output {:type {:name "integer"}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/choose 1 500)))
 

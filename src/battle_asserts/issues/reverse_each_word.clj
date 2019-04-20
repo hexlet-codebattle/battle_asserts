@@ -7,8 +7,11 @@
 (def description "Given a string as input, reverse each word, but keep the word order the same.
                   Words are separated by whitespaces.")
 
-(defn arguments-generator []
+(defn signature []
+  {:input  [{:argument-name "s" :type {:name "string"}}]
+   :output {:type {:name "string"}}})
 
+(defn arguments-generator []
   (let [sentences (repeatedly 30 #(faker/sentence {:words-range [1 10]}))]
     (gen/tuple (gen/elements sentences))))
 

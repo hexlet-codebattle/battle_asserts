@@ -5,6 +5,10 @@
 
 (def description "Find numbers which have odd occurrences in array.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+   :output {:type {:name "array" :nested {:name "integer"}}}})
+
 (defn arguments-generator []
   (letfn [(vector-with-odd-occurences []
             (let [size (+ 5 (rand-int 10))

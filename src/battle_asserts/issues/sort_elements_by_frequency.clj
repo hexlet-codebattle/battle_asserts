@@ -8,6 +8,10 @@
                  If several groups of the same size exist,
                  they should appear in the order of corresponding numbers in the input array.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+   :output {:type {:name "array" :nested {:name "integer"}}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int 4 20)))
 

@@ -6,6 +6,10 @@
 (def description "Count how many years have passed since latest millennium.
                   For example, for 2015 the answer is 15.")
 
+(defn signature []
+  {:input  [{:argument-name "year" :type {:name "integer"}}]
+   :output {:type {:name "integer"}}})
+
 (defn arguments-generator
   []
   (gen/tuple (gen/resize 10000 gen/pos-int)))
