@@ -12,7 +12,9 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (gen/tuple (sg/string-generator #"[A-Za-z]{1,8}") (gen/elements (range 1 9))))
+  (gen/tuple
+   (gen/let [words (gen/vector (sg/string-generator #"[A-Za-z]{1,8}") 0 9)]
+     (gen/return (str/join " " words)))))
 
 (def test-data
   [{:expected 0
@@ -27,7 +29,7 @@
     :arguments ["Lorem Ipsum Caesar"]}])
 
 (defn solution [s]
-  (->
+  (->>
    (str/split s #" ")
-   (filter #(Character/isUpperCase %))
+   (filter #(when-let [letter (get % 0)] (Character/isUpperCase letter)))
    (count)))
