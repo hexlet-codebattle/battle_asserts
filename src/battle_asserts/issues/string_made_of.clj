@@ -8,6 +8,10 @@
                  as on LCD-display of a calculator. For instance 1 is made of 2 dashes, 8 is made of 7 dashes and so on.
                  Return the total number of dashes in the input string.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "string"}}]
+   :output {:type {:name "integer"}}})
+
 (defn arguments-generator []
   (letfn [(input-string []
             (s/join (repeatedly (rand-int 15) #(rand-int 10))))]

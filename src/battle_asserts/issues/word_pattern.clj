@@ -10,6 +10,10 @@
                  For example,
                  pattern = \" abba \", str = \" dog cat cat dog \" should return true.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "string"}}]
+   :output {:type {:name "boolean"}}})
+
 (defn arguments-generator []
   (letfn [(pattern []
             (let [alphabet [\a \b \c \d \e \f \g]]

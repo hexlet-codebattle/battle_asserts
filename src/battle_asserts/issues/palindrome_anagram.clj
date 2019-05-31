@@ -6,6 +6,10 @@
 
 (def description "Check if any anagram of a given string is a palindrome.")
 
+(defn signature []
+  {:input  [{:argument-name "s" :type {:name "string"}}]
+   :output {:type {:name "boolean"}}})
+
 (defn arguments-generator []
   (letfn [(alphabet []
             (map char (range (int \a) (inc (int \z)))))

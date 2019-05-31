@@ -8,6 +8,10 @@
                  A fancy number is one which when rotated 180 degrees is the same.
                  When rotated, 6 becomes 9, 9 becomes 6, and 8, 1, 0 become themselves (do not change).")
 
+(defn signature []
+  {:input  [{:argument-name "num_str" :type {:name "string"}}]
+   :output {:type {:name "boolean"}}})
+
 (def mapping {\0 \0 \1 \1 \6 \9 \8 \8 \9 \6})
 
 (defn arguments-generator []

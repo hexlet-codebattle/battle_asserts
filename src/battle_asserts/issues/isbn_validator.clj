@@ -10,6 +10,10 @@
                  digit ... all the way till you add 1 times the last.digit. if the sum leaves no remainder when divided by
                  11 the code is valid ISBN.")
 
+(defn signature []
+  {:input  [{:argument-name "code" :type {:name "string"}}]
+   :output {:type {:name "boolean"}}})
+
 (defn- special-sum [code]
   (->>
    (range (count code) 0 -1)

@@ -5,6 +5,10 @@
 
 (def description "Determine if a given integer is a power of two.")
 
+(defn signature []
+  {:input  [{:argument-name "num" :type {:name "integer"}}]
+   :output {:type {:name "boolean"}}})
+
 (defn arguments-generator []
   (let [power-of-two [1 2 8 32 256 1024 4096 16348]]
     (gen/tuple (gen/one-of [(gen/choose 0 30000)

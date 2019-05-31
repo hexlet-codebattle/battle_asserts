@@ -7,6 +7,10 @@
 (def description "Provide the word in the form of an acronym composed of the first letter,
                  the number of letters in the word minus 2 and the last letter of the word.")
 
+(defn signature []
+  {:input  [{:argument-name "s" :type {:name "string"}}]
+   :output {:type {:name "string"}}})
+
 (defn arguments-generator []
   (let [words (repeatedly 50 faker/word)]
     (gen/tuple (gen/such-that #(> (count %) 2) (gen/elements words)))))

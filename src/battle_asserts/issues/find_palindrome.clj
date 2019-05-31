@@ -7,6 +7,10 @@
 (def description "A palindrome is a string that is written the same forward as it is in reverse.
                  Write a method to return the longest palindrome in a given string.")
 
+(defn signature []
+  {:input  [{:argument-name "s" :type {:name "string"}}]
+   :output {:type {:name "string"}}})
+
 (defn arguments-generator []
   (letfn [(alphabet []
             (map char (range (int \a) (inc (int \z)))))

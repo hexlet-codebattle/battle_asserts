@@ -8,6 +8,10 @@
                  An element can only be used once, in other words, you cannot multiply a number by itself.
                  Elements of the pair should be arranged in ascending order.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+   :output {:type {:name "array" :nested {:name "integer"}}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/such-that #(let [sorted (sort %)
                                    first-two (take 2 sorted)

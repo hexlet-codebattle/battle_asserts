@@ -5,6 +5,10 @@
 
 (def description "Given an array of integers, every element appears twice except for one. Find that single one.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+   :output {:type {:name "integer"}}})
+
 (defn arguments-generator []
   (letfn [(modify [array]
             (let [unique-elements (set array)
