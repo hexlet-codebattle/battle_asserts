@@ -5,6 +5,10 @@
 
 (def description "Return the sum of all prime numbers from 2 up to a given number.")
 
+(defn signature []
+  {:input  [{:argument-name "num" :type {:name "integer"}}]
+   :output {:type {:name "integer"}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/choose 10 1000)))
 

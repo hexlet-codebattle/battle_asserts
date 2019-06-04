@@ -6,6 +6,10 @@
 (def description "Moves all 0's to the end the array while maintaining
                  the relative order of the non-zero elements.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+   :output {:type {:name "array" :nested {:name "integer"}}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/one-of [(gen/vector gen/int)
                           (gen/bind (gen/vector gen/int)

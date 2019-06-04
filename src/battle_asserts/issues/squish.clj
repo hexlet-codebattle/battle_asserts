@@ -7,6 +7,10 @@
 
 (def description "Given a string. Remove all the whitespaces from both ends of the string. Then collapse groups of whitespaces inside the string into single whitespace each. Handles both ASCII and Unicode whitespaces.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "string"}}]
+   :output {:type {:name "string"}}})
+
 (defn- random-separator []
   (rand-nth ["\t" "\n" " "]))
 

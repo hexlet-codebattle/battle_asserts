@@ -8,6 +8,10 @@
                  section of track, going in opposite directions. The function should
                  consume the trains' speeds and the starting distance between the trains.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+   :output {:type {:name "float"}}})
+
 (defn arguments-generator []
   (gen/fmap #(conj (pop %)
                    (* (apply + (pop %))

@@ -5,6 +5,10 @@
 
 (def description "Given an array of numbers, return an array in which all the even numbers come first, and all the odd numbers come second.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "integer"}}]
+   :output {:type {:name "array" :nested {:name "integer"}}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int)))
 

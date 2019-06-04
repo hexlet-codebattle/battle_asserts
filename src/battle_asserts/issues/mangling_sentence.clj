@@ -7,6 +7,10 @@
 
 (def description "Given a sentence, sort characters in each word alphabetically.")
 
+(defn signature []
+  {:input  [{:argument-name "sentence" :type {:name "string"}}]
+   :output {:type {:name "string"}}})
+
 (defn- input-sentence []
   (let [sentence (faker/sentence {:lang :en :words-range [1 10]})
         modifiers [s/capitalize identity]

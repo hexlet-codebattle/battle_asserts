@@ -5,6 +5,10 @@
 
 (def description "Find the largest element in the Syracuse sequence.")
 
+(defn signature []
+  {:input  [{:argument-name "num" :type {:name "integer"}}]
+   :output {:type {:name "integer"}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/choose 1 100)))
 

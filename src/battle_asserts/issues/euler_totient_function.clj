@@ -6,6 +6,10 @@
 (def description "Two numbers are coprime if their greatest common divisor equals 1.
                  Implement the Euler's totient function f(x), which is defined as the number of positive integers less than x which are coprime to x.")
 
+(defn signature []
+  {:input  [{:argument-name "num" :type {:name "integer"}}]
+   :output {:type {:name "integer"}}})
+
 (defn arguments-generator []
   (gen/tuple gen/pos-int))
 

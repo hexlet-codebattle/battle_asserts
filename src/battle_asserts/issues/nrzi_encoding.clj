@@ -12,6 +12,10 @@
                  0 100 10000 100 1 1 1
                  ¯|___|¯¯¯¯¯|___|¯|_|¯")
 
+(defn signature []
+  {:input  [{:argument-name "seq" :type {:name "string"}}]
+   :output {:type {:name "string"}}})
+
 (defn arguments-generator []
   (letfn [(input []
             (let [alphabet ["_" "¯"]]

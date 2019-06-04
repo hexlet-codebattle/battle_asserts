@@ -7,6 +7,10 @@
 (def description "Given a hash map, return the keys of the elements with the smallest value.
                   The result should be sorted alphabetically.")
 
+(defn signature []
+  {:input  [{:argument-name "h" :type {:name "hash" :nested {:name "integer"}}}]
+   :output {:type {:name "array" :nested {:name "string"}}}})
+
 (defn arguments-generator []
   (letfn [(gen-word []
             (gen/elements (faker/words {:lang :en :n 50})))]

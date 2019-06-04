@@ -12,6 +12,11 @@
                  A = [1, 2, 3, 4, 5], B = [2, 3, 4], A is superlist of B
                  A = [1, 2, 4], B = [1, 2, 3, 4, 5], A is unequal B]")
 
+(defn signature []
+  {:input  [{:argument-name "arr1" :type {:name "integer"}}
+            {:argument-name "arr2" :type {:name "integer"}}]
+   :output {:type {:name "string"}}})
+
 (defn arguments-generator []
   (letfn [(superlist [a]
             (rand-nth (partition (rand-int (count a)) 1 a)))

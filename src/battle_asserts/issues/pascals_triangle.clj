@@ -5,6 +5,10 @@
 
 (def description "Return the N'th row of Pascal's Triangle.")
 
+(defn signature []
+  {:input  [{:argument-name "s" :type {:name "integer"}}]
+   :output {:type {:name "array" :nested {:name "integer"}}}})
+
 (defn arguments-generator []
   (gen/tuple gen/pos-int))
 

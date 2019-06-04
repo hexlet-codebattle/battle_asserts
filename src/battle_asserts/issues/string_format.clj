@@ -6,6 +6,10 @@
 (def description "Given a number as input, return a string \"Value is X\", 
                   where X is the given number with zeros added to the beginning so that there are 5 digits in total.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "integer"}}]
+   :output {:type {:name "string"}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/one-of [(gen/choose 0 9)
                           (gen/choose 10 99)

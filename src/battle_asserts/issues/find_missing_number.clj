@@ -8,6 +8,10 @@
                  One of the numbers is missing (the others are found exactly once).
                  N is not known beforehand. Determine the missing number.")
 
+(defn signature []
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+   :output {:type {:name "integer"}}})
+
 (defn arguments-generator []
   (gen/tuple (gen/bind (gen/choose 1 8)
                        #(gen/return (let [coll (range 1 %)]

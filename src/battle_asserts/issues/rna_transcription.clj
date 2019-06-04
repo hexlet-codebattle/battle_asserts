@@ -11,6 +11,10 @@
                  The transcribed RNA strand of a DNA strand is formed by replacing each nucleotide with its complement:
                  G -> C, C -> G, T -> A, A -> U.")
 
+(defn signature []
+  {:input  [{:argument-name "dna" :type {:name "string"}}]
+   :output {:type {:name "string"}}})
+
 (defn arguments-generator []
   (letfn [(dna-strand []
             (s/join (repeatedly (inc (rand-int 10))

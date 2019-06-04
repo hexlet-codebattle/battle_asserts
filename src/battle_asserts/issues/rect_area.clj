@@ -5,6 +5,11 @@
 
 (def description "Calculate the area of a rectangle given its length and width")
 
+(defn signature []
+  {:input  [{:argument-name "width" :type {:name "integer"}}
+            {:argument-name "height" :type {:name "integer"}}]
+   :output {:type {:name "float"}}})
+
 (defn arguments-generator []
   (gen/tuple gen/pos-int gen/pos-int))
 
