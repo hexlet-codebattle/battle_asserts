@@ -8,8 +8,8 @@
 
 (defn signature []
   {:input [{:argument-name "arr"
-            :type {:name "array" :nested "string"}}]
-   :output {:type {:name "hash" :nested "integer"}}})
+            :type {:name "array" :nested {:name "string"}}}]
+   :output {:type {:name "hash" :nested {:name "integer"}}}})
 
 (defn arguments-generator []
   (let [words (faker/words {:lang :en :n 15})]
