@@ -5,6 +5,12 @@
 
 (def description "Drop every N'th element from a list.")
 
+(defn signature []
+  {:input  [{:argument-name "num" :type {:name "integer"}}
+            {:argument-name "list" :type {:name "array" :nested "string"}}
+            ]
+   :output {:type {:name "array", :nested "string"}}})
+
 (defn arguments-generator []
   (gen/tuple gen/s-pos-int
              (gen/vector gen/int)))
