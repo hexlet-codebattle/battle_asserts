@@ -3,6 +3,8 @@
             [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
+(defn disabled [] true)
+
 (def level :medium)
 
 (def description "Parse a given request string.")
