@@ -7,8 +7,8 @@
 
 (defn signature []
   {:input [{:argument-name "arr"
-            :type {:name "array" :nested "integer"}}]
-   :output {:type {:name "array" :nested "integer"}}})
+            :type {:name "array" :nested {:name "integer"}}}]
+   :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/int)))

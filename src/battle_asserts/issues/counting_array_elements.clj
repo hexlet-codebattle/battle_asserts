@@ -6,6 +6,11 @@
 
 (def description "Return a hash map that shows how many times each element occurs in the given array.")
 
+(defn signature []
+  {:input [{:argument-name "arr"
+            :type {:name "array" :nested {:name "string"}}}]
+   :output {:type {:name "hash" :nested {:name "integer"}}}})
+
 (defn arguments-generator []
   (let [words (faker/words {:lang :en :n 15})]
     (gen/tuple (gen/vector (gen/elements words)))))

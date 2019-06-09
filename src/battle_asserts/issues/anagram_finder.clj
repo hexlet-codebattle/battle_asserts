@@ -11,8 +11,8 @@
   Words without any anagrams should not be included in the result.")
 
 (defn signature []
-  {:input [{:argument-name "words" :type {:name "array" :nested "string"}}]
-   :output {:type {:name "array" :nested {:name "array" :nested "string"}}}})
+  {:input [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}]
+   :output {:type {:name "array" :nested {:name "array" :nested {:name "string"}}}}})
 
 (defn arguments-generator
   []
