@@ -7,6 +7,8 @@
                   Repeated elements should be replaced with a single element.
                   The order of the elements should not be changed.")
 
+(defn disabled [] true)
+
 (defn arguments-generator []
   (letfn [(add-duplicates [coll]
             (concat coll (repeatedly (inc (rand-int 5))
