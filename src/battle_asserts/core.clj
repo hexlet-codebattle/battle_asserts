@@ -41,23 +41,18 @@
 (defn render_examples [description, samples]
   json-options [:escape-unicode false :escape-slash false]
   (let [
-        json-options [:escape-unicode false :escape-slash false]
-        to-json #(json/write-str % json-options)
+        json-options    [:escape-unicode false :escape-slash false]
+        to-json         #(json/write-str % json-options)
         array-to-string #(s ", " (map to-json % ))
-        samples-string (->
-                          samples
-                          (mapv #(str
-                                  (to-json (:expected %))
-                                  " == solution("
-                                  array-to-string(:arguments %)
-                                  ")"
-                                  )
-                                )
-                          )
+        samples-string  (->
+                         samples
+                         (mapv #(str
+                                 (to-json (:expected %))
+                                 " == solution("
+                                 array-to-string(:arguments %)
+                                 ")")))
         ]
-    (str description "\n\n**Example:**`" (s/join "\n" samples-string))
-    )
-  )
+    (str description "\n\n**Example:**`" (s/join "\n" samples-string))))
 
 (defn -main [& args]
   (let [namespaces (nsf/find-namespaces-in-dir (clojure.java.io/as-file "src/battle_asserts/issues"))]
