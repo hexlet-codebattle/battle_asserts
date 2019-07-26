@@ -18,16 +18,15 @@
         array-to-string #(s/join ", " (map to-json %))
         samples-string  (->>
                          samples
-                         (mapv #(str
+                         (mapv #(format
+                                 "%s  == solution(%s)"
                                  (to-json (:expected %))
-                                 " == solution("
-                                 (array-to-string (:arguments %))
-                                 ")")))]
-    (str
+                                 (array-to-string (:arguments %))))
+                         (s/join "\n"))]
+    (format
+     "%s\n\n**Example:**\n```\n%s\n```"
      description
-     "\n\n**Example:**\n```\n"
-     (s/join "\n" samples-string)
-     "\n```")))
+     samples-string)))
 
 (defn generate-issues
   [issue-ns-name]
