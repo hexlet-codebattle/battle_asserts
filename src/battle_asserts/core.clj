@@ -12,6 +12,21 @@
     (map #(hash-map :expected (apply solution %) :arguments %)
          coll)))
 
+(defn render-description [description, samples]
+  (let [
+        json-options    [:escape-unicode false :escape-slash false]
+        to-json         #(apply json/write-str % json-options)
+        array-to-string #(s/join ", " (map to-json % ))
+        samples-string  (->>
+                         samples
+                         (mapv #(str
+                                 (to-json (:expected %))
+                                 " == solution("
+                                 (array-to-string(:arguments %))
+                                 ")")))
+        ]
+    (str description "\n\n**Example:**\n```\n" (s/join "\n" samples-string) "\n```")))
+
 (defn generate-issues
   [issue-ns-name]
   (require [issue-ns-name])
@@ -23,12 +38,12 @@
         disabled (ns-resolve issue-ns-name 'disabled)
         signature (ns-resolve issue-ns-name 'signature)
         description @(ns-resolve issue-ns-name 'description)
-        sample (first @(ns-resolve issue-ns-name 'test-data))]
+        samples @(ns-resolve issue-ns-name 'test-data)]
     (let [filename (str "issues/" issue-name ".yml")
           metadata {:level @(ns-resolve issue-ns-name 'level)
                     :disabled (if disabled (disabled) false)
                     :signature (if signature (signature) {})
-                    :description (render_description description, samples)
+                    :description (render-description description samples)}
           yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})]
       (spit filename yaml))
 
@@ -38,21 +53,6 @@
         (doall (map #(.write w (str (json/write-str %) "\n"))
                     asserts))))))
 
-(defn render_examples [description, samples]
-  json-options [:escape-unicode false :escape-slash false]
-  (let [
-        json-options    [:escape-unicode false :escape-slash false]
-        to-json         #(json/write-str % json-options)
-        array-to-string #(s ", " (map to-json % ))
-        samples-string  (->
-                         samples
-                         (mapv #(str
-                                 (to-json (:expected %))
-                                 " == solution("
-                                 array-to-string(:arguments %)
-                                 ")")))
-        ]
-    (str description "\n\n**Example:**`" (s/join "\n" samples-string))))
 
 (defn -main [& args]
   (let [namespaces (nsf/find-namespaces-in-dir (clojure.java.io/as-file "src/battle_asserts/issues"))]
