@@ -7,8 +7,9 @@
                  Pythagorian Triplet is a triplet of numbers,
                  such that x^2 + y^2 = z^2")
 
+
 (defn signature []
-  {:input  [{:argument-name "num" :type {:name "array" :nested {:name "integer"}}}]
+  {:input  [{:argument-name "nums" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "boolean"}}})
 
 (defn square [i]
@@ -27,7 +28,7 @@
   [{:expected true
     :arguments [[12 5 13]]}
    {:expected true
-    :arguments [[3 4 5]]}
+    :arguments [[3 5 4]]}
    {:expected false
     :arguments [[8 9 7]]}
    {:expected false
