@@ -1,2 +1,7 @@
 language: clojure
 sudo: false
+
+jobs:
+  include:
+    - stage: generate assets
+      script: make generate
