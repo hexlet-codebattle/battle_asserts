@@ -16,17 +16,15 @@
   (let [json-options    [:escape-unicode false :escape-slash false]
         to-json         #(apply json/write-str % json-options)
         array-to-string #(s/join ", " (map to-json %))
-        samples-string  (->>
-                         samples
-                         (mapv #(format
-                                 "%s  == solution(%s)"
-                                 (to-json (:expected %))
-                                 (array-to-string (:arguments %))))
-                         (s/join "\n"))]
-    (format
-     "%s\n\n**Example:**\n```\n%s\n```"
-     description
-     samples-string)))
+        format-sample #(format
+                        "%s  == solution(%s)"
+                        (to-json (:expected %))
+                        (array-to-string (:arguments %)))]
+    (->>
+     samples
+     (mapv format-sample)
+     (s/join "\n")
+     (format "%s\n\n**Example:**\n```\n%s\n```" description))))
 
 (defn generate-issues
   [issue-ns-name]
@@ -45,8 +43,7 @@
                     :disabled (if disabled (disabled) false)
                     :signature (if signature (signature) {})
                     :description (render-description description samples)}
-          yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})]
-      (spit filename yaml))
+          yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})] (spit filename yaml))
 
     (let [filename (str "issues/" issue-name ".jsons")
           asserts (generate-asserts generator solution)]
