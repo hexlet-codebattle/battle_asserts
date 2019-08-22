@@ -11,7 +11,7 @@
   {:input [{:argument-name "words" :type {:name "array" :nested {:name "integer"}}}
            {:argument-name "index" :type {:name "integer"}}
            {:argument-name "num" :type {:name "integer"}}]
-   :output {:type {:name "array" :nested {:name "string"}}}})
+   :output {:type {:name "integer"}}})
 
 (defn arguments-generator
   []
@@ -26,8 +26,6 @@
    {:expected 10 :arguments [[1 2 3] -5 10]}
    {:expected 1 :arguments [[1 -5 4 2] 0 0]}
    {:expected 0 :arguments [[8 0 6 7] -3 -8]}])
-
-; (gen/sample (arguments-generator) 5)
 
 (defn solution
   [s index default]
