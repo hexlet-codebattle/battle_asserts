@@ -11,7 +11,7 @@
    :output {:type {:name "float"}}})
 
 (defn arguments-generator []
-  (gen/tuple gen/pos-int gen/pos-int))
+  (gen/tuple gen/nat gen/nat))
 
 (def test-data
   [{:expected 0 :arguments [0 0]}

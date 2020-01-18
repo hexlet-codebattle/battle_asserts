@@ -14,7 +14,7 @@
 (defn arguments-generator []
   (letfn [(gen-word []
             (gen/elements (faker/words {:lang :en :n 50})))]
-    (gen/tuple (gen/map (gen-word) gen/int))))
+    (gen/tuple (gen/map (gen-word) gen/small-integer))))
 
 (def test-data
   [{:expected ["damage" "detail"]

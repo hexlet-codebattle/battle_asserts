@@ -1,5 +1,6 @@
 (ns battle-asserts.issues.xor
-  (:require [clojure.test.check.generators :as gen]))
+  (:require [clojure.test.check.generators :as gen]
+            [clojure.string]))
 
 (def level :easy)
 
@@ -25,9 +26,7 @@
   [str1 str2]
   (clojure.string/join (map char
                             (map bit-xor
-                                 (doall
-                                  (map int
-                                       (seq str1)))
-                                 (doall
-                                  (map int
-                                       (seq str2)))))))
+                                 (map int
+                                      str1)
+                                 (map int
+                                      str2)))))

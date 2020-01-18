@@ -23,7 +23,7 @@
              rand-int
              inc))]
     (gen/tuple (gen/bind (gen/tuple (gen/choose -20 20)
-                                    gen/s-pos-int
+                                    utility/gen-pos-num
                                     (gen/choose 5 10))
                          #(->
                            (apply progression %)

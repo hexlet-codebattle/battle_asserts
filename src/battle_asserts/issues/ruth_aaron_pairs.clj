@@ -19,7 +19,7 @@
 
 (defn arguments-generator []
   (gen/tuple (gen/one-of [(gen/elements ruth-aaron-pairs)
-                          (gen/bind gen/pos-int #(gen/return [%, (inc %)]))])))
+                          (gen/bind gen/nat #(gen/return [%, (inc %)]))])))
 
 (def test-data
   [{:expected true

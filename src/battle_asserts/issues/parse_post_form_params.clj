@@ -20,12 +20,12 @@
 (defn arguments-generator []
   (let [word-generator (gen/elements (faker/words {:lang :en :n 30}))]
     (gen/tuple (gen/bind (gen/map word-generator
-                                  (gen/one-of [gen/int
+                                  (gen/one-of [gen/small-integer
                                                word-generator
                                                (gen/recursive-gen
                                                 #(gen/map word-generator %)
-                                                (gen/one-of [gen/int
-                                                             (gen/vector gen/int)]))]))
+                                                (gen/one-of [gen/small-integer
+                                                             (gen/vector gen/small-integer)]))]))
                          #(gen/return (to-query %))))))
 
 (def test-data

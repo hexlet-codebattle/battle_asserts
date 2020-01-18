@@ -1,5 +1,6 @@
 (ns battle-asserts.issues.drop-every-n-element
-  (:require [clojure.test.check.generators :as gen]))
+  (:require [battle-asserts.utility :as utility]
+            [clojure.test.check.generators :as gen]))
 
 (def level :elementary)
 
@@ -9,13 +10,12 @@
 
 (defn signature []
   {:input  [{:argument-name "num" :type {:name "integer"}}
-            {:argument-name "list" :type {:name "array" :nested {:name "string"}}}
-            ]
+            {:argument-name "list" :type {:name "array" :nested {:name "string"}}}]
    :output {:type {:name "array", :nested {:name "string"}}}})
 
 (defn arguments-generator []
-  (gen/tuple gen/s-pos-int
-             (gen/vector gen/int)))
+  (gen/tuple utility/gen-pos-num
+             (gen/vector gen/small-integer)))
 
 (def test-data
   [{:expected ["a" "b" "d" "e" "g" "h" "k"]

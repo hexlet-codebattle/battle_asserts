@@ -17,12 +17,12 @@
 (defn arguments-generator []
   (let [word-generator (gen/elements (faker/words {:lang :en :n 30}))]
     (gen/tuple (gen/map word-generator
-                        (gen/one-of [gen/int
+                        (gen/one-of [gen/small-integer
                                      gen/boolean
                                      word-generator
                                      (gen/recursive-gen
                                       #(gen/one-of [(gen/vector % 1 4) (gen/map word-generator %)])
-                                      (gen/one-of [gen/boolean gen/int]))])))))
+                                      (gen/one-of [gen/boolean gen/small-integer]))])))))
 
 (def test-data
   [{:expected {"x[0]" "1" "x[1]" "2" "x[2]" "3"}

@@ -24,11 +24,11 @@
             (concat (repeatedly (rand-int 4) #(rand-int 10))
                     a
                     (repeatedly (rand-int 4) #(rand-int 10))))]
-    (gen/bind (gen/vector gen/int 4 8)
+    (gen/bind (gen/vector gen/small-integer 4 8)
               #(gen/tuple (gen/return %) (gen/one-of [(gen/return (superlist %))
                                                       (gen/return (sublist %))
                                                       (gen/return %)
-                                                      (gen/vector gen/int 4 8)])))))
+                                                      (gen/vector gen/small-integer 4 8)])))))
 
 (def test-data
   [{:arguments [[1 2 3] [1 2 3 4 5]] :expected "A is sublist of B"}

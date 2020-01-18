@@ -1,5 +1,6 @@
 (ns battle-solutions.zigzag-conversion-test
   (:require [clojure.test :refer :all]
+            [clojure.string]
             [battle-asserts.test-helper :refer :all]))
 
 (defn zigzag

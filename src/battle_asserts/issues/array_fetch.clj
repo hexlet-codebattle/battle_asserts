@@ -15,9 +15,9 @@
 
 (defn arguments-generator
   []
-  (gen/tuple (gen/list gen/int)
-             gen/int
-             gen/int))
+  (gen/tuple (gen/list gen/small-integer)
+             gen/small-integer
+             gen/small-integer))
 
 (def test-data
   [{:expected 2 :arguments [[1 2 3] 1 10]}

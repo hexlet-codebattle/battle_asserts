@@ -12,7 +12,7 @@
 
 (defn arguments-generator
   []
-  (gen/tuple (gen/resize 10000 gen/pos-int)))
+  (gen/tuple (gen/resize 10000 gen/nat)))
 
 (def test-data
   [{:expected 15

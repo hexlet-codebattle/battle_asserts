@@ -17,7 +17,7 @@
 
 (defn arguments-generator []
   (gen/tuple (gen/bind (gen/choose 2 5)
-                       #(gen/vector (gen/vector gen/int %)))))
+                       #(gen/vector (gen/vector gen/small-integer %)))))
 
 (def test-data
   [{:expected [[1 10] [2 20] [3 30]]
