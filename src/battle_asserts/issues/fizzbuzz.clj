@@ -16,7 +16,7 @@
   (let [divisible (take 20 (filter #(or (zero? (mod % 3))
                                         (zero? (mod % 5)))
                                    (range)))]
-    (gen/tuple (gen/one-of [gen/int
+    (gen/tuple (gen/one-of [gen/small-integer
                             (gen/elements divisible)]))))
 
 (def test-data

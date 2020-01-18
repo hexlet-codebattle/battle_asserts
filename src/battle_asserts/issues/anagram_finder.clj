@@ -51,5 +51,5 @@
                 (cons (vec confirmed)
                       (anagrams-for (first unconfirmed) unconfirmed)))))]
 
-    (vec (filter #(< 1 (count %))
-                 (anagrams-for (first words) words)))))
+    (filterv #(< 1 (count %))
+             (anagrams-for (first words) words))))

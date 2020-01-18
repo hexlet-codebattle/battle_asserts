@@ -1,5 +1,6 @@
 (ns battle-asserts.issues.two-trains-meet
-  (:require [clojure.test.check.generators :as gen]))
+  (:require [clojure.test.check.generators :as gen]
+            [battle-asserts.utility :as utility]))
 
 (def level :elementary)
 
@@ -9,18 +10,18 @@
                  consume the trains' speeds and the starting distance between the trains.")
 
 (defn signature []
-  {:input  [{:argument-name "v1" :type {:name "integer"}}
-            {:argument-name "v2" :type {:name "integer"}}
-            {:argument-name "distance" :type {:name "integer"}}]
+  {:input [{:argument-name "v1" :type {:name "integer"}}
+           {:argument-name "v2" :type {:name "integer"}}
+           {:argument-name "distance" :type {:name "integer"}}]
    :output {:type {:name "float"}}})
 
 (defn arguments-generator []
   (gen/fmap #(conj (pop %)
                    (* (apply + (pop %))
                       (peek %)))
-            (gen/tuple gen/s-pos-int
-                       gen/s-pos-int
-                       gen/s-pos-int)))
+            (gen/tuple utility/gen-pos-num
+                       utility/gen-pos-num
+                       utility/gen-pos-num)))
 
 (def test-data
   [{:expected 1.0 :arguments [50 50 100]}

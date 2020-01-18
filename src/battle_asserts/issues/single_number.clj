@@ -16,7 +16,7 @@
                   without-last (drop-last unique-elements)]
               (gen/shuffle (apply conj without-last single-element without-last))))]
     (gen/tuple (gen/bind (gen/such-that #(> (count (set %)) 3)
-                                        (gen/vector gen/int 3 25))
+                                        (gen/vector gen/small-integer 3 25))
                          modify))))
 
 (def test-data

@@ -16,8 +16,8 @@
   (letfn [(inject-fixed-point [coll]
             (gen/bind (gen/tuple (gen/return coll) (gen/choose 0 (count coll)))
                       #(gen/return (assoc (first %) (second %) (second %)))))]
-    (gen/tuple (gen/one-of [(gen/vector gen/int)
-                            (gen/bind (gen/vector gen/int) inject-fixed-point)]))))
+    (gen/tuple (gen/one-of [(gen/vector gen/small-integer)
+                            (gen/bind (gen/vector gen/small-integer) inject-fixed-point)]))))
 
 (def test-data
   [{:expected 3

@@ -10,8 +10,8 @@
 
 (defn arguments-generator
   []
-  (let [nested (gen/list (gen/one-of [gen/int (gen/list gen/int)]))]
-    (gen/tuple (gen/resize 5 (gen/list (gen/one-of [gen/int nested]))))))
+  (let [nested (gen/list (gen/one-of [gen/small-integer (gen/list gen/small-integer)]))]
+    (gen/tuple (gen/resize 5 (gen/list (gen/one-of [gen/small-integer nested]))))))
 
 ; (gen/sample (arguments-generator) 1)
 

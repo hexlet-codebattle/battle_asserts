@@ -1,5 +1,6 @@
 (ns battle-asserts.issues.read-roman-numerals
   (:require [clojure.pprint :as pprint]
+            [clojure.string]
             [clojure.test.check.generators :as gen]))
 
 (def level :hard)

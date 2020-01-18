@@ -16,7 +16,7 @@
                 result
                 (let [new-element (rand-int (inc (- value sum)))]
                   (recur (+ sum new-element) (conj result new-element))))))]
-    (gen/tuple (gen/one-of [(gen/vector gen/int)
+    (gen/tuple (gen/one-of [(gen/vector gen/small-integer)
                             (gen/elements (repeatedly 50 #(seq-with-sum 21)))]))))
 
 (def test-data

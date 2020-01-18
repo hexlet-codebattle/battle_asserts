@@ -13,7 +13,7 @@
 
 (defn arguments-generator []
   (let [word-generator (gen/elements (faker/words {:lang :en :n 30}))]
-    (gen/tuple (gen/vector word-generator) gen/int)))
+    (gen/tuple (gen/vector word-generator) gen/small-integer)))
 
 (def test-data
   [{:expected {:draft 0 :completed 0}

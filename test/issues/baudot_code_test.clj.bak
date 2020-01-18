@@ -1,6 +1,7 @@
 (ns battle-solutions.baudot-code-test
   (:require [clojure.test :refer :all]
-            [battle-asserts.test-helper :refer :all]))
+            [battle-asserts.test-helper :refer :all
+             clojure.string]))
 
 (defn baudot-code
   [code]

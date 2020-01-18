@@ -8,7 +8,7 @@
 
 (ct/defspec spec-solution
   20
-  (prop/for-all [v (gen/tuple (gen/resize 10000 gen/pos-int))]
+  (prop/for-all [v (gen/tuple (gen/resize 10000 gen/nat))]
                 (= (apply issue/solution v)
                    (mod (first v) 1000))))
 

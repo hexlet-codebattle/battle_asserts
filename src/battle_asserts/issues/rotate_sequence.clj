@@ -9,7 +9,7 @@
 (defn disabled [] true)
 
 (defn arguments-generator []
-  (gen/tuple gen/int (gen/not-empty (gen/vector gen/int))))
+  (gen/tuple gen/small-integer (gen/not-empty (gen/vector gen/small-integer))))
 
 (def test-data
   [{:expected [4 5 1 2 3]

@@ -18,7 +18,7 @@
                                    last-two (take-last 2 sorted)]
                                (not= (apply * first-two)
                                      (apply * last-two)))
-                            (gen/vector gen/int 2 25))))
+                            (gen/vector gen/small-integer 2 25))))
 
 (def test-data
   [{:expected [-4 -3]

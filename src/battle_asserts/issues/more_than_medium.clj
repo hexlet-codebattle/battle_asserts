@@ -30,6 +30,5 @@
                                   words))
                    (count words))]
 
-    (vec
-     (filter #(> (count %) average)
-             words))))
+    (filterv #(> (count %) average)
+             words)))

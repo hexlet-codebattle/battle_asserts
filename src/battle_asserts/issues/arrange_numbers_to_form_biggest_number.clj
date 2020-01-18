@@ -1,5 +1,6 @@
 (ns battle-asserts.issues.arrange-numbers-to-form-biggest-number
-  (:require [clojure.test.check.generators :as gen]))
+  (:require [clojure.test.check.generators :as gen]
+            [clojure.string]))
 
 (def level :easy)
 

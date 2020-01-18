@@ -13,8 +13,8 @@
   (letfn [(add-duplicates [coll]
             (concat coll (repeatedly (inc (rand-int 5))
                                      #(rand-nth coll))))]
-    (gen/tuple (gen/one-of [(gen/vector gen/int)
-                            (gen/bind (gen/vector gen/int 1 8)
+    (gen/tuple (gen/one-of [(gen/vector gen/small-integer)
+                            (gen/bind (gen/vector gen/small-integer 1 8)
                                       #(gen/shuffle (add-duplicates %)))]))))
 
 (def test-data

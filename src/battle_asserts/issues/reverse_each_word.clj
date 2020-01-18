@@ -1,5 +1,6 @@
 (ns battle-asserts.issues.reverse-each-word
   (:require [clojure.test.check.generators :as gen]
+            [clojure.string]
             [faker.generate :as faker]))
 
 (def level :elementary)

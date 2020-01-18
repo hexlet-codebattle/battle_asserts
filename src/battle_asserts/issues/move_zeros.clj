@@ -11,8 +11,8 @@
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/one-of [(gen/vector gen/int)
-                          (gen/bind (gen/vector gen/int)
+  (gen/tuple (gen/one-of [(gen/vector gen/small-integer)
+                          (gen/bind (gen/vector gen/small-integer)
                                     #(gen/shuffle (concat % (repeat (inc (rand-int 5)) 0))))])))
 
 (def test-data
