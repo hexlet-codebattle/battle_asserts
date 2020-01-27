@@ -10,7 +10,7 @@
                  He says 'Fine. Be that way!' if you address him without actually saying anything.
                  He answers 'Whatever.' to anything else.  ")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "sentence" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 

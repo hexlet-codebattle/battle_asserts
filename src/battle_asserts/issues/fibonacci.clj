@@ -6,7 +6,7 @@
 (def description "Return the N'th item in the Fibonacci sequence.
                  Hint: The first item in the sequence is 0.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]
    :output {:type {:name "integer"}}})
 

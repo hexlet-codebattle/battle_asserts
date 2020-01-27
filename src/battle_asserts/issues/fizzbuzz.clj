@@ -8,7 +8,7 @@
                  If a number is divisible by 3 and 5, return \"FizzBuzz\".
                  Otherwise, return an empty string.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "n" :type {:name "integer"}}]
    :output {:type {:name "string"}}})
 

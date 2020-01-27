@@ -7,7 +7,7 @@
 
 (def description "Given a sentence, sort characters in each word alphabetically.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "sentence" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 

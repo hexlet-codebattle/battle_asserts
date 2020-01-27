@@ -7,7 +7,7 @@
 
 (def description "Given a sentence and a word, find all the positions in which the word occurs in the sentence. Return an array of such positions.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "sentence" :type {:name "string"}}
             {:argument-name "word" :type {:name "string"}}]
    :output {:type {:name "array" :nested {:name "integer"}}}})

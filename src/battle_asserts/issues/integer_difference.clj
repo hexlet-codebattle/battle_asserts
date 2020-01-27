@@ -5,7 +5,7 @@
 
 (def description "Find how many pairs X, Y there are in the array, such that abs(X-Y) is equal to the first argument.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "differ" :type {:name "integer"}}
             {:argument-name "b" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "integer"}}})

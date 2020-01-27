@@ -40,8 +40,8 @@
         samples @(ns-resolve issue-ns-name 'test-data)]
     (let [filename (str "issues/" issue-name ".yml")
           metadata {:level @(ns-resolve issue-ns-name 'level)
-                    :disabled (if disabled (disabled) false)
-                    :signature (if signature (signature) {})
+                    :disabled (if (nil? disabled) false @signature)
+                    :signature (if (nil? signature) {} @signature)
                     :description (render-description description samples)}
           yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})] (spit filename yaml))
 
@@ -52,5 +52,7 @@
                     asserts))))))
 
 (defn -main [& args]
-  (let [namespaces (nsf/find-namespaces-in-dir (clojure.java.io/as-file "src/battle_asserts/issues"))]
+  (let [namespaces (-> "src/battle_asserts/issues"
+                       clojure.java.io/as-file
+                       nsf/find-namespaces-in-dir)]
     (doall (map generate-issues namespaces))))

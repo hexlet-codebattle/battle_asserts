@@ -6,7 +6,7 @@
 
 (def description "Check if the parentheses in the expression are all balanced, so that all open parentheses are closed properly.")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "brackets" :type {:name "string"}}]
    :output {:type {:name "boolean"}}})
 

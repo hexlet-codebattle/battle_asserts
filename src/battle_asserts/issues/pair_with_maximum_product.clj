@@ -8,7 +8,7 @@
                  An element can only be used once, in other words, you cannot multiply a number by itself.
                  Elements of the pair should be arranged in ascending order.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "array" :nested {:name "integer"}}}})
 

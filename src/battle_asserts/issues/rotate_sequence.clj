@@ -3,10 +3,10 @@
 
 (def level :medium)
 
-(def description "Given an array and a number, generate an array with values shifted left or right by a given number. 
+(def description "Given an array and a number, generate an array with values shifted left or right by a given number.
                   The number could be positive or negative; positive number shifts the array forward, negative shifts it backwards.")
 
-(defn disabled [] true)
+(def disabled true)
 
 (defn arguments-generator []
   (gen/tuple gen/small-integer (gen/not-empty (gen/vector gen/small-integer))))

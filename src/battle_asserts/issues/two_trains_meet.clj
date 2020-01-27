@@ -9,7 +9,7 @@
                  section of track, going in opposite directions. The function should
                  consume the trains' speeds and the starting distance between the trains.")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "v1" :type {:name "integer"}}
            {:argument-name "v2" :type {:name "integer"}}
            {:argument-name "distance" :type {:name "integer"}}]

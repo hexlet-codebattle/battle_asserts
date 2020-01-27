@@ -6,7 +6,7 @@
 
 (def description "Compute the distance a boat travels across a river, given the width of the river, the boat's speed perpendicular to the river, and the river's speed.")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "width" :type {:name "float"}}
            {:argument-name "v_boat" :type {:name "float"}}
            {:argument-name "v_river" :type {:name "float"}}]

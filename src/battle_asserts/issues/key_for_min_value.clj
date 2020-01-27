@@ -7,7 +7,7 @@
 (def description "Given a hash map, return the keys of the elements with the smallest value.
                   The result should be sorted alphabetically.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "h" :type {:name "hash" :nested {:name "integer"}}}]
    :output {:type {:name "array" :nested {:name "string"}}}})
 

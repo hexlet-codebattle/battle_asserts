@@ -6,7 +6,7 @@
 
 (def description "Check whether the number can be a n-nary number (in other words, whether the number is in base-n for n < 10). ")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "num" :type {:name "integer"}}
            {:argument-name "base" :type {:name "integer"}}]
    :output {:type {:name "boolean"}}})

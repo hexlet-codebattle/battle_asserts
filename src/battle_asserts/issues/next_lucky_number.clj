@@ -7,7 +7,7 @@
 (def description "Lucky numbers are defined as the numbers consisting only of digits 3 and 5.
                  Write a function which, given a number N, returns the smallest lucky number strictly greater than N.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "number" :type {:name "integer"}}]
    :output {:type {:name "integer"}}})
 

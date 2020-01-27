@@ -5,7 +5,7 @@
 
 (def description "Find numbers which have odd occurrences in array.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
