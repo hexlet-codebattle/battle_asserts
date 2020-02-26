@@ -9,7 +9,7 @@
 
 (defn signature []
   {:input  [{:argument-name "number" :type {:name "integer"}}]
-   :output {:type {:name "integer"}})
+   :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
   (gen/tuple (gen/choose 0 100)))
