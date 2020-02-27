@@ -30,7 +30,7 @@
   [{:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
     :expected [["veer" "ever"] ["lake" "kale"] ["item" "mite"]]}
    {:arguments [["meat" "mat" "team" "mate" "eat" "mate"]]
-    :expected [["meat" "team" "mate"]]}])
+    :expected [["meat" "team" "mate" "mate"]]}])
 
 (defn solution
   [words]
