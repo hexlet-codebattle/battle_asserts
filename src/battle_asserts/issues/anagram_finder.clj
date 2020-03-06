@@ -27,29 +27,15 @@
 ; (gen/sample (arguments-generator) 5)
 
 (def test-data
-  [{:arguments [["veer" "lake" "item" "kale" "mite" "ever"]]
-    :expected [["veer" "ever"] ["lake" "kale"] ["item" "mite"]]}
+  [{:arguments [["veer" "lake" "item" "kale" "mite" "ever" "rev"]]
+    :expected  [["veer" "ever"] ["lake" "kale"] ["item" "mite"]]}
    {:arguments [["meat" "mat" "team" "mate" "eat"]]
-    :expected [["meat" "team" "mate"]]}])
+    :expected  [["meat" "team" "mate"]]}])
 
-(defn solution
-  [words]
-  (letfn [(prepare
-            [word]
-            (vec (sort (char-array word))))
-
-          (anagram?
-            [word candidate]
-            (zero? (compare (prepare word) (prepare candidate))))
-
-          (anagrams-for
-            [word anagrams]
-            (let [confirmed (filter #(anagram? word %) anagrams)
-                  unconfirmed (filter #(not (anagram? word %)) anagrams)]
-              (if (empty? confirmed)
-                []
-                (cons (vec confirmed)
-                      (anagrams-for (first unconfirmed) unconfirmed)))))]
-
-    (filterv #(< 1 (count %))
-             (anagrams-for (first words) words))))
+(defn solution [words]
+  (->> words
+       (group-by count)
+       vals
+       (map #(apply group-by set %&))
+       (mapcat vals)
+       (filterv next)))
