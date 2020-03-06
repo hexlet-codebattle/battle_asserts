@@ -14,7 +14,9 @@
   (gen/tuple (gen/vector gen/small-integer)))
 
 (def test-data
-  [{:expected 11
+  [{:expected 1
+    :arguments [[1]]}
+   {:expected 11
     :arguments [[1 2 3 4 5 6]]}
    {:expected 74
     :arguments [[12 34 10 6 40]]}
