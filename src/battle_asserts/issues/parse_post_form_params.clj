@@ -7,7 +7,7 @@
 
 (def description "Parse a given request string.")
 
-(defn disabled [] true)
+(def disabled true)
 
 (defn to-query [value]
   (letfn [(to-string [name value]

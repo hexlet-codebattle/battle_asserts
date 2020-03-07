@@ -7,7 +7,7 @@
 
 (def description "Find number of words starting with capital letter")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "s" :type {:name "string"}}]
    :output {:type {:name "integer"}}})
 

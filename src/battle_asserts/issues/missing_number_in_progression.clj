@@ -7,7 +7,7 @@
 (def description "Given an array that represents elements of an arithmetic progression in order.
                  One element is missing in the progression. Return the missing number.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "sentence" :type {:name "string"}}]
    :output {:type {:name "integer"}}})
 

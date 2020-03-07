@@ -8,7 +8,7 @@
                  One of the numbers is missing (the others are found exactly once).
                  N is not known beforehand. Determine the missing number.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "integer"}}})
 

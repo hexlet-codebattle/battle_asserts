@@ -8,7 +8,7 @@
 (def description "Given a string as input, reverse each word, but keep the word order the same.
                   Words are separated by whitespaces.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "s" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 

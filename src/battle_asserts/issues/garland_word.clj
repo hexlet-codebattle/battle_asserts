@@ -10,7 +10,7 @@
                  A garland word is one that starts and ends with the same N letters in the same
                  order, for some N greater than 0, but less that the length of the word.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "word" :type {:name "string"}}]
    :output {:type {:name "integer"}}})
 

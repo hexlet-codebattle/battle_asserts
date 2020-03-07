@@ -6,7 +6,7 @@
 (def description "Calculate the sum of all natural numbers smaller than n (first argument)
                  which are divisible by a or/and b (second and third arguments) without remainder.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "integer"}}})
 

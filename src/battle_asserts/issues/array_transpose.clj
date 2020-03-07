@@ -10,7 +10,7 @@
                   2) write the rows of the original matrix as columns of the new one;
                  3) write the columns of the original matrix as rows of the new one.")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "arr1" :type {:name "array" :nested {:name "integer"}}}
            {:argument-name "arr2" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "array" :nested {:name "array" :nested {:name "integer"}}}}})

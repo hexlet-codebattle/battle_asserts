@@ -10,7 +10,7 @@
                  For example,
                  pattern = \" abba \", str = \" dog cat cat dog \" should return true.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "arr" :type {:name "string"}}]
    :output {:type {:name "boolean"}}})
 

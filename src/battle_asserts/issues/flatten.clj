@@ -6,7 +6,7 @@
 (def description "Given an array, possibly with more arrays inside, return a 1-dimensional
                   flat array with all the values in the initial order.")
 
-(defn disabled [] true)
+(def disabled true)
 
 (defn arguments-generator
   []

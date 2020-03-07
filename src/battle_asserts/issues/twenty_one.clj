@@ -5,7 +5,7 @@
 
 (def description "Given an array, determine if the sum of all its elements is equal to 21.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "boolean"}}})
 

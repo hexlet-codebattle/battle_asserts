@@ -2,14 +2,14 @@
   (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
-(defn disabled [] true)
+(def disabled true)
 
 (def level :medium)
 
 (def description "Flatten the given hash.
   This is how HTTP libraries pack data when POST requests are made using x-www-form-urlencoded.")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}
            {:argument-name "num" :type {:name "integer"}}]
    :output {:type {:name "hash" :nested {:name "integer"}}}})

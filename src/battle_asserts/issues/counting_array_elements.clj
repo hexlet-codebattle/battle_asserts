@@ -6,7 +6,7 @@
 
 (def description "Return a hash map that shows how many times each element occurs in the given array.")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "arr"
             :type {:name "array" :nested {:name "string"}}}]
    :output {:type {:name "hash" :nested {:name "integer"}}}})

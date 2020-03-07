@@ -9,7 +9,7 @@
                  This is a happy number. An unhappy number (or sad number) is one that loops endlessly.
                  Write a function that determines if a number is happy or not.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "n" :type {:name "integer"}}]
    :output {:type {:name "boolean"}}})
 
