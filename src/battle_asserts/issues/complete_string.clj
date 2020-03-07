@@ -40,9 +40,8 @@
    {:expected false :arguments ["0123456789abcdefghijklmnop"]}])
 
 (defn solution [s]
-  (= (->> s
-          (re-seq #"[a-z]")
-          distinct
-          sort
-          s/join)
-     "abcdefghijklmnopqrstuvwxyz"))
+  (->> s
+       (re-seq #"[a-z]")
+       seq
+       count
+       (= 26)))

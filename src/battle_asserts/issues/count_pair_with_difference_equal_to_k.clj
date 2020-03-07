@@ -14,23 +14,21 @@
   (gen/tuple (gen/vector gen/small-integer) gen/nat))
 
 (def test-data
-  [{:expected 2
+  [{:expected  2
     :arguments [[1 5 3 4 2] 3]}
-   {:expected 5
+   {:expected  5
     :arguments [[8 12 16 4 0 20] 4]}
-   {:expected 7
+   {:expected  7
     :arguments [[1 4 3 0 2 5 7 8 9 6] 3]}
-   {:expected 3
+   {:expected  3
     :arguments [[1 2 3 4 4 2 2 1] 0]}])
 
-(defn make-pair [value array]
-  (mapv vector (repeat (count array) value)
-        array))
-
 (defn solution [arr k]
-  (->>
-   arr
-   (reduce-kv #(concat %1 (make-pair %3 (subvec arr (inc %2)))) [])
-   (filter #(= k (Math/abs (apply - %))))
-   distinct
-   count))
+  (let [get-pairs (fn [x coll]
+                    (for [y coll]
+                      [x y]))
+        pairs     (mapcat get-pairs arr (iterate rest (rest arr)))]
+    (->> pairs
+         distinct
+         (filter #(= k (Math/abs (apply - %))))
+         count)))

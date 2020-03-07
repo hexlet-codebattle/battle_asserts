@@ -42,9 +42,9 @@
     :arguments [5511 8]}])
 
 (defn solution [number base]
-  (-> (str "["
-           (s/join (range base 10))
-           "]")
-      re-pattern
-      (re-find (str number))
-      nil?))
+  (->> number
+       (iterate #(quot % 10))
+       (take-while pos?)
+       (map #(mod % 10))
+       (some #(> % (dec base)))
+       nil?))
