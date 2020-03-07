@@ -10,3 +10,4 @@ target
 issues/*.*
 !issues/.gitkeep
 .vagrant/
+.eastwood
