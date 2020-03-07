@@ -1,7 +1,9 @@
-name: Clojure CI
+name: Run tests and linters
 
 on:
   pull_request:
+    branches: [ master ]
+  push:
     branches: [ master ]
 
 jobs:

@@ -11,3 +11,4 @@ issues/*.*
 !issues/.gitkeep
 .vagrant/
 .eastwood
+release.tar.gz
