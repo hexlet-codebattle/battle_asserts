@@ -8,8 +8,8 @@
                  Write a function which, given a number N, returns the smallest lucky number strictly greater than N.")
 
 (defn signature []
-  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
-   :output {:type {:name "array" :nested {:name "integer"}}}})
+  {:input  [{:argument-name "number" :type {:name "integer"}}]
+   :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
   (gen/tuple (gen/choose 0 100)))
