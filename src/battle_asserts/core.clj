@@ -40,7 +40,7 @@
         samples @(ns-resolve issue-ns-name 'test-data)]
     (let [filename (str "issues/" issue-name ".yml")
           metadata {:level @(ns-resolve issue-ns-name 'level)
-                    :disabled (if (nil? disabled) false @signature)
+                    :disabled (if (nil? disabled) false @disabled)
                     :signature (if (nil? signature) {} @signature)
                     :description (render-description description samples)}
           yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})] (spit filename yaml))
