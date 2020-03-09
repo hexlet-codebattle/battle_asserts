@@ -28,9 +28,4 @@
     :arguments [[] [2 4 6]]}])
 
 (defn solution [array-first array-second]
-  (->>
-   array-first
-   (map-indexed #(vector %2 (nth array-second %1 nil)))
-   flatten
-   (filter #(not (nil? %)))
-   (take (* 2 (min (count array-first) (count array-second))))))
+  (interleave array-first array-second))
