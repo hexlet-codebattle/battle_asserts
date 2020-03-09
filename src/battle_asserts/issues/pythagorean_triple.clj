@@ -7,7 +7,7 @@
                  Pythagorian Triplet is a triplet of numbers,
                  such that x^2 + y^2 = z^2")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "nums" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "boolean"}}})
 

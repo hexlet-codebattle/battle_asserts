@@ -10,7 +10,7 @@
                  21 is read off as \"one 2, then one 1\".
                  1211 is read off as \"one 1, then one 2, then two 1's\".")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "str" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 

@@ -8,7 +8,7 @@
                   return an array of words which are longer than the average length of all the words.
                   Words a separated by a whitespace. If there is a trailing period (dot), it should be omittied.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "sentence" :type {:name "string"}}]
    :output {:type {:name "array" :nested {:name "string"}}}})
 

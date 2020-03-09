@@ -7,7 +7,7 @@
 (def description "A palindrome is a string that is written the same forward as it is in reverse.
                  Write a method to return the longest palindrome in a given string.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "s" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 

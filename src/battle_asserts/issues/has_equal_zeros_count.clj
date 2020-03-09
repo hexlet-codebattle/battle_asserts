@@ -5,7 +5,7 @@
 
 (def description "Calculate the number of zeros is equal whether the two numbers represented in binary?")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "a" :type {:name "integer"}}
             {:argument-name "b" :type {:name "integer"}}]
    :output {:type {:name "boolean"}}})

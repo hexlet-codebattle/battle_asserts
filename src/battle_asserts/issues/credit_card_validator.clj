@@ -13,7 +13,7 @@
                  3. If the total modulo 10 is equal to 0 (if the total ends in zero) then the number is valid
                  according to the Luhn formula; else it is not valid.")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "arr" :type {:name "string"}}]
    :output {:type {:name "boolean"}}})
 

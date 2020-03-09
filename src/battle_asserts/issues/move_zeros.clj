@@ -6,7 +6,7 @@
 (def description "Moves all 0's to the end the array while maintaining
                  the relative order of the non-zero elements.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "array" :nested {:name "integer"}}}})
 

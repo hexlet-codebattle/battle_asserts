@@ -6,7 +6,7 @@
 (def description "Return the number of trailing zeroes in n! 
   For example, 5! = 120, the number of trailing zeros is 1; 10! = 3 628 800, the number of trailing zeros is 2.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "n" :type {:name "integer"}}]
    :output {:type {:name "integer"}}})
 

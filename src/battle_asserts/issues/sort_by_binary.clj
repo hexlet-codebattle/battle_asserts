@@ -6,7 +6,7 @@
 (def description "Sort an array of integers by the number of 1's in its binary representation (in ascending order). If two integers have the same number of 1's in their binary representation,
                   their relative order should be the same as in the original array.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "array" :nested {:name "integer"}}}})
 

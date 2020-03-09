@@ -5,7 +5,7 @@
 
 (def description "Calculate the angle between the hour and the minute hand of a clock at a given time.")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "hour" :type {:name "integer"}}
            {:argument-name "minute" :type {:name "integer"}}]
    :output {:type {:name "float"}}})

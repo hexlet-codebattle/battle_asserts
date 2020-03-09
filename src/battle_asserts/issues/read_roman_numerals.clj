@@ -7,7 +7,7 @@
 
 (def description "Parse a Roman-numeral string and return the number it represents.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "num" :type {:name "string"}}]
    :output {:type {:name "integer"}}})
 

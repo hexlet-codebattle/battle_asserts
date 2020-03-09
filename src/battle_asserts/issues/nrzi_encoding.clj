@@ -12,7 +12,7 @@
                  0 100 10000 100 1 1 1
                  ¯|___|¯¯¯¯¯|___|¯|_|¯")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "seq" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 

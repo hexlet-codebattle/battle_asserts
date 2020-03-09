@@ -13,7 +13,7 @@
                        [5959 5960] [6867 6868] [8280 8281] [8463 8464] [10647 10648] [12351 12352] [14587 14588]
                        [16932 16933] [17080 17081] [18490 18491] [20450 20451] [24895 24896] [26642 26643] [26649 26650]])
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "boolean"}}})
 

@@ -9,7 +9,7 @@
                  For example, from [3, 24, 4] we can construct 6 different numbers: 3244, 3424, 2434, 2443, 4324, 4243
                  and the largest of them is 4324.")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "string"}}})
 
