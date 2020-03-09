@@ -5,7 +5,7 @@
 
 (def description "Identify the color of a square of the chessboard. Square A1 is black.")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "row" :type {:name "string"}}
            {:argument-name "column" :type {:name "integer"}}]
    :output {:type {:name "string"}}})

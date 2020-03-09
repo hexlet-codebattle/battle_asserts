@@ -6,7 +6,7 @@
 (def description "Given a number as input, return a string \"Value is X\", 
                   where X is the given number with zeros added to the beginning so that there are 5 digits in total.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "arr" :type {:name "integer"}}]
    :output {:type {:name "string"}}})
 

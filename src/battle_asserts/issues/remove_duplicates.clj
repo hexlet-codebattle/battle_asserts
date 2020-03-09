@@ -7,7 +7,7 @@
                   Repeated elements should be replaced with a single element.
                   The order of the elements should not be changed.")
 
-(defn disabled [] true)
+(def disabled true)
 
 (defn arguments-generator []
   (letfn [(add-duplicates [coll]

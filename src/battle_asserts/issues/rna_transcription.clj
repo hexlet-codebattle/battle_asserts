@@ -11,7 +11,7 @@
                  The transcribed RNA strand of a DNA strand is formed by replacing each nucleotide with its complement:
                  G -> C, C -> G, T -> A, A -> U.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "dna" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 

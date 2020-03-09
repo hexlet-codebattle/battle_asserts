@@ -10,7 +10,7 @@
   Your function should return a vector of vectors, where each sub-vector is a group of words which are anagrams of each other.
   Words without any anagrams should not be included in the result.")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}]
    :output {:type {:name "array" :nested {:name "array" :nested {:name "string"}}}}})
 

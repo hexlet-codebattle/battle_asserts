@@ -6,7 +6,7 @@
 
 (def description "Given an integer x, return the sum x + xx + xxx (x times) as a string. For example, for 2: 2 + 22 = 24.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]
    :output {:type {:name "string"}}})
 

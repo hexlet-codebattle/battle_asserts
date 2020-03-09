@@ -7,7 +7,7 @@
 (def description "A string is said to be complete if it contains all the characters from a to z.
                  Given a string, check if it's complete or not.")
 
-(defn signature []
+(def signature
   {:input [{:argument-name "str" :type {:name "string"}}]
    :output {:type {:name "boolean"}}})
 

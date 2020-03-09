@@ -7,7 +7,7 @@
                  Output the number of dots on the domino set.
                  Sample 2 -> 12")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "x" :type {:name "integer"}}]
    :output {:type {:name "integer"}}})
 

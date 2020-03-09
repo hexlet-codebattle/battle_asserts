@@ -6,9 +6,9 @@
 
 (def description "Drop every N'th element from a list.")
 
-(defn disabled [] true)
+(def disabled true)
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}
             {:argument-name "list" :type {:name "array" :nested {:name "string"}}}]
    :output {:type {:name "array", :nested {:name "string"}}}})

@@ -5,7 +5,7 @@
 
 (def description "Determine if a given integer is a power of two.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]
    :output {:type {:name "boolean"}}})
 

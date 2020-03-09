@@ -5,7 +5,7 @@
 
 (def description "Find the largest element in the Syracuse sequence.")
 
-(defn signature []
+(def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]
    :output {:type {:name "integer"}}})
 
