@@ -33,5 +33,5 @@
         maxcount (apply max (map count [s1 s2]))]
     (s/join
      (interleave
-         (take maxcount (concat s1 (repeat nil)))
-         (take maxcount (concat s2 (repeat nil)))))))
+      (take maxcount (concat s1 (repeat nil)))
+      (take maxcount (concat s2 (repeat nil)))))))
