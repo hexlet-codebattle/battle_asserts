@@ -48,11 +48,12 @@
     (let [filename (str "issues/" issue-name ".jsons")
           asserts (generate-asserts generator solution)]
       (with-open [w (io/writer filename)]
-        (doall (map #(.write w (str (json/write-str %) "\n"))
-                    asserts))))))
+        (doseq [assert asserts]
+          (.write w (str (json/write-str assert) "\n")))))))
 
 (defn -main [& args]
   (let [namespaces (-> "src/battle_asserts/issues"
                        clojure.java.io/as-file
                        nsf/find-namespaces-in-dir)]
-    (doall (map generate-issues namespaces))))
+    (doseq [nmspace namespaces]
+      (generate-issues nmspace))))
