@@ -8,7 +8,7 @@
                  One element is missing in the progression. Return the missing number.")
 
 (def signature
-  {:input  [{:argument-name "sentence" :type {:name "string"}}]
+  {:input  [{:argument-name "sentence" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
