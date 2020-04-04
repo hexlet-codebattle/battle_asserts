@@ -7,7 +7,7 @@
                  The grouping should happen in a way that the order of first occurrences of all elements is maintained.")
 
 (def signature
-  {:input  [{:argument-name "arr" :type {:name "integer"}}]
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (defn arguments-generator []
