@@ -7,8 +7,8 @@
 (def description "Given two sets represented by two arrays, check if the given two sets are disjoint or not. Given arrays have no duplicates.")
 
 (def signature
-  {:input [{:argument-name "arr1" :type {:name "integer"}}
-           {:argument-name "arr2" :type {:name "integer"}}]
+  {:input [{:argument-name "arr1" :type {:name "array" :nested {:name "integer"}}}
+           {:argument-name "arr2" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
