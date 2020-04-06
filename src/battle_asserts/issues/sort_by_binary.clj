@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.sort-by-binary
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :easy)
+(def level :medium)
 
 (def description "Sort an array of integers by the number of 1's in its binary representation (in ascending order). If two integers have the same number of 1's in their binary representation,
                   their relative order should be the same as in the original array.")
