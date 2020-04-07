@@ -7,7 +7,9 @@
                  which are divisible by a or/and b (second and third arguments) without remainder.")
 
 (def signature
-  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+  {:input  [{:argument-name "n" :type {:name "integer"}}
+            {:argument-name "a" :type {:name "integer"}}
+            {:argument-name "b" :type {:name "integer"}}]
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
