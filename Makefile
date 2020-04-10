@@ -25,6 +25,6 @@ test:
 	lein trampoline test
 
 release: generate
-	tar -czf release.tar.gz issues/*
+	tar -czf issues.tar.gz issues/*
 
 .PHONY: test issues
