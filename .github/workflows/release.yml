@@ -28,7 +28,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.GITHUB_HASH::7 }}
+          tag_name: ${github.GITHUB_HASH::7}
           release_name: Release ${{ github.GITHUB_HASH::7 }}
           draft: false
           prerelease: false
