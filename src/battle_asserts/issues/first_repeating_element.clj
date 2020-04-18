@@ -35,10 +35,10 @@
 (defn solution [array]
   (let [result
         (->>
-          array
-          frequencies
-          (filter #(> (val %) 1))
-          keys
-          (sort-by #(.indexOf array %))
-          first)]
+        array
+        frequencies
+        (filter #(> (val %) 1))
+        keys
+        (sort-by #(.indexOf array %))
+        first)]
     (if (nil? result) 0 result)))
