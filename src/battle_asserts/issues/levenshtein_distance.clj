@@ -6,8 +6,10 @@
 
 (def description "Calculate the Levenshtein distance.")
 
+(def disabled true)
+
 (def signature
-  {:input  [{:argument-name "s1" :type {:name "array" :nested {:name "string"}}}
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "string"}}}
             {:argument-name "s2" :type {:name "array" :nested {:name "string"}}}]
    :output {:type {:name "integer"}}})
 
