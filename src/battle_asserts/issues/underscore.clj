@@ -8,7 +8,7 @@
 (def description "Given a string with words separated in different ways, return an underscored, lowercase form.")
 
 (def signature
-  {:input  [{:argument-name "arr" :type {:name "string"}}]
+  {:input  [{:argument-name "str" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
