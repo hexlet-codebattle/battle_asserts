@@ -9,7 +9,7 @@
                  Return the total number of dashes in the input string.")
 
 (def signature
-  {:input  [{:argument-name "arr" :type {:name "string"}}]
+  {:input  [{:argument-name "str" :type {:name "string"}}]
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
