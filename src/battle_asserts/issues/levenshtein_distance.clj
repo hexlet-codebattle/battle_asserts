@@ -7,8 +7,8 @@
 (def description "Calculate the Levenshtein distance.")
 
 (def signature
-  {:input  [{:argument-name "s1" :type {:name "array" :nested {:name "string"}}}
-            {:argument-name "s2" :type {:name "array" :nested {:name "string"}}}]
+  {:input  [{:argument-name "s1" :type {:name "string"}}
+            {:argument-name "s2" :type {:name "string"}}]
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
@@ -38,11 +38,7 @@
    {:expected 2
     :arguments ["xyx" "xyyyx"]}
    {:expected 6
-    :arguments ["" "123456"]}
-   {:expected 0
-    :arguments [[] []]}
-   {:expected 2
-    :arguments [[1 2 3 4] [0 2 3 4 5]]}])
+    :arguments ["" "123456"]}])
 
 (defn solution [seq1 seq2]
   (letfn [(cell-value [same-char? prev-row cur-row col-idx]
