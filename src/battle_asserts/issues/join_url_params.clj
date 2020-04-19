@@ -14,7 +14,7 @@
             {:argument-name "params"
              :type {:name "hash"
                     :nested {:name "string"}}}]
-   :output {:type {:name "boolean"}}})
+   :output {:type {:name "string"}}})
 
 (defn arguments-generator []
   (letfn [(address []
