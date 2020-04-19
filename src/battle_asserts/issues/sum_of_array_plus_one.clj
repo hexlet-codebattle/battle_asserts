@@ -6,7 +6,7 @@
 (def description "Given an array of integers, return the sum of integers after adding 1 to each one.")
 
 (def signature
-  {:input  [{:argument-name "arr" :type {:name "integer"}}]
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
