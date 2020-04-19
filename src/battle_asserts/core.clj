@@ -6,11 +6,26 @@
             [clojure.test.check.generators :as gen]
             [clojure.tools.namespace.find :as nsf]))
 
-(defn- generate-asserts
-  [generator solution]
-  (let [coll (gen/sample generator 20)]
+(defmulti generate-asserts
+  (fn [build-generator solution _]
+    (if (some nil? [build-generator solution])
+      "samples"
+      "solution")))
+
+(defmethod generate-asserts "samples" [_ _ samples]
+  samples)
+
+(defmethod generate-asserts "solution" [build-generator solution _]
+  (let [
+        generator (build-generator) 
+        coll (gen/sample generator 20)]
     (map #(hash-map :expected (apply solution %) :arguments %)
          coll)))
+
+(defn write-to-file [filename content-seq]
+  (with-open [w (io/writer filename)]
+    (doseq [content-hash content-seq]
+      (.write w (str (json/write-str content-hash) "\n")))))
 
 (defn render-description [description, samples]
   (let [json-options    [:escape-unicode false :escape-slash false]
@@ -32,7 +47,7 @@
   (let [issue-name (s/replace (last (s/split (str issue-ns-name) #"\."))
                               #"-"
                               "_")
-        generator ((ns-resolve issue-ns-name 'arguments-generator))
+        build-generator (ns-resolve issue-ns-name 'arguments-generator)
         solution (ns-resolve issue-ns-name 'solution)
         disabled (ns-resolve issue-ns-name 'disabled)
         signature (ns-resolve issue-ns-name 'signature)
@@ -45,15 +60,13 @@
                     :description (render-description description samples)}
           yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})] (spit filename yaml))
 
-    (let [filename (str "issues/" issue-name ".jsons")
-          asserts (generate-asserts generator solution)]
-      (with-open [w (io/writer filename)]
-        (doseq [assert asserts]
-          (.write w (str (json/write-str assert) "\n")))))))
+    (let [filename (do (println issue-name) (str "issues/" issue-name ".jsons") )
+          asserts (generate-asserts build-generator solution samples)]
+      (write-to-file filename asserts))))
 
 (defn -main [& args]
   (let [namespaces (-> "src/battle_asserts/issues"
                        clojure.java.io/as-file
                        nsf/find-namespaces-in-dir)]
-    (doseq [nmspace namespaces]
-      (generate-issues nmspace))))
+    (doseq [namespace namespaces]
+      (generate-issues namespace))))
