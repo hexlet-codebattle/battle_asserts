@@ -7,7 +7,7 @@
                   where X is the given number with zeros added to the beginning so that there are 5 digits in total.")
 
 (def signature
-  {:input  [{:argument-name "arr" :type {:name "integer"}}]
+  {:input  [{:argument-name "num" :type {:name "integer"}}]
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
