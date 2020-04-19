@@ -16,8 +16,7 @@
   samples)
 
 (defmethod generate-asserts "solution" [build-generator solution _]
-  (let [
-        generator (build-generator) 
+  (let [generator (build-generator)
         coll (gen/sample generator 20)]
     (map #(hash-map :expected (apply solution %) :arguments %)
          coll)))
@@ -60,7 +59,7 @@
                     :description (render-description description samples)}
           yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})] (spit filename yaml))
 
-    (let [filename (do (println issue-name) (str "issues/" issue-name ".jsons") )
+    (let [filename (do (println issue-name) (str "issues/" issue-name ".jsons"))
           asserts (generate-asserts build-generator solution samples)]
       (write-to-file filename asserts))))
 
