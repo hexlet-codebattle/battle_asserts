@@ -11,7 +11,8 @@
                  pattern = \" abba \", str = \" dog cat cat dog \" should return true.")
 
 (def signature
-  {:input  [{:argument-name "arr" :type {:name "string"}}]
+  {:input  [{:argument-name "str1" :type {:name "string"}}
+            {:argument-name "str2" :type {:name "string"}}]
    :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
