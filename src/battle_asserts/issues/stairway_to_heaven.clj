@@ -12,7 +12,7 @@ The function receives an array with the number of dicks on each step and returns
 Powered by Eugene Zaytsev.")
 
 (def signature
-  {:input  [{:argument-name "arr" :type {:name "array" :nested "integer"}}]
+  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "integer"}}})
 
 (def test-data
