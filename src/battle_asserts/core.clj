@@ -59,7 +59,8 @@
                     :description (render-description description samples)}
           yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})] (spit filename yaml))
 
-    (let [filename (do (println issue-name) (str "issues/" issue-name ".jsons"))
+    (println issue-name)
+    (let [filename (str "issues/" issue-name ".jsons")
           asserts (generate-asserts build-generator solution samples)]
       (write-to-file filename asserts))))
 
