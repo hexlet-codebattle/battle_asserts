@@ -12,8 +12,9 @@
    :output {:type {:name "hash" :nested {:name "integer"}}}})
 
 (defn arguments-generator []
-  (gen/let [strs (gen/vector (gen/elements (faker/words {:lang :en :n 15})))]
-    (str/join " " strs)))
+  (let [strs (gen/vector (gen/elements (faker/words {:lang :en :n 15})))
+        sentence (gen/fmap #(str/join " " %) strs)]
+    (gen/tuple sentence)))
 
 (def test-data
   [{:expected {"make" 1, "codebattle" 1, "great" 1, "again" 1}
