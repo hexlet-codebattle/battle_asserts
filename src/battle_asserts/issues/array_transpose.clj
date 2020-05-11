@@ -11,8 +11,7 @@
                  3) write the columns of the original matrix as rows of the new one.")
 
 (def signature
-  {:input [{:argument-name "arr1" :type {:name "array" :nested {:name "integer"}}}
-           {:argument-name "arr2" :type {:name "array" :nested {:name "integer"}}}]
+  {:input [{:argument-name "arr" :type {:name "array" :nested {:name "array" :nested {:name "integer"}}}}]
    :output {:type {:name "array" :nested {:name "array" :nested {:name "integer"}}}}})
 
 (defn arguments-generator []
