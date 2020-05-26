@@ -42,6 +42,6 @@
 (defn solution [s]
   (->> s
        (re-seq #"[a-z]")
-       seq
+       set
        count
        (= 26)))
