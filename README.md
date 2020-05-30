@@ -19,13 +19,15 @@
 
 ## How to add a new issue
 
-### 1. You have to write the description of the issue with function signature and test-data
+### 1. Write the description of the issue with function signature and test-data
 
-A description of issue includes:
+A description of the issue includes:
 
 - `level` — difficulty of the problem; possible values are `elementary`, `easy`, `medium`, `hard`.
-- `description` — detailed description of the problem.
-- `signature` — function signature; map with `input` and `output` types types can be nested, see examples in the existed issues.
+- `description` — detailed description of the issue.
+- `signature` — function signature; map with `input` and `output` types. Available types `integer`, `float`, `string`, `array`, `hash (map, dicts)`.
+  See examples in the existing issues.
+
 - `test-data` — data in a specified format which will be used to test solutions. The first element in this list will be displayed as an example to players, so it should clarify and illustrate the problem as much as possible. Do not choose a trivial case for this example.
 
 Example:
@@ -38,7 +40,7 @@ Example:
 (def description "Calculate the sum of array")
 
 (def signature
-  {:input  [{:argument-name "array" :type {:name "arr" :nested {:name "integer"}}}]
+  {:input  [{:argument-name "numbers" :type {:name "arr" :nested {:name "integer"}}}]
    :output {:type {:name "integer"}}})
 
 (def test-data
@@ -52,10 +54,14 @@ Example:
 
 See examples in `src/battle_asserts/issues/*.clj`
 
-### 2. You have to write the correct implementation of the issue and test
+### 2. Create pull-request
+
+It will appear on [codebattle](http://codebattle.hexlet.io) after merge
 
 
-An implementation of issue includes:
+### 3. Write the implementation of the issue and test
+
+An implementation of the issue includes:
 
 - `arguments-generator` — arguments generator for the `solution` function;
   generated arguments will be used to test players' solutions.
@@ -71,7 +77,7 @@ Example:
 (def description "Calculate the sum of array")
 
 (def signature
-  {:input  [{:argument-name "array" :type {:name "arr" :nested {:name "integer"}}}]
+  {:input  [{:argument-name "numbers" :type {:name "arr" :nested {:name "integer"}}}]
    :output {:type {:name "integer"}}})
 
 (def test-data
@@ -84,12 +90,19 @@ Example:
 
 (defn arguments-generator
   []
-  (gen/tuple (gen/list gen/small-integer)
-             gen/small-integer
-             gen/small-integer))
+  (gen/tuple (gen/list gen/small-integer))
 
+(defn solution
+  [numbers]
+  (apply + numbers))
 ```
+
 Corresponding tests are in `test/battle_asserts/issues/*.clj`
+
+### 4. Create pull-request
+
+It will appear with auto-generated asserts on [codebattle](http://codebattle.hexlet.io) after merge
+
 ## Related links
 
 ### Leiningen
