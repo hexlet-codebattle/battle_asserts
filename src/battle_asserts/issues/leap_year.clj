@@ -30,6 +30,10 @@
     :arguments [2000]}
    {:expected false
     :arguments [3000]}
+   {:expected false
+    :arguments [2100]}
+   {:expected false
+    :arguments [2300]}
    {:expected true
     :arguments [2020]}])
 
