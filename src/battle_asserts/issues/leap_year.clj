@@ -11,7 +11,7 @@
 
 (def signature
   {:input [{:argument-name "year" :type {:name "integer"}}]
-   :output {:type {:name "integer"}}})
+   :output {:type {:name "boolean"}}})
 
 (defn arguments-generator
   []
