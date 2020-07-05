@@ -15,7 +15,7 @@
 
 (defn arguments-generator
   []
-  (gen/tuple (gen/choose 0 3000)))
+  (gen/tuple (gen/choose 1000 3000)))
 
 (def test-data
   [{:expected true
@@ -25,7 +25,11 @@
    {:expected true
     :arguments [1804]}
    {:expected false
-    :arguments [-1913]}
+    :arguments [1000]}
+   {:expected true
+    :arguments [2000]}
+   {:expected false
+    :arguments [3000]}
    {:expected true
     :arguments [2020]}])
 
