@@ -28,9 +28,6 @@
     :arguments [-1 3 1]}])
 
 (defn solution [x y radius]
-  (defn hypotenuse [x y]
-    (Math/sqrt
-     (+ (* x x)
-        (* y y))))
-  (<=  (hypotenuse x y) radius))
+  (letfn [(hypotenuse [x y] (Math/sqrt (+ (* x x)
+                                          (* y y))))] (<=  (hypotenuse x y) radius)))
 
