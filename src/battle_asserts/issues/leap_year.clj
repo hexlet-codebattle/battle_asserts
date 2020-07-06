@@ -39,4 +39,4 @@
 
 (defn solution [year]
   (letfn [(divisible? [a b] (zero? (mod a b)))]
-    (and (divisible? year 4) (not (divisible? year 400)))))
+    (and (divisible? year 4) (or (not (divisible? year 100)) (divisible? year 400)))))
