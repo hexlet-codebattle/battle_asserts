@@ -38,7 +38,5 @@
     :arguments [2020]}])
 
 (defn solution [year]
-  (cond (zero? (mod year 400)) true
-        (zero? (mod year 100)) false
-        (zero? (mod year 4)) true
-        :default false))
+  (letfn [(divisible? [a b] (zero? (mod a b)))]
+    (and (divisible? year 4) (not (divisible? year 400)))))
