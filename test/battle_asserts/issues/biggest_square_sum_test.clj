@@ -5,6 +5,5 @@
             [test-helper :as h]
             [battle-asserts.issues.biggest-square-sum :as issue]))
 
-
 (deftest test-solution
   (h/generate-tests issue/test-data issue/solution))

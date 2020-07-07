@@ -26,7 +26,7 @@
 
 (defn solution [a b c]
   (letfn [(square [x] (* x x))
-        (sum-of-squares [x y] (+ (square x) (square y)))]
+          (sum-of-squares [x y] (+ (square x) (square y)))]
     (cond
       (and (>= a c) (>= b c)) (sum-of-squares a b)
       (and (>= b a) (>= c a)) (sum-of-squares b c)
