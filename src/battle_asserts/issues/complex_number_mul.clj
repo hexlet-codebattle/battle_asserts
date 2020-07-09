@@ -3,7 +3,7 @@
 
 (def level :easy)
 
-(def description "Implement the function that multiply two complex numbers.")
+(def description "Implement a function that multiply two complex numbers.")
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
