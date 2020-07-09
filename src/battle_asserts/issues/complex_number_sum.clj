@@ -26,6 +26,6 @@
 
 (defn solution [[real1 img1] [real2 img2]]
   (letfn [(real-part [pair] (+ (first pair) (last pair)))
-          (complex-part [pair] (+ (first pair) (last pair)))
-          (format-complex [num] (if (>= num 0) (str "+" num) num))]
-    (str (real-part [real1 real2]) (format-complex (complex-part [img1 img2])) "i")))
+          (imaginary-part [pair] (+ (first pair) (last pair)))
+          (format-imaginary [num] (if (>= num 0) (str "+" num) num))]
+    (str (real-part [real1 real2]) (format-imaginary (imaginary-part [img1 img2])) "i")))
