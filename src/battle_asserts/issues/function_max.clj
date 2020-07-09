@@ -16,7 +16,7 @@
 
 (defn arguments-generator
   []
-  (gen/list gen/small-integer))
+  (gen/tuple (gen/tuple gen/small-integer)))
 
 (def test-data
   [{:expected 4
