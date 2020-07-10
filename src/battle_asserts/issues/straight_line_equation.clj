@@ -18,13 +18,13 @@
              (gen/tuple gen/small-integer gen/small-integer)))
 
 (def test-data
-  [{:expected "y = 0,86x + 3,86"
+  [{:expected "y = 0.86x + 3.86"
     :arguments [[6, 9], [-1, 3]]}
-   {:expected "y = 0,43x - 2,57"
+   {:expected "y = 0.43x - 2.57"
     :arguments [[6, 0], [-1, -3]]}
-   {:expected "y = - 0,50x + 1,00"
+   {:expected "y = - 0.50x + 1.00"
     :arguments [[2, 0], [0, 1]]}
-   {:expected "y = 3,33x"
+   {:expected "y = 3.33x"
     :arguments [[1.5, 5], [0, 0]]}
    {:expected ""
     :arguments [[0, 0], [0, 0]]}])
