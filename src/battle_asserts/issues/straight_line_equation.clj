@@ -4,7 +4,7 @@
 (def level :easy)
 
 (def description "Create a function to describe a line passing through
-                  two points with coordinates (x1, x1) and (x2, y2).
+                  two points with coordinates (x1, y1) and (x2, y2).
                   General view of the equation of the line is `y = kx + b`.
                   If the line cannot be built, then an empty string should be returned.")
 
