@@ -5,7 +5,7 @@
 
 (def description "Implement a function that divide two complex numbers.
                   Result number should be formatted as follows `real+imgi` or `-real-imgi` and so on.
-                  If number can't be computed, return Division by zero!11!1")
+                  If number can't be computed, return Division by zero!11!1 .")
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
@@ -35,8 +35,8 @@
           (imaginary-part [first-pair second-pair]
             (float (/ (- (* (last first-pair) (first second-pair)) (* (first first-pair) (last second-pair)))
                       (+ (* (first second-pair) (first second-pair)) (* (last second-pair) (last second-pair))))))
-          (formatted-real [num] (if (neg? num) (format "-%.2f" (* -1 num)) (format "%.2f" num)))
-          (formatted-imaginary [num] (if (neg? num) (format "-%.2fi" (* -1 num)) (format "+%.2fi" num)))]
+          (formatted-real [num] (format "%.2f" num))
+          (formatted-imaginary [num] (if (pos? num) (format "+%.2fi"  num) (format "%.2fi" num)))]
     (try
       (str (formatted-real (real-part [real1 img1] [real2 img2])) (formatted-imaginary (imaginary-part [real1 img1] [real2 img2])))
       (catch ArithmeticException e "Division by zero!11!1"))))
