@@ -4,8 +4,8 @@
 (def level :easy)
 
 (def description "Implement a function that divide two complex numbers.
-                  Result Number should be formatted as follows `real+imgi` or `-real-imgi` and so on.
-                  If number can't be computed, return Division by zero!11!1 .")
+                  Result number should be formatted as follows `real+imgi` or `-real-imgi` and so on.
+                  If number can't be computed, return Division by zero!11!1")
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
