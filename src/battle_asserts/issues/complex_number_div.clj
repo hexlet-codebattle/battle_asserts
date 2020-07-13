@@ -38,5 +38,8 @@
           (formatted-real [num] (format "%.2f" num))
           (formatted-imaginary [num] (if (pos? num) (format "+%.2fi"  num) (format "%.2fi" num)))]
     (try
-      (str (formatted-real (real-part [real1 img1] [real2 img2])) (formatted-imaginary (imaginary-part [real1 img1] [real2 img2])))
+      (let
+       [real (formatted-real (real-part [real1 img1] [real2 img2]))
+        img (formatted-imaginary (imaginary-part [real1 img1] [real2 img2]))]
+        (str real img))
       (catch ArithmeticException e "Division by zero!11!1"))))
