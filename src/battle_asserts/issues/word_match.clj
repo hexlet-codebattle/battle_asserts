@@ -28,7 +28,6 @@ in which these characters appear in the second string.")
                            #(gen/tuple (gen/return %)
                                        (gen/return (get-derived-string %))))])))
 
-
 (def test-data
   [{:expected  false
     :arguments ["cool" "lomnucoldsea"]}
