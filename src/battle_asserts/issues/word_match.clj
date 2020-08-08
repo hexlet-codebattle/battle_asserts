@@ -40,4 +40,4 @@ in which these characters appear in the second string.")
                          (if (= ch v)
                            chrs
                            s1)) s1 s2)]
-    (= (count result) 0)))
+    (zero? (count result))))
