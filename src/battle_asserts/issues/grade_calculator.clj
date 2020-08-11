@@ -18,7 +18,6 @@
 (defn arguments-generator []
   (gen/tuple (gen/not-empty (gen/vector (gen/choose 0 100) 5))))
 
-
 (def test-data
   [{:arguments [[90 91 99 93 100]]
     :expected "Grade: A"}
@@ -32,7 +31,6 @@
     :expected "Grade: F"}
    {:arguments [[10 9 2 3 5]]
     :expected "Grade: F"}])
-
 
 (defn solution [grades]
   (let [avg-grade (int (/ (apply + grades) 5))]
