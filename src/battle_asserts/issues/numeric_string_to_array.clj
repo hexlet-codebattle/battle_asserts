@@ -15,7 +15,7 @@
 
 (defn arguments-generator []
   (letfn [(input-string []
-                        (s/join (repeatedly (rand-int 15) #(rand-int 10))))]
+            (s/join (repeatedly (rand-int 15) #(rand-int 10))))]
     (gen/tuple (gen/elements (repeatedly 50 input-string)))))
 
 (def test-data
