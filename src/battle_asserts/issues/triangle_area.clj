@@ -5,7 +5,7 @@
 
 (def description "Calculate area of triangle using Heron's Formula.
                   `s = (a + b + c) / 2`
-                  `area = √(s * (s - a) * (s - b) * (s - c))
+                  `area = √(s * (s - a) * (s - b) * (s - c))`
                   Use floor rounding for resulting area.")
 
 (def signature
