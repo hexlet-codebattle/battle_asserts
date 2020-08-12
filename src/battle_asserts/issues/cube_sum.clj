@@ -17,12 +17,7 @@
   [{:expected 0 :arguments [0]}
    {:expected 1 :arguments [1]}
    {:expected 9 :arguments [2]}
-   {:expected 36 :arguments [3]}
-   {:expected 100 :arguments [4]}
-   {:expected 3025 :arguments [10]}
-   {:expected 14400 :arguments [15]}
    {:expected 44100 :arguments [20]}
-   {:expected 216225 :arguments [30]}
    {:expected 0 :arguments [-30]}])
 
 (defn solution [n]
