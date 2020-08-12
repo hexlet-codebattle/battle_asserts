@@ -27,4 +27,4 @@
 
 (defn solution [n]
   (letfn [(cube [num] (* num num num))]
-    (reduce (fn [acc elem] (+ acc (cube elem))) 0 (range 1 (+ n 1)))))
+    (reduce (fn [acc elem] (+ acc (cube elem))) 0 (range 1 (inc n)))))
