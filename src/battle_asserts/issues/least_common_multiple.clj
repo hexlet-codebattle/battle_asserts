@@ -3,7 +3,7 @@
 
 (def level :easy)
 
-(def description "Create function that calculates LCM (Least Common Multiple).")
+(def description "Create a function that calculates LCM (Least Common Multiple).")
 
 (def signature
   {:input [{:argument-name "x" :type {:name "integer"}}
