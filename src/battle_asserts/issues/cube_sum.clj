@@ -3,7 +3,7 @@
 
 (def level :elementary)
 
-(def description "Calculate array sum from 1 to n.")
+(def description "Calculate array sum from 0 to n.")
 
 (def signature
   {:input [{:argument-name "num" :type {:name "integer"}}]
