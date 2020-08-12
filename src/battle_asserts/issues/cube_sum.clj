@@ -18,7 +18,7 @@
    {:expected 1 :arguments [1]}
    {:expected 9 :arguments [2]}
    {:expected 44100 :arguments [20]}
-   {:expected 0 :arguments [-30]}])
+   {:expected 216225 :arguments [30]}])
 
 (defn solution [n]
   (letfn [(cube [num] (* num num num))]
