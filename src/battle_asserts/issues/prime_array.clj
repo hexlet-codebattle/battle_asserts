@@ -25,7 +25,7 @@
 (defn prime? [n]
   (let [divisors (range 2 (inc (int (Math/sqrt n))))
         remainders (map #(mod n %) divisors)]
-    (not-any? #(zero? %) remainders)))
+    (not-any? zero? remainders)))
 
 (defn solution [n]
   (vec (->> (iterate inc 2)
