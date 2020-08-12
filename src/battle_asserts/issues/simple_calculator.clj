@@ -6,9 +6,9 @@
 (def description "Create simple calculator that supports next operations: add, substract, divide, multiply, modulo.")
 
 (def signature
-  {:input [{:argument-name "words" :type {:name "array" :nested {:name "integer"}}}
-           {:argument-name "index" :type {:name "integer"}}
-           {:argument-name "num" :type {:name "integer"}}]
+  {:input [{:argument-name "first-num" :type {:name "integer"}}
+           {:argument-name "second-num" :type {:name "integer"}}
+           {:argument-name "operation" :type {:name "string"}}]
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
