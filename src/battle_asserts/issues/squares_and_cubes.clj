@@ -3,7 +3,7 @@
 
 (def level :elementary)
 
-(def description "Create a function that takes an array of two numbers and checks
+(def description "Create a function that takes two numbers and checks
                   if the square root of the first number is equal to the cube root of the second number.")
 
 (def signature
