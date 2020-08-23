@@ -9,7 +9,8 @@
                   If the line cannot be built, then an empty string should be returned.")
 
 (def signature
-  {:input  [{:argument-name "point" :type {:name "array" :nested {:name "integer"}}}]
+  {:input  [{:argument-name "first-point" :type {:name "array" :nested {:name "integer"}}}
+            {:argument-name "second-point" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "string"}}})
 
 (defn arguments-generator
