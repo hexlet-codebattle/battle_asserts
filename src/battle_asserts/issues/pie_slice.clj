@@ -9,7 +9,7 @@
                   How many slices each person gets.")
 
 (def signature
-  {:input [{:argument-name "total" :type {:name "array" :nested {:name "integer"}}}
+  {:input [{:argument-name "total" :type {:name "integer"}}
            {:argument-name "people" :type {:name "integer"}}
            {:argument-name "each" :type {:name "integer"}}]
    :output {:type {:name "boolean"}}})
