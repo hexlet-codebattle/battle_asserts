@@ -20,8 +20,6 @@
                      (gen/generate (gen/choose 2 10))
                      #(gen/elements (faker/words {:lang :en}))))))
 
-;(gen/tuple (apply gen/tuple (repeatedly 6 #(gen/elements words))))
-
 (def test-data
   [{:arguments [["Malcolm" "Adam" "Sarah"]]
     :expected  "AMS"}
