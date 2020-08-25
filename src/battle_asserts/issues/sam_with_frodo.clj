@@ -13,7 +13,8 @@
    :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
-  (gen/tuple (apply gen/tuple (repeatedly 6 #(gen/elements [(faker/words {:lang :en :n 8})])))))
+  (let [elements-count (gen/generate (gen/choose 2 6))]
+    (gen/tuple (gen/shuffle (faker/words {:lang :en :n elements-count})))))
 
 (def test-data
   [{:expected true
