@@ -9,8 +9,7 @@
   20
   (prop/for-all [v (issue/arguments-generator)]
                 (let [result (apply issue/solution v)]
-                  (do (vector? result)
-                      (= (count (filter vector? result)) (count result))))))
+                      (= (count (filter vector? result)) (count result)))))
 
 (deftest test-solution
   (h/generate-tests issue/test-data issue/solution))
