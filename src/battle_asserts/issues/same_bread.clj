@@ -7,8 +7,8 @@
                   Return whether both sandwiches use the same type of bread.")
 
 (def signature
-  {:input [{:argument-name "first-sandwich" :type {:name "array" :nested {:name "string"}}}
-           {:argument-name "second-sandwich" :type {:name "array" :nested {:name "string"}}}]
+  {:input [{:argument-name "first" :type {:name "array" :nested {:name "string"}}}
+           {:argument-name "second" :type {:name "array" :nested {:name "string"}}}]
    :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
