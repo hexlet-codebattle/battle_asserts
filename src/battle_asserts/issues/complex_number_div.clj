@@ -11,6 +11,7 @@
             {:argument-name "second-num" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
+
 (defn arguments-generator
   []
   (gen/tuple (gen/tuple gen/small-integer gen/small-integer)

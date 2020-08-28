@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.pythagorean-triple
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "Check if 3 given integers form a Pythagorian Triplet.
                  Pythagorian Triplet is a triplet of numbers,

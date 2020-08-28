@@ -3,7 +3,7 @@
             [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
-(def level :elementary)
+(def level :medium)
 
 (def description "Given a string with words separated in different ways, return an underscored, lowercase form.")
 
