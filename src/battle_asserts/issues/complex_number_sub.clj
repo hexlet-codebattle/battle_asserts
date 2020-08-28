@@ -1,12 +1,13 @@
 (ns battle-asserts.issues.complex-number-sub
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :easy)
+(def level :medium)
 
 (def description "Implement a function that calculates difference of two complex numbers.")
 
 (def signature
-  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+  {:input  [{:argument-name "first-num" :type {:name "array" :nested {:name "integer"}}}
+            {:argument-name "second-num" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "string"}}})
 
 (defn arguments-generator

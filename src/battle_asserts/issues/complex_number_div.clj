@@ -1,14 +1,15 @@
 (ns battle-asserts.issues.complex-number-div
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :easy)
+(def level :medium)
 
 (def description "Implement a function that divide two complex numbers.
                   Result number should be formatted as follows `real+imgi` or `-real-imgi` and so on.
                   If number can't be computed, return Division by zero!11!1 .")
 
 (def signature
-  {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
+  {:input  [{:argument-name "first-num" :type {:name "array" :nested {:name "integer"}}}
+            {:argument-name "second-num" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "string"}}})
 
 (defn arguments-generator
