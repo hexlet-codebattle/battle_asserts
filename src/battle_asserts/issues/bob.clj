@@ -3,7 +3,7 @@
             [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "Bob answers 'Sure.' if you ask him a question.
                  He answers 'Whoa, chill out!' if you yell at him.
