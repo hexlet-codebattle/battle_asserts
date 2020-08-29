@@ -11,7 +11,7 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/choose 1 20)))
+  (gen/tuple (gen/choose 1 15)))
 
 (def test-data
   [{:expected 5
@@ -20,8 +20,8 @@
     :arguments [1]}
    {:expected 99
     :arguments [7]}
-   {:expected 1758571
-    :arguments [20]}])
+   {:expected 39993
+    :arguments [15]}])
 
 (defn solution [num]
   (letfn [(palindromic? [n]
