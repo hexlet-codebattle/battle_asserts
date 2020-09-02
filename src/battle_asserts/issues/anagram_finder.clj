@@ -24,8 +24,6 @@
         words (vec (concat words1 words2 words3))]
     (gen/tuple (apply gen/tuple (repeatedly 6 #(gen/elements words))))))
 
-; (gen/sample (arguments-generator) 5)
-
 (def test-data
   [{:arguments [["veer" "lake" "item" "kale" "mite" "ever" "rev"]]
     :expected  [["veer" "ever"] ["lake" "kale"] ["item" "mite"]]}
