@@ -30,4 +30,3 @@
             second-part (int (- y2 (* (k x1 x2 y1 y2) x2)))]
         [first-part second-part]))
     (catch ArithmeticException e [0 0])))
-
