@@ -8,7 +8,9 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (string? (apply issue/solution v))))
+                (try
+                  (vector? (apply issue/solution v))
+                  (catch ArithmeticException e true))))
 
 (deftest test-solution
   (h/generate-tests issue/test-data issue/solution))
