@@ -24,8 +24,9 @@
    {:expected [3 0] :arguments [[1.5 5] [0 0]]}])
 
 (defn solution [[x1, y1], [x2, y2]]
-  (letfn [(k [x1, x2, y1, y2] (float (/ (- y1 y2) (- x1 x2))))]
-    (let [first-part (int (k x1 x2 y1 y2))
-          second-part (int (- y2 (* (k x1 x2 y1 y2) x2)))]
-      [first-part second-part])))
-
+  (try
+    (letfn [(k [x1, x2, y1, y2] (float (/ (- y1 y2) (- x1 x2))))]
+      (let [first-part (int (k x1 x2 y1 y2))
+            second-part (int (- y2 (* (k x1 x2 y1 y2) x2)))]
+        [first-part second-part]))
+    (catch ArithmeticException e [0 0])))
