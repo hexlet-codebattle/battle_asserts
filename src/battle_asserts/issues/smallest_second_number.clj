@@ -6,8 +6,8 @@
 (def description "Find the smallest second number in array.")
 
 (def signature
-  {:input {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]
-           :output {:type {:name "integer"}}}})
+  {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]
+   :output {:type {:name "integer"}}})
 
 (defn arguments-generator
   []
