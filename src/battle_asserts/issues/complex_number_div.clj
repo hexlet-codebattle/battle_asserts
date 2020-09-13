@@ -7,8 +7,8 @@
                   Return result as array where first number is real part and second number is imaginary part. Use floor rounding.")
 
 (def signature
-  {:input  [{:argument-name "first-num" :type {:name "array" :nested {:name "integer"}}}
-            {:argument-name "second-num" :type {:name "array" :nested {:name "integer"}}}]
+  {:input  [{:argument-name "first" :type {:name "array" :nested {:name "integer"}}}
+            {:argument-name "second" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (defn arguments-generator

@@ -8,8 +8,8 @@
                   and return string if they should be added, subtracted, multiplied or divided to get result.")
 
 (def signature
-  {:input [{:argument-name "first-num" :type {:name "integer"}}
-           {:argument-name "second-num" :type {:name "integer"}}
+  {:input [{:argument-name "first" :type {:name "integer"}}
+           {:argument-name "second" :type {:name "integer"}}
            {:argument-name "result" :type {:name "integer"}}]
    :output {:type {:name "string"}}})
 
