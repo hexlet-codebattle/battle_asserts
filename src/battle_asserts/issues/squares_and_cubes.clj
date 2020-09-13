@@ -7,8 +7,8 @@
                   if the square root of the first number is equal to the cube root of the second number.")
 
 (def signature
-  {:input [{:argument-name "first-num" :type {:name "integer"}}
-           {:argument-name "second-num" :type {:name "integer"}}]
+  {:input [{:argument-name "first" :type {:name "integer"}}
+           {:argument-name "second" :type {:name "integer"}}]
    :output {:type {:name "boolean"}}})
 
 (defn arguments-generator
