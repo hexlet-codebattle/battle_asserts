@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.star-number
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :elementary)
+(def level :medium)
 
 (def description "Create a function that takes a positive integer and returns the nth \"star number\".
                   A star number is a centered figurate number a centered hexagram (six-pointed star), such as the one that Chinese checkers is played on.
