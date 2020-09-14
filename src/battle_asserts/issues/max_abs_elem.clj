@@ -5,7 +5,7 @@
 
 (def level :elementary)
 
-(def description "Find the maximum absolute value of an array. If array is empty, return -1")
+(def description "Find the maximum absolute value of an array.")
 
 (def signature
   {:input [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
@@ -13,15 +13,13 @@
 
 (defn arguments-generator
   []
-  (gen/tuple (gen/vector gen/small-integer)))
+  (gen/tuple (gen/vector (gen/choose -20 20) 2 5)))
 
 (def test-data
   [{:expected 4
-    :arguments [[1, -2, 3, 4]]}
+    :arguments [[1 -2 3 4]]}
    {:expected 16
-    :arguments [[2, 0, -16, -1]]}
-   {:expected -1
-    :arguments [[]]}
+    :arguments [[2 0 -16 -1]]}
    {:expected 1
     :arguments [[-1, -1]]}
    {:expected 122
