@@ -39,6 +39,20 @@
            ()
            arguments)))
 
+(defn prp-arg [arguments]
+  (reverse
+   (reduce (fn [acc arg]
+             (print arg)
+             (if (nested? arg)
+               (do (print (type (first arg)))
+                 (conj acc {:type {:name (type-map (type arg)), :nested {:name (type-map (type (first arg)))}}}))
+               (conj acc {:type {:name (type-map (type arg))}})))
+           ()
+           (gen/generate (arguments)))))
+
+;(defn eqq [] (do (print (prepare-signature signature)) (print (prp-arg arguments-generator)) (= (prepare-signature signature) (prp-arg arguments-generator))))
+
+
 (defn generate-signatures [signature arguments]
   (let [prepared-sign (prepare-signature signature)
         prepared-arg (prepare-arguments arguments)]
