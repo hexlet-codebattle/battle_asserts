@@ -12,7 +12,7 @@
    :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/vector gen/small-integer) (gen/vector gen/small-integer)))
+  (gen/tuple (gen/vector (gen/choose 1 15) 5) (gen/vector (gen/choose 0 20) 4 8)))
 
 (def test-data
   [{:expected true

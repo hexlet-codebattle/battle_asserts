@@ -13,7 +13,7 @@
 
 (defn arguments-generator []
   (gen/tuple utility/gen-pos-num
-             (gen/vector gen/small-integer)))
+             (gen/vector (gen/choose 0 10) 5 10)))
 
 (def test-data
   [{:expected [0 2 4 6 8]
