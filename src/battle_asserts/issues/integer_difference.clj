@@ -12,11 +12,11 @@
 
 (defn arguments-generator []
   (letfn [(atleast-one-pair []
-            (gen/bind (gen/vector gen/small-integer 2 8)
+            (gen/bind (gen/vector (gen/choose -20 30) 2 8)
                       #(gen/tuple (gen/return (Math/abs (- (first %)
                                                            (last %))))
                                   (gen/shuffle %))))]
-    (gen/one-of [(gen/tuple gen/nat (gen/vector gen/small-integer))
+    (gen/one-of [(gen/tuple (gen/choose 0 20) (gen/vector (gen/choose -20 30) 2 8))
                  (atleast-one-pair)])))
 
 (def test-data

@@ -12,11 +12,11 @@
 
 (defn arguments-generator []
   (letfn [(gen-vector-with-repeating []
-            (gen/bind (gen/tuple (gen/vector gen/small-integer) gen/small-integer)
+            (gen/bind (gen/tuple (gen/vector (gen/choose -20 30) 2 15) (gen/choose -20 30))
                       #(gen/shuffle (concat (first %)
                                             (repeat 2 (second %))))))]
     (gen/tuple (gen/one-of [(gen-vector-with-repeating)
-                            (gen/vector gen/small-integer)]))))
+                            (gen/vector (gen/choose -20 30) 2 15)]))))
 
 (def test-data
   [{:expected 0

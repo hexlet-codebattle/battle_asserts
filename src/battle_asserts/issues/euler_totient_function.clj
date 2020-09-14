@@ -11,7 +11,7 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (gen/tuple gen/nat))
+  (gen/tuple (gen/choose 1 100)))
 
 (def test-data
   [{:expected 1

@@ -13,8 +13,8 @@
 
 (defn arguments-generator
   []
-  (gen/tuple gen/small-integer
-             gen/small-integer))
+  (gen/tuple (gen/choose 1 100)
+             (gen/choose 1 100)))
 
 (def test-data
   [{:expected 60 :arguments [1 1]}

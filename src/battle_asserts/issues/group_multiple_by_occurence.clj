@@ -16,7 +16,7 @@
                     value))
           (add-repetition [coll]
             (reduce #(concat %1 (repeat-rand %2)) [] coll))]
-    (gen/tuple (gen/bind (gen/vector gen/small-integer)
+    (gen/tuple (gen/bind (gen/vector (gen/choose 1 10) 2 10)
                          #(gen/shuffle (add-repetition %))))))
 
 (def test-data

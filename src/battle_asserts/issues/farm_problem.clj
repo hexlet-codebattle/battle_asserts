@@ -19,9 +19,9 @@
 
 (defn arguments-generator
   []
-  (gen/tuple gen/small-integer
-             gen/small-integer
-             gen/small-integer))
+  (gen/tuple (gen/choose 2 10)
+             (gen/choose 2 10)
+             (gen/choose 2 10)))
 
 (def test-data
   [{:expected 36 :arguments [2 3 5]}
