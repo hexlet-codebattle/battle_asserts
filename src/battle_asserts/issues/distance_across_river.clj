@@ -8,8 +8,8 @@
 
 (def signature
   {:input [{:argument-name "width" :type {:name "float"}}
-           {:argument-name "v_boat" :type {:name "float"}}
-           {:argument-name "v_river" :type {:name "float"}}]
+           {:argument-name "boat" :type {:name "float"}}
+           {:argument-name "river" :type {:name "float"}}]
    :output {:type {:name "float"}}})
 
 (defn pairs-gen

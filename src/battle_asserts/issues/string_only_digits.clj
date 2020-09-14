@@ -1,6 +1,7 @@
 (ns battle-asserts.issues.string-only-digits
   (:require [clojure.test.check.generators :as gen]
-            [faker.generate :as faker]))
+            [faker.generate :as faker]
+            [clojure.string :as s]))
 
 (def level :elementary)
 
@@ -11,18 +12,19 @@
    :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
-  (let [words (repeatedly 10 faker/word)]
-    (gen/tuple (gen/elements words))))
+  (let [numbers (s/join "" (gen/sample (gen/choose 0 9)))
+        words (s/join "" (repeatedly 3 faker/word))]
+    (gen/tuple (gen/elements [numbers words]))))
 
 (def test-data
   [{:expected false
-    :arguments ["some test"]}
+    :arguments ["sometest"]}
    {:expected true
     :arguments ["1231012"]}
+   {:expected true
+    :arguments ["6001667522"]}
    {:expected false
-    :arguments ["12hey3112"]}
-   {:expected false
-    :arguments ["1231!!!!!"]}])
+    :arguments ["sensefruitquestion"]}])
 
 (defn solution [str]
   (not (nil? (re-matches #"[0-9]+" str))))

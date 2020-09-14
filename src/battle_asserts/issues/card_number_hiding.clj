@@ -9,7 +9,7 @@
                   The rest of the card number must be replaced by *.")
 
 (def signature
-  {:input  [{:argument-name "card-number" :type {:name "string"}}]
+  {:input  [{:argument-name "number" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
