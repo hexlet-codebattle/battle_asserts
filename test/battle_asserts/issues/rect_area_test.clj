@@ -11,5 +11,10 @@
                 (= (apply issue/solution v)
                    (apply issue/solution (reverse v)))))
 
+(ct/defspec spec-signature
+  20
+  (prop/for-all [v (issue/arguments-generator)]
+                (true? (h/generate-signatures issue/signature v))))
+
 (deftest test-solution
   (h/generate-tests issue/test-data issue/solution))
