@@ -11,6 +11,8 @@
   {java.lang.String "string"
    java.lang.Long "integer"
    java.lang.Integer "integer"
+   java.lang.Double "float"
+   java.lang.Boolean "boolean"
    clojure.lang.PersistentList "array"
    clojure.lang.PersistentVector "array"
    clojure.lang.PersistentArrayMap "hash"})

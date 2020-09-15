@@ -11,7 +11,7 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/vector gen/small-integer) gen/nat))
+  (gen/tuple (gen/vector (gen/choose 0 20) 5 10) (gen/choose 0 10)))
 
 (def test-data
   [{:expected  2
