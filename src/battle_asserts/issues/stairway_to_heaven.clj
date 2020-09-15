@@ -36,8 +36,7 @@
         (cond
           (> first-pol second-pol) (iter-step (drop 2 steps) (+ acc second-pol))
           (< first-pol second-pol) (iter-step (drop 1 steps) (+ acc first-pol))
-          :else (iter-step (drop 2 steps) (+ acc second-pol))
-          )))))
+          :else (iter-step (drop 2 steps) (+ acc second-pol)))))))
 
 (defn solution [steps-map]
   (iter-step steps-map 0))
