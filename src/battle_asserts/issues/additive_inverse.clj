@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.additive-inverse
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "Implement a function that returns an array of additive inverses.
                   A number added with its `additive inverse` equals zero.")

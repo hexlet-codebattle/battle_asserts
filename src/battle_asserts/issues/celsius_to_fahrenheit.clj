@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.celsius-to-fahrenheit
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "Сonvert Celsius temperature to Fahrenheit. Use floor rounding for the result temperature.")
 
