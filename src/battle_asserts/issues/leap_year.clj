@@ -1,6 +1,5 @@
 (ns battle-asserts.issues.leap-year
-  (:require [clojure.string :as s]
-            [clojure.test.check.generators :as gen]
+  (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
 (def level :elementary)
@@ -15,27 +14,16 @@
 
 (defn arguments-generator
   []
-  (gen/tuple (gen/choose 1000 3000)))
+  (gen/tuple (gen/choose 1800 2300)))
 
 (def test-data
-  [{:expected true
-    :arguments [2012]}
-   {:expected false
-    :arguments [1913]}
-   {:expected true
-    :arguments [1804]}
-   {:expected false
-    :arguments [1000]}
-   {:expected true
-    :arguments [2000]}
-   {:expected false
-    :arguments [3000]}
-   {:expected false
-    :arguments [2100]}
-   {:expected false
-    :arguments [2300]}
-   {:expected true
-    :arguments [2020]}])
+  [{:expected true :arguments [2012]}
+   {:expected false :arguments [1913]}
+   {:expected true :arguments [1804]}
+   {:expected true :arguments [2000]}
+   {:expected false :arguments [2100]}
+   {:expected false :arguments [2300]}
+   {:expected true :arguments [2020]}])
 
 (defn solution [year]
   (letfn [(divisible? [a b] (zero? (mod a b)))]
