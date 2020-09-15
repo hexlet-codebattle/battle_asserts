@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.arrange-numbers-to-form-biggest-number
   (:require [clojure.test.check.generators :as gen]
-            [clojure.string]))
+            [clojure.string :as s]))
 
 (def level :easy)
 
@@ -44,4 +44,4 @@
            (Integer. (str val1 val2))))
 
 (defn solution [array]
-  (clojure.string/join (sort my-comparator array)))
+  (s/join (sort my-comparator array)))

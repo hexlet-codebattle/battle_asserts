@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.circle-point
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "On the flat there is a circle centered at zero point (0, 0)
                   with radius r. Does the point with coordinates x and y belongs to this circle.

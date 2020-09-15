@@ -2,7 +2,7 @@
   (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "Return a new hash map with elements of the given array as keys, and the given default value as values for those keys.")
 

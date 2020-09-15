@@ -1,6 +1,5 @@
 (ns battle-asserts.issues.sam-with-frodo
-  (:require [clojure.string :as s]
-            [clojure.test.check.generators :as gen]
+  (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
 (def level :elementary)

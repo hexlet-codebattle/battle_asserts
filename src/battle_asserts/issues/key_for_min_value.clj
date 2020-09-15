@@ -2,7 +2,7 @@
   (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "Given a hash map, return the keys of the elements with the smallest value.
                   The result should be sorted alphabetically.")
