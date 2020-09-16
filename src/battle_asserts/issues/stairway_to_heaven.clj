@@ -30,9 +30,9 @@
      (if (<= len 1) acc
          (let [first-pol (first steps)
                second-pol (second steps)]
-           (if (or (> first-pol second-pol) (= first-pol second-pol))
-             (iter-step (drop 2 steps) (+ acc second-pol))
-             (iter-step (drop 1 steps) (+ acc first-pol))))))))
+           (if (< first-pol second-pol)
+             (iter-step (drop 1 steps) (+ acc first-pol))
+             (iter-step (drop 2 steps) (+ acc second-pol))))))))
 
 (defn solution [steps-map]
   (iter-step steps-map))

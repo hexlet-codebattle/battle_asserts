@@ -36,7 +36,9 @@
   (reverse
    (reduce (fn [acc arg]
              (if (nested? arg)
-               (conj acc {:type {:name (type-map (type arg)), :nested {:name (type-map (type (first arg)))}}})
+               (if (nested? (first arg))
+                 (conj acc {:type {:name (type-map (type arg)), :nested {:name (type-map (type (first arg))) :nested {:name (type-map (type (ffirst arg)))}}}})
+                 (conj acc {:type {:name (type-map (type arg)), :nested {:name (type-map (type (first arg)))}}}))
                (conj acc {:type {:name (type-map (type arg))}})))
            ()
            arguments)))
