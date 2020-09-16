@@ -16,15 +16,13 @@
 
 (defn arguments-generator []
   (gen/tuple (gen/bind (gen/choose 2 5)
-                       #(gen/vector (gen/vector gen/small-integer %)))))
+                       #(gen/vector (gen/vector gen/small-integer %) 2 4))))
 
 (def test-data
   [{:expected [[1 10] [2 20] [3 30]]
     :arguments [[[1 2 3] [10 20 30]]]}
    {:expected [[1 3 5] [2 4 6]]
-    :arguments [[[1 2] [3 4] [5 6]]]}
-   {:expected []
-    :arguments [[]]}])
+    :arguments [[[1 2] [3 4] [5 6]]]}])
 
 (defn solution [vectors]
   (if (not-empty vectors)
