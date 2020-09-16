@@ -13,30 +13,26 @@
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "integer"}}})
 
-(defn arguments-generator
-  []
-  (gen/tuple (gen/vector (gen/choose 0 12) 3 10)))
+(defn arguments-generator []
+  (gen/tuple (gen/vector (gen/choose 0 12) 3 12)))
 
 (def test-data
-  [{:expected 0 :arguments [[1 0 1 0 1]]}
-   {:expected 0 :arguments [[0 1 0 1]]}
+  [{:expected 0 :arguments [[0 1 0 1]]}
+   {:expected 0 :arguments [[1 0 1 0 1]]}
    {:expected 9 :arguments [[1 0 3 5 10 0 11 1]]}
    {:expected 20 :arguments [[0 11 6 8 1 4 10 9]]}
-   {:expected 37 :arguments [[9 11 1 5 6 6 5 4 9 12]]}])
+   {:expected 34 :arguments [[9 11 1 5 6 6 5 4 9 12]]}])
 
-(defn iter-step [steps acc]
-  (let [len (count steps)]
-    (cond
-      (zero? len) acc
-      (= len 1) acc
-      (= len 2) (+ acc (last steps))
-      :else
-      (let [first-pol (first steps)
-            second-pol (second steps)]
-        (cond
-          (> first-pol second-pol) (iter-step (drop 2 steps) (+ acc second-pol))
-          (< first-pol second-pol) (iter-step (drop 1 steps) (+ acc first-pol))
-          :else (iter-step (drop 2 steps) (+ acc second-pol)))))))
+(defn iter-step
+  ([steps] (iter-step steps 0))
+  ([steps acc]
+   (let [len (count steps)]
+     (if (<= len 1) acc
+         (let [first-pol (first steps)
+               second-pol (second steps)]
+           (if (or (> first-pol second-pol) (= first-pol second-pol))
+             (iter-step (drop 2 steps) (+ acc second-pol))
+             (iter-step (drop 1 steps) (+ acc first-pol))))))))
 
 (defn solution [steps-map]
-  (iter-step steps-map 0))
+  (iter-step steps-map))
