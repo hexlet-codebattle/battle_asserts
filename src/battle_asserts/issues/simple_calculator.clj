@@ -3,7 +3,7 @@
 
 (def level :easy)
 
-(def description "Create simple calculator that supports next operations: add, substract, divide, multiply, modulo.")
+(def description "Create simple calculator that supports next operations: add, substract, divide, multiply, modulo. Use floor rounding for division operations.")
 
 (def signature
   {:input [{:argument-name "first" :type {:name "integer"}}
@@ -27,6 +27,6 @@
   (let [operations-map {"+" (fn [a b] (+ a b))
                         "-" (fn [a b] (- a b))
                         "*" (fn [a b] (* a b))
-                        "/" (fn [a b] (/ a b))
+                        "/" (fn [a b] (int (/ a b)))
                         "%" (fn [a b] (mod a b))}]
     ((operations-map operation) first-num second-num)))
