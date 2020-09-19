@@ -13,7 +13,7 @@
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
-    (gen/tuple (gen/choose 1 10)))
+  (gen/tuple (gen/choose 1 10)))
 
 (def test-data
   [{:expected "circle" :arguments [1]}
