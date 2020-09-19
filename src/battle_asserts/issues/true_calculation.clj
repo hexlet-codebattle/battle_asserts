@@ -3,10 +3,7 @@
 
 (def level :elementary)
 
-(def description "Bob answers 'Sure.' if you ask him a question.
-                 He answers 'Whoa, chill out!' if you yell at him.
-                 He says 'Fine. Be that way!' if you address him without actually saying anything.
-                 He answers 'Whatever.' to anything else.  ")
+(def description "Create a function which returns the number of true values there are in an array.")
 
 (def signature
   {:input [{:argument-name "facts" :type {:name "array" :nested {:name "boolean"}}}]
