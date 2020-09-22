@@ -15,7 +15,7 @@
   (let [first-year (gen/generate (gen/choose 1800 2300))
         second-year (+ first-year (gen/generate (gen/choose 4 200)))]
     (letfn [(years-pair [] [first-year second-year])]
-  (gen/tuple (gen/elements [(years-pair) (years-pair) (years-pair)])))))
+      (gen/tuple (gen/elements [(years-pair) (years-pair) (years-pair)])))))
 
 (def test-data
   [{:expected 2 :arguments [[1980 1984]]}
