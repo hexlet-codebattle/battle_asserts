@@ -13,6 +13,7 @@
    java.lang.Integer "integer"
    java.lang.Double "float"
    java.lang.Boolean "boolean"
+   clojure.lang.Ratio "integer"
    clojure.lang.PersistentList "array"
    clojure.lang.PersistentVector "array"
    clojure.lang.PersistentArrayMap "hash"})
