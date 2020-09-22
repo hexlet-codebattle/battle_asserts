@@ -25,6 +25,6 @@
    {:expected false :arguments ["m8te"]}])
 
 (defn solution [code]
-  (letfn [(only-digit? [pin] (not (empty? (re-matches #"^[0-9]+$" pin))))]
+  (letfn [(only-digit? [pin] (empty? (re-matches #"^[0-9]+$" pin)))]
     (let [len (count code)]
-      (and (only-digit? code) (or (= len 4) (= len 6))))))
+      (and (not (only-digit? code)) (or (= len 4) (= len 6))))))
