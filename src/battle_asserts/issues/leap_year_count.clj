@@ -12,10 +12,7 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (let [first-year (gen/generate (gen/choose 1800 2300))
-        second-year (+ first-year (gen/generate (gen/choose 4 200)))]
-    (letfn [(years-pair [] [first-year second-year])]
-      (gen/tuple (gen/elements [(years-pair) (years-pair) (years-pair)])))))
+  (gen/tuple (gen/tuple (gen/choose 1700 2000) (gen/choose 2000 2300))))
 
 (def test-data
   [{:expected 2 :arguments [[1980 1984]]}
