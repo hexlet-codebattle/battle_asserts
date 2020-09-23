@@ -12,10 +12,10 @@
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
-  (let [length (gen/generate (gen/choose 2 5))
-        extension (gen/generate (gen/elements [".txt" ".exe" ".mp3" ""]))
-        filepath (str "C:/" (s/join "/" (faker/words {:lang :en :n 5})) extension)]
-    (gen/tuple (gen/elements [filepath]))))
+  (letfn [(words-count [] (gen/generate (gen/choose 2 8)))
+          (extension [] (gen/generate (gen/elements [".txt" ".exe" ".mp3" "" ".docx" ".jpg" ".png" ".pdf"])))
+          (filepath [] (repeatedly 15 #(str "C:/" (s/join "/" (faker/words {:lang :en :n (words-count)})) (extension))))]
+    (gen/tuple (gen/elements (filepath)))))
 
 (def test-data
   [{:expected "something.txt"
