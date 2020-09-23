@@ -3,7 +3,7 @@
 
 (def level :easy)
 
-(def description "Create simple calculator that supports next operations: add, substract, divide, multiply, modulo. Use floor rounding for division operations.")
+(def description "Given two **integer** numbers. Create a simple calculator that supports next operations: `add`, `substract`, `divide`, `multiply`, `modulo`. Use floor rounding for division operations.")
 
 (def signature
   {:input [{:argument-name "first" :type {:name "integer"}}
