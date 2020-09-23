@@ -17,11 +17,11 @@
 
 (defn arguments-generator
   []
-  (gen/tuple gen/small-integer gen/small-integer))
+  (gen/tuple (gen/choose 0 100) (gen/choose 0 100)))
 
 (def test-data
   [{:expected "obtuse" :arguments [27 59]}
-   {:expected "acute" :arguments [135 11]}
+   {:expected "acute" :arguments [100 11]}
    {:expected "right" :arguments [45 45]}])
 
 (defn solution [first second]
