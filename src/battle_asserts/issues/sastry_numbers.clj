@@ -10,9 +10,14 @@
   {:input [{:argument-name "number" :type {:name "integer"}}]
    :output {:type {:name "boolean"}}})
 
-(defn arguments-generator
-  []
-  (gen/tuple (gen/choose 180 600)))
+(defn arguments-generator []
+  (gen/tuple (gen/elements [183
+                            328
+                            528
+                            (gen/generate (gen/choose 184 600))
+                            (gen/generate (gen/choose 184 600))
+                            (gen/generate (gen/choose 184 600))
+                            (gen/generate (gen/choose 184 600))])))
 
 (def test-data
   [{:expected true :arguments [183]}

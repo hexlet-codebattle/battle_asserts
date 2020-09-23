@@ -13,7 +13,9 @@
    :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/elements (faker/words {:lang :en :n 5}))))
+  (let [words (faker/words {:lang :en :n 4})
+        plural (str (rand-nth words) "s")]
+    (gen/tuple (gen/elements (conj words plural)))))
 
 (def test-data
   [{:expected false :arguments ["fork"]}
