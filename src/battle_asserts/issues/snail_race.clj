@@ -10,8 +10,7 @@
                  Round 2: `[m, s]` Use his middle snail against Steve's slowest.
                  Round 3: `[f, m]` Use his fastest snail against Steve's middle.
                  Create a function that determines whether Maurice's plan will work if Maurice wins 2/3 games.
-                 Array 1: [s, m, f] for Maurice.
-                 Array 2: [s, m, f] for Steve.")
+                 Snails count of each players is 3, snails randomly shuffled in array.")
 
 (def signature
   {:input [{:argument-name "maurice" :type {:name "array" :nested {:name "integer"}}}
@@ -27,5 +26,7 @@
    {:expected true :arguments [[1 8 9] [2 4 10]]}])
 
 (defn solution [maurice-snails steve-snails]
-  (and (> (nth maurice-snails 1) (first steve-snails))
-       (> (last maurice-snails) (nth steve-snails 1))))
+  (let [sorted-maurice (sort maurice-snails)
+        sorted-steve (sort steve-snails)]
+    (and (> (nth sorted-maurice 1) (first sorted-steve))
+         (> (last sorted-maurice) (nth sorted-steve 1)))))
