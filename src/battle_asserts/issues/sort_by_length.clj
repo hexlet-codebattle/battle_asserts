@@ -19,4 +19,4 @@
    {:expected ["september" "august" "april" "may"] :arguments [["may" "april" "september" "august"]]}])
 
 (defn solution [words]
-  (into [] (sort-by count > words)))
+  (vec (sort-by count > words)))
