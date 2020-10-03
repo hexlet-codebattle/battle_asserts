@@ -1,32 +1,35 @@
-(ns battle-asserts.issues.pascals-triangle
-  (:require [clojure.test.check.generators :as gen]))
+(ns battle-asserts.issues.sea_battle)
 
 (def level :medium)
 
-(def description "Return the N'th row of Pascal's Triangle.")
+(def description "It is necessary to return the number of ships to the field in the Sea Battle
+game. The field is represented as a two-dimensial array where 1 means part of the ship and can be of different sizes")
 
 (def signature
-  {:input  [{:argument-name "s" :type {:name "integer"}}]
-   :output {:type {:name "array" :nested {:name "integer"}}}})
-
-(defn arguments-generator []
-  (gen/tuple gen/nat))
+  {:input [{:argument-name "field" :type {:name "array" :nested {:name "array" :nested {:name "integer"}}}}]
+   :output {:type {:name "integer"}}})
 
 (def test-data
-  [{:expected [1 3 3 1]
-    :arguments [3]}
-   {:expected [1]
-    :arguments [0]}
-   {:expected [1 1]
-    :arguments [1]}
-   {:expected [1 2 1]
-    :arguments [2]}
-   {:expected [1 4 6 4 1]
-    :arguments [4]}])
-
-(defn solution [n]
-  (vec (nth
-        (iterate #(concat [1]
-                          (map + % (rest %)) [1])
-                 [1])
-        n)))
+  [{:expected 7
+    :arguments [
+      [1, 0, 1, 0, 0, 0],
+      [1, 0, 0, 0, 1, 1],
+      [0, 0, 0, 0, 0, 0],
+      [0, 1, 1, 1, 0, 1],
+      [0, 0, 0, 0, 0, 1],
+      [1, 1, 0, 1, 0, 0]
+    ]}
+   {:expected 2
+    :arguments [
+      [0, 1, 0],
+      [0, 0, 0],
+      [0, 0, 1]
+    ]}
+   {:expected 5
+    :arguments [
+      [1, 0, 0, 0, 1],
+      [0, 0, 0, 0, 1],
+      [1, 1, 1, 0, 0],
+      [0, 0, 0, 0, 1],
+      [1, 1, 0, 0, 1],
+    ]}])
