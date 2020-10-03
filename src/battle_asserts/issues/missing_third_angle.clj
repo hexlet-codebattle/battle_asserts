@@ -11,22 +11,22 @@
                   The sum of angles of any triangle is always 180 degrees.")
 
 (def signature
-  {:input [{:argument-name "first-angle" :type {:name "integer"}}
-           {:argument-name "second-angle" :type {:name "integer"}}]
+  {:input [{:argument-name "first" :type {:name "integer"}}
+           {:argument-name "second" :type {:name "integer"}}]
    :output {:type {:name "string"}}})
 
 (defn arguments-generator
   []
-  (gen/tuple gen/small-integer gen/small-integer))
+  (gen/tuple (gen/choose 0 100) (gen/choose 0 100)))
 
 (def test-data
   [{:expected "obtuse" :arguments [27 59]}
-   {:expected "acute" :arguments [135 11]}
+   {:expected "acute" :arguments [100 11]}
    {:expected "right" :arguments [45 45]}])
 
-(defn solution [first-angle second-angle]
-  (let [third-angle (- 180 first-angle second-angle)]
+(defn solution [first second]
+  (let [third (- 180 first second)]
     (cond
-      (> third-angle 90) "obtuse"
-      (< third-angle 90) "acute"
+      (> third 90) "obtuse"
+      (< third 90) "acute"
       :else "right")))

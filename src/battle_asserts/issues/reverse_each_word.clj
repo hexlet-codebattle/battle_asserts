@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.reverse-each-word
   (:require [clojure.test.check.generators :as gen]
-            [clojure.string]
+            [clojure.string :as s]
             [faker.generate :as faker]))
 
 (def level :elementary)
@@ -26,6 +26,6 @@
 
 (defn solution [string]
   (->>
-   (clojure.string/split string #" ")
+   (s/split string #" ")
    (map clojure.string/reverse)
-   (clojure.string/join " ")))
+   (s/join " ")))

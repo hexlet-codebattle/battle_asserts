@@ -1,6 +1,5 @@
 (ns battle-asserts.issues.sam-with-frodo
-  (:require [clojure.string :as s]
-            [clojure.test.check.generators :as gen]
+  (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
 (def level :elementary)
@@ -13,16 +12,17 @@
    :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
-  (let [elements-count (gen/generate (gen/choose 2 6))]
-    (gen/tuple (gen/shuffle (faker/words {:lang :en :n elements-count})))))
+  (let [persons (faker/words {:lang :en :n 3})
+        sam-frodo-and-others (concat ["Sam" "Frodo"] persons)]
+    (gen/tuple (gen/shuffle sam-frodo-and-others))))
 
 (def test-data
   [{:expected true
-    :arguments [["Sam" "Frodo"]]}
+    :arguments [["Sam" "Frodo" "Troll" "Balrog" "Human"]]}
    {:expected false
-    :arguments [["Frodo" "Saruman" "Sam"]]}
+    :arguments [["Orc" "Frodo" "Treant" "Saruman" "Sam"]]}
    {:expected true
-    :arguments [["Orc" "Sam" "Frodo" "Legolas"]]}])
+    :arguments [["Orc" "Sam" "Frodo" "Gandalf" "Legolas"]]}])
 
 (defn solution [persons]
   (let [sam-position (.indexOf  persons "Sam")

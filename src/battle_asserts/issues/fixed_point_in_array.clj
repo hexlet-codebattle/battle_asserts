@@ -16,16 +16,16 @@
   (letfn [(inject-fixed-point [coll]
             (gen/bind (gen/tuple (gen/return coll) (gen/choose 0 (count coll)))
                       #(gen/return (assoc (first %) (second %) (second %)))))]
-    (gen/tuple (gen/one-of [(gen/vector gen/small-integer)
-                            (gen/bind (gen/vector gen/small-integer) inject-fixed-point)]))))
+    (gen/tuple (gen/one-of [(gen/vector (gen/choose -20 20) 5 10)
+                            (gen/bind (gen/vector (gen/choose -20 20) 5 10) inject-fixed-point)]))))
 
 (def test-data
   [{:expected 3
-    :arguments [[-10, -5, 0, 3, 7]]}
+    :arguments [[-10 -5 0 3 7]]}
    {:expected 0
-    :arguments [[0, 2, 5, 8, 17]]}
+    :arguments [[0 2 5 8 17]]}
    {:expected -1
-    :arguments [[-10, -5, 3, 4, 7, 9]]}
+    :arguments [[-10 -5 3 4 7 9]]}
    {:expected 3
     :arguments [[-3 -2 -1 3 4 7 8]]}])
 

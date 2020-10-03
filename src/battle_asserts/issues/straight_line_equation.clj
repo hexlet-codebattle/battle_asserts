@@ -8,14 +8,14 @@
                   Return result as array where first number is `kx` and second number is `b`. Use floor rounding.")
 
 (def signature
-  {:input  [{:argument-name "first-point" :type {:name "array" :nested {:name "integer"}}}
-            {:argument-name "second-point" :type {:name "array" :nested {:name "integer"}}}]
+  {:input  [{:argument-name "first" :type {:name "array" :nested {:name "integer"}}}
+            {:argument-name "second" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (defn arguments-generator
   []
-  (gen/tuple (gen/tuple gen/small-integer gen/small-integer)
-             (gen/tuple gen/small-integer gen/small-integer)))
+  (gen/tuple (gen/tuple (gen/choose -10 10) (gen/choose -10 10))
+             (gen/tuple (gen/choose -10 10) (gen/choose -10 10))))
 
 (def test-data
   [{:expected [1 3] :arguments [[6 9] [1 4]]}

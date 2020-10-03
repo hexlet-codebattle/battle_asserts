@@ -10,8 +10,8 @@
                   of the str2 in the str1 and returns it's position, -1 if not found.")
 
 (def signature
-  {:input  [{:argument-name "first-str" :type {:name "string"}}
-            {:argument-name "second-str" :type {:name "string"}}]
+  {:input  [{:argument-name "first" :type {:name "string"}}
+            {:argument-name "second" :type {:name "string"}}]
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []

@@ -8,8 +8,8 @@
                   and return string if they should be added, subtracted, multiplied or divided to get result.")
 
 (def signature
-  {:input [{:argument-name "first-num" :type {:name "integer"}}
-           {:argument-name "second-num" :type {:name "integer"}}
+  {:input [{:argument-name "first" :type {:name "integer"}}
+           {:argument-name "second" :type {:name "integer"}}
            {:argument-name "result" :type {:name "integer"}}]
    :output {:type {:name "string"}}})
 
@@ -20,7 +20,10 @@
    "/" (fn [a b] (/ a b))})
 
 (defn arguments-generator []
-  (gen/tuple (gen/choose -50 50) (gen/one-of [(gen/choose -50 -1) (gen/choose 1 50)]) (gen/choose -50 50)))
+  (let [first-num (gen/generate (gen/choose -50 50))
+        second-num (gen/generate (gen/one-of [(gen/choose -50 -1) (gen/choose 1 50)]))
+        result [(+ first-num second-num) (- first-num second-num) (* first-num second-num) (/ first-num second-num) second-num]]
+    (gen/tuple (gen/return first-num) (gen/return second-num) (gen/elements result))))
 
 (def test-data
   [{:arguments [10 12 22]

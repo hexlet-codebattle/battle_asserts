@@ -11,14 +11,13 @@
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "integer"}}})
 
-(defn arguments-generator
-  []
-  (gen/tuple (gen/vector gen/small-integer 3)))
+(defn arguments-generator []
+  (gen/tuple (gen/vector (gen/choose 1 5) 3)))
 
 (def test-data
-  [{:expected 2 :arguments [[17 17 3]]}
-   {:expected 0 :arguments [[1 2 3]]}
-   {:expected 3 :arguments [[33 33 33]]}])
+  [{:expected 0 :arguments [[1 2 3]]}
+   {:expected 2 :arguments [[1 1 3]]}
+   {:expected 3 :arguments [[3 3 3]]}])
 
 (defn solution [numbers]
   (let [equal-size (count (set numbers))]

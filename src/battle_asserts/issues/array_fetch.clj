@@ -15,7 +15,7 @@
 
 (defn arguments-generator
   []
-  (gen/tuple (gen/list gen/small-integer)
+  (gen/tuple (gen/vector (gen/choose -20 20) 2 5)
              gen/small-integer
              gen/small-integer))
 
