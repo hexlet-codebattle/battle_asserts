@@ -8,7 +8,7 @@
 (def signature
   {:input  [{:argument-name "integers" :type {:name "array" :nested {:name "integer"}}}
             {:argument-name "parts" :type {:name "integer"}}]
-   :output {:type :type {:name "array" :nested {:name "integer"}}}})
+   :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (def test-data
   [{:expected [[1], []] :arguments [[1], 2]}
