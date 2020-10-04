@@ -24,8 +24,7 @@
           (gen-keyword []
             (gen/elements (map keyword (faker/words {:lang :en :n 50}))))]
     (gen/tuple (gen/return (address))
-               (gen/map (gen-keyword) (gen/one-of [(gen-word)
-                                                   gen/small-integer])))))
+               (gen/map (gen-keyword) (gen-word)))))
 
 (def test-data
   [{:expected "http://www.foobar.com?first_param=123&second_param=456&third_param=678"
