@@ -24,9 +24,7 @@
    {:expected [1 2 3 4 5 6]
     :arguments [[1 3 5] [2 4 6]]}
    {:expected [1 2 3 4]
-    :arguments [[1 3 5] [2 4]]}
-   {:expected []
-    :arguments [[] [2 4 6]]}])
+    :arguments [[1 3 5] [2 4]]}])
 
 (defn solution [array-first array-second]
   (interleave array-first array-second))

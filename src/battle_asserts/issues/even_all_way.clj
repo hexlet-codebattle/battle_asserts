@@ -14,7 +14,7 @@
   (gen/tuple (gen/vector (gen/choose -100 100) 5 15)))
 
 (def test-data
-  [{:expected [] :arguments [[1 2 3 4 5]]}
+  [{:expected [2] :arguments [[1 2 2 4 5]]}
    {:expected [2 4] :arguments [[1 3 2 6 4 8]]}
    {:expected [0 2 4] :arguments [[0 1 2 3 4]]}])
 

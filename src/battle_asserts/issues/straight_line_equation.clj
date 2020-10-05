@@ -21,7 +21,7 @@
   [{:expected [1 3] :arguments [[6 9] [1 4]]}
    {:expected [0 -2] :arguments [[6 0] [-1 -3]]}
    {:expected [-5 10] :arguments [[2 0] [0 10]]}
-   {:expected [3 0] :arguments [[1.5 5] [0 0]]}])
+   {:expected [5 0] :arguments [[1 5] [0 0]]}])
 
 (defn solution [[x1, y1], [x2, y2]]
   (try

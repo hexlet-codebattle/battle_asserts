@@ -4,12 +4,12 @@
 
 (def level :elementary)
 
-(def description "Compute the distance a boat travels across a river, given the width of the river, the boat's speed perpendicular to the river, and the river's speed.")
+(def description "Compute the distance a boat travels across a river, given the width of the river, the boat's speed perpendicular to the river, and the river's speed. Use ceil rounding.")
 
 (def signature
-  {:input [{:argument-name "width" :type {:name "float"}}
-           {:argument-name "boat" :type {:name "float"}}
-           {:argument-name "river" :type {:name "float"}}]
+  {:input [{:argument-name "width" :type {:name "integer"}}
+           {:argument-name "boat" :type {:name "integer"}}
+           {:argument-name "river" :type {:name "integer"}}]
    :output {:type {:name "float"}}})
 
 (defn pairs-gen
@@ -26,10 +26,10 @@
 (def test-data
   [{:expected 5.0 :arguments [3 6 8]}
    {:expected 10.0 :arguments [10 10 0]}
-   {:expected 5.0 :arguments [4 3 9/4]}])
+   {:expected 5.0 :arguments [4 3 2]}])
 
 (defn solution
   [width v-boat v-river]
   (let [offset (/ (* width v-river)
                   v-boat)]
-    (Math/hypot width offset)))
+    (Math/ceil (Math/hypot width offset))))

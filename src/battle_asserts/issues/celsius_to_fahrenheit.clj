@@ -7,7 +7,7 @@
 
 (def signature
   {:input [{:argument-name "temperature" :type {:name "integer"}}]
-   :output {:type {:name "result"}}})
+   :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
   (gen/tuple (gen/choose -500 500)))

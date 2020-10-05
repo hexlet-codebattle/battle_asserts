@@ -8,7 +8,7 @@
 (def signature
   {:input  [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}
             {:argument-name "parts" :type {:name "integer"}}]
-   :output {:type {:name "array" :nested {:name "integer"}}}})
+   :output {:type {:name "array" :nested {:name "array" :nested {:name "integer"}}}}})
 
 (defn arguments-generator []
   (gen/tuple (gen/vector gen/small-integer 2 10) (gen/choose 2 4)))

@@ -20,9 +20,7 @@
   [{:expected ["This" "sample" "string"]
     :arguments ["This is a sample string"]}
    {:expected ["another" "sample"]
-    :arguments ["Some another sample"]}
-   {:expected []
-    :arguments ["Do, do, do, do... do it!"]}])
+    :arguments ["Some another sample"]}])
 
 (defn solution [string]
   (let [words (re-seq #"\w+" string)

@@ -16,7 +16,7 @@
 (def test-data
   [{:expected [3 5] :arguments [[1 3 3 5 5]]}
    {:expected [3 11 15] :arguments [[1 3 1 6 9 11 13 15]]}
-   {:expected [] :arguments [[0 2 2 2 4]]}])
+   {:expected [1] :arguments [[0 1 2 2 4]]}])
 
 (defn solution [numbers]
   (reduce (fn [acc elem]
