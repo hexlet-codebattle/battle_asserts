@@ -10,17 +10,12 @@
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/choose 0 15)))
+  (gen/tuple (gen/choose 1 15)))
 
 (def test-data
-  [{:arguments [10]
-    :expected [2 3 5 7 11 13 17 19 23 29]}
-   {:arguments [0]
-    :expected []}
-   {:arguments [4]
-    :expected [2 3 5 7]}
-   {:arguments [1]
-    :expected [2]}])
+  [{:arguments [10] :expected [2 3 5 7 11 13 17 19 23 29]}
+   {:arguments [4] :expected [2 3 5 7]}
+   {:arguments [1] :expected [2]}])
 
 (defn prime? [n]
   (let [divisors (range 2 (inc (int (Math/sqrt n))))

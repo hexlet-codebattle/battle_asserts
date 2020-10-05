@@ -13,8 +13,8 @@
                  A = [1, 2, 4], B = [1, 2, 3, 4, 5], A is unequal B]")
 
 (def signature
-  {:input  [{:argument-name "arr1" :type {:name "integer"}}
-            {:argument-name "arr2" :type {:name "integer"}}]
+  {:input  [{:argument-name "arr1" :type {:name "array" :nested {:name "integer"}}}
+            {:argument-name "arr2" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []

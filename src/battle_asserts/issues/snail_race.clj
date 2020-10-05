@@ -15,7 +15,7 @@
 (def signature
   {:input [{:argument-name "maurice" :type {:name "array" :nested {:name "integer"}}}
            {:argument-name "steve" :type {:name "array" :nested {:name "integer"}}}]
-   :output {:type "boolean"}})
+   :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
   (gen/tuple (gen/vector (gen/choose 1 50) 3) (gen/vector (gen/choose 1 50) 3)))
