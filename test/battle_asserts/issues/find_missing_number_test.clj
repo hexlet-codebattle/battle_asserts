@@ -12,3 +12,6 @@
 
 (deftest test-solution
   (h/generate-tests issue/test-data issue/solution))
+
+(deftest test-data-tests
+  (h/generate-data-tests issue/test-data issue/signature))

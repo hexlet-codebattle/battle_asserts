@@ -19,9 +19,7 @@
                             (gen/vector (gen/choose -20 30) 2 15)]))))
 
 (def test-data
-  [{:expected 0
-    :arguments [[]]}
-   {:expected 5
+  [{:expected 5
     :arguments [[10 5 3 4 3 5 6]]}
    {:expected 7
     :arguments [[6 10 7 4 9 120 4 7]]}
@@ -30,7 +28,7 @@
    {:expected -11
     :arguments [[-9 -11 -13 1 13 13 -2 -6 7 -11 -11 -2 7]]}
    {:expected -9
-    :arguments [[3,-9,-4,11,15,-14,-1,11,1,-7,7,8,-9,-9,8,12]]}])
+    :arguments [[3 -9 -4 11 15 -14 -11 1 1 -7 7 8 -9 -9 8 12]]}])
 
 (defn solution [array]
   (let [result
