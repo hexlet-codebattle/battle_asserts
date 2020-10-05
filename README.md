@@ -101,6 +101,7 @@ Corresponding tests are in `test/battle_asserts/issues/*.clj`
 - `spec-solution` tests are checking that result type of solving issue is correct.
 - `spec-signature` tests are checking that input signatures are correctly described for `arguments-generator`.
 - `test-solution` tests are checking that test data solves correctly.
+- `test-data` tests are checking that test data corresponds to signature.
 
 ### 4. Create pull-request
 
