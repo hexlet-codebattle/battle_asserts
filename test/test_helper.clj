@@ -59,8 +59,8 @@
 (defn generate-data-tests [data signature]
   (let [input-signature (prepare-signature signature)
         output-signature (list (signature :output))]
-  (doseq [{expected :expected arguments :arguments} data]
-    (let [prepared-expected (prepare-expected-results expected)
-          prepared-args (prepare-arguments arguments)]
-    (is (= prepared-args input-signature))
-    (is (= prepared-expected output-signature))))))
+    (doseq [{expected :expected arguments :arguments} data]
+      (let [prepared-expected (prepare-expected-results expected)
+            prepared-args (prepare-arguments arguments)]
+        (is (= prepared-args input-signature))
+        (is (= prepared-expected output-signature))))))
