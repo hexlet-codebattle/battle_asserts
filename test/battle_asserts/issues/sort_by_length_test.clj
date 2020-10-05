@@ -8,7 +8,6 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (print v)
                 (vector? (apply issue/solution v))))
 
 (ct/defspec spec-signature
@@ -19,3 +18,5 @@
 (deftest test-solution
   (h/generate-tests issue/test-data issue/solution))
 
+(deftest test-data-tests
+  (h/generate-data-tests issue/test-data issue/signature))
