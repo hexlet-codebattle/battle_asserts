@@ -15,11 +15,16 @@
 (defmethod generate-asserts "samples" [_ _ samples]
   samples)
 
-(defmethod generate-asserts "solution" [build-generator solution _]
+(defmethod generate-asserts "solution" [build-generator solution samples]
   (let [generator (build-generator)
-        coll (gen/sample generator 20)]
-    (map #(hash-map :expected (apply solution %) :arguments %)
-         coll)))
+        size (count samples)
+        coll (gen/sample generator (- 30 size))
+        generated (map #(hash-map :expected (apply solution %) :arguments %)
+                       coll)]
+    (reduce
+     (fn [acc task] (conj acc (into (sorted-map) task)))
+     generated
+     samples)))
 
 (defn write-to-file [filename content-seq]
   (with-open [w (io/writer filename)]
