@@ -19,5 +19,5 @@
     :arguments [1000]}])
 
 (defn solution [num]
-  (reduce + (take-while (partial > num)
-                        (iterate #(.nextProbablePrime (biginteger %)) 2))))
+  (int (reduce + (take-while (partial > num)
+                             (iterate #(.nextProbablePrime (biginteger %)) 2)))))

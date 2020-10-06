@@ -13,7 +13,7 @@
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/vector gen/small-integer 4 20)))
+  (gen/tuple (gen/vector (gen/choose -20 20) 4 20)))
 
 (def test-data
   [{:expected [3 3 3 3 2 2 2 12 12 4 5]
@@ -34,7 +34,7 @@
                 (compare (.indexOf array first-val)
                          (.indexOf array second-val))
                 result)))]
-    (->>
-     (frequencies array)
-     (sort comparator)
-     (reduce #(concat %1 (repeat (second %2) (first %2))) []))))
+    (vec (->>
+          (frequencies array)
+          (sort comparator)
+          (reduce #(concat %1 (repeat (second %2) (first %2))) [])))))
