@@ -17,7 +17,7 @@
           (prepare-vector [] (let [coll (range 1 (randomize))
                                    elem-to-drop (rand-int (count coll))
                                    without-elem (vec (utility/drop-nth coll elem-to-drop))] without-elem))
-          (prepare-vectors-pool [] (vec (repeatedly 50 #(prepare-vector))))]
+          (prepare-vectors-pool [] (vec (repeatedly 50 prepare-vector)))]
     (gen/tuple (gen/elements (prepare-vectors-pool)))))
 
 (def test-data
