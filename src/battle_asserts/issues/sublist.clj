@@ -18,17 +18,21 @@
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
-  (letfn [(superlist [a]
-            (rand-nth (partition (rand-int (count a)) 1 a)))
+  (letfn [(rand-num [num] (gen/generate (gen/choose 1 num)))
+          (randomize [] (gen/generate (gen/vector gen/small-integer 3 10)))
+          (superlist [a]
+            (vec (rand-nth (partition (rand-num (count a)) 1 a))))
           (sublist [a]
-            (concat (repeatedly (rand-int 4) #(rand-int 10))
-                    a
-                    (repeatedly (rand-int 4) #(rand-int 10))))]
-    (gen/bind (gen/vector gen/small-integer 4 8)
-              #(gen/tuple (gen/return %) (gen/one-of [(gen/return (superlist %))
-                                                      (gen/return (sublist %))
-                                                      (gen/return %)
-                                                      (gen/vector gen/small-integer 4 8)])))))
+            (vec (concat (repeatedly (rand-num 4) #(rand-num 10))
+                         a
+                         (repeatedly (rand-num 4) #(rand-num 10)))))]
+    (let [vect (randomize)]
+      (gen/tuple (gen/one-of [(gen/return (superlist vect))
+                              (gen/return (sublist vect))
+                              (gen/vector gen/small-integer 4 8)])
+                 (gen/one-of [(gen/return (superlist vect))
+                              (gen/return (sublist vect))
+                              (gen/vector gen/small-integer 4 8)])))))
 
 (def test-data
   [{:arguments [[1 2 3] [1 2 3 4 5]] :expected "A is sublist of B"}
