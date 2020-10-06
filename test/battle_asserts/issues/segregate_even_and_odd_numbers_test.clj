@@ -8,9 +8,7 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (let [result (apply issue/solution v)]
-                  (<= (count (partition-by even? result))
-                      2))))
+                (vector? (apply issue/solution v))))
 
 (ct/defspec spec-signature
   20

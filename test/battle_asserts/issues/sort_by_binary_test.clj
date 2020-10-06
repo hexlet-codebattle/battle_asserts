@@ -8,7 +8,7 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (instance? clojure.lang.ArraySeq (apply issue/solution v))))
+                (vector? (apply issue/solution v))))
 
 (ct/defspec spec-signature
   20

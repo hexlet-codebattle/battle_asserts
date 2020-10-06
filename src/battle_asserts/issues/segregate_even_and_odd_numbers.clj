@@ -23,5 +23,5 @@
     :arguments [[2 4 5 9 3 8 6]]}])
 
 (defn solution [array]
-  (concat (filter even? array)
-          (filter odd? array)))
+  (vec (concat (filter even? array)
+               (filter odd? array))))

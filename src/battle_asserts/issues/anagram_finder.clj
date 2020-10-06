@@ -16,13 +16,13 @@
 
 (defn arguments-generator
   []
-  (let [words1 (faker/words {:lang :en :n 8})
+  (let [words1 (faker/words {:lang :en :n 20})
         words2 (map #(s/join (shuffle (seq %)))
                     words1)
         words3 (map #(s/join (shuffle (seq %)))
                     words1)
         words (vec (concat words1 words2 words3))]
-    (gen/tuple (apply gen/tuple (repeatedly 6 #(gen/elements words))))))
+    (gen/tuple (gen/vector (gen/elements words) 5 15))))
 
 (def test-data
   [{:arguments [["veer" "lake" "item" "kale" "mite" "ever" "rev"]]

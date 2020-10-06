@@ -22,6 +22,7 @@
     :arguments [[0 0 0 4 3 5]]}])
 
 (defn solution [array]
-  (concat
-   (remove zero? array)
-   (filter zero? array)))
+  (vec
+   (concat
+    (remove zero? array)
+    (filter zero? array))))

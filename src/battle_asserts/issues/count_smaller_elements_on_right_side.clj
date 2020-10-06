@@ -6,8 +6,7 @@
 (def description "For each element X of the given array, count how many elements to the right of X are smaller than X. The last value is always zero since there are no elements to the right of the last element.")
 
 (def signature
-  {:input [{:argument-name "arr"
-            :type {:name "array" :nested {:name "integer"}}}]
+  {:input [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (defn arguments-generator []
@@ -27,4 +26,4 @@
   (count (filter #(> value %) array)))
 
 (defn solution [array]
-  (map-indexed #(count-smaller %2 (subvec array (inc %1))) array))
+  (vec (map-indexed #(count-smaller %2 (subvec array (inc %1))) array)))

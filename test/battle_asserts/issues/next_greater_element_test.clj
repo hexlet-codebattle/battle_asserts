@@ -8,11 +8,7 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (let [result (apply issue/solution v)]
-                  (if (seq result)
-                    (= (last result)
-                       -1)
-                    true))))
+                (vector? (apply issue/solution v))))
 
 (ct/defspec spec-signature
   20

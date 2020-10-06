@@ -11,7 +11,7 @@
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/vector (gen/choose -10 10) 5 15)))
+  (gen/tuple (gen/vector (gen/choose -3 3) 9 15)))
 
 (def test-data
   [{:expected [3 5] :arguments [[1 3 3 5 5]]}

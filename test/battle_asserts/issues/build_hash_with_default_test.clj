@@ -8,9 +8,7 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (let [default-value (second v)]
-                  (every? #(= % default-value)
-                          (vals (apply issue/solution v))))))
+                (map? (apply issue/solution v))))
 
 (ct/defspec spec-signature
   20

@@ -8,9 +8,8 @@
 
 (ct/defspec spec-solution
   20
-  (prop/for-all [v (gen/tuple (gen/resize 10000 gen/nat))]
-                (= (apply issue/solution v)
-                   (mod (first v) 1000))))
+  (prop/for-all [v (issue/arguments-generator)]
+                (instance? Number (apply issue/solution v))))
 
 (ct/defspec spec-signature
   20

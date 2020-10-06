@@ -28,8 +28,8 @@
     :arguments [[10 5 3 10 10 4 1 3]]}])
 
 (defn solution [array]
-  (let [element-occurrence (reduce #(assoc %1 %2 (inc (get %1 %2 0))) {} array)]
-    (->>
-     array
-     distinct
-     (reduce #(concat %1 (repeat (get element-occurrence %2) %2)) []))))
+  (vec (let [element-occurrence (reduce #(assoc %1 %2 (inc (get %1 %2 0))) {} array)]
+         (->>
+          array
+          distinct
+          (reduce #(concat %1 (repeat (get element-occurrence %2) %2)) [])))))

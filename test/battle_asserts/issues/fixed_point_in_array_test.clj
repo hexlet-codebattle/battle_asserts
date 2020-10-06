@@ -8,11 +8,7 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (let [fixed-point (apply issue/solution v)]
-                  (if (= fixed-point -1)
-                    true
-                    (= fixed-point
-                       (nth (first v) fixed-point))))))
+                (number? (apply issue/solution v))))
 
 (ct/defspec spec-signature
   20

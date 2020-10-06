@@ -9,7 +9,7 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (empty? (s/replace (apply issue/solution v) #"[5|3]" ""))))
+                (number? (apply issue/solution v))))
 
 (ct/defspec spec-signature
   20

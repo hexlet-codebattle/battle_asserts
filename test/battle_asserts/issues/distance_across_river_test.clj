@@ -8,8 +8,7 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (let [r (apply issue/solution v)]
-                  (= (double (int r)) r))))
+                (number? (apply issue/solution v))))
 
 (ct/defspec spec-signature
   20
