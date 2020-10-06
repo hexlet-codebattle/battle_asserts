@@ -24,4 +24,4 @@
 
 (defn solution [array]
   (vec (concat (filter even? array)
-            (filter odd? array))))
+               (filter odd? array))))

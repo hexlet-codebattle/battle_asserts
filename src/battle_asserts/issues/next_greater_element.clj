@@ -29,6 +29,6 @@
 
 (defn solution [array]
   (vec (map-indexed #(or
-                 (max-than %2 (subvec array (inc %1)))
-                 -1)
-               array)))
+                      (max-than %2 (subvec array (inc %1)))
+                      -1)
+                    array)))

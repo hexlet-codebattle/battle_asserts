@@ -21,4 +21,4 @@
 
 (defn solution [n coll]
   (vec (keep-indexed #(if-not (zero? (mod (inc %1) n)) %2)
-                coll)))
+                     coll)))

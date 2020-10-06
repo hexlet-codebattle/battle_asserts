@@ -29,7 +29,7 @@
 
 (defn solution [array]
   (vec (let [element-occurrence (reduce #(assoc %1 %2 (inc (get %1 %2 0))) {} array)]
-    (->>
-     array
-     distinct
-     (reduce #(concat %1 (repeat (get element-occurrence %2) %2)) [])))))
+         (->>
+          array
+          distinct
+          (reduce #(concat %1 (repeat (get element-occurrence %2) %2)) [])))))

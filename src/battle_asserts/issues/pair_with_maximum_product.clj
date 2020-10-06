@@ -38,10 +38,10 @@
 
 (defn solution [array]
   (vec (->>
-   array
-   (reduce-kv #(let [next-elements (drop (inc %2) array)]
-                 (concat %1 (make-pair (cycle [%3])
-                                       next-elements)))
-              [])
-   (apply max-key product)
-   sort)))
+        array
+        (reduce-kv #(let [next-elements (drop (inc %2) array)]
+                      (concat %1 (make-pair (cycle [%3])
+                                            next-elements)))
+                   [])
+        (apply max-key product)
+        sort)))

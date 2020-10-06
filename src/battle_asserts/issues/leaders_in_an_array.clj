@@ -31,8 +31,8 @@
 (defn solution [array]
   (vec
    (->>
-     array
-     (map-indexed vector)
-     (filter
-      #(first-is-biggest (subvec array (first %))))
-     (map second))))
+    array
+    (map-indexed vector)
+    (filter
+     #(first-is-biggest (subvec array (first %))))
+    (map second))))
