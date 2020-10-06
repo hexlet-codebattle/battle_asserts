@@ -8,9 +8,7 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (try
-                  (vector? (apply issue/solution v))
-                  (catch ArithmeticException e true))))
+                (vector? (apply issue/solution v))))
 
 (ct/defspec spec-signature
   20

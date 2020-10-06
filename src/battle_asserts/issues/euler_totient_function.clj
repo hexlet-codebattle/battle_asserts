@@ -24,10 +24,10 @@
     :arguments [99]}])
 
 (defn solution [num]
-  (let [prime-factors (filter #(zero? (rem num %))
+  (int (let [prime-factors (filter #(zero? (rem num %))
                               (take-while (partial > (/ (inc num) 2))
                                           (iterate #(.nextProbablePrime (biginteger %)) 2)))]
     (if (.isProbablePrime (biginteger num) 5)
       (dec num)
       (* num (reduce * (map #(- 1 (/ 1 %))
-                            prime-factors))))))
+                            prime-factors)))))))

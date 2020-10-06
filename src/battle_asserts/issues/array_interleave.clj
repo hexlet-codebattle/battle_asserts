@@ -27,4 +27,4 @@
     :arguments [[1 3 5] [2 4]]}])
 
 (defn solution [array-first array-second]
-  (interleave array-first array-second))
+  (vec (interleave array-first array-second)))

@@ -8,8 +8,7 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (= (count (apply issue/solution v))
-                   (count (ffirst v)))))
+                (vector? (apply issue/solution v))))
 
 (ct/defspec spec-signature
   20

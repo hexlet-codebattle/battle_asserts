@@ -13,7 +13,7 @@
    :output {:type {:name "array" :nested {:name "string"}}}})
 
 (defn arguments-generator []
-  (let [sentences (repeatedly 30 #(faker/sentence {:words-range [1 10]}))]
+  (let [sentences (repeatedly 50 #(faker/sentence {:words-range [2 6]}))]
     (gen/tuple (gen/elements sentences))))
 
 (def test-data

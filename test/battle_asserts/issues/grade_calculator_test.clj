@@ -9,10 +9,7 @@
 (ct/defspec spec-solution
   20
   (prop/for-all [v (issue/arguments-generator)]
-                (let [result (apply issue/solution v)]
-                  (if (nil? result)
-                    true
-                    (string? result)))))
+                (string? (apply issue/solution v))))
 
 (ct/defspec spec-signature
   20

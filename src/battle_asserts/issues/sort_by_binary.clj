@@ -30,4 +30,4 @@
        count))
 
 (defn solution [arr]
-  (sort-by binary-count arr))
+  (vec (sort-by binary-count arr)))

@@ -10,27 +10,7 @@
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (defn arguments-generator []
-  (letfn [(vector-with-odd-occurences []
-            (let [size (+ 5 (rand-int 10))
-                  array (repeatedly size #(rand-int 10))]
-              (->>
-               (frequencies array)
-               (filter #(even? (val %)))
-               (take 2)
-               keys
-               (concat array)
-               shuffle)))
-          (vector-without-odd-occurences []
-            (let [size (+ 5 (rand-int 10))
-                  array (repeatedly size #(rand-int 10))]
-              (->>
-               (frequencies array)
-               (filter #(odd? (val %)))
-               keys
-               (concat array)
-               shuffle)))]
-    (gen/tuple (gen/one-of [(gen/elements (repeatedly 50 vector-with-odd-occurences))
-                            (gen/elements (repeatedly 50 vector-without-odd-occurences))]))))
+    (gen/tuple (gen/vector (gen/choose -5000 5000) 3 20)))
 
 (def test-data
   [{:expected [34 45] :arguments [[12 23 34 12 12 23 12 45]]}

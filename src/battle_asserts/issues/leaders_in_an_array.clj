@@ -29,9 +29,10 @@
   (every? #(> head %) tail))
 
 (defn solution [array]
-  (->>
-   array
-   (map-indexed vector)
-   (filter
-    #(first-is-biggest (subvec array (first %))))
-   (map second)))
+  (vec
+   (->>
+     array
+     (map-indexed vector)
+     (filter
+      #(first-is-biggest (subvec array (first %))))
+     (map second))))

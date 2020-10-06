@@ -12,7 +12,7 @@
    :output {:type {:name "hash" :nested {:name "integer"}}}})
 
 (defn arguments-generator []
-  (let [strs (gen/vector (gen/elements (faker/words {:lang :en :n 15})))
+  (let [strs (gen/vector (gen/elements (faker/words {:lang :en :n 15})) 3 10)
         sentence (gen/fmap #(str/join " " %) strs)]
     (gen/tuple sentence)))
 
