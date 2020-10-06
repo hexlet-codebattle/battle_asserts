@@ -14,7 +14,7 @@
 (defn arguments-generator []
   (letfn [(gen-word []
             (gen/elements (faker/words {:lang :en :n 10})))]
-    (gen/tuple (gen/map (gen-word) (gen/choose -10 10) {:min-elements 0 :max-elements 8}))))
+    (gen/tuple (gen/map (gen-word) (gen/choose -10 10) {:min-elements 1 :max-elements 8}))))
 
 (def test-data
   [{:expected ["damage" "detail"]
@@ -22,9 +22,7 @@
    {:expected ["j"]
     :arguments [{"k" 2 "h" 3 "j" 1}]}
    {:expected ["z"]
-    :arguments [{"o" 0 "z" -2 "j" 1}]}
-   {:expected []
-    :arguments [{}]}])
+    :arguments [{"o" 0 "z" -2 "j" 1}]}])
 
 (defn solution [hsh]
   (if (empty? hsh)

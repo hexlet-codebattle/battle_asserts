@@ -13,17 +13,20 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/bind (gen/choose 1 8)
-                       #(gen/return (let [coll (range 1 %)]
-                                      (utility/drop-nth coll (rand-int (count coll))))))))
+  (letfn [(randomize [] (gen/generate (gen/choose 4 20)))
+          (prepare-vector [] (let [coll (range 1 (randomize))
+                                   elem-to-drop (rand-int (count coll))
+                                   without-elem (vec (utility/drop-nth coll elem-to-drop))] without-elem))
+          (prepare-vectors-pool [] (vec (repeatedly 50 prepare-vector)))]
+    (gen/tuple (gen/elements (prepare-vectors-pool)))))
 
 (def test-data
   [{:expected 1
-    :arguments [[2, 3, 4, 5]]}
+    :arguments [[2 3 4 5]]}
    {:expected 2
-    :arguments [[1, 3, 4, 5]]}
+    :arguments [[1 3 4 5]]}
    {:expected 4
-    :arguments [[1, 2, 3, 5]]}])
+    :arguments [[1 2 3 5]]}])
 
 (defn solution [coll]
   (let [n (inc (count coll))

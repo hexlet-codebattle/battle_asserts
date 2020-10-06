@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.join-url-params
   (:require [clojure.test.check.generators :as gen]
-            [clojure.string]
+            [clojure.string :as s]
             [faker.generate :as faker]))
 
 (def level :easy)
@@ -9,11 +9,8 @@
                   The parameters in your result string should be arranged in alphabetical order.")
 
 (def signature
-  {:input  [{:argument-name "url"
-             :type {:name "string"}}
-            {:argument-name "params"
-             :type {:name "hash"
-                    :nested {:name "string"}}}]
+  {:input  [{:argument-name "url" :type {:name "string"}}
+            {:argument-name "params" :type {:name "hash" :nested {:name "string"}}}]
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
@@ -24,14 +21,14 @@
           (gen-keyword []
             (gen/elements (map keyword (faker/words {:lang :en :n 50}))))]
     (gen/tuple (gen/return (address))
-               (gen/map (gen-keyword) (gen-word)))))
+               (gen/map (gen-keyword) (gen-word) {:min-elements 2 :max-elements 8}))))
 
 (def test-data
-  [{:expected "http://www.foobar.com?first_param=123&second_param=456&third_param=678"
+  [{:expected "http://www.foobar.com?first_param=test&second_param=some&third_param=clj"
     :arguments ["http://www.foobar.com"
-                {:first_param 123
-                 :second_param 456
-                 :third_param 678}]}
+                {:first_param "test"
+                 :second_param "some"
+                 :third_param "clj"}]}
    {:expected "http://www.example.com/search?q=findme&useragent=chrome"
     :arguments ["http://www.example.com/search"
                 {:q "findme"
@@ -44,6 +41,6 @@
 
 (defn solution [url params]
   (str url "?"
-       (clojure.string/join "&"
-                            (map #(str (name %) "=" (params %))
-                                 (sort (keys params))))))
+       (s/join "&"
+               (map #(str (name %) "=" (params %))
+                    (sort (keys params))))))
