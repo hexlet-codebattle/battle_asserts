@@ -5,6 +5,8 @@
 
 (def level :medium)
 
+(def disabled true)
+
 (def description
   "Find all the anagrams in a vector of words.
   Your function should return a vector of vectors, where each sub-vector is a group of words which are anagrams of each other.

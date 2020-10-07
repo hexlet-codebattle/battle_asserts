@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def disabled true)
+
 (def description "Given an array of numbers, return an array which contains all the odd numbers in the orginal array,
                   which also have odd indexes.")
 

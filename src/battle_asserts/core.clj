@@ -70,11 +70,11 @@
       (let [filename (str "issues/" issue-name ".jsons")
             asserts (generate-asserts build-generator solution samples)]
         (if disabled
-          (println (str issue-name " is disabled!"))
+          (println (str issue-name " issue is disabled!"))
           (let [signature-errors (util/check-asserts-and-sign asserts @signature)]
             (if (empty? signature-errors)
-              (do (write-to-file filename asserts) (spit filename yaml) (println (str "Generated " issue-name "!")))
-              (println (str "Errors in signature or arguments at " issue-name "!")))))))))
+              (do (write-to-file filename asserts) (spit filename yaml) (println (str "Generated " issue-name " issue!")))
+              (throw (Exception. (str "Errors in signature or arguments at " issue-name " issue!"))))))))))
 
 (defn -main [& args]
   (let [namespaces (-> "src/battle_asserts/issues"

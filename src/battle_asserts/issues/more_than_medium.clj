@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def disabled true)
+
 (def description "Given a sentence (as string),
                   return an array of words which are longer than the average length of all the words.
                   Words a separated by a whitespace. If there is a trailing period (dot), it should be omittied.")
