@@ -1,4 +1,4 @@
-(ns battle-asserts.issues.tic_tac_toe)
+(ns battle-asserts.issues.tic-tac-toe)
 
 (def level :medium)
 
@@ -13,19 +13,19 @@
    :output {:type {:name "string"}}})
 
 (def test-data
-  [{:expected 'X won'
-    :arguments [[['X', 'O', 'X']
-                 ['O', 'X', 'O']
-                 ['_', '_', 'X']]]}
-   {:expected 'O won'
-    :arguments [[['X', 'X', 'O']
-                 ['_', 'O', '_']
-                 ['O', 'X', 'O']]]}
-   {:expected 'Next'
-    :arguments [[['_', 'O', 'X']
-                 ['X', '_', '_']
-                 ['_', '_', 'O']]]}
-   {:expected 'Game over'
-    :arguments [[['X', 'O', 'X']
-                 ['O', 'X', 'X']
-                 ['O', 'X', 'O']]]}])
+  [{:expected "X won"
+    :arguments [[["X", "O", "X"]
+                 ["O", "X", "O"]
+                 ["_", "_", "X"]]]}
+   {:expected "O won"
+    :arguments [[["X", "X", "O"]
+                 ["_", "O", "_"]
+                 ["O", "X", "O"]]]}
+   {:expected "Next"
+    :arguments [[["_", "O", "X"]
+                 ["X", "_", "_"]
+                 ["_", "_", "O"]]]}
+   {:expected "Game over"
+    :arguments [[["X", "O", "X"]
+                 ["O", "X", "X"]
+                 ["O", "X", "O"]]]}])
