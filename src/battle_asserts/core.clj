@@ -7,6 +7,8 @@
             [battle-asserts.utility :as util]
             [clojure.tools.namespace.find :as nsf]))
 
+(def max-asserts 20)
+
 (defmulti generate-asserts
   (fn [build-generator solution _]
     (if (some nil? [build-generator solution])
@@ -19,7 +21,7 @@
 (defmethod generate-asserts "solution" [build-generator solution samples]
   (let [generator (build-generator)
         size (count samples)
-        coll (gen/sample generator (- 30 size))
+        coll (gen/sample generator (- max-asserts size))
         generated (map #(hash-map :expected (apply solution %) :arguments %)
                        coll)]
     (reduce

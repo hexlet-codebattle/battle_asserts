@@ -1,11 +1,9 @@
 (ns test-helper
   (:require [clojure.test :refer :all]
-            [clojure.test.check.generators :as gen]))
-
-(defn generate-tests
-  [data solution]
-  (doseq [{expected :expected arguments :arguments} data]
-    (is (= expected (apply solution arguments)))))
+            [clojure.test.check :as tc]
+            [clojure.test.check.generators :as gen]
+            [clojure.test.check.properties :as prop]
+            [clojure.test.check.clojure-test :as ct]))
 
 (def type-map
   {java.lang.String "string"
@@ -18,6 +16,14 @@
    clojure.lang.PersistentVector "array"
    clojure.lang.PersistentArrayMap "hash"
    clojure.lang.Keyword "string"})
+
+(def type-check-map
+  {"string" String
+   "integer" Number
+   "float" Number
+   "boolean" Boolean
+   "array" clojure.lang.PersistentVector
+   "hash" clojure.lang.PersistentArrayMap})
 
 (defn prepare-signature [signature]
   (map #(dissoc % :argument-name) (signature :input)))
@@ -65,3 +71,25 @@
             prepared-args (prepare-arguments arguments)]
         (is (= prepared-args input-signature))
         (is (= prepared-expected output-signature))))))
+
+(defn run-solution-test
+  [data solution issue-name]
+  (testing (str "Solution for " issue-name)
+    (doseq [{expected :expected arguments :arguments} data]
+      (is (= expected (apply solution arguments))))))
+
+(defn run-test-data-spec-test
+  [test-data signature issue-name]
+  (testing (str "Test-data and signature for " issue-name)
+    (generate-data-tests test-data signature)))
+
+(defn run-generator-spec-test
+  [arguments-generator signature]
+  (tc/quick-check 20 (prop/for-all [v (arguments-generator)]
+                                   (true? (generate-signatures signature v)))))
+
+(defn run-solution-spec-test
+  [arguments-generator signature solution]
+  (let [output-type (type-check-map (((signature :output) :type) :name))]
+    (tc/quick-check 20 (prop/for-all [v (arguments-generator)]
+                                     (instance? output-type (apply solution v))))))
