@@ -65,16 +65,16 @@
                     :disabled (if (nil? disabled) false @disabled)
                     :signature (if (nil? signature) {} @signature)
                     :description (render-description description samples)}
-          yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})]
-      (println (str "Proceeding " issue-name "..."))
-      (let [filename (str "issues/" issue-name ".jsons")
-            asserts (generate-asserts build-generator solution samples)]
-        (if disabled
-          (println (str issue-name " issue is disabled!"))
-          (let [signature-errors (util/check-asserts-and-sign asserts @signature)]
-            (if (empty? signature-errors)
-              (do (write-to-file filename asserts) (spit filename yaml) (println (str "Generated " issue-name " issue!")))
-              (throw (Exception. (str "Errors in signature or arguments at " issue-name " issue!"))))))))))
+          yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})]  (spit filename yaml))
+    (println (str "Proceeding " issue-name "..."))
+    (let [filename (str "issues/" issue-name ".jsons")
+          asserts (generate-asserts build-generator solution samples)]
+      (if disabled
+        (println (str issue-name " issue is disabled!"))
+        (let [signature-errors (util/check-asserts-and-sign asserts @signature)]
+          (if (empty? signature-errors)
+            (do (write-to-file filename asserts) (println (str "Generated " issue-name " issue!")))
+            (throw (Exception. (str "Errors in signature or arguments at " issue-name " issue!")))))))))
 
 (defn -main [& args]
   (let [namespaces (-> "src/battle_asserts/issues"
