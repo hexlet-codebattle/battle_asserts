@@ -18,8 +18,14 @@
       (println (str "Running test for " issue-name))
       (h/run-test-data-spec-test samples signature issue-name)
       (when-not (nil? solution) (h/run-solution-test samples solution issue-name))
-      (when-not (nil? build-generator) (h/run-generator-spec-test build-generator signature))
-      (when-not (and (nil? build-generator) (nil? solution)) (h/run-solution-spec-test build-generator signature solution)))))
+      (when-not (nil? build-generator) (h/run-generator-spec-test build-generator signature issue-name))
+      (when-not (and
+                 (nil? build-generator)
+                 (nil? solution)) (h/run-solution-spec-test
+                                   build-generator
+                                   signature
+                                   solution
+                                   issue-name)))))
 
 (deftest core-test
   (let [namespaces (-> "src/battle_asserts/issues"

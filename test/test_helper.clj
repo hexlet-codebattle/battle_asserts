@@ -84,12 +84,14 @@
     (generate-data-tests test-data signature)))
 
 (defn run-generator-spec-test
-  [arguments-generator signature]
-  (tc/quick-check 20 (prop/for-all [v (arguments-generator)]
-                                   (true? (generate-signatures signature v)))))
+  [arguments-generator signature issue-name]
+  (testing (str "Generated spec and described spec for " issue-name)
+    (tc/quick-check 20 (prop/for-all [v (arguments-generator)]
+                                     (is (true? (generate-signatures signature v)))))))
 
 (defn run-solution-spec-test
-  [arguments-generator signature solution]
-  (let [output-type (type-check-map (((signature :output) :type) :name))]
-    (tc/quick-check 20 (prop/for-all [v (arguments-generator)]
-                                     (instance? output-type (apply solution v))))))
+  [arguments-generator signature solution issue-name]
+  (testing (str "Solution spec for " issue-name)
+    (let [output-type (type-check-map (((signature :output) :type) :name))]
+      (tc/quick-check 20 (prop/for-all [v (arguments-generator)]
+                                       (is (instance? output-type (apply solution v))))))))
