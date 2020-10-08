@@ -58,11 +58,6 @@
     (nested? expected) (list {:type {:name (type-map (type expected)), :nested {:name (type-map (type (first expected)))}}})
     :else (list {:type {:name (type-map (type expected))}})))
 
-(defn generate-signatures [signature arguments]
-  (let [prepared-sign (prepare-signature signature)
-        prepared-arg (prepare-arguments arguments)]
-    (= prepared-sign prepared-arg)))
-
 (defn generate-data-tests [data signature]
   (let [input-signature (prepare-signature signature)
         output-signature (list (signature :output))]
@@ -87,7 +82,7 @@
   [arguments-generator signature issue-name]
   (testing (str "Generated spec and described spec for " issue-name)
     (tc/quick-check 20 (prop/for-all [v (arguments-generator)]
-                                     (is (true? (generate-signatures signature v)))))))
+                                     (is (= (prepare-signature signature) (prepare-arguments v)))))))
 
 (defn run-solution-spec-test
   [arguments-generator signature solution issue-name]
