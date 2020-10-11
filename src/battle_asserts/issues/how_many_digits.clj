@@ -1,5 +1,6 @@
 (ns battle-asserts.issues.how-many-digits
-  (:require [clojure.test.check.generators :as gen]))
+  (:require [clojure.test.check.generators :as gen]
+            [clojure.string :as s]))
 
 (def level :elementary)
 
@@ -19,4 +20,4 @@
   (gen/tuple (gen/choose 0 100000)))
 
 (defn solution [num]
-  (count (apply str (range 1 num))))
+  (count (s/join (range 1 num))))
