@@ -97,11 +97,11 @@ Example:
   (apply + numbers))
 ```
 
-Corresponding tests are in `test/battle_asserts/issues/*.clj`
-- `spec-solution` tests are checking that result type of solving issue is correct.
-- `spec-signature` tests are checking that input signatures are correctly described for `arguments-generator`.
-- `test-solution` tests are checking that test data solves correctly.
-- `test-data` tests are checking that test data corresponds to signature.
+Corresponding tests are in `test/test_helper.clj` there is no need to add tests to this file, because tests runs dynamically, depending on the described `signature`, `test-data`, `arguments-generator` and `solution`. 
+- `run-solution-spec-test` tests are checking that result type of solving issue is correct.
+- `run-generator-spec-test` tests are checking that input signatures are correctly described for `arguments-generator`.
+- `run-solution-test` tests are checking that test data solves correctly.
+- `run-test-data-spec-test` tests are checking that test data corresponds to signature.
 
 ### 4. Create pull-request
 
