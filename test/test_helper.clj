@@ -40,23 +40,18 @@
     clojure.lang.PersistentVector]
    (type element)))
 
-(defn prepare-arguments [arguments]
-  (reverse
-   (reduce (fn [acc arg]
-             (cond
-               (and (nested? arg) (= (type-map (type arg)) "hash")) (conj acc {:type {:name (type-map (type arg)), :nested {:name (type-map (type (last (first arg))))}}})
-               (and (nested? arg) (nested? (first arg))) (conj acc {:type {:name (type-map (type arg)), :nested {:name (type-map (type (first arg))) :nested {:name (type-map (type (ffirst arg)))}}}})
-               (nested? arg) (conj acc {:type {:name (type-map (type arg)), :nested {:name (type-map (type (first arg)))}}})
-               :else (conj acc {:type {:name (type-map (type arg))}})))
-           ()
-           arguments)))
+(defn type-element [elem]
+  (cond
+    (and (nested? elem) (= (type-map (type elem)) "hash")) {:type {:name (type-map (type elem)), :nested {:name (type-map (type (last (first elem))))}}}
+    (and (nested? elem) (nested? (first elem))) {:type {:name (type-map (type elem)), :nested {:name (type-map (type (first elem))) :nested {:name (type-map (type (ffirst elem)))}}}}
+    (nested? elem) {:type {:name (type-map (type elem)), :nested {:name (type-map (type (first elem)))}}}
+    :else {:type {:name (type-map (type elem))}}))
 
 (defn prepare-expected-results [expected]
-  (cond
-    (and (nested? expected) (= (type-map (type expected)) "hash")) (list {:type {:name (type-map (type expected)), :nested {:name (type-map (type (last (first expected))))}}})
-    (and (nested? expected) (nested? (first expected))) (list {:type {:name (type-map (type expected)), :nested {:name (type-map (type (first expected))) :nested {:name (type-map (type (ffirst expected)))}}}})
-    (nested? expected) (list {:type {:name (type-map (type expected)), :nested {:name (type-map (type (first expected)))}}})
-    :else (list {:type {:name (type-map (type expected))}})))
+  (list (type-element expected)))
+
+(defn prepare-arguments [arguments]
+  (map type-element arguments))
 
 (defn generate-data-tests [data signature]
   (let [input-signature (prepare-signature signature)
