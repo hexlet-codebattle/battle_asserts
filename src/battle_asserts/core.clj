@@ -7,7 +7,7 @@
             [battle-asserts.utility :as util]
             [clojure.tools.namespace.find :as nsf]))
 
-(def max-asserts 20)
+(def max-asserts 30)
 
 (defmulti generate-asserts
   (fn [build-generator solution _]
