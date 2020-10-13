@@ -3,10 +3,8 @@
 
 (def level :elementary)
 
-(def description "Bob answers 'Sure.' if you ask him a question.
-                 He answers 'Whoa, chill out!' if you yell at him.
-                 He says 'Fine. Be that way!' if you address him without actually saying anything.
-                 He answers 'Whatever.' to anything else.  ")
+(def description "Create a function that takes a whole number as input and
+                  returns the shape with that number's amount of sides. Check examples below.")
 
 (def signature
   {:input [{:argument-name "sides" :type {:name "integer"}}]
