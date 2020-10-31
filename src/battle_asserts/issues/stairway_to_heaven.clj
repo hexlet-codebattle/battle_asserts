@@ -21,7 +21,7 @@
    {:expected 0 :arguments [[1 0 1 0 1]]}
    {:expected 9 :arguments [[1 0 3 5 10 0 11 1]]}
    {:expected 20 :arguments [[0 11 6 8 1 4 10 9]]}
-   {:expected 30 :arguments [[9 11 1 5 6 6 5 4 9 12]]}])
+   {:expected 34 :arguments [[9 11 1 5 6 6 5 4 9 12]]}])
 
 (defn iter-step
   ([steps] (iter-step steps 0))
