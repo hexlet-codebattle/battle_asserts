@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def disabled true)
+
 (def description "Create a function that takes `voltage` and `current` and returns the power.")
 
 (def signature
