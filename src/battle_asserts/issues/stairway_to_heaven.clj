@@ -3,10 +3,10 @@
 
 (def level :hard)
 
-(def description "N dicks randomly spread out of 100 stairs, there can be as many dicks as you want on one step. We gotta go down these stairs.
-                  Every time you step on a stair-step with dicks, the brat ratio increases by the number of dicks.
-                  You can go down one or two steps at a time. Write a function to descend the stairs minimizing the brat ratio.
-                  The function receives an array with the number of dicks on each step and returns the minimum brat index.
+(def description "`N` dicks randomly spread out of `M` stairs, there can be as many dicks as you want on one step. We gotta go down these stairs.
+                  Every time you step on a stair-step with dicks, the infame number increases by the number of dicks.
+                  You can go down one or two steps at a time. Write a function to descend the stairs minimizing the infame number (function must find local minimun at each step!).
+                  The function receives an array with the number of dicks on each step and returns the minimized infame number.
                   Powered by Eugene Zaytsev.")
 
 (def signature
