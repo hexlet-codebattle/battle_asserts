@@ -70,7 +70,8 @@
     (let [filename (str "issues/" issue-name ".jsons")
           asserts (generate-asserts build-generator solution samples)]
       (if disabled
-        (println (str issue-name " issue is disabled!"))
+        (do (println (str issue-name " issue is disabled!"))
+            (write-to-file filename asserts))
         (let [signature-errors (util/check-asserts-and-sign asserts @signature)]
           (if (empty? signature-errors)
             (do (write-to-file filename asserts) (println (str "Generated " issue-name " issue!")))
