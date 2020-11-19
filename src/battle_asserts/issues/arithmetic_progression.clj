@@ -6,7 +6,7 @@
 (def description "Calculate arithmetic progression from 1 to n.")
 
 (def signature
-  {:input [{:argument-name "num" :type {:name "integer"}}]
+  {:input [{:argument-name "n" :type {:name "integer"}}]
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator
