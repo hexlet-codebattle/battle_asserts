@@ -14,7 +14,8 @@
                  [org.clojure/test.check "0.10.0"]
                  [helpshift/faker "0.2.0"]
                  [circleci/clj-yaml "0.6.0"]
-                 [com.velisco/strgen "0.1.8"]]
+                 [com.velisco/strgen "0.1.8"]
+                 [faker "0.2.2"]]
   :source-paths ["src"]
   ; :eval-in :nrepl
   :main battle-asserts.core)
