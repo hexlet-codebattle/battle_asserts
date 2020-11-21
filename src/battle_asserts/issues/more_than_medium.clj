@@ -4,11 +4,9 @@
 
 (def level :easy)
 
-(def disabled true)
-
 (def description "Given a sentence (as string),
                   return an array of words which are longer than the average length of all the words.
-                  Words a separated by a whitespace. If there is a trailing period (dot), it should be omittied.")
+                  Words a separated by a whitespace. If there is a trailing period (dot), it should be omittied. If there is no result, return \"there is no result!\"")
 
 (def signature
   {:input  [{:argument-name "sentence" :type {:name "string"}}]
@@ -19,7 +17,9 @@
     (gen/tuple (gen/elements sentences))))
 
 (def test-data
-  [{:expected ["This" "sample" "string"]
+  [{:expected ["there is no result!"]
+    :arguments ["test"]}
+   {:expected ["This" "sample" "string"]
     :arguments ["This is a sample string"]}
    {:expected ["another" "sample"]
     :arguments ["Some another sample"]}])
@@ -28,7 +28,9 @@
   (let [words (re-seq #"\w+" string)
         average (/ (reduce + (map count
                                   words))
-                   (count words))]
-
-    (filterv #(> (count %) average)
-             words)))
+                   (count words))
+        result (filterv #(> (count %) average)
+                        words)]
+    (if (empty? result)
+      ["there is no result!"]
+      result)))
