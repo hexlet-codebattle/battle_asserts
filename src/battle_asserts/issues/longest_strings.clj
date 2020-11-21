@@ -1,4 +1,4 @@
-(ns battle-asserts.issues.first-repeating-element
+(ns battle-asserts.issues.longest-strings
   (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
@@ -16,7 +16,7 @@
 (def test-data
   [{:expected ["programms"]
     :arguments [["in" "Soviet" "Russia" "frontend" "programms" "you"]]}
-   {:expected ["clojure" "better"]
+   {:expected ["clojure" "greater"]
     :arguments [["using" "clojure" "makes" "your" "life" "greater"]]}
    {:expected ["a" "b" "c" "d"]
     :arguments [["a" "b" "c" "d"]]}])
@@ -24,4 +24,4 @@
 (defn solution [words]
   (let [sorted-words (sort-by count words)
         longest-word (count (last sorted-words))]
-    (filter #(= (count %) longest-word) words)))
+    (vec (filter #(= (count %) longest-word) words))))
