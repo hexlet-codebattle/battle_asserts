@@ -24,4 +24,4 @@
 (defn solution [words]
   (let [sorted-words (sort-by count words)
         longest-word (count (last sorted-words))]
-    (vec (filter #(= (count %) longest-word) words))))
+    (filterv #(= (count %) longest-word) words)))
