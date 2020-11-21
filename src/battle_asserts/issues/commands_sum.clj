@@ -23,6 +23,6 @@
 
 (defn solution [players]
   (let [indexed (map-indexed list players)
-        first-team (map #(last %) (filter #(zero? (rem (first %) 2)) indexed))
-        second-team (map #(last %) (filter #(not= (rem (first %) 2) 0) indexed))]
+        first-team (map last (filter #(zero? (rem (first %) 2)) indexed))
+        second-team (map last (filter #(not= (rem (first %) 2) 0) indexed))]
     [(apply + first-team) (apply + second-team)]))
