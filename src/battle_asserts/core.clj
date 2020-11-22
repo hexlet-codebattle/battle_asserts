@@ -82,4 +82,5 @@
                        clojure.java.io/as-file
                        nsf/find-namespaces-in-dir)]
     (doseq [namespace namespaces]
-      (generate-issues namespace))))
+      (generate-issues namespace))
+    (println (str "Total task(s) count is " (count namespaces) "!"))))
