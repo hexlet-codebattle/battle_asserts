@@ -10,7 +10,7 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/choose 1 20)))
+  (gen/tuple (gen/choose 1 10)))
 
 (def test-data
   [{:expected 9 :arguments [1]}
@@ -18,4 +18,4 @@
    {:expected 9999999 :arguments [7]}])
 
 (defn solution [n]
-  (dec (int (Math/pow 10 n))))
+  (int (dec (Math/pow 10 n))))
