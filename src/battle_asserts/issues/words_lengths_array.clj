@@ -19,4 +19,4 @@
    {:expected [7] :arguments [["clojure"]]}])
 
 (defn solution [words]
-  (mapv #(count %) words))
+  (mapv count words))
