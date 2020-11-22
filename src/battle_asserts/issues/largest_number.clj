@@ -18,4 +18,4 @@
    {:expected 9999999 :arguments [7]}])
 
 (defn solution [n]
-  (dec (Math/pow 10 n)))
+  (dec (int (Math/pow 10 n))))
