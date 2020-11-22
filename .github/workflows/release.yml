@@ -25,7 +25,7 @@ jobs:
       - name: get shortsha
         id: vars
         run: |
-         echo ::set-output name=sha_short::$(git rev-parse --short=4 ${{ github.sha }})
+         echo ::set-output name=sha_short::$(git rev-parse --short=5 ${{ github.sha }})
 
       - name: Create github release
         id: create_release
