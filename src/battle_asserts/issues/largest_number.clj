@@ -10,7 +10,7 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/choose 1 10)))
+  (gen/tuple (gen/choose 1 8)))
 
 (def test-data
   [{:expected 9 :arguments [1]}
