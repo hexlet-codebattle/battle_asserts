@@ -23,7 +23,6 @@
         second-num (rem n 10)]
     (int (+ first-num second-num))))
 
-
 (defn solution [numbers]
   (let [two-number-arr (map two-digit-sum numbers)]
     (apply + two-number-arr)))
