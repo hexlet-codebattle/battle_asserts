@@ -3,7 +3,7 @@
 
 (def level :medium)
 
-(def description "Create a function that finds how many prime numbers in given integer.")
+(def description "Create a function that finds how many prime numbers are in a sequence from zero to a given integer, inclusive.")
 
 (def signature
   {:input [{:argument-name "number" :type {:name "integer"}}]
