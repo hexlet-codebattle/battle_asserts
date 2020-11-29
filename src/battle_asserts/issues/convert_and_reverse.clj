@@ -24,7 +24,7 @@
 (defn reverse-number
   ([number] (reverse-number number 0))
   ([number reversed]
-   (if (= number 0)
+   (if (zero? number)
      reversed
      (reverse-number (quot number 10)
                      (+ (rem number 10) (* reversed 10))))))
