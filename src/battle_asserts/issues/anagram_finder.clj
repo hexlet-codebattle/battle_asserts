@@ -29,15 +29,16 @@
    {:arguments [["meat" "mat" "team" "mate" "eat" "mate"]]
     :expected  [["meat" "team" "mate" "mate"]]}
    {:arguments [["there" "is" "no" "anagrams" "foo" "bar"]]
-    :expected  [["anagrams not found!"]]}])
+    :expected  [["anagrams not found!"]]}
+   {:arguments [["guohc" "guohc" "cough" "morning" "adigrne" "osls" "sneeze" "knowledge" "nitwer" "distribution" "water" "ewvi" "event" "oriintdusbti" "trnwie" "water" "nuaegalg" "osls" "gelugaan" "question"]]
+    :expected [["guohc" "guohc" "cough"] ["osls" "osls"] ["nitwer" "trnwie"] ["distribution" "oriintdusbti"] ["water" "water"] ["nuaegalg" "gelugaan"]]}])
+
+(defn prepare-anagram [word]
+  (s/join (sort word)))
 
 (defn solution [words]
-  (let [result (->> words
-                    (group-by count)
-                    vals
-                    (map #(apply group-by set %&))
-                    (mapcat vals)
-                    (filterv next))]
+  (let [uniq (mapv prepare-anagram (distinct words))
+        result (filterv #(not= (count %) 1) (distinct (mapv (fn [word]                                                   (filterv #(= (prepare-anagram %) word) words)) uniq)))]
     (if (empty? (first result))
       [["anagrams not found!"]]
       result)))
