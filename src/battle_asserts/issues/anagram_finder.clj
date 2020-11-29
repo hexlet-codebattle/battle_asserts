@@ -38,7 +38,9 @@
 
 (defn solution [words]
   (let [uniq (mapv prepare-anagram (distinct words))
-        result (filterv #(not= (count %) 1) (distinct (mapv (fn [word]                                                   (filterv #(= (prepare-anagram %) word) words)) uniq)))]
+        result (filterv #(not= (count %) 1)
+                        (distinct (mapv (fn [word]
+                                          (filterv #(= (prepare-anagram %) word) words)) uniq)))]
     (if (empty? (first result))
       [["anagrams not found!"]]
       result)))
