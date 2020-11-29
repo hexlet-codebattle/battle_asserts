@@ -2,7 +2,7 @@
   (:require [clojure.string :as s]
             [clojure.test.check.generators :as gen]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "Reverse input number and convert it to string. Keep number sign.")
 
