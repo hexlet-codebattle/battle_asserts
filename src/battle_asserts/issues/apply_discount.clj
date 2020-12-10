@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def disabled true)
+
 (def description "Create a function that applies a `discount` to every `price` of the product in the array. Round result to nearest.")
 
 (def signature
