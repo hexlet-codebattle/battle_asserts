@@ -3,9 +3,7 @@
 
 (def level :easy)
 
-(def disabled true)
-
-(def description "Given two **integer** numbers. Create a simple calculator that supports next operations: `add`, `substract`, `divide`, `multiply`, `modulo`. Use floor rounding for division operations.")
+(def description "Given two **integer** numbers. Create a simple calculator that supports next operations: `add`, `substract`, `pow`, `multiply`, `remainder`.")
 
 (def signature
   {:input [{:argument-name "first" :type {:name "integer"}}
@@ -14,21 +12,23 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (let [operations ["+" "-" "*" "/" "%"]]
-    (gen/tuple (gen/choose -50 50) (gen/one-of [(gen/choose 1 50) (gen/choose -50 -1)]) (gen/elements operations))))
+  (let [operations ["+" "-" "*" "^" "%"]]
+    (gen/tuple (gen/choose 1 50) (gen/choose 1 8) (gen/elements operations))))
 
 (def test-data
   [{:expected 11 :arguments [1 10 "+"]}
    {:expected -3 :arguments [2 5 "-"]}
-   {:expected 0 :arguments [0 5 "*"]}
-   {:expected 5 :arguments [10 2 "/"]}
-   {:expected 2 :arguments [2 3 "%"]}])
+   {:expected -5 :arguments [-1 5 "*"]}
+   {:expected 5 :arguments [1 5 "*"]}
+   {:expected 100 :arguments [10 2 "^"]}
+   {:expected 100 :arguments [-10 2 "^"]}
+   {:expected -1 :arguments [-19 2 "%"]}])
 
 (defn solution
   [first-num second-num operation]
   (let [operations-map {"+" (fn [a b] (+ a b))
                         "-" (fn [a b] (- a b))
                         "*" (fn [a b] (* a b))
-                        "/" (fn [a b] (int (/ a b)))
-                        "%" (fn [a b] (mod a b))}]
+                        "^" (fn [a b] (int (Math/pow a b)))
+                        "%" (fn [a b] (rem a b))}]
     ((operations-map operation) first-num second-num)))
