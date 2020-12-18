@@ -13,7 +13,7 @@
 
 (defn arguments-generator []
   (let [operations ["+" "-" "*" "^" "%"]]
-    (gen/tuple (gen/choose 1 50) (gen/choose 1 8) (gen/elements operations))))
+    (gen/tuple (gen/choose 6 20) (gen/choose 1 5) (gen/elements operations))))
 
 (def test-data
   [{:expected 11 :arguments [1 10 "+"]}
