@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def disabled true)
+
 (def description "Given two **integer** numbers. Create a simple calculator that supports next operations: `add`, `substract`, `divide`, `multiply`, `modulo`. Use floor rounding for division operations.")
 
 (def signature
