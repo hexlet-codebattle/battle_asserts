@@ -21,7 +21,8 @@
   [{:expected false :arguments ["fork"]}
    {:expected true :arguments ["forks"]}
    {:expected false :arguments ["clojure"]}
-   {:expected true :arguments ["bytes"]}])
+   {:expected true :arguments ["bytes"]}
+   {:expected false :arguments ["test"]}])
 
 (defn solution [word]
   (= (last word) \s))
