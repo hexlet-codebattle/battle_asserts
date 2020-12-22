@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.partiphify
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "Create a function that will divide the list by a specified number of parts.")
 

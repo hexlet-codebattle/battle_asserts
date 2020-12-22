@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.triangular-number
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "Triangular Number Sequence is generated from a pattern of dots that form a triangle.
                   The first 5 numbers of the sequence, or dots, are: `1, 3, 6, 10, 15`
