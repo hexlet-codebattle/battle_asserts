@@ -3,7 +3,7 @@
             [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "Given a sentence and a word, find all the positions in which the word occurs in the sentence. Return an array of such positions.")
 

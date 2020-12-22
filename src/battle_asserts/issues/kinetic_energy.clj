@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.kinetic-energy
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "Create a function that calculates kinetic energy with the following formula:
                  `KE = 1/2 * m * v^2`

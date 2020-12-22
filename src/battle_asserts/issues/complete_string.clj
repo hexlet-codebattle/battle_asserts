@@ -2,7 +2,7 @@
   (:require [clojure.string :as s]
             [clojure.test.check.generators :as gen]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "A string is said to be complete if it contains all the characters from a to z.
                  Given a string, check if it's complete or not.")
