@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def disabled true)
+
 (def description "Create a function that calculates the chance of being an imposter.
                   The formula for the chances of being an imposter is `100 × (i / p)`
                   where `i` is the imposter count and `p` is the player count.
