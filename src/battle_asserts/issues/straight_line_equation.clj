@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def disabled true)
+
 (def description "Create a function to describe a line passing through
                   two points with coordinates (x1, y1) and (x2, y2).
                   Return result as array where first number is `kx` and second number is `b`. Use floor rounding.")
