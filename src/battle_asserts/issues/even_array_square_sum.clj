@@ -5,7 +5,7 @@
 
 (def level :elementary)
 
-(def description "Find square sum of all even numbers in array.")
+(def description "Find the sum of the squares of all even numbers in the array.")
 
 (def signature
   {:input [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
