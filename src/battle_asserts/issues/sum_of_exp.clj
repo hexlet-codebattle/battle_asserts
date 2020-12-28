@@ -11,7 +11,7 @@
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/choose 1 25)))
+  (gen/tuple (gen/choose 1 8)))
 
 (def test-data
   [{:expected "369"
