@@ -2,7 +2,7 @@
   (:require [clojure.test.check.generators :as gen]
             [faker.name :as nm]))
 
-(def level :elementary)
+(def level :easy)
 
 (def description "Create a function that find imposters in array of players, each player has its own role.
 If no imposters were found, return `[\"there are no imposters here!\"]`.
