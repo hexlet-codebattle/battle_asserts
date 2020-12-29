@@ -5,9 +5,9 @@
 (def level :elementary)
 
 (def description "Create a function that find imposters in array of players, each player has its own role.
-                  If no imposters were found, return `[\"there are no imposters here!\"]`.
-                  If in array presented only imposters, return `[\"imposters are everywhere!\"]`.
-                  In other cases return array of imposters names.")
+If no imposters were found, return `[\"there are no imposters here!\"]`.
+If in array presented only imposters, return `[\"imposters are everywhere!\"]`.
+In other cases return array of imposters names.")
 
 (def signature
   {:input [{:argument-name "players" :type {:name "array" :nested {:name "array" :nested {:name "string"}}}}]
