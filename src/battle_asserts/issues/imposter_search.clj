@@ -1,28 +1,39 @@
 (ns battle-asserts.issues.imposter-search
-  (:require [clojure.test.check.generators :as gen]))
+  (:require [clojure.test.check.generators :as gen]
+            [faker.name :as nm]))
 
-(def level :elementary)
+(def level :easy)
 
-(def disabled true)
-
-(def description "Create a function that calculates the chance of being an imposter.
-                  The formula for the chances of being an imposter is `100 × (i / p)`
-                  where `i` is the imposter count and `p` is the player count.
-                  Make sure to round the value to the nearest integer and return the value as a percentage.")
+(def description "Create a function that find imposters in array of players, each player has its own role.
+If no imposters were found, return `[\"there are no imposters here!\"]`.
+If in array presented only imposters, return `[\"imposters are everywhere!\"]`.
+In other cases return array of imposters names.")
 
 (def signature
-  {:input [{:argument-name "imposters" :type {:name "integer"}}
-           {:argument-name "players" :type {:name "integer"}}]
-   :output {:type {:name "string"}}})
+  {:input [{:argument-name "players" :type {:name "array" :nested {:name "array" :nested {:name "string"}}}}]
+   :output {:type {:name "array" :nested {:name "string"}}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/choose 1 15) (gen/choose 2 20)))
+  (letfn [(player-gen [] [(nm/first-name) (gen/generate (gen/elements ["imposter" "civilian"]))])
+          (players-gen [] (repeatedly 5 player-gen))]
+    (gen/tuple (gen/vector (gen/elements (players-gen)) 2 10))))
 
 (def test-data
-  [{:expected "30%" :arguments [3 10]}
-   {:expected "80%" :arguments [4 5]}
-   {:expected "15%" :arguments [3 20]}])
+  [{:expected ["Vasya" "Jack"] :arguments [[["Daniel" "civilian"] ["Vasya" "imposter"] ["Jack" "imposter"]]]}
+   {:expected ["there are no imposters here!"] :arguments [[["Harry" "civilian"]]]}
+   {:expected ["imposters are everywhere!"] :arguments [[["Jack" "imposter"]]]}])
 
-(defn solution [imposters players]
-  (let [percent (int (Math/floor (* 100 (/ imposters players))))]
-    (str percent "%")))
+(defn solution [players]
+  (let [players-count (count players)
+        imposters (reduce (fn [acc [name role]]
+                            (if (= role "imposter")
+                              (conj acc name)
+                              acc))
+                          []
+                          players)
+        imposters-count (count imposters)]
+    (cond
+      (= players-count imposters-count) ["imposters are everywhere!"]
+      (zero? imposters-count) ["there are no imposters here!"]
+      :else imposters)))
+
