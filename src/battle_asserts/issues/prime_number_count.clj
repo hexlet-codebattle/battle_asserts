@@ -16,6 +16,7 @@
   [{:arguments [0] :expected 0}
    {:arguments [10] :expected 4}
    {:arguments [25] :expected 9}
+   {:arguments [17] :expected 7}
    {:arguments [100] :expected 25}])
 
 (defn prime? [n]
@@ -24,4 +25,4 @@
     (not-any? zero? remainders)))
 
 (defn solution [n]
-  (count (filter prime? (range 2 n))))
+  (count (filter prime? (range 2 (inc n)))))
