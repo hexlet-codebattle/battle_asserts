@@ -4,7 +4,7 @@
 
 (def level :elementary)
 
-(def description "Create a function that returns an array of strings sorted by length in descending order.")
+(def description "Create a function that returns an array of strings sorted by length in descending order. Keep the original order of strings with the same length.")
 
 (def signature
   {:input [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}]
