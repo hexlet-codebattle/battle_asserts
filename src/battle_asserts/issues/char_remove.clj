@@ -5,7 +5,7 @@
 
 (def level :elementary)
 
-(def description "Write a function thar removes every `character` from every string in array.")
+(def description "Write a function that removes every `character` from every string in array.")
 
 (def signature
   {:input [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}
