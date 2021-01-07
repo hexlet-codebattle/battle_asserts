@@ -7,7 +7,7 @@
 
 (def signature
   {:input  [{:argument-name "width" :type {:name "integer"}}
-            {:argument-name "height" :type {:name "integer"}}]
+            {:argument-name "length" :type {:name "integer"}}]
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
@@ -21,5 +21,5 @@
    {:expected 135 :arguments [15 9]}])
 
 (defn solution
-  [width height]
-  (* width height))
+  [width length]
+  (* width length))
