@@ -19,7 +19,7 @@
     (str (s/join " " result) (gen/generate (gen/elements ["!" "?" "." "..." "?!"])))))
 
 (defn arguments-generator []
-  (gen/tuple (gen/elements (repeatedly 10 collect-words))))
+  (gen/tuple (gen/elements (repeatedly 30 collect-words))))
 
 (def test-data
   [{:expected false :arguments ["There are three types of zeros in JS!"]}
@@ -28,8 +28,7 @@
    {:expected true :arguments ["Simple Title."]}])
 
 (defn upper-case? [word]
-  (let [first-chr (first word)]
-    (= (s/upper-case first-chr) (str first-chr))))
+  (= (s/capitalize word) word))
 
 (defn solution [title]
   (let [splitted (s/split title #" ")]
