@@ -28,7 +28,7 @@
    {:expected true :arguments ["Simple Title."]}])
 
 (defn upper-case? [word]
-    (= (s/capitalize word) word))
+  (= (s/capitalize word) word))
 
 (defn solution [title]
   (let [splitted (s/split title #" ")]
