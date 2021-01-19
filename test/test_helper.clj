@@ -85,3 +85,7 @@
     (let [output-type (type-check-map (((signature :output) :type) :name))]
       (tc/quick-check 20 (prop/for-all [v (arguments-generator)]
                                        (is (instance? output-type (apply solution v))))))))
+
+(defn run-description-test [description issue-name]
+  (testing (str "Test minimal description lang for " issue-name)
+    (is (= true (or (string? description) (contains? description :en))))))
