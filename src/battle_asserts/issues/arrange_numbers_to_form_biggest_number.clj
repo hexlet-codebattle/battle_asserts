@@ -40,8 +40,8 @@
     :expected "22321"}])
 
 (defn my-comparator [val1 val2]
-  (compare (Integer. (str val2 val1))
-           (Integer. (str val1 val2))))
+  (compare (int (str val2 val1))
+           (int (str val1 val2))))
 
 (defn solution [array]
   (s/join (sort my-comparator array)))
