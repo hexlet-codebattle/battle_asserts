@@ -36,7 +36,7 @@
     prev-digits))
 
 (defn solution [number]
-  (int
+  (Integer/parseInt
    (s/join
     (loop [n (inc number), owerflow 0, res '()]
       (let [integer (quot n 10)
