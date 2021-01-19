@@ -3,7 +3,9 @@
 
 (def level :elementary)
 
-(def description "Calculate digits sum of two-digit integer `n`.")
+(def description
+  {:en "Calculate digits sum of two-digit integer `n`."
+   :ru "Посчитайте сумму цифр двузначного целого числа `n`."})
 
 (def signature
   {:input [{:argument-name "n" :type {:name "integer"}}]
