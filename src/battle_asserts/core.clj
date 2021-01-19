@@ -34,7 +34,7 @@
     (doseq [content-hash content-seq]
       (.write w (str (json/write-str content-hash) "\n")))))
 
-(defn render-description [description, samples]
+(defn render-samples [samples]
   (let [json-options    [:escape-unicode false :escape-slash false]
         to-json         #(apply json/write-str % json-options)
         array-to-string #(s/join ", " (map to-json %))
@@ -46,7 +46,7 @@
      samples
      (mapv format-sample)
      (s/join "\n")
-     (format "%s\n\n**Example:**\n```\n%s\n```" description))))
+     (format "**Example:**\n```\n%s\n```"))))
 
 (defn generate-issues
   [issue-ns-name]
@@ -64,8 +64,10 @@
           metadata {:level @(ns-resolve issue-ns-name 'level)
                     :disabled (if (nil? disabled) false @disabled)
                     :signature (if (nil? signature) {} @signature)
-                    :description (render-description description samples)}
-          yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})]  (spit filename yaml))
+                    :description (if (string? description) {:en description} description)
+                    :examples (render-samples samples)}
+          yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})]
+      (spit filename yaml))
     (println (str "Proceeding " issue-name "..."))
     (let [filename (str "issues/" issue-name ".jsons")
           asserts (generate-asserts build-generator solution samples)]
