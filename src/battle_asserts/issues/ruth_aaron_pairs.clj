@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.ruth-aaron-pairs
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :easy)
+(def level :medium)
 
 (def description "Check if a given pair of numbers is a Ruth–Aaron pair. 
                   A Ruth–Aaron pair consists of two consecutive integers (e.g. 714 and 715) for 
