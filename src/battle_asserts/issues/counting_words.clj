@@ -5,6 +5,8 @@
 
 (def level :easy)
 
+(def disabled true)
+
 (def description "Return a vector with subvectors that shows how many times each word occurs in the given string.")
 
 (def signature
