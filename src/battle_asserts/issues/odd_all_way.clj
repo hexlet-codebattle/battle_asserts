@@ -3,8 +3,6 @@
 
 (def level :easy)
 
-(def disabled true)
-
 (def description "Given an array of numbers, return an array which contains all the odd numbers in the orginal array,
                   which also have odd indexes. If there is no such numbers, return `[0]`.")
 
@@ -13,7 +11,7 @@
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/vector (gen/choose -3 3) 9 15)))
+  (gen/tuple (gen/vector (gen/choose -9 9) 15 25)))
 
 (def test-data
   [{:expected [0] :arguments [[1 2 3]]}
