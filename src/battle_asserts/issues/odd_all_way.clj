@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.odd-all-way
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :easy)
+(def level :elementary)
 
 (def description "Given an array of numbers, return an array which contains all the odd numbers in the orginal array,
                   which also have odd indexes. If there is no such numbers, return `[0]`.")
