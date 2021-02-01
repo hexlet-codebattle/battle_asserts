@@ -5,7 +5,9 @@
 
 (def level :easy)
 
-(def description "Find number of words starting with capital letter")
+(def description
+  {:en "Find number of words starting with capital letter"
+   :ru "Подсчитайте количество слов, начинающихся с заглавной буквы."})
 
 (def signature
   {:input [{:argument-name "s" :type {:name "string"}}]

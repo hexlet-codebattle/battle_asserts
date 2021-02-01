@@ -4,7 +4,9 @@
 
 (def level :easy)
 
-(def description "Count sum of ASCII representation of characters in a given string.")
+(def description
+  {:en "Count sum of ASCII representation of characters in a given string."
+   :ru "Рассчитайте сумму ASCII представления символов в строке."})
 
 (def signature
   {:input [{:argument-name "word" :type {:name "string"}}]
