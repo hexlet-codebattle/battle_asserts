@@ -3,7 +3,9 @@
 
 (def level :elementary)
 
-(def description "Find the largest second number in array.")
+(def description
+  {:en "Find the largest second number in array."
+   :ru "Найдите второе наибольшее число в массиве."})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]

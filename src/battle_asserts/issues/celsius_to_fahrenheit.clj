@@ -3,7 +3,9 @@
 
 (def level :easy)
 
-(def description "Сonvert Celsius temperature to Fahrenheit. Use floor rounding for the result temperature.")
+(def description
+  {:en "Сonvert Celsius temperature to Fahrenheit. Use floor rounding for the result temperature."
+   :ru "Создайте функцию, конвертирующую температуру из Цельсия в Фаренгейты. Полученный результат округлите в меньшую сторону."})
 
 (def signature
   {:input [{:argument-name "temperature" :type {:name "integer"}}]
