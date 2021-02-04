@@ -3,7 +3,9 @@
 
 (def level :elementary)
 
-(def description "Create a function that takes a year and returns it's corresponding century.")
+(def description
+  {:en "Create a function that takes a year and returns it's corresponding century."
+   :ru "Создайте функцию, которая рассчитывает век от полученного года."})
 
 (def signature
   {:input [{:argument-name "year" :type {:name "integer"}}]
