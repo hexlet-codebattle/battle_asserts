@@ -3,7 +3,9 @@
 
 (def level :medium)
 
-(def description "Find the largest element in the Syracuse sequence.")
+(def description
+  {:en "Find the largest element in the Syracuse sequence."
+   :ru "Найдите наибольший элемент в последовательности Сиракузы."})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]

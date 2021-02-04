@@ -3,10 +3,15 @@
 
 (def level :easy)
 
-(def description "Calculate area of triangle using Heron's Formula.
-                  `s = (a + b + c) / 2`
-                  `area = √(s * (s - a) * (s - b) * (s - c))`
-                  Use floor rounding for resulting area.")
+(def description
+  {:en "Calculate area of triangle using Heron's Formula.
+                  `p = (a + b + c) / 2`
+                  `s = √(p * (p - a) * (p - b) * (p - c))`
+                  Use floor rounding for resulting area."
+   :ru "Рассчитайте площадь треугольника, используя формулу Герона.
+                  `p = (a + b + c) / 2`
+                  `s = √(p * (p - a) * (p - b) * (p - c))`
+                  Округлите результат в меньшую сторону."})
 
 (def signature
   {:input  [{:argument-name "a" :type {:name "integer"}}

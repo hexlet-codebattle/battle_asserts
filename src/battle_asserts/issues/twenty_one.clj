@@ -3,7 +3,9 @@
 
 (def level :elementary)
 
-(def description "Given an array, determine if the sum of all its elements is equal to 21.")
+(def description
+  {:en "Given an array, determine if the sum of all its elements is equal to 21."
+   :ru "Определите, равна ли сумма всех чисел в массиве 21."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
