@@ -7,7 +7,7 @@
   :plugins [[lein-kibit "0.1.6"]
             [lein-cljfmt "0.6.4"]
             [jonase/eastwood "0.3.7"]]
-  :dependencies [[org.clojure/clojure "1.10.1"]
+  :dependencies [[org.clojure/clojure "1.10.2"]
                  [jonase/eastwood "0.3.7" :exclusions  [org.clojure/clojure]]
                  [org.clojure/tools.namespace "0.3.1"]
                  [org.clojure/data.json "0.2.7"]
