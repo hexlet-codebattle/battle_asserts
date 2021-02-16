@@ -15,8 +15,7 @@
   (gen/tuple (gen/choose 0 2000)))
 
 (def test-data
-  [{:expected "One million" :arguments [1000000]}
-   {:expected "Zero" :arguments [0]}
+  [{:expected "Zero" :arguments [0]}
    {:expected "Eleven" :arguments [11]}
    {:expected "Fifty-nine" :arguments [59]}
    {:expected "One hundred twenty-nine" :arguments [129]}
