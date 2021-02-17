@@ -3,7 +3,7 @@
 
 (def level :elementary)
 
-(def description "Given an array of numbers, return an array which contains all the even numbers in the orginal array,
+(def description "Given an array of numbers, return an array which contains all the even numbers in the original array,
                   which also have even indexes. If there is no such numbers, return `[0]`.")
 
 (def signature
