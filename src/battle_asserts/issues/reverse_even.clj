@@ -15,8 +15,8 @@
 
 (defn sent-generator []
   (let [len (gen/generate (gen/choose 3 15))]
-    (letfn [(sentences [] (s/join "_" (faker/words {:n len})))]
-      (vec (repeatedly 30 sentences)))))
+    (letfn [(sentences [] (s/join " " (faker/words {:n len})))]
+      (vec (repeatedly 20 sentences)))))
 
 (defn arguments-generator []
   (gen/tuple (gen/elements (sent-generator))))
