@@ -6,7 +6,7 @@
 (def level :elementary)
 
 (def description
-  {:en "You are given a string of words. You need to find replace `_` symbols with spaces and capitalize every word in string."
+  {:en "You are given a string of words. You need to find and replace `_` symbols with spaces and capitalize every word in string."
    :ru "Создайте функцию, которая заменяет символ `_` пробелами и переводит каждое слово в строке в верхний регистр."})
 
 (def signature
