@@ -29,6 +29,6 @@
 
 (defn solution [sentence]
   (s/join #" " (reduce (fn [acc word]
-                         (if (not (odd? (count word)))
+                         (if-not (odd? (count word))
                            (conj acc (s/reverse word))
                            acc)) [] (s/split sentence #" "))))
