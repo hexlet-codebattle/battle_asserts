@@ -4,9 +4,9 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :min-lein-version "2.5.1"
-  :plugins [[lein-kibit "0.1.6"]
-            [lein-cljfmt "0.6.4"]
-            [jonase/eastwood "0.3.7"]]
+  :plugins [[lein-kibit "0.1.8"]
+            [lein-cljfmt "0.7.0"]
+            [jonase/eastwood "0.3.14"]]
   :dependencies [[org.clojure/clojure "1.10.2"]
                  [jonase/eastwood "0.3.7" :exclusions  [org.clojure/clojure]]
                  [org.clojure/tools.namespace "0.3.1"]
