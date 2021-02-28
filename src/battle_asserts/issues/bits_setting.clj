@@ -34,6 +34,6 @@
         result (reduce
                 (fn [acc bit-pair]
                   (if (and (= (first bit-pair) "0") (= (last bit-pair) "0"))
-                   (conj acc "0")
+                   Т(conj acc "0")
                     (conj acc "1"))) [] bits)]
     (s/join #"" result)))
