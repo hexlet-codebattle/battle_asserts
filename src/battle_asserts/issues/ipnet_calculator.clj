@@ -6,8 +6,8 @@
 (def level :medium)
 
 (def description
-  {:en "Create a function, thats calculates how much network contains in `address`, which contains ip and subnet mask."
-   :ru "Создайте функцию, которая рассчитывает количество сетевых адресов, входящих в `address`, который содержит ip и маску подсети."})
+  {:en "Create a function, thats calculates how much network contains in `address`, which contains IPv4 and subnet mask."
+   :ru "Создайте функцию, которая рассчитывает количество сетевых адресов, входящих в `address`, который содержит IPv4 и маску подсети."})
 
 (def signature
   {:input  [{:argument-name "address" :type {:name "string"}}]
@@ -16,11 +16,13 @@
 (defn arguments-generator []
   (letfn [(ip []
             (s/join #"/"
-                    [(s/join #"." (gen/generate (gen/vector (gen/choose 0 255) 4)))
+                    [(s/join #"."
+                             (apply conj
+                                    (gen/generate (gen/vector (gen/choose 1 255) 1))
+                                    (gen/generate (gen/vector (gen/choose 0 255) 3))))
                      (gen/generate (gen/choose 12 32))]))
           (gen-ip [] (gen/elements (repeatedly 50 ip)))]
     (gen/tuple (gen-ip))))
-(gen/generate (arguments-generator))
 
 (def test-data
   [{:expected 1048576
