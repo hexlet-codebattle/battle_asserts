@@ -46,7 +46,7 @@
      samples
      (mapv format-sample)
      (s/join "\n")
-     (format "**Example:**\n```\n%s\n```"))))
+     (format "```\n%s\n```"))))
 
 (defn generate-issues
   [issue-ns-name]
