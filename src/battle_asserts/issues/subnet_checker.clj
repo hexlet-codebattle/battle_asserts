@@ -25,7 +25,7 @@
 (defn arguments-generator []
   (let [addresses (gen-addresses)
         addresses-with-mask
-        (mapv #(s/join #"/" [% (gen/generate (gen/choose 12 32))]) addresses)]
+        (mapv #(s/join #"/" [% (gen/generate (gen/choose 12 30))]) addresses)]
     (letfn [(gen-ip [] (gen/elements addresses-with-mask))
             (gen-subnet [] (gen/elements addresses))]
       (gen/tuple (gen-ip) (gen-subnet)))))
