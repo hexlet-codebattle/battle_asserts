@@ -20,8 +20,8 @@
                              (apply conj
                                     (gen/generate (gen/vector (gen/choose 1 255) 1))
                                     (gen/generate (gen/vector (gen/choose 0 255) 3))))
-                     (gen/generate (gen/choose 12 32))]))
-          (gen-ip [] (gen/elements (repeatedly 50 ip)))]
+                     (gen/generate (gen/choose 12 30))]))
+          (gen-ip [] (gen/elements (repeatedly 30 ip)))]
     (gen/tuple (gen-ip))))
 
 (def test-data
