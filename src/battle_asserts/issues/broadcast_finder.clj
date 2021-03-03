@@ -16,11 +16,13 @@
 (defn arguments-generator []
   (letfn [(ip []
             (s/join #"/"
-                    [(s/join #"." (gen/generate (gen/vector (gen/choose 0 255) 4)))
-                     (gen/generate (gen/choose 12 32))]))
-          (gen-ip [] (gen/elements (repeatedly 50 ip)))]
+                    [(s/join #"."
+                             (apply conj
+                                    (gen/generate (gen/vector (gen/choose 1 255) 1))
+                                    (gen/generate (gen/vector (gen/choose 0 255) 3))))
+                     (gen/generate (gen/choose 12 30))]))
+          (gen-ip [] (gen/elements (repeatedly 20 ip)))]
     (gen/tuple (gen-ip))))
-(gen/generate (arguments-generator))
 
 (def test-data
   [{:expected "192.175.255.255"
