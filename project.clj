@@ -15,7 +15,8 @@
                  [helpshift/faker "0.2.0"]
                  [circleci/clj-yaml "0.6.0"]
                  [com.velisco/strgen "0.1.8"]
-                 [faker "0.2.2"]]
+                 [faker "0.2.2"]
+                 [kovacnica/clojure.network.ip "0.1.3"]]
   :source-paths ["src"]
   ; :eval-in :nrepl
   :main battle-asserts.core)
