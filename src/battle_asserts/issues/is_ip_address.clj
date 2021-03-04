@@ -42,5 +42,5 @@
   (let [elements (s/split address #"\.")]
     (if (= (count elements) 4)
       (empty? (filter (fn [elem] (not (and (>= elem 0) (<= elem 255))))
-                      (map #(Integer. %) elements)))
+                      (map #(Integer/parseInt %) elements)))
       false)))
