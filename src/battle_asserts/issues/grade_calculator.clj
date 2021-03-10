@@ -1,6 +1,5 @@
 (ns battle-asserts.issues.grade-calculator
-  (:require [clojure.test.check.generators :as gen]
-            [clojure.string :as s]))
+  (:require [clojure.test.check.generators :as gen]))
 
 (def level :elementary)
 

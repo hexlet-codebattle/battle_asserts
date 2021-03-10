@@ -34,4 +34,4 @@
        [real (real-part [real1 img1] [real2 img2])
         img  (imaginary-part [real1 img1] [real2 img2])]
         [real img]))
-    (catch ArithmeticException e [0 0])))
+    (catch ArithmeticException _e [0 0])))

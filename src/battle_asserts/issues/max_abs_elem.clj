@@ -1,7 +1,5 @@
 (ns battle-asserts.issues.max-abs-elem
-  (:require [clojure.string :as s]
-            [clojure.test.check.generators :as gen]
-            [faker.generate :as faker]))
+  (:require [clojure.test.check.generators :as gen]))
 
 (def level :elementary)
 

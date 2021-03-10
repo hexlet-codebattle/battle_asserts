@@ -1,6 +1,5 @@
 (ns battle-asserts.issues.convert-and-reverse
-  (:require [clojure.string :as s]
-            [clojure.test.check.generators :as gen]))
+  (:require [clojure.test.check.generators :as gen]))
 
 (def level :easy)
 

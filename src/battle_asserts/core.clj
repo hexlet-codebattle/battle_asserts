@@ -79,7 +79,7 @@
             (do (write-to-file filename asserts) (println (str "Generated " issue-name " issue!")))
             (throw (Exception. (str "Errors in signature or arguments at " issue-name " issue!")))))))))
 
-(defn -main [& args]
+(defn -main [& _args]
   (let [namespaces (-> "src/battle_asserts/issues"
                        clojure.java.io/as-file
                        nsf/find-namespaces-in-dir)]

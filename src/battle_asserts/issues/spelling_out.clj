@@ -1,6 +1,5 @@
 (ns battle-asserts.issues.spelling-out
-  (:require [clojure.string :as s]
-            [clojure.test.check.generators :as gen]
+  (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
 (def level :easy)

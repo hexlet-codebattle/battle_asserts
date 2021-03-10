@@ -55,7 +55,7 @@
                   (conj acc task)))) [] data)))
 
 (defn drop-nth [coll index]
-  (keep-indexed #(if (not= index %1) %2) coll))
+  (keep-indexed #(when (not= index %1) %2) coll))
 
 (defn unique-words [amount]
   (letfn [(gen-words []
