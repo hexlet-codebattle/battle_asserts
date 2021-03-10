@@ -1,6 +1,5 @@
 (ns battle-asserts.issues.drop-every-n-element
-  (:require [battle-asserts.utility :as utility]
-            [clojure.test.check.generators :as gen]))
+  (:require [clojure.test.check.generators :as gen]))
 
 (def level :elementary)
 
@@ -20,5 +19,5 @@
    {:expected [0 1 2 3] :arguments [5 [0 1 2 3]]}])
 
 (defn solution [n coll]
-  (vec (keep-indexed #(if-not (zero? (mod (inc %1) n)) %2)
+  (vec (keep-indexed #(when-not (zero? (mod (inc %1) n)) %2)
                      coll)))

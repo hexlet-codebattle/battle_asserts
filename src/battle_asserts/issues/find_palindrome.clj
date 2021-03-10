@@ -15,8 +15,7 @@
   (letfn [(alphabet []
             (map char (range (int \a) (inc (int \z)))))
           (palindrome [length]
-            (let [half-length (quot (inc length) 2)
-                  half (repeatedly length #(rand-nth (alphabet)))
+            (let [half (repeatedly length #(rand-nth (alphabet)))
                   palindrome (concat half (subvec (vec (reverse half)) (rem length 2)))]
               (s/join palindrome)))
           (string-with-palindrome []

@@ -10,7 +10,7 @@ clean:
 format:
 	lein cljfmt fix
 
-checks: check-format check-namespaces check-style
+checks: check-format check-namespaces check-style check-kondo
 
 check-format:
 	lein cljfmt check
@@ -20,6 +20,9 @@ check-style:
 
 check-namespaces:
 	lein eastwood
+
+check-kondo:
+	clj-kondo --lint src
 
 test:
 	lein trampoline test

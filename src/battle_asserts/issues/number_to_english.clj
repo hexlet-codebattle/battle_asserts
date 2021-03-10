@@ -1,6 +1,5 @@
 (ns battle-asserts.issues.number-to-english
-  (:require [clojure.string :as s]
-            [clojure.test.check.generators :as gen]
+  (:require [clojure.test.check.generators :as gen]
             [clojure.pprint :as pp]))
 
 (def level :hard)

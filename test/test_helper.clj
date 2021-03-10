@@ -1,9 +1,7 @@
 (ns test-helper
-  (:require [clojure.test :refer :all]
+  (:require [clojure.test :refer [is testing]]
             [clojure.test.check :as tc]
-            [clojure.test.check.generators :as gen]
-            [clojure.test.check.properties :as prop]
-            [clojure.test.check.clojure-test :as ct]))
+            [clojure.test.check.properties :as prop]))
 
 (def type-map
   {java.lang.String "string"

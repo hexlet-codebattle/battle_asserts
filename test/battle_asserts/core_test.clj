@@ -1,7 +1,8 @@
 (ns battle-asserts.core-test
   (:require [test-helper :as h]
             [clojure.string :as s]
-            [clojure.test :refer :all]
+            [clojure.test :refer [deftest]]
+            [clojure.java.io :as io]
             [clojure.tools.namespace.find :as nsf]))
 
 (defn test-issue [issue-ns-name]
@@ -31,7 +32,7 @@
 
 (deftest core-test
   (let [namespaces (-> "src/battle_asserts/issues"
-                       clojure.java.io/as-file
+                       io/as-file
                        nsf/find-namespaces-in-dir)]
     (doseq [namespace namespaces]
       (test-issue namespace))))

@@ -31,5 +31,5 @@
 (defn solution [arr]
   (letfn [(calc-fun [x] (cond (and (>= x -2) (< x 2)) (* x x)
                               (>= x 2) (+ (* x x) (* 4 x) 5)
-                              :default 4))]
+                              :else 4))]
     (apply max (map calc-fun arr))))

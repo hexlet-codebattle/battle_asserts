@@ -1,8 +1,6 @@
 (ns battle-asserts.issues.numeric-string-to-array
   (:require [clojure.string :as s]
-            [clojure.test.check.generators :as gen]
-            [faker.generate :as faker]
-            [battle-asserts.utility :as utility]))
+            [clojure.test.check.generators :as gen]))
 
 (def level :elementary)
 

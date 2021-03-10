@@ -1,7 +1,5 @@
 (ns battle-asserts.issues.even-array-square-sum
-  (:require [clojure.string :as s]
-            [clojure.test.check.generators :as gen]
-            [faker.generate :as faker]))
+  (:require [clojure.test.check.generators :as gen]))
 
 (def level :elementary)
 
