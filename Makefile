@@ -22,7 +22,7 @@ check-namespaces:
 	lein eastwood
 
 check-kondo:
-	clj-kondo --lint src
+	clj-kondo --lint src test
 
 test:
 	lein trampoline test

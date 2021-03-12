@@ -12,3 +12,4 @@ issues/*.*
 .vagrant/
 .eastwood
 issues.tar.gz
+.clj-kondo/.cache
