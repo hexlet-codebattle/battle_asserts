@@ -1,0 +1,3 @@
+{:linters {:unresolved-symbol {:level :error
+                               :exclude [(clojure.test.check.properties/for-all [v])]}}
+ :output {:progress true}}
