@@ -25,7 +25,7 @@ check-kondo:
 	clj-kondo --lint src test
 
 test:
-	lein trampoline test
+	bin/kaocha
 
 release: generate
 	tar -czf issues.tar.gz issues/*

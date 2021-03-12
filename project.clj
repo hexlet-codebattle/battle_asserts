@@ -17,6 +17,8 @@
                  [com.velisco/strgen "0.1.8"]
                  [faker "0.2.2"]
                  [kovacnica/clojure.network.ip "0.1.3"]]
+  :profiles {:kaocha {:dependencies [[lambdaisland/kaocha "1.0.829"]]}}
+  :aliases {"kaocha" ["with-profile" "+kaocha" "run" "-m" "kaocha.runner"]}
   :source-paths ["src"]
   ; :eval-in :nrepl
   :main battle-asserts.core)
