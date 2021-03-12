@@ -17,11 +17,16 @@
 
 (def type-check-map
   {"string" String
-   "integer" Number
-   "float" Number
+   "integer" java.lang.Long
+   "float" java.lang.Double
    "boolean" Boolean
    "array" clojure.lang.PersistentVector
    "hash" clojure.lang.PersistentArrayMap})
+
+(defn- check-output-type [data]
+  (if (or (= (type data) java.lang.Integer) (= (type data) java.lang.Long))
+    java.lang.Long
+    (type data)))
 
 (defn prepare-signature [signature]
   (map #(dissoc % :argument-name) (signature :input)))
@@ -62,28 +67,30 @@
 
 (defn run-solution-test
   [data solution issue-name]
-  (testing (str "Solution for " issue-name)
+  (testing (str "Solution for " issue-name " task.")
     (doseq [{expected :expected arguments :arguments} data]
       (is (= expected (apply solution arguments))))))
 
 (defn run-test-data-spec-test
   [test-data signature issue-name]
-  (testing (str "Test-data and signature for " issue-name)
+  (testing (str "Test-data and signature for " issue-name " task.")
     (generate-data-tests test-data signature)))
 
 (defn run-generator-spec-test
   [arguments-generator signature issue-name]
-  (testing (str "Generated spec and described spec for " issue-name)
+  (testing (str "Generated spec and described spec for " issue-name " task.")
     (tc/quick-check 20 (prop/for-all [v (arguments-generator)]
                                      (is (= (prepare-signature signature) (prepare-arguments v)))))))
 
 (defn run-solution-spec-test
   [arguments-generator signature solution issue-name]
-  (testing (str "Solution spec for " issue-name)
+  (testing (str "Solution spec for " issue-name " task.")
     (let [output-type (type-check-map (((signature :output) :type) :name))]
       (tc/quick-check 20 (prop/for-all [v (arguments-generator)]
-                                       (is (instance? output-type (apply solution v))))))))
+                                       (let [actual-output-type
+                                             (check-output-type (apply solution v))]
+                                         (is (= output-type actual-output-type))))))))
 
 (defn run-description-test [description issue-name]
-  (testing (str "Test minimal description lang for " issue-name)
+  (testing (str "Test minimal description lang for " issue-name " task.")
     (is (= true (or (string? description) (contains? description :en))))))
