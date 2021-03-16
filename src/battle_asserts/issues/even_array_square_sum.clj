@@ -3,7 +3,9 @@
 
 (def level :elementary)
 
-(def description "Find the sum of the squares of all even numbers in the array.")
+(def description
+  {:en "Find the sum of the squares of all even numbers in the array."
+   :ru "Найдите сумму квадратов всех четных элементов в массиве."})
 
 (def signature
   {:input [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]

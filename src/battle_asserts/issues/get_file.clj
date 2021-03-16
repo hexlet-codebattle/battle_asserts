@@ -5,7 +5,9 @@
 
 (def level :elementary)
 
-(def description "Implement a function that returns the filename with extension from a given path.")
+(def description
+  {:en "Implement a function that returns the filename with extension from a given path."
+   :ru "Создайте функцию, которая возвращает имя файла с раширением из переданного пути."})
 
 (def signature
   {:input [{:argument-name "sentence" :type {:name "string"}}]

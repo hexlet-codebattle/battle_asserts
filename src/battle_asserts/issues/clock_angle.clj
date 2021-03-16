@@ -3,7 +3,9 @@
 
 (def level :easy)
 
-(def description "Calculate the angle between the hour and the minute hand of a clock at a given time.")
+(def description
+  {:en "Calculate the angle between the hour and the minute hand of a clock at a given time."
+   :ru "Вычислите угол между часовой и минутной стрелкой в заданном времени."})
 
 (def signature
   {:input [{:argument-name "hour" :type {:name "integer"}}

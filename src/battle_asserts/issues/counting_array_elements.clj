@@ -4,7 +4,9 @@
 
 (def level :easy)
 
-(def description "Return a hash map that shows how many times each element occurs in the given array.")
+(def description
+  {:en "Return a hash map that shows how many times each element occurs in the given array."
+   :ru "Верните ассоциативный массив, который отражает, сколько раз элементы повторяются в полученном массиве."})
 
 (def signature
   {:input [{:argument-name "arr"
