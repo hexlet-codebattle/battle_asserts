@@ -3,7 +3,9 @@
 
 (def level :elementary)
 
-(def description "Drop every N'th element from a list.")
+(def description
+  {:en "Drop every N'th element from a list."
+   :ru "Удалите каждый `n`-ый элемент из массива."})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}

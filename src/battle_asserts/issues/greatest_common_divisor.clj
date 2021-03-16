@@ -3,7 +3,9 @@
 
 (def level :easy)
 
-(def description "Create a function that calculates GCD (Greatest Common Divisor).")
+(def description
+  {:en "Create a function that calculates GCD (Greatest Common Divisor)."
+   :ru "Создайте функцию, которая находит наибольший общий делитель."})
 
 (def signature
   {:input [{:argument-name "x" :type {:name "integer"}}

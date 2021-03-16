@@ -3,7 +3,9 @@
 
 (def level :easy)
 
-(def description "Reverse input number and convert it to string. Keep number sign.")
+(def description
+  {:en "Reverse input number and convert it to string. Keep number sign."
+   :ru "Переверните введенное число и конвертируйте его в строку, сохраняя знак."})
 
 (def signature
   {:input  [{:argument-name "number" :type {:name "integer"}}]
