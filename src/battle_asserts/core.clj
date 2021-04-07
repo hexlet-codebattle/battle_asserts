@@ -57,6 +57,7 @@
         build-generator (ns-resolve issue-ns-name 'arguments-generator)
         solution (ns-resolve issue-ns-name 'solution)
         disabled (ns-resolve issue-ns-name 'disabled)
+        tags (ns-resolve issue-ns-name 'tags)
         signature (ns-resolve issue-ns-name 'signature)
         description @(ns-resolve issue-ns-name 'description)
         samples @(ns-resolve issue-ns-name 'test-data)]
@@ -64,6 +65,7 @@
           metadata {:level @(ns-resolve issue-ns-name 'level)
                     :disabled (if (nil? disabled) false @disabled)
                     :signature (if (nil? signature) {} @signature)
+                    :tags (if (nil? tags) [] @tags)
                     :description (if (string? description) {:en description} description)
                     :examples (render-samples samples)}
           yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})]
