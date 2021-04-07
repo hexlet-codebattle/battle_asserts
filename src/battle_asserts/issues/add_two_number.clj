@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training"])
+
 (def description
   {:en "Calculate digits sum of two-digit integer `n`."
    :ru "Посчитайте сумму цифр двузначного целого числа `n`."})
