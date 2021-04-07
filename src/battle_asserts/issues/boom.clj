@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training" "collections"])
+
 (def description "Implement a function that takes an array of numbers and return \"Boom!\" if the number 7 appears. Otherwise, return \"There is no 7.\"")
 
 (def signature
