@@ -25,6 +25,7 @@ A description of the issue includes:
 
 - `level` — difficulty of the problem; possible values are `elementary`, `easy`, `medium`, `hard`.
 - `description` — detailed description of the issue. Now supported laguages is `ru` and `en`, `en` is required.
+- `tags` — tags that provides addittional info about task.
 - `signature` — function signature; map with `input` and `output` types. Available types `integer`, `float`, `string`, `array`, `hash (map, dicts)`.
   See examples in the existing issues.
 
@@ -36,6 +37,8 @@ Example:
 (ns battle-asserts.issues.array_sum)
 
 (def level :elementary)
+
+(def tags ["training" "collections"])
 
 (def description 
   {:en "Calculate the sum of array."
@@ -75,6 +78,8 @@ Example:
 (ns battle-asserts.issues.array_sum)
 
 (def level :elementary)
+
+(def tags ["training" "collections"])
 
 (def description 
   {:en "Calculate the sum of array."
