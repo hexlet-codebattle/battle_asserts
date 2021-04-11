@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training"])
+
 (def description "Create a function that inverts the rgb values of a given array.")
 
 (def signature

@@ -4,6 +4,8 @@
 
 (def level :elementary)
 
+(def tags ["training" "strings"])
+
 (def description "Create a function that takes a word and
                   determines whether or not it is plural.
                   Ignore edge cases like goose and geese, fungus and fungi, etc.")

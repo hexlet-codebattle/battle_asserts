@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training"])
+
 (def description "A farmer is asking you to tell him how many legs can be counted among all his animals.
                   The farmer breeds three species:
                   `chickens = 2 legs`

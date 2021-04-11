@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training" "collections"])
+
 (def description "Create a function which returns the number of true values there are in an array.")
 
 (def signature

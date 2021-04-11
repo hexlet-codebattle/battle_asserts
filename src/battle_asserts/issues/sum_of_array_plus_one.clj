@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training" "collections"])
+
 (def description "Given an array of integers, return the sum of integers after adding 1 to each one.")
 
 (def signature

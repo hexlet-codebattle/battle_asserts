@@ -4,6 +4,8 @@
 
 (def level :elementary)
 
+(def tags ["training" "strings" "collections"])
+
 (def description "Given an array of strings, write the function, that return another array, containing all of its longest strings.")
 
 (def signature

@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training"])
+
 (def description "Create a function that validates whether a number `n` is exclusively within the bounds of `lower` and `upper`.")
 
 (def signature

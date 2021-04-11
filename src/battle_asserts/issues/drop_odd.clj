@@ -5,6 +5,8 @@
 
 (def level :elementary)
 
+(def tags ["training" "strings"])
+
 (def description
   {:en "You are given a string of words. Drop each word with odd length."
    :ru "Создайте функцию, которая удаляет слова с нечетной длиной в строке."})

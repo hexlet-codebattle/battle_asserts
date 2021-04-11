@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training" "collections"])
+
 (def description "Two arrays, which represent two sandwiches are given.
                   Return whether both sandwiches use the same type of bread.")
 
