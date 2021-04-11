@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training" "collections"])
+
 (def description "Find the smallest second number in array.")
 
 (def signature

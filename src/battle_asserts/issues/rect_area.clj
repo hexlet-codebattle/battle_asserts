@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training" "math"])
+
 (def description "Calculate the area of a rectangle given its length and width")
 
 (def signature

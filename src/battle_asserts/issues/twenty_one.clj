@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training" "collections"])
+
 (def description
   {:en "Given an array, determine if the sum of all its elements is equal to 21."
    :ru "Определите, равна ли сумма всех чисел в массиве 21."})
