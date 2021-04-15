@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["math"])
+
 (def description "Implement a function that divide two complex numbers.
                   Return result as array where first number is real part and second number is imaginary part. Use floor rounding.")
 

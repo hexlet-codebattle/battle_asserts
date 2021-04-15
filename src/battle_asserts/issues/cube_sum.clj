@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["math"])
+
 (def description
   {:en "Calculate sum of cubes in array from 0 to `n`."
    :ru "Рассчитайте сумму кубов в массиве от 0 до `n`."})

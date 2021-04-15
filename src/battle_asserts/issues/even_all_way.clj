@@ -1,7 +1,9 @@
 (ns battle-asserts.issues.even-all-way
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :elementary)
+(def level :easy)
+
+(def tags ["collections"])
 
 (def description "Given an array of numbers, return an array which contains all the even numbers in the original array,
                   which also have even indexes. If there is no such numbers, return `[0]`.")

@@ -5,6 +5,8 @@
 
 (def level :hard)
 
+(def tags ["strings"])
+
 (def description "Write a function that takes an integer number and returns an English text sequence starting with the English cardinal representation of that integer,
                   the word 'is' and then the English cardinal representation of the count of characters that made up the first word, followed by a comma.
                   Continue the sequence by using the previous count word as the first word of the next phrase, append 'is' and the cardinal count of the letters in that word.

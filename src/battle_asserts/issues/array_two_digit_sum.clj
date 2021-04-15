@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["collections"])
+
 (def description "Calculate digits sum of two-digit integers in array.
                   After that, calculate whole sum of produced array.")
 

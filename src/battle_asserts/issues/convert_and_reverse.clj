@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description
   {:en "Reverse input number and convert it to string. Keep number sign."
    :ru "Переверните введенное число и конвертируйте его в строку, сохраняя знак."})

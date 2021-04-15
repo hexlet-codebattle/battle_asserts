@@ -5,6 +5,8 @@
 
 (def level :easy)
 
+(def tags ["strings" "collections" "network"])
+
 (def description
   {:en "Create a function, thats pick up an IP from `domains` by `domain` name. If there is no record, then return \"DNS_PROBE_FINISHED_NXDOMAIN\"."
    :ru "Создайте функцию, которая достает из `domains` IP, связанный с именем `domain`. Если такая запись отсутствует, то верните \"DNS_PROBE_FINISHED_NXDOMAIN\"."})

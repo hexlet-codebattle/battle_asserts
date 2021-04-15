@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Create a function that applies `discounts` to every `price` of the products in the array and calculate sum of whole payment. If after applying the `discount` to `price` intermediate result becames negative, consider intermediate result as zero.")
 
 (def signature

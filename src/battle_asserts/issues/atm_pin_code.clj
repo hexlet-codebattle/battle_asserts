@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description
   {:en "ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits. Create a function that takes a string and check if the PIN is valid."
    :ru "Банкомат принимает 4-х значный или 6-значный ПИН код, который состоит только из цифр. Создайте функцию, которая проверяет корректность ПИН кода."})

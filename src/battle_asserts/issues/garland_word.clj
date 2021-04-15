@@ -5,6 +5,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description "Write function that, given a lowercase word,
                  returns the degree of the word if it's a garland word and 0 otherwise.
                  A garland word is one that starts and ends with the same N letters in the same

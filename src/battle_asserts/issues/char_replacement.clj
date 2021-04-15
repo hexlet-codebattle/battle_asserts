@@ -5,6 +5,8 @@
 
 (def level :elementary)
 
+(def tags ["strings" "collections"])
+
 (def description "Write a function thar replaces every `character` for `replacement` from every string in array.")
 
 (def signature

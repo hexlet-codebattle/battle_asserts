@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Several people are standing in a row and need to be divided into two teams
                   The first person goes into `team 1`, second goes to `team 2`, the third goes into `team 1`, the fourth into `team 2` and so on.
                   You are given an array of integers - the weights of the people.

@@ -5,6 +5,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description
   {:en "You are given a string that represents variable name. You need to identify which naming convention used for this variable."
    :ru "Определите, какое соглашение об именовании используется для переданного названия переменной."})

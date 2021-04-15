@@ -4,6 +4,8 @@
 
 (def level :hard)
 
+(def tags ["strings"])
+
 (def description "Conway's \"Look and Say\" sequence is a sequence of numbers in which each term \"reads aloud\" the digits of the previous term.
                  1 is read off as \"one 1\".
                  11 is read off as \"two 1's\".

@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["strings" "collections"])
+
 (def description "Calculate grade of five student subjects.
                   If grade average is bigger than 90, final grade is A.
                   If grade average is bigger than 80, final grade is B.

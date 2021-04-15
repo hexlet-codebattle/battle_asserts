@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["sicp"])
+
 (def description "Implement function that take three numbers and returns sum of squares of two biggest ones.")
 
 (def signature

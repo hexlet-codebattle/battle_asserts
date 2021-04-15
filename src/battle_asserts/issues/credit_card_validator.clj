@@ -4,6 +4,8 @@
 
 (def level :medium)
 
+(def tags ["strings"])
+
 (def description "Credit card numbers can be validated with a process called the Luhn algorithm.
                  Simply stated, the Luhn algorithm works like this:
                  1. From the rightmost digit, which is the check digit, moving left, double the value of every second

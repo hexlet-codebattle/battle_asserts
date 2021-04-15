@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Given an unsorted array with repetitions, group multiple occurrence of individual elements.
                  The grouping should happen in a way that the order of first occurrences of all elements is maintained.")
 

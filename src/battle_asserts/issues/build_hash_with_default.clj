@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["hash-maps"])
+
 (def description "Return a new hash map with elements of the given array as keys, and the given default value as values for those keys.")
 
 (def signature

@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training"])
+
 (def description "For each of 6 coffee cups you buy, you get a 7th cup free.
                   In total, you get 7 cups. Create a function that takes `n` cups bought and return
                   the total number of cups.")

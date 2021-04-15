@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["math"])
+
 (def description
   {:en "Calculate arithmetic progression from 1 to `n`."
    :ru "Рассчитайте сумму членов арифметической прогрессии от 1 до `n`,"})

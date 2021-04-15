@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Given an array of numbers, return an array which contains all the odd numbers in the orginal array,
                   which also have odd indexes, do the same for even numbers and indexes. If there is no such numbers, return `[0]`.")
 

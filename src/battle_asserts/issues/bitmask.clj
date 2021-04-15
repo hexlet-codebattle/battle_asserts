@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["bits-operation" "strings"])
+
 (def description
   {:en "Create a function that applies `bitmask` to `bitstring`. Use logical operator `AND`."
    :ru "Создайте функцию, которая применяет `bitmask` к `bitstring`. Используйте логический оператор `И`."})

@@ -5,6 +5,8 @@
 
 (def level :easy)
 
+(def tags ["collections" "strings"])
+
 (def description "Given an array of words, write a function, that return picture (array) with borders made from asterisks `*` using longest words.")
 
 (def signature

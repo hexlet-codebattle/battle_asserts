@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def description "Find the difference between the square of the sum and the sum of the squares of the first N natural numbers.
                  The square of the sum of the first ten natural numbers is,
                  (1 + 2 + ... + 10)^2 = 55^2 = 3025

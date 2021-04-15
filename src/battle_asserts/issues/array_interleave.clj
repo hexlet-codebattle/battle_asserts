@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Construct a new array by interleaving two input arrays.
                   Interleaving is achieved by taking values from each array consecutively:
                   1st value from the 1st array, then 1st value from the 2nd array, then 2nd value from the

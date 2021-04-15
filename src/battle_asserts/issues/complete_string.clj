@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description "A string is said to be complete if it contains all the characters from a to z.
                  Given a string, check if it's complete or not.")
 

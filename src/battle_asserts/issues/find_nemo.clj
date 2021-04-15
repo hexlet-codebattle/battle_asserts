@@ -5,6 +5,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description
   {:en "You are given a string of words. You need to find the word `Nemo`, and return a string like this: \"I found Nemo at [the order of the word you find nemo]!\". If you can't find Nemo, return \"I can't find Nemo :(\"."
    :ru "Создайте функцию, которая ищет `Nemo` в строке и если он был найден, возвращает \"I found Nemo at [позиция Немо в строке]!\". Если Немо не был найден, то верните \"I can't find Nemo :(\"."})

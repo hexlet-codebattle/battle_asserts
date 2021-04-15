@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["collections"])
+
 (def description
   {:en "Drop every N'th element from a list."
    :ru "Удалите каждый `n`-ый элемент из массива."})

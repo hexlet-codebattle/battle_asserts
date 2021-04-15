@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description "Check if the parentheses in the expression are all balanced, so that all open parentheses are closed properly.")
 
 (def signature

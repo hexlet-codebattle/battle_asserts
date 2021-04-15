@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["conversion" "physics"])
+
 (def description
   {:en "Сonvert Celsius temperature to Kelvin. Use floor rounding for the result temperature."
    :ru "Создайте функцию, конвертирующую температуру из Цельсия в Кельвины. Полученный результат округлите в меньшую сторону."})

@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description "If a number is divisible by 3, return \"Fizz\".
                  If a number is divisible by 5, return \"Buzz\".
                  If a number is divisible by 3 and 5, return \"FizzBuzz\".

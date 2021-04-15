@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def description
   {:en "Calculate the angle between the hour and the minute hand of a clock at a given time."
    :ru "Вычислите угол между часовой и минутной стрелкой в заданном времени."})
