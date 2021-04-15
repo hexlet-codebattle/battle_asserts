@@ -3,7 +3,7 @@
 
 (def level :medium)
 
-(def tags ["bits-operations"])
+(def tags ["bits-operation"])
 
 (def description "The decimal number 585 is 1001001001 in binary. It is palindromic in both bases.
                  Find n-th palindromic number.")

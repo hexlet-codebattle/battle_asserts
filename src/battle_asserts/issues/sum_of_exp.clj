@@ -4,6 +4,8 @@
 
 (def level :medium)
 
+(def tags ["strings"])
+
 (def description "Given an integer x, return the sum x + xx + xxx (x times) as a string. For example, for 2: 2 + 22 = 24.")
 
 (def signature

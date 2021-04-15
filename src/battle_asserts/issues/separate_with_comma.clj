@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description "Given a number as input, return a string with that number formatted with commas to separate each three digits from the right to make it look like a standard North American number.")
 
 (def signature

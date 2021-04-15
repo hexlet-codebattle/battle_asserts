@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training"])
+
 (def description "Create a function that returns how many possible outcomes can come from a certain number of switches (on / off).")
 
 (def signature

@@ -5,6 +5,8 @@
 
 (def level :hard)
 
+(def tags ["strings"])
+
 (def description "Parse a Roman-numeral string and return the number it represents.")
 
 (def signature

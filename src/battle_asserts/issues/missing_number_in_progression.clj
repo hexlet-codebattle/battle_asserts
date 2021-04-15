@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def description "Given an array that represents elements of an arithmetic progression in order.
                  One element is missing in the progression. Return the missing number.")
 

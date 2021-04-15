@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description "Given a string, which contains only decimal digits (0-9). Each digit is made of a certain number of dashes,
                  as on LCD-display of a calculator. For instance 1 is made of 2 dashes, 8 is made of 7 dashes and so on.
                  Return the total number of dashes in the input string.")

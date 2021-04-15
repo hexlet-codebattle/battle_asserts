@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def description "Create a function that calculates LCM (Least Common Multiple).")
 
 (def signature

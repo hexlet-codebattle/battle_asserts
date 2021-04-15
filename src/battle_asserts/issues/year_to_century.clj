@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["conversion"])
+
 (def description
   {:en "Create a function that takes a year and returns it's corresponding century."
    :ru "Создайте функцию, которая рассчитывает век от полученного года."})

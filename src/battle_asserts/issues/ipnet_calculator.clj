@@ -5,6 +5,8 @@
 
 (def level :medium)
 
+(def tags ["network" "strings"])
+
 (def description
   {:en "Create a function, thats calculates how much network contains in `address`, which contains IPv4 and subnet mask."
    :ru "Создайте функцию, которая рассчитывает количество сетевых адресов, входящих в `address`, который содержит IPv4 и маску подсети."})

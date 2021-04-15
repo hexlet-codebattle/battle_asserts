@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["collections" "strings"])
+
 (def description "Children are going to play hide and seek.
                   They define the leader by the count in such a way that:
                   One word counting - one person.

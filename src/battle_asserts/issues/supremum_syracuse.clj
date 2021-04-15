@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["math"])
+
 (def description
   {:en "Find the largest element in the Syracuse sequence."
    :ru "Найдите наибольший элемент в последовательности Сиракузы."})

@@ -3,7 +3,7 @@
 
 (def level :elementary)
 
-(def disabled true)
+(def tags ["physics" "training"])
 
 (def description "Create a function that takes `voltage` and `current` and returns the power.")
 
@@ -13,7 +13,7 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (gen/tuple gen/small-integer gen/small-integer))
+  (gen/tuple (gen/choose -20 20) (gen/choose -20 20)))
 
 (def test-data
   [{:expected 20 :arguments [2 10]}

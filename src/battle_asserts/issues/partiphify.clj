@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Create a function that will divide the list by a specified number of parts.")
 
 (def signature

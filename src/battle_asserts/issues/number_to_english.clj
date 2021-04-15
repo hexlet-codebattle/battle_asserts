@@ -4,6 +4,8 @@
 
 (def level :hard)
 
+(def tags ["strings"])
+
 (def description "Write a function that accepts a positive integer between 0 and 2000 inclusive and returns a string representation of that integer written in English.")
 
 (def signature

@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Moves all 0's to the end the array while maintaining
                  the relative order of the non-zero elements.")
 

@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description
   "Write a function that takes the assumed and real soccer match scores as the arguments and returns
    2 if the score is correct,
@@ -31,6 +33,6 @@
 (defn solution [[g1 g2] [a1 a2]]
   (cond
     (= [g1 g2] [a1 a2])              2       ;; bet correct
-    (= (- g1 g2) (- a1 a2) 0)        1       ;; draw correct 
+    (= (- g1 g2) (- a1 a2) 0)        1       ;; draw correct
     (pos? (* (- g1 g2) (- a1 a2)))   1       ;; winner correct
     :else                            0))

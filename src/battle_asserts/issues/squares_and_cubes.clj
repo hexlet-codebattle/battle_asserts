@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["math"])
+
 (def description "Create a function that takes two numbers and checks
                   if the square root of the first number is equal to the cube root of the second number.")
 

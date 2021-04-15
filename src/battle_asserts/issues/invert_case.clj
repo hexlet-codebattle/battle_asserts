@@ -5,6 +5,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description "Implement a function that changes the case of each
                   letter in the string to the opposite.")
 

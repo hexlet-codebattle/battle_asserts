@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["collections"])
+
 (def description "Find how many pairs X, Y there are in the array, such that abs(X-Y) is equal to the first argument.")
 
 (def signature

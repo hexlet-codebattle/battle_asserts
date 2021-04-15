@@ -4,6 +4,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description "Imagine you took all the numbers between 1 and n and concatenated them together into a long string. How many digits are there between 1 and n? Write a function that can calculate this.")
 
 (def signature

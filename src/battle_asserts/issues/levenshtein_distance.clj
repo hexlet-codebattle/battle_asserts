@@ -4,6 +4,8 @@
 
 (def level :hard)
 
+(def tags ["math" "strings"])
+
 (def description "Calculate the Levenshtein distance.")
 
 (def signature

@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Print all the leaders in the array.
                  An element is a leader if it is greater than all the elements to its right side.
                  And the rightmost element is always a leader. For example in the array [16 17 4 3 5 2],

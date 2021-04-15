@@ -5,6 +5,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description
   {:en "You are given a string of words. Reverse each word with even length."
    :ru "Создайте функцию, которая переворачивает слова с четной длиной в строке."})

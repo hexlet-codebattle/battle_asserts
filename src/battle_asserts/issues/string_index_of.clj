@@ -5,6 +5,8 @@
 
 (def level :elementary)
 
+(def tags ["strings" "collections"])
+
 (def description "Create a function
                   which takes 2 parameters (str1 and str2) and locates the first occurrence
                   of the str2 in the str1 and returns it's position, -1 if not found.")

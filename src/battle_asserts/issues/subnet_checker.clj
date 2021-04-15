@@ -5,6 +5,8 @@
 
 (def level :medium)
 
+(def tags ["network" "strings"])
+
 (def description
   {:en "Create a function, thats check if `subnet` contains in `address`, which contains IPv4 address and subnet mask."
    :ru "Создайте функцию, которая проверяет, входит ли `subnet` в `address`, который содержит IPv4 адрес и маску подсети."})

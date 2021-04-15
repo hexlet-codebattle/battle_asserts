@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["collections" "strings"])
+
 (def description "Create a function that find imposters in array of players, each player has its own role.
 If no imposters were found, return `[\"there are no imposters here!\"]`.
 If in array presented only imposters, return `[\"imposters are everywhere!\"]`.

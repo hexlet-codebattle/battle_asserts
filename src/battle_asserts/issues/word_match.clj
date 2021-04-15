@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description "Write a function that takes two string and
 checks whether it is possible to write the first string with
 characters from the second string, while respecting the order

@@ -5,6 +5,8 @@
 
 (def level :elementary)
 
+(def tags ["network" "strings"])
+
 (def description
   {:en "Create a function, thats check is `address` is IPv4 address."
    :ru "Создайте функцию, которая проверяет, является ли `address` адресом IPv4 ."})

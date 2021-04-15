@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["math"])
+
 (def description "Return the sum of all prime numbers from 2 up to a given number.")
 
 (def signature

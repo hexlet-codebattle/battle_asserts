@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["music"])
+
 (def description "Write a function that gets a string number and a fret of a 6-string guitar in 'standard tuning' and return the corresponding note. For this challenge we use a 24 fret model. The notes are: `C, C#/Db, D, D#/Eb, E, F, F#/Gb, G, G#/Ab, A, A#/Bb, B`")
 
 (def signature

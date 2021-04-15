@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["bits-operation"])
+
 (def description "Calculate the number of zeros is equal whether the two numbers represented in binary?")
 
 (def signature

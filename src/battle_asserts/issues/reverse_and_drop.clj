@@ -5,6 +5,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description
   {:en "You are given a string of words. Drop each word with odd length and reverse each word with even one."
    :ru "Создайте функцию, которая удаляет слова с нечетной длиной в строке, а слова с четной длиной переворачивает."})

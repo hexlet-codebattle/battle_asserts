@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["math"])
+
 (def description "2 out of 3 angles are given in a triangle, in degrees.
                   Write a function that classifies the missing angle as \"acute\", \"right\", or \"obtuse\".
                   `An acute angle is less than 90 degrees.`

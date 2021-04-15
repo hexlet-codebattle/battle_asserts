@@ -4,6 +4,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description
   {:en "Create a function that changes specific words into emoticons. Given a sentence as a string, replace the words `smile`, `grin`, `sad`, `shocked`, `bored` and `painful` with their corresponding emoticons."
    :ru "Создайте функцию, которая заменяет настроение (`smile`, `grin`, `sad`, `shocked`, `bored`, `painful`) в конце предложения на один из соответствующих смайликов."})

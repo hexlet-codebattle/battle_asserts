@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["math"])
+
 (def description "Return the N'th row of Pascal's Triangle.")
 
 (def signature

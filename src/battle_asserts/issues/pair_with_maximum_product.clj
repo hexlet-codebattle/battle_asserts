@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Given an array with both positive and negative integers,
                  return a pair of integers that, when multiplied, would produce the largest possible number.
                  An element can only be used once, in other words, you cannot multiply a number by itself.

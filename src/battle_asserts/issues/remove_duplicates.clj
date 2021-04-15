@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["collections" "strings"])
+
 (def description "Eliminate repeating values in a list.
                   Repeated elements should be replaced with a single element.
                   The order of the elements should not be changed.")

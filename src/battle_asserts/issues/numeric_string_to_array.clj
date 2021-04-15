@@ -4,6 +4,8 @@
 
 (def level :elementary)
 
+(def tags ["strings" "collections"])
+
 (def description "Convert a numeric string to array of numbers.
                   It is granted that numbers in array are non-negative.")
 

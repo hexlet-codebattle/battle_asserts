@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["math"])
+
 (def description "Create a function that takes a positive integer and returns the nth \"star number\".
                   A star number is a centered figurate number a centered hexagram (six-pointed star), such as the one that Chinese checkers is played on.
                   Note: https://en.wikipedia.org/wiki/Star_number")

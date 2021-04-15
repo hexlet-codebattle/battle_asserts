@@ -5,6 +5,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description
   {:en "You are given a string of words. You need replace `_` symbols with spaces and capitalize every word in a string."
    :ru "Создайте функцию, которая заменяет символ `_` пробелами и переводит каждое слово в строке в верхний регистр."})

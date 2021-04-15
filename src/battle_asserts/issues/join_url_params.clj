@@ -5,6 +5,8 @@
 
 (def level :easy)
 
+(def tags ["network" "strings"])
+
 (def description "Return a query string (URL) generated from the given address and a hash map of parameters.
                   The parameters in your result string should be arranged in alphabetical order.")
 

@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections" "sorting"])
+
 (def description "Given an array of integers, sort the array according to frequency of elements.
                  Most frequent numbers come first.
                  If several groups of the same size exist,

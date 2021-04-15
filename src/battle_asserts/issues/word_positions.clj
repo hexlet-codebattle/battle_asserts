@@ -5,6 +5,8 @@
 
 (def level :easy)
 
+(def tags ["strings" "collections"])
+
 (def description "Given a sentence and a word, find all the positions in which the word occurs in the sentence. Return an array of such positions.")
 
 (def signature
