@@ -5,7 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Implement a function that calculates the volume of pizza. Round final result.")
+(def description
+  {:en "Implement a function that calculates the volume of pizza. Round final result."
+   :ru "Создайте функцию, которая рассчитывает объем пиццы, округлите полученный результат."})
 
 (def signature
   {:input [{:argument-name "radius" :type {:name "integer"}}

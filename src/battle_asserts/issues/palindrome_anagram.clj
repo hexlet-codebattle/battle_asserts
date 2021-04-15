@@ -6,7 +6,9 @@
 
 (def tags ["strings"])
 
-(def description "Check if any anagram of a given string is a palindrome.")
+(def description
+  {:en "Check if any anagram of a given string is a palindrome."
+   :ru "Проверьте, является ли строка палиндромом."})
 
 (def signature
   {:input  [{:argument-name "s" :type {:name "string"}}]
