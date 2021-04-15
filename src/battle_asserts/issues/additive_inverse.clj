@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["training" "collections"])
+
 (def description "Implement a function that returns an array of additive inverses.
                   A number added with its `additive inverse` equals zero.")
 
@@ -23,4 +25,4 @@
    {:expected [5 -25 -125] :arguments [[-5 25 125]]}])
 
 (defn solution [numbers]
-  (reduce (fn [acc num] (conj acc (* num -1))) [] numbers))
+  (mapv - numbers))
