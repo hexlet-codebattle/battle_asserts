@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["math" "collections"])
+
 (def description "Given two sets represented by two arrays, check if the given two sets are disjoint or not. Given arrays have no duplicates.")
 
 (def signature

@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description
   {:en "Identify the color of a square of the chessboard. Square A1 is black."
    :ru "Найдите цвет квадрата шахматной доски. Квадрат А1 черный."})

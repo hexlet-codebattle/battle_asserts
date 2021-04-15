@@ -4,6 +4,8 @@
 
 (def level :medium)
 
+(def tags ["strings"])
+
 (def description "Check the balance of the brackets in the expression.
                  Brackets can be round: \"()\", square: \"[]\", curly \"{}\" and angle: \"<>\".")
 
