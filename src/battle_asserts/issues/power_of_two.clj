@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def description "Determine if a given integer is a power of two.")
 
 (def signature

@@ -4,6 +4,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description "Given a DNA strand, return its RNA complement.
                  Both DNA and RNA strands are a sequence of nucleotides.
                  DNA's nucleotides are adenine (A), cytosine (C), guanine (G) and thymidine (T).

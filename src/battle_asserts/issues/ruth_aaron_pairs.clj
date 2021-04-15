@@ -3,9 +3,11 @@
 
 (def level :medium)
 
-(def description "Check if a given pair of numbers is a Ruth–Aaron pair. 
-                  A Ruth–Aaron pair consists of two consecutive integers (e.g. 714 and 715) for 
-                  which the sums of the prime factors of each integer are equal. 
+(def tags ["math"])
+
+(def description "Check if a given pair of numbers is a Ruth–Aaron pair.
+                  A Ruth–Aaron pair consists of two consecutive integers (e.g. 714 and 715) for
+                  which the sums of the prime factors of each integer are equal.
                   When calculating the sum, take into account the repeating factors.")
 
 (def ruth-aaron-pairs [[5 6] [8 9] [15 16] [77 78] [125 126] [714 715] [948 949] [1330 1331] [1520 1521]

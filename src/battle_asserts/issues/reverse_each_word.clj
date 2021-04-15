@@ -5,6 +5,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description "Given a string as input, reverse each word, but keep the word order the same.
                   Words are separated by whitespaces.")
 

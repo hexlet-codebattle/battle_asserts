@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["math" "collections"])
+
 (def description "Generate the array of first n prime numbers.")
 
 (def signature

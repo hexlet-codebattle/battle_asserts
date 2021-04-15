@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["math"])
+
 (def description "Create a function that finds how many prime numbers are in a sequence from zero to a given integer, inclusive.")
 
 (def signature

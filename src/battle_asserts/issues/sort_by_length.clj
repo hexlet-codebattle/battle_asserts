@@ -4,6 +4,8 @@
 
 (def level :elementary)
 
+(def tags ["strings" "collections" "sorting"])
+
 (def description "Create a function that returns an array of strings sorted by length in descending order. Keep the original order of strings with the same length.")
 
 (def signature

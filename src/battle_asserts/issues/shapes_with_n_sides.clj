@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description "Create a function that takes a whole number as input and
                   returns the shape with that number's amount of sides. Check examples below.")
 

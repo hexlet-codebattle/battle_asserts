@@ -5,6 +5,8 @@
 
 (def level :easy)
 
+(def tags ["collections" "strings"])
+
 (def description "A group of friends have decided to start a secret society.
                   The name will be the first letter of each of their names.
                   Create a function that takes an array of names and returns the name of the secret society sorted in alphabetical order.")

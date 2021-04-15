@@ -4,6 +4,8 @@
 
 (def level :elementary)
 
+(def tags ["collections" "strings"])
+
 (def description "Sam and Frodo need to be close. If they are side by side in the array, your function should return true.
                   If there is other persons between them, return false.")
 

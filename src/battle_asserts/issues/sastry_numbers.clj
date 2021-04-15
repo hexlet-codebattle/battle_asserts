@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["math"])
+
 (def description "Check if a given integer `n` is a Sastry number.
                   A number `n` is a Sastry number if concatenated with `n + 1` it gives a square.")
 
