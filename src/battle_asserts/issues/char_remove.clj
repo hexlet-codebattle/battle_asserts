@@ -5,6 +5,8 @@
 
 (def level :elementary)
 
+(def tags ["strings" "collections"])
+
 (def description
   {:en "Write a function that removes every `character` from every string in array."
    :ru "Создайте функцию, которая удаляет каждый `символ` из всех строк в массиве."})

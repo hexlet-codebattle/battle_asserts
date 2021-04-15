@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def description "Check whether the number can be a n-nary number (in other words, whether the number is in base-n for n < 10). ")
 
 (def signature

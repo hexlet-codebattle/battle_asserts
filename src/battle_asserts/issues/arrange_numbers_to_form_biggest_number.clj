@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["collections" "math"])
+
 (def description "Construct the largest possible number by arranging the integers from the given array.
                  Since the resulting number can be very large and out of int range, you have to represent it as string.
                  For example, from [3, 24, 4] we can construct 6 different numbers: 3244, 3424, 2434, 2443, 4324, 4243

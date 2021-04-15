@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description
   {:en "Count sum of ASCII representation of characters in a given string."
    :ru "Рассчитайте сумму ASCII представления символов в строке."})

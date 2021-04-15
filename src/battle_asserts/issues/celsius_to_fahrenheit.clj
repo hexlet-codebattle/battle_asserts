@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["conversion" "physics"])
+
 (def description
   {:en "Сonvert Celsius temperature to Fahrenheit. Use floor rounding for the result temperature."
    :ru "Создайте функцию, конвертирующую температуру из Цельсия в Фаренгейты. Полученный результат округлите в меньшую сторону."})

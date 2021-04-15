@@ -5,6 +5,8 @@
 
 (def level :medium)
 
+(def tags ["network" "strings"])
+
 (def description
   {:en "Create a function, thats finds broadcast network address in `address`, which contains IPv4 address and subnet mask."
    :ru "Создайте функцию, которая находит адрес широкого вещания, входящий в `address`, который содержит IPv4 адрес и маску подсети."})

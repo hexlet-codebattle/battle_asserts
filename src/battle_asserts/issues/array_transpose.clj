@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections" "math"])
+
 (def description "Implement the matrix transposition function.
                   Matrices are presented as arrays of arrays, where internal arrays are rows of the matrix.
                   There are different ways to transpose a matrix:

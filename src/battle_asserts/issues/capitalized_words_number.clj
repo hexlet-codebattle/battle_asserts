@@ -5,6 +5,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description
   {:en "Find number of words starting with capital letter"
    :ru "Подсчитайте количество слов, начинающихся с заглавной буквы."})

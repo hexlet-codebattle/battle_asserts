@@ -4,6 +4,8 @@
 
 (def disabled true)
 
+(def tags ["hash-maps" "network"])
+
 (def level :medium)
 
 (def description "Flatten the given hash.
