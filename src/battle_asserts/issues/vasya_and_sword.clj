@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["collections"])
+
 (def disabled true)
 
 (def description "Vasya has earned a lot of virtual coins and wants to buy for them a unique sword in the in-game store of his favorite MMORPG. The store is arranged in such a way that the prices of items in it change every day. Today a sword can cost 100 coins, tomorrow - 70, the day after tomorrow - 150.

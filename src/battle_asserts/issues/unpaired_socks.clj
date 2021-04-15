@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "\"Where do the socks go?\" - Misha thought after another laundry.
                  As usual, after the washing, he had a lot of socks left without pair, and he had to decide how many new socks to buy.
                  He decided to simplify the task and make a machine that would count socks without pairs.

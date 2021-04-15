@@ -5,6 +5,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description "Check whether the given string contains only digit characters in.")
 
 (def signature

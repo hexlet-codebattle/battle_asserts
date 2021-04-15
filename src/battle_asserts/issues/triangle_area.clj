@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def description
   {:en "Calculate area of triangle using Heron's Formula.
                   `p = (a + b + c) / 2`

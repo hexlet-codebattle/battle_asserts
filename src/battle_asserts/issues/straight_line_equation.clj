@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def disabled true)
 
 (def description "Create a function to describe a line passing through

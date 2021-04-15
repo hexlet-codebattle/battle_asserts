@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Given two lists, determine whether the first list is
                  contained within the second list, whether the second list is contained within
                  the first list, whether both lists are contained within each other or whether none

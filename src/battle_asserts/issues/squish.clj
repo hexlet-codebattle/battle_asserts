@@ -5,6 +5,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description "Given a string. Remove all the whitespaces from both ends of the string. Then collapse groups of whitespaces inside the string into single whitespace each. Handles both ASCII and Unicode whitespaces.")
 
 (def signature

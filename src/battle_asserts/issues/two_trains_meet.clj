@@ -4,6 +4,8 @@
 
 (def level :elementary)
 
+(def tags ["physics"])
+
 (def description "Compute how long after their deparature two trains will meet.
                  Assume that the trains travel between two points, along a single
                  section of track, going in opposite directions. The function should

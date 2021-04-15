@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def description "Calculate the sum of all natural numbers smaller than n (first argument)
                  which are divisible by a or/and b (second and third arguments) without remainder.")
 

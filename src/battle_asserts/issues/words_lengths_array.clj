@@ -4,6 +4,8 @@
 
 (def level :elementary)
 
+(def tags ["collections" "strings"])
+
 (def description "Create a function that takes an array of words and transforms it into an array of each word's length.")
 
 (def signature

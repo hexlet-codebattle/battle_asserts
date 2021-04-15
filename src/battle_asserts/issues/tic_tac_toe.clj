@@ -2,7 +2,7 @@
 
 (def level :medium)
 
-(def description "Write a function that checks each move of the game tic-tac-toe. 
+(def description "Write a function that checks each move of the game tic-tac-toe.
                   The function takes the current state of the field as a two-dimensional array.
                   If player 'X' won, returns 'X won', player 'O' won - return 'O won'.
                   If no one has won yet, return 'Next'.

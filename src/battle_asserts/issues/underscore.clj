@@ -5,6 +5,8 @@
 
 (def level :medium)
 
+(def tags ["strings"])
+
 (def description "Given a string with words separated in different ways, return an underscored, lowercase form.")
 
 (def signature

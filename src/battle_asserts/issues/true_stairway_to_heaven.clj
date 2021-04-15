@@ -3,6 +3,8 @@
 
 (def level :hard)
 
+(def tags ["collections"])
+
 (def description "`N` dicks randomly spread out of `M` stairs, there can be as many dicks as you want on one step. We gotta go down these stairs.
                   Every time you step on a stair-step with dicks, the infame number increases by the number of dicks.
                   You can go down one or two steps at a time. Write a function to descend the stairs minimizing the infame number.
