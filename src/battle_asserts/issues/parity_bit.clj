@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def tags ["bits-operations" "strings"])
+(def tags ["bits-operation" "strings"])
 
 (def description
   {:en "Create a function that adds the correct parity bit to a binary string. Parity bits are used as a very simple checksum to ensure that binary data isn't corrupted during transit. Here's how they work:

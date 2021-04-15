@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math" "physics"])
+
 (def description "Given `radius` and `height` (in cm), calculate the mass of a cylinder when it's filled with water and the cylinder itself doesn't weigh anything. Use ceil rounding for answer.")
 
 (def signature
