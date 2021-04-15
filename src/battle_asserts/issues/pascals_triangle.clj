@@ -5,7 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Return the N'th row of Pascal's Triangle.")
+(def description
+  {:en "Return the N'th row of Pascal's Triangle."
+   :ru "Верните n-ную строку треугольника паскаля."})
 
 (def signature
   {:input  [{:argument-name "s" :type {:name "integer"}}]

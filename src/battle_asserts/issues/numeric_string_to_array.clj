@@ -4,10 +4,11 @@
 
 (def level :elementary)
 
-(def tags ["strings" "collections"])
+(def tags ["strings" "collections" "conversion"])
 
-(def description "Convert a numeric string to array of numbers.
-                  It is granted that numbers in array are non-negative.")
+(def description
+  {:en "Convert a numeric string to array of numbers. It is granted that numbers in array are non-negative."
+   :ru "Сконвертируйте числовую строку в массив чисел. Гарантируется, что строковое число не отрицательное."})
 
 (def signature
   {:input [{:argument-name "str" :type {:name "string"}}]

@@ -5,7 +5,9 @@
 
 (def tags ["collections"])
 
-(def description "Create a function that will divide the list by a specified number of parts.")
+(def description
+  {:en "Create a function that will divide the list by a specified number of parts."
+   :ru "Создайте функцию, которая разделит список на конкретное количество частей."})
 
 (def signature
   {:input  [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}

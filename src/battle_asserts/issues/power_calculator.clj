@@ -5,7 +5,9 @@
 
 (def tags ["physics" "training"])
 
-(def description "Create a function that takes `voltage` and `current` and returns the power.")
+(def description
+  {:en "Create a function that takes `voltage` and `current` and returns the power."
+   :ru "Создайте функцию, которая рассчитывает мощность из силы тока и напряжния."})
 
 (def signature
   {:input [{:argument-name "voltage" :type {:name "integer"}}

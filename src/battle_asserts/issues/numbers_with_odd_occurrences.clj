@@ -5,7 +5,9 @@
 
 (def tags ["collections"])
 
-(def description "Find numbers which have odd occurrences in array.")
+(def description
+  {:en "Find numbers which have odd occurrences in array."
+   :ru "Найдите числа, которые встречаются четное количество раз в массиве."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
