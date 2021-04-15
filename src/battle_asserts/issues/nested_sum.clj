@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Calculate sum of two-dimensial array.")
 
 (def signature

@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["math"])
+
 (def description "Given an n-sided regular polygon `n`. Calculate total sum of internal angles (in degrees).")
 
 (def signature

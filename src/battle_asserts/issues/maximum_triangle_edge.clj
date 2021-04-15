@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["math"])
+
 (def description "Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers.")
 
 (def signature

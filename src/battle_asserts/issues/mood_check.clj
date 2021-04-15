@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description "Create a function that takes in a current mood and return a sentence in the following format from tests.")
 
 (def signature

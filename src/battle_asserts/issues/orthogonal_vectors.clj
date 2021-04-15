@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["math"])
+
 (def description "Create a function that takes two vectors and checks if them are orthogonal or not.
                   Two vectors are orthogonal if their dot product is equal to zero.")
 

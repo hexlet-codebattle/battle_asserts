@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["physics"])
+
 (def description "Create a function that calculates kinetic energy with the following formula:
                  `KE = 1/2 * m * v^2`
                  `m` is mass in kg, `v` is velocity in m/s, `KE` is kinetic energy in J.

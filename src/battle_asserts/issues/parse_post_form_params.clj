@@ -5,6 +5,8 @@
 
 (def level :medium)
 
+(def tags ["network" "strings"])
+
 (def description "Parse a given request string.")
 
 (def disabled true)

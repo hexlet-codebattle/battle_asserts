@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def description "Implement a function that calculates the volume of pizza. Round final result.")
 
 (def signature

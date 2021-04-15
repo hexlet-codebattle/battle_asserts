@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["collections"])
+
 (def description "Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.")
 
 (def signature

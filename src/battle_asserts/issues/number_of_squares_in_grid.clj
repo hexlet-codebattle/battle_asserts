@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def description "Create a function that calculates the number of different squares in an `n * n` square grid.")
 
 (def signature

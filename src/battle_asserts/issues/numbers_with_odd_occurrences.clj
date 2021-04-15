@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Find numbers which have odd occurrences in array.")
 
 (def signature

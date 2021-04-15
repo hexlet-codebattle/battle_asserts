@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description "Non return to zero, inverted (NRZI) is a method of mapping a binary signal to a physical signal
                  for transmission over some transmission media. The two level NRZI signal has a transition at
                  a clock boundary if the bit being transmitted is a logical 1,

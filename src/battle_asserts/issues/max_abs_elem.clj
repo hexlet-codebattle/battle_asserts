@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["collections"])
+
 (def description "Find the maximum absolute value of an array.")
 
 (def signature

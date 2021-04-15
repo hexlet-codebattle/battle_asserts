@@ -5,6 +5,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description "Given a sentence, sort characters in each word alphabetically.")
 
 (def signature

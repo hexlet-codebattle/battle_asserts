@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["hash-maps" "strings"])
+
 (def description "Given a hash map, return the keys of the elements with the smallest value.
                   The result should be sorted alphabetically.")
 

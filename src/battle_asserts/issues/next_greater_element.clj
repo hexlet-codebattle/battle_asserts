@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math" "collections"])
+
 (def description "Given an array, return the Next Greater Element (NGE) for every element.
                  The Next greater Element for an element x is the first greater element on the right side of x in array.
                  Elements for which no greater element exist, consider next greater element as -1.")

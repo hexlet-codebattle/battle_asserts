@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description "Luke Skywalker has family and friends. Help him remind them who is who. Given a string with a name, return the relation of that person to Luke.
                   Person      | Relation
                   Darth Vader | father

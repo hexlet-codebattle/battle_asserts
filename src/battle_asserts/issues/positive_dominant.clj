@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description
   {:en "Create a function, thats check if unique positive numbers are greater than negative ones in `numbers` array."
    :ru "Создайте функцию, которая проверяет, больше ли уникальных положительных чисел, чем отрицательных, в массиве `numbers`."})

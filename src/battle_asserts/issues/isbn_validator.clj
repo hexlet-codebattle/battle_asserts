@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["strings"])
+
 (def description "Validate given ISBN identifier.
                  An ISBN is a ten digit code which identifies a book.
                  The first nine digits represent the book and the last digit is used to make sure the ISBN is correct
