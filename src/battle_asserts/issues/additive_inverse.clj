@@ -25,4 +25,4 @@
    {:expected [5 -25 -125] :arguments [[-5 25 125]]}])
 
 (defn solution [numbers]
-  (mapv #(- %) numbers))
+  (mapv - numbers))
