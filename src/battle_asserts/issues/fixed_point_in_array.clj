@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Given an array of n distinct integers sorted in ascending order,
                  return a Fixed Point in the array,
                  if there is a Fixed Point present in array; else return -1.

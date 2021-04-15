@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["collections"])
+
 (def description "Given an array, possibly with more arrays inside, return a 1-dimensional
                   flat array with all the values in the initial order.")
 

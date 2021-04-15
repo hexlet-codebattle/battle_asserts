@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Given a sequence of integers from 1 to N in a random order.
                  One of the numbers is missing (the others are found exactly once).
                  N is not known beforehand. Determine the missing number.")

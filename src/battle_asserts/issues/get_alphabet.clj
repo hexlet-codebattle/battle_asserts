@@ -5,6 +5,8 @@
 
 (def level :elementary)
 
+(def tags ["strings"])
+
 (def description "Return an alphabet of a given string; the given string is represented as an array of characters. An alphabet of a string is the set of all distinct characters used in that string. The resulting string goes in order from `a` to `z`.")
 
 (def signature

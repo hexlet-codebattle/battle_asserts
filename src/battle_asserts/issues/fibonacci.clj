@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def description
   {:en "Return the N'th item in the Fibonacci sequence Hint: The first item in the sequence is 0."
    :ru "Верните `n`-ый элемент последовательности Фиббоначи. Подсказка: первый элемент последовательности равен 0."})

@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["collections"])
+
 (def description "Given an array of integers, find the first repeating element in it.
                  Find the element that occurs more than once and whose index of first occurrence is smallest or zero.")
 
