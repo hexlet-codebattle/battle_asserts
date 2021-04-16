@@ -5,7 +5,9 @@
 
 (def tags ["training" "collections"])
 
-(def description "Create a function which returns the number of true values there are in an array.")
+(def description
+  {:en "Create a function which returns the number of true values there are in an array."
+   :ru "Создайте функции, которая подсчитывает количество истин в массиве."})
 
 (def signature
   {:input [{:argument-name "facts" :type {:name "array" :nested {:name "boolean"}}}]

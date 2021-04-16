@@ -5,7 +5,9 @@
 
 (def tags ["collections"])
 
-(def description "Given an array of numbers, return an array in which all the even numbers come first, and all the odd numbers come second.")
+(def description
+  {:en "Given an array of numbers, return an array in which all the even numbers come first, and all the odd numbers come second."
+   :ru "Дан массив чисел, верните массив который содержит сначала четные числа, а потом нечетные."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]

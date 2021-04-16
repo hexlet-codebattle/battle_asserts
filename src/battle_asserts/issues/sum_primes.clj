@@ -5,7 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Return the sum of all prime numbers from 2 up to a given number.")
+(def description
+  {:en "Return the sum of all prime numbers from 2 up to a given number."
+   :ru "Верните сумму всех простых чисел от 2 до переданного числа."})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]

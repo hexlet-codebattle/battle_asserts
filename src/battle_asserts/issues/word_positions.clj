@@ -7,7 +7,9 @@
 
 (def tags ["strings" "collections"])
 
-(def description "Given a sentence and a word, find all the positions in which the word occurs in the sentence. Return an array of such positions.")
+(def description
+  {:en "Given a sentence and a word, find all the positions in which the word occurs in the sentence. Return an array of such positions."
+   :ru "Даны предложение и слово, найдите все местоположения слова в предложении и соберите их в массив."})
 
 (def signature
   {:input  [{:argument-name "sentence" :type {:name "string"}}

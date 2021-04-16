@@ -7,7 +7,9 @@
 
 (def tags ["strings"])
 
-(def description "Given a string with words separated in different ways, return an underscored, lowercase form.")
+(def description
+  {:en "Given a string with words separated in different ways, return an underscored, lowercase form."
+   :ru "Дана строка со словами, которая разделена разными способами, верните строку, разделенную нижними подчеркиваниями и обращенную в нижний регистр."})
 
 (def signature
   {:input  [{:argument-name "str" :type {:name "string"}}]
