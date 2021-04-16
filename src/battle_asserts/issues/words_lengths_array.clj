@@ -6,7 +6,9 @@
 
 (def tags ["collections" "strings"])
 
-(def description "Create a function that takes an array of words and transforms it into an array of each word's length.")
+(def description
+  {:en "Create a function that takes an array of words and transforms it into an array of each word's length."
+   :ru "Создайте функцию, которая трансформирует массив слов в массив длин этих слов."})
 
 (def signature
   {:input [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}]

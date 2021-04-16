@@ -5,7 +5,9 @@
 
 (def tags ["training" "collections"])
 
-(def description "Given an array of integers, return the sum of integers after adding 1 to each one.")
+(def description
+  {:en "Given an array of integers, return the sum of integers after adding 1 to each one."
+   :ru "Даеттся массив с числами, рассчитайте сумму чисел после добавления единицы к каждому."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]

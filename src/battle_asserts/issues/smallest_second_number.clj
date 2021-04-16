@@ -5,7 +5,9 @@
 
 (def tags ["training" "collections"])
 
-(def description "Find the smallest second number in array.")
+(def description
+  {:en "Find the smallest second number in array."
+   :ru "Найдите второе наименьшее число в массиве."})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]
