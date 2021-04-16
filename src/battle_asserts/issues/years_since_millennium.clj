@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["date-time"])
+
 (def description
   {:en "Count how many years have passed since latest millennium. For example, for 2015 the answer is 15."
    :ru "Рассчитайте, сколько лет прошло с последнего миллениума. Например, для 2015 года ответ 15."})

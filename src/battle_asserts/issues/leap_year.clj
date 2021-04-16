@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["date-time"])
+
 (def description "Determine if the year is a leap year.
                   Leap years are all divisible by 4,
                   with the exception of centuries, which are not divisible by 400.")

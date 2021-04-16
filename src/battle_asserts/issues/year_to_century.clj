@@ -3,7 +3,7 @@
 
 (def level :elementary)
 
-(def tags ["conversion"])
+(def tags ["conversion" "date-time"])
 
 (def description
   {:en "Create a function that takes a year and returns it's corresponding century."

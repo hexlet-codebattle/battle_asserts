@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["date-time"])
+
 (def description "Given a range of years as array of two numbers, return the number of leap years there are within the range (inclusive).
                   Leap years are all divisible by 4,
                   with the exception of centuries, which are not divisible by 400.")
