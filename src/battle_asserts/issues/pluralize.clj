@@ -8,7 +8,7 @@
 
 (def description
   {:en "Given a list of words in the singular form, return a set of those words in the plural form if they appear more than once in the list. There is no edge cases. Keep words order same."
-   :ru "В переданном списке слов найдите повторяющиеся и исправьте их на множественное число, используя обычные правила английского языка. Сохранитте порядок слов."})
+   :ru "В переданном списке слов найдите повторяющиеся и исправьте их на множественное число, используя базовые правила английского языка. Сохраните порядок слов."})
 
 (def signature
   {:input [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}]
