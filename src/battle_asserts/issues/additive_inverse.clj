@@ -5,7 +5,7 @@
 
 (def tags ["training" "collections"])
 
-(def description 
+(def description
   {:en "Implement a function that returns an array of additive inverses. A number added with its `additive inverse` equals zero."
    :ru "Создайте функцию которая возвращает массив аддитивных инверсий. Число сложенное со своей аддитивной инверсией даёт ноль."})
 
