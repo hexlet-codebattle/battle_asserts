@@ -7,7 +7,9 @@
 
 (def tags ["strings" "collections"])
 
-(def description "Write a function thar replaces every `character` for `replacement` from every string in array.")
+(def description
+  {:en "Write a function thar replaces every `character` for `replacement` from every string in array."
+   :ru "Создайте функцию, которая заменяет каждый `character` на `replacement` для каждой строки в массиве."})
 
 (def signature
   {:input [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}

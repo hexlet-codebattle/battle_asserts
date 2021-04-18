@@ -5,7 +5,9 @@
 
 (def tags ["training"])
 
-(def description "Create a function that inverts the rgb values of a given array.")
+(def description
+  {:en "Create a function that inverts the RGB values of a given array."
+   :ru "Создайте функцию, которая инвертирует RGB цвета в массиве."})
 
 (def signature
   {:input [{:argument-name "colours" :type {:name "array" :nested {:name "integer"}}}]
