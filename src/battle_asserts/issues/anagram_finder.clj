@@ -8,9 +8,8 @@
 (def tags ["strings" "collections"])
 
 (def description
-  "Find all the anagrams in a vector of words.
-  Your function should return a vector of vectors, where each sub-vector is a group of words which are anagrams of each other.
-  Words without any anagrams should not be included in the result. If there is no anagram, return subvector with string \"anagrams not found!\"")
+  {:en "Find all the anagrams in a vector of words. Your function should return a vector of vectors, where each sub-vector is a group of words which are anagrams of each other. Words without any anagrams should not be included in the result. If there is no anagram, return subvector with string \"anagrams not found!\""
+   :ru "Найдите все анаграммы в векторе слов. Функция должна возвращать вектор векторов, где каждый подвектор - это набор слов которые являеются анаграммой друг к другу. Слова без анагармм не должны попадать в результат. Если анаграмм во входящем векторе нет - возвращается подвектор со строкой \"anagrams not found!\""})
 
 (def signature
   {:input [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}]
