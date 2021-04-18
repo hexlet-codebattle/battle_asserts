@@ -24,7 +24,7 @@
 A description of the issue includes:
 
 - `level` — difficulty of the problem; possible values are `elementary`, `easy`, `medium`, `hard`.
-- `description` — detailed description of the issue. Now supported laguages is `ru` and `en`, `en` is required.
+- `description` — detailed description of the issue. Now supported laguages is `ru` and `en`, `en` is required. You can run `make check-issue-trans` for list current translation progress.
 - `tags` — tags that provides addittional info about task.
 - `signature` — function signature; map with `input` and `output` types. Available types `integer`, `float`, `string`, `array`, `hash (map, dicts)`.
   See examples in the existing issues.

@@ -24,6 +24,9 @@ check-namespaces:
 check-kondo:
 	clj-kondo --lint src test
 
+check-issue-trans:
+	lein run -m battle-asserts.translation-tool/check-translations
+
 test:
 	bin/kaocha
 

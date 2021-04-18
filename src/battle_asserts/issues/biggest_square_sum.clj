@@ -5,7 +5,9 @@
 
 (def tags ["sicp"])
 
-(def description "Implement function that take three numbers and returns sum of squares of two biggest ones.")
+(def description
+  {:en "Implement function that take three numbers and returns sum of squares of two biggest ones."
+   :ru "Создайте функцию, которая принимает три числа и возвращает сумму квадратов двух наибольших чисел."})
 
 (def signature
   {:input [{:argument-name "a" :type {:name "integer"}}

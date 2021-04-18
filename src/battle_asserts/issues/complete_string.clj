@@ -6,8 +6,9 @@
 
 (def tags ["strings"])
 
-(def description "A string is said to be complete if it contains all the characters from a to z.
-                 Given a string, check if it's complete or not.")
+(def description
+  {:en "A string is said to be complete if it contains all the characters from a to z. Given a string, check if it's complete or not."
+   :ru "Строка считается полной, если в ней присутствуют все символы от `a` до `z`. Проверьте, является ли переданная строка полной."})
 
 (def signature
   {:input [{:argument-name "str" :type {:name "string"}}]
