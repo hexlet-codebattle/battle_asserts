@@ -42,7 +42,7 @@ Example:
 
 (def description 
   {:en "Calculate the sum of array."
-   :ru "Рассчитатйте сумму всех чисел в массиве."})
+   :ru "Рассчитайте сумму всех чисел в массиве."})
 
 (def signature
   {:input  [{:argument-name "numbers" :type {:name "arr" :nested {:name "integer"}}}]
@@ -83,7 +83,7 @@ Example:
 
 (def description 
   {:en "Calculate the sum of array."
-   :ru "Рассчитатйте сумму всех чисел в массиве."})
+   :ru "Рассчитайте сумму всех чисел в массиве."})
 
 (def signature
   {:input  [{:argument-name "numbers" :type {:name "arr" :nested {:name "integer"}}}]
