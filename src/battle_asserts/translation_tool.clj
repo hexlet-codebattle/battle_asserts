@@ -15,10 +15,11 @@
       (let [issue-name (s/replace (last (s/split (str namespace) #"\."))
                                   #"-"
                                   "_")
-            description @(ns-resolve namespace 'description)]
+            description @(ns-resolve namespace 'description)
+            level @(ns-resolve namespace 'level)]
         (if (map? description)
           (swap! translated-count inc)
-          (swap! untranslated-list conj issue-name))))
+          (swap! untranslated-list conj (str issue-name " " level)))))
     (println "Tasks without translations: ")
     (println (s/join "\n" @untranslated-list))
     (println (str "Total translation progress " @translated-count " / " namespaces-count " or " (format "%.1f" (float (* (/ @translated-count namespaces-count) 100))) "%"))))
