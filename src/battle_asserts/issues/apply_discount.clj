@@ -5,7 +5,9 @@
 
 (def tags ["collections"])
 
-(def description "Create a function that applies `discounts` to every `price` of the products in the array and calculate sum of whole payment. If after applying the `discount` to `price` intermediate result becames negative, consider intermediate result as zero.")
+(def description
+  {:en "Create a function that applies `discounts` to every `price` of the products in the array and calculate sum of whole payment. If after applying the `discount` to `price` intermediate result becames negative, consider intermediate result as zero."
+   :ru "Создайте функцию которая применяет `скидку` к соответствующей `цене` товара в массиве, и посчитайте общую стоимость покупки. Если после применения `скидки` к `цене` получается отрицательный результат - цена данного товара считается нулём."})
 
 (def signature
   {:input [{:argument-name "prices" :type {:name "array" :nested {:name "integer"}}}
