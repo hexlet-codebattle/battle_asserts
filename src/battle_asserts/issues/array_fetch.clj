@@ -5,9 +5,9 @@
 
 (def tags ["collections"])
 
-(def description "Given an array of integers, an index, and a default value as input, return
-                 the element by that index; if no element exists with given index then return the default value.
-                 Index can be a negative integer, which means going over the array backwards from the end.")
+(def description
+  {:en "Given an array of integers, an index, and a default value as input, return the element by that index; if no element exists with given index then return the default value. Index can be a negative integer, which means going over the array backwards from the end."
+   :ru "Дан массив целых чисел, индекс и значение по умолчанию, верните элемент в массиве по индексу. Если в массиве указанный индекс не существует - верните значение по умолчанию. Индекс может быть отрицательным, это значит что счет элементов нужно вести с конца."})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}
