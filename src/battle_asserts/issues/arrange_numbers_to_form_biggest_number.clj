@@ -6,10 +6,15 @@
 
 (def tags ["collections" "math"])
 
-(def description "Construct the largest possible number by arranging the integers from the given array.
-                 Since the resulting number can be very large and out of int range, you have to represent it as string.
-                 For example, from [3, 24, 4] we can construct 6 different numbers: 3244, 3424, 2434, 2443, 4324, 4243
-                 and the largest of them is 4324.")
+(def description
+  {:en "Construct the largest possible number by arranging the integers from the given array.
+        Since the resulting number can be very large and out of int range, you have to represent it as string.
+        For example, from [3, 24, 4] we can construct 6 different numbers: 3244, 3424, 2434, 2443, 4324, 4243
+        and the largest of them is 4324."
+   :ru "Сконструируйте наибольшее возможное число из чисел заданного массива.
+        Так как результат может быть очень большим и выходить за пределы диапазона целого числа, вы должны представить его строкой.
+        Например, из [3, 24, 4] возможно создать 6 различных чисел: 3244, 3424, 2434, 2443, 4324, 4243
+        и самым большим из них будет 4324."})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]

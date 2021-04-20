@@ -5,11 +5,17 @@
 
 (def tags ["collections"])
 
-(def description "Construct a new array by interleaving two input arrays.
-                  Interleaving is achieved by taking values from each array consecutively:
-                  1st value from the 1st array, then 1st value from the 2nd array, then 2nd value from the
-                  1st array, then 2nd value from the 2nd array, etc. Arrays can be of different lengths,
-                  so if one arrays ends before the other, stop adding new values and return.")
+(def description
+  {:en "Construct a new array by interleaving two input arrays.
+        Interleaving is achieved by taking values from each array consecutively:
+        1st value from the 1st array, then 1st value from the 2nd array, then 2nd value from the
+        1st array, then 2nd value from the 2nd array, etc. Arrays can be of different lengths,
+        so if one arrays ends before the other, stop adding new values and return."
+   :ru "Создайте новый массив чередованием двух исходных массивов.
+        Чередование заключается в последовательном взятии элементов из каждого массива:
+        1ый элементи из 1ого массива, потом 1ый элемент из 2ого массива, затем 2ой элемент из
+        1ого массива, далее 2ой элемент из 2ого и т.д. Массивы могут иметь разную длину,
+        и если элементы в одном закончатся раньше другого, необходимо прекратить добавление и вернуть результат."})
 
 (def signature
   {:input [{:argument-name "arr1" :type {:name "array" :nested {:name "integer"}}}
