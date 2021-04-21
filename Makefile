@@ -25,7 +25,7 @@ check-kondo:
 	clj-kondo --lint src test
 
 check-issue-trans:
-	lein run -m battle-asserts.translation-tool/check-translations
+	lein run -m battle-asserts.util-progress-tools/check-translations
 
 test:
 	bin/kaocha
