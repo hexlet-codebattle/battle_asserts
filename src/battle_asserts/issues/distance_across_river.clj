@@ -4,7 +4,7 @@
 
 (def level :elementary)
 
-(def tags ["math"])
+(def tags ["math" "physics"])
 
 (def description
   {:en "Compute the distance a boat travels across a river, given the width of the river, the boat's speed perpendicular to the river, and the river's speed. Use ceil rounding."
