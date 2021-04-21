@@ -27,6 +27,9 @@ check-kondo:
 check-issue-trans:
 	lein run -m battle-asserts.util-progress-tools/check-translations
 
+check-tags:
+	lein run -m battle-asserts.util-progress-tools/check-tags
+
 test:
 	bin/kaocha
 
