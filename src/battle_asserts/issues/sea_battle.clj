@@ -2,6 +2,8 @@
 
 (def level :medium)
 
+(def tags ["games"])
+
 (def description "It is necessary to return the number of ships to the field in the Sea Battle
 game. The field is represented as a two-dimensial array where 1 means part of the ship and can be of different sizes")
 

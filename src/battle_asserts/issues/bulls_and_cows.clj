@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["games"])
+
 (def description "On a sheet of paper, the players each write a 4-digit secret number.
                   The digits must be all different. Then, in turn, the players try to guess
                   their opponent's number who gives the number of matches. If the matching

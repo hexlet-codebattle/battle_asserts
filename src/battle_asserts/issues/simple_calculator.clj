@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def description "Given two **integer** numbers. Create a simple calculator that supports next operations: `add`, `substract`, `pow`, `multiply`, `remainder`.")
 
 (def signature

@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["math"])
+
 (def description "Happy numbers are positive integers that follow a particular formula:
                  take each individual digit, square it, and then sum the squares to get a new number.
                  Repeat with the new number and eventually, you might get to a number whose squared sum is 1.

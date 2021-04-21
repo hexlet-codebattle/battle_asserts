@@ -3,9 +3,11 @@
 
 (def level :easy)
 
-(def description "Write a function that
-                  takes three numbers (first operand, second operand and result)
-                  and return string if they should be added, subtracted, multiplied or divided to get result.")
+(def tags ["games" "math"])
+
+(def description
+  {:en "Write a function that takes three numbers (first operand, second operand and result) and return string if they should be added, subtracted, multiplied or divided to get result."
+   :ru "Создайте функцию, которая принимает три числа (первый операнд, второй операнд и результат) и возвращает строку, если они должны быть добавлены, вычтены, умножены или разделены для получения результата. Результирующая операция должна быть на английском языке."})
 
 (def signature
   {:input [{:argument-name "first" :type {:name "integer"}}
