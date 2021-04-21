@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def tags ["games" "math"])
+
 (def description "Create a function based on the input and output.
                   Look at the examples, there is a pattern.
                   First number in range `[1, 7]`, second in `[0 8]`.

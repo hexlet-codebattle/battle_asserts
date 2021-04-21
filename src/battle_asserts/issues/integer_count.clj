@@ -4,6 +4,8 @@
 
 (def level :elementary)
 
+(def tags ["math"])
+
 (def description
   {:en "Create a function that counts the integer's number of digits."
    :ru "Создайте функцию, которая подсчитывает количество цифр в числе."})

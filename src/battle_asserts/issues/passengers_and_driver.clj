@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["math"])
+
 (def description "A typical car can hold three passengers and one driver, allowing four people to travel somewhere.
                   Given `n` number of people, calculate how many cars are needed to seat everyone comfortably.")
 
