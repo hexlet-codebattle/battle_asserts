@@ -5,8 +5,9 @@
 
 (def tags ["collections"])
 
-(def description "Calculate digits sum of two-digit integers in array.
-                  After that, calculate whole sum of produced array.")
+(def description
+  {:en "Calculate digits sum of two-digit integers in array. After that, calculate whole sum of produced array."
+   :ru "Посчитайте сумму цифр двузначных целых чисел в массиве. После этого, вычислите общую сумму полученного массива."})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]
