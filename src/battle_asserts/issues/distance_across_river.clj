@@ -6,7 +6,9 @@
 
 (def tags ["math"])
 
-(def description "Compute the distance a boat travels across a river, given the width of the river, the boat's speed perpendicular to the river, and the river's speed. Use ceil rounding.")
+(def description
+  {:en "Compute the distance a boat travels across a river, given the width of the river, the boat's speed perpendicular to the river, and the river's speed. Use ceil rounding."
+   :ru "Вычислите расстояние, которое лодка проходит через реку, учитывая ширину реки, скорость лодки, перпендикулярную реке, и скорость реки."})
 
 (def signature
   {:input [{:argument-name "width" :type {:name "integer"}}
