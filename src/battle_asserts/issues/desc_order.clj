@@ -6,8 +6,10 @@
 
 (def tags ["math"])
 
-(def description "Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order.
-  Essentially, rearrange the digits to create the highest possible number.")
+(def description
+  {:en "Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order.
+  Essentially, rearrange the digits to create the highest possible number."
+   :ru "Создайте функцию, которая из полученного числа собирает наибольшее и возвращает его."})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]
