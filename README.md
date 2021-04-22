@@ -116,6 +116,10 @@ Corresponding tests are in `test/test_helper.clj` there is no need to add tests 
 
 It will appear with auto-generated asserts on [codebattle](http://codebattle.hexlet.io) after merge
 
+### Useful commands
+- `make check-translations` check current tasks translation progress.
+- `make check-tags` check current tasks tagging progress.
+
 ## Related links
 
 ### Leiningen

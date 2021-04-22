@@ -41,7 +41,7 @@
       (let [issue-name (prepare-namespace-name namespace)
             tags (ns-resolve namespace 'tags)
             level @(ns-resolve namespace 'level)]
-        (if (not (nil? tags))
+        (if-not (nil? tags)
           (swap! tagged-count inc)
           (swap! untagged-list conj (str issue-name " " level)))))
     (if (empty? @untagged-list)
