@@ -26,8 +26,9 @@
         (if (map? description)
           (swap! translated-count inc)
           (swap! untranslated-list conj (str issue-name " " level)))))
-    (println "Tasks without translations: ")
-    (println (s/join "\n" @untranslated-list))
+    (if (empty? @untranslated-list)
+      (println "All tasks are translated!")
+      (println (str "Tasks without translations: \n" (s/join "\n" @untranslated-list))))
     (println (str "Total translation progress " @translated-count " / " namespaces-count " or " (format "%.1f" (float (* (/ @translated-count namespaces-count) 100))) "%"))))
 
 (defn check-tags [& _args]
@@ -43,6 +44,7 @@
         (if (not (nil? tags))
           (swap! tagged-count inc)
           (swap! untagged-list conj (str issue-name " " level)))))
-    (println "Tasks without tags: ")
-    (println (s/join "\n" @untagged-list))
+    (if (empty? @untagged-list)
+      (println "All tasks are tagged!")
+      (println (str "Tasks without tags: \n" (s/join "\n" @untagged-list))))
     (println (str "Total tagged tasks progress " @tagged-count " / " namespaces-count " or " (format "%.1f" (float (* (/ @tagged-count namespaces-count) 100))) "%"))))

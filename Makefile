@@ -24,7 +24,7 @@ check-namespaces:
 check-kondo:
 	clj-kondo --lint src test
 
-check-issue-trans:
+check-translations:
 	lein run -m battle-asserts.util-progress-tools/check-translations
 
 check-tags:
