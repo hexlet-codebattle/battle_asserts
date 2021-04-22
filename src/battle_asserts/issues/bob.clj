@@ -7,10 +7,15 @@
 
 (def tags ["strings"])
 
-(def description "Bob answers 'Sure.' if you ask him a question.
-                 He answers 'Whoa, chill out!' if you yell at him.
-                 He says 'Fine. Be that way!' if you address him without actually saying anything.
-                 He answers 'Whatever.' to anything else.  ")
+(def description
+  {:en "Bob answers 'Sure.' if you ask him a question.
+        He answers 'Whoa, chill out!' if you yell at him.
+        He says 'Fine. Be that way!' if you address him without actually saying anything.
+        He answers 'Whatever.' to anything else."
+   :ru "Боб ответит 'Sure.', если вы задаете ему вопрос.
+        Он скажет 'Whoa, chill out!', если вы кричите на него.
+        Боб скажет 'Fine. Be that way!', если вы обратитесь к нему, но ничего не скажете.
+        Он ответит 'Whatever.' в остальных случаях."})
 
 (def signature
   {:input [{:argument-name "sentence" :type {:name "string"}}]
