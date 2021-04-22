@@ -5,7 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Given an integer `n`, return the largest number that contains exactly `n` digits.")
+(def description
+  {:en "Given an integer `n`, return the largest number that contains exactly `n` digits."
+   :ru "Дано число `n`, найдите наибольшее число, которое содержит ровно `n` чисел."})
 
 (def signature
   {:input [{:argument-name "n" :type {:name "integer"}}]

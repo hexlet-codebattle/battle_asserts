@@ -6,10 +6,12 @@
 
 (def tags ["strings"])
 
-(def description "Imagine you took all the numbers between 1 and n and concatenated them together into a long string. How many digits are there between 1 and n? Write a function that can calculate this.")
+(def description
+  {:en "Imagine you took all the numbers between 1 and `n` and concatenated them together into a long string. How many digits are there between 1 and `n`? Write a function that can calculate this."
+   :ru "Представьте, что вы беретет все числа от 1 до `n` и соединяете их в одну большую строку. Как много цифр между 1 и `n`? Создайте функцию которая рассчитывает это."})
 
 (def signature
-  {:input  [{:argument-name "num" :type {:name "integer"}}]
+  {:input  [{:argument-name "n" :type {:name "integer"}}]
    :output {:type {:name "integer"}}})
 
 (def test-data
@@ -20,5 +22,5 @@
 (defn arguments-generator []
   (gen/tuple (gen/choose 2 100000)))
 
-(defn solution [num]
-  (count (s/join (range 1 num))))
+(defn solution [n]
+  (count (s/join (range 1 n))))
