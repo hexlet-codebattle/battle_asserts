@@ -5,9 +5,9 @@
 
 (def tags ["math"])
 
-(def description "On the flat there is a circle centered at zero point (0, 0)
-                  with radius r. Does the point with coordinates x and y belongs to this circle.
-                  Tip: to solve the problem, you need to find the hypotenuse.")
+(def description
+  {:en "On the flat there is a circle centered at zero point (0, 0) with radius r. Does the point with coordinates x and y belongs to this circle. Tip: to solve the problem, you need to find the hypotenuse."
+   :ru "Дана точка с координатами `x` и `y` и окружность с радиусом `r` в точке (0, 0). Проверьте, находится ли точка в окружности."})
 
 (def signature
   {:input  [{:argument-name "x" :type {:name "integer"}}
