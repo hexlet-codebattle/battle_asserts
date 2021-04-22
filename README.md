@@ -119,6 +119,7 @@ It will appear with auto-generated asserts on [codebattle](http://codebattle.hex
 ### Useful commands
 - `make check-translations` check current tasks translation progress.
 - `make check-tags` check current tasks tagging progress.
+- `check-generators-and-solutions` check current tasks solution and arguments-generator progress.
 
 ## Related links
 

@@ -30,6 +30,9 @@ check-translations:
 check-tags:
 	lein run -m battle-asserts.util-progress-tools/check-tags
 
+check-generators-and-solutions:
+	lein run -m battle-asserts.util-progress-tools/check-generators-and-solutions
+
 test:
 	bin/kaocha
 
