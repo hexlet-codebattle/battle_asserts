@@ -6,7 +6,9 @@
 
 (def tags ["training" "strings" "collections"])
 
-(def description "Given an array of strings, write the function, that return another array, containing all of its longest strings.")
+(def description
+  {:en "Given an array of strings, write the function, that return another array, containing all of its longest strings."
+   :ru "Дан массив строк, создайте функцию, которая создает новый массив, содержащий строки, длины которых соответствуют наидлиннейшей строке."})
 
 (def signature
   {:input  [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}]

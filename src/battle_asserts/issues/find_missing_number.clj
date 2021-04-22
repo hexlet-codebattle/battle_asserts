@@ -6,9 +6,9 @@
 
 (def tags ["collections"])
 
-(def description "Given a sequence of integers from 1 to N in a random order.
-                 One of the numbers is missing (the others are found exactly once).
-                 N is not known beforehand. Determine the missing number.")
+(def description
+  {:en "Given a sequence of integers from 1 to N in a random order. One of the numbers is missing (the others are found exactly once).N is not known beforehand. Determine the missing number."
+   :ru "Дана последовательность целых чисел от 1 до `n` в случайном порядке. Одно число отсутствует, `n` заранее неизвестно. Найдите отсутствующее число."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
