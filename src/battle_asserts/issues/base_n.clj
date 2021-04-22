@@ -6,7 +6,9 @@
 
 (def tags ["math"])
 
-(def description "Check whether the number can be a n-nary number (in other words, whether the number is in base-n for n < 10). ")
+(def description
+  {:en "Check whether the number can be a n-nary number (in other words, whether the number is in base-n for n < 10)."
+   :ru "Проверьте, может ли число существовать в системе счисления с основанием n, для n < 10."})
 
 (def signature
   {:input [{:argument-name "num" :type {:name "integer"}}
