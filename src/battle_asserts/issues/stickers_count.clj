@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["games"])
+
 (def description
   {:en "Given an `n * n * n` Rubik's cube, find the number of stickers that are needed to cover the whole cube."
    :ru "Дан `n * n * n` кубик Рубика, найдите необходимое количество стикеров, чтобы покрыть ими весь кубик."})

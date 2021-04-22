@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["math"])
+
 (def description "Implement the calculation function f(x) by the formula:
                   `f(x) = x^2 for -2 <= x <2;
                   x^2 + 4x + 5 for x >= 2;

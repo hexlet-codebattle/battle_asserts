@@ -5,8 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Implement a function that calculates difference of two complex numbers.
-                  Return result as array where first number is real part and second number is imaginary part.")
+(def description
+  {:en "Implement a function that calculates difference of two complex numbers. Return result as array where first number is real part and second number is imaginary part."
+   :ru "Создайте функцию, которая находит разницу между двумя комплексными числами. Верните результат как массив, где первоче число - реальная часть, а вторая - мнимая."})
 
 (def signature
   {:input  [{:argument-name "first" :type {:name "array" :nested {:name "integer"}}}

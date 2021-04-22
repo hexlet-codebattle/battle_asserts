@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["math"])
+
 (def description "Write a function that checks a two-digit number if it's the largest of two possible digit swaps.")
 
 (def signature

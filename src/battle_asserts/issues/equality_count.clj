@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["math"])
+
 (def description "Create a function that takes array of three integers and returns the amount
                   of integers which are of equal value.
                   Note: Function must return 0, 2 or 3.")

@@ -5,8 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Implement a function that multiply two complex numbers.
-                  Return result as array where first number is real part and second number is imaginary part.")
+(def description
+  {:en "Implement a function that multiply two complex numbers. Return result as array where first number is real part and second number is imaginary part."
+   :ru "Создайте функцию, которая умножает два комплексных числа. Верните результат как массив, где первое число - реальная часть, а вторая - мнимая."})
 
 (def signature
   {:input  [{:argument-name "first" :type {:name "array" :nested {:name "integer"}}}

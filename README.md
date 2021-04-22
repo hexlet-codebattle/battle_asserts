@@ -24,7 +24,7 @@
 A description of the issue includes:
 
 - `level` — difficulty of the problem; possible values are `elementary`, `easy`, `medium`, `hard`.
-- `description` — detailed description of the issue. Now supported laguages is `ru` and `en`, `en` is required. You can run `make check-issue-trans` for list current translation progress.
+- `description` — detailed description of the issue. Now supported laguages is `ru` and `en`, `en` is required. You can run `make check-translations` for list current translation progress.
 - `tags` — tags that provides addittional info about task.
 - `signature` — function signature; map with `input` and `output` types. Available types `integer`, `float`, `string`, `array`, `hash (map, dicts)`.
   See examples in the existing issues.
@@ -115,6 +115,10 @@ Corresponding tests are in `test/test_helper.clj` there is no need to add tests 
 ### 4. Create pull-request
 
 It will appear with auto-generated asserts on [codebattle](http://codebattle.hexlet.io) after merge
+
+### Useful commands
+- `make check-translations` check current tasks translation progress.
+- `make check-tags` check current tasks tagging progress.
 
 ## Related links
 

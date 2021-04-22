@@ -5,8 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Implement a function that divide two complex numbers.
-                  Return result as array where first number is real part and second number is imaginary part. Use floor rounding.")
+(def description
+  {:en "Implement a function that divide two complex numbers. Return result as array where first number is real part and second number is imaginary part. Use floor rounding."
+   :ru "Создайте функцию, которая делит два комплексных числа. Верните результат как массив, где первое число - реальная часть, а вторая - мнимая. Результаты округлите в меньшую сторону."})
 
 (def signature
   {:input  [{:argument-name "first" :type {:name "array" :nested {:name "integer"}}}

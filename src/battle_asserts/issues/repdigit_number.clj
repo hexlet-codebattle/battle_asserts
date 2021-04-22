@@ -4,6 +4,8 @@
 
 (def level :elementary)
 
+(def tags ["math"])
+
 (def description "A repdigit is a positive number composed out of the same digit.
                   Create a function that checks an integer it's a repdigit or not.")
 

@@ -3,9 +3,11 @@
 
 (def level :easy)
 
-(def description "The input contains the maximum number of dots on one end of a domino bone.
-                 Output the number of dots on the domino set.
-                 Sample 2 -> 12")
+(def tags ["games"])
+
+(def description
+  {:en "The input contains the maximum number of dots on one end of a domino bone. Output the number of dots on the domino set. Sample 2 -> 12"
+   :ru "`x` содержит максимальное количество точек на одном конце доминошки. Выведите количество точек на наборе домино. Например 2 -> 12"})
 
 (def signature
   {:input  [{:argument-name "x" :type {:name "integer"}}]

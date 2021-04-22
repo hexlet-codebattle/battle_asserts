@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def tags ["math"])
+
 (def description "Given an integer `n`, return the largest number that contains exactly `n` digits.")
 
 (def signature

@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def tags ["games"])
+
 (def description "Steve and Maurice have racing snails.
                  They each have 3, a slow (s), medium (m) and fast (f) one. Although Steve's
                  snails are all a bit stronger than Maurice's, Maurice has a trick up his sleeve. His plan is:
