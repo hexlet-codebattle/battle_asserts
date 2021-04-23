@@ -9,7 +9,9 @@
 
 (def disabled true)
 
-(def description "Return a vector with subvectors that shows how many times each word occurs in the given string.")
+(def description
+  {:en "Return a vector with subvectors that shows how many times each word occurs in the given string."
+   :ru "Верните вектор с подвекторами, в которых отражено сколько раз слово повторялось в строке."})
 
 (def signature
   {:input [{:argument-name "sentence" :type {:name "string"}}]

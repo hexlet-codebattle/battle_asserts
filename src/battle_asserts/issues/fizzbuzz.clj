@@ -5,10 +5,9 @@
 
 (def tags ["strings"])
 
-(def description "If a number is divisible by 3, return \"Fizz\".
-                 If a number is divisible by 5, return \"Buzz\".
-                 If a number is divisible by 3 and 5, return \"FizzBuzz\".
-                 Otherwise, return an empty string.")
+(def description
+  {:en "If a number is divisible by 3, return \"Fizz\". If a number is divisible by 5, return \"Buzz\". If a number is divisible by 3 and 5, return \"FizzBuzz\". Otherwise, return an empty string."
+   :ru "Если число делится на 3, верните \"Fizz\". Если число делится на 5, верните \"Buzz\". Если число делится на 3 и 5, верните \"FizzBuzz\". В ином случае верните пустую строку."})
 
 (def signature
   {:input  [{:argument-name "n" :type {:name "integer"}}]
