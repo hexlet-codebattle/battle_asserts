@@ -5,7 +5,9 @@
 
 (def tags ["bits-operation"])
 
-(def description "Calculate the number of zeros is equal whether the two numbers represented in binary?")
+(def description
+  {:en "Calculate the number of zeros is equal whether the two numbers represented in binary?"
+   :ru "Проверьте, одинаково ли количество нулей двух чисел, представленных в двоичном виде."})
 
 (def signature
   {:input  [{:argument-name "a" :type {:name "integer"}}
