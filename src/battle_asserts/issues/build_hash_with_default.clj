@@ -6,7 +6,9 @@
 
 (def tags ["hash-maps"])
 
-(def description "Return a new hash map with elements of the given array as keys, and the given default value as values for those keys.")
+(def description
+  {:en "Return a new hash map with elements of the given array as keys, and the given default value as values for those keys."
+   :ru "Верните новый хэш с элементами переданного массива в качестве ключей, переданное значение - это значение для данных ключей."})
 
 (def signature
   {:input [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}
