@@ -6,8 +6,9 @@
 
 (def tags ["strings"])
 
-(def description "Check the balance of the brackets in the expression.
-                 Brackets can be round: \"()\", square: \"[]\", curly \"{}\" and angle: \"<>\".")
+(def description
+  {:en "Check the balance of the brackets in the expression. Brackets can be round: \"()\", square: \"[]\", curly \"{}\" and angle: \"<>\"."
+   :ru "Проверьте, сбалансированы ли все скобки в выражении. Скобки могут быть круглыми: \"()\", квадратными: \"[]\", фигурными: \"{}\" и угловыми: \"<>\"."})
 
 (def signature
   {:input [{:argument-name "brackets" :type {:name "string"}}]
