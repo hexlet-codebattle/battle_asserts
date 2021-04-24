@@ -5,11 +5,17 @@
 
 (def tags ["games"])
 
-(def description "On a sheet of paper, the players each write a 4-digit secret number.
-                  The digits must be all different. Then, in turn, the players try to guess
-                  their opponent's number who gives the number of matches. If the matching
-                  digits are in their right positions, they are `bulls`, if in different
-                  positions, they are `cows`. Write the function that calculates `bulls` and `cows`.")
+(def description
+  {:en "On a sheet of paper, the players each write a 4-digit secret number.
+        The digits must be all different. Then, in turn, the players try to guess
+        their opponent's number who gives the number of matches. If the matching
+        digits are in their right positions, they are `bulls`, if in different
+        positions, they are `cows`. Write the function that calculates `bulls` and `cows`."
+   :ru "На листке бумаги каждый игрок записывает 4-значное тайное число.
+        Все цифры в числе игрока должны быть различными. Далее игрок в свой ход пытается угадать
+        число противника, который отвечает числом совпадений. Если угаданная
+        цифра находится в правильной позиции, то это 'бык', если на иной,
+        то это 'корова'. Напишите функцию, которая считает количество 'быков' и 'коров'."})
 
 (def signature
   {:input [{:argument-name "secret" :type {:name "integer"}}

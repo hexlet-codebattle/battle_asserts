@@ -8,8 +8,9 @@
 
 (def level :medium)
 
-(def description "Flatten the given hash.
-  This is how HTTP libraries pack data when POST requests are made using x-www-form-urlencoded.")
+(def description
+  {:en "Flatten the given hash. This is how HTTP libraries pack data when POST requests are made using x-www-form-urlencoded."
+   :ru "Выпрямите данный хэш. Таким образом HTTP библиотеки упаковывют данные, когда в POST запросах импользуется x-www-form-urlencoded."})
 
 (def signature
   {:input [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}
