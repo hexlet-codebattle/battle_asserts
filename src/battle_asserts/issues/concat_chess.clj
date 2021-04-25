@@ -7,7 +7,13 @@
 
 (def tags ["strings"])
 
-(def description "Concatenate 2 strings by characters, one by one. In other words, take the 1st char from the first string, then 1st char from the second string, then 2nd char from the first string, then 2nd char from the second string, and so on. If one string ends before the other, just continue with the remaining characters.")
+(def description
+  {:en "Concatenate 2 strings by characters, one by one.
+        In other words, take the 1st char from the first string, then 1st char from the second string, then 2nd char from the first string, then 2nd char from the second string, and so on.
+        If one string ends before the other, just continue with the remaining characters."
+   :ru "Соедините 2 строки посимвольно.
+        Другими словами, возьмите 1-й символ из 1-й строки, затем 1-й символ из 2-й, далее 2-й символ из 1-й строки, потом 2-й символ из 2-й строки и т.д.
+        Если одна строка закончится раньше другой, просто продолжайте с оставшимися символами."})
 
 (def signature
   {:input [{:argument-name "str1" :type {:name "string"}}
