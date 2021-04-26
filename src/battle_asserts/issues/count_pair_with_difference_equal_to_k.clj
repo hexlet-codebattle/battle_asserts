@@ -5,7 +5,9 @@
 
 (def tags ["collections"])
 
-(def description "Given an integer array and a positive integer k, count all distinct pairs with difference equal to k.")
+(def description
+  {:en "Given an integer array and a positive integer k, count all distinct pairs with difference equal to k."
+   :ru "Дан массив целых чисел и положительное целое число k, сосчитайте все различные пары чисел, разность которых равна k."})
 
 (def signature
   {:input [{:argument-name "pairs" :type {:name "array" :nested {:name "integer"}}}
