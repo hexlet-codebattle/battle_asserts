@@ -6,11 +6,17 @@
 
 (def tags ["strings"])
 
-(def description "Conway's \"Look and Say\" sequence is a sequence of numbers in which each term \"reads aloud\" the digits of the previous term.
-                 1 is read off as \"one 1\".
-                 11 is read off as \"two 1's\".
-                 21 is read off as \"one 2, then one 1\".
-                 1211 is read off as \"one 1, then one 2, then two 1's\".")
+(def description
+  {:en "Conway's \"Look and Say\" sequence is a sequence of numbers in which each term \"reads aloud\" the digits of the previous term.
+        1 is read off as \"one 1\".
+        11 is read off as \"two 1's\".
+        21 is read off as \"one 2, then one 1\".
+        1211 is read off as \"one 1, then one 2, then two 1's\"."
+   :ru "Последовательность Конвэя \"Посмотри и Скажи\" - это последовательность чисел, в которой в каждом терме цифры \"читаются вслух\".
+        1 читается как \"one 1\".
+        11 читается как \"two 1's\".
+        21 читается как \"one 2, then one 1\".
+        1211 читается как \"one 1, then one 2, then two 1's\"."})
 
 (def signature
   {:input [{:argument-name "str" :type {:name "string"}}]
