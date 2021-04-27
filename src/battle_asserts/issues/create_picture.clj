@@ -7,7 +7,9 @@
 
 (def tags ["collections" "strings"])
 
-(def description "Given an array of words, write a function, that return picture (array) with borders made from asterisks `*` using longest words.")
+(def description
+  {:en "Given an array of words, write a function, that return picture (array) with borders made from asterisks `*` using longest words."
+   :ru "Дан массив слов, напишите функцию, которая возвращает картинку (массив) с границей из звездочек `*`, внутри границы находятся самые длинные слова."})
 
 (def signature
   {:input  [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}]
