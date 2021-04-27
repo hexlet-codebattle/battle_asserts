@@ -5,7 +5,11 @@
 
 (def tags ["collections"])
 
-(def description "For each element X of the given array, count how many elements to the right of X are smaller than X. The last value is always zero since there are no elements to the right of the last element.")
+(def description
+  {:en "For each element X of the given array, count how many elements to the right of X are smaller than X.
+        The last value is always zero since there are no elements to the right of the last element."
+   :ru "Для каждого элемента X заданного массива, посчитайте сколько элементов справа от X меньше него.
+        Последнее значение результата всегда ноль, так как нет элементов правее последнего."})
 
 (def signature
   {:input [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
