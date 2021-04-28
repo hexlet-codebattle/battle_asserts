@@ -6,14 +6,22 @@
 
 (def tags ["strings"])
 
-(def description "Credit card numbers can be validated with a process called the Luhn algorithm.
-                 Simply stated, the Luhn algorithm works like this:
-                 1. From the rightmost digit, which is the check digit, moving left, double the value of every second
-                 digit; if the product of this doubling operation is greater than 9 (e.g., 8 × 2 = 16), then sum the
-                 digits of the products (e.g., 16: 1 + 6 = 7, 18: 1 + 8 = 9).
-                 2. Take the sum of all the digits.
-                 3. If the total modulo 10 is equal to 0 (if the total ends in zero) then the number is valid
-                 according to the Luhn formula; else it is not valid.")
+(def description
+  {:en "Credit card numbers can be validated with a process called the Luhn algorithm.
+        Simply stated, the Luhn algorithm works like this:
+        1. From the rightmost digit, which is the check digit, moving left, double the value of every second
+        digit; if the product of this doubling operation is greater than 9 (e.g., 8 × 2 = 16), then sum the
+        digits of the products (e.g., 16: 1 + 6 = 7, 18: 1 + 8 = 9).
+        2. Take the sum of all the digits.
+        3. If the total modulo 10 is equal to 0 (if the total ends in zero) then the number is valid
+        according to the Luhn formula; else it is not valid."
+   :ru "Номер кредитной карты можно проверить на правильность с помощью алгоритма Луна.
+        Проще говоря, алгоритм Луна работает так:
+        1. Начиная с самой правой цифры, которая является контрольной, двигаясь влево, удваивается значение каждой второй цифры;
+        если произведение операции удвоения больше 9 (например, 8 × 2 = 16),
+        тогда суммируются цифры произведения (например, 16: 1 + 6 = 7, 18: 1 + 8 = 9).
+        2. Все полученные в результате преобразования числа складываются.
+        3. Если сумма кратна 10 (заканчивается нулём), то номер карты верен по формуле Луна; в противном случае номер неправильный."})
 
 (def signature
   {:input [{:argument-name "arr" :type {:name "string"}}]
