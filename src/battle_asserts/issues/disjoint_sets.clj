@@ -6,7 +6,9 @@
 
 (def tags ["math" "collections"])
 
-(def description "Given two sets represented by two arrays, check if the given two sets are disjoint or not. Given arrays have no duplicates.")
+(def description
+  {:en "Given two sets represented by two arrays, check if the given two sets are disjoint or not. Given arrays have no duplicates."
+   :ru "Дано два множества, представляющих собой два массива. Проверьте, отсутствует ли пересечение между этими двумя множествами."})
 
 (def signature
   {:input [{:argument-name "arr1" :type {:name "array" :nested {:name "integer"}}}

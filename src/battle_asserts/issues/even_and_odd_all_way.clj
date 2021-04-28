@@ -5,8 +5,9 @@
 
 (def tags ["collections"])
 
-(def description "Given an array of numbers, return an array which contains all the odd numbers in the orginal array,
-                  which also have odd indexes, do the same for even numbers and indexes. If there is no such numbers, return `[0]`.")
+(def description
+  {:en "Given an array of numbers, return an array which contains all the odd numbers in the orginal array, which also have odd indexes, do the same for even numbers and indexes. If there is no such numbers, return `[0]`."
+   :ru "Дан массив чисел, создайте новый массив, содержащий нечетные числа с нечетными индексами, повторите это и для четных чисел. Если таких чисел нет, то верните `[0]`."})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]

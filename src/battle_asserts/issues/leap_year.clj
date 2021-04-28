@@ -5,10 +5,9 @@
 
 (def tags ["date-time"])
 
-(def description "Determine if the year is a leap year.
-                  Leap years are all divisible by 4, 
-                  a year that is evenly divisible by 100 (for example, 1900) is a leap year only 
-                  if it is also evenly divisible by 400.")
+(def description
+  {:en "Determine if the year is a leap year. Leap years are all divisible by 4, a year that is evenly divisible by 100 (for example, 1900) is a leap year only if it is also evenly divisible by 400."
+   :ru "Определите, является ли год високосным. Високосные года делятся на 4,  100 и 400 без остатка."})
 
 (def signature
   {:input [{:argument-name "year" :type {:name "integer"}}]

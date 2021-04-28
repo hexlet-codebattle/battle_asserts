@@ -5,8 +5,9 @@
 
 (def tags ["collections"])
 
-(def description "Given an array of numbers, return an array which contains all the even numbers in the original array,
-                  which also have even indexes. If there is no such numbers, return `[0]`.")
+(def description
+  {:en "Given an array of numbers, return an array which contains all the even numbers in the original array, which also have even indexes. If there is no such numbers, return `[0]`."
+   :ru "Дан массив чисел, создайте новый массив, содержащий четные числа с четными индексами. Если таких чисел нет, то верните `[0]`."})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]

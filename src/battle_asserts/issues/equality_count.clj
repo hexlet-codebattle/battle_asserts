@@ -5,9 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Create a function that takes array of three integers and returns the amount
-                  of integers which are of equal value.
-                  Note: Function must return 0, 2 or 3.")
+(def description
+  {:en "Create a function that takes array of three integers and returns the amount of integers which are of equal value. Note: Function must return 0, 2 or 3."
+   :ru "Создайте функцию которая принимает три числа и возвращает количество чисел, которые равны. Примечание: функция должна возвращать 0, 2 или 3."})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]
