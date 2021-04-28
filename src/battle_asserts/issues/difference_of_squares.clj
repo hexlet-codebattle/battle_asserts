@@ -5,13 +5,20 @@
 
 (def tags ["math"])
 
-(def description "Find the difference between the square of the sum and the sum of the squares of the first N natural numbers.
-                 The square of the sum of the first ten natural numbers is,
-                 (1 + 2 + ... + 10)^2 = 55^2 = 3025
-                 The sum of the squares of the first ten natural numbers is,
-                 1^2 + 2^2 + ... + 10^2 = 385
-                 Hence, the difference between the sum of the squares of the first ten
-                 natural numbers and the square of the sum is 3025 - 385 = 2640.")
+(def description
+  {:en "Find the difference between the square of the sum and the sum of the squares of the first N natural numbers.
+        The square of the sum of the first ten natural numbers is,
+        (1 + 2 + ... + 10)^2 = 55^2 = 3025
+        The sum of the squares of the first ten natural numbers is,
+        1^2 + 2^2 + ... + 10^2 = 385
+        Hence, the difference between the sum of the squares of the first ten
+        natural numbers and the square of the sum is 3025 - 385 = 2640."
+   :ru "Найдите разность между квадратом суммы и суммой квадратов первых N натуральных чисел.
+        Квадрат суммы первых десяти натуральных чисел это:
+        (1 + 2 + ... + 10)^2 = 55^2 = 3025
+        Сумма квадратов первых десяти натуральных чисел это:
+        1^2 + 2^2 + ... + 10^2 = 385
+        Таким образом, разность между квадратом суммы и суммой квадратов первых десяти натуральных чисел это 3025 - 385 = 2640."})
 
 (def signature
   {:input [{:argument-name "n" :type {:name "integer"}}]
