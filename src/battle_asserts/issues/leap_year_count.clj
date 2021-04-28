@@ -5,9 +5,10 @@
 
 (def tags ["date-time"])
 
-(def description "Given a range of years as array of two numbers, return the number of leap years there are within the range (inclusive).
-                  Leap years are all divisible by 4,
-                  with the exception of centuries, which are not divisible by 400.")
+(def description
+  {:en "Given a range of years as array of two numbers, return the number of leap years there are within the range (inclusive).
+                  Leap years are all divisible by 4, with the exception of centuries, which are not divisible by 400."
+   :ru "Дан временной отрезок (в годах), представленный массивом из двух чисел. Определите все високосные года в этом промежутке (включительно). Високосные года делятся на 4, 100 и 400 без остатка."})
 
 (def signature
   {:input [{:argument-name "years" :type {:name "array" :nested {:name "integer"}}}]
