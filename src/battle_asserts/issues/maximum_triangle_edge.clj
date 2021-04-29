@@ -5,7 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers.")
+(def description
+  {:en "Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers."
+   :ru "Создайте функцию, которая рассчитывает максимальную длиную третьей стороны треугольника."})
 
 (def signature
   {:input  [{:argument-name "first" :type {:name "integer"}}
