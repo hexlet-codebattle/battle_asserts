@@ -6,9 +6,9 @@
 
 (def tags ["strings"])
 
-(def description "Create a function that takes in an array (slot machine outcome)
-                  and returns true if all elements in the array are identical, and false otherwise.
-                  The array will contain 3 elements.")
+(def description
+  {:en "Create a function that takes in an array (slot machine outcome) and returns true if all elements in the array are identical, and false otherwise. The array will contain 3 elements."
+   :ru "Создайте функцию, которая принимает массив из трех элементов представляющих собой результат запуска слот-машины из казино. Проверьте, является ли комбинация элементов удачной (все элементы равны)."})
 
 (def signature
   {:input [{:argument-name "elements" :type {:name "array" :nested {:name "string"}}}]
