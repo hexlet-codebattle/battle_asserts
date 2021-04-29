@@ -6,8 +6,9 @@
 
 (def tags ["collections" "strings"])
 
-(def description "Sam and Frodo need to be close. If they are side by side in the array, your function should return true.
-                  If there is other persons between them, return false.")
+(def description
+  {:en "Sam and Frodo need to be close. If they are side by side in the array, your function should return true. If there is other persons between them, return false."
+   :ru "Сэму и Фродо надо держаться вместе. Проверьте, нет ли между ними других персонажей."})
 
 (def signature
   {:input [{:argument-name "persons" :type {:name "array" :nested {:name "string"}}}]
