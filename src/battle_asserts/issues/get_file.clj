@@ -9,10 +9,10 @@
 
 (def description
   {:en "Implement a function that returns the filename with extension from a given path."
-   :ru "Создайте функцию, которая возвращает имя файла с раширением из переданного пути."})
+   :ru "Создайте функцию, которая возвращает имя файла с расширением из переданного пути файловой системы."})
 
 (def signature
-  {:input [{:argument-name "sentence" :type {:name "string"}}]
+  {:input [{:argument-name "filepath" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
