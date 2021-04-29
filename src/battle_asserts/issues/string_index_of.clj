@@ -7,9 +7,9 @@
 
 (def tags ["strings" "collections"])
 
-(def description "Create a function
-                  which takes 2 parameters (str1 and str2) and locates the first occurrence
-                  of the str2 in the str1 and returns it's position, -1 if not found.")
+(def description
+  {:en "Create a function  which takes 2 parameters (`first` and `second`) and locates the first occurrence of the `second` in the `first` and returns it's position, -1 if not found."
+   :ru "Создайте функцию, которая принимает две строки и верните индекс первого вхождения строки `second` в строку `first`, в ином случае верните -1."})
 
 (def signature
   {:input  [{:argument-name "first" :type {:name "string"}}

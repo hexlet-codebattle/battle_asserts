@@ -5,7 +5,9 @@
 
 (def tags ["training"])
 
-(def description "Create a function that returns how many possible outcomes can come from a certain number of switches (on / off).")
+(def description
+  {:en "Create a function that returns how many possible outcomes can come from a certain number of switches (on / off)."
+   :ru "Создайте функцию, которая возвращает возможное количество комбинаций для переданного количества переключателей."})
 
 (def signature
   {:input  [{:argument-name "switches" :type {:name "integer"}}]

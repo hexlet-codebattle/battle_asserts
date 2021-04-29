@@ -5,8 +5,9 @@
 
 (def tags ["strings"])
 
-(def description "Given a number as input, return a string \"Value is X\", 
-                  where X is the given number with zeros added to the beginning so that there are 5 digits in total.")
+(def description
+  {:en "Given a number as input, return a string \"Value is `num`\", where `num` is the given number with zeros added to the beginning so that there are 5 digits in total."
+   :ru "Верните строку \"Value is `num`\", где `num` число переданное в функцию. Дополните число нулями слева, если в нем меньше 5 цифр."})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]

@@ -6,7 +6,9 @@
 
 (def tags ["strings" "collections" "sorting"])
 
-(def description "Create a function that returns an array of strings sorted by length in descending order. Keep the original order of strings with the same length.")
+(def description
+  {:en "Create a function that returns an array of strings sorted by length in descending order. Keep the original order of strings with the same length."
+   :ru "Создайте функцию, которая возвращает массив строк, отсортированных по длине в убывающем порядке. Сохраните порядок следования для слов с одинаковой длиной."})
 
 (def signature
   {:input [{:argument-name "words" :type {:name "array" :nested {:name "string"}}}]

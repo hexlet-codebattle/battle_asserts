@@ -5,7 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Write a function that checks a two-digit number if it's the largest of two possible digit swaps.")
+(def description
+  {:en "Write a function that checks a two-digit number if it's the largest of two possible digit swaps."
+   :ru "Создайте функцию, которая проверяет, является ли число наибольшим из возможных перестановок чисел."})
 
 (def signature
   {:input [{:argument-name "number" :type {:name "integer"}}]

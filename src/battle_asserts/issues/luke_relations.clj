@@ -5,12 +5,19 @@
 
 (def tags ["strings"])
 
-(def description "Luke Skywalker has family and friends. Help him remind them who is who. Given a string with a name, return the relation of that person to Luke.
+(def description
+  {:en "Luke Skywalker has family and friends. Help him remind them who is who. Given a string with a name, return the relation of that person to Luke.
                   Person      | Relation
                   Darth Vader | father
                   Leia	      | sister
                   Han         | brother in law
-                  R2D2        | droid")
+                  R2D2        | droid"
+   :ru "У Люка Скайуокера есть семья и друзья. Помогите ему вспомнить кто есть кто. Дана строка с именем персонажа, верните отношения между этим персонажем и Люком.
+                  Персонаж    | Отношение
+                  Darth Vader | father
+                  Leia	      | sister
+                  Han         | brother in law
+                  R2D2        | droid"})
 
 (def signature
   {:input [{:argument-name "person" :type {:name "string"}}]
