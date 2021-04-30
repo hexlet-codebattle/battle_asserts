@@ -5,8 +5,11 @@
 
 (def tags ["math"])
 
-(def description "Return the number of trailing zeroes in n!
-  For example, 5! = 120, the number of trailing zeros is 1; 10! = 3 628 800, the number of trailing zeros is 2.")
+(def description
+  {:en "Return the number of trailing zeroes in n!
+        For example, 5! = 120, the number of trailing zeros is 1; 10! = 3 628 800, the number of trailing zeros is 2."
+   :ru "Верните количество конечных нулей в n!
+        Например, 5! = 120 - число конечных нулей - 1; 10! = 3 628 800 - число конечных нулей - 2."})
 
 (def signature
   {:input  [{:argument-name "n" :type {:name "integer"}}]
