@@ -5,8 +5,11 @@
 
 (def tags ["excel"])
 
-(def description "Given a positive integer, return its corresponding column title as it appears in an Excel sheet.
-                 For example: 1 -> A, 2 -> B, 3 -> C, ..., 26 -> Z, 27 -> AA, 28 -> AB")
+(def description
+  {:en "Given a positive integer, return its corresponding column title as it appears in an Excel sheet.
+        For example: 1 -> A, 2 -> B, 3 -> C, ..., 26 -> Z, 27 -> AA, 28 -> AB"
+   :ru "Дано положительное целое число, верните соответствующее ему название столбца страницы Excel.
+        Например: 1 -> A, 2 -> B, 3 -> C, ..., 26 -> Z, 27 -> AA, 28 -> AB"})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]
