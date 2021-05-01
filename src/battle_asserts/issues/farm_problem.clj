@@ -5,13 +5,21 @@
 
 (def tags ["training"])
 
-(def description "A farmer is asking you to tell him how many legs can be counted among all his animals.
-                  The farmer breeds three species:
-                  `chickens = 2 legs`
-                  `cows = 4 legs`
-                  `pigs = 4 legs`
-                  The farmer has counted his animals and he gives you a subtotal for each species.
-                  You have to implement a function that returns the total number of legs of all the animals.")
+(def description
+  {:en "A farmer is asking you to tell him how many legs can be counted among all his animals.
+        The farmer breeds three species:
+        `chickens = 2 legs`
+        `cows = 4 legs`
+        `pigs = 4 legs`
+        The farmer has counted his animals and he gives you a subtotal for each species.
+        You have to implement a function that returns the total number of legs of all the animals."
+   :ru "Фермер просит вас посчитать сколько ног у всех его животных.
+        Фермер разводит три вида:
+        `курицы = 2 ноги`
+        `коровы = 4 ноги`
+        `свиньи = 4 ноги`
+        Фермер посчитал своих животных и говорит вам, сколько их каждого вида.
+        Вы должны написать функцию, которая возвращает общее число ног всех животных."})
 
 (def signature
   {:input [{:argument-name "chickens" :type {:name "integer"}}
