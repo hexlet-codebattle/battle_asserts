@@ -6,9 +6,13 @@
 
 (def tags ["strings"])
 
-(def description "Given a number, find whether it is fancy or not.
-                 A fancy number is one which when rotated 180 degrees is the same.
-                 When rotated, 6 becomes 9, 9 becomes 6, and 8, 1, 0 become themselves (do not change).")
+(def description
+  {:en "Given a number, find whether it is fancy or not.
+        A fancy number is one which when rotated 180 degrees is the same.
+        When rotated, 6 becomes 9, 9 becomes 6, and 8, 1, 0 become themselves (do not change)."
+   :ru "Дано число, определите причудливое оно или нет.
+        Число является причудливым, если при развороте на 180 градусов остается самим собой.
+        При повороте 6 становится 9, 9 становится 6, а 8, 1 и 0 остаются сами собой (не меняются)."})
 
 (def signature
   {:input  [{:argument-name "num_str" :type {:name "string"}}]
