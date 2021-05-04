@@ -7,7 +7,13 @@
 
 (def tags ["strings"])
 
-(def description "Return an alphabet of a given string; the given string is represented as an array of characters. An alphabet of a string is the set of all distinct characters used in that string. The resulting string goes in order from `a` to `z`.")
+(def description
+  {:en "Return an alphabet of a given string; the given string is represented as an array of characters.
+        An alphabet of a string is the set of all distinct characters used in that string.
+        The resulting string goes in order from `a` to `z`."
+   :ru "Верните алфавит переданной строки; строка представляет собой массив символов.
+        Алфавит строки - это набор все различных символов, присутствующих в строке.
+        Символы результирующей строки расположены в порядке от `a` до `z`."})
 
 (def signature
   {:input  [{:argument-name "s" :type {:name "string"}}]
