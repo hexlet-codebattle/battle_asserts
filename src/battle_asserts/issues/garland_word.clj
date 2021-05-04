@@ -7,10 +7,15 @@
 
 (def tags ["strings"])
 
-(def description "Write function that, given a lowercase word,
-                 returns the degree of the word if it's a garland word and 0 otherwise.
-                 A garland word is one that starts and ends with the same N letters in the same
-                 order, for some N greater than 0, but less that the length of the word.")
+(def description
+  {:en "Write function that, given a lowercase word,
+        returns the degree of the word if it's a garland word and 0 otherwise.
+        A garland word is one that starts and ends with the same N letters in the same
+        order, for some N greater than 0, but less that the length of the word."
+   :ru "Напишите функцию, которая принимает слово в нижнем регистре,
+        и возвращает степень слова, если это слово-гирлянда и 0 в противном случае.
+        Слово-гирлянда - такое слово, которое начинается и заканчивается одними и теми же N буквами
+        расположенными в одном и том же порядке. N больше 0, но меньше длины слова."})
 
 (def signature
   {:input  [{:argument-name "word" :type {:name "string"}}]
