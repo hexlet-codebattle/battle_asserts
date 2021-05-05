@@ -5,8 +5,11 @@
 
 (def tags ["collections"])
 
-(def description "Given an unsorted array with repetitions, group multiple occurrence of individual elements.
-                 The grouping should happen in a way that the order of first occurrences of all elements is maintained.")
+(def description
+  {:en "Given an unsorted array with repetitions, group multiple occurrence of individual elements.
+        The grouping should happen in a way that the order of first occurrences of all elements is maintained."
+   :ru "Дан несортированный массив с повторяющимися элементами, сгруппируйте повторяющиеся элементы вместе.
+        Группировка должна происходить таким образом, чтобы сохранялся порядок первых вхождений всех элементов."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
