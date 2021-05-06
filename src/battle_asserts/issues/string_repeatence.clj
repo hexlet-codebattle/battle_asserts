@@ -5,7 +5,7 @@
 
 (def level :elementary)
 
-(def tags ["training" "string"])
+(def tags ["training" "strings"])
 
 (def description
   {:en "Create a function that takes a string `sentence` and a number `n` and returns the repeated `sentence` an `n` number of times."
