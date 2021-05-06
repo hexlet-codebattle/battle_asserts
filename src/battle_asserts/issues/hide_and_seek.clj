@@ -6,14 +6,22 @@
 
 (def tags ["collections" "strings"])
 
-(def description "Children are going to play hide and seek.
-                  They define the leader by the count in such a way that:
-                  One word counting - one person.
-                  The last remaining child in the count will be a leader. Counting goes in one direction.
-                  The child on whom the count stopped, goes to hide, and the counter
-                  continues with the next child after him.
-                  The function accepts an array of children's names and the number of words in the counter.
-                  Returns the leader's name.")
+(def description
+  {:en "Children are going to play hide and seek.
+        They define the leader by the count in such a way that:
+        One word counting - one person.
+        The last remaining child in the count will be a leader. Counting goes in one direction.
+        The child on whom the count stopped, goes to hide, and the counter
+        continues with the next child after him.
+        The function accepts an array of children's names and the number of words in the counter.
+        Returns the leader's name."
+   :ru "Дети собираются играть в прятки.
+        Они определяют водящего по счету следующим образом:
+        Один счет слов - один человек.
+        Последний оставшийся будет водящим. Подсчет идет в одном направлении.
+        Ребёнок, на котором остановился счет, прячется, и счет продолжается со следующего по очереди ребенка.
+        Функция принимает массив детских имен и количество слов в счетчике.
+        Верните имя водящего."})
 
 (def signature
   {:input [{:argument-name "kids" :type {:name "array" :nested {:name "string"}}}
