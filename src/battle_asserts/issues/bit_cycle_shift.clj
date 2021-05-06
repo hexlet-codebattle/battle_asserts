@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def tags ["bits operation" "strings"])
+(def tags ["bits-operation" "strings"])
 
 (def description
   {:en "Create a function that cyclical shifts bits of `bitstring` for `shift` amount."
