@@ -76,3 +76,15 @@
       (println "All tasks have arguments generator!")
       (println (str "Tasks without arguments generator: \n" (s/join "\n" @without-generator))))
     (println (str "Total tasks solution and generator progress " @completed-task-count " / " namespaces-count " or " (format "%.1f" (float (* (/ @completed-task-count namespaces-count) 100))) "%"))))
+
+(defn collect-tags [& _args]
+  (let [namespaces (collect-namespaces)
+        tags-list (atom [])]
+    (doseq [namespace namespaces]
+      (require namespace)
+      (let [issue-name (prepare-namespace-name namespace)
+            tags (ns-resolve namespace 'tags)]
+        (if-not (nil? tags)
+          (swap! tags-list (fn [acc elem] (apply conj acc elem)) @tags)
+          (println (str "Task " issue-name " without tags!")))))
+    (println "Total tags stats:\n" (frequencies @tags-list))))
