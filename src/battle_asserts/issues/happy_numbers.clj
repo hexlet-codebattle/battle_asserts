@@ -5,11 +5,17 @@
 
 (def tags ["math"])
 
-(def description "Happy numbers are positive integers that follow a particular formula:
-                 take each individual digit, square it, and then sum the squares to get a new number.
-                 Repeat with the new number and eventually, you might get to a number whose squared sum is 1.
-                 This is a happy number. An unhappy number (or sad number) is one that loops endlessly.
-                 Write a function that determines if a number is happy or not.")
+(def description
+  {:en "Happy numbers are positive integers that follow a particular formula:
+        take each individual digit, square it, and then sum the squares to get a new number.
+        Repeat with the new number and eventually, you might get to a number whose squared sum is 1.
+        This is a happy number. An unhappy number (or sad number) is one that loops endlessly.
+        Write a function that determines if a number is happy or not."
+   :ru "Счастливые числа - это положительные целые числа, которые вычисляются следующим образом:
+        каждую цифру числа возведите в квадрат, затем сложите получившиеся значение, чтобы получить новое число.
+        Повторите процесс с получившимся числом и т.д.  У вас может получится число, сумма квадратов которого равна 1.
+        Это счастливое число. Несчаслтивое (или грустное) число - такое число, которое бесконечно повторяется.
+        Напишите функцию которая определяет счастливое число или нет."})
 
 (def signature
   {:input  [{:argument-name "n" :type {:name "integer"}}]
