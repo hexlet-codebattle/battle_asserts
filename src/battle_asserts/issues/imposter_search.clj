@@ -6,10 +6,15 @@
 
 (def tags ["collections" "strings"])
 
-(def description "Create a function that find imposters in array of players, each player has its own role.
-If no imposters were found, return `[\"there are no imposters here!\"]`.
-If in array presented only imposters, return `[\"imposters are everywhere!\"]`.
-In other cases return array of imposters names.")
+(def description
+  {:en "Create a function that find imposters in array of players, each player has its own role.
+        If no imposters were found, return `[\"there are no imposters here!\"]`.
+        If in array presented only imposters, return `[\"imposters are everywhere!\"]`.
+        In other cases return array of imposters names."
+   :ru "Создайте функцию которая находит самозванцев (imposter) в массиве игроков, у каждого игрока своя роль.
+        Если самозванцев нет, верните `[\"there are no imposters here!\"]`.
+        Если в массиве только самозванцы, верните `[\"imposters are everywhere!\"]`.
+        В ином случае верните массив с именами самозванцев."})
 
 (def signature
   {:input [{:argument-name "players" :type {:name "array" :nested {:name "array" :nested {:name "string"}}}}]
