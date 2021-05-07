@@ -21,13 +21,13 @@
    :output {:type {:name "array" :nested {:name "string"}}}})
 
 (defn arguments-generator []
-  (letfn [(player-gen [] [(nm/first-name) (gen/generate (gen/elements ["imposter" "civilian"]))])
+  (letfn [(player-gen [] [(nm/first-name) (gen/generate (gen/elements ["imposter" "crewmate" "doctor" "officer" "ghost"]))])
           (players-gen [] (repeatedly 5 player-gen))]
     (gen/tuple (gen/vector (gen/elements (players-gen)) 2 10))))
 
 (def test-data
-  [{:expected ["Vasya" "Jack"] :arguments [[["Daniel" "civilian"] ["Vasya" "imposter"] ["Jack" "imposter"]]]}
-   {:expected ["there are no imposters here!"] :arguments [[["Harry" "civilian"]]]}
+  [{:expected ["Vasya" "Jack"] :arguments [[["Daniel" "crewmate"] ["Vasya" "imposter"] ["Jack" "imposter"]]]}
+   {:expected ["there are no imposters here!"] :arguments [[["Harry" "crewmate"]]]}
    {:expected ["imposters are everywhere!"] :arguments [[["Jack" "imposter"]]]}])
 
 (defn solution [players]
