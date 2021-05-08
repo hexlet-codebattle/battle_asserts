@@ -7,10 +7,15 @@
 
 (def tags ["strings"])
 
-(def description "Given two strings, determine if they are isomorphic.
-                 Two strings are isomorphic if the characters in s can be replaced to get t.
-                 All occurrences of a character must be replaced with another character while preserving the order of characters.
-                 No two characters may map to the same character but a character may map to itself.")
+(def description
+  {:en "Given two strings, determine if they are isomorphic.
+        Two strings are isomorphic if the characters in s can be replaced to get t.
+        All occurrences of a character must be replaced with another character while preserving the order of characters.
+        No two characters may map to the same character but a character may map to itself."
+   :ru "Даны две строки, определите изоморфны ли они.
+        Две строки являются изоморфными, если символы в одной строке можно заменить так, чтобы получить другую строку.
+        Все вхождения определенного символа должны быть заменены другим символом, с сохранением порядка символов.
+        Два различных символа не могут быть отражены на один и тот же итоговый, но символ может быть отражен на самого себя."})
 
 (def signature
   {:input  [{:argument-name "s1" :type {:name "string"}}

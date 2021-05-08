@@ -5,12 +5,18 @@
 
 (def tags ["strings"])
 
-(def description "Validate given ISBN identifier.
-                 An ISBN is a ten digit code which identifies a book.
-                 The first nine digits represent the book and the last digit is used to make sure the ISBN is correct
-                 To verify an ISBN you obtain the sum of 10 times the first digit, 9 times the second digit, 8 times the third
-                 digit ... all the way till you add 1 times the last.digit. if the sum leaves no remainder when divided by
-                 11 the code is valid ISBN.")
+(def description
+  {:en "Validate given ISBN identifier.
+        An ISBN is a ten digit code which identifies a book.
+        The first nine digits represent the book and the last digit is used to make sure the ISBN is correct
+        To verify an ISBN you obtain the sum of 10 times the first digit, 9 times the second digit, 8 times the third
+        digit ... all the way till you add 1 times the last digit. if the sum leaves no remainder when divided by
+        11 the code is valid ISBN."
+   :ru "Проверьте на правильность данный ISBN идентификатор.
+        ISBN - это десятизначный код, который идентифицирует книгу.
+        Первые девять цифр представляют книгу, а последний используется для проверки корректности.
+        Для проверки ISBN нужно просуммировать 10 раз первую цифру, 9 раз вторую, 8 раз третюю и так далее,
+        в конце нужно прибвать 1 раз последнюю цифру. Если при делении полученной суммы на 11 нет остатка, то ISBN корректен."})
 
 (def signature
   {:input  [{:argument-name "code" :type {:name "string"}}]
