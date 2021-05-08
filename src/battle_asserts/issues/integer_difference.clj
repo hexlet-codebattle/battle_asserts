@@ -6,8 +6,8 @@
 (def tags ["collections"])
 
 (def description
-  {:en "Find how many pairs X, Y there are in the array, such that abs(X-Y) is equal to the first argument.
-        Найдите сколько в массиве существует пар X, Y, таких что модуль значения выражения (X - Y) равен первому аргументу."})
+  {:en "Find how many pairs X, Y there are in the array, such that abs(X-Y) is equal to the first argument."
+   :ru "Найдите сколько в массиве существует пар X, Y, таких что модуль значения выражения (X - Y) равен первому аргументу."})
 
 (def signature
   {:input  [{:argument-name "differ" :type {:name "integer"}}
