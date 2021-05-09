@@ -5,8 +5,9 @@
 
 (def tags ["math"])
 
-(def description "A typical car can hold three passengers and one driver, allowing four people to travel somewhere.
-                  Given `n` number of people, calculate how many cars are needed to seat everyone comfortably.")
+(def description
+  {:en "A typical car can hold three passengers and one driver, allowing four people to travel somewhere. Given `n` number of people, calculate how many cars are needed to seat everyone comfortably."
+   :ru "Обычная машина может вместить в себя три пассажира и водителя, позволяя им вчетвером доехать куда-либо. Дано `n` человек, рассчитайте сколько машин потребуется, чтобы все доехали в комфорте."})
 
 (def signature
   {:input [{:argument-name "peoples" :type {:name "integer"}}]

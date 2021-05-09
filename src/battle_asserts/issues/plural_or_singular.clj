@@ -6,9 +6,9 @@
 
 (def tags ["training" "strings"])
 
-(def description "Create a function that takes a word and
-                  determines whether or not it is plural.
-                  Ignore edge cases like goose and geese, fungus and fungi, etc.")
+(def description
+  {:en "Create a function that takes a word and determines whether or not it is plural. Ignore edge cases like goose and geese, fungus and fungi, etc."
+   :ru "Создайте функцию, которая принимает слово на английском языке и проверяет, во множественном ли числе находится слово. Проверяйте самый простой вариант."})
 
 (def signature
   {:input [{:argument-name "word" :type {:name "string"}}]

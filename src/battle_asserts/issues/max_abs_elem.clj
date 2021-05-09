@@ -5,7 +5,9 @@
 
 (def tags ["collections"])
 
-(def description "Find the maximum absolute value of an array.")
+(def description
+  {:en "Find the maximum absolute value of an array."
+   :ru "Найдите максимальное по модулю число в массиве."})
 
 (def signature
   {:input [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
