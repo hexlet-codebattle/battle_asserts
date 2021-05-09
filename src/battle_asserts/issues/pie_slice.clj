@@ -5,10 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Create a function that determines whether or not it's possible to split a pie fairly given these three parameters:
-                  Total number of slices.
-                  Number of recipients.
-                  How many slices each person gets.")
+(def description
+  {:en "Create a function that determines whether or not it's possible to split a pie fairly given these three parameters: Total number of slices. Number of recipients. How many slices each person gets."
+   :ru "Создайте функцию, которая проверяет, возможно ли честно разделить пирог по трем параметрам: всего кусков, количество людей, сколько кусков получит каждый человек."})
 
 (def signature
   {:input [{:argument-name "total" :type {:name "integer"}}

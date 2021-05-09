@@ -5,7 +5,9 @@
 
 (def tags ["training"])
 
-(def description "Create a function that validates whether a number `n` is exclusively within the bounds of `lower` and `upper`.")
+(def description
+  {:en "Create a function that validates whether a number `n` is exclusively within the bounds of `lower` and `upper`."
+   :ru "Создайте функцию, которая проверяет, находится ли число `n` в границах между `lower` и `upper` включительно."})
 
 (def signature
   {:input [{:argument-name "num" :type {:name "integer"}}
