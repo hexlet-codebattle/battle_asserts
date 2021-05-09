@@ -7,8 +7,11 @@
 
 (def tags ["network" "strings"])
 
-(def description "Return a query string (URL) generated from the given address and a hash map of parameters.
-                  The parameters in your result string should be arranged in alphabetical order.")
+(def description
+  {:en "Return a query string (URL) generated from the given address and a hash map of parameters.
+        The parameters in your result string should be arranged in alphabetical order."
+   :ru "Верните строку запроса (URL), созданную на основе адреса и словаря параметров.
+        Параметры в результирующей строке должны быть упорядочены по алфавиту."})
 
 (def signature
   {:input  [{:argument-name "url" :type {:name "string"}}
