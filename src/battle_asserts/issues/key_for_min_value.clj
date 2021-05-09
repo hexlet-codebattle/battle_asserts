@@ -6,8 +6,11 @@
 
 (def tags ["hash-maps" "strings"])
 
-(def description "Given a hash map, return the keys of the elements with the smallest value.
-                  The result should be sorted alphabetically.")
+(def description
+  {:en "Given a hash map, return the keys of the elements with the smallest value.
+        The result should be sorted alphabetically."
+   :ru "Дан словарь, верните ключи элементов с минимальным значением.
+        Результат должен быть отсортирован в алфавитном порядке."})
 
 (def signature
   {:input  [{:argument-name "h" :type {:name "hash" :nested {:name "integer"}}}]
