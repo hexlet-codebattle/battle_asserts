@@ -5,10 +5,15 @@
 
 (def tags ["physics"])
 
-(def description "Create a function that calculates kinetic energy with the following formula:
-                 `KE = 1/2 * m * v^2`
-                 `m` is mass in kg, `v` is velocity in m/s, `KE` is kinetic energy in J.
-                 Round answer to the nearest integer.")
+(def description
+  {:en "Create a function that calculates kinetic energy with the following formula:
+        `KE = 1/2 * m * v^2`
+        `m` is mass in kg, `v` is velocity in m/s, `KE` is kinetic energy in J.
+        Round answer to the nearest integer."
+   :ru "Создайте функцию, которая рассчитывает кинетическую энергию по следующей формуле:
+        `KE = 1/2 * m * v^2`
+        `m` - это масса в кг, `v` - это скорость в м/с, `KE` - это кинетическая энергия в Дж.
+        Округлите ответ до ближайшего целого."})
 
 (def signature
   {:input [{:argument-name "mass" :type {:name "integer"}}
