@@ -5,8 +5,11 @@
 
 (def tags ["collections"])
 
-(def description "Given an array of integers, find the largest pair sum in it. For example,
-                 the largest pair sum in [12, 34, 10, 6, 40] is 74.")
+(def description
+  {:en "Given an array of integers, find the largest pair sum in it. For example,
+        the largest pair sum in [12, 34, 10, 6, 40] is 74."
+   :ru "Дан массив целых чисел, найдите в нем сумму набольшей пары чисел.
+        Например сумма наибольшей пары чисел в [12, 34, 10, 6, 40] - это 74."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
