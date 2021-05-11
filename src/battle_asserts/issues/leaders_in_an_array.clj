@@ -5,10 +5,15 @@
 
 (def tags ["collections"])
 
-(def description "Print all the leaders in the array.
-                 An element is a leader if it is greater than all the elements to its right side.
-                 And the rightmost element is always a leader. For example in the array [16 17 4 3 5 2],
-                 leaders are 17, 5 and 2.")
+(def description
+  {:en "Print all the leaders in the array.
+        An element is a leader if it is greater than all the elements to its right side.
+        And the rightmost element is always a leader. For example in the array [16 17 4 3 5 2],
+        leaders are 17, 5 and 2."
+   :ru "Выведите всех лидеров в массиве.
+        Элемент является лидером, если он больше всех элементов расположенных правее него.
+        Самый правый элемент - всегда лидер. Например в массиве [16 17 4 3 5 2]
+        лидерами являются 17, 5 и 2."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]

@@ -5,7 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Create a function that calculates LCM (Least Common Multiple).")
+(def description
+  {:en "Create a function that calculates LCM (Least Common Multiple)."
+   :ru "Создайте функцию которая возвращает НОК (Наименьшее общее кратное)."})
 
 (def signature
   {:input [{:argument-name "x" :type {:name "integer"}}
