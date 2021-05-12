@@ -34,7 +34,7 @@
         (if (map? description)
           (swap! translated-count inc)
           (swap! untranslated-list (fn [acc el]
-                                     (assoc acc level (conj (acc level) el))) issue-name))))
+                                     (update-in acc [level] conj el)) issue-name))))
     (if (empty? @untranslated-list)
       (println "All tasks are translated!")
       (do
