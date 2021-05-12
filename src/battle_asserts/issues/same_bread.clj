@@ -5,8 +5,9 @@
 
 (def tags ["training" "collections"])
 
-(def description "Two arrays, which represent two sandwiches are given.
-                  Return whether both sandwiches use the same type of bread.")
+(def description
+  {:en "Two arrays, which represent two sandwiches are given. Return whether both sandwiches use the same type of bread."
+   :ru "Даны два массива, представляющих собой бутерброды. Проверьте, что они сделаны из одинакового хлеба."})
 
 (def signature
   {:input [{:argument-name "first" :type {:name "array" :nested {:name "string"}}}

@@ -5,7 +5,9 @@
 
 (def tags ["strings"])
 
-(def description "Create a function that takes in a current mood and return a sentence in the following format from tests.")
+(def description
+  {:en "Create a function that takes in a current mood and return a sentence in the following format from tests."
+   :ru "Создайте функцию, которая принимает нынешнее настроение и возвращает отформатированную строку, как в тестах."})
 
 (def signature
   {:input [{:argument-name "mood" :type {:name "string"}}]
