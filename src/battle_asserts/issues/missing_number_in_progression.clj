@@ -6,8 +6,11 @@
 
 (def tags ["math"])
 
-(def description "Given an array that represents elements of an arithmetic progression in order.
-                 One element is missing in the progression. Return the missing number.")
+(def description
+  {:en "Given an array that represents elements of an arithmetic progression in order.
+        One element is missing in the progression. Return the missing number."
+   :ru "Дан массив чисел представляющий собой упорядоченную арифметическую прогрессию.
+        Один элемент прогрессии пропущен. Верните пропущенный элемент."})
 
 (def signature
   {:input  [{:argument-name "sentence" :type {:name "array" :nested {:name "integer"}}}]
