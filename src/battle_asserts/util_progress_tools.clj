@@ -13,10 +13,18 @@
              #"-"
              "_"))
 
+(defn- present-untraslated-tasks [task-list level]
+  (if (empty? task-list)
+    (println (str "Tasks with level " level " translated!"))
+    (println (str (s/capitalize level) " tasks without translations: \n" (s/join "\n" task-list) "\n"))))
+
 (defn check-translations [& _args]
   (let [namespaces (collect-namespaces)
         translated-count (atom 0)
-        untranslated-list (atom (list))
+        untranslated-list (atom {:elementary '()
+                                 :easy '()
+                                 :medium '()
+                                 :hard '()})
         namespaces-count (count namespaces)]
     (doseq [namespace namespaces]
       (require namespace)
@@ -25,10 +33,15 @@
             level @(ns-resolve namespace 'level)]
         (if (map? description)
           (swap! translated-count inc)
-          (swap! untranslated-list conj (str issue-name " " level)))))
+          (swap! untranslated-list (fn [acc el]
+                                     (assoc acc level (conj (acc level) el))) issue-name))))
     (if (empty? @untranslated-list)
       (println "All tasks are translated!")
-      (println (str "Tasks without translations: \n" (s/join "\n" @untranslated-list))))
+      (do
+        (present-untraslated-tasks (@untranslated-list :elementary) "elementary")
+        (present-untraslated-tasks (@untranslated-list :easy) "easy")
+        (present-untraslated-tasks (@untranslated-list :medium) "medium")
+        (present-untraslated-tasks (@untranslated-list :hard) "hard")))
     (println (str "Total translation progress " @translated-count " / " namespaces-count " or " (format "%.1f" (float (* (/ @translated-count namespaces-count) 100))) "%"))))
 
 (defn check-tags [& _args]
