@@ -7,7 +7,9 @@
 
 (def tags ["strings"])
 
-(def description "Given a sentence, sort characters in each word alphabetically.")
+(def description
+  {:en "Given a sentence, sort characters in each word alphabetically."
+   :ru "Дано предложение, отсортируйте в алфавитном порядке символы в каждом слове."})
 
 (def signature
   {:input  [{:argument-name "sentence" :type {:name "string"}}]

@@ -6,7 +6,9 @@
 
 (def tags ["math" "strings"])
 
-(def description "Calculate the Levenshtein distance.")
+(def description
+  {:en "Calculate the Levenshtein distance."
+   :ru "Рассчитайте расстояние Левенштейна."})
 
 (def signature
   {:input  [{:argument-name "s1" :type {:name "string"}}
