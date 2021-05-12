@@ -7,8 +7,9 @@
 
 (def tags ["strings"])
 
-(def description "Given a string as input, reverse each word, but keep the word order the same.
-                  Words are separated by whitespaces.")
+(def description
+  {:en "Given a string as input, reverse each word, but keep the word order the same. Words are separated by whitespaces."
+   :ru "На вход подается строка, переверните каждое слово, но сохраните порядок слов. Слова разделены пробелом."})
 
 (def signature
   {:input  [{:argument-name "s" :type {:name "string"}}]

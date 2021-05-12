@@ -5,9 +5,9 @@
 
 (def tags ["collections" "strings"])
 
-(def description "Eliminate repeating values in a list.
-                  Repeated elements should be replaced with a single element.
-                  The order of the elements should not be changed.")
+(def description
+  {:en "Eliminate repeating values in a list. Repeated elements should be replaced with a single element. The order of the elements should not be changed."
+   :ru "Удалите повторяющиеся элементы в массиве. Повторяющиеся элементы должны быть заменены одним единственным. Порядок элементов должен сохраняться."})
 
 (def disabled true)
 
