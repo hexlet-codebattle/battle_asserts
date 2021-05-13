@@ -3,7 +3,7 @@
             [clojure.string :as s]
             [faker.generate :as faker]))
 
-(def level :elementary)
+(def level :medium)
 
 (def tags ["network" "strings"])
 
