@@ -7,7 +7,7 @@
 
 (def description
   {:en "Calculate the area of a rectangle given its length and width"
-   :ru "Рассчитайте площадь треугольника по переданной длине и ширине."})
+   :ru "Рассчитайте площадь прямоугольника по переданной длине и ширине."})
 
 (def signature
   {:input  [{:argument-name "width" :type {:name "integer"}}
