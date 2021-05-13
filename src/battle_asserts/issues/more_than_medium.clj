@@ -6,9 +6,13 @@
 
 (def tags ["strings"])
 
-(def description "Given a sentence (as string),
-                  return an array of words which are longer than the average length of all the words.
-                  Words a separated by a whitespace. If there is a trailing period (dot), it should be omittied. If there is no result, return \"there is no result!\"")
+(def description
+  {:en "Given a sentence (as string),
+        return an array of words which are longer than the average length of all the words.
+        Words a separated by a whitespace. If there is a trailing period (dot), it should be omittied. If there is no result, return \"there is no result!\""
+   :ru "Дано предложение (строкой),
+        верните массив слов, длина которых превышает среднюю длину всех слов.
+        Слова разделены пробелом. Если присутствует точка, её следует пропустить. Если результата нет, верните \"there is no result!\"."})
 
 (def signature
   {:input  [{:argument-name "sentence" :type {:name "string"}}]
