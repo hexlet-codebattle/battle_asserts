@@ -5,8 +5,10 @@
 
 (def tags ["collections"])
 
-(def description "Moves all 0's to the end the array while maintaining
-                 the relative order of the non-zero elements.")
+(def description
+  {:en "Moves all 0's to the end the array while maintaining
+        the relative order of the non-zero elements."
+   :ru "Переместите все 0 в конец массива сохраняя порядок ненулевых элементов."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]

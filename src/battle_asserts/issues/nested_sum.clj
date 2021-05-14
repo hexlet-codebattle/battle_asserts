@@ -5,7 +5,9 @@
 
 (def tags ["collections"])
 
-(def description "Calculate sum of two-dimensial array.")
+(def description
+  {:en "Calculate sum of two-dimensial array."
+   :ru "Посчитайте сумму двумерного массива."})
 
 (def signature
   {:input [{:argument-name "arr" :type {:name "array" :nested {:name "array" :nested {:name "integer"}}}}]
