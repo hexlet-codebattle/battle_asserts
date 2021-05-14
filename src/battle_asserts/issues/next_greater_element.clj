@@ -5,9 +5,13 @@
 
 (def tags ["math" "collections"])
 
-(def description "Given an array, return the Next Greater Element (NGE) for every element.
-                 The Next greater Element for an element x is the first greater element on the right side of x in array.
-                 Elements for which no greater element exist, consider next greater element as -1.")
+(def description
+  {:en "Given an array, return the Next Greater Element (NGE) for every element.
+        The Next greater Element for an element x is the first greater element on the right side of x in array.
+        Elements for which no greater element exist, consider next greater element as -1."
+   :ru "Дан массив, верните 'следующий больший элемент' для каждого элемента.
+        'Следующий больший элемент' для элемента x - это первый наибольший элемент в массиве справа от x.
+        Для элементов у которых нет большего элемента справа, 'следующий больший элемент' считайте равным -1."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
