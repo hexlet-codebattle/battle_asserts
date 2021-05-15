@@ -6,13 +6,21 @@
 
 (def tags ["strings"])
 
-(def description "Non return to zero, inverted (NRZI) is a method of mapping a binary signal to a physical signal
-                 for transmission over some transmission media. The two level NRZI signal has a transition at
-                 a clock boundary if the bit being transmitted is a logical 1,
-                 and does not have a transition if the bit being transmitted is a logical 0.
+(def description
+  {:en "Non return to zero, inverted (NRZI) is a method of mapping a binary signal to a physical signal
+        for transmission over some transmission media. The two level NRZI signal has a transition at
+        a clock boundary if the bit being transmitted is a logical 1,
+        and does not have a transition if the bit being transmitted is a logical 0.
 
-                 0 100 10000 100 1 1 1
-                 ¯|___|¯¯¯¯¯|___|¯|_|¯")
+        0 100 10000 100 1 1 1
+        ¯|___|¯¯¯¯¯|___|¯|_|¯"
+   :ru "NRZI кодирование - метод сопоставления двоичного сигнала с физическим сигналом
+        для передачи через некоторую среду. Двухуровневый сигнал NRZI имеет переход на границе тактовой частоты,
+        если передаваемый бит является логической 1,
+        и не имеет перехода, если передаваемый бит является логическим 0.
+
+        0 100 10000 100 1 1 1
+        ¯|___|¯¯¯¯¯|___|¯|_|¯"})
 
 (def signature
   {:input  [{:argument-name "seq" :type {:name "string"}}]
