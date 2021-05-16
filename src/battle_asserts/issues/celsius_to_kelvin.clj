@@ -6,8 +6,8 @@
 (def tags ["conversion" "physics"])
 
 (def description
-  {:en "Сonvert Celsius temperature to Kelvin. Use floor rounding for the result temperature."
-   :ru "Создайте функцию, конвертирующую температуру из Цельсия в Кельвины. Полученный результат округлите в меньшую сторону."})
+  {:en "Сonvert Celsius temperature to Kelvin. Consider using 273 for conversion."
+   :ru "Создайте функцию, конвертирующую температуру из Цельсия в Кельвины. Используйте при конвертации число 273."})
 
 (def signature
   {:input [{:argument-name "temperature" :type {:name "integer"}}]
@@ -23,4 +23,4 @@
    {:expected -226 :arguments [-500]}])
 
 (defn solution [temperature]
-  (int (+ temperature 273.15)))
+  (int (+ temperature 273)))
