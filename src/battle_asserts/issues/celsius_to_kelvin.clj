@@ -20,7 +20,7 @@
   [{:expected 308 :arguments [35]}
    {:expected 261 :arguments [-12]}
    {:expected 273 :arguments [0]}
-   {:expected -226 :arguments [-500]}])
+   {:expected -227 :arguments [-500]}])
 
 (defn solution [temperature]
-  (int (+ temperature 273)))
+  (+ temperature 273))
