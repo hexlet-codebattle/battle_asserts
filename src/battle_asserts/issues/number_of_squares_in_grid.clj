@@ -5,7 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Create a function that calculates the number of different squares in an `n * n` square grid.")
+(def description
+  {:en "Create a function that calculates the number of different squares in an `n * n` square grid."
+   :ru "Создайте функцию, которая подсчитывает число различных квадратов на квадратной сетке размера `n * n`."})
 
 (def signature
   {:input [{:argument-name "number" :type {:name "integer"}}]

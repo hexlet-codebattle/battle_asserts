@@ -6,7 +6,9 @@
 
 (def tags ["strings"])
 
-(def description "Write a function that accepts a positive integer between 0 and 2000 inclusive and returns a string representation of that integer written in English.")
+(def description
+  {:en "Write a function that accepts a positive integer between 0 and 2000 inclusive and returns a string representation of that integer written in English."
+   :ru "Напишите функцию, которая принимает положительное целое число между 0 и 2000 включительно, и возвращает строковое представление этого числа на английском языке."})
 
 (def signature
   {:input [{:argument-name "num" :type {:name "integer"}}]
