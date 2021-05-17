@@ -5,8 +5,11 @@
 
 (def tags ["math"])
 
-(def description "Create a function that takes two vectors and checks if them are orthogonal or not.
-                  Two vectors are orthogonal if their dot product is equal to zero.")
+(def description
+  {:en "Create a function that takes two vectors and checks if them are orthogonal or not.
+        Two vectors are orthogonal if their dot product is equal to zero."
+   :ru "Напишите функцию, которая принимает два вектора и проверяет ортогональные ли они.
+        Два вектора ортогональные если их скалярное произведение равно нулю."})
 
 (def signature
   {:input  [{:argument-name "vec1" :type {:name "array" :nested {:name "integer"}}}
