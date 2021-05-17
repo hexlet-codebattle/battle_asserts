@@ -5,10 +5,15 @@
 
 (def tags ["collections"])
 
-(def description "Given an array with both positive and negative integers,
-                 return a pair of integers that, when multiplied, would produce the largest possible number.
-                 An element can only be used once, in other words, you cannot multiply a number by itself.
-                 Elements of the pair should be arranged in ascending order.")
+(def description
+  {:en "Given an array with both positive and negative integers,
+        return a pair of integers that, when multiplied, would produce the largest possible number.
+        An element can only be used once, in other words, you cannot multiply a number by itself.
+        Elements of the pair should be arranged in ascending order."
+   :ru "Дан массив как с положительными, так и с отрицательными целыми числами.
+        Верните пару чисел дающих при умножении наибольшее произведение из возможных.
+        Каждый элемент можно использовать лишь единожды, другими словами, вы не можете умножить число на само себя.
+        Элементы пары должны быть расположены в порядке возрастания."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
