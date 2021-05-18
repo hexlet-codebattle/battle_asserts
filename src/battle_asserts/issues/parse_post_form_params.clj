@@ -7,7 +7,9 @@
 
 (def tags ["network" "strings"])
 
-(def description "Parse a given request string.")
+(def description
+  {:en "Parse a given request string."
+   :ru "Разберите (распарсите) переданную строку запроса."})
 
 (def disabled true)
 

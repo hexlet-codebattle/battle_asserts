@@ -5,8 +5,11 @@
 
 (def tags ["math"])
 
-(def description "Determine if a given number is \"perfect\".
-                  Perfect number is a positive integer that is equal to the sum of its proper positive divisors (the sum of its positive divisors excluding the number itself).")
+(def description
+  {:en "Determine if a given number is \"perfect\".
+        Perfect number is a positive integer that is equal to the sum of its proper positive divisors (the sum of its positive divisors excluding the number itself)."
+   :ru "Определите является ли переданное число совершенным.
+        Положительное целое число является совершенным, если оно равно сумме своих собственных делителей (то есть всех положительных делителей, отличных от самого числа)"})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]
