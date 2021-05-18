@@ -13,7 +13,7 @@
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/vector gen/small-integer 2 20)))
+  (gen/tuple (gen/vector (gen/choose 1 255) 2 20)))
 
 (def test-data
   [{:expected [1 2 4 3]
