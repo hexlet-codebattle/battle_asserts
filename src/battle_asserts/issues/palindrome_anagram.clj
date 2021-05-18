@@ -8,7 +8,7 @@
 
 (def description
   {:en "Check if any anagram of a given string is a palindrome."
-   :ru "Проверьте, является ли строка палиндромом."})
+   :ru "Проверьте, является ли какая - либо анаграмма данной строки палиндромом."})
 
 (def signature
   {:input  [{:argument-name "s" :type {:name "string"}}]
