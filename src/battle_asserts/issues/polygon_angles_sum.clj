@@ -5,7 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Given an n-sided regular polygon `n`. Calculate total sum of internal angles (in degrees).")
+(def description
+  {:en "Given an n-sided regular polygon `n`. Calculate total sum of internal angles (in degrees)."
+   :ru "Дан n-сторонний правильный многоугольник. Рассчитайте сумму внутренних углов (в градусах)."})
 
 (def signature
   {:input [{:argument-name "n" :type {:name "integer"}}]

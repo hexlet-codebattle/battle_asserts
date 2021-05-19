@@ -5,8 +5,11 @@
 
 (def tags ["math"])
 
-(def description "Calculate the sum of digits of 2\\*\\*n
-                 For example, 2\\*\\*15 = 32768, and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.")
+(def description
+  {:en "Calculate the sum of digits of 2\\*\\*n
+        For example, 2\\*\\*15 = 32768, and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26."
+   :ru "Подсчитайте сумму цифр 2\\*\\*n.
+        Например 2\\*\\*15 = 32768, и сумма цифр равна 3 + 2 + 7 + 6 + 8 = 26."})
 
 (def signature
   {:input  [{:argument-name "n" :type {:name "integer"}}]
