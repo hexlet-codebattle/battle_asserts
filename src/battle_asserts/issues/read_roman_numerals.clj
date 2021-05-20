@@ -7,7 +7,9 @@
 
 (def tags ["strings"])
 
-(def description "Parse a Roman-numeral string and return the number it represents.")
+(def description
+  {:en "Parse a Roman-numeral string and return the number it represents."
+   :ru "Разберите строку римских цифр и верните число представленное ими."})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "string"}}]

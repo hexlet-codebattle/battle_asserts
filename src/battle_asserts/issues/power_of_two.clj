@@ -5,7 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Determine if a given integer is a power of two.")
+(def description
+  {:en "Determine if a given integer is a power of two."
+   :ru "Определите, является ли данное число степенью двойки."})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]
