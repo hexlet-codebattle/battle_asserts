@@ -5,7 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Create a function that finds how many prime numbers are in a sequence from zero to a given integer, inclusive.")
+(def description
+  {:en "Create a function that finds how many prime numbers are in a sequence from zero to a given integer, inclusive."
+   :ru "Создайте функцию, которая подсчитывает сколько простых чисел содержится в последовательности от 0 до заданного числа включительно."})
 
 (def signature
   {:input [{:argument-name "number" :type {:name "integer"}}]

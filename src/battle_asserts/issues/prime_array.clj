@@ -5,7 +5,9 @@
 
 (def tags ["math" "collections"])
 
-(def description "Generate the array of first n prime numbers.")
+(def description
+  {:en "Generate the array of first n prime numbers."
+   :ru "Сгенерируйте массив первых n простых чисел."})
 
 (def signature
   {:input [{:argument-name "n" :type {:name "integer"}}]
