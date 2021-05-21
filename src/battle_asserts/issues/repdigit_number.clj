@@ -6,8 +6,11 @@
 
 (def tags ["math"])
 
-(def description "A repdigit is a positive number composed out of the same digit.
-                  Create a function that checks an integer it's a repdigit or not.")
+(def description
+  {:en "A repdigit is a positive number composed out of the same digit.
+        Create a function that checks an integer it's a repdigit or not."
+   :ru "Однообразное число (репдиджит) - это положительное число, составленное из одной и той же цифры.
+        Создайте функцию, которая проверяет является ли переданное число репдиджитом."})
 
 (def signature
   {:input [{:argument-name "number" :type {:name "integer"}}]
