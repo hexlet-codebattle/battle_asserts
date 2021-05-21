@@ -6,12 +6,19 @@
 
 (def tags ["strings"])
 
-(def description "Given a DNA strand, return its RNA complement.
-                 Both DNA and RNA strands are a sequence of nucleotides.
-                 DNA's nucleotides are adenine (A), cytosine (C), guanine (G) and thymidine (T).
-                 RNA's nucleotides are adenine (A), cytosine (C), guanine (G) and uracil (U).
-                 The transcribed RNA strand of a DNA strand is formed by replacing each nucleotide with its complement:
-                 G -> C, C -> G, T -> A, A -> U.")
+(def description
+  {:en "Given a DNA strand, return its RNA complement.
+        Both DNA and RNA strands are a sequence of nucleotides.
+        DNA's nucleotides are adenine (A), cytosine (C), guanine (G) and thymidine (T).
+        RNA's nucleotides are adenine (A), cytosine (C), guanine (G) and uracil (U).
+        The transcribed RNA strand of a DNA strand is formed by replacing each nucleotide with its complement:
+        G -> C, C -> G, T -> A, A -> U."
+   :ru "Дана цепь ДНК, постройте комплементарную цепь РНК.
+        И ДНК и РНК - это последовательность нуклеотидов.
+        Нуклеотиды ДНК - это аденин (A), цитозин (C), гуанин (G) и тимин (T).
+        Нуклеотиды РНК - аденин (A), цитозин (C), гуанин (G) и урацил (U).
+        Транскрибируемая цепь РНК цепи ДНК образуется путем замены каждого нуклеотида на комплементарный ему:
+        G -> C, C -> G, T -> A, A -> U."})
 
 (def signature
   {:input  [{:argument-name "dna" :type {:name "string"}}]
