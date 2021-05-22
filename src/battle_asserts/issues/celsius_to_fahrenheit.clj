@@ -3,6 +3,8 @@
 
 (def level :easy)
 
+(def disabled true)
+
 (def tags ["conversion" "physics"])
 
 (def description
