@@ -5,10 +5,15 @@
 
 (def tags ["games" "math"])
 
-(def description "Create a function based on the input and output.
-                  Look at the examples, there is a pattern.
-                  First number in range `[1, 7]`, second in `[0 8]`.
-                  Operations `pow`, `*` and `-` can be helpful.")
+(def description
+  {:en "Create a function based on the input and output.
+        Look at the examples, there is a pattern.
+        First number in range `[1, 7]`, second in `[0 8]`.
+        Operations `pow`, `*` and `-` can be helpful."
+   :ru "Создайте функцию, основанную на входных и выходных данных.
+        Посмотрите на примеры, там присутствует шаблон.
+        Первое число находится в диапазоне `[1, 7]`, второе в диапазоне `[0 8]`.
+        Операции возведения в степень, `*` и `-` могут быть полезны."})
 
 (def signature
   {:input [{:argument-name "first" :type {:name "integer"}}
