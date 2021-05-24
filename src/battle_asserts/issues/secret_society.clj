@@ -7,9 +7,13 @@
 
 (def tags ["collections" "strings"])
 
-(def description "A group of friends have decided to start a secret society.
-                  The name will be the first letter of each of their names.
-                  Create a function that takes an array of names and returns the name of the secret society sorted in alphabetical order.")
+(def description
+  {:en "A group of friends have decided to start a secret society.
+        The name will be the first letter of each of their names.
+        Create a function that takes an array of names and returns the name of the secret society sorted in alphabetical order."
+   :ru "Группа друзей решила организовать тайное общество.
+        Имя общества состоит из первых буквы имен каждого из друзей.
+        Создайте функцию которая принимает массив имен и возвращает имя тайного общества, буквы имени общества отсортированы в алфавитном порядке."})
 
 (def signature
   {:input [{:argument-name "names" :type {:name "array" :nested {:name "string"}}}]
