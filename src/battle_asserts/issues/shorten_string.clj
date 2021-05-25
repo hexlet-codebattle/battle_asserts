@@ -6,8 +6,11 @@
 
 (def tags ["strings"])
 
-(def description "Provide the word in the form of an acronym composed of the first letter,
-                 the number of letters in the word minus 2 and the last letter of the word.")
+(def description
+  {:en "Provide the word in the form of an acronym composed of the first letter,
+        the number of letters in the word minus 2 and the last letter of the word."
+   :ru "Представьте данное слово в виде аббревиатуры состоящей из первой буквы,
+        числа, представляющего количество букв в слове минус 2 и последней буквы слова."})
 
 (def signature
   {:input  [{:argument-name "s" :type {:name "string"}}]
