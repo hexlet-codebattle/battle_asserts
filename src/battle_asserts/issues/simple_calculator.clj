@@ -5,7 +5,9 @@
 
 (def tags ["math"])
 
-(def description "Given two **integer** numbers. Create a simple calculator that supports next operations: `add`, `substract`, `pow`, `multiply`, `remainder`.")
+(def description
+  {:en "Given two **integer** numbers. Create a simple calculator that supports next operations: `add`, `substract`, `pow`, `multiply`, `remainder`."
+   :ru "Даны два **целых** числа. Создайте простой калькулятор, который поддерживает следующие операции: `сложение`, `вычитание`, `возведение в степень`, `умножение`, `остаток от деления`"})
 
 (def signature
   {:input [{:argument-name "first" :type {:name "integer"}}
