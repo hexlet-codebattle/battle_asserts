@@ -5,11 +5,17 @@
 
 (def tags ["collections"])
 
-(def description "`N` dicks randomly spread out of `M` stairs, there can be as many dicks as you want on one step. We gotta go down these stairs.
-                  Every time you step on a stair-step with dicks, the infame number increases by the number of dicks.
-                  You can go down one or two steps at a time (You can`t lookup infame number farther than two steps away from you!). Write a function to descend the stairs minimizing the infame number (function must find local minimun at each step!).
-                  The function receives an array with the number of dicks on each step and returns the minimized infame number.
-                  Powered by Eugene Zaytsev.")
+(def description
+  {:en "`N` dicks randomly spread out of `M` stairs, there can be as many dicks as you want on one step. We gotta go down these stairs.
+        Every time you step on a stair-step with dicks, the infame number increases by the number of dicks.
+        You can go down one or two steps at a time (You can`t lookup infame number farther than two steps away from you!). Write a function to descend the stairs minimizing the infame number (function must find local minimun at each step!).
+        The function receives an array with the number of dicks on each step and returns the minimized infame number.
+        Powered by Eugene Zaytsev."
+   :ru "`N` членов случайно раскиданы по лестнице из `M` ступенек, на одной ступеньке может быть сколько угодно членов. Нужно спуститься по этой лестнице вниз.
+        Каждый раз наступая на ступеньку с членами, число позора увеличивается по количеству членов.
+        Спускаться можно на одну или две ступеньки за раз (вы не можете обнаружить число позора дальше, чем в двух ступеньках от вас!). Напишите функцию спуска с лестницы минимизирующую коэффициент позора (функция должна находить локальный минимум на каждом шаге!).
+        Функция принимает массив с количеством членов на каждой ступеньке и возвращает минимизированное число позора.
+        При поддержке Евгения Зайцева."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
