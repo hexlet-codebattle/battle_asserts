@@ -5,7 +5,9 @@
 
 (def tags ["collections"])
 
-(def description "Given an array of integers, every element appears twice except for one. Find that single one.")
+(def description
+  {:en "Given an array of integers, every element appears twice except for one. Find that single one."
+   :ru "Дан массив целых чисел, в нем все элементы кроме одного присутствует по два раза. Найдите элемент одиночку."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
