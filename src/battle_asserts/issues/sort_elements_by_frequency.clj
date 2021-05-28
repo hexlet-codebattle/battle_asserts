@@ -5,10 +5,15 @@
 
 (def tags ["collections" "sorting"])
 
-(def description "Given an array of integers, sort the array according to frequency of elements.
-                 Most frequent numbers come first.
-                 If several groups of the same size exist,
-                 they should appear in the order of corresponding numbers in the input array.")
+(def description
+  {:en "Given an array of integers, sort the array according to frequency of elements.
+        Most frequent numbers come first.
+        If several groups of the same size exist,
+        they should appear in the order of corresponding numbers in the input array."
+   :ru "Дан массив целых чисел, отсортируйте его элементы по частоте присутствия в массиве.
+        Самые часто встречающиеся элементы должны быть в начале.
+        Если существует несколько групп элементов одинаковой частоты,
+        они должны быть расположены в порядке первой встречи соответствующих элементов в исходном массиве."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
