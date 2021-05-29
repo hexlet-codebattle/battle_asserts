@@ -5,8 +5,11 @@
 
 (def tags ["math"])
 
-(def description "Create a function that takes two numbers and checks
-                  if the square root of the first number is equal to the cube root of the second number.")
+(def description
+  {:en "Create a function that takes two numbers and checks
+        if the square root of the first number is equal to the cube root of the second number."
+   :ru "Создайте функцию, которая принимает 2 числа и проверяет
+        равен ли квадратный корень первого числа кубическому корню второго числа."})
 
 (def signature
   {:input [{:argument-name "first" :type {:name "integer"}}
