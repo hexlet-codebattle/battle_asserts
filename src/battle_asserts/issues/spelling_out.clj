@@ -6,7 +6,9 @@
 
 (def tags ["strings" "collections"])
 
-(def description "Create a function which takes in a word and spells it out, by consecutively adding letters until the full word is completed.")
+(def description
+  {:en "Create a function which takes in a word and spells it out, by consecutively adding letters until the full word is completed."
+   :ru "Создайте функцию, которая принимает слово и произносит его по буквам, последовательно добавляя буквы, пока слово не будет произнесено полностью."})
 
 (def signature
   {:input [{:argument-name "word" :type {:name "string"}}]
