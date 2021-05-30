@@ -6,9 +6,13 @@
 
 (def tags ["strings"])
 
-(def description "Given a string, which contains only decimal digits (0-9). Each digit is made of a certain number of dashes,
-                 as on LCD-display of a calculator. For instance 1 is made of 2 dashes, 8 is made of 7 dashes and so on.
-                 Return the total number of dashes in the input string.")
+(def description
+  {:en "Given a string, which contains only decimal digits (0-9). Each digit is made of a certain number of dashes,
+        as on LCD-display of a calculator. For instance 1 is made of 2 dashes, 8 is made of 7 dashes and so on.
+        Return the total number of dashes in the input string."
+   :ru "Дана строка, которая содержит только десятичные цифры (0-9). Каждая цифра состоит из определенного числа сегментов,
+        как на экране калькулятора. 1 состоит из 2 сегментов, 8 состоит из 7 сегментов и так далее.
+        Верните общее число сегметнов содержащихся во входной строке."})
 
 (def signature
   {:input  [{:argument-name "str" :type {:name "string"}}]

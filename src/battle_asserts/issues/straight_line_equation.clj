@@ -7,9 +7,13 @@
 
 (def disabled true)
 
-(def description "Create a function to describe a line passing through
-                  two points with coordinates (x1, y1) and (x2, y2).
-                  Return result as array where first number is `kx` and second number is `b`. Use floor rounding.")
+(def description
+  {:en "Create a function to describe a line passing through
+        two points with coordinates (x1, y1) and (x2, y2).
+        Return result as array where first number is `kx` and second number is `b`. Use floor rounding."
+   :ru "Напишите функцию, описывающую линию проходящую через
+        две точке с координатами (x1, y1) и (x2, y2).
+        Результат верните в виде массива, где первое число это `kx`, а втроое `b`. Округляйте вниз."})
 
 (def signature
   {:input  [{:argument-name "first" :type {:name "array" :nested {:name "integer"}}}
