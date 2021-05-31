@@ -5,14 +5,22 @@
 
 (def tags ["collections"])
 
-(def description "Given two lists, determine whether the first list is
-                 contained within the second list, whether the second list is contained within
-                 the first list, whether both lists are contained within each other or whether none
-                 of these are true.
-                 A = [3, 4], B = [1, 2, 3, 4, 5], A is sublist of B
-                 A = [1, 2, 3], B = [1, 2, 3], A is equal B
-                 A = [1, 2, 3, 4, 5], B = [2, 3, 4], A is superlist of B
-                 A = [1, 2, 4], B = [1, 2, 3, 4, 5], A is unequal B]")
+(def description
+  {:en "Given two lists, determine whether the first list is
+        contained within the second list, whether the second list is contained within
+        the first list, whether both lists are contained within each other or whether none
+        of these are true.
+        A = [3, 4], B = [1, 2, 3, 4, 5], A is sublist of B
+        A = [1, 2, 3], B = [1, 2, 3], A is equal B
+        A = [1, 2, 3, 4, 5], B = [2, 3, 4], A is superlist of B
+        A = [1, 2, 4], B = [1, 2, 3, 4, 5], A is unequal B"
+   :ru "Даны два списка, определите содержится ли первый список во втором списке,
+        содержится ли второй список в первом списке, содержатся ли оба списка друг в друге
+        или ничего из вышеперечисленного.
+        A = [3, 4], B = [1, 2, 3, 4, 5] - \"A is sublist of B\"
+        A = [1, 2, 3], B = [1, 2, 3] -  \"A is equal B\"
+        A = [1, 2, 3, 4, 5], B = [2, 3, 4] - \"A is superlist of B\"
+        A = [1, 2, 4], B = [1, 2, 3, 4, 5] - \"A is unequal B\""})
 
 (def signature
   {:input  [{:argument-name "arr1" :type {:name "array" :nested {:name "integer"}}}

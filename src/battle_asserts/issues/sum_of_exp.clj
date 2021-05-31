@@ -6,7 +6,9 @@
 
 (def tags ["strings"])
 
-(def description "Given an integer x, return the sum x + xx + xxx (x times) as a string. For example, for 2: 2 + 22 = 24.")
+(def description
+  {:en "Given an integer x, return the sum x + xx + xxx (x times) as a string. For example, for 2: 2 + 22 = 24."
+   :ru "Дано целое число x, верните сумму x + xx + xxx (x раз) в виде строки. Например, для 2: 2 + 22 = 24."})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]
