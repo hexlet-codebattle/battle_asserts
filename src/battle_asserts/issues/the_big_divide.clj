@@ -5,8 +5,11 @@
 
 (def tags ["math"])
 
-(def description "Calculate the sum of all natural numbers smaller than n (first argument)
-                 which are divisible by a or/and b (second and third arguments) without remainder.")
+(def description
+  {:en "Calculate the sum of all natural numbers smaller than n (first argument)
+        which are divisible by a or/and b (second and third arguments) without remainder."
+   :ru "Вычислите сумму всех натуральных чисел меньше чем n (первый аргумент)
+        которые делятся на a или b (второй и третий аргументы) без остатка."})
 
 (def signature
   {:input  [{:argument-name "n" :type {:name "integer"}}
