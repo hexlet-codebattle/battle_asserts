@@ -4,11 +4,17 @@
 
 (def tags ["games"])
 
-(def description "Write a function that checks each move of the game tic-tac-toe.
-                  The function takes the current state of the field as a two-dimensional array.
-                  If player 'X' won, returns 'X won', player 'O' won - return 'O won'.
-                  If no one has won yet, return 'Next'.
-                  If the field is full, but no one has won return 'Game over'")
+(def description
+  {:en "Write a function that checks each move of the game tic-tac-toe.
+        The function takes the current state of the field as a two-dimensional array.
+        If player 'X' won, returns 'X won', player 'O' won - return 'O won'.
+        If no one has won yet, return 'Next'.
+        If the field is full, but no one has won return 'Game over'"
+   :ru "Напишите функцию, которая проверяет каждый ход в игре крестики-нолики.
+        Функция принимает текущее состояние поля в виде двумерного массива.
+        Если игрок 'X' выиграл - верните 'X won', если выиграл игрок 'O' - верните 'O won'.
+        Если никто пока не выиграл - верните 'Next'.
+        Если поле полностью заполнено, но никто не выиграл - верните 'Game over'"})
 
 (def signature
   {:input [{:argument-name "field" :type {:name "array" :nested {:name "array" :nested {:name "string"}}}}]
