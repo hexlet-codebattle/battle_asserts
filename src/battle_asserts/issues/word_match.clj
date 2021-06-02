@@ -6,10 +6,9 @@
 
 (def tags ["strings"])
 
-(def description "Write a function that takes two string and
-checks whether it is possible to write the first string with
-characters from the second string, while respecting the order
-in which these characters appear in the second string.")
+(def description
+  {:en "Write a function that takes two string and checks whether it is possible to write the first string with characters from the second string, while respecting the order in which these characters appear in the second string."
+   :ru "Напишите функцию, которая принимает две строки и проверяет, можно ли записать первую строку символами из второй строки, соблюдая при этом порядок в котором эти символы появляются во второй строке."})
 
 (def signature
   {:input  [{:argument-name "str1" :type {:name "string"}}

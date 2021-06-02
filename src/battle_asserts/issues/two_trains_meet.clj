@@ -6,10 +6,9 @@
 
 (def tags ["physics"])
 
-(def description "Compute how long after their deparature two trains will meet.
-                 Assume that the trains travel between two points, along a single
-                 section of track, going in opposite directions. The function should
-                 consume the trains' speeds and the starting distance between the trains.")
+(def description
+  {:en "Compute how long after their deparature two trains will meet. Assume that the trains travel between two points, along a single section of track, going in opposite directions. The function should consume the trains' speeds and the starting distance between the trains."
+   :ru "Вычислите, через какое время после отправления два поезда встретятся. Предположим, что поезда движутся между двумя пунктами по одному участку пути, двигаясь в противоположных направлениях. Функция должна принимать скорости поездов и начальное расстояние между ними."})
 
 (def signature
   {:input [{:argument-name "v1" :type {:name "integer"}}

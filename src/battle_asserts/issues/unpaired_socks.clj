@@ -5,11 +5,21 @@
 
 (def tags ["collections"])
 
-(def description "\"Where do the socks go?\" - Misha thought after another laundry.
+(def description
+  {:en "\"Where do the socks go?\" - Misha thought after another laundry.
                  As usual, after the washing, he had a lot of socks left without pair, and he had to decide how many new socks to buy.
                  He decided to simplify the task and make a machine that would count socks without pairs.
                  Misha decided to create an algorithm to search for unpaired socks. Help Misha to write an algorithm.
-                 The function accepts an array of `n` integers `X`, - where `X` is the color of the sock from 0 to 1000. ")
+                 The function accepts an array of `n` integers `X`, - where `X` is the color of the sock from 0 to 1000. "
+   :ru "«Куда пропадают носки?» — размышлял Миша после очередной стирки. Как обычно,
+после стирки у него осталась куча носков без пар, и ему нужно было решить, сколько
+новых носков прикупить. Он решил упростить задачу и сделать машинку, которая будет
+считать беспарные носки. Однако, прежде чем реализовывать ее в железе, Миша решил
+создать алгоритм, позволяющий машине тратить как можно меньше усилий на поиск
+непарных носков. Помогите Мише написать алгоритм для машинки.
+Функция принимает массив: массив из п целых чисел Х, - где Х, это цвет носка от
+0 до 1000. Метод должен вернуть целое число, равное количеству носков не имеющих
+пары."})
 
 (def signature
   {:input  [{:argument-name "socks" :type {:name "array" :nested {:name "integer"}}}]

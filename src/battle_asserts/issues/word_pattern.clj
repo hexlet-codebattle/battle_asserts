@@ -8,9 +8,9 @@
 
 (def tags ["collections" "strings"])
 
-(def description "Given a pattern and a string str, find if str follows the same pattern.
-                 For example,
-                 pattern = \" abba \", str = \" dog cat cat dog \" should return true.")
+(def description
+  {:en "Given a pattern and a string `str`, find if `str` follows the same pattern. For example, pattern = \" abba \", str = \" dog cat cat dog \" should return true."
+   :ru "Дан паттерн и строка `str`, Проверьте, следует ли переданная строка паттерну. Например, паттерн = \" abba \", str = \" dog cat cat dog\" функция должна вернуть true."})
 
 (def signature
   {:input  [{:argument-name "str1" :type {:name "string"}}
