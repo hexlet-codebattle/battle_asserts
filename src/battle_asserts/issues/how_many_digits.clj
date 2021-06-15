@@ -7,8 +7,8 @@
 (def tags ["strings"])
 
 (def description
-  {:en "Imagine you took all the numbers between 1 and `n` and concatenated them together into a long string. How many digits are there between 1 and `n`? Write a function that can calculate this."
-   :ru "Представьте, что вы беретет все числа от 1 до `n` и соединяете их в одну большую строку. Как много цифр между 1 и `n`? Создайте функцию которая рассчитывает это."})
+  {:en "Imagine you took all the numbers from 1 to `n` and concatenated them together into a long string. How many digits are there between 0 and `n`? Write a function that can calculate this."
+   :ru "Представьте, что вы беретет все числа от 1 до `n` и соединяете их в одну большую строку. Как много цифр между 0 и `n`? Создайте функцию которая рассчитывает это."})
 
 (def signature
   {:input  [{:argument-name "n" :type {:name "integer"}}]
