@@ -7,7 +7,7 @@
 
 (def description
   {:en "Write a function that takes the assumed and real soccer match scores as the arguments and returns 2 if the score is correct, 1 if the winner is correct but the score is wrong and 0 if the winner is wrong."
-   :ru "Создайте функцию, которая принимает предсказанный счет и настоящий счет футбольного матча. Верните 2, если счета совпали, 1 если сумма счетов совпали, но очки отличаются, 0 если предсказание оказалось полностью неверным."})
+   :ru "Создайте функцию, которая принимает предсказанный счет и настоящий счет футбольного матча. Верните 2, если счета совпали, 1 если победитель предсказан верно, но очки отличаются, 0 если предсказание оказалось полностью неверным."})
 
 (def signature
   {:input [{:argument-name "guess" :type {:name "array" :nested {:name "integer"}}}
