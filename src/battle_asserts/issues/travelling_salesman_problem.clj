@@ -3,7 +3,7 @@
 
 (def level :easy)
 
-(def tags ["math"])
+(def tags ["math" "recursion"])
 
 (def description
   {:en "Given a list of cities and the distances between each pair of cities,

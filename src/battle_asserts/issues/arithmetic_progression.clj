@@ -3,7 +3,7 @@
 
 (def level :elementary)
 
-(def tags ["math"])
+(def tags ["math" "recursion"])
 
 (def description
   {:en "Calculate arithmetic progression from 1 to `n`."
