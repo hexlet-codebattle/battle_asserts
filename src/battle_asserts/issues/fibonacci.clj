@@ -3,7 +3,7 @@
 
 (def level :easy)
 
-(def tags ["math"])
+(def tags ["math" "recursion"])
 
 (def description
   {:en "Return the N'th item in the Fibonacci sequence Hint: The first item in the sequence is 0."
