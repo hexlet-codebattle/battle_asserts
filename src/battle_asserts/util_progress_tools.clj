@@ -100,4 +100,9 @@
         (if-not (nil? tags)
           (swap! tags-list (fn [acc elem] (apply conj acc elem)) @tags)
           (println (str "Task " issue-name " without tags!")))))
-    (println "Total tags stats:\n" (frequencies @tags-list))))
+    (let [stats (frequencies @tags-list)
+          incorrect-tag-number 1
+          probably-incorrect (mapv first (filterv
+                                          #(= (second %) incorrect-tag-number) stats))]
+      (println "Total tags stats:" (s/join ", " (mapv #(s/join ": " %) stats)))
+      (println "Probably misspelled tags:" (s/join ", " probably-incorrect)))))
