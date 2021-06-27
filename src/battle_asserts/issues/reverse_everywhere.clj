@@ -3,7 +3,7 @@
             [clojure.string :as s]
             [faker.generate :as faker]))
 
-(def level :easy)
+(def level :elementary)
 
 (def tags ["strings" "collections"])
 
