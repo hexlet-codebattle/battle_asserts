@@ -5,7 +5,7 @@
 
 (def level :elementary)
 
-(def tags ["training" "strings"])
+(def tags ["training" "strings" "os"])
 
 (def description
   {:en "Implement a function that returns directories count."
