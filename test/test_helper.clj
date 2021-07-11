@@ -41,8 +41,6 @@
       (nested? elem) {:type {:name (type-map (type elem)) :nested {:name (type-map (type (first elem)))}}}
       :else {:type {:name (type-map (type elem))}})))
 
-(type (ffirst [{:a "b"}]))
-
 (defn- prepare-expected-results [expected]
   (list (type-element expected)))
 

@@ -32,7 +32,7 @@
          clojure.lang.Keyword "string"}]
     (cond
       (and (nested? elem) (= (type-map (type elem)) "hash")) {:type {:name (type-map (type elem)), :nested {:name (type-map (type (last (first elem))))}}}
-      (and (nested? elem) (nested? (first elem))) {:type {:name (type-map (type elem)), :nested {:name (type-map (type (first elem))) :nested {:name (type-map (type (ffirst elem)))}}}}
+      (and (nested? elem) (nested? (first elem))) {:type {:name (type-map (type elem)), :nested {:name (type-map (type (first elem))) :nested {:name (type-map (if (= (type (ffirst elem)) clojure.lang.MapEntry) (type (last (ffirst elem))) (type (ffirst elem))))}}}}
       (nested? elem) {:type {:name (type-map (type elem)), :nested {:name (type-map (type (first elem)))}}}
       :else {:type {:name (type-map (type elem))}})))
 
