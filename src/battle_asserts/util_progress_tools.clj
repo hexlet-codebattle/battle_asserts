@@ -115,7 +115,7 @@
       (let [issue-name (prepare-namespace-name namespace)
             disabled (ns-resolve namespace 'disabled)]
         (when (and (not (nil? disabled)) @disabled)
-          (swap! disabled-list (fn [acc elem] (conj acc elem)) issue-name))))
+          (swap! disabled-list conj issue-name))))
     (if (empty? @disabled-list)
       (println "There is no disabled tasks! Yaay!")
       (println "Disabled tasks list:\n" (s/join "\n" @disabled-list)))))
