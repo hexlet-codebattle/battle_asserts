@@ -122,6 +122,7 @@ It will appear with auto-generated asserts on [codebattle](http://codebattle.hex
 - `make check-tags` check current tasks tagging progress.
 - `make check-generators-and-solutions` check current tasks solution and arguments-generator progress.
 - `make collect-tags` check tags stats, useful to check typo in tags.
+- `make collect-disabled` check task disabled status.
 
 ## Related links
 

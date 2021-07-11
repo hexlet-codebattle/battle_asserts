@@ -33,6 +33,9 @@ check-tags:
 collect-tags:
 	lein run -m battle-asserts.util-progress-tools/collect-tags
 
+collect-disabled:
+	lein run -m battle-asserts.util-progress-tools/collect-disabled
+
 check-generators-and-solutions:
 	lein run -m battle-asserts.util-progress-tools/check-generators-and-solutions
 

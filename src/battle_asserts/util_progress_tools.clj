@@ -106,3 +106,16 @@
                                           #(= (second %) incorrect-tag-number) stats))]
       (println "Total tags stats:" (s/join ", " (mapv #(s/join ": " %) stats)))
       (println "Probably misspelled tags:" (s/join ", " probably-incorrect)))))
+
+(defn collect-disabled [& _args]
+  (let [namespaces (collect-namespaces)
+        disabled-list (atom [])]
+    (doseq [namespace namespaces]
+      (require namespace)
+      (let [issue-name (prepare-namespace-name namespace)
+            disabled (ns-resolve namespace 'disabled)]
+        (when (and (not (nil? disabled)) @disabled)
+          (swap! disabled-list conj issue-name))))
+    (if (empty? @disabled-list)
+      (println "There is no disabled tasks! Yaay!")
+      (println "Disabled tasks list:\n" (s/join "\n" @disabled-list)))))
