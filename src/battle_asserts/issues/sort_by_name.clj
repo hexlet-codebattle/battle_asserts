@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.sort-by-name
   (:require [clojure.string :as s]
             [clojure.test.check.generators :as gen]
-            [faker.name :as f]))
+            [battle-asserts.utility :as u]))
 
 (def level :elementary)
 
@@ -15,10 +15,8 @@
   {:input [{:argument-name "names" :type {:name "array" :nested {:name "string"}}}]
    :output {:type {:name "array" :nested {:name "string"}}}})
 
-(defn gen-name [] (str (f/first-name) " " (f/last-name)))
-
 (defn arguments-generator []
-  (let [names (repeatedly 60 gen-name)]
+  (let [names (repeatedly 60 u/gen-name)]
     (gen/tuple (gen/vector (gen/elements names) 3 15))))
 
 (def test-data

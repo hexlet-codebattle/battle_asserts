@@ -111,6 +111,7 @@ Corresponding tests are in `test/test_helper.clj` there is no need to add tests 
 - `run-generator-spec-test` tests are checking that input signatures are correctly described for `arguments-generator`.
 - `run-solution-test` tests are checking that test data solves correctly.
 - `run-test-data-spec-test` tests are checking that test data corresponds to signature.
+- `run-description-test` tests are checking that issue has minimal description.
 
 ### 4. Create pull-request
 
@@ -128,3 +129,9 @@ It will appear with auto-generated asserts on [codebattle](http://codebattle.hex
 
 - http://leiningen.org/#install
 - https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md
+
+### Better clojure dev experience
+- https://www.gnu.org/software/emacs/ or https://www.spacemacs.org/
+- https://github.com/clojure-emacs/clojure-mode
+- https://github.com/clojure-emacs/cider
+- https://clojure.org/guides/repl/annex_community_resources

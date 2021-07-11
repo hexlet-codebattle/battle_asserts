@@ -1,48 +1,50 @@
 (ns battle-asserts.utility
   (:require [faker.generate :as faker]
-            [clojure.test.check.generators :as gen]))
+            [clojure.test.check.generators :as gen]
+            [faker.name :as f]))
 
-(def type-map
-  {java.lang.String "string"
-   java.lang.Long "integer"
-   java.lang.Integer "integer"
-   java.lang.Double "float"
-   java.lang.Boolean "boolean"
-   clojure.lang.Ratio "integer"
-   clojure.lang.PersistentList "array"
-   clojure.lang.PersistentVector "array"
-   clojure.lang.PersistentArrayMap "hash"
-   clojure.lang.Keyword "string"})
-
-(defn prepare-signature [signature]
+(defn- prepare-signature [signature]
   (map #(dissoc % :argument-name) (signature :input)))
 
-(defn contains-val? [coll val]
+(defn- contains-val? [coll val]
   (reduce
    #(if (= val %2) (reduced true) %1)
    false coll))
 
-(defn nested? [element]
+(defn- nested? [element]
   (contains-val?
    [clojure.lang.PersistentList
     clojure.lang.PersistentArrayMap
     clojure.lang.PersistentVector]
    (type element)))
 
-(defn type-element [elem]
-  (cond
-    (and (nested? elem) (= (type-map (type elem)) "hash")) {:type {:name (type-map (type elem)), :nested {:name (type-map (type (last (first elem))))}}}
-    (and (nested? elem) (nested? (first elem))) {:type {:name (type-map (type elem)), :nested {:name (type-map (type (first elem))) :nested {:name (type-map (type (ffirst elem)))}}}}
-    (nested? elem) {:type {:name (type-map (type elem)), :nested {:name (type-map (type (first elem)))}}}
-    :else {:type {:name (type-map (type elem))}}))
+(defn- type-element [elem]
+  (let [type-map
+        {java.lang.String "string"
+         java.lang.Long "integer"
+         java.lang.Integer "integer"
+         java.lang.Double "float"
+         java.lang.Boolean "boolean"
+         clojure.lang.Ratio "integer"
+         clojure.lang.PersistentList "array"
+         clojure.lang.PersistentVector "array"
+         clojure.lang.PersistentArrayMap "hash"
+         clojure.lang.Keyword "string"}]
+    (cond
+      (and (nested? elem) (= (type-map (type elem)) "hash")) {:type {:name (type-map (type elem)), :nested {:name (type-map (type (last (first elem))))}}}
+      (and (nested? elem) (nested? (first elem))) {:type {:name (type-map (type elem)), :nested {:name (type-map (type (first elem))) :nested {:name (type-map (type (ffirst elem)))}}}}
+      (nested? elem) {:type {:name (type-map (type elem)), :nested {:name (type-map (type (first elem)))}}}
+      :else {:type {:name (type-map (type elem))}})))
 
-(defn prepare-expected-results [expected]
+(defn- prepare-expected-results [expected]
   (list (type-element expected)))
 
-(defn prepare-arguments [arguments]
+(defn- prepare-arguments [arguments]
   (map type-element arguments))
 
-(defn check-asserts-and-sign [data signature]
+(defn check-asserts-and-sign
+  "Validates asserts by their generated data and signature."
+  [data signature]
   (let [input-signature (prepare-signature signature)
         output-signature (list (signature :output))]
     (reduce (fn [acc task]
@@ -66,3 +68,9 @@
         (recur (gen-words))))))
 
 (def gen-pos-num (gen/fmap inc gen/nat))
+
+(defn gen-name
+  "Generates random first name + last name."
+  []
+  (str (f/first-name) " " (f/last-name)))
+
