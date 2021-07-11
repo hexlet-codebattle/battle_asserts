@@ -5,7 +5,7 @@
 
 (def level :elementary)
 
-(def tags ["training" "strings" "collections"])
+(def tags ["training" "strings" "collections" "sorting"])
 
 (def description
   {:en "Implement a function which sorts people names by their last name."
