@@ -18,7 +18,9 @@
     (println (str "Tasks with level " level " translated!"))
     (println (str (s/capitalize level) " tasks without translations: \n" (s/join "\n" task-list) "\n"))))
 
-(defn check-translations [& _args]
+(defn check-translations
+  "Tool that check translation progress of tasks."
+  [& _args]
   (let [namespaces (collect-namespaces)
         translated-count (atom 0)
         untranslated-list (atom {:elementary '()
@@ -44,7 +46,9 @@
         (present-untraslated-tasks (@untranslated-list :hard) "hard")))
     (println (str "Total translation progress " @translated-count " / " namespaces-count " or " (format "%.1f" (float (* (/ @translated-count namespaces-count) 100))) "%"))))
 
-(defn check-tags [& _args]
+(defn check-tags
+  "Tool that checks tags presence in tasks."
+  [& _args]
   (let [namespaces (collect-namespaces)
         tagged-count (atom 0)
         untagged-list (atom (list))
@@ -62,7 +66,9 @@
       (println (str "Tasks without tags: \n" (s/join "\n" @untagged-list))))
     (println (str "Total tagged tasks progress " @tagged-count " / " namespaces-count " or " (format "%.1f" (float (* (/ @tagged-count namespaces-count) 100))) "%"))))
 
-(defn check-generators-and-solutions [& _args]
+(defn check-generators-and-solutions
+  "Tool that check presence of solution and arguments generator in tasks."
+  [& _args]
   (let [namespaces (collect-namespaces)
         completed-task-count (atom 0)
         without-solution (atom (list))
@@ -90,7 +96,9 @@
       (println (str "Tasks without arguments generator: \n" (s/join "\n" @without-generator))))
     (println (str "Total tasks solution and generator progress " @completed-task-count " / " namespaces-count " or " (format "%.1f" (float (* (/ @completed-task-count namespaces-count) 100))) "%"))))
 
-(defn collect-tags [& _args]
+(defn collect-tags
+  "Tool that collect tags stats of tasks."
+  [& _args]
   (let [namespaces (collect-namespaces)
         tags-list (atom [])]
     (doseq [namespace namespaces]
@@ -107,7 +115,9 @@
       (println "Total tags stats:" (s/join ", " (mapv #(s/join ": " %) stats)))
       (println "Probably misspelled tags:" (s/join ", " probably-incorrect)))))
 
-(defn collect-disabled [& _args]
+(defn collect-disabled
+  "Tool that collects all disabled tasks."
+  [& _args]
   (let [namespaces (collect-namespaces)
         disabled-list (atom [])]
     (doseq [namespace namespaces]
