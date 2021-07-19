@@ -41,7 +41,7 @@
     (if (nested? head)
       {:name elem-type :nested (type-nested head)}
       {:name elem-type :nested {:name (if (= elem-type "hash")
-                                        (type-map (type (last (first elem))))
+                                        (type-map (type (last head)))
                                         (type-map (type head)))}})))
 
 (defn- type-element [elem]
