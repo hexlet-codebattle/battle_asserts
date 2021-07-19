@@ -23,23 +23,31 @@
     clojure.lang.PersistentVector]
    (type element)))
 
+(def type-map
+  {java.lang.String "string"
+   java.lang.Long "integer"
+   java.lang.Integer "integer"
+   java.lang.Double "float"
+   java.lang.Boolean "boolean"
+   clojure.lang.Ratio "integer"
+   clojure.lang.PersistentList "array"
+   clojure.lang.PersistentVector "array"
+   clojure.lang.PersistentArrayMap "hash"
+   clojure.lang.Keyword "string"})
+
+(defn- type-nested [elem]
+  (let [elem-type (type-map (type elem))
+        head (first elem)]
+    (if (nested? head)
+      {:name elem-type :nested (type-nested head)}
+      {:name elem-type :nested {:name (if (= elem-type "hash")
+                                        (type-map (type (last head)))
+                                        (type-map (type head)))}})))
+
 (defn- type-element [elem]
-  (let [type-map
-        {java.lang.String "string"
-         java.lang.Long "integer"
-         java.lang.Integer "integer"
-         java.lang.Double "float"
-         java.lang.Boolean "boolean"
-         clojure.lang.Ratio "integer"
-         clojure.lang.PersistentList "array"
-         clojure.lang.PersistentVector "array"
-         clojure.lang.PersistentArrayMap "hash"
-         clojure.lang.Keyword "string"}]
-    (cond
-      (and (nested? elem) (= (type-map (type elem)) "hash")) {:type {:name (type-map (type elem)) :nested {:name (type-map (type (last (first elem))))}}}
-      (and (nested? elem) (nested? (first elem))) {:type {:name (type-map (type elem)) :nested {:name (type-map (type (first elem))) :nested {:name (type-map                                                                               (if (= (type (ffirst elem)) clojure.lang.MapEntry) (type (last (ffirst elem))) (type (ffirst elem))))}}}}
-      (nested? elem) {:type {:name (type-map (type elem)) :nested {:name (type-map (type (first elem)))}}}
-      :else {:type {:name (type-map (type elem))}})))
+  {:type (if (nested? elem)
+           (type-nested elem)
+           {:name (type-map (type elem))})})
 
 (defn- prepare-expected-results [expected]
   (list (type-element expected)))
