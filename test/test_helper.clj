@@ -1,8 +1,7 @@
 (ns test-helper
   (:require [clojure.test :refer [is testing]]
             [clojure.test.check :as tc]
-            [clojure.test.check.properties :as prop]
-            [clojure.test.check.generators :as gen]))
+            [clojure.test.check.properties :as prop]))
 
 (defn- check-output-type [data]
   (if (or (= (type data) java.lang.Integer) (= (type data) java.lang.Long))
