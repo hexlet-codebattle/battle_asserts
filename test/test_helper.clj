@@ -8,7 +8,7 @@
     java.lang.Long
     (type data)))
 
-(defn- prepare-signature [signature]
+(defn prepare-signature [signature]
   (map #(dissoc % :argument-name) (signature :input)))
 
 (defn- contains-val? [coll val]
@@ -49,13 +49,13 @@
            (type-nested elem)
            {:name (type-map (type elem))})})
 
-(defn- prepare-expected-results [expected]
+(defn prepare-expected-results [expected]
   (list (type-element expected)))
 
-(defn- prepare-arguments [arguments]
+(defn prepare-arguments [arguments]
   (map type-element arguments))
 
-(defn- generate-data-tests [data signature]
+(defn generate-data-tests [data signature]
   (let [input-signature (prepare-signature signature)
         output-signature (list (signature :output))]
     (doseq [{expected :expected arguments :arguments} data]
