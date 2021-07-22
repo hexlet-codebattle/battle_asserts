@@ -28,5 +28,5 @@
     :arguments [[{:first "Harold" :last "Abelson"} {:first "Gerald" :last "Jay Sussman"} {:first "Pat" :last "Shaughnessy"} {:first "Matthias" :last "Felleisen"}]]}])
 
 (defn solution [names]
-  (mapv (fn [name] (s/join #" " [(name :first) (name :last)])) names))
+  (mapv (fn [elem] (s/join #" " [(elem :first) (elem :last)])) names))
 
