@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :min-lein-version "2.5.1"
   :plugins [[lein-kibit "0.1.8"]
-            [lein-cljfmt "0.8.0"]
+            [lein-cljfmt "0.7.0"]
             [jonase/eastwood "0.4.0"]]
   :dependencies [[org.clojure/clojure "1.10.3"]
                  [jonase/eastwood "0.4.0" :exclusions  [org.clojure/clojure]]
