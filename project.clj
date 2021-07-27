@@ -6,9 +6,9 @@
   :min-lein-version "2.5.1"
   :plugins [[lein-kibit "0.1.8"]
             [lein-cljfmt "0.7.0"]
-            [jonase/eastwood "0.4.0"]]
+            [jonase/eastwood "0.9.4"]]
   :dependencies [[org.clojure/clojure "1.10.3"]
-                 [jonase/eastwood "0.4.0" :exclusions  [org.clojure/clojure]]
+                 [jonase/eastwood "0.9.4" :exclusions  [org.clojure/clojure]]
                  [org.clojure/tools.namespace "1.1.0"]
                  [org.clojure/data.json "2.4.0"]
                  [org.clojure/test.check "1.1.0"]

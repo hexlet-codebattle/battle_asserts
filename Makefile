@@ -19,7 +19,7 @@ check-style:
 	lein kibit
 
 check-namespaces:
-	lein eastwood
+	lein eastwood "{:exclude-linters [:reflection]}"
 
 check-kondo:
 	clj-kondo --lint src test
