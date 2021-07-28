@@ -59,12 +59,7 @@ Example:
 
 See examples in `src/battle_asserts/issues/*.clj`
 
-### 2. Create pull-request
-
-It will appear on [codebattle](http://codebattle.hexlet.io) after merge
-
-
-### 3. Write the implementation of the issue and test
+### 2. Write the implementation of the issue and test
 
 An implementation of the issue includes:
 
@@ -113,7 +108,7 @@ Corresponding tests are in `test/test_helper.clj` there is no need to add tests 
 - `run-test-data-spec-test` tests are checking that test data corresponds to signature.
 - `run-description-test` tests are checking that issue has minimal description.
 
-### 4. Create pull-request
+### 3. Create pull-request
 
 It will appear with auto-generated asserts on [codebattle](http://codebattle.hexlet.io) after merge
 
@@ -133,6 +128,4 @@ It will appear with auto-generated asserts on [codebattle](http://codebattle.hex
 
 ### Better clojure dev experience
 - https://www.gnu.org/software/emacs/ or https://www.spacemacs.org/
-- https://github.com/clojure-emacs/clojure-mode
-- https://github.com/clojure-emacs/cider
 - https://clojure.org/guides/repl/annex_community_resources
