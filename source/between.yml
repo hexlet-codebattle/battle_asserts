@@ -1,8 +1,0 @@
----
-level: easy
-tags: [string, regexp]
-description: |
-  Write function that returns array of all subtexts from text between given patterns.
-
-multicode_checks:
-  langs: [ruby, javascript, php, python]
