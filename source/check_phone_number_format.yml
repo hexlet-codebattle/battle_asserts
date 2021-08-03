@@ -1,9 +1,0 @@
----
-level: medium
-tags: [regexp]
-description: |
-  Write a method to validate some strings that could potentially represent phone numbers.
-  See if you can do it with a regular expression.
-
-multicode_checks:
-  langs: [javascript, ruby, javascript, python, php, groovy]
