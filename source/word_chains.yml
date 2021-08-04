@@ -1,9 +1,0 @@
----
-level: hard
-tags: []
-description: |
-  Write a function which takes a sequence of words, and returns true if they can be arranged into one continous word chain, and false if they cannot.
-  cat -> cot -> coat -> oat -> hat -> hot -> hog -> dog
-
-multicode_checks:
-  langs: [ruby, javascript, php, python, groovy]
