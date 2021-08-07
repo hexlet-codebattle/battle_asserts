@@ -40,4 +40,5 @@
 (defn solution [address]
   (try
     (str (last (ip/make-network address)))
-    (catch java.lang.AssertionError _ "invalid adress!!111")))
+    (catch java.lang.AssertionError _ "invalid adress!!111")
+    (catch java.net.UnknownHostException _ "invalid adress!!111")))
