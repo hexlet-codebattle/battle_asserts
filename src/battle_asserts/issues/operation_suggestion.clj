@@ -16,9 +16,9 @@
    :output {:type {:name "string"}}})
 
 (def operations-map
-  {"+" (fn [a b] (+ a b))
-   "-" (fn [a b] (- a b))
-   "*" (fn [a b] (* a b))
+  {"+" +
+   "-" -
+   "*" *
    "/" (fn [a b] (/ a b))})
 
 (defn arguments-generator []

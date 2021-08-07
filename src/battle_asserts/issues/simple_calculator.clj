@@ -30,9 +30,9 @@
 
 (defn solution
   [first-num second-num operation]
-  (let [operations-map {"+" (fn [a b] (+ a b))
-                        "-" (fn [a b] (- a b))
-                        "*" (fn [a b] (* a b))
+  (let [operations-map {"+" +
+                        "-" -
+                        "*" *
                         "^" (fn [a b] (int (Math/pow a b)))
-                        "%" (fn [a b] (rem a b))}]
+                        "%" rem}]
     ((operations-map operation) first-num second-num)))
