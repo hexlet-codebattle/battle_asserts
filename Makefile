@@ -18,6 +18,12 @@ check-format:
 check-style:
 	lein kibit
 
+fix-style:
+	lein kibit --replace
+
+fix-style-interactive:
+	lein kibit --replace --interactive
+
 check-namespaces:
 	lein eastwood "{:exclude-linters [:reflection]}"
 
