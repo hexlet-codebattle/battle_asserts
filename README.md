@@ -11,11 +11,12 @@
 2. Clone repo (`https://github.com/{your-nickname}/battle_asserts.git`)
 3. Create your feature branch (`git checkout -b my-new-feature`)
 4. Make changes
-5. Run tests (`make test`).
-6. Commit your changes (`git commit -am 'Added some feature'`)
-7. Push to the branch (`git push origin my-new-feature`)
-8. Create new Pull Request
-9. Check if Request passed GithubActions
+5. Run tests (`make test`)
+6. Run linters (`make checks`)
+7. Commit your changes (`git commit -am 'Added some feature'`)
+8. Push to the branch (`git push origin my-new-feature`)
+9. Create new Pull Request
+10. Check if Request passed GithubActions
 
 ## How to add a new issue
 
@@ -110,7 +111,7 @@ Corresponding tests are in `test/test_helper.clj` there is no need to add tests 
 
 ### 3. Create pull-request
 
-It will appear with auto-generated asserts on [codebattle](http://codebattle.hexlet.io) after merge
+It will appear with auto-generated asserts on [codebattle](http://codebattle.hexlet.io) after merge after a while
 
 ### Useful commands
 - `make check-translations` check current tasks translation progress.
