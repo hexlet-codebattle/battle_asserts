@@ -13,16 +13,11 @@
 (defn prepare-signature [signature]
   (map #(dissoc % :argument-name) (signature :input)))
 
-(defn- contains-val? [coll val]
-  (reduce
-   #(if (= val %2) (reduced true) %1)
-   false coll))
-
 (defn- nested? [element]
-  (contains-val?
-   [clojure.lang.PersistentList
-    clojure.lang.PersistentArrayMap
-    clojure.lang.PersistentVector]
+  (contains?
+   #{clojure.lang.PersistentList
+     clojure.lang.PersistentArrayMap
+     clojure.lang.PersistentVector}
    (type element)))
 
 (def type-map
