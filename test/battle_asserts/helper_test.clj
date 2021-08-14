@@ -22,7 +22,11 @@
                         (gen/vector (gen/hash-map :test gen/boolean) 1 5)
                         (gen/vector (gen/hash-map :test (gen/choose -100 100)) 1 5)
                         (gen/vector (gen/vector (gen/vector (gen/choose -100 100) 1 5) 1 5) 1 5)
-                        (gen/vector (gen/vector (gen/hash-map :test (gen/choose -100 100)) 1 5) 1 5)))
+                        (gen/vector (gen/vector (gen/hash-map :test (gen/choose -100 100)) 1 5) 1 5)
+                        (gen/hash-map :test (gen/hash-map :test gen/string-ascii))
+                        (gen/vector (gen/hash-map :test (gen/hash-map :test gen/string-ascii)) 1 5)
+                        (gen/vector (gen/hash-map :test (gen/vector gen/string-ascii 1 5)) 1 5)
+                        (gen/vector (gen/hash-map :test (gen/hash-map :test (gen/hash-map :test (gen/vector (gen/choose 1 5) 1 5)))) 1 5)))
 
 (def signatures (list
                  {:type {:name "string"}}
@@ -41,7 +45,11 @@
                  {:type {:name "array" :nested {:name "hash" :nested {:name "boolean"}}}}
                  {:type {:name "array" :nested {:name "hash" :nested {:name "integer"}}}}
                  {:type {:name "array" :nested {:name "array" :nested {:name "array" :nested {:name "integer"}}}}}
-                 {:type {:name "array" :nested {:name "array" :nested {:name "hash" :nested {:name "integer"}}}}}))
+                 {:type {:name "array" :nested {:name "array" :nested {:name "hash" :nested {:name "integer"}}}}}
+                 {:type {:name "hash" :nested {:name "hash" :nested {:name "string"}}}}
+                 {:type {:name "array" :nested {:name "hash" :nested {:name "hash" :nested {:name "string"}}}}}
+                 {:type {:name "array" :nested {:name "hash" :nested {:name "array" :nested {:name "string"}}}}}
+                 {:type {:name "array" :nested {:name "hash" :nested {:name "hash" :nested {:name "hash" :nested {:name "array" :nested {:name "integer"}}}}}}}))
 
 (deftest helper-test
   (testing "Type checker for generators."
