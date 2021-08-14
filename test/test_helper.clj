@@ -34,12 +34,12 @@
 
 (defn- type-nested [elem]
   (let [elem-type (type-map (type elem))
-        head (first elem)]
+        head (if (= elem-type "hash")
+               (first (vals elem))
+               (first elem))]
     (if (nested? head)
       {:name elem-type :nested (type-nested head)}
-      {:name elem-type :nested {:name (if (= elem-type "hash")
-                                        (type-map (type (last head)))
-                                        (type-map (type head)))}})))
+      {:name elem-type :nested {:name (type-map (type head))}})))
 
 (defn- type-element [elem]
   {:type (if (nested? elem)
