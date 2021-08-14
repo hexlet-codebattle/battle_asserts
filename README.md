@@ -108,6 +108,7 @@ Corresponding tests are in `test/test_helper.clj` there is no need to add tests 
 - `run-solution-test` tests are checking that test data solves correctly.
 - `run-test-data-spec-test` tests are checking that test data corresponds to signature.
 - `run-description-test` tests are checking that issue has minimal description.
+- `run-difficulty-test` tests are checking that issue has correct difficulty level.
 
 ### 3. Create pull-request
 
