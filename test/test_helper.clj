@@ -3,6 +3,8 @@
             [clojure.test.check :as tc]
             [clojure.test.check.properties :as prop]))
 
+(def difficulties #{:elementary :easy :medium :hard})
+
 (defn- check-output-type [data]
   (if (or (= (type data) java.lang.Integer) (= (type data) java.lang.Long))
     java.lang.Long
@@ -63,6 +65,12 @@
             prepared-args (prepare-arguments arguments)]
         (is (= prepared-args input-signature))
         (is (= prepared-expected output-signature))))))
+
+(defn run-difficulty-test
+  "Tests that checking is task difficulty correct."
+  [difficulty issue-name]
+  (testing (str "Difficulty for " issue-name " task.")
+    (is (= true (contains? difficulties difficulty)))))
 
 (defn run-solution-test
   "Test that checking is test data solves correctly."

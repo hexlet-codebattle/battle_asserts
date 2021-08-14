@@ -12,13 +12,15 @@
                               "_")
         build-generator (ns-resolve issue-ns-name 'arguments-generator)
         solution (ns-resolve issue-ns-name 'solution)
+        difficulty @(ns-resolve issue-ns-name 'level)
         disabled (ns-resolve issue-ns-name 'disabled)
         signature (ns-resolve issue-ns-name 'signature)
-        description (ns-resolve issue-ns-name 'description)
+        description @(ns-resolve issue-ns-name 'description)
         samples @(ns-resolve issue-ns-name 'test-data)]
     (when-not disabled
       (h/run-test-data-spec-test samples signature issue-name)
-      (h/run-description-test @description issue-name)
+      (h/run-description-test description issue-name)
+      (h/run-difficulty-test difficulty issue-name)
       (when-not (nil? solution) (h/run-solution-test samples solution issue-name))
       (when-not (nil? build-generator) (h/run-generator-spec-test build-generator signature issue-name))
       (when-not (and
