@@ -65,7 +65,7 @@
   "Tests that checking is task difficulty correct."
   [difficulty issue-name]
   (testing (str "Difficulty for " issue-name " task.")
-    (is (= true (contains? difficulties difficulty)))))
+    (is (true? (contains? difficulties difficulty)))))
 
 (defn run-solution-test
   "Test that checking is test data solves correctly."
@@ -109,4 +109,4 @@
   "Test that checking is issue has minimal description."
   [description issue-name]
   (testing (str "Test minimal description lang for " issue-name " task.")
-    (is (= true (or (string? description) (contains? description :en))))))
+    (is (true? (or (string? description) (contains? description :en))))))
