@@ -1,4 +1,4 @@
-{:paths ["src" "src/battle_asserts" "test"]
+{:paths ["src" "test"]
  :main-opts  ["-m" "battle-asserts.-main"]
  :description "Hexlet Codebattle Asserts"
  :url "http://battle.hexlet.io"
