@@ -3,7 +3,7 @@
 
 ## Setup for development
 
-- Install [leiningen](http://leiningen.org)
+- Install [clojure](https://clojure.org/guides/getting_started)
 
 ## Contributing
 
@@ -123,10 +123,10 @@ It will appear with auto-generated asserts on [codebattle](http://codebattle.hex
 
 ## Related links
 
-### Leiningen
+### Clojure
 
-- http://leiningen.org/#install
-- https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md
+- https://clojure.org/index
+- https://clojure.org/guides/getting_started
 
 ### Better clojure dev experience
 - https://www.gnu.org/software/emacs/ or https://www.spacemacs.org/
