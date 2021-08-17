@@ -1,0 +1,35 @@
+{:paths ["src" "src/battle_asserts" "test"]
+ :main-opts  ["-m" "battle-asserts.-main"]
+ :description "Hexlet Codebattle Asserts"
+ :url "http://battle.hexlet.io"
+ :license {:name "Eclipse Public License"
+           :url "http://www.eclipse.org/legal/epl-v10.html"}
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}
+        org.clojure/tools.namespace {:mvn/version "1.1.0"}
+        org.clojure/data.json {:mvn/version "2.4.0"}
+        org.clojure/test.check {:mvn/version "1.1.0"}
+        helpshift/faker {:mvn/version "0.2.0"}
+        clj-commons/clj-yaml {:mvn/version "0.7.107"}
+        faker/faker {:mvn/version "0.3.2"}
+        kovacnica/clojure.network.ip {:mvn/version "0.1.3"}}
+ :aliases {:test {:extra-paths ["test"]
+                  :extra-deps  {lambdaisland/kaocha {:mvn/version "1.0.861"}}
+                  :main-opts   ["-m" "kaocha.runner"]}
+           :eastwood {:main-opts ["-m"
+                                  "eastwood.lint"
+                                  {:exclude-linters
+                                   [:reflection :no-ns-form-found]}]
+	          :extra-deps {jonase/eastwood {:mvn/version "RELEASE"}}
+            :extra-paths ["test"]}
+           :kibit {:extra-deps {tvaughan/kibit-runner {:mvn/version "1.0.1"}}
+                   :main-opts ["-m" "kibit-runner.cmdline"]}
+           :cljfmt-check {:extra-deps {cljfmt/cljfmt {:mvn/version "0.8.0"}}
+                    :main-opts ["-m" "cljfmt.main" "check"]}
+           :cljfmt-fix {:extra-deps {cljfmt/cljfmt {:mvn/version "0.8.0"}}
+                          :main-opts ["-m" "cljfmt.main" "fix"]}
+           :check-translations {:exec-fn battle-asserts.util-progress-tools/check-translations}
+           :check-tags {:exec-fn battle-asserts.util-progress-tools/check-tags}
+           :check-generators-and-solutions {:exec-fn battle-asserts.util-progress-tools/check-generators-and-solutions}
+           :collect-tags {:exec-fn battle-asserts.util-progress-tools/collect-tags}
+           :collect-disabled {:exec-fn battle-asserts.util-progress-tools/collect-disabled}}}
+

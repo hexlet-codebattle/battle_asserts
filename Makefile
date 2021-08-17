@@ -1,52 +1,46 @@
 generate-from-docker: clean
-	docker run -v $(CURDIR):/battle_asserts clojure /bin/bash -c 'cd /battle_asserts && lein run'
+	docker run -v $(CURDIR):/battle_asserts clojure /bin/bash -c 'cd /battle_asserts && clojure -m battle-asserts.core'
 
 generate: clean
-	lein run
+	clojure -m battle-asserts.core
 
 clean:
 	rm -rf issues/*
 
 format:
-	lein cljfmt fix
+	clojure -A:cljfmt-fix
 
 checks: check-format check-namespaces check-style check-kondo
 
 check-format:
-	lein cljfmt check
+	clojure -A:cljfmt-check
 
 check-style:
-	lein kibit
-
-fix-style:
-	lein kibit --replace
-
-fix-style-interactive:
-	lein kibit --replace --interactive
+	clojure -A:kibit
 
 check-namespaces:
-	lein eastwood "{:exclude-linters [:reflection]}"
+	clojure -A:eastwood
 
 check-kondo:
 	clj-kondo --lint src test
 
 check-translations:
-	lein run -m battle-asserts.util-progress-tools/check-translations
+	clojure -X:check-translations
 
 check-tags:
-	lein run -m battle-asserts.util-progress-tools/check-tags
+	clojure -X:check-tags
 
 collect-tags:
-	lein run -m battle-asserts.util-progress-tools/collect-tags
+	clojure -X:collect-tags
 
 collect-disabled:
-	lein run -m battle-asserts.util-progress-tools/collect-disabled
+	clojure -X:collect-disabled
 
 check-generators-and-solutions:
-	lein run -m battle-asserts.util-progress-tools/check-generators-and-solutions
+	clojure -X:check-generators-and-solutions
 
 test:
-	bin/kaocha
+	clojure -A:test
 
 release: generate
 	tar -czf issues.tar.gz issues/*
