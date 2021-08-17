@@ -13,3 +13,4 @@ issues/*.*
 .eastwood
 issues.tar.gz
 .clj-kondo/.cache
+.cpcache
