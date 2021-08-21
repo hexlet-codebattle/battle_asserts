@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def tags ["strings" "devops"])
+(def tags ["strings" "devops" "codebattle"])
 
 (def description
   {:en "Create a function, that create docker build command from `language` and `version` for codebattle."
