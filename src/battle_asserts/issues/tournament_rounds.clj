@@ -3,7 +3,7 @@
 
 (def level :elementary)
 
-(def tags ["math" "training"])
+(def tags ["math" "training" "codebattle"])
 
 (def description
   {:en "Codebattle programmers are rewriting tournaments in React. They need to calculate the `number of rounds' based on the `number of participants' in tournament. Create such function to help them."
