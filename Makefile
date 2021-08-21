@@ -8,18 +8,18 @@ clean:
 	rm -rf issues/*
 
 format:
-	clojure -A:cljfmt-fix
+	clojure -M:cljfmt-fix
 
 checks: check-format check-namespaces check-style check-kondo
 
 check-format:
-	clojure -A:cljfmt-check
+	clojure -M:cljfmt-check
 
 check-style:
-	clojure -A:kibit
+	clojure -M:kibit
 
 check-namespaces:
-	clojure -A:eastwood
+	clojure -M:eastwood
 
 check-kondo:
 	clj-kondo --lint src test
@@ -40,7 +40,7 @@ check-generators-and-solutions:
 	clojure -X:check-generators-and-solutions
 
 test:
-	clojure -A:test
+	clojure -M:test
 
 release: generate
 	tar -czf issues.tar.gz issues/*
