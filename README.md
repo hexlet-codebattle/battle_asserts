@@ -107,4 +107,3 @@ It will appear with auto-generated asserts on [codebattle](http://codebattle.hex
 ### Better clojure dev experience
 - https://www.gnu.org/software/emacs/ or https://www.spacemacs.org/
 - https://clojure.org/guides/repl/annex_community_resources
-- 
