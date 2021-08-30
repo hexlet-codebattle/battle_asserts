@@ -15,7 +15,7 @@
    :output {:type {:name "integer"}}})
 
 (def test-data
-  [{:expected 7
+  [{:expected 8
     :arguments [[[1 0 1 0 0 0]
                  [1 0 0 0 1 1]
                  [0 0 0 0 0 0]
