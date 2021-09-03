@@ -2,6 +2,8 @@
 
 (def level :medium)
 
+(def disabled true)
+
 (def tags ["games"])
 
 (def description
