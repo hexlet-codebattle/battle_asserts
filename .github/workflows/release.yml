@@ -15,7 +15,7 @@ jobs:
           
       - uses: DeLaGuardo/setup-clojure@3.5
         with:
-          tools-deps: '1.10.3.956'
+          tools-deps: '1.10.3.967'
 
       - name: Run checks
         run: make checks
