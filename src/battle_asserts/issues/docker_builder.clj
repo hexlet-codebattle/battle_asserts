@@ -26,7 +26,7 @@
 (defn- gen-path []
   (let [elems (fk/words {:n (gen/generate (gen/choose 1 8))})
         combined (concat (conj elems ".") '("Dockerfile"))]
-  (s/join #"/" combined)))
+    (s/join #"/" combined)))
 
 (defn arguments-generator []
   (let [languages ["elixir" "ruby" "haskell" "c++" "c#" "clojure" "dart" "go" "java" "js" "kotlin" "php" "python"]
@@ -46,5 +46,5 @@
 
 (defn solution [language version path]
   (str "docker build -t codebattle/" language ":" version
-       (when-not (empty? path) (str " -f " path))
+       (when (seq path) (str " -f " path))
        " ."))
