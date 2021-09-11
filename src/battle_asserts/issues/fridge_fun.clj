@@ -2,7 +2,7 @@
 
 (def level :medium)
 
-(def tags ["collections"])
+(def tags ["strings"])
 
 (def disabled true)
 
