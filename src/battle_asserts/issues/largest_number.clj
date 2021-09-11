@@ -7,7 +7,7 @@
 
 (def description
   {:en "Given an integer `n`, return the largest number that contains exactly `n` digits."
-   :ru "Дано число `n`, найдите наибольшее число, которое содержит ровно `n` чисел."})
+   :ru "Дано число `n`, найдите наибольшее число, которое содержит ровно `n` цифр."})
 
 (def signature
   {:input [{:argument-name "n" :type {:name "integer"}}]
