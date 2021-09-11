@@ -128,4 +128,4 @@
           (swap! disabled-list conj issue-name))))
     (if (empty? @disabled-list)
       (println "There is no disabled tasks! Yaay!")
-      (println "Disabled tasks list:\n" (s/join "\n" @disabled-list)))))
+      (println (str "Disabled tasks list:\n" (s/join ", " @disabled-list) "\nTotal number of disabled tasks is: " (count @disabled-list) "!")))))
