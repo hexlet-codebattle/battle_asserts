@@ -7,13 +7,20 @@
 
 (def tags ["strings"])
 
-(def description "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+(def description
+  {:en "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
   P   A   H   N
   A P L S I I G
   Y   I   R
   And then read line by line: \"PAHNAPLSIIGYIR\"
   Write the code that will take a string and make this conversion given a number of rows:
-  convert(\"PAYPALISHIRING\", 3) should return \"PAHNAPLSIIGYIR\".")
+  convert(\"PAYPALISHIRING\", 3) should return \"PAHNAPLSIIGYIR\"."
+   :ru "Строка \"PAYPALISHIRING\" записывается зигзагообразным узором на заданном количестве строк следующим образом: (возможно, вы захотите отобразить этот узор фиксированным шрифтом для лучшей читаемости)
+  P   A   H   N
+  A P L S I I G
+  Y   I   R
+  А затем прочитайте строку за строкой: \"PAHNAPLSIIGYIR\"
+  Напишите функцию, которая будет принимать строку и выполнять преобразование, задавая количество строк: convert(\"PAYPALISHIRING\", 3) должен вернуть \"PAHNAPLSIIGYIR\"."})
 
 (def signature
   {:input [{:argument-name "line" :type {:name "string"}}

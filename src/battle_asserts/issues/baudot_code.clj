@@ -7,7 +7,8 @@
 
 (def tags ["strings" "decryption"])
 
-(def description "The Baudot code or International Teleprinter Code was invented by Emile Baudot in 1870. It was used for teleprinter messages instead of the morse code. Baudot uses five bits per character, thus allowing up to 32 distinct characters. As a technique used to extend this limitation, the code uses up-shift and down-shift modes as is used on a typewriter. In the Baudot code, each five bits transmitted must be interpreted according to whether they are up-shifted (figures) or down-shifted (letters). For example, the bit pattern 11111 represents up-shift and the bit pattern 11011 represents down-shift characters. All characters transmitted after the sequence 11111 but before the shifted sequence 11011 are treated as up-shift characters. All characters transmitted after the sequence 11011 are treated as down-shift characters until the pattern 11111 is recognized.
+(def description
+  {:en "The Baudot code or International Teleprinter Code was invented by Emile Baudot in 1870. It was used for teleprinter messages instead of the morse code. Baudot uses five bits per character, thus allowing up to 32 distinct characters. As a technique used to extend this limitation, the code uses up-shift and down-shift modes as is used on a typewriter. In the Baudot code, each five bits transmitted must be interpreted according to whether they are up-shifted (figures) or down-shifted (letters). For example, the bit pattern 11111 represents up-shift and the bit pattern 11011 represents down-shift characters. All characters transmitted after the sequence 11111 but before the shifted sequence 11011 are treated as up-shift characters. All characters transmitted after the sequence 11011 are treated as down-shift characters until the pattern 11111 is recognized.
   Code   Letter  Figure
   .o.o.  R       4
   .o.oo  J       Not allocated
@@ -38,7 +39,39 @@
   o.ooo  Q       1
   o.o..  H       Not allocated
   o.o.o  Y       6
-  o....  T       5")
+  o....  T       5"
+   :ru "Код Бодо или Международный код телепринтера был изобретен Эмилем Бодо в 1870 году. Он использовался для сообщений телепринтера вместо азбуки Морзе. Бодо использует пять битов на символ, что позволяет использовать до 32 отдельных символов. Чтобы расширить это ограничение, в коде используются режимы сдвига вверх и вниз, как в пишущей машинке. В коде Бодо каждые пять передаваемых битов должны интерпретироваться в зависимости от того, являются ли они сдвинутыми вверх (цифры) или вниз (буквы). Например, последовательность битов 11111 представляет символы со сдвигом вверх, а последовательность битов 11011 - символы со сдвигом вниз. Все символы, передаваемые после последовательности 11111, но до сдвинутой последовательности 11011, рассматриваются как символы со сдвигом вверх. Все символы, передаваемые после последовательности 11011, рассматриваются как символы сдвига вниз, пока не будет распознан шаблон 11111.
+  Код    Буква   Фигура
+  .o.o.  R       4
+  .o.oo  J       Не выделенно
+  .ooo.  C       :
+  oo.o.  G       Не выделенно
+  .o..o  D       Не выделенно
+  .oooo  K       (
+  .oo..  N       ,
+  ...oo  A       -
+  .....  ПРОПУСК
+  oo.oo  Фигуры(Ф) Сдвиг
+  ..oo.  I       8
+  oo...  O       9
+  oooo.  V       =
+  o..o.  L       )
+  .oo.o  F       Не выделено
+  ....o  E       3
+  ..ooo  U       7
+  oo..o  B       ?
+  ..o..  ПРОБЕЛ
+  ooooo  Буквы(Б) Сдвиг
+  ooo..  M       :
+  o..oo  W       2
+  o.oo.  P       0
+  ..o.o  S       ,
+  ooo.o  X       /
+  o...o  Z       +
+  o.ooo  Q       1
+  o.o..  H       Не выделено
+  o.o.o  Y       6
+  o....  T       5"})
 
 (def signature
   {:input [{:argument-name "code" :type {:name "string"}}]
