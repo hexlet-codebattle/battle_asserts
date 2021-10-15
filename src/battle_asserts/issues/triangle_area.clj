@@ -9,13 +9,11 @@
   {:en "Calculate area of triangle using Heron's Formula.
                   `p = (a + b + c) / 2`
                   `s = √(p * (p - a) * (p - b) * (p - c))`
-                  Use floor rounding for resulting area.
-                  Sides (a, b, c) can be a negative values."
+                  Use floor rounding for resulting area."
    :ru "Рассчитайте площадь треугольника, используя формулу Герона.
                   `p = (a + b + c) / 2`
                   `s = √(p * (p - a) * (p - b) * (p - c))`
-                  Округлите результат в меньшую сторону. 
-                  Стороны (a, b, c) могут принимать отрицательные значения."})
+                  Округлите результат в меньшую сторону."})
 
 (def signature
   {:input  [{:argument-name "a" :type {:name "integer"}}
@@ -24,7 +22,7 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/choose -30 30)  (gen/choose -30 30) (gen/choose -30 30)))
+  (gen/tuple (gen/choose 0 30)  (gen/choose 0 30) (gen/choose 0 30)))
 
 (def test-data
   [{:arguments [24 30 18]
