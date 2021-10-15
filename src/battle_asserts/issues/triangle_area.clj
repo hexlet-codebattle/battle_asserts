@@ -22,7 +22,7 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/choose -30 30)  (gen/choose -30 30) (gen/choose -30 30)))
+  (gen/tuple (gen/choose 0 30)  (gen/choose 0 30) (gen/choose 0 30)))
 
 (def test-data
   [{:arguments [24 30 18]
