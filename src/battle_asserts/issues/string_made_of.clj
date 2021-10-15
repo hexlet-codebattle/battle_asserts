@@ -15,7 +15,7 @@
         Верните общее число сегметнов содержащихся во входной строке."})
 
 (def signature
-  {:input  [{:argument-name "str" :type {:name "string"}}]
+  {:input  [{:argument-name "text" :type {:name "string"}}]
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
