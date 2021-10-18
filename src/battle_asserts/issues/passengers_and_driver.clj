@@ -10,7 +10,7 @@
    :ru "Обычная машина может вместить в себя три пассажира и водителя, позволяя им вчетвером доехать куда-либо. Дано `n` человек, рассчитайте сколько машин потребуется, чтобы все доехали в комфорте."})
 
 (def signature
-  {:input [{:argument-name "peoples" :type {:name "integer"}}]
+  {:input [{:argument-name "people" :type {:name "integer"}}]
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator
@@ -23,5 +23,5 @@
    {:expected 1 :arguments [4]}
    {:expected 3 :arguments [9]}])
 
-(defn solution [peoples]
-  (int (Math/ceil (/ peoples 4))))
+(defn solution [people]
+  (int (Math/ceil (/ people 4))))
