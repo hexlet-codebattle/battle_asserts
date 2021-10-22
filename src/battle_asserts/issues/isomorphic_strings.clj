@@ -39,8 +39,6 @@
 (def test-data
   [{:expected true
     :arguments ["egg" "add"]}
-   {:expected false
-    :arguments ["foo" "bar"]}
    {:expected true
     :arguments ["paper" "title"]}
    {:expected true
@@ -48,7 +46,11 @@
    {:expected true
     :arguments ["aa" "bb"]}
    {:expected true
-    :arguments ["aedor" "eiruw"]}])
+    :arguments ["aedor" "eiruw"]}
+   {:expected false
+    :arguments ["foo" "bar"]}
+   {:expected false
+    :arguments ["aabb" "abab"]}])
 
 (defn process [string]
   (let [alphabet (distinct string)]
