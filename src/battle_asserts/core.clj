@@ -31,8 +31,7 @@
 
 (defn write-to-file [filename content-seq]
   (with-open [w (io/writer filename)]
-    (doseq [content-hash content-seq]
-      (.write w (str (json/write-str content-hash) "\n")))))
+    (.write w (json/write-str content-seq))))
 
 (defn render-samples [samples]
   (let [json-options    [:escape-unicode false :escape-slash false]
