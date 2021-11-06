@@ -6,8 +6,8 @@
 (def tags ["math"])
 
 (def description
-  {:en "Given two **integer** numbers. Create a simple calculator that supports next operations: `add`, `substract`, `pow`, `multiply`, `remainder`."
-   :ru "Даны два **целых** числа. Создайте простой калькулятор, который поддерживает следующие операции: `сложение`, `вычитание`, `возведение в степень`, `умножение`, `остаток от деления`"})
+  {:en "Given two **integer** numbers. Create a simple calculator that supports next operations: `add`, `substract`, `pow`, `multiply`."
+   :ru "Даны два **целых** числа. Создайте простой калькулятор, который поддерживает следующие операции: `сложение`, `вычитание`, `возведение в степень`, `умножение`."})
 
 (def signature
   {:input [{:argument-name "first" :type {:name "integer"}}
@@ -16,7 +16,7 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (let [operations ["+" "-" "*" "^" "%"]]
+  (let [operations ["+" "-" "*" "^"]]
     (gen/tuple (gen/choose 6 20) (gen/choose 1 5) (gen/elements operations))))
 
 (def test-data
@@ -25,14 +25,11 @@
    {:expected -5 :arguments [-1 5 "*"]}
    {:expected 5 :arguments [1 5 "*"]}
    {:expected 100 :arguments [10 2 "^"]}
-   {:expected 100 :arguments [-10 2 "^"]}
-   {:expected -1 :arguments [-19 2 "%"]}])
+   {:expected 100 :arguments [-10 2 "^"]}])
 
-(defn solution
-  [first-num second-num operation]
+(defn solution [first-num second-num operation]
   (let [operations-map {"+" +
                         "-" -
                         "*" *
-                        "^" (fn [a b] (int (Math/pow a b)))
-                        "%" rem}]
+                        "^" (fn [a b] (int (Math/pow a b)))}]
     ((operations-map operation) first-num second-num)))
