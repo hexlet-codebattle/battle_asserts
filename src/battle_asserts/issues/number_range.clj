@@ -20,9 +20,9 @@
 
 (def test-data
   [{:expected true :arguments [3 1 9]}
-   {:expected false :arguments [6 1 6]}
+   {:expected false :arguments [7 1 6]}
    {:expected true :arguments [11 1 20]}
    {:expected false :arguments [4 11 15]}])
 
 (defn solution [num left-border right-border]
-  (contains? (set (range (inc left-border) right-border)) num))
+  (contains? (set (range left-border (inc right-border))) num))
