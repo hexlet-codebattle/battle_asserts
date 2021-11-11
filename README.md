@@ -103,6 +103,7 @@ It will appear with auto-generated asserts on [codebattle](http://codebattle.hex
 ### Clojure
 - https://clojure.org/index
 - https://clojure.org/guides/getting_started
+- https://ru.code-basics.com/languages/clojure
 
 ### Better clojure dev experience
 - https://www.gnu.org/software/emacs/ or https://www.spacemacs.org/

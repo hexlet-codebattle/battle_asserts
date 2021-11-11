@@ -11,11 +11,11 @@ jobs:
       - uses: actions/checkout@v2
       - uses: DeLaGuardo/setup-clj-kondo@master
         with:
-          version: '2021.09.25'    
+          version: '2021.10.19'    
           
       - uses: DeLaGuardo/setup-clojure@3.5
         with:
-          tools-deps: '1.10.3.986'
+          tools-deps: '1.10.3.1013'
 
       - name: Run checks
         run: make checks
