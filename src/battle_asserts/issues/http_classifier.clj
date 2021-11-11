@@ -27,13 +27,14 @@
    {:expected "success" :arguments [201]}
    {:expected "redirection" :arguments [333]}
    {:expected "client error" :arguments [418]}
-   {:expected "server error" :arguments [500]}])
+   {:expected "server error" :arguments [500]}
+   {:expected "success" :arguments [299]}])
 
 (defn solution [code]
   (cond
-    (s/int-in-range? 100 199 code) "informational"
-    (s/int-in-range? 200 299 code) "success"
-    (s/int-in-range? 300 399 code) "redirection"
-    (s/int-in-range? 400 499 code) "client error"
-    (s/int-in-range? 500 599 code) "server error"
+    (s/int-in-range? 100 200 code) "informational"
+    (s/int-in-range? 200 300 code) "success"
+    (s/int-in-range? 300 400 code) "redirection"
+    (s/int-in-range? 400 500 code) "client error"
+    (s/int-in-range? 500 600 code) "server error"
     :else "unrecognized"))
