@@ -22,12 +22,12 @@
         - бумага бьет камень."})
 
 (def signature
-  {:input  [{:argument-name "your-moves" :type {:name "array" :nested {:name "string"}}}
-            {:argument-name "op-moves" :type {:name "array" :nested {:name "string"}}}]
+  {:input  [{:argument-name "your" :type {:name "array" :nested {:name "string"}}}
+            {:argument-name "opponent" :type {:name "array" :nested {:name "string"}}}]
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (let [lenght (inc (rand-int 10))
+  (let [lenght (rand-nth (range 3 8))
         moves ["r" "s" "p"]]
     (gen/tuple (gen/vector (gen/elements moves) lenght)
                (gen/vector (gen/elements moves) lenght))))
