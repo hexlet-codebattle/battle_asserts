@@ -32,7 +32,7 @@
 (defn solution [winners]
   (let [win-streaks (partition-by identity winners)
         maximum (apply max (map count win-streaks))
-        max-streaks (filter (fn [x] (= maximum (count x))) win-streaks)]
+        max-streaks (filter #(= maximum (count %)) win-streaks)]
     (if (> (count max-streaks) 1)
       "Draw!"
       (first (flatten max-streaks)))))
