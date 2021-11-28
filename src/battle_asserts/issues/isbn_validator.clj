@@ -1,5 +1,6 @@
 (ns battle-asserts.issues.isbn-validator
-  (:require [clojure.test.check.generators :as gen]))
+  (:require [clojure.test.check.generators :as gen]
+            [clojure.string :refer [split]]))
 
 (def level :easy)
 
@@ -30,12 +31,19 @@
 
 (defn- valid-isbn-code []
   (let [nine-first-numers (vec (repeatedly 9 #(rand-int 10)))
-        special-sum-without-last (special-sum (conj nine-first-numers 0))]
-    (->>
-     (mod special-sum-without-last 11)
-     (- 11)
-     (conj nine-first-numers)
-     (apply format "%d-%d%d%d-%d%d%d%d%d-%d"))))
+        special-sum-without-last (special-sum (conj nine-first-numers 0))
+        result (->>
+                (mod special-sum-without-last 11)
+                (- 11)
+                (conj nine-first-numers)
+                (apply format "%d-%d%d%d-%d%d%d%d%d-%d"))
+        last-num (->>
+                  (split result #"-")
+                  (last)
+                  (Integer/parseInt))]
+    (if (>= last-num 10)
+      (valid-isbn-code)
+      result)))
 
 (defn- invalid-isbn-code []
   (apply format "%d-%d%d%d-%d%d%d%d%d-%d"
