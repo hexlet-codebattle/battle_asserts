@@ -16,13 +16,14 @@
 8. Push to the branch (`git push origin my-new-feature`)
 9. Create new Pull Request
 10. Check if Request passed GithubActions
+11. Wait, until PR is reviewed
 
 ## How to add a new issue
 ### 1. Write the description of the issue with function signature and test-data
 A description of the issue includes:
 - `level` — difficulty of the problem; possible values are `elementary`, `easy`, `medium`, `hard`.
 - `description` — detailed description of the issue. Now supported laguages is `ru` and `en`, `en` is required. You can run `make check-translations` for list current translation progress.
-- `tags` — tags that provides addittional info about task.
+- `tags` — tags that provides addittional info about task, array of strings.
 - `signature` — function signature; map with `input` and `output` types. Available types `integer`, `float`, `string`, `array`, `hash (map, dicts)`.
   See examples in the existing issues.
 - `test-data` — data in a specified format which will be used to test solutions. The first element in this list will be displayed as an example to players, so it should clarify and illustrate the problem as much as possible. Do not choose a trivial case for this example.
@@ -89,7 +90,7 @@ Corresponding tests are in `test/test_helper.clj` there is no need to add tests 
 - `run-difficulty-test` tests are checking that issue has correct difficulty level.
 
 ### 3. Create pull-request
-It will appear with auto-generated asserts on [codebattle](http://codebattle.hexlet.io) after merge.
+It will appear with auto-generated asserts on [codebattle](http://codebattle.hexlet.io) after merge .
 
 ### Useful commands
 - `make check-translations` check current tasks translation progress.
@@ -103,7 +104,7 @@ It will appear with auto-generated asserts on [codebattle](http://codebattle.hex
 ### Clojure
 - https://clojure.org/index
 - https://clojure.org/guides/getting_started
-- https://ru.code-basics.com/languages/clojure
+- https://ru.code-basics.com/languages/clojure (currently, only in russian)
 
 ### Better clojure dev experience
 - https://www.gnu.org/software/emacs/ or https://www.spacemacs.org/
