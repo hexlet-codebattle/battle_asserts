@@ -3,12 +3,12 @@
 
 (def level :easy)
 
-(def tags ["collections hash-maps"])
+(def tags ["collections" "hash-maps"])
 
 (def description
-  {:en "Count your score in a game of rock-paper-scissors. 
-        You are given two arrays: your moves and your opponent’s moves. 
-        You get 1 point for a win, -1 for a loss, and 0 for a draw. 
+  {:en "Count your score in a game of rock-paper-scissors.
+        You are given two arrays: your moves and your opponent’s moves.
+        You get 1 point for a win, -1 for a loss, and 0 for a draw.
         Let me remind you that according to the rules:
         - rock beats scissors
         - scissors beat paper
