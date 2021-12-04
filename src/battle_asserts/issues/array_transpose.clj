@@ -20,20 +20,23 @@
         3) Записать столбцы исходной матрицы как строки новой матрицы."})
 
 (def signature
-  {:input [{:argument-name "arr" :type {:name "array" :nested {:name "array" :nested {:name "integer"}}}}]
+  {:input [{:argument-name "matrix" :type {:name "array" :nested {:name "array" :nested {:name "integer"}}}}]
    :output {:type {:name "array" :nested {:name "array" :nested {:name "integer"}}}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/bind (gen/choose 2 5)
-                       #(gen/vector (gen/vector gen/small-integer %) 2 4))))
+  (let [cols (rand-nth (range 2 10))
+        rows (rand-nth (range 1 10))]
+    (gen/tuple (gen/vector (gen/vector gen/small-integer rows) cols))))
 
 (def test-data
   [{:expected [[1 10] [2 20] [3 30]]
     :arguments [[[1 2 3] [10 20 30]]]}
    {:expected [[1 3 5] [2 4 6]]
-    :arguments [[[1 2] [3 4] [5 6]]]}])
+    :arguments [[[1 2] [3 4] [5 6]]]}
+   {:expected [[1 2 3]]
+    :arguments [[[1]
+                 [2]
+                 [3]]]}])
 
-(defn solution [vectors]
-  (if (not-empty vectors)
-    (apply mapv vector vectors)
-    []))
+(defn solution [matrix]
+  (apply mapv vector matrix))
