@@ -5,6 +5,8 @@
 
 (def level :easy)
 
+(def disabled true)
+
 (def tags ["bits-operation" "strings"])
 
 (def description
