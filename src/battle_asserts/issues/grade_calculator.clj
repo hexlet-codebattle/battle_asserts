@@ -3,6 +3,8 @@
 
 (def level :elementary)
 
+(def disabled true)
+
 (def tags ["strings" "collections"])
 
 (def description
