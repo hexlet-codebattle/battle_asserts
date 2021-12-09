@@ -31,8 +31,8 @@
   (gen/tuple (gen/vector (gen/elements (generate-words)) 4 6)))
 
 (def test-data
-  [{:expected ["cl2s4r6" "p1th4n" "0l2x4r" "j1v3scr7pt"]
-    :arguments [["closure" "python" "elixir" "javascript"]]}
+  [{:expected ["cl2j4r6" "p1th4n" "0l2x4r" "j1v3scr7pt"]
+    :arguments [["clojure" "python" "elixir" "javascript"]]}
    {:expected ["s1l3ngw7rd" "w1ws4l6ngw10rd" "w1ws4m6chl10ngw14rd"]
     :arguments [["solongword" "wowsolongword" "wowsomuchlongword"]]}
    {:expected ["wh23456t" "0b234567t" "th2345t?"]
