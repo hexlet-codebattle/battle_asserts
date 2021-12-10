@@ -14,7 +14,7 @@
    :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/vector (gen/choose -200 200) 4 18)))
+  (gen/tuple (gen/vector (gen/choose -5 5) 10 18)))
 
 (def test-data
   [{:expected true :arguments [[1 2 3 -3 -4]]}
