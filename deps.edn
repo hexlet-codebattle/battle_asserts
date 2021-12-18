@@ -8,12 +8,12 @@
         org.clojure/tools.namespace {:mvn/version "1.2.0"}
         org.clojure/data.json {:mvn/version "2.4.0"}
         org.clojure/test.check {:mvn/version "1.1.1"}
-        helpshift/faker {:mvn/version "0.2.0"}
+        helpshift/faker {:mvn/version "0.3.0"}
         clj-commons/clj-yaml {:mvn/version "0.7.107"}
         faker/faker {:mvn/version "0.3.2"}
         kovacnica/clojure.network.ip {:mvn/version "0.1.3"}}
  :aliases {:test {:extra-paths ["test"]
-                  :extra-deps  {lambdaisland/kaocha {:mvn/version "1.60.945"}}
+                  :extra-deps  {lambdaisland/kaocha {:mvn/version "1.60.972"}}
                   :main-opts   ["-m" "kaocha.runner"]}
            :eastwood {:main-opts ["-m"
                                   "eastwood.lint"
