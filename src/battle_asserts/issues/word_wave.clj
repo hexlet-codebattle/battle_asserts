@@ -29,6 +29,6 @@
   (s/join
    (map-indexed #(if (= %1 position) (s/upper-case %2) %2) word)))
 
-(defn- solution [word]
+(defn solution [word]
   (let [length (count word)]
     (mapv #(capitalize word %1) (range length))))
