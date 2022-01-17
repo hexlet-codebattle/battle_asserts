@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def disabled true)
+
 (def tags ["strings" "collections" "hash-maps" "sorting"])
 
 (def description
