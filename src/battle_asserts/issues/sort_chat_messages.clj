@@ -5,6 +5,8 @@
 
 (def level :easy)
 
+(def disabled true)
+
 (def tags ["collections" "strings" "sorting" "codebattle"])
 
 (def description
