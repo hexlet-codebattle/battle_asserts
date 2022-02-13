@@ -6,8 +6,8 @@
 (def tags ["math" "training" "codebattle"])
 
 (def description
-  {:en "Codebattle programmers are rewriting tournaments in React. They need to calculate the `number of rounds' based on the `number of participants' in tournament. Create such function to help them."
-   :ru "Программисты Codebattle переписывают турниры на React. Им нужно рассчитать `количество раундов`, исходя из `количества участников` в турнире. Помогите им создать такую функцию."})
+  {:en "Codebattle players are paired up to play one round of games. There is always one winner from each pair. New rounds are created until one pair of players remains. For example, for 8 players there will be 3 rounds: 1/4 finals, 1/2 finals and final. Create a function that takes the `number of participants` and returns the `number of rounds`."
+   :ru "Игроков Codebattle делят на пары для проведения одного раунда игр. Из каждой пары всегда выходит один победитель. Новые раунды создаются до тех пор, пока не останется одна пара игроков. Например, для 8 игроков будет проведено 3 раунда: 1/4 финала, 1/2 финала и финал. Создайте функцию, которая принимает `количество участников` и возвращает `количество раундов`."})
 
 (def signature
   {:input [{:argument-name "participants" :type {:name "integer"}}]
