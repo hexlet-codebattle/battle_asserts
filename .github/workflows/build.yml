@@ -16,7 +16,7 @@ jobs:
       with:
         version: '2022.02.09'
     
-    - uses: DeLaGuardo/setup-clojure@3.7
+    - uses: DeLaGuardo/setup-clojure@4.0
       with:
         tools-deps: '1.10.3.1082'
 
