@@ -8,8 +8,8 @@
 (def tags ["training" "strings" "os"])
 
 (def description
-  {:en "Implement a function that returns directories count."
-   :ru "Создайте функцию, которая подсчитывает количество директорий в массиве."})
+  {:en "Implement a function that returns directories count (path includes directories or path directory itself)."
+   :ru "Создайте функцию, которая подсчитывает количество директорий в массиве (в пути содержится директория/директории или указан путь к директории)."})
 
 (def signature
   {:input [{:argument-name "filepaths" :type {:name "array" :nested {:name "string"}}}]
