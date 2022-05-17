@@ -23,8 +23,8 @@ jobs:
       - name: Run tests
         run: make test
 
-      - name: Make archive with issues
-        run: make release
+      # - name: Make archive with issues
+      #   run: make release
 
       - name: get shortsha
         id: vars
@@ -32,8 +32,17 @@ jobs:
           echo ::set-output name=sha_short::$(git rev-parse --short=6 ${{ github.sha }})
 
       - name: Release issues
+        uses: thedoctor0/zip-release@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          type: 'tar'
+          filename: 'issues.tar.gz'
+          path: 'issues'
+
+      - name: Upload Release
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ steps.vars.outputs.sha_short }}
+          commit: ${{ github.sha }}
           artifacts: 'issues.tar.gz'
           token: ${{ secrets.GITHUB_TOKEN }}
