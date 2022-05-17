@@ -36,7 +36,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: issues.tar.gz
+          files: issues_pack
           tag_name: ${{ steps.vars.outputs.sha_short }}
           name: Release ${{ steps.vars.outputs.sha_short }}
           token: ${{ secrets.GITHUB_TOKEN }}
