@@ -31,23 +31,12 @@ jobs:
         run: |
           echo ::set-output name=sha_short::$(git rev-parse --short=6 ${{ github.sha }})
 
-      # - name: Create github release
-      #   id: create_release
-      #   uses: actions/create-release@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     tag_name: ${{ steps.vars.outputs.sha_short }}
-      #     release_name: Release ${{ steps.vars.outputs.sha_short }}
-      #     draft: false
-      #     prerelease: false
-
       - name: Release issues
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: ./issues.tar.gz
+          files: issues.tar.gz
           tag_name: ${{ steps.vars.outputs.sha_short }}
           name: Release ${{ steps.vars.outputs.sha_short }}
           token: ${{ secrets.GITHUB_TOKEN }}
