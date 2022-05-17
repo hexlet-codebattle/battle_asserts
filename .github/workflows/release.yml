@@ -31,12 +31,24 @@ jobs:
         run: |
           echo ::set-output name=sha_short::$(git rev-parse --short=6 ${{ github.sha }})
 
-      - name: Release issues
-        uses: xresloader/upload-to-github-release@v1
+      - name: Create github release
+        id: create_release
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          file: 'issues.tar.gz'
-          draft: false
           tag_name: ${{ steps.vars.outputs.sha_short }}
-          verbose: true
+          release_name: Release ${{ steps.vars.outputs.sha_short }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: archive
+          asset_name: archive
+          asset_content_type: application/tar+gzip
