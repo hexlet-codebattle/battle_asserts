@@ -43,6 +43,6 @@ test:
 	clojure -M:test
 
 release: generate
-	tar -czf issues_pack issues/*
+	tar -czf issues.tar.gz issues/*
 
 .PHONY: test issues
