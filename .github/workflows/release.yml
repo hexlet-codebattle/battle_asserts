@@ -26,10 +26,10 @@ jobs:
       - name: Make archive with issues
         run: make release
 
-      # - name: get shortsha
-      #   id: vars
-      #   run: |
-      #     echo ::set-output name=sha_short::$(git rev-parse --short=6 ${{ github.sha }})
+      - name: get shortsha
+        id: vars
+        run: |
+          echo ::set-output name=sha_short::$(git rev-parse --short=6 ${{ github.sha }})
 
       # - name: Create github release
       #   id: create_release
@@ -47,6 +47,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           files: ./issues.tar.gz
-          name: issues.tar.gz
+          tag_name: ${{ steps.vars.outputs.sha_short }}
+          name: Release ${{ steps.vars.outputs.sha_short }}
+          token: ${{ secrets.GITHUB_TOKEN }}
