@@ -1,7 +1,7 @@
 name: Create release on push to master
 
 on:
-  push:
+  pull_request:
     branches: [master]
 
 jobs:
@@ -17,12 +17,6 @@ jobs:
         with:
           tools-deps: '1.11.1.1113'
 
-      - name: Run checks
-        run: make checks
-
-      - name: Run tests
-        run: make test
-
       - name: Make archive with issues
         run: make release
 
@@ -31,24 +25,11 @@ jobs:
         run: |
           echo ::set-output name=sha_short::$(git rev-parse --short=6 ${{ github.sha }})
 
-      - name: Create github release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Release issues
+        uses: 'marvinpinto/action-automatic-releases@latest'
         with:
-          tag_name: ${{ steps.vars.outputs.sha_short }}
-          release_name: Release ${{ steps.vars.outputs.sha_short }}
-          draft: false
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          automatic_release_tag: ${{ steps.vars.outputs.sha_short }}
           prerelease: false
-
-      - name: Upload Release Asset
-        id: upload-release-asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./issues.tar.gz
-          asset_name: issues.tar.gz
-          asset_content_type: application/tar+gzip
+          title: 'Release'
+          files: ./issues.tar.gz
