@@ -2,7 +2,7 @@ name: Create release on push to master
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   release:
@@ -12,7 +12,7 @@ jobs:
       - uses: DeLaGuardo/setup-clj-kondo@master
         with:
           version: '2022.04.25'
-          
+
       - uses: DeLaGuardo/setup-clojure@5.1
         with:
           tools-deps: '1.11.1.1113'
@@ -29,7 +29,7 @@ jobs:
       - name: get shortsha
         id: vars
         run: |
-         echo ::set-output name=sha_short::$(git rev-parse --short=6 ${{ github.sha }})
+          echo ::set-output name=sha_short::$(git rev-parse --short=6 ${{ github.sha }})
 
       - name: Create github release
         id: create_release
