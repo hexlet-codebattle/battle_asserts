@@ -17,6 +17,12 @@ jobs:
         with:
           tools-deps: '1.11.1.1113'
 
+      - name: Run checks
+        run: make checks
+
+      - name: Run tests
+        run: make test
+
       - name: Make archive with issues
         run: make release
 
