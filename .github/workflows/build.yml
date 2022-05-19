@@ -1,26 +1,26 @@
-# name: Run tests and linters
+name: Run tests and linters
 
-# on:
-#   pull_request:
-#     branches: [master]
+on:
+  pull_request:
+    branches: [master]
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-#     steps:
-#       - uses: actions/checkout@v3
+    steps:
+      - uses: actions/checkout@v3
 
-#       - uses: DeLaGuardo/setup-clj-kondo@master
-#         with:
-#           version: '2022.04.25'
+      - uses: DeLaGuardo/setup-clj-kondo@master
+        with:
+          version: '2022.04.25'
 
-#       - uses: DeLaGuardo/setup-clojure@5.1
-#         with:
-#           tools-deps: '1.11.1.1113'
+      - uses: DeLaGuardo/setup-clojure@5.1
+        with:
+          tools-deps: '1.11.1.1113'
 
-#       - name: Run checks
-#         run: make checks
+      - name: Run checks
+        run: make checks
 
-#       - name: Run tests
-#         run: make test
+      - name: Run tests
+        run: make test

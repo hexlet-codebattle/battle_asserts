@@ -1,7 +1,7 @@
 name: Create release on push to master
 
 on:
-  pull_request:
+  push:
     branches: [master]
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
       - name: get shortsha
         id: vars
         run: |
-          echo ::set-output name=sha_short::$(git rev-parse --short=6 ${{ github.sha }})
+          echo ::set-output name=sha_short::$(git rev-parse --short=7 ${{ github.sha }})
 
       - name: Release issues
         uses: 'marvinpinto/action-automatic-releases@latest'
@@ -31,5 +31,5 @@ jobs:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           automatic_release_tag: ${{ steps.vars.outputs.sha_short }}
           prerelease: false
-          title: 'Release'
+          title: 'Issues'
           files: ./issues.tar.gz
