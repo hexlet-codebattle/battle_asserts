@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: DeLaGuardo/setup-clj-kondo@master
         with:
-          version: '2022.04.25'
+          version: '2022.05.31'
 
       - uses: DeLaGuardo/setup-clojure@5.1
         with:
