@@ -13,9 +13,9 @@ jobs:
         with:
           version: '2022.05.31'
 
-      - uses: DeLaGuardo/setup-clojure@6.0
+      - uses: DeLaGuardo/setup-clojure@7.0
         with:
-          tools-deps: '1.11.1.1129'
+          tools-deps: '1.11.1.1139'
 
       - name: Run checks
         run: make checks
