@@ -30,5 +30,5 @@
 (defn solution [string]
   (->>
    (s/split string #" ")
-   (map clojure.string/reverse)
+   (map s/reverse)
    (s/join " ")))

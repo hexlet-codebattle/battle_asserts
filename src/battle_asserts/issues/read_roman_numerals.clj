@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.read-roman-numerals
   (:require [clojure.pprint :as pprint]
-            [clojure.string]
+            [clojure.string :as s]
             [clojure.test.check.generators :as gen]))
 
 (def level :hard)
@@ -32,7 +32,7 @@
 
 (defn solution [roman]
   (let [numerals {\I 1, \V 5, \X 10, \L 50, \C 100, \D 500, \M 1000}]
-    (loop [roman-reverse (clojure.string/reverse roman) last-element 0 sum 0]
+    (loop [roman-reverse (s/reverse roman) last-element 0 sum 0]
       (if (empty? roman-reverse)
         sum
         (let [value (numerals (first roman-reverse))

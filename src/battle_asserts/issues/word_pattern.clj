@@ -53,4 +53,4 @@
 (defn solution [pattern words]
   (=
    (transform (vec (seq pattern)))
-   (transform (clojure.string/split words #" "))))
+   (transform (s/split words #" "))))

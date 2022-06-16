@@ -37,10 +37,10 @@
 (defn pow [base exp]
   (apply * (repeat exp base)))
 
-(defn solution [s]
+(defn solution [sheet]
   (->>
-   s
-   clojure.string/reverse
+   sheet
+   s/reverse
    char-array
    (map-indexed #(* (- (int %2) 64) (pow 26 %1)))
    (apply +)))
