@@ -36,8 +36,8 @@
 (defn solution [string]
   (->
    string
-   (clojure.string/replace #"-" "_")
-   (clojure.string/replace #"([a-z\d])([A-Z])" "$1_$2")
-   (clojure.string/replace #"([A-Z+])([A-Z][a-z])" "$1_$2")
-   (clojure.string/replace #"::" "/")
-   clojure.string/lower-case))
+   (s/replace #"-" "_")
+   (s/replace #"([a-z\d])([A-Z])" "$1_$2")
+   (s/replace #"([A-Z+])([A-Z][a-z])" "$1_$2")
+   (s/replace #"::" "/")
+   s/lower-case))
