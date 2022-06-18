@@ -6,7 +6,7 @@
 
 (def level :elementary)
 
-(def tags ["training" "collections" "hash-maps" "star-wars" "harry-potter"])
+(def tags ["training" "collections" "hash-maps"])
 
 (def description
   {:en "Given an array that contains the following information about a student: `student-name` - the student's name/surname and `discipline` - the subject that student is studying.
