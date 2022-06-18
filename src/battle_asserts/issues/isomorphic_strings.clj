@@ -56,5 +56,5 @@
   (let [alphabet (distinct string)]
     (map #(.indexOf alphabet %) string)))
 
-(defn solution [s, t]
+(defn solution [s t]
   (= (process s) (process t)))

@@ -23,9 +23,9 @@
    {:expected 16
     :arguments [[2 0 -16 -1]]}
    {:expected 1
-    :arguments [[-1, -1]]}
+    :arguments [[-1 -1]]}
    {:expected 122
-    :arguments [[122, -113, 100]]}])
+    :arguments [[122 -113 100]]}])
 
 (defn solution [arr]
   (if (empty? arr)
