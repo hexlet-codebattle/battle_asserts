@@ -37,7 +37,7 @@
     :arguments [189]}])
 
 (defn solution [n]
-  (loop [n n, seen #{}]
+  (loop [n n seen #{}]
     (cond
       (= n 1)  true
       (seen n) false
