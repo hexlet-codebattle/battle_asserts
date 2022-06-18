@@ -16,7 +16,7 @@
 
 (def signature
   {:input  [{:argument-name "students" :type {:name "array" :nested {:name "hash" :nested {:name "string"}}}}]
-   :output {:type {:name "array", :nested {:name "string"}}}})
+   :output {:type {:name "array" :nested {:name "string"}}}})
 
 (defn arguments-generator []
   (letfn [(student-name [] (s/join " " [(f/first-name) (f/last-name)]))
