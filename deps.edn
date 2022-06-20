@@ -27,9 +27,9 @@
                     :main-opts ["-m" "cljfmt.main" "check"]}
            :cljfmt-fix {:extra-deps {cljfmt/cljfmt {:mvn/version "0.8.0"}}
                           :main-opts ["-m" "cljfmt.main" "fix"]}
-           :check-translations {:exec-fn battle-asserts.util-progress-tools/check-translations}
-           :check-tags {:exec-fn battle-asserts.util-progress-tools/check-tags}
-           :check-generators-and-solutions {:exec-fn battle-asserts.util-progress-tools/check-generators-and-solutions}
-           :collect-tags {:exec-fn battle-asserts.util-progress-tools/collect-tags}
-           :collect-disabled {:exec-fn battle-asserts.util-progress-tools/collect-disabled}}}
+           :check-translations {:exec-fn battle-asserts.utility-tools/check-translations}
+           :check-tags {:exec-fn battle-asserts.utility-tools/check-tags}
+           :check-generators-and-solutions {:exec-fn battle-asserts.utility-tools/check-generators-and-solutions}
+           :collect-tags {:exec-fn battle-asserts.utility-tools/collect-tags}
+           :collect-disabled {:exec-fn battle-asserts.utility-tools/collect-disabled}}}
 
