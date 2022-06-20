@@ -1,4 +1,4 @@
-(ns battle-asserts.util-progress-tools
+(ns battle-asserts.utility-tools
   (:require [clojure.string :as s]
             [clojure.java.io :as io]
             [clojure.tools.namespace.find :as nsf]))
