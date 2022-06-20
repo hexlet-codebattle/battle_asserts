@@ -6,6 +6,8 @@
 
 (def level :elementary)
 
+(def disabled true)
+
 (def tags ["training" "collections" "hash-maps" "harry-potter" "star-wars"])
 
 (def description
