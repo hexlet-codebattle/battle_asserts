@@ -95,4 +95,7 @@ Corresponding tests are in `test/test_helper.clj` there is no need to add tests 
 
 ### 3. Create pull-request
 
-It will appear with auto-generated asserts on [codebattle](http://codebattle.hexlet.io) after merge .
+It will appear with auto-generated asserts on [codebattle](http://codebattle.hexlet.io) after merge.
+
+Thanks for your interest in the project and happy hacking!
+
