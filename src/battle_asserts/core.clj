@@ -22,8 +22,7 @@
   (let [generator (build-generator)
         size (count samples)
         coll (gen/sample generator (- max-asserts size))
-        generated (map #(hash-map :expected (apply solution %) :arguments %)
-                       coll)]
+        generated (map #(hash-map :expected (apply solution %) :arguments %) coll)]
     (reduce
      (fn [acc task] (conj acc (into (sorted-map) task)))
      generated
@@ -51,9 +50,7 @@
 (defn generate-issues
   [issue-ns-name]
   (require [issue-ns-name])
-  (let [issue-name (s/replace (last (s/split (str issue-ns-name) #"\."))
-                              #"-"
-                              "_")
+  (let [issue-name (s/replace (last (s/split (str issue-ns-name) #"\.")) #"-" "_")
         build-generator (ns-resolve issue-ns-name 'arguments-generator)
         solution (ns-resolve issue-ns-name 'solution)
         disabled (ns-resolve issue-ns-name 'disabled)
