@@ -9,9 +9,7 @@
       nsf/find-namespaces-in-dir))
 
 (defn- prepare-namespace-name [namespace]
-  (s/replace (last (s/split (str namespace) #"\."))
-             #"-"
-             "_"))
+  (s/replace (last (s/split (str namespace) #"\.")) #"-" "_"))
 
 (defn- present-untraslated-tasks [task-list level]
   (if (empty? task-list)
@@ -129,3 +127,9 @@
     (if (empty? @disabled-list)
       (println "There is no disabled tasks! Yaay!")
       (println (str "Disabled tasks list:\n" (s/join ", " @disabled-list) "\nTotal number of disabled tasks is: " (count @disabled-list) "!")))))
+
+; TODO implement tool for issue generating
+(defn generate-isssue-template
+  "Tool that generates issue template"
+  [& _args]
+  (println "Not implemented yet!"))

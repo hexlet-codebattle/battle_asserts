@@ -7,7 +7,7 @@ generate: clean
 clean:
 	rm -rf issues/*
 
-format:
+fix-format:
 	clojure -M:cljfmt-fix
 
 checks: check-format check-namespaces check-style check-kondo

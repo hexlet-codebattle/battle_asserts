@@ -2,7 +2,7 @@
   (:require [clojure.test.check.generators :as gen]
             [clojure.string :as s]
             [faker.generate :as faker]
-            [faker.name :as f]))
+            [battle-asserts.utility :as util]))
 
 (def level :elementary)
 
@@ -19,7 +19,7 @@
    :output {:type {:name "array" :nested {:name "string"}}}})
 
 (defn arguments-generator []
-  (letfn [(student-name [] (s/join " " [(f/first-name) (f/last-name)]))
+  (letfn [(student-name [] (util/gen-name))
           (student-names [] (repeatedly 40 student-name))
           (student-disciplines [] (conj (map s/capitalize (repeatedly 10 faker/word)) "Chemistry" "Jedi" "Magic" "Programming" "Dance" "Biology"))
           (student-info-gen [] (gen/generate (gen/hash-map :student-name (gen/elements (student-names)) :discipline (gen/elements (student-disciplines)))))]
