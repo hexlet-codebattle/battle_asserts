@@ -4,6 +4,9 @@ generate-from-docker: clean
 generate: clean
 	clojure -m battle-asserts.core
 
+generate-template:
+	clojure -X:generate-template
+
 clean:
 	rm -rf issues/*
 
