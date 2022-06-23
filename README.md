@@ -16,6 +16,7 @@ See [contribution guidelines](./CONTRIBUTING.md)
 - `make check-generators-and-solutions` check current tasks solution and arguments-generator progress.
 - `make collect-tags` check tags stats, useful to check typo in tags.
 - `make collect-disabled` check task disabled status.
+- `make generate-template` create issue template with hints.
 
 ## Related links
 

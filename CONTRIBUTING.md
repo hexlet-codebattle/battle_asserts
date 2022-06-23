@@ -16,6 +16,8 @@
 
 ### 1. Write the description of the issue with function signature and test-data
 
+You can generate issue template by command `make generate-template` with hints.
+
 A description of the issue includes:
 
 - `level` — difficulty of the problem; possible values are `elementary`, `easy`, `medium`, `hard`.
