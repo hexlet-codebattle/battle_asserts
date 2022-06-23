@@ -128,8 +128,36 @@
       (println "There is no disabled tasks! Yaay!")
       (println (str "Disabled tasks list:\n" (s/join ", " @disabled-list) "\nTotal number of disabled tasks is: " (count @disabled-list) "!")))))
 
-; TODO implement tool for issue generating
 (defn generate-isssue-template
-  "Tool that generates issue template"
+  "Tool that generates issue template with hints"
   [& _args]
-  (println "Not implemented yet!"))
+  (let [issue-file (io/as-file "./src/battle_asserts/issues/issue_template.clj")
+        issue-template "; FIXME rename file and namespace to actual issue name (required, check CONTRIBUTING.md)
+(ns battle-asserts.issues.issue-template
+  (:require [clojure.test.check.generators :as gen]))
+        
+; FIXME add actual task level (required)
+(def level :elementary)
+
+; FIXME add actual tags (required)
+(def tags [])
+
+(def description {en: \"Add issue description in english (required)\" ru: \"Add issue description in russian (optional)\"})
+
+; FIXME add actual signature (required)
+(def signature {:input [{}] :output {}})
+
+; FIXME add correct arguments-generator for samples (optional, you can delete args-generator)
+(defn arguments-generator [] (gen/tuple))
+
+; FIXME add actual data (required)
+(def test-data [{:expected [] :arguments []}])
+
+; FIXME add actual solution for issue (optional, you can delete solution)
+(defn solution [args])
+"]
+    (if (.exists issue-file)
+      (println "Issue template already exist!")
+      (do
+        (spit issue-file issue-template)
+        (println "Issue template generated, checkout file src/battle_asserts/issues/issue_template.clj")))))
