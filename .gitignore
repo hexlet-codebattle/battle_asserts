@@ -1,7 +1,5 @@
 .bundle
-.lein-failures
 .DS_Store
-.lein-repl-history
 lib/.DS_Store
 target
 *.swp
