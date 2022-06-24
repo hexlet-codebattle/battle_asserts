@@ -30,5 +30,5 @@
 (defn solution [str]
   (if (s/blank? str)
     []
-    (vec (map #(Integer/parseInt %) (s/split str #"")))))
+    (mapv #(Integer/parseInt %) (s/split str #""))))
 
