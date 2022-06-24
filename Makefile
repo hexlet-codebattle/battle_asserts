@@ -1,6 +1,3 @@
-generate-from-docker: clean
-	docker run -v $(CURDIR):/battle_asserts clojure /bin/bash -c 'cd /battle_asserts && clojure -m battle-asserts.core'
-
 generate: clean
 	clojure -m battle-asserts.core
 
