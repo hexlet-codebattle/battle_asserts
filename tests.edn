@@ -14,6 +14,7 @@
  :kaocha/plugins
  [:kaocha.plugin/randomize
   :kaocha.plugin/filter
-  :kaocha.plugin/capture-output],
+  :kaocha.plugin/capture-output
+  :kaocha.plugin/profiling],
  :kaocha.plugin.capture-output/capture-output? false,
  :kaocha/reporter [kaocha.report/dots]}
