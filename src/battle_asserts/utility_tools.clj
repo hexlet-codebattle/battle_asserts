@@ -139,7 +139,7 @@
 ; FIXME add actual tags (required)
 (def tags [])
 
-(def description {en: \"Add issue description in english (required)\" ru: \"Add issue description in russian (optional)\"})
+(def description {:en \"Add issue description in english (required)\" :ru \"Add issue description in russian (optional)\"})
 
 ; FIXME add actual signature (required)
 (def signature {:input [{}] :output {}})
