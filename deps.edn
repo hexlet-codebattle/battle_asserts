@@ -31,6 +31,6 @@
            :check-tags {:exec-fn battle-asserts.utility-tools/check-tags}
            :check-generators-and-solutions {:exec-fn battle-asserts.utility-tools/check-generators-and-solutions}
            :collect-tags {:exec-fn battle-asserts.utility-tools/collect-tags}
-           :generate-template {:exec-fn battle-asserts.utility-tools/generate-isssue-template}
+           :generate-template {:exec-fn battle-asserts.utility-tools/run-isssue-template-generator}
            :collect-disabled {:exec-fn battle-asserts.utility-tools/collect-disabled}}}
 
