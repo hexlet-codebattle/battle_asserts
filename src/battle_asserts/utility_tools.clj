@@ -5,7 +5,7 @@
 
 (defn- collect-namespaces []
   (-> "src/battle_asserts/issues"
-      clojure.java.io/as-file
+      io/as-file
       nsf/find-namespaces-in-dir))
 
 (defn- prepare-namespace-name [namespace]
