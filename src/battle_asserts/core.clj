@@ -7,7 +7,7 @@
             [battle-asserts.utility :as util]
             [clojure.tools.namespace.find :as nsf]))
 
-(def max-asserts 30)
+(defonce max-asserts 30)
 
 (defmulti generate-asserts
   (fn [build-generator solution _]
@@ -28,12 +28,12 @@
      generated
      samples)))
 
-(defn write-to-file [filename content-seq]
+(defn- write-to-file [filename content-seq]
   (with-open [w (io/writer filename)]
     (doseq [content-hash content-seq]
       (.write w (str (json/write-str content-hash) "\n")))))
 
-(defn render-samples [samples]
+(defn- render-samples [samples]
   (let [json-options    [:escape-unicode false :escape-slash false]
         to-json         #(apply json/write-str % json-options)
         array-to-string #(s/join ", " (map to-json %))
@@ -76,7 +76,7 @@
         (let [signature-errors (util/check-asserts-and-sign asserts @signature)]
           (if (empty? signature-errors)
             (do (write-to-file filename asserts) (println (str "Generated " issue-name " issue!")))
-            (throw (Exception. (str "Errors in signature or arguments at " issue-name " issue!")))))))))
+            (throw (Exception. (str "Errors in signature or arguments at " issue-name " issue!\n Errors: " signature-errors)))))))))
 
 (defn -main [& _args]
   (let [namespaces (-> "src/battle_asserts/issues"
