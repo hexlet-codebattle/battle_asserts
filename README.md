@@ -3,7 +3,7 @@
 
 ## Setup for development
 
-- Install [clojure.](https://clojure.org/guides/getting_started)
+- Install [Clojure](https://clojure.org/guides/getting_started)
 
 ## Contributing
 
