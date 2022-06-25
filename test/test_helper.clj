@@ -1,6 +1,7 @@
 (ns test-helper
   (:require [clojure.test :refer [is testing]]
             [clojure.test.check :as tc]
+            [clojure.string :as s]
             [clojure.test.check.properties :as prop]))
 
 (def difficulties #{:elementary :easy :medium :hard})
@@ -109,4 +110,6 @@
   "Test that checking is issue has minimal description."
   [description issue-name]
   (testing (str "Test minimal description lang for " issue-name " task.")
-    (is (true? (or (string? description) (contains? description :en))))))
+    (is (true? (and
+                (contains? description :en)
+                (not (s/blank? (description :en))))))))
