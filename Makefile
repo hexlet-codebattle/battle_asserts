@@ -1,5 +1,5 @@
 generate: clean
-	clojure -m battle-asserts.core
+	clojure  -M:generate-asserts
 
 generate-template:
 	clojure -X:generate-template

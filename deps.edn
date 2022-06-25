@@ -1,5 +1,4 @@
 {:paths ["src" "test"]
- :main-opts  ["-m" "battle-asserts.-main"]
  :description "Hexlet Codebattle Asserts"
  :url "http://battle.hexlet.io"
  :license {:name "Eclipse Public License"
@@ -15,6 +14,7 @@
  :aliases {:test {:extra-paths ["test"]
                   :extra-deps  {lambdaisland/kaocha {:mvn/version "1.68.1059"}}
                   :main-opts   ["-m" "kaocha.runner"]}
+           :generate-asserts {:main-opts ["-m" "battle-asserts.core"]}
            :eastwood {:main-opts ["-m"
                                   "eastwood.lint"
                                   {:exclude-linters
