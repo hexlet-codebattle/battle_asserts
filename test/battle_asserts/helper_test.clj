@@ -77,6 +77,6 @@
 
 (deftest helper-test
   (testing "Type checker for generators."
-    (tc/quick-check 30 (prop/for-all [v (generate-args)]
+    (tc/quick-check 10 (prop/for-all [v (generate-args)]
                                      (is (= signatures
                                             (h/prepare-arguments v)))))))
