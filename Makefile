@@ -10,15 +10,15 @@ clean:
 fix-format:
 	clojure -M:cljfmt-fix
 
-checks: check-format check-namespaces check-style check-kondo
+checks: check-format check-eastwood check-kibit check-kondo
 
 check-format:
 	clojure -M:cljfmt-check
 
-check-style:
+check-kibit:
 	clojure -M:kibit
 
-check-namespaces:
+check-eastwood:
 	clojure -M:eastwood
 
 check-kondo:
