@@ -21,8 +21,8 @@ You can generate issue template by command `make generate-template` with hints.
 A description of the issue includes:
 
 - `level` — difficulty of the problem; possible values are `elementary`, `easy`, `medium`, `hard`.
-- `description` — detailed description of the issue. Now supported laguages is `ru` and `en`, `en` is required. You can run `make check-translations` for list current translation progress.
-- `tags` — tags that provides addittional info about task, array of strings.
+- `description` — detailed description of the issue. Now supported languages is `ru` and `en`, `en` is required. You can run `make check-translations` for list current translation progress.
+- `tags` — tags that provide additional info about task, array of strings.
 - `signature` — function signature; map with `input` and `output` types. Available types `integer`, `float`, `string`, `array`, `hash (map, dicts)`.
   See examples in the existing issues.
 - `test-data` — data in a specified format which will be used to test solutions. The first element in this list will be displayed as an example to players, so it should clarify and illustrate the problem as much as possible. Do not choose a trivial case for this example.
@@ -100,4 +100,3 @@ Corresponding tests are in `test/test_helper.clj` there is no need to add tests 
 It will appear with auto-generated asserts on [codebattle](http://codebattle.hexlet.io) after merge.
 
 Thanks for your interest in the project and happy hacking!
-
