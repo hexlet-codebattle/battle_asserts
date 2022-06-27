@@ -5,6 +5,8 @@
 
 (def level :hard)
 
+(def disabled true)
+
 (def tags ["strings"])
 
 (def description
