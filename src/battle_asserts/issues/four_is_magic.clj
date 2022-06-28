@@ -11,12 +11,12 @@
   {:en "Write a function that takes an integer number and returns an English text sequence starting with the English cardinal representation of that integer,
         the word 'is' and then the English cardinal representation of the count of characters that made up the first word, followed by a comma.
         Continue the sequence by using the previous count word as the first word of the next phrase, append 'is' and the cardinal count of the letters in that word.
-        Continue until you reach four. Since four has four characters, finish by adding the words 'four is magic' and a period. All integers will eventually wind up at four."
+        Continue until you reach four. Since four has four characters, finish by adding the words 'four is magic' and a period. All integers will eventually wind up at four. Input number is not greater than 20."
    :ru "Напишите функцию, которая берет целое число и возвращает текстовую последовательность на английском языке, начинающуюся со словесного представления исходного числа,
         далее следует слово 'is' и словесное представление количества букв получившегося первого слова, за которым следует запятая.
         Продолжите последовательность используюя предыдущее получившееся слово как первое, добавьте 'is' и словесное представление количества букв получившегося слова.
         Продолжайте пока представление количества символов не станет равным 'four'. Так как 'four' состоит из четырех символов, завершите последовательность добавив слова 'four is magic' и точку.
-        Все целые числа в конечном итоге сойдутся к четырём."})
+        Все целые числа в конечном итоге сойдутся к четырём. Гарантируется, что переданное число не больше 20."})
 
 (def signature
   {:input [{:argument-name "num" :type {:name "integer"}}]
