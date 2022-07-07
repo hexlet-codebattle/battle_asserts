@@ -21,9 +21,9 @@
 	          :extra-deps {jonase/eastwood {:mvn/version "RELEASE"}}}
            :kibit {:extra-deps {tvaughan/kibit-runner {:mvn/version "1.0.1"}}
                    :main-opts ["-m" "kibit-runner.cmdline"]}
-           :cljfmt-check {:extra-deps {cljfmt/cljfmt {:mvn/version "0.8.0"}}
+           :cljfmt-check {:extra-deps {cljfmt/cljfmt {:mvn/version "0.8.2"}}
                     :main-opts ["-m" "cljfmt.main" "check"]}
-           :cljfmt-fix {:extra-deps {cljfmt/cljfmt {:mvn/version "0.8.0"}}
+           :cljfmt-fix {:extra-deps {cljfmt/cljfmt {:mvn/version "0.8.2"}}
                           :main-opts ["-m" "cljfmt.main" "fix"]}
            :check-translations {:exec-fn battle-asserts.utility-tools/check-translations}
            :check-tags {:exec-fn battle-asserts.utility-tools/check-tags}
