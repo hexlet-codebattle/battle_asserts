@@ -7,7 +7,7 @@
 (def difficulties #{:elementary :easy :medium :hard})
 
 (defn- check-output-type [data]
-  (if (or (= (type data) java.lang.Integer) (= (type data) java.lang.Long))
+  (if (or (= (type data) java.lang.Integer) (= (type data) java.lang.Long)) ; for backward compatibility 
     java.lang.Long
     (type data)))
 
