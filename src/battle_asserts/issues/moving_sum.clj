@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.moving-sum
   (:require [clojure.test.check.generators :as gen]))
 
-(def level :elementary)
+(def level :easy)
 
 (def tags ["collections"])
 
