@@ -30,15 +30,15 @@
   [{:arguments [10 12 22]
     :expected "addition"}
    {:arguments [10 5 5]
-    :expected "substraction"}
+    :expected "subtraction"}
    {:arguments [10 2 20]
-    :expected "multiply"}
+    :expected "multiplication"}
    {:arguments [33 33 33]
     :expected "unrecognized operation!!"}])
 
 (defn solution [first-num second-num result]
   (cond
     (= ((operations-map "+") first-num second-num) result) "addition"
-    (= ((operations-map "-") first-num second-num) result) "substraction"
-    (= ((operations-map "*") first-num second-num) result) "multiply"
+    (= ((operations-map "-") first-num second-num) result) "subtraction"
+    (= ((operations-map "*") first-num second-num) result) "multiplication"
     :else "unrecognized operation!!"))
