@@ -7,7 +7,7 @@
 
 (def description
   {:en "Implement the calculation function f(x) by the formula: `f(x) = x^2 for -2 <= x <2; x^2 + 4x + 5 for x >= 2; 4 for x < -2.` Using this function for n given numbers, calculate f(x). Among the calculated values, find the biggest."
-   :ru "Создайте функцию, которая рассчитывается по формуле: `f(x) = x^2 для -2 <= x <2; x^2 + 4x + 5 для x >= 2; 4 для x < -2.` Примените эту функкцию к целочисленному массиву и найдите наибольшее число."})
+   :ru "Создайте функцию, которая рассчитывается по формуле: `f(x) = x^2 для -2 <= x <2; x^2 + 4x + 5 для x >= 2; 4 для x < -2.` Примените эту функцию к целочисленному массиву и найдите наибольшее число."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
