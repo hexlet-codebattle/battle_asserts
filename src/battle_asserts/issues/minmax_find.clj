@@ -6,8 +6,8 @@
 (def tags ["collections"])
 
 (def description
-  {:en "Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order."
-   :ru "Напишите функцию, которая принимает массив чисел и возвращает его минимальное и максимальное значения в указанном порядке."})
+  {:en "Create a function that takes an array of numbers and return both the minimum and maximum numbers."
+   :ru "Напишите функцию, которая принимает массив чисел и возвращает сначала его минимальное, а затем максимальное значения."})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]
