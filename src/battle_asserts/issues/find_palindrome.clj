@@ -8,7 +8,7 @@
 
 (def description
   {:en "A palindrome is a string that is written the same forward as it is in reverse. Write a function to return the longest palindrome in a given string."
-   :ru "Палиндром - cлово или фраза, которые одинаково читаются слева направо и справа налево. Создайте функцию которая находит наидлиннейший палиндром в строке."})
+   :ru "Палиндром - слово или фраза, которые одинаково читаются слева направо и справа налево. Создайте функцию которая находит наидлиннейший палиндром в строке."})
 
 (def signature
   {:input  [{:argument-name "s" :type {:name "string"}}]

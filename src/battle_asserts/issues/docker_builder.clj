@@ -9,7 +9,7 @@
 
 (def description
   {:en "Create a function, that create docker build command from `language`, `version` and `path` (which can be empty string) for codebattle."
-   :ru "Создайте функцию, которая генерирует команду сборки docker образа для codebattle с помощью `language`, `version` и `path` (который может быть пустой стрококй)."})
+   :ru "Создайте функцию, которая генерирует команду сборки docker образа для codebattle с помощью `language`, `version` и `path` (который может быть пустой строкой)."})
 
 (def signature
   {:input [{:argument-name "language" :type {:name "string"}}
