@@ -7,7 +7,7 @@
 
 (def description
   {:en "Return the N'th item in the Fibonacci sequence Hint: The first item in the sequence is 0."
-   :ru "Верните `n`-ый элемент последовательности Фиббоначи. Подсказка: первый элемент последовательности равен 0."})
+   :ru "Верните `n`-ый элемент последовательности Фибоначчи. Подсказка: первый элемент последовательности равен 0."})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]

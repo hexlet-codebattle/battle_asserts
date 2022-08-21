@@ -7,7 +7,7 @@
 
 (def description
   {:en "Write a function that gets a string number and a fret of a 6-string guitar in 'standard tuning' and return the corresponding note. For this challenge we use a 24 fret model. The notes are: `C, C#/Db, D, D#/Eb, E, F, F#/Gb, G, G#/Ab, A, A#/Bb, B`"
-   :ru "Напишите функцию, которая получает номер струны и лад 6-струнной гитары в `стандартной настройкe` и возвращает соответствующую ноту. Для этой задачи мы используем модель с 24 ладами. Ноты следующие: `C, C#/Db, D, D#/Eb, E, F, F#/Gb, G, G#/Ab, A, A#/Bb, B`"})
+   :ru "Напишите функцию, которая получает номер струны и лад 6-струнной гитары в `стандартной настройке` и возвращает соответствующую ноту. Для этой задачи мы используем модель с 24 ладами. Ноты следующие: `C, C#/Db, D, D#/Eb, E, F, F#/Gb, G, G#/Ab, A, A#/Bb, B`"})
 
 (def signature
   {:input [{:argument-name "str" :type {:name "integer"}}

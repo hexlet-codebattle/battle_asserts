@@ -8,7 +8,7 @@
 (def description
   {:en "Check if a given integer `n` is a Sastry number.
         A number `n` is a Sastry number if concatenated with `n + 1` it gives a square."
-   :ru "Проверьте, являетли ли переданное число `n` числом Састри (Sastry number).
+   :ru "Проверьте, является ли переданное число `n` числом Састри (Sastry number).
         Число `n` является числом Састри, если при конкатенации с `n + 1` получается квадрат какого - либо числа."})
 
 (def signature

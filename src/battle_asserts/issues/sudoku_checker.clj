@@ -9,7 +9,7 @@
   {:en "Check the validity of the solved Sudoku of size 4 x 4 with values from 1 to 4.
         According to sudoku rules, in each row, each column, and each small square, each digit is used only once."
    :ru "Проверьте валидность решенного судоку размером 4 х 4 и значениями от 1 до 4.
-        По правилам судоку, в каждой строке, каждом столбце и каждом малом квадрате каждая цифра стречается только один раз."})
+        По правилам судоку, в каждой строке, каждом столбце и каждом малом квадрате каждая цифра встречается только один раз."})
 
 (def signature
   {:input [{:argument-name "matrix" :type {:name "array" :nested {:name "array" :nested {:name "integer"}}}}]

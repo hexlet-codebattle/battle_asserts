@@ -7,7 +7,7 @@
 
 (def description
   {:en "Return the N'th row of Pascal's Triangle."
-   :ru "Верните n-ную строку треугольника паскаля."})
+   :ru "Верните n-ную строку треугольника Паскаля."})
 
 (def signature
   {:input  [{:argument-name "s" :type {:name "integer"}}]
