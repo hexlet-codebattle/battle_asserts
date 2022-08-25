@@ -4,6 +4,8 @@
 
 (def level :easy)
 
+(def disabled true)
+
 (def tags ["collections" "strings"])
 
 (def description
