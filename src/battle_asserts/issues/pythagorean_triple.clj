@@ -33,7 +33,7 @@
   [{:expected true
     :arguments [[12 5 13]]}
    {:expected true
-    :arguments [[3 5 4]]}
+    :arguments [[3 4 5]]}
    {:expected false
     :arguments [[8 9 7]]}
    {:expected false
