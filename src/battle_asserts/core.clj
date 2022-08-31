@@ -67,7 +67,7 @@
           yaml (yaml/generate-string metadata :dumper-options {:flow-style :block})]
       (spit filename yaml))
     (println (str "Proceeding " issue-name "..."))
-    (let [filename (str "issues/" issue-name ".jsons")
+    (let [filename (str "issues/" issue-name ".json")
           asserts (generate-asserts build-generator solution samples)]
       (if disabled
         (do (println (str issue-name " issue is disabled!"))
