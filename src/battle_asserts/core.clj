@@ -60,7 +60,7 @@
     (let [filename (str "issues/" issue-name ".yml")
           metadata {:level @(ns-resolve issue-ns-name 'level)
                     :disabled (if (nil? disabled) false @disabled)
-                    :signature (if (nil? signature) {} @signature)
+                    :signature (if (nil? signature) {:input [] :output {}} @signature)
                     :tags (if (nil? tags) [] @tags)
                     :description (if (string? description) {:en description} description)
                     :examples (render-samples samples)}
