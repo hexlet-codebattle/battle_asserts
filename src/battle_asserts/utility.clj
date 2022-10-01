@@ -18,10 +18,14 @@
                   acc
                   (conj acc task)))) [] data)))
 
-(defn drop-nth [coll index]
+(defn drop-nth
+  "Drops nth element from collection."
+  [coll index]
   (keep-indexed #(when (not= index %1) %2) coll))
 
-(defn unique-words [amount]
+(defn unique-words
+  "Generates unique words."
+  [amount]
   (letfn [(gen-words []
             (faker/words {:lang :en :n amount}))]
     (loop [words (gen-words)]
@@ -35,4 +39,3 @@
   "Generates random first name + last name."
   []
   (str (f/first-name) " " (f/last-name)))
-

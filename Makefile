@@ -39,6 +39,9 @@ collect-disabled:
 check-generators-and-solutions:
 	clojure -X:check-generators-and-solutions
 
+check-outdated-deps:
+	clojure -Sdeps '{:deps {com.github.liquidz/antq {:mvn/version "RELEASE"}}}' -M -m antq.core
+
 test:
 	clojure -M:test
 
