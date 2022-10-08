@@ -13,9 +13,11 @@
                         (gen/hash-map :test gen/string-ascii)
                         (gen/hash-map :test gen/boolean)
                         (gen/hash-map :test (gen/choose -100 100))
+                        (gen/hash-map :test (gen/double* {:min -10.0 :max 10.0 :NaN? false :infinite? false}))
                         (gen/vector gen/string-ascii 1 5)
                         (gen/vector gen/boolean 1 5)
                         (gen/vector (gen/choose -100 100) 1 5)
+                        (gen/vector (gen/double* {:min -10.0 :max 10.0 :NaN? false :infinite? false}) 1 5)
                         (gen/vector (gen/vector gen/string-ascii 1 5) 1 5)
                         (gen/vector (gen/vector gen/boolean 1 5) 1 5)
                         (gen/vector (gen/vector (gen/choose -100 100) 1 5) 1 5)
@@ -49,9 +51,11 @@
                  {:type {:name "hash" :nested {:name "string"}}}
                  {:type {:name "hash" :nested {:name "boolean"}}}
                  {:type {:name "hash" :nested {:name "integer"}}}
+                 {:type {:name "hash" :nested {:name "float"}}}
                  {:type {:name "array" :nested {:name "string"}}}
                  {:type {:name "array" :nested {:name "boolean"}}}
                  {:type {:name "array" :nested {:name "integer"}}}
+                 {:type {:name "array" :nested {:name "float"}}}
                  {:type {:name "array" :nested {:name "array" :nested {:name "string"}}}}
                  {:type {:name "array" :nested {:name "array" :nested {:name "boolean"}}}}
                  {:type {:name "array" :nested {:name "array" :nested {:name "integer"}}}}
