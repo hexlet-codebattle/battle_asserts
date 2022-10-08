@@ -9,10 +9,10 @@
                         gen/string-ascii
                         gen/boolean
                         (gen/choose -100 100)
+                        (gen/double* {:min -10.0 :max 10.0 :NaN? false :infinite? false})
                         (gen/hash-map :test gen/string-ascii)
                         (gen/hash-map :test gen/boolean)
                         (gen/hash-map :test (gen/choose -100 100))
-                        (gen/double* {:min -10.0 :max 10.0 :NaN? false :infinite? false})
                         (gen/vector gen/string-ascii 1 5)
                         (gen/vector gen/boolean 1 5)
                         (gen/vector (gen/choose -100 100) 1 5)
