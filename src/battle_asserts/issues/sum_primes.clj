@@ -19,7 +19,7 @@
 (def test-data
   [{:expected 2
     :arguments [3]}
-  [{:expected 4227
+   {:expected 4227
     :arguments [200]}
    {:expected 76127
     :arguments [1000]}])
