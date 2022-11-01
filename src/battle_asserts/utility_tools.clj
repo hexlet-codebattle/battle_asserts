@@ -106,7 +106,7 @@
         (if-not (nil? tags)
           (swap! tags-list (fn [acc elem] (apply conj acc elem)) @tags)
           (println (str "Task " issue-name " without tags!")))))
-    (let [stats (sort-by first (frequencies @tags-list))
+    (let [stats (sort-by val > (frequencies @tags-list))
           incorrect-tag-number 1
           probably-incorrect (mapv first (filterv
                                           #(= (second %) incorrect-tag-number) stats))]
