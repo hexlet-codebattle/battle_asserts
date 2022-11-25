@@ -6,8 +6,8 @@
 (def tags ["games"])
 
 (def description
-  {:en "The input contains the maximum number of dots on one end of a domino bone. Output the number of dots on the domino set. Sample 2 -> 12"
-   :ru "`x` содержит максимальное количество точек на одном конце доминошки. Выведите количество точек на наборе домино. Например 2 -> 12"})
+  {:en "The input contains the maximum number of dots on one end of a domino bone. Domino set is all possible combinations of domino bones. Output the number of dots on the domino set. Sample 2 -> 12, 1 -> 3 (0|1, 1|1)"
+   :ru "`x` содержит максимальное количество точек на одном конце доминошки. Набор домино, это набор всех возможных комбинаций костяшек домино. Выведите количество точек в наборе домино. Например 2 -> 12, 1 -> 3 (0|1, 1|1)"})
 
 (def signature
   {:input  [{:argument-name "x" :type {:name "integer"}}]
