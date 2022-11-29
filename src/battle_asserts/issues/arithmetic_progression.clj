@@ -6,7 +6,7 @@
 (def tags ["math" "recursion"])
 
 (def description
-  {:en "Calculate arithmetic progression from 1 to `n`."
+  {:en "Calculate sum of arithmetic progression from 1 to `n`."
    :ru "Рассчитайте сумму членов арифметической прогрессии от 1 до `n`,"})
 
 (def signature

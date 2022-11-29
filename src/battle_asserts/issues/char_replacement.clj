@@ -8,7 +8,7 @@
 (def tags ["strings" "collections"])
 
 (def description
-  {:en "Write a function thar replaces every `character` for `replacement` from every string in array."
+  {:en "Write a function that replaces every `character` for `replacement` from every string in array."
    :ru "Создайте функцию, которая заменяет каждый `character` на `replacement` для каждой строки в массиве."})
 
 (def signature
