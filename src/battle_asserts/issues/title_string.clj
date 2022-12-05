@@ -9,7 +9,7 @@
 
 (def description
   {:en "Check if a string `title` is a title string or not. A title string is one which has all the words in the string start with a upper case letter."
-   :ru "Проверьте, являются ли все слова в строке заглавными."})
+   :ru "Проверьте, начинаются ли все слова в строке с заглавной буквы."})
 
 (def signature
   {:input [{:argument-name "title" :type {:name "string"}}]
