@@ -9,7 +9,7 @@
   {:en "Given an array and a number, generate an array with values shifted left or right by a given number.
         The number could be positive or negative; positive number shifts the array forward, negative shifts it backwards."
    :ru "Даны массив и число, сгенерируйте массив со значениями сдвинутыми вправо или влево по заданному числу.
-        Число может быть положительным или отрицательным. Если число положительное массив сдвигается вперед, если отрицательное - назад."})
+        Число может быть положительным или отрицательным. Если число положительное - массив сдвигается вперед, если отрицательное - назад."})
 
 (def disabled true)
 

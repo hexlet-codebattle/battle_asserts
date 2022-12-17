@@ -9,7 +9,7 @@
 (def description
   {:en "Given an array that represents elements of an arithmetic progression in order.
         One element is missing in the progression. Return the missing number."
-   :ru "Дан массив чисел представляющий собой упорядоченную арифметическую прогрессию.
+   :ru "Дан массив чисел, представляющий собой упорядоченную арифметическую прогрессию.
         Один элемент прогрессии пропущен. Верните пропущенный элемент."})
 
 (def signature

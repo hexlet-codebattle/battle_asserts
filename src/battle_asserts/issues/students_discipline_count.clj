@@ -14,7 +14,7 @@
   {:en "Given an array that contains the following information about a student: `student-name` - the student's name/surname and `discipline` - the subject that student is studying.
         Return the hash in which the statistics of students studying in each course are counted. The order corresponds to the order of the courses in the original array."
    :ru "Дан массив, в котором содержится следующая информация о студенте: `student-name` - имя/фамилия студента и `discipline` - предмет, который студент изучает.
-        Верните хеш в котором подсчитана статистика студентов обучающихся на каждом предмете. Порядок соответствует порядку следования дисциплин в исходном массиве."})
+        Верните хеш, в котором подсчитана статистика студентов обучающихся на каждом предмете. Порядок соответствует порядку следования дисциплин в исходном массиве."})
 
 (def signature
   {:input  [{:argument-name "students" :type {:name "array" :nested {:name "hash" :nested {:name "string"}}}}]

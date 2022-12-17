@@ -7,7 +7,7 @@
 
 (def description
   {:en "Given an array of boxes, create a function that returns the total volume of all those boxes combined together. A box is represented by an array with three elements: length, width and height. Each box will always have three dimensions."
-   :ru "Дан массив коробок, создайте функцию которая возвращает общий объем этих коробок. Коробка представляет собой массив из трёх элементов: длины, ширины и высоты. Все коробки имеют 3 измерения."})
+   :ru "Дан массив коробок, создайте функцию, которая возвращает общий объем этих коробок. Коробка представляет собой массив из трёх элементов: длины, ширины и высоты. Все коробки имеют 3 измерения."})
 
 (def signature
   {:input [{:argument-name "boxes" :type {:name "array" :nested {:name "array" :nested {:name "integer"}}}}]

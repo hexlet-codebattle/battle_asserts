@@ -10,7 +10,7 @@
         return a Fixed Point in the array,
         if there is a Fixed Point present in array; else return -1.
         Fixed Point in an array is an index i such that arr[i] is equal to i."
-   :ru "Дан массив из n различных целых чисел упорядоченных по возрастанию.
+   :ru "Дан массив из n различных целых чисел, упорядоченных по возрастанию.
         Верните фиксированную точку в данном массиве,
         если она присутствует в нём, иначе верните -1.
         Фиксированная точка в массиве arr - это индекс i, такой, что элемент arr[i] равен i."})

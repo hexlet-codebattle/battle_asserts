@@ -7,7 +7,7 @@
 
 (def description
   {:en "Implement a function that returns an array of additive inverses. A number added with its `additive inverse` equals zero."
-   :ru "Создайте функцию которая возвращает массив аддитивных инверсий. Число сложенное со своей аддитивной инверсией даёт ноль."})
+   :ru "Создайте функцию, которая возвращает массив аддитивных инверсий. Число, сложенное со своей аддитивной инверсией даёт ноль."})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]

@@ -7,7 +7,7 @@
 
 (def description
   {:en "Create a function that takes a whole number as input and returns the shape with that number's amount of sides. Check examples below."
-   :ru "Создайте функцию которая принимает целое число и возвращает строку с названием фигуры, состоящий из переданного количество сторон."})
+   :ru "Создайте функцию, которая принимает целое число и возвращает строку с названием фигуры, состоящий из переданного количество сторон."})
 
 (def signature
   {:input [{:argument-name "sides" :type {:name "integer"}}]
