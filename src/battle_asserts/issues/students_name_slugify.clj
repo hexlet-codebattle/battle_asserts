@@ -12,7 +12,7 @@
   {:en "Given an array that contains the following information about a student: `student-name` - the student's name/surname and `discipline` - the subject that student is studying.
         Return the array of names formatted by the following rule `Harry Potter` -> `harry-potter`."
    :ru "Дан массив, в котором содержится следующая информация о студенте: `student-name` - имя/фамилия студента и `discipline` - предмет, который студент изучает.
-        Верните массив имен отформатированных по следующему правилу `Harry Potter` -> `harry-potter`."})
+        Верните массив имен, отформатированных по следующему правилу `Harry Potter` -> `harry-potter`."})
 
 (def signature
   {:input  [{:argument-name "students" :type {:name "array" :nested {:name "hash" :nested {:name "string"}}}}]

@@ -7,7 +7,7 @@
 
 (def description
   {:en "Implement a function that takes an array of numbers and return \"Boom!\" if the number 7 appears. Otherwise, return \"There is no 7.\""
-   :ru "Создайте функцию которая обходит массив чисел и если в нем присутствует число 7, возвращает \"Boom!\", в ином случае \"There is no 7.\""})
+   :ru "Создайте функцию, которая обходит массив чисел и если в нем присутствует число 7, возвращает \"Boom!\", в ином случае \"There is no 7.\""})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]
