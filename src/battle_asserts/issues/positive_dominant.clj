@@ -3,11 +3,11 @@
 
 (def level :easy)
 
-(def tags ["collections"])
+(def tags ["collections" "math"])
 
 (def description
-  {:en "Create a function, thats check if positive numbers are greater than negative ones in `numbers` array after removing duplicates."
-   :ru "Создайте функцию, которая проверяет, больше ли положительных чисел, чем отрицательных, в массиве `numbers` после удаления дубликатов."})
+  {:en "Create a function, thats check if positive numbers are greater than negative ones in `numbers` array after removing duplicates (array may contains zeros)."
+   :ru "Создайте функцию, которая проверяет, больше ли положительных чисел, чем отрицательных, в массиве `numbers` после удаления дубликатов (в массиве могут быть и нули)."})
 
 (def signature
   {:input  [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]
