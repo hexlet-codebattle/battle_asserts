@@ -20,7 +20,7 @@
   [{:expected false :arguments [14]}
    {:expected false :arguments [27]}
    {:expected true :arguments [43]}
-   {:expected true :arguments [99]}])
+   {:expected false :arguments [99]}])
 
 (defn solution [number]
-  (>= (/ number 10) (mod number 10)))
+  (> (/ number 10) (mod number 10)))
