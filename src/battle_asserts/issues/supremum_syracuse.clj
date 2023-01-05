@@ -17,20 +17,20 @@
   (gen/tuple (gen/choose 1 100)))
 
 (def test-data
-  [{:expected 16
+  [{:expected 8
     :arguments [6]}
-   {:expected 52
+   {:expected 17
     :arguments [11]}
-   {:expected 9232
+   {:expected 41
     :arguments [27]}])
 
+(defn- sur-num [num]
+  (if (= 1 num)
+    num
+    (if (odd? num)
+      (quot (inc (* 3 num)) 2)
+      (quot num 2))))
+
 (defn solution [num]
-  (letfn [(gen-seq
-            [num]
-            (if (= 1 num)
-              [num]
-              (concat [num]
-                      (if (odd? num)
-                        (gen-seq (inc (* 3 num)))
-                        (gen-seq (/ num 2))))))]
-    (apply max (gen-seq num))))
+  (let [sur-num-seq (map sur-num (range 1 (inc num)))]
+    (apply max sur-num-seq)))
