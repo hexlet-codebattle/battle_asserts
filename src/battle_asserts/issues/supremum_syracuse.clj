@@ -31,6 +31,6 @@
               [num]
               (concat [num]
                       (if (odd? num)
-                        (gen-seq (quot (inc (* 3 num))))
+                        (gen-seq (quot (inc (* 3 num)) 2))
                         (gen-seq (quot num 2))))))]
     (apply max (gen-seq num))))
