@@ -24,13 +24,13 @@
    {:expected 41
     :arguments [27]}])
 
-(defn- sur-num [num]
-  (if (= 1 num)
-    num
-    (if (odd? num)
-      (quot (inc (* 3 num)) 2)
-      (quot num 2))))
-
 (defn solution [num]
-  (let [sur-num-seq (map sur-num (range 1 (inc num)))]
-    (apply max sur-num-seq)))
+  (letfn [(gen-seq
+            [num]
+            (if (= 1 num)
+              [num]
+              (concat [num]
+                      (if (odd? num)
+                        (gen-seq (quot (inc (* 3 num))))
+                        (gen-seq (quot num 2))))))]
+    (apply max (gen-seq num))))
