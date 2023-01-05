@@ -21,7 +21,7 @@
     :arguments [6]}
    {:expected 26
     :arguments [11]}
-   {:expected 41
+   {:expected 4616
     :arguments [27]}])
 
 (defn solution [num]
