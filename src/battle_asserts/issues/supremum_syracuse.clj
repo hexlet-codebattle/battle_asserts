@@ -19,7 +19,7 @@
 (def test-data
   [{:expected 8
     :arguments [6]}
-   {:expected 17
+   {:expected 26
     :arguments [11]}
    {:expected 41
     :arguments [27]}])
