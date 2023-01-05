@@ -19,18 +19,18 @@
 (def test-data
   [{:expected 8
     :arguments [6]}
-   {:expected 17
+   {:expected 26
     :arguments [11]}
-   {:expected 41
+   {:expected 4616
     :arguments [27]}])
 
-(defn- sur-num [num]
-  (if (= 1 num)
-    num
-    (if (odd? num)
-      (quot (inc (* 3 num)) 2)
-      (quot num 2))))
-
 (defn solution [num]
-  (let [sur-num-seq (map sur-num (range 1 (inc num)))]
-    (apply max sur-num-seq)))
+  (letfn [(gen-seq
+            [num]
+            (if (= 1 num)
+              [num]
+              (concat [num]
+                      (if (odd? num)
+                        (gen-seq (quot (inc (* 3 num)) 2))
+                        (gen-seq (quot num 2))))))]
+    (apply max (gen-seq num))))
