@@ -9,7 +9,7 @@
 
 (def description
   {:en "You are given a string of words. You need replace `_` symbols with spaces and capitalize every word in a string."
-   :ru "Создайте функцию, которая заменяет символ `_` пробелами и переводит каждое слово в строке в верхний регистр."})
+   :ru "Создайте функцию, которая заменяет символ `_` пробелами и переводит первую букву каждого слова в верхний регистр."})
 
 (def signature
   {:input [{:argument-name "sentence" :type {:name "string"}}]
