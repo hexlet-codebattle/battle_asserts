@@ -7,7 +7,7 @@
 
 (def description
   {:en "Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers."
-   :ru "Создайте функцию, которая рассчитывает максимальную длину третьей стороны треугольника."})
+   :ru "Создайте функцию, которая рассчитывает максимальную длину третьей стороны треугольника. Все длины сторон являются целыми числами."})
 
 (def signature
   {:input  [{:argument-name "first" :type {:name "integer"}}
