@@ -6,7 +6,7 @@
 (def tags ["training"])
 
 (def description
-  {:en "Create a function that validates whether a number `n` is exclusively within the bounds of `lower` and `upper`."
+  {:en "Create a function that validates whether a number `n` is inclusively within the bounds of `lower` and `upper`."
    :ru "Создайте функцию, которая проверяет, находится ли число `n` в границах между `lower` и `upper` включительно."})
 
 (def signature
