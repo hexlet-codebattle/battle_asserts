@@ -7,7 +7,7 @@
 
 (def description
   {:en "The decimal number 585 is 1001001001 in binary. It is palindromic in both bases. Find n-th palindromic number."
-   :ru "Десятичное число 585 в двоичном виде 1001001001. Оно палиндромично в обоих случаях. Проверьте, является ли число палиндромом в десятичном и двоичном виде."})
+   :ru "Десятичное число 585 в двоичном виде 1001001001. Оно палиндромично в обоих случаях. Найдите n-е десятичное число, которое будет палиндромом по обоим основаниям."})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]
