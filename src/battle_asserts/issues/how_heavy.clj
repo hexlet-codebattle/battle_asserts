@@ -7,7 +7,7 @@
 
 (def description
   {:en "Given `radius` and `height` (in cm), calculate the mass of a cylinder when it's filled with water and the cylinder itself doesn't weigh anything. Use ceil rounding for answer."
-   :ru "Дан `radius` и `height` (в см), рассчитайте массу цилиндра, заполненного полностью водой, массу самого цилиндра не учитывается. Используйте округление вверх."})
+   :ru "Даны радиус `radius` и высота `height` (в см), рассчитайте массу цилиндра, заполненного полностью водой, масса самого цилиндра не учитывается. Используйте округление вверх."})
 
 (def signature
   {:input [{:argument-name "radius" :type {:name "integer"}}
