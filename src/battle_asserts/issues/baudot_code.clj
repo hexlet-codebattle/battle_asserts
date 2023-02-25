@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.baudot-code
   (:require [clojure.test.check.generators :as gen]
-            [faker.generate :as fk]
+            [faker.generate :as faker]
             [clojure.string :as s]))
 
 (def level :hard)
@@ -109,7 +109,7 @@
     (s/join #"" (map dict (s/split word #"")))))
 
 (defn arguments-generator []
-  (let [words (map s/upper-case (fk/words {:n 40}))
+  (let [words (map s/upper-case (faker/words {:n 40}))
         encrypted (map encrypt words)]
     (gen/tuple (gen/elements encrypted))))
 

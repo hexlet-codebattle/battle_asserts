@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.computers-count
   (:require [clojure.test.check.generators :as gen]
-            [battle-asserts.utility :as h]))
+            [battle-asserts.utility :as util]))
 
 (def level :elementary)
 
@@ -15,7 +15,7 @@
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
-  (gen/tuple h/gen-pos-num))
+  (gen/tuple util/gen-pos-num))
 
 (def test-data
   [{:expected "1 computer" :arguments [1]}

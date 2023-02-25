@@ -14,7 +14,7 @@
         cljfmt/cljfmt {:mvn/version "0.9.2"}
         tvaughan/kibit-runner {:mvn/version "1.0.1"}
         jonase/eastwood {:mvn/version "RELEASE"}}
- :aliases {:test {:extra-deps  {lambdaisland/kaocha {:mvn/version "1.77.1236"}}
+ :aliases {:test {:extra-deps  {lambdaisland/kaocha {:mvn/version "1.78.1249"}}
                   :main-opts   ["-m" "kaocha.runner"]}
            :generate-asserts {:main-opts ["-m" "battle-asserts.core"]}
            :eastwood {:main-opts ["-m"
@@ -29,4 +29,3 @@
            :collect-tags {:exec-fn battle-asserts.utility-tools/collect-tags}
            :generate-template {:exec-fn battle-asserts.utility-tools/run-isssue-template-generator}
            :collect-disabled {:exec-fn battle-asserts.utility-tools/collect-disabled}}}
-

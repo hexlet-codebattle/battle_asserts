@@ -1,7 +1,7 @@
 (ns battle-asserts.utility
   (:require [faker.generate :as faker]
             [clojure.test.check.generators :as gen]
-            [faker.name :as f]
+            [faker.name :as fk]
             [test-helper :as h]))
 
 (defn check-asserts-and-sign
@@ -38,4 +38,4 @@
 (defn gen-name
   "Generates random first name + last name."
   []
-  (str (f/first-name) " " (f/last-name)))
+  (str (fk/first-name) " " (fk/last-name)))

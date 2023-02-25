@@ -1,5 +1,5 @@
 (ns battle-asserts.issues.distance-across-river
-  (:require [battle-asserts.utility :as utility]
+  (:require [battle-asserts.utility :as util]
             [clojure.test.check.generators :as gen]))
 
 (def level :elementary)
@@ -19,13 +19,13 @@
 (defn pairs-gen
   [[x y]]
   (gen/fmap #(vector (* x %) (* y %))
-            utility/gen-pos-num))
+            util/gen-pos-num))
 
 (defn arguments-generator []
   (gen/fmap (fn [[[x y] factor]]
               [x (* x factor) (* y factor)])
             (gen/tuple (pairs-gen [9 12])
-                       utility/gen-pos-num)))
+                       util/gen-pos-num)))
 
 (def test-data
   [{:expected 5.0 :arguments [3 6 8]}

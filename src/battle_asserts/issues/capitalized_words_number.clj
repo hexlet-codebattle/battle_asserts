@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.capitalized-words-number
   (:require [clojure.test.check.generators :as gen]
             [clojure.string :as s]
-            [faker.generate :as f]))
+            [faker.generate :as faker]))
 
 (def level :easy)
 
@@ -17,7 +17,7 @@
 
 (defn arguments-generator []
   (gen/tuple
-   (gen/let [words (gen/vector (gen/elements (f/sentences {:n 2})) 1 9)]
+   (gen/let [words (gen/vector (gen/elements (faker/sentences {:n 2})) 1 9)]
      (gen/return (s/join " " words)))))
 
 (def test-data

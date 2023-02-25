@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.sort-by-name
   (:require [clojure.string :as s]
             [clojure.test.check.generators :as gen]
-            [battle-asserts.utility :as u]))
+            [battle-asserts.utility :as util]))
 
 (def level :elementary)
 
@@ -16,7 +16,7 @@
    :output {:type {:name "array" :nested {:name "string"}}}})
 
 (defn arguments-generator []
-  (let [names (repeatedly 60 u/gen-name)]
+  (let [names (repeatedly 60 util/gen-name)]
     (gen/tuple (gen/vector (gen/elements names) 3 15))))
 
 (def test-data

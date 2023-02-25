@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.rating-sort
   (:require [clojure.test.check.generators :as gen]
-            [battle-asserts.utility :as u]))
+            [battle-asserts.utility :as util]))
 
 (def level :easy)
 
@@ -17,7 +17,7 @@
    :output {:type {:name "array" :nested {:name "string"}}}})
 
 (defn arguments-generator []
-  (let [players (repeatedly 60 u/gen-name)
+  (let [players (repeatedly 60 util/gen-name)
         ratings (map str (repeatedly 30 #(str (gen/generate (gen/choose 0 9999)))))
         stats (repeatedly 60 (fn [] {:player (rand-nth players) :rating (rand-nth ratings)}))]
     (gen/tuple (gen/vector (gen/elements stats) 4 15))))

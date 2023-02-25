@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.sort-chat-messages
   (:require [clojure.test.check.generators :as gen]
             [clojure.string :as s]
-            [faker.generate :as fk]))
+            [faker.generate :as faker]))
 
 (def level :easy)
 
@@ -23,7 +23,7 @@
         minutes (gen/generate (gen/choose 0 59))
         seconds (gen/generate (gen/choose 0 59))
         timestamp (s/join #":" (map add-zeros [hours minutes seconds]))]
-    (str timestamp " " (fk/sentence))))
+    (str timestamp " " (faker/sentence))))
 
 (def signature
   {:input [{:argument-name "messages" :type {:name "array" :nested {:name "string"}}}]
@@ -47,4 +47,3 @@
 
 (defn solution [messages]
   (vec (sort-by #(Integer/parseInt (first (s/split % #":"))) < messages)))
-

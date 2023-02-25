@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.xor
   (:require [clojure.test.check.generators :as gen]
             [clojure.string :as s]
-            [faker.generate :as fk]))
+            [faker.generate :as faker]))
 
 (def level :easy)
 
@@ -19,8 +19,8 @@
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/elements (fk/words {:n 30}))
-             (gen/elements (fk/words {:n 30}))))
+  (gen/tuple (gen/elements (faker/words {:n 30}))
+             (gen/elements (faker/words {:n 30}))))
 
 (def test-data
   [{:expected "5*"
