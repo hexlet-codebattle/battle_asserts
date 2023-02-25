@@ -1,5 +1,5 @@
 (ns battle-asserts.issues.word-pattern
-  (:require [battle-asserts.utility :as utility]
+  (:require [battle-asserts.utility :as util]
             [clojure.string :as s]
             [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
@@ -25,7 +25,7 @@
             (s/join " " (faker/words {:lang :en :n (inc (rand-int 10))})))
           (string-by-pattern [pattern]
             (let [sym-in-pattern (distinct (seq pattern))
-                  words (utility/unique-words (count sym-in-pattern))
+                  words (util/unique-words (count sym-in-pattern))
                   associations (zipmap sym-in-pattern words)]
               (s/join " " (map associations (seq pattern)))))]
     (gen/one-of [(gen/tuple (gen/elements (repeatedly 30 pattern))

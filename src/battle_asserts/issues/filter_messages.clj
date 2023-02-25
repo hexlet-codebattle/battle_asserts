@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.filter-messages
   (:require [clojure.test.check.generators :as gen]
-            [battle-asserts.utility :as u]
-            [faker.generate :as f]))
+            [battle-asserts.utility :as util]
+            [faker.generate :as faker]))
 
 (def level :elementary)
 
@@ -17,8 +17,8 @@
    :output {:type {:name "array" :nested {:name "string"}}}})
 
 (defn arguments-generator []
-  (let [users (repeatedly 10 u/gen-name)
-        message-texts (repeatedly 40 f/sentence)
+  (let [users (repeatedly 10 util/gen-name)
+        message-texts (repeatedly 40 faker/sentence)
         messages (repeatedly 50 (fn [] {:user (rand-nth users) :text (rand-nth message-texts)}))]
     (gen/tuple (gen/vector (gen/elements messages) 5 20) (gen/elements users))))
 

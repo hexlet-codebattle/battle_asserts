@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.pluralize
   (:require [clojure.test.check.generators :as gen]
-            [faker.generate :as f]))
+            [faker.generate :as faker]))
 
 (def level :easy)
 
@@ -15,7 +15,7 @@
    :output {:type {:name "array" :nested {:name "string"}}}})
 
 (defn arguments-generator []
-  (let [words (f/words {:n 25})
+  (let [words (faker/words {:n 25})
         repeat-words (repeatedly 10 #(rand-nth words))
         final-words (concat words repeat-words)]
     (gen/tuple (gen/vector (gen/elements final-words) 3 15))))

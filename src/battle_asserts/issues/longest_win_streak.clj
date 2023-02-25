@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.longest-win-streak
   (:require [clojure.test.check.generators :as gen]
-            [faker.name :as fk-name]))
+            [faker.name :as fk]))
 
 (def level :easy)
 
@@ -21,7 +21,7 @@
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/vector (gen/elements (repeatedly 2 #(fk-name/first-name))) 4 10)))
+  (gen/tuple (gen/vector (gen/elements (repeatedly 2 #(fk/first-name))) 4 10)))
 
 (def test-data
   [{:expected "Alice"

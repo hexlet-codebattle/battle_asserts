@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.word-wave
   (:require [clojure.test.check.generators :as gen]
-            [faker.generate :as fk]
+            [faker.generate :as faker]
             [clojure.string :as s]))
 
 (def level :easy)
@@ -18,7 +18,7 @@
    :output {:type {:name "array" :nested {:name "string"}}}})
 
 (defn arguments-generator []
-  (let [words (fk/words {:n 20})]
+  (let [words (faker/words {:n 20})]
     (gen/tuple (gen/elements words))))
 
 (def test-data

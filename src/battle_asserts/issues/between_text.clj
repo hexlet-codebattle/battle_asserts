@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.between-text
   (:require [clojure.test.check.generators :as gen]
-            [faker.generate :as fk]
+            [faker.generate :as faker]
             [clojure.string :as s]))
 
 (def level :easy)
@@ -18,7 +18,7 @@
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
-  (let [variants (repeatedly 2 #(fk/sentence {:words-range [4 4]}))
+  (let [variants (repeatedly 2 #(faker/sentence {:words-range [4 4]}))
         left-variants (mapv #(rand-nth (first (partition 2 (s/split % #" ")))) variants)
         right-variants (mapv #(rand-nth (last (partition 2 (s/split % #" ")))) variants)]
     (gen/tuple (gen/elements variants) (gen/elements left-variants) (gen/elements right-variants))))

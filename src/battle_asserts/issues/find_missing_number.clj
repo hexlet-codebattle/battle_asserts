@@ -1,5 +1,5 @@
 (ns battle-asserts.issues.find-missing-number
-  (:require [battle-asserts.utility :as utility]
+  (:require [battle-asserts.utility :as util]
             [clojure.test.check.generators :as gen]))
 
 (def level :easy)
@@ -18,7 +18,7 @@
   (letfn [(randomize [] (gen/generate (gen/choose 4 20)))
           (prepare-vector [] (let [coll (range 1 (randomize))
                                    elem-to-drop (rand-int (count coll))
-                                   without-elem (vec (utility/drop-nth coll elem-to-drop))] without-elem))
+                                   without-elem (vec (util/drop-nth coll elem-to-drop))] without-elem))
           (prepare-vectors-pool [] (vec (repeatedly 50 prepare-vector)))]
     (gen/tuple (gen/elements (prepare-vectors-pool)))))
 

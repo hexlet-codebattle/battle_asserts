@@ -1,5 +1,5 @@
 (ns battle-asserts.issues.squish
-  (:require [clojure.string :as string]
+  (:require [clojure.string :as s]
             [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
 
@@ -19,13 +19,13 @@
   (rand-nth ["\t" "\n" " "]))
 
 (defn- random-separators [n]
-  (string/join (repeatedly n random-separator)))
+  (s/join (repeatedly n random-separator)))
 
 (defn- prepared-string []
   (->>
    (faker/words {:lang :en :n 10})
    (map #(str (random-separators 5) % (random-separators 5)))
-   (string/join)))
+   (s/join)))
 
 (defn arguments-generator []
   (gen/tuple (gen/elements (repeatedly 20 prepared-string))))
@@ -35,10 +35,10 @@
     :arguments ["  Multi-line \n       string    \t   is   \n   so cool   \n"]}])
 
 (defn squeeze-spaces [sentence]
-  (string/replace sentence #"\s+" " "))
+  (s/replace sentence #"\s+" " "))
 
 (defn solution [sentence]
   (-> sentence
-      string/triml
-      string/trimr
+      s/triml
+      s/trimr
       squeeze-spaces))

@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.string-index-of
   (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]
-            [clojure.string :as str]))
+            [clojure.string :as s]))
 
 (def level :elementary)
 
@@ -31,7 +31,7 @@
     :arguments ["test" "t"]}])
 
 (defn solution [first-str second-str]
-  (let [occurence (str/index-of first-str second-str)]
+  (let [occurence (s/index-of first-str second-str)]
     (if (nil? occurence)
       -1
       occurence)))

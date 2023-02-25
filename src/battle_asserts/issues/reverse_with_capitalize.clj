@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.reverse-with-capitalize
   (:require [clojure.test.check.generators :as gen]
             [clojure.string :as s]
-            [faker.generate :as fk]))
+            [faker.generate :as faker]))
 
 (def level :medium)
 
@@ -16,7 +16,7 @@
    :output {:type {:name "string"}}})
 
 (defn- gen-capitalized-sentence []
-  (let [sentence (fk/sentence)
+  (let [sentence (faker/sentence)
         splitted (s/split sentence #" ")
         capitalized (map
                      (fn [el] (if (gen/generate gen/boolean) (s/capitalize el) el)) splitted)]
@@ -59,4 +59,3 @@
   (->> (s/split sentence #" ")
        (map reverse-word)
        (s/join #" ")))
-

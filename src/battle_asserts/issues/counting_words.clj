@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.counting-words
   (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]
-            [clojure.string :as str]))
+            [clojure.string :as s]))
 
 (def level :easy)
 
@@ -19,7 +19,7 @@
 
 (defn arguments-generator []
   (let [strs (gen/vector (gen/elements (faker/words {:lang :en :n 15})) 3 10)
-        sentence (gen/fmap #(str/join " " %) strs)]
+        sentence (gen/fmap #(s/join " " %) strs)]
     (gen/tuple sentence)))
 
 (def test-data
