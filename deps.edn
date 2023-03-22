@@ -4,7 +4,7 @@
  :license {:name "Eclipse Public License"
            :url "http://www.eclipse.org/legal/epl-v10.html"}
  :deps {org.clojure/clojure {:mvn/version "1.11.1"}
-        org.clojure/tools.namespace {:mvn/version "1.4.2"}
+        org.clojure/tools.namespace {:mvn/version "1.4.4"}
         org.clojure/data.json {:mvn/version "2.4.0"}
         org.clojure/test.check {:mvn/version "1.1.1"}
         helpshift/faker {:mvn/version "0.3.0"}
