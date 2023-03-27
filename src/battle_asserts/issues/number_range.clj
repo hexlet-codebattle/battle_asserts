@@ -22,6 +22,8 @@
   [{:expected true :arguments [3 1 9]}
    {:expected false :arguments [7 1 6]}
    {:expected true :arguments [11 1 20]}
+   {:expected true :arguments [3 3 10]}
+   {:expected true :arguments [18 7 18]}
    {:expected false :arguments [4 11 15]}])
 
 (defn solution [num left-border right-border]
