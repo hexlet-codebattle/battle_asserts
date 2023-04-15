@@ -15,9 +15,8 @@
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []
-  (let [n (gen/choose 1 100)
-        arr (gen/vector gen/int n)]
-    (gen/tuple arr (gen/choose 1 n))))
+  (let [n (gen/generate (gen/choose 1 20))]
+    (gen/tuple (gen/vector (gen/choose 1 100) n) (gen/choose 1 n))))
 
 (def test-data
   [{:expected 5 :arguments [[1 2 3 4 5 6] 2]}

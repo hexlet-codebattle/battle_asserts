@@ -24,7 +24,6 @@
    {:expected 7 :arguments ["The cat in the hat is back"]}
    {:expected 0 :arguments [""]}])
 
-
 (defn solution [str]
   (if (s/blank? str)
     0
