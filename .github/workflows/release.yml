@@ -27,12 +27,14 @@ jobs:
         run: make release
 
       - name: get shortsha
+        if: ${{ !startsWith(github.event.head_commit.meessage, 'Bump') }} || ${{ !startsWith(github.event.head_commit.meessage, 'bump') }}
         id: vars
         run: |
           echo ::set-output name=sha_short::$(git rev-parse --short=7 ${{ github.sha }})
 
       - name: Release issues
         uses: 'marvinpinto/action-automatic-releases@latest'
+        if: ${{ !startsWith(github.event.head_commit.meessage, 'Bump') }} || ${{ !startsWith(github.event.head_commit.meessage, 'bump') }}
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           automatic_release_tag: ${{ steps.vars.outputs.sha_short }}
