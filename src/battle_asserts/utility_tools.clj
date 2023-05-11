@@ -8,7 +8,8 @@
       io/as-file
       nsf/find-namespaces-in-dir))
 
-(defn- prepare-namespace-name [namespace]
+(defn- prepare-namespace-name
+  [namespace]
   (s/replace (last (s/split (str namespace) #"\.")) #"-" "_"))
 
 (defn- present-untraslated-tasks [task-list level]
