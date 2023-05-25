@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/hexlet-codebattle/battle_asserts.svg?branch=master)](https://travis-ci.org/hexlet-codebattle/battle_asserts)
-[![Hexlet chat](http://slack-ru.hexlet.io/badge.svg)](http://slack-ru.hexlet.io)
+[![CI status](https://github.com/hexlet-codebattle/battle_asserts/actions/workflows/release.yml/badge.svg)](https://github.com/hexlet-codebattle/battle_asserts/actions/workflows/release.yml)
 
 ## Setup for development
 
