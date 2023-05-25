@@ -33,7 +33,7 @@ jobs:
 
       - name: Release issues
         uses: 'marvinpinto/action-automatic-releases@latest'
-        if: ${{ !startsWith(github.event.head_commit.meessage, 'Bump') || !startsWith(github.event.head_commit.meessage, 'bump') }}
+        if: ${{ !contains(github.event.pull_request.title, 'bump') || !contains(github.event.pull_request.title, 'Bump') }}
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           automatic_release_tag: ${{ steps.vars.outputs.sha_short }}
