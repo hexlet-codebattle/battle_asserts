@@ -78,7 +78,7 @@
    :output {:type {:name "string"}}})
 
 (defn- encrypt [word]
-  (let [dict {"R" " .o.o."
+  (let [dict {"R" ".o.o."
               "J" ".o.oo"
               "C" ".ooo."
               "G" "oo.o."
