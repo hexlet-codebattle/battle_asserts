@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.imposter-search
   (:require [clojure.test.check.generators :as gen]
-            [faker.name :as nm]))
+            [faker.name :as fk]))
 
 (def level :easy)
 
@@ -21,7 +21,7 @@
    :output {:type {:name "array" :nested {:name "string"}}}})
 
 (defn arguments-generator []
-  (letfn [(player-gen [] [(nm/first-name) (gen/generate (gen/elements ["imposter" "crewmate" "doctor" "officer" "ghost"]))])
+  (letfn [(player-gen [] [(fk/first-name) (gen/generate (gen/elements ["imposter" "crewmate" "doctor" "officer" "ghost"]))])
           (players-gen [] (repeatedly 5 player-gen))]
     (gen/tuple (gen/vector (gen/elements (players-gen)) 2 10))))
 
@@ -43,4 +43,3 @@
       (= players-count imposters-count) ["imposters are everywhere!"]
       (zero? imposters-count) ["there are no imposters here!"]
       :else imposters)))
-

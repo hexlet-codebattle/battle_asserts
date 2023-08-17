@@ -1,5 +1,5 @@
 (ns battle-asserts.issues.read-roman-numerals
-  (:require [clojure.pprint :as pprint]
+  (:require [clojure.pprint :as pp]
             [clojure.string :as s]
             [clojure.test.check.generators :as gen]))
 
@@ -17,7 +17,7 @@
 
 (defn arguments-generator []
   (letfn [(to-roman [number]
-            (pprint/cl-format nil "~@R" number))]
+            (pp/cl-format nil "~@R" number))]
     (gen/tuple (gen/bind (gen/choose 1 3500) #(gen/return (to-roman %))))))
 
 (def test-data

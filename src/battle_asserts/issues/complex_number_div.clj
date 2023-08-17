@@ -28,11 +28,11 @@
 (defn solution [[real1 img1] [real2 img2]]
   (try
     (letfn [(real-part [first-pair second-pair]
-              (int  (/ (+ (* (first first-pair) (first second-pair)) (* (last first-pair) (last second-pair)))
-                       (+ (* (first second-pair) (first second-pair)) (* (last second-pair) (last second-pair))))))
+              (int (Math/floor (/ (+ (* (first first-pair) (first second-pair)) (* (last first-pair) (last second-pair)))
+                       (+ (* (first second-pair) (first second-pair)) (* (last second-pair) (last second-pair)))))))
             (imaginary-part [first-pair second-pair]
-              (int (/ (- (* (last first-pair) (first second-pair)) (* (first first-pair) (last second-pair)))
-                      (+ (* (first second-pair) (first second-pair)) (* (last second-pair) (last second-pair))))))]
+              (int (Math/floor (/ (- (* (last first-pair) (first second-pair)) (* (first first-pair) (last second-pair)))
+                      (+ (* (first second-pair) (first second-pair)) (* (last second-pair) (last second-pair)))))))]
       (let
        [real (real-part [real1 img1] [real2 img2])
         img  (imaginary-part [real1 img1] [real2 img2])]

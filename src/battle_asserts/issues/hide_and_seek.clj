@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.hide-and-seek
   (:require [clojure.test.check.generators :as gen]
-            [faker.name :as fk-name]))
+            [faker.name :as fk]))
 
 (def level :easy)
 
@@ -37,7 +37,7 @@
 
 (defn arguments-generator []
   (let [kids-number (gen/generate (gen/choose 5 8))
-        kids (gen/vector (gen/elements (repeatedly 30 #(fk-name/first-name))) kids-number)
+        kids (gen/vector (gen/elements (repeatedly 30 #(fk/first-name))) kids-number)
         counter (gen/choose 1 (arith-progression kids-number))]
     (gen/tuple kids counter)))
 

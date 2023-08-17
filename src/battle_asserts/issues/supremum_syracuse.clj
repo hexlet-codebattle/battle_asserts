@@ -17,11 +17,11 @@
   (gen/tuple (gen/choose 1 100)))
 
 (def test-data
-  [{:expected 16
+  [{:expected 8
     :arguments [6]}
-   {:expected 52
+   {:expected 26
     :arguments [11]}
-   {:expected 9232
+   {:expected 4616
     :arguments [27]}])
 
 (defn solution [num]
@@ -31,6 +31,6 @@
               [num]
               (concat [num]
                       (if (odd? num)
-                        (gen-seq (inc (* 3 num)))
-                        (gen-seq (/ num 2))))))]
+                        (gen-seq (quot (inc (* 3 num)) 2))
+                        (gen-seq (quot num 2))))))]
     (apply max (gen-seq num))))

@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.zigzag-conversion
   (:require [clojure.test.check.generators :as gen]
             [clojure.string :as s]
-            [faker.generate :as fk]))
+            [faker.generate :as faker]))
 
 (def level :hard)
 
@@ -30,7 +30,7 @@
    :output {:type {:name "string"}}})
 
 (defn- gen-words []
-  (let [words (fk/words {:n (gen/generate (gen/choose 2 6))})
+  (let [words (faker/words {:n (gen/generate (gen/choose 2 6))})
         upper (map s/upper-case words)]
     (s/join upper)))
 

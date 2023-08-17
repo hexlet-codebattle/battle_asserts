@@ -1,5 +1,5 @@
 (ns battle-asserts.issues.missing-number-in-progression
-  (:require [battle-asserts.utility :as utility]
+  (:require [battle-asserts.utility :as util]
             [clojure.test.check.generators :as gen]))
 
 (def level :easy)
@@ -28,11 +28,11 @@
              rand-int
              inc))]
     (gen/tuple (gen/bind (gen/tuple (gen/choose -20 20)
-                                    utility/gen-pos-num
+                                    util/gen-pos-num
                                     (gen/choose 5 10))
                          #(->
                            (apply progression %)
-                           (utility/drop-nth (random-not-extreme (last %)))
+                           (util/drop-nth (random-not-extreme (last %)))
                            (->> (into []))
                            gen/return)))))
 

@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.counting-words
   (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]
-            [clojure.string :as str]))
+            [clojure.string :as s]))
 
 (def level :easy)
 
@@ -10,8 +10,8 @@
 (def disabled true)
 
 (def description
-  {:en "Return a vector with subvectors that shows how many times each word occurs in the given string."
-   :ru "Верните вектор с подвекторами, в которых отражено сколько раз слово повторялось в строке."})
+  {:en "Find a vector with subvectors that shows how many times each word occurs in the given string."
+   :ru "Найдите массив с массивами, в которых отражено сколько раз слово повторялось в строке."})
 
 (def signature
   {:input [{:argument-name "sentence" :type {:name "string"}}]
@@ -19,7 +19,7 @@
 
 (defn arguments-generator []
   (let [strs (gen/vector (gen/elements (faker/words {:lang :en :n 15})) 3 10)
-        sentence (gen/fmap #(str/join " " %) strs)]
+        sentence (gen/fmap #(s/join " " %) strs)]
     (gen/tuple sentence)))
 
 (def test-data

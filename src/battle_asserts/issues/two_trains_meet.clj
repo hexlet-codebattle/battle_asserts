@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.two-trains-meet
   (:require [clojure.test.check.generators :as gen]
-            [battle-asserts.utility :as utility]))
+            [battle-asserts.utility :as util]))
 
 (def level :elementary)
 
@@ -20,9 +20,9 @@
   (gen/fmap #(conj (pop %)
                    (* (apply + (pop %))
                       (peek %)))
-            (gen/tuple utility/gen-pos-num
-                       utility/gen-pos-num
-                       utility/gen-pos-num)))
+            (gen/tuple util/gen-pos-num
+                       util/gen-pos-num
+                       util/gen-pos-num)))
 
 (def test-data
   [{:expected 1.0 :arguments [50 50 100]}

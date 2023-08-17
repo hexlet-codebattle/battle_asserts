@@ -11,11 +11,11 @@ jobs:
       - uses: actions/checkout@v3
       - uses: DeLaGuardo/setup-clj-kondo@master
         with:
-          version: '2022.11.02'
+          version: '2023.07.13'
 
-      - uses: DeLaGuardo/setup-clojure@10.1
+      - uses: DeLaGuardo/setup-clojure@11.0
         with:
-          tools-deps: '1.11.1.1200'
+          tools-deps: '1.11.1.1347'
 
       - name: Run checks
         run: make checks
@@ -33,6 +33,7 @@ jobs:
 
       - name: Release issues
         uses: 'marvinpinto/action-automatic-releases@latest'
+        if: ${{ !contains(github.event.pull_request.title, 'bump') || !contains(github.event.pull_request.title, 'Bump') }}
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           automatic_release_tag: ${{ steps.vars.outputs.sha_short }}

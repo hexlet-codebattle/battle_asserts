@@ -6,7 +6,7 @@
 (def tags ["training"])
 
 (def description
-  {:en "Create a function that validates whether a number `n` is exclusively within the bounds of `lower` and `upper`."
+  {:en "Create a function that validates whether a number `n` is inclusively within the bounds of `lower` and `upper`."
    :ru "Создайте функцию, которая проверяет, находится ли число `n` в границах между `lower` и `upper` включительно."})
 
 (def signature
@@ -22,6 +22,8 @@
   [{:expected true :arguments [3 1 9]}
    {:expected false :arguments [7 1 6]}
    {:expected true :arguments [11 1 20]}
+   {:expected true :arguments [3 3 10]}
+   {:expected true :arguments [18 7 18]}
    {:expected false :arguments [4 11 15]}])
 
 (defn solution [num left-border right-border]

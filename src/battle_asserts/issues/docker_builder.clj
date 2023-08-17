@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.docker-builder
   (:require [clojure.string :as s]
             [clojure.test.check.generators :as gen]
-            [faker.generate :as fk]))
+            [faker.generate :as faker]))
 
 (def level :easy)
 
@@ -24,7 +24,7 @@
     (str version ":" release)))
 
 (defn- gen-path []
-  (let [elems (fk/words {:n (gen/generate (gen/choose 1 8))})
+  (let [elems (faker/words {:n (gen/generate (gen/choose 1 8))})
         combined (concat (conj elems ".") '("Dockerfile"))]
     (s/join #"/" combined)))
 

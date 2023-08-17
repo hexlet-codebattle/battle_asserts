@@ -1,8 +1,8 @@
 (ns battle-asserts.issues.book-authors
   (:require [clojure.string :as s]
             [clojure.test.check.generators :as gen]
-            [battle-asserts.utility :as u]
-            [faker.generate :as f]))
+            [battle-asserts.utility :as util]
+            [faker.generate :as faker]))
 
 (def level :elementary)
 
@@ -17,11 +17,11 @@
    :output {:type {:name "array" :nested {:name "string"}}}})
 
 (defn arguments-generator []
-  (let [single-authors (repeatedly 30 u/gen-name)
+  (let [single-authors (repeatedly 30 util/gen-name)
         multiple-authors (repeatedly 30 #(s/join #", "
-                                                 (repeatedly (gen/generate (gen/choose 2 4)) u/gen-name)))
+                                                 (repeatedly (gen/generate (gen/choose 2 4)) util/gen-name)))
         combined-authors (apply conj single-authors multiple-authors)
-        book-names (repeatedly 60 f/sentence)
+        book-names (repeatedly 60 faker/sentence)
         pages (repeatedly 30 #(str (gen/generate (gen/choose 100 600))))
         books (repeatedly 40 (fn [] {:name (rand-nth book-names) :authors (rand-nth combined-authors) :pages (rand-nth pages)}))]
     (gen/tuple (gen/vector (gen/elements books) 2 8))))
@@ -34,4 +34,3 @@
 
 (defn solution [books]
   (mapv #(% :authors) books))
-

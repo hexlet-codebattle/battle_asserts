@@ -4,6 +4,8 @@
 
 (def level :hard)
 
+(def disabled true)
+
 (def tags ["math"])
 
 (def description

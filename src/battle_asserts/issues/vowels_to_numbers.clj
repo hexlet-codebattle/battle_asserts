@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.vowels-to-numbers
   (:require [clojure.string :as s]
             [clojure.test.check.generators :as gen]
-            [faker.generate :as fk]))
+            [faker.generate :as faker]))
 
 (def level :elementary)
 
@@ -22,8 +22,8 @@
     (s/replace word #"([ayuioe])" vowels-count)))
 
 (defn- generate-words []
-  (let [to-multiply (random-sample 0.3 (fk/words {:n 30}))
-        without-multiply (random-sample 0.8 (fk/words {:n 30}))]
+  (let [to-multiply (random-sample 0.3 (faker/words {:n 30}))
+        without-multiply (random-sample 0.8 (faker/words {:n 30}))]
     (concat without-multiply
             (map multiply-vowels to-multiply))))
 

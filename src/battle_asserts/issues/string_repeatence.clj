@@ -1,7 +1,7 @@
 (ns battle-asserts.issues.string-repeatence
   (:require [clojure.test.check.generators :as gen]
             [clojure.string :as s]
-            [faker.generate :as f]))
+            [faker.generate :as faker]))
 
 (def level :elementary)
 
@@ -17,7 +17,7 @@
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []
-  (gen/tuple (gen/elements (f/sentences {:n 30})) (gen/choose 0 10)))
+  (gen/tuple (gen/elements (faker/sentences {:n 30})) (gen/choose 0 10)))
 
 (def test-data
   [{:expected "" :arguments ["Some sentence" 0]}

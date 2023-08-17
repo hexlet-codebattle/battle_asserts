@@ -1,6 +1,6 @@
 (ns battle-asserts.issues.words-chain
   (:require [clojure.test.check.generators :as gen]
-            [faker.generate :as fk]))
+            [faker.generate :as faker]))
 
 (def level :medium)
 
@@ -17,7 +17,7 @@ Example: cat -> cot -> coat -> oat -> hat -> hot -> hog -> dog"
    :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
-  (let [words (fk/words {:n 40})]
+  (let [words (faker/words {:n 40})]
     (gen/tuple (gen/vector (gen/elements words) 2 8))))
 
 (def test-data
