@@ -21,7 +21,7 @@
 
 (def test-data
   [{:expected [1 2] :arguments [[3 10] [3 1]]}
-   {:expected [12 -5] :arguments [[30 2] [2 1]]}
+   {:expected [12 -6] :arguments [[30 2] [2 1]]}
    {:expected [0 -7] :arguments [[77 -11] [1 11]]}
    {:expected [-2 -1] :arguments [[30 11] [-12 1]]}])
 
