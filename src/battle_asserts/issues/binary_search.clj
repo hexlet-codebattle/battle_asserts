@@ -25,7 +25,8 @@
   [{:expected 1 :arguments [[1 2 2 2 3 4 5] 2]}
    {:expected 0 :arguments [[1 1 1 1 1 1 1] 1]}
    {:expected 4 :arguments [[-10 -5 0 4 7 9 11 11 13 14 15] 7]}
-   {:expected -1 :arguments [[1 2 3 4 5] 6]}])
+   {:expected -1 :arguments [[1 2 3 4 5] 6]}
+   {:expected 9 :arguments [[92,39,67,117,85,94,31,23,105,26,25,68,76,68,110,73,89,69,38,79,71],26]}])
    ; {:expected -1 :arguments [[] 42]}])
 
 (defn solution [sorted-list target]
