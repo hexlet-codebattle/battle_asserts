@@ -7,7 +7,7 @@
 (def difficulties #{:elementary :easy :medium :hard})
 
 (defn- check-output-type [data]
-  (if (or (= (type data) java.lang.Integer) (= (type data) java.lang.Long)) ; for backward compatibility 
+  (if (or (= (type data) java.lang.Integer) (= (type data) java.lang.Long)) ; for backward compatibility
     java.lang.Long
     (type data)))
 
@@ -17,6 +17,7 @@
 (defn- nested? [element]
   (contains?
    #{clojure.lang.PersistentList
+     clojure.lang.ArraySeq
      clojure.lang.PersistentArrayMap
      clojure.lang.PersistentVector}
    (type element)))
@@ -28,6 +29,7 @@
    java.lang.Double "float"
    java.lang.Boolean "boolean"
    clojure.lang.Ratio "integer"
+   clojure.lang.ArraySeq "array"
    clojure.lang.PersistentList "array"
    clojure.lang.PersistentVector "array"
    clojure.lang.PersistentArrayMap "hash"
