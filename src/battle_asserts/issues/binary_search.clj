@@ -13,7 +13,6 @@
    Реализуйте функцию для поиска первого вхождения конкретного элемента в упорядоченном списке с использованием бинарного поиска и верните его индекс.
    Если элемент не найден, верните -1."})
 
-
 (def signature
   {:input [{:argument-name "nums" :type {:name "array" :nested {:name "integer"}}}
            {:argument-name "target" :type {:name "integer"}}]
