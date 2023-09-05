@@ -37,7 +37,7 @@
         (let [mid (+ lo (int (/ (- hi lo) 2)))
               mid-val (get sorted-list mid)]
           (cond
-            (= mid-val target) (if (or (= mid 0) (not= (get sorted-list (dec mid)) target))
+            (= mid-val target) (if (or (zero? mid) (not= (get sorted-list (dec mid)) target))
                                  mid
                                  (recur lo (dec mid)))
             (< mid-val target) (recur (inc mid) hi)
