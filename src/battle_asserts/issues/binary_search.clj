@@ -18,15 +18,18 @@
            {:argument-name "target" :type {:name "integer"}}]
    :output {:type {:name "integer"}}})
 
+(defn generate-elements []
+  (vec (sort (distinct (gen/generate (gen/vector (gen/choose 2 121) 10 50))))))
+
 (defn arguments-generator []
-  (gen/tuple (gen/vector (gen/choose 2 121) 10 128) (gen/choose 1 142)))
+  (let [collections (vec (repeatedly 40 generate-elements))]
+    (gen/tuple (gen/elements collections) (gen/choose 1 135))))
 
 (def test-data
   [{:expected 1 :arguments [[1 2 2 2 3 4 5] 2]}
    {:expected 0 :arguments [[1 1 1 1 1 1 1] 1]}
    {:expected 4 :arguments [[-10 -5 0 4 7 9 11 11 13 14 15] 7]}
    {:expected -1 :arguments [[1 2 3 4 5] 6]}])
-   ; {:expected -1 :arguments [[] 42]}])
 
 (defn solution [sorted-list target]
   (let [lo 0
