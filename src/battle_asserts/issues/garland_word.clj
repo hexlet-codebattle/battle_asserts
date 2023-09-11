@@ -42,6 +42,8 @@
 (def test-data
   [{:expected  2
     :arguments ["onion"]}
+   {:expected  0
+    :arguments ["aab"]}
    {:expected  1
     :arguments ["ceramic"]}
    {:expected 0
@@ -55,6 +57,4 @@
 
 (defn solution [word]
   (nth (filter #(= (take % word) (take-last % word))
-               (range (dec (count word)) 0 -1))
-       0
-       0))
+               (range (dec (count word)) 0 -1)) 0 0))
