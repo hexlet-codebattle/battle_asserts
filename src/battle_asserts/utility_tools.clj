@@ -122,9 +122,10 @@
     (doseq [namespace namespaces]
       (require namespace)
       (let [issue-name (prepare-namespace-name namespace)
-            disabled (ns-resolve namespace 'disabled)]
+            disabled (ns-resolve namespace 'disabled)
+            level (ns-resolve namespace 'level)]
         (when (and (not (nil? disabled)) @disabled)
-          (swap! disabled-list conj issue-name))))
+          (swap! disabled-list conj (str issue-name ": " @level)))))
     (if (empty? @disabled-list)
       (println "There is no disabled tasks! Yaay!")
       (println (str "Disabled tasks list:\n" (s/join ", " @disabled-list) "\nTotal number of disabled tasks is: " (count @disabled-list) "!")))))
@@ -133,7 +134,7 @@
   (let [issue-filename (s/replace issue-name #" " "_")
         issue-file (io/as-file (str "./src/battle_asserts/issues/" issue-filename ".clj"))
         issue-body-template "  (:require [clojure.test.check.generators :as gen]))
-        
+
 ; FIXME add actual task level (required)
 (def level :elementary)
 
