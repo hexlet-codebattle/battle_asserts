@@ -3,7 +3,7 @@
 
 (def level :easy)
 
-(def tags ["collections" "sorting"])
+(def tags ["collections" "sorting" "algorithms"])
 
 (def description
   {:en "Given an array of integers, sort the array according to frequency of elements.
