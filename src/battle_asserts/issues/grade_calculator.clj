@@ -8,8 +8,8 @@
 (def tags ["strings" "collections"])
 
 (def description
-  {:en "Calculate grade of five student subjects. If grade average is bigger than 90, final grade is A. If grade average is bigger than 80, final grade is B. If grade average is bigger than 70, final grade is C. If grade average is bigger than 60, final grade is D. In other cases final grade is F."
-   :ru "Рассчитайте финальную оценку студента по пяти предметам. Если средняя оценка больше 90, то итоговая `A`. Если средняя оценка больше 80, то итоговая `B`. Если средняя оценка больше 70, то итоговая оценка `C`. Если средняя оценка больше 60, то итоговая оценка `D`. В остальных случаях итоговая оценка `F`."})
+  {:en "Calculate grade of five student subjects. If grade average is bigger than 90, final grade is A. If grade average is bigger than 80, final grade is B. If grade average is bigger than 70, final grade is C. If grade average is bigger than 60, final grade is D. In other cases final grade is F. Use floor rounding."
+   :ru "Рассчитайте финальную оценку студента по пяти предметам. Если средняя оценка больше 90, то итоговая `A`. Если средняя оценка больше 80, то итоговая `B`. Если средняя оценка больше 70, то итоговая оценка `C`. Если средняя оценка больше 60, то итоговая оценка `D`. В остальных случаях итоговая оценка `F`. Оценку округлите в меньшую сторону."})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]
@@ -33,7 +33,7 @@
     :expected "Grade: F"}])
 
 (defn solution [grades]
-  (let [avg-grade (int (/ (apply + grades) 5))]
+  (let [avg-grade (int (Math/floor (/ (apply + grades) 5)))]
     (cond
       (> avg-grade 90) "Grade: A"
       (> avg-grade 80) "Grade: B"
