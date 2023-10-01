@@ -3,8 +3,6 @@
 
 (def level :easy)
 
-(def disabled true)
-
 (def tags ["conversion" "physics"])
 
 (def description
@@ -27,4 +25,4 @@
    {:expected 451 :arguments [233]}])
 
 (defn solution [temperature]
-  (int (+ (/ (* temperature 9) 5) 32)))
+  (int (Math/floor (+ (/ (* temperature 9) 5) 32))))
