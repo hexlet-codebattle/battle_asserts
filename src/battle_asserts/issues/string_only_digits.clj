@@ -15,18 +15,29 @@
   {:input  [{:argument-name "str" :type {:name "string"}}]
    :output {:type {:name "boolean"}}})
 
+(defn- gen-words-or-numbers [n]
+  (repeatedly n (fn []
+                  (if (zero? (rand-int 2))
+                    (gen/generate (gen/choose 0 9))
+                    (faker/word)))))
+
 (defn arguments-generator []
-  (let [numbers (s/join "" (gen/sample (gen/choose 0 9)))
-        words (s/join "" (repeatedly 3 faker/word))]
-    (gen/tuple (gen/elements [numbers words]))))
+  (let [numbers (repeatedly 10 (fn [] (s/join "" (gen/sample (gen/choose 0 9)))))
+        words (repeatedly 10 (fn [] (s/join "" (repeatedly 4 faker/word))))
+        mixed (repeatedly 30 (fn [] (s/join "" (gen-words-or-numbers 4))))]
+    (gen/tuple (gen/elements (concat numbers words mixed)))))
 
 (def test-data
   [{:expected false
     :arguments ["sometest"]}
    {:expected true
     :arguments ["1231012"]}
+   {:expected false
+    :arguments ["test1012"]}
    {:expected true
     :arguments ["6001667522"]}
+   {:expected false
+    :arguments ["hello1world"]}
    {:expected false
     :arguments ["sensefruitquestion"]}])
 
