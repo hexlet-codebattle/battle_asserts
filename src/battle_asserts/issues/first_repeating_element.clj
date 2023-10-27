@@ -6,8 +6,8 @@
 (def tags ["collections"])
 
 (def description
-  {:en "Given an array of integers, find the first repeating element in it. Find the element that occurs more than once and whose index of first occurrence is smallest or zero."
-   :ru "Дан массив целых чисел, найдите первый повторяющийся в нём элемент. Найдите элемент, который встречается более одного раза и индекс первого вхождения которого наименьший или равен нулю."})
+  {:en "Given an array of integers, find the first repeating element in it. Find the element that occurs more than once and whose index of first occurrence is smallest. If nothing is found return zero."
+   :ru "Дан массив целых чисел, найдите первый повторяющийся в нём элемент. Найдите элемент, который встречается более одного раза и индекс первого вхождения которого наименьший. Если такого элемента нет, верните ноль."})
 
 (def signature
   {:input  [{:argument-name "arr" :type {:name "array" :nested {:name "integer"}}}]
