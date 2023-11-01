@@ -10,7 +10,6 @@
   {:en "Check if any anagram of a given string is a palindrome."
    :ru "Проверьте, является ли какая-либо анаграмма данной строки палиндромом. Анаграмма слова - это слово, которое может быть получено путем перестановки его букв. Палиндром - это слово, которое одинаково читается в обоих направлениях."})
 
-
 (def signature
   {:input  [{:argument-name "s" :type {:name "string"}}]
    :output {:type {:name "boolean"}}})
