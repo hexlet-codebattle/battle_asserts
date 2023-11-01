@@ -9,7 +9,7 @@
 
 (def description
   {:en "Check whether the given string contains only digit characters in."
-   :ru "Проверьте, все ли символы в строке являются числами."})
+   :ru "Проверьте, все ли символы в строке являются цифрами."})
 
 (def signature
   {:input  [{:argument-name "str" :type {:name "string"}}]

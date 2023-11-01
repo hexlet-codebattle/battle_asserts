@@ -7,7 +7,7 @@
 
 (def description
   {:en "Given an array of numbers, return an array which contains all the odd numbers in the orginal array, which also have odd indexes, do the same for even numbers and indexes. If there is no such numbers, return `[0]`."
-   :ru "Дан массив чисел, создайте новый массив, содержащий нечетные числа с нечетными индексами, повторите это и для четных чисел. Если таких чисел нет, то верните `[0]`."})
+   :ru "Дан массив чисел. Необходимо создать новый массив, содержащий нечетные числа с нечетными индексами, а также четные числа с четными индексами. В новом массиве числа должны сохранять исходный порядок. Если в исходном массиве не содержится чисел, удовлетворяющих этим условиям, верните `[0]`. Предполагается, что индексация массива начинается с нуля."})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}]

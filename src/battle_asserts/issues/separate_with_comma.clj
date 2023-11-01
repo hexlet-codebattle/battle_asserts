@@ -8,7 +8,7 @@
 
 (def description
   {:en "Given a number as input, return a string with that number formatted with commas to separate each three digits from the right to make it look like a standard North American number."
-   :ru "На вход дано число, верните строку, где это число отформатировано таким образом, что начиная с правого края каждые 3 цифры отделяются запятой, как стандартная запись числа а Северной Америке."})
+   :ru "На вход дано число, верните строку, где это число отформатировано таким образом, что начиная с правого края каждые 3 цифры отделяются запятой, как стандартная запись числа в Северной Америке."})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]

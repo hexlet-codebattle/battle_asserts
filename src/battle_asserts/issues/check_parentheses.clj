@@ -8,7 +8,7 @@
 
 (def description
   {:en "Check if the parentheses in the expression are all balanced, so that all open parentheses are closed properly."
-   :ru "Проверьте, сбалансированы ли скобки в выражении, то есть для каждой открывающей скобки есть закрывающая."})
+   :ru "Проверьте, сбалансированы ли скобки в выражении, то есть для каждой открывающей скобки есть закрывающая и их порядок должен быть правильный."})
 
 (def signature
   {:input [{:argument-name "brackets" :type {:name "string"}}]
