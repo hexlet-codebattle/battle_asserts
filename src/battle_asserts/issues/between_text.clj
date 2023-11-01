@@ -7,6 +7,8 @@
 
 (def tags ["training" "strings"])
 
+(def disabled true)
+
 (def description
   {:en "Write function that returns subtext from text between given patterns."
    :ru "Напишите функцию, которая возвращает подтекст из текста между заданным шаблоном."})
