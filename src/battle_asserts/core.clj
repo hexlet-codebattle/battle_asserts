@@ -22,7 +22,7 @@
   (let [generator (build-generator)
         size (count samples)
         coll (gen/sample generator (- max-asserts size))
-        generated (map #(hash-map :expected (apply solution %) :arguments %) coll)]
+        generated (distinct (map #(hash-map :expected (apply solution %) :arguments %) coll))]
     (reduce
      (fn [acc task] (conj acc (into (sorted-map) task)))
      generated
@@ -68,9 +68,11 @@
       (spit filename yaml))
     (println (str "Proceeding " issue-name "..."))
     (let [filename (str "issues/" issue-name ".json")
-          asserts (generate-asserts build-generator solution samples)]
-      (if disabled
+          asserts (generate-asserts build-generator solution samples)
+          asserts-count (count asserts)]
+      (if (or disabled (not= asserts-count max-asserts))
         (do (println (str issue-name " issue is disabled!"))
+            (println (str issue-name " issue has: " asserts-count " asserts!"))
             (write-to-file filename asserts))
         (let [signature-errors (util/check-asserts-and-sign asserts @signature)]
           (if (empty? signature-errors)
