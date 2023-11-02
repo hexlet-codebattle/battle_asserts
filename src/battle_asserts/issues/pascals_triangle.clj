@@ -7,7 +7,7 @@
 
 (def description
   {:en "Return the N'th row of Pascal's Triangle."
-   :ru "Верните n-ную строку треугольника Паскаля."})
+   :ru "Верните n-ную строку треугольника Паскаля, где каждое число в строке является суммой двух чисел из предыдущей строки, начиная с 1 в первой строке"})
 
 (def signature
   {:input  [{:argument-name "s" :type {:name "integer"}}]
@@ -17,14 +17,14 @@
   (gen/tuple gen/nat))
 
 (def test-data
-  [{:expected [1 3 3 1]
-    :arguments [3]}
-   {:expected [1]
+  [{:expected [1]
     :arguments [0]}
    {:expected [1 1]
     :arguments [1]}
    {:expected [1 2 1]
     :arguments [2]}
+   {:expected [1 3 3 1]
+    :arguments [3]}
    {:expected [1 4 6 4 1]
     :arguments [4]}])
 

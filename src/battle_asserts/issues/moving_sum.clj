@@ -11,7 +11,7 @@
         If the size of the window is larger than the size of the array, return the array with the sum of all the numbers."
    :ru "Верните массив 'скользящих сумм' массива чисел `numbers` с размером окна равным `window`.
         Например, суммы массива `[1 2 3 4 5]` с окном `2` будут `[(1 + 2) (2 + 3) (3 + 4) (4 + 5)] -> [3 5 7 9]`.
-        Если размер окна больше размера массива, то верните массив со суммой всех чисел"})
+        Если размер окна больше размера массива, то верните массив с суммой всех чисел"})
 
 (def signature
   {:input [{:argument-name "numbers" :type {:name "array" :nested {:name "integer"}}}
