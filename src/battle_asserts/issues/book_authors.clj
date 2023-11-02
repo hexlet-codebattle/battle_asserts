@@ -13,7 +13,7 @@
    :ru "Создайте функцию, которая извлекает имена авторов из книг."})
 
 (def signature
-  {:input [{:argument-name "names" :type {:name "array" :nested {:name "hash" :nested {:name "string"}}}}]
+  {:input [{:argument-name "books" :type {:name "array" :nested {:name "hash" :nested {:name "string"}}}}]
    :output {:type {:name "array" :nested {:name "string"}}}})
 
 (defn arguments-generator []
