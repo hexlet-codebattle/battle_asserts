@@ -3,6 +3,8 @@
 
 (def level :hard)
 
+(def disabled true)
+
 (def tags ["collections"])
 
 (def description
