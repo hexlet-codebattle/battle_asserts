@@ -3,6 +3,8 @@
 
 (def level :medium)
 
+(def disabled true)
+
 (def tags ["collections"])
 
 (def description
