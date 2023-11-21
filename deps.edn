@@ -13,7 +13,7 @@
         kovacnica/clojure.network.ip {:mvn/version "0.1.3"}
         dev.weavejester/cljfmt {:mvn/version "0.11.2"}
         tvaughan/kibit-runner {:mvn/version "1.0.1"}
-        jonase/eastwood {:mvn/version "1.4.0"}}
+        jonase/eastwood {:mvn/version "1.4.2"}}
  :aliases {:test {:extra-deps  {lambdaisland/kaocha {:mvn/version "1.87.1366"}}
                   :main-opts   ["-m" "kaocha.runner"]}
            :generate-asserts {:main-opts ["-m" "battle-asserts.core"]}
