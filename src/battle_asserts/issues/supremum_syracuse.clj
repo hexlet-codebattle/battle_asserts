@@ -6,8 +6,8 @@
 (def tags ["math"])
 
 (def description
-  {:en "Find the largest element in the Syracuse sequence."
-   :ru "Найдите наибольший элемент в последовательности Сиракузы."})
+  {:en "You are given the number s[1], which is the first element of the Syracuse sequence. Find the largest element in the sequence. Syracuse sequence is a sequence given by the formula below, its last element is one. Sequence formula: `s[n]=1`, `s[k+1]=s[k]/2`, if s[k] is even, s[k+1]=(3*s[k]+ 1)/2 if s[k] is odd."
+   :ru "Вам дано число s[1], являющееся первым элементом последовательности Сиракузы. Найдите наибольший элемент в последовательности. Последовательности Сиракузы - последовательность заданная идушей ниже формулой, последним элементом которой является единица. Формула последовательности: `s[n]=1`, `s[k+1]=s[k]/2`, если s[k] четно, s[k+1]=(3*s[k]+1)/2, если s[k] нечетно."})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]
@@ -17,11 +17,11 @@
   (gen/tuple (gen/choose 1 100)))
 
 (def test-data
-  [{:expected 16
+  [{:expected 8
     :arguments [6]}
-   {:expected 52
+   {:expected 26
     :arguments [11]}
-   {:expected 9232
+   {:expected 4616
     :arguments [27]}])
 
 (defn solution [num]
@@ -31,6 +31,6 @@
               [num]
               (concat [num]
                       (if (odd? num)
-                        (gen-seq (inc (* 3 num)))
+                        (gen-seq (quot (inc (* 3 num)) 2))
                         (gen-seq (quot num 2))))))]
     (apply max (gen-seq num))))
