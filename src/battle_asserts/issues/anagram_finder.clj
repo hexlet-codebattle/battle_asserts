@@ -44,4 +44,4 @@
                                           (filterv #(= (prepare-anagram %) word) words)) uniq)))]
     (if (empty? (first result))
       [["anagrams not found!"]]
-      (sort-by first result))))
+      (vec (sort-by first result)))))
