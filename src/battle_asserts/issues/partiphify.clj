@@ -18,13 +18,12 @@
   (gen/tuple (gen/vector gen/small-integer 2 10) (gen/choose 2 4)))
 
 (def test-data
-  [{:expected [[1] []] :arguments [[1] 2]}
+  [{:expected [[1]] :arguments [[1] 2]}
    {:expected [[1] [2] [3]] :arguments [[1 2 3] 3]}
    {:expected [[1 2 3] [4 5]] :arguments [[1 2 3 4 5] 2]}])
 
 (defn solution [numbers parts]
   (let [part (int (Math/ceil (/ (count numbers) parts)))
         divided-vec (vec (map vec (partition-all part numbers)))
-        final-vec (if (not= (count divided-vec) parts) (conj divided-vec []) divided-vec)]
+        final-vec (filterv seq divided-vec)]
     final-vec))
-
