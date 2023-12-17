@@ -8,8 +8,8 @@
 (def tags ["network" "strings"])
 
 (def description
-  {:en "Create a function, thats check if `subnet` contains in `address`, which contains IPv4 address and subnet mask."
-   :ru "Создайте функцию, которая проверяет, входит ли `subnet` в `address`, который содержит IPv4 адрес и маску подсети."})
+  {:en "Create a function, that checks if `subnet` contains `address`. Subnet contains IPv4 address of network and subnet mask."
+   :ru "Создайте функцию, которая проверяет, что подсеть (`subnet`) содержит адрес (`address`). Подсеть содержит IPv4 адрес сети и маску подсети."})
 
 (def signature
   {:input  [{:argument-name "address" :type {:name "string"}}
