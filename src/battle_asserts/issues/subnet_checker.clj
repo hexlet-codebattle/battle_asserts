@@ -34,11 +34,11 @@
 
 (def test-data
   [{:expected true
-    :arguments ["192.168.100.1/12" "192.168.100.5"]}
+    :arguments ["192.168.100.5" "192.160.0.0/12"]}
    {:expected false
-    :arguments ["198.201.121.1/15" "192.11.100.255"]}
+    :arguments ["192.11.100.255" "198.200.0.0/15"]}
    {:expected true
-    :arguments ["201.224.121.12/30" "201.224.121.15"]}])
+    :arguments ["201.224.121.15" "201.224.121.12/30"]}])
 
 (defn solution [address subnet]
   (contains? (ip/make-network address) subnet))
