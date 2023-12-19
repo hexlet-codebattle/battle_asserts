@@ -28,8 +28,8 @@
   (let [addresses (gen-addresses)
         addresses-with-mask
         (mapv #(s/join #"/" [% (gen/generate (gen/choose 12 30))]) addresses)]
-    (letfn [(gen-subnet [] (gen/elements addresses-with-mask))
-            (gen-ip [] (gen/elements addresses))]
+    (letfn [(gen-ip [] (gen/elements addresses))
+            (gen-subnet [] (gen/elements addresses-with-mask))]
       (gen/tuple (gen-ip) (gen-subnet)))))
 
 (def test-data
