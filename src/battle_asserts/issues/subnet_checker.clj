@@ -41,4 +41,4 @@
     :arguments ["201.224.121.15" "201.224.121.12/30"]}])
 
 (defn solution [address subnet]
-  (contains? (ip/make-network address) subnet))
+  (contains? (ip/make-network subnet) address))
