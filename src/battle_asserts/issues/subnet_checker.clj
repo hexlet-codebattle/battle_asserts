@@ -8,8 +8,8 @@
 (def tags ["network" "strings"])
 
 (def description
-  {:en "Create a function, thats check if `subnet` contains in `address`, which contains IPv4 address and subnet mask."
-   :ru "Создайте функцию, которая проверяет, входит ли `subnet` в `address`, который содержит IPv4 адрес и маску подсети."})
+  {:en "Create a function, that checks if `subnet` contains `address`. Subnet contains IPv4 address of network and subnet mask."
+   :ru "Создайте функцию, которая проверяет, что подсеть (`subnet`) содержит адрес (`address`). Подсеть содержит IPv4 адрес сети и маску подсети."})
 
 (def signature
   {:input  [{:argument-name "address" :type {:name "string"}}
@@ -28,17 +28,17 @@
   (let [addresses (gen-addresses)
         addresses-with-mask
         (mapv #(s/join #"/" [% (gen/generate (gen/choose 12 30))]) addresses)]
-    (letfn [(gen-ip [] (gen/elements addresses-with-mask))
-            (gen-subnet [] (gen/elements addresses))]
+    (letfn [(gen-ip [] (gen/elements addresses))
+            (gen-subnet [] (gen/elements addresses-with-mask))]
       (gen/tuple (gen-ip) (gen-subnet)))))
 
 (def test-data
   [{:expected true
-    :arguments ["192.168.100.1/12" "192.168.100.5"]}
+    :arguments ["192.168.100.5" "192.160.0.0/12"]}
    {:expected false
-    :arguments ["198.201.121.1/15" "192.11.100.255"]}
+    :arguments ["192.11.100.255" "198.200.0.0/15"]}
    {:expected true
-    :arguments ["201.224.121.12/30" "201.224.121.15"]}])
+    :arguments ["201.224.121.15" "201.224.121.12/30"]}])
 
 (defn solution [address subnet]
-  (contains? (ip/make-network address) subnet))
+  (contains? (ip/make-network subnet) address))
