@@ -10,7 +10,7 @@
    :ru "Напишите функцию, которая получает номер струны и лад 6-струнной гитары в `стандартной настройке` и возвращает соответствующую ноту. Для этой задачи мы используем модель с 24 ладами. Ноты следующие: `C, C#/Db, D, D#/Eb, E, F, F#/Gb, G, G#/Ab, A, A#/Bb, B`"})
 
 (def signature
-  {:input [{:argument-name "str" :type {:name "integer"}}
+  {:input [{:argument-name "string_num" :type {:name "integer"}}
            {:argument-name "fret" :type {:name "integer"}}]
    :output {:type {:name "string"}}})
 

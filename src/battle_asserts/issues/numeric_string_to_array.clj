@@ -11,7 +11,7 @@
    :ru "Сконвертируйте числовую строку в массив чисел. Гарантируется, что строковое число не отрицательное."})
 
 (def signature
-  {:input [{:argument-name "str" :type {:name "string"}}]
+  {:input [{:argument-name "digits" :type {:name "string"}}]
    :output {:type {:name "array" :nested {:name "integer"}}}})
 
 (defn arguments-generator []

@@ -9,12 +9,12 @@
 (def tags ["collections" "strings"])
 
 (def description
-  {:en "Given a pattern and a string `str`, find if `str` follows the same pattern. For example, pattern = \" abba \", str = \" dog cat cat dog \" should return `true`."
-   :ru "Дан паттерн `pattern` и строка `str`. Паттерн это строка, в которой каждая буква представляет собой \"маску\" для соответствующего слова в строке. Если два разных слова в строке соответствуют одной и той же букве в паттерне, то эти слова должны быть одинаковыми. Проверьте, соответствует ли строка паттерну."})
+  {:en "Given a `pattern` and a `text`, find if `text` follows the same pattern. For example, `pattern = 'abba'`, `text = 'dog cat cat dog'` should return `true`."
+   :ru "Дан паттерн `pattern` и текст `text`. Паттерн это строка, в которой каждая буква представляет собой `маску` для соответствующего слова в тексте. Если два разных слова в тексте соответствуют одной и той же букве в паттерне, то эти слова должны быть одинаковыми. Проверьте, соответствует ли текст паттерну."})
 
 (def signature
   {:input  [{:argument-name "pattern" :type {:name "string"}}
-            {:argument-name "str" :type {:name "string"}}]
+            {:argument-name "text" :type {:name "string"}}]
    :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []

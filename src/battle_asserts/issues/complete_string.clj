@@ -7,11 +7,11 @@
 (def tags ["strings"])
 
 (def description
-  {:en "A string is said to be complete if it contains all the characters from a to z. Given a string, check if it's complete or not."
-   :ru "Строка считается полной, если в ней присутствуют все символы от `a` до `z`. Проверьте, является ли переданная строка полной."})
+  {:en "A text is said to be complete if it contains all the characters from a to z. Given a text, check if it's complete or not."
+   :ru "Текст считается полным, если в нем присутствуют все символы от `a` до `z`. Проверьте, является ли переданный текст полным."})
 
 (def signature
-  {:input [{:argument-name "str" :type {:name "string"}}]
+  {:input [{:argument-name "text" :type {:name "string"}}]
    :output {:type {:name "boolean"}}})
 
 (defn arguments-generator []
