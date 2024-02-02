@@ -8,11 +8,11 @@
 (def tags ["strings"])
 
 (def description
-  {:en "Given a string. Remove all the whitespaces from both ends of the string. Then collapse groups of whitespaces inside the string into single whitespace each. Handles both ASCII and Unicode whitespaces."
-   :ru "Дана строка. Удалите все пробельные символы с обоих концов строки. Сверните группы пробельных символов внутри строки в один пробел. Обработайте как ASCII так и Unicode пробелы."})
+  {:en "Given a text. Remove all the whitespaces from both ends of the text. Then collapse groups of whitespaces inside the text into single whitespace each. Handles both ASCII and Unicode whitespaces."
+   :ru "Дан текст. Удалите все пробельные символы с обоих концов текста. Сверните группы пробельных символов внутри строки в один пробел. Обработайте как ASCII так и Unicode пробелы."})
 
 (def signature
-  {:input  [{:argument-name "str" :type {:name "string"}}]
+  {:input  [{:argument-name "text" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 
 (defn- random-separator []

@@ -19,7 +19,7 @@
         1211 читается как \"one 1, then one 2, then two 1's\"."})
 
 (def signature
-  {:input [{:argument-name "str" :type {:name "string"}}]
+  {:input [{:argument-name "text" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []

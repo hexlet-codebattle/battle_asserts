@@ -8,11 +8,11 @@
 (def tags ["strings"])
 
 (def description
-  {:en "Implement a function that changes the case of each letter in the string to the opposite."
-   :ru "Создайте функцию, которая меняет регистр каждого символа в строке на противоположный."})
+  {:en "Implement a function that changes the case of each letter in the text to the opposite."
+   :ru "Создайте функцию, которая меняет регистр каждого символа в тексте на противоположный."})
 
 (def signature
-  {:input  [{:argument-name "str" :type {:name "string"}}]
+  {:input  [{:argument-name "text" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 
 (defn- input-sentence []

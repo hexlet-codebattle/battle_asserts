@@ -8,11 +8,11 @@
 (def tags ["strings"])
 
 (def description
-  {:en "Given a string with words separated in different ways, return an underscored, lowercase form."
-   :ru "Дана строка со словами, которая разделена разными способами, верните строку, разделенную нижними подчеркиваниями и обращенную в нижний регистр."})
+  {:en "Given a text with words separated in different ways, return an underscored, lowercase form."
+   :ru "Дан текст со словами, которые разделены разными способами, верните текст, в котором слова разделены нижними подчеркиваниями и обращены в нижний регистр."})
 
 (def signature
-  {:input  [{:argument-name "str" :type {:name "string"}}]
+  {:input  [{:argument-name "text" :type {:name "string"}}]
    :output {:type {:name "string"}}})
 
 (defn arguments-generator []

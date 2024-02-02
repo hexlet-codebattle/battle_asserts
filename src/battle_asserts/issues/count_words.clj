@@ -8,11 +8,11 @@
 (def tags ["strings" "collections"])
 
 (def description
-  {:en "Given a string, return the number of words in it."
-   :ru "Дана строка, верните количество слов в ней."})
+  {:en "Given a text, return the number of words in it."
+   :ru "Дан текст, верните количество слов в нем"})
 
 (def signature
-  {:input  [{:argument-name "str" :type {:name "string"}}]
+  {:input  [{:argument-name "text" :type {:name "string"}}]
    :output {:type {:name "integer"}}})
 
 (defn arguments-generator []

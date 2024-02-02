@@ -14,7 +14,7 @@
    :ru "Напишите функцию, которая возвращает подтекст из текста между заданным шаблоном."})
 
 (def signature
-  {:input [{:argument-name "str" :type {:name "string"}}
+  {:input [{:argument-name "text" :type {:name "string"}}
            {:argument-name "left" :type {:name "string"}}
            {:argument-name "right" :type {:name "string"}}]
    :output {:type {:name "string"}}})
