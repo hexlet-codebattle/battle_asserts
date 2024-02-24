@@ -11,7 +11,7 @@ fix-format:
 	clojure -M:cljfmt-fix
 	clojure -M:kibit -- --replace
 
-checks: check-format check-eastwood check-kibit check-kondo
+checks: check-format check-kondo check-eastwood check-kibit
 
 check-format:
 	clojure -M:cljfmt-check
