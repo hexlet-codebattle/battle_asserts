@@ -1,4 +1,4 @@
-(ns battle-asserts.issues.reverse_everywhere
+(ns battle-asserts.issues.reverse-everywhere
   (:require [clojure.test.check.generators :as gen]
             [clojure.string :as s]
             [faker.generate :as faker]))

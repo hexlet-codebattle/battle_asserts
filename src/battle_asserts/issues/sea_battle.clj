@@ -1,4 +1,4 @@
-(ns battle-asserts.issues.sea_battle)
+(ns battle-asserts.issues.sea-battle)
 
 (def level :medium)
 
