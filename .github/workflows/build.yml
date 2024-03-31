@@ -13,11 +13,11 @@ jobs:
 
       - uses: DeLaGuardo/setup-clj-kondo@master
         with:
-          version: '2024.02.12'
+          version: '2024.03.13'
 
       - uses: DeLaGuardo/setup-clojure@12.5
         with:
-          tools-deps: '1.11.1.1435'
+          tools-deps: '1.11.2.1446'
 
       - name: Run checks
         run: make checks
