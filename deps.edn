@@ -3,7 +3,7 @@
  :url "http://battle.hexlet.io"
  :license {:name "Eclipse Public License"
            :url "http://www.eclipse.org/legal/epl-v10.html"}
- :deps {org.clojure/clojure {:mvn/version "1.11.2"}
+ :deps {org.clojure/clojure {:mvn/version "1.11.3"}
         org.clojure/tools.namespace {:mvn/version "1.5.0"}
         org.clojure/data.json {:mvn/version "2.5.0"}
         org.clojure/test.check {:mvn/version "1.1.1"}
@@ -14,7 +14,7 @@
         dev.weavejester/cljfmt {:mvn/version "0.12.0"}
         tvaughan/kibit-runner {:mvn/version "1.0.1"}
         jonase/eastwood {:mvn/version "1.4.2"}}
- :aliases {:test {:extra-deps  {lambdaisland/kaocha {:mvn/version "1.88.1376"}}
+ :aliases {:test {:extra-deps  {lambdaisland/kaocha {:mvn/version "1.90.1383"}}
                   :main-opts   ["-m" "kaocha.runner"]}
            :generate-asserts {:main-opts ["-m" "battle-asserts.core"]}
            :eastwood {:main-opts ["-m"
