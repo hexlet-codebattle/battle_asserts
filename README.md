@@ -6,7 +6,9 @@
 
 ## Contributing
 
-See [contribution guidelines](./CONTRIBUTING.md)
+This project exists thanks to all the people who contribute. [[Contribute]](CONTRIBUTING.md).
+
+<a href="https://github.com/hexlet-codebattle/battle_asserts/graphs/contributors"><img src="https://opencollective.com/codebattle/contributors.svg?width=890"></a>
 
 ### Useful commands
 
