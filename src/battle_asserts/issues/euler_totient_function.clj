@@ -7,9 +7,9 @@
 
 (def description
   {:en "Two numbers are coprime if their greatest common divisor equals 1.
-        Implement the Euler's totient function f(x), which is defined as the number of positive integers less than x which are coprime to x."
+        Implement the Euler's totient function f(x), which is defined as the number of positive integers less than or equal to x which are coprime to x."
    :ru "Два числа являются взаимно простыми, если их наибольший общий делитель равен 1.
-        Реализуйте функцию Эйлера f(x), которая определяет количество положительных целых чисел меньше x, взаимно простых с x."})
+        Реализуйте функцию Эйлера f(x), которая определяет количество положительных целых чисел меньше или равных x, взаимно простых с x."})
 
 (def signature
   {:input  [{:argument-name "num" :type {:name "integer"}}]
