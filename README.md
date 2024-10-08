@@ -6,7 +6,7 @@
 
 ## Contributing
 
-This project exists thanks to all the people who contribute. [[Contribute]](CONTRIBUTING.md).
+This project exists thanks to all the people who contribute. [Contribute guideline.](CONTRIBUTING.md)
 
 <a href="https://github.com/hexlet-codebattle/battle_asserts/graphs/contributors"><img src="https://opencollective.com/codebattle/contributors.svg?width=890"></a>
 
@@ -25,9 +25,9 @@ This project exists thanks to all the people who contribute. [[Contribute]](CONT
 
 - https://clojure.org/index
 - https://clojure.org/guides/getting_started
-- https://ru.code-basics.com/languages/clojure (currently, only in russian)
+- https://code-basics.com/ru/languages/clojure (currently, only in russian)
 
-### Better clojure dev experience
+### Better clojure usage experience
 
 - https://www.gnu.org/software/emacs/ or https://www.spacemacs.org/
 - https://clojure.org/guides/repl/annex_community_resources
