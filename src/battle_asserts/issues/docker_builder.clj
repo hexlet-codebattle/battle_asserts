@@ -29,7 +29,7 @@
     (s/join #"/" combined)))
 
 (defn arguments-generator []
-  (let [languages ["elixir" "ruby" "haskell" "c++" "c#" "clojure" "dart" "go" "java" "js" "kotlin" "php" "python"]
+  (let [languages ["elixir" "ruby" "haskell" "c++" "c#" "clojure" "dart" "go" "java" "js" "kotlin" "php" "python" "rust" "typescript"]
         versions (repeatedly 40 gen-version)
         dirs (conj (repeatedly 30 gen-path) "")]
     (gen/tuple (gen/elements languages)
