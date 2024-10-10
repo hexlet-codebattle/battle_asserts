@@ -4,7 +4,7 @@
 
 (def level :elementary)
 
-(def tags ["strings"])
+(def tags ["strings" "games"])
 
 (def description
   {:en "Create a function that takes in an array (slot machine outcome) and returns true if all elements in the array are identical, and false otherwise. The array will contain 3 elements."
