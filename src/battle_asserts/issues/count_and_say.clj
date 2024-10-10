@@ -4,7 +4,7 @@
 
 (def level :hard)
 
-(def tags ["strings"])
+(def tags ["strings" "games"])
 
 (def description
   {:en "Conway's \"Look and Say\" sequence is a sequence of numbers in which each term \"reads aloud\" the digits of the previous term.
