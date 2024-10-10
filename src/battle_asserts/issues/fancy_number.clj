@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def tags ["strings"])
+(def tags ["strings" "games"])
 
 (def description
   {:en "Given a number, find whether it is fancy or not.
