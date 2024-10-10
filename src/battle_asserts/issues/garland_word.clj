@@ -5,7 +5,7 @@
 
 (def level :easy)
 
-(def tags ["strings"])
+(def tags ["strings" "games"])
 
 (def description
   {:en "Write function that, given a lowercase word,
