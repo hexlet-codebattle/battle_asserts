@@ -3,7 +3,7 @@
 
 (def level :easy)
 
-(def tags ["collections"])
+(def tags ["collections" "games"])
 
 (def description
   {:en "Several people are standing in a row and need to be divided into two teams.
