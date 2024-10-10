@@ -3,7 +3,7 @@
 
 (def level :elementary)
 
-(def tags ["collections"])
+(def tags ["collections" "math"])
 
 (def description
   {:en "Find the sum of the squares of all even numbers in the array."
