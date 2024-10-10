@@ -3,7 +3,7 @@
 
 (def level :elementary)
 
-(def tags ["training"])
+(def tags ["training" "games"])
 
 (def description
   {:en "A farmer is asking you to tell him how many legs can be counted among all his animals.
