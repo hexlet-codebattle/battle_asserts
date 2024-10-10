@@ -3,7 +3,7 @@
 
 (def level :easy)
 
-(def tags ["collections"])
+(def tags ["collections" "games"])
 
 (def description
   {:en "Write a function that takes the assumed and real soccer match scores as the arguments and returns 2 if the score is correct, 1 if the winner is correct but the score is wrong and 0 if the winner is wrong."
