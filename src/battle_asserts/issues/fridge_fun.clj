@@ -2,7 +2,7 @@
 
 (def level :medium)
 
-(def tags ["strings"])
+(def tags ["strings" "games"])
 
 (def disabled true)
 
