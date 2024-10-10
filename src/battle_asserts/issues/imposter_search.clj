@@ -4,7 +4,7 @@
 
 (def level :easy)
 
-(def tags ["collections" "strings"])
+(def tags ["collections" "strings" "games"])
 
 (def description
   {:en "Create a function that find imposters in array of players, each player has its own role.
