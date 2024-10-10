@@ -3,7 +3,7 @@
 
 (def level :medium)
 
-(def tags ["collections" "math"])
+(def tags ["collections" "math" "games"])
 
 (def description
   {:en "Yaroslav helps his grandmother plant carrots in a single-line seedbed where a carrot can be planted at each
