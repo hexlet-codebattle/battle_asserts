@@ -5,7 +5,7 @@
 
 (def level :hard)
 
-(def tags ["strings"])
+(def tags ["strings" "games"])
 
 (def description
   {:en "Write a function that takes an integer number and returns an English text sequence starting with the English cardinal representation of that integer,
