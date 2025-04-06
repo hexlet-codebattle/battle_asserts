@@ -6,7 +6,7 @@
 (def tags ["date-time"])
 
 (def description
-  {:en "Determine if the year is a leap year. Leap years are all divisible by 4, a year that is evenly divisible by 100 (for example, 1900) is a leap year only if it is also evenly divisible by 400."
+  {:en "Determine if the year is a leap year. Leap years are all divisible by 4. But for Gregorian calendar, a year that is evenly divisible by 100 (for example, 1900) is a leap year only if it is also evenly divisible by 400."
    :ru "Определите, является ли год високосным. Любой год, который делится на 4 без остатка, является високосным годом. Тем не менее, есть еще небольшая особенность, которая должна быть учтена например, григорианский календарь предусматривает, что год, который делится без остатка на 100 является високосным годом только в том случае, если он также без остатка делится на 400."})
 
 (def signature
