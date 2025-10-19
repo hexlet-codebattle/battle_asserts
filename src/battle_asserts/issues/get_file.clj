@@ -26,6 +26,8 @@
     :arguments ["C:/Projects/tests/texts/something.txt"]}
    {:expected "brain-games.exe"
     :arguments ["C:/brain-games.exe"]}
+   {:expected "bar.sh"
+    :arguments ["C:/Somedir/foo/bar.exe"]}
    {:expected "Beethoven_5.mp3"
     :arguments ["C:/Users/JohnDoe/Music/Beethoven_5.mp3"]}])
 

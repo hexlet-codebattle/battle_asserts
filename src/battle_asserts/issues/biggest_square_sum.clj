@@ -3,7 +3,7 @@
 
 (def level :elementary)
 
-(def tags ["sicp" "math"])
+(def tags ["sicp" "math" "training"])
 
 (def description
   {:en "Implement function that take three numbers and returns sum of squares of two biggest ones."
