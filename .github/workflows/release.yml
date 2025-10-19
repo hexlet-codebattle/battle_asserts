@@ -8,14 +8,14 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: DeLaGuardo/setup-clj-kondo@master
         with:
-          version: '2025.02.20'
+          version: '2025.09.22'
 
-      - uses: DeLaGuardo/setup-clojure@13.2
+      - uses: DeLaGuardo/setup-clojure@13.4
         with:
-          tools-deps: '1.12.0.1530'
+          tools-deps: '1.12.3.1577'
 
       - name: Run checks
         run: make checks
