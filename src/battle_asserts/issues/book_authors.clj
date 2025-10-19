@@ -6,7 +6,7 @@
 
 (def level :elementary)
 
-(def tags ["training" "strings" "collections" "hash-maps"])
+(def tags ["training" "strings" "collections" "hash-maps" "sicp"])
 
 (def description
   {:en "Implement a function that extracts authors from books."
