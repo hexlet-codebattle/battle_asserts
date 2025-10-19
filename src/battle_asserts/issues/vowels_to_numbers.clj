@@ -5,7 +5,7 @@
 
 (def level :elementary)
 
-(def tags ["strings"])
+(def tags ["strings" "training"])
 
 (def description
   {:en "In a given word array, replace the vowels in each word with their indexes.
