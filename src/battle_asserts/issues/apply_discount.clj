@@ -1,3 +1,4 @@
+;; Moved to modern repository
 (ns battle-asserts.issues.apply-discount
   (:require [clojure.test.check.generators :as gen]))
 

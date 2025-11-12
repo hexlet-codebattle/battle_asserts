@@ -1,3 +1,4 @@
+;; Moved to modern repository
 (ns battle-asserts.issues.add-two-number
   (:require [clojure.test.check.generators :as gen]))
 

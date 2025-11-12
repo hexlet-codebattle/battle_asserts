@@ -1,3 +1,4 @@
+;; Moved to modern repository
 (ns battle-asserts.issues.all-symmetric-pairs
   (:require [clojure.test.check.generators :as gen]))
 
