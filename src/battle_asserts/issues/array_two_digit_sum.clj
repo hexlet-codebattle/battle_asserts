@@ -1,3 +1,4 @@
+;; Moved to modern repository
 (ns battle-asserts.issues.array-two-digit-sum
   (:require [clojure.test.check.generators :as gen]))
 

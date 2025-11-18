@@ -1,3 +1,4 @@
+;; Moved to modern repository
 (ns battle-asserts.issues.atm-pin-code
   (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))

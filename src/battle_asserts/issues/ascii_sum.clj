@@ -1,3 +1,4 @@
+;; Moved to modern repository
 (ns battle-asserts.issues.ascii-sum
   (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))
