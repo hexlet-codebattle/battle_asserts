@@ -1,3 +1,4 @@
+;; Moved to modern repository
 (ns battle-asserts.issues.book-authors
   (:require [clojure.string :as s]
             [clojure.test.check.generators :as gen]

@@ -1,3 +1,4 @@
+;; Moved to modern repository
 (ns battle-asserts.issues.bit-cycle-shift
   (:require [clojure.test.check.generators :as gen]
             [clojure.string :as s]))
@@ -40,4 +41,3 @@
       (if (pos? shift)
         (str (subs bitstring shift) (subs bitstring 0 shift))
         (str (subs bitstring (Math/abs shift) length) (subs bitstring 0 (Math/abs shift)))))))
-
