@@ -1,3 +1,4 @@
+;; Moved to modern repository
 (ns battle-asserts.issues.celsius-to-kelvin
   (:require [clojure.test.check.generators :as gen]))
 

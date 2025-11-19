@@ -1,3 +1,4 @@
+;; Moved to modern repository
 (ns battle-asserts.issues.build-key-value
   (:require [clojure.test.check.generators :as gen]
             [faker.generate :as faker]))

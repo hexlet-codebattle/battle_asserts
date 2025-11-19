@@ -1,3 +1,4 @@
+;; Moved to modern repository
 (ns battle-asserts.issues.case-identify
   (:require [clojure.test.check.generators :as gen]
             [clojure.string :as s]
